@@ -5,22 +5,19 @@ import { Loading } from '@/components/Primitives'
 import type { City } from '@/data/catalog'
 
 const Home = lazy(() => import('@/pages/public/Home'))
-const ServicePage = lazy(() => import('@/pages/public/ServicePage'))
+const ServiceGate = lazy(() => import('@/pages/public/ServiceGate'))
+const Gone = lazy(() => import('@/pages/public/Gone'))
 const NotFound = lazy(() => import('@/pages/public/NotFound'))
 const CityPage = lazy(() => import('@/pages/public/CityPages').then((m) => ({ default: m.CityPage as ComponentType<{ city: City }> })))
 const CityOrAreaOrService = lazy(() => import('@/pages/public/CityPages').then((m) => ({ default: m.CityOrAreaOrService })))
-const Professionals = lazy(() => import('@/pages/public/Professionals').then((m) => ({ default: m.Professionals })))
-const ProfessionalDetail = lazy(() => import('@/pages/public/Professionals').then((m) => ({ default: m.ProfessionalDetail })))
 const ServicesHub = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ServicesHub })))
 const Programmes = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.Programmes })))
 const ServiceAreas = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ServiceAreas })))
 const Standards = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.Standards })))
-const Reviews = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.Reviews })))
 const BlogIndex = lazy(() => import('@/pages/public/Blog').then((m) => ({ default: m.BlogIndex })))
 const BlogArticle = lazy(() => import('@/pages/public/Blog').then((m) => ({ default: m.BlogArticle })))
 const FaqPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.FaqPage })))
 const HowItWorksPage = lazy(() => import('@/pages/public/WellnessHowItWorks'))
-const WellnessPlan = lazy(() => import('@/pages/public/WellnessPlan'))
 const Partners = lazy(() => import('@/pages/public/Partners'))
 const PricingPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.PricingPage })))
 const ContactPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ContactPage })))
@@ -37,22 +34,24 @@ export default function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/410" element={<Gone />} />
           <Route path="/services" element={<ServicesHub />} />
-          <Route path="/services/:slug" element={<ServicePage />} />
-          <Route path="/personal-training" element={<ServicePage slug="personal-training" />} />
-          <Route path="/private-yoga" element={<ServicePage slug="private-yoga" />} />
-          <Route path="/mat-pilates" element={<ServicePage slug="mat-pilates" />} />
-          <Route path="/mobility-coaching" element={<ServicePage slug="mobility-coaching" />} />
-          <Route path="/boxing-fitness" element={<ServicePage slug="boxing-fitness" />} />
-          <Route path="/guided-meditation" element={<ServicePage slug="guided-meditation" />} />
-          <Route path="/swimming" element={<ServicePage slug="swimming" />} />
-          <Route path="/private-chef" element={<ServicePage slug="private-chef" />} />
-          <Route path="/private-chef-bali" element={<Navigate to="/private-chef" replace />} />
+          <Route path="/services/:slug" element={<ServiceGate />} />
+          <Route path="/personal-training" element={<ServiceGate slug="personal-training" />} />
+          <Route path="/private-yoga" element={<ServiceGate slug="private-yoga" />} />
+          <Route path="/mat-pilates" element={<ServiceGate slug="mat-pilates" />} />
+          <Route path="/mobility-coaching" element={<ServiceGate slug="mobility-coaching" />} />
+          <Route path="/boxing-fitness" element={<ServiceGate slug="boxing-fitness" />} />
+          <Route path="/guided-meditation" element={<ServiceGate slug="guided-meditation" />} />
+          <Route path="/swimming" element={<ServiceGate slug="swimming" />} />
+          <Route path="/nutrition-consultation" element={<ServiceGate slug="nutrition-consultation" />} />
+          <Route path="/physiotherapy" element={<ServiceGate slug="physiotherapy" />} />
           <Route path="/programmes" element={<Programmes />} />
-          <Route path="/wellness-plan" element={<WellnessPlan />} />
+          <Route path="/wellness-plan" element={<Navigate to="/programmes" replace />} />
+          <Route path="/fitness-programmes" element={<Navigate to="/programmes" replace />} />
           <Route path="/villa-hotel-partners" element={<Partners />} />
-          <Route path="/professionals" element={<Professionals />} />
-          <Route path="/professionals/:slug" element={<ProfessionalDetail />} />
+          <Route path="/professionals" element={<Navigate to="/professional-standards" replace />} />
+          <Route path="/professionals/:slug" element={<Gone />} />
           <Route path="/locations" element={<Navigate to="/service-areas" replace />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
           <Route path="/bali" element={<CityPage city="Bali" />} />
@@ -63,7 +62,7 @@ export default function App() {
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/reviews" element={<Gone />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<Navigate to="/resources" replace />} />
@@ -74,9 +73,7 @@ export default function App() {
           <Route path="/refunds-rescheduling" element={<LegalRefunds />} />
           <Route path="/safety" element={<LegalSafety />} />
           <Route path="/editorial-policy" element={<LegalEditorial />} />
-          <Route path="/nutrition-consultation" element={<ServicePage slug="nutrition-consultation" />} />
-          <Route path="/physiotherapy" element={<ServicePage slug="physiotherapy" />} />
-          <Route path="/:slug" element={<ServicePage />} />
+          <Route path="/:slug" element={<ServiceGate />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

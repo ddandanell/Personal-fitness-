@@ -34,7 +34,7 @@ Arrive window, floor check, a short settle, then coached work. Cues are the prod
 
 The session is 60 minutes unless you buy 90 at plus 45 percent of the base. Travel is included in Canggu–Seminyak and South/Central Jakarta. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000.
 
-Named mat coaches are on [professionals](/professionals). Sofia, Clara, Nadia and Kenji cover different cities. Name a preference if you have one.
+Name a coach preference in WhatsApp if you have one. Confirmation waits on the diary and a written quote.
 
 ## Home setup checklist
 

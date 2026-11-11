@@ -7,7 +7,7 @@ import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
 import { getService } from '@/data/catalog'
-import { COMPANY_ADDRESS } from '@/data/company'
+import { COMPANY_ADDRESS, SITE_ORIGIN } from '@/data/company'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
@@ -51,7 +51,7 @@ export function BlogIndex() {
           <div className="section-title">
             <div>
               <Eyebrow>Shorter notes</Eyebrow>
-              <h2>Useful planning notes.</h2>
+              <h2>Useful session notes.</h2>
             </div>
           </div>
           <div className="resource-grid">
@@ -99,7 +99,7 @@ export function BlogArticle() {
     <>
       <ArticleSchema post={post} words={words} />
       <PageIntro eyebrow={`${post.briefId} · ${post.date}`} title={post.title} description={post.description}>
-        <p className="article-kicker">{Math.max(1, Math.ceil(words / 200))} minute read · A practical guide for your next private visit.</p>
+        <p className="article-kicker">{Math.max(1, Math.round(words / 220))} minute read · PersonalFitness.id editorial</p>
       </PageIntro>
       <section className="section">
         <div className="shell article-cover"><img src={articleImage(post.landingPage)} alt="Instructor at a private property" width="1200" height="800" /></div>
@@ -145,7 +145,7 @@ export function BlogArticle() {
       )}
       <section className="section-compact">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Keep reading</Eyebrow><h2>More guides for your plans.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Keep reading</Eyebrow><h2>More guides for your next session.</h2></div></div>
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
@@ -179,7 +179,7 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           dateModified: post.date,
           wordCount: words,
           inLanguage: 'en',
-          mainEntityOfPage: `https://personalfitness.id/resources/${post.slug}`,
+          mainEntityOfPage: `${SITE_ORIGIN}/resources/${post.slug}`,
           author: { '@type': 'Organization', name: 'PersonalFitness.id' },
           publisher: {
             '@type': 'Organization',
@@ -190,9 +190,9 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://personalfitness.id/' },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://personalfitness.id/resources' },
-            { '@type': 'ListItem', position: 3, name: post.title, item: `https://personalfitness.id/resources/${post.slug}` },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN + '/' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE_ORIGIN + '/resources' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_ORIGIN}/resources/${post.slug}` },
           ],
         },
         {

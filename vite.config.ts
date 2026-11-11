@@ -10,6 +10,7 @@ export default defineConfig({
     inspectAttr(),
     react(),
     VitePWA({
+      selfDestroying: true,
       registerType: 'autoUpdate',
       injectRegister: false,
       includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'icons/favicon-64.png', 'favicon.ico', 'brand/personalfitness-mark.png'],
@@ -20,8 +21,9 @@ export default defineConfig({
         theme_color: '#1b1b1b',
         background_color: '#ededed',
         display: 'standalone',
-        start_url: '/',
+        start_url: 'https://www.personalfitness.id/',
         scope: '/',
+        id: 'https://www.personalfitness.id/',
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },

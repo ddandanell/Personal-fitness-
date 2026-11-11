@@ -5,8 +5,934 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/locations", "destination": "/service-areas", "permanent": true },
-    { "source": "/blog", "destination": "/resources", "permanent": true },
-    { "source": "/private-chef-bali", "destination": "/private-chef", "permanent": true }
+    {
+      "source": "/locations",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/resources",
+      "permanent": true
+    },
+    {
+      "source": "/professionals",
+      "destination": "/professional-standards",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-plan",
+      "destination": "/programmes",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-programmes",
+      "destination": "/programmes",
+      "permanent": true
+    },
+    {
+      "source": "/mobility-and-stretching",
+      "destination": "/mobility-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/boxing-and-kickboxing",
+      "destination": "/boxing-fitness",
+      "permanent": true
+    },
+    {
+      "source": "/meditation-and-relaxation",
+      "destination": "/guided-meditation",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-lessons",
+      "destination": "/swimming",
+      "permanent": true
+    },
+    {
+      "source": "/nutrition-consultations",
+      "destination": "/nutrition-consultation",
+      "permanent": true
+    },
+    {
+      "source": "/bali/mobility",
+      "destination": "/mobility-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/bali/mobility-coaching",
+      "destination": "/mobility-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/jakarta/mobility",
+      "destination": "/mobility-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/jakarta/mobility-coaching",
+      "destination": "/mobility-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "personalfitness.id"
+        }
+      ],
+      "destination": "https://www.personalfitness.id/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "personalfitness.id"
+        }
+      ],
+      "destination": "https://www.personalfitness.id/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/small-group-training",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/small-group-training",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/small-group-training",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/small-group-training",
+      "destination": "/410"
+    },
+    {
+      "source": "/barre",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/barre",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/barre",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/barre",
+      "destination": "/410"
+    },
+    {
+      "source": "/reformer-pilates",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/reformer-pilates",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/reformer-pilates",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/reformer-pilates",
+      "destination": "/410"
+    },
+    {
+      "source": "/yoga-and-sound",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/yoga-and-sound",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/yoga-and-sound",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/yoga-and-sound",
+      "destination": "/410"
+    },
+    {
+      "source": "/posture-and-ergonomics",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/posture-and-ergonomics",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/posture-and-ergonomics",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/posture-and-ergonomics",
+      "destination": "/410"
+    },
+    {
+      "source": "/balance-and-mobility",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/balance-and-mobility",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/balance-and-mobility",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/balance-and-mobility",
+      "destination": "/410"
+    },
+    {
+      "source": "/self-defence-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/self-defence-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/self-defence-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/self-defence-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/dance-and-movement",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/dance-and-movement",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/dance-and-movement",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/dance-and-movement",
+      "destination": "/410"
+    },
+    {
+      "source": "/aqua-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/aqua-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/aqua-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/aqua-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/running-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/running-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/running-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/running-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/sports-conditioning",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/sports-conditioning",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/sports-conditioning",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/sports-conditioning",
+      "destination": "/410"
+    },
+    {
+      "source": "/massage-and-bodywork",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/massage-and-bodywork",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/massage-and-bodywork",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/massage-and-bodywork",
+      "destination": "/410"
+    },
+    {
+      "source": "/sports-massage",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/sports-massage",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/sports-massage",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/sports-massage",
+      "destination": "/410"
+    },
+    {
+      "source": "/reflexology",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/reflexology",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/reflexology",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/reflexology",
+      "destination": "/410"
+    },
+    {
+      "source": "/recovery-sessions",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/recovery-sessions",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/recovery-sessions",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/recovery-sessions",
+      "destination": "/410"
+    },
+    {
+      "source": "/cold-plunge-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/cold-plunge-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/cold-plunge-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/cold-plunge-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/wellness-equipment-rental",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/wellness-equipment-rental",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/wellness-equipment-rental",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/wellness-equipment-rental",
+      "destination": "/410"
+    },
+    {
+      "source": "/breathwork",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/breathwork",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/breathwork",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/breathwork",
+      "destination": "/410"
+    },
+    {
+      "source": "/sound-baths",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/sound-baths",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/sound-baths",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/sound-baths",
+      "destination": "/410"
+    },
+    {
+      "source": "/wellbeing-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/wellbeing-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/wellbeing-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/wellbeing-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/sleep-routine-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/sleep-routine-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/sleep-routine-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/sleep-routine-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/reiki-relaxation",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/reiki-relaxation",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/reiki-relaxation",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/reiki-relaxation",
+      "destination": "/410"
+    },
+    {
+      "source": "/food-and-kitchen-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/food-and-kitchen-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/food-and-kitchen-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/food-and-kitchen-coaching",
+      "destination": "/410"
+    },
+    {
+      "source": "/healthy-cooking-classes",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/healthy-cooking-classes",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/healthy-cooking-classes",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/healthy-cooking-classes",
+      "destination": "/410"
+    },
+    {
+      "source": "/private-chef",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/private-chef",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/private-chef",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/private-chef",
+      "destination": "/410"
+    },
+    {
+      "source": "/womens-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/womens-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/womens-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/womens-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/lactation-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/lactation-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/lactation-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/lactation-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/birth-and-postpartum-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/birth-and-postpartum-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/birth-and-postpartum-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/birth-and-postpartum-support",
+      "destination": "/410"
+    },
+    {
+      "source": "/family-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/family-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/family-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/family-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/senior-and-adaptive-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/senior-and-adaptive-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/senior-and-adaptive-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/senior-and-adaptive-fitness",
+      "destination": "/410"
+    },
+    {
+      "source": "/facial-and-skincare",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/facial-and-skincare",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/facial-and-skincare",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/facial-and-skincare",
+      "destination": "/410"
+    },
+    {
+      "source": "/body-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/body-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/body-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/body-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/scalp-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/scalp-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/scalp-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/scalp-spa",
+      "destination": "/410"
+    },
+    {
+      "source": "/nail-care",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/nail-care",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/nail-care",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/nail-care",
+      "destination": "/410"
+    },
+    {
+      "source": "/hair-styling",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/hair-styling",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/hair-styling",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/hair-styling",
+      "destination": "/410"
+    },
+    {
+      "source": "/occupational-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/occupational-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/occupational-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/occupational-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/speech-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/speech-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/speech-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/speech-therapy",
+      "destination": "/410"
+    },
+    {
+      "source": "/psychology",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/psychology",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/psychology",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/psychology",
+      "destination": "/410"
+    },
+    {
+      "source": "/acupuncture",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/acupuncture",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/acupuncture",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/acupuncture",
+      "destination": "/410"
+    },
+    {
+      "source": "/corporate-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/corporate-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/corporate-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/corporate-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/villa-wellness-days",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/villa-wellness-days",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/villa-wellness-days",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/villa-wellness-days",
+      "destination": "/410"
+    },
+    {
+      "source": "/retreat-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/retreat-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/retreat-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/retreat-wellness",
+      "destination": "/410"
+    },
+    {
+      "source": "/wellness-concierge",
+      "destination": "/410"
+    },
+    {
+      "source": "/services/wellness-concierge",
+      "destination": "/410"
+    },
+    {
+      "source": "/bali/wellness-concierge",
+      "destination": "/410"
+    },
+    {
+      "source": "/jakarta/wellness-concierge",
+      "destination": "/410"
+    },
+    {
+      "source": "/reviews",
+      "destination": "/410"
+    },
+    {
+      "source": "/private-chef",
+      "destination": "/410"
+    },
+    {
+      "source": "/private-chef-bali",
+      "destination": "/410"
+    },
+    {
+      "source": "/private-chef-and-meal-prep",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/maya-suryani",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/daniel-hartono",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/lila-prameswari",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/arjun-dewantara",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/sofia-wijaya",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/kenji-nakamura",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/putu-adi",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/raka-pratama",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/nadia-putri",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/amira-fahlevi",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/tomas-reyes",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/clara-tan",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/sari-melati",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/budi-santoso",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/dewi-lestari",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/ayu-kartika",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/intan-maharani",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/made-surya",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/anisa-rahma",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/bagus-wirawan",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/ratih-permata",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/wayan-artha",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/nabila-safitri",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/fitri-handayani",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/rizky-aditya",
+      "destination": "/410"
+    },
+    {
+      "source": "/professionals/eka-pranata",
+      "destination": "/410"
+    }
   ]
 }

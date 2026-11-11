@@ -38,11 +38,11 @@ for (const record of manifest) {
   const html = await fs.readFile(file, 'utf8')
   assert.ok(html.includes('<h1'), record.path + ': missing rendered content')
   assert.ok(html.includes('rel="canonical"'), record.path + ': missing canonical')
-  if (record.path.startsWith('/professionals/')) {
-    assert.ok(html.includes('noindex, follow'))
-    assert.ok(!html.includes('AI-generated'))
-    assert.ok(!html.toLowerCase().includes('illustrative profile'))
-  }
+  if (record.noindex) assert.ok(html.includes('noindex, follow'), record.path + ': expected noindex')
+  assert.ok(!html.includes('AI-generated'))
+  assert.ok(!html.toLowerCase().includes('illustrative profile'))
+  assert.ok(!html.includes('140 service'))
+  assert.ok(!html.includes('53 service'))
 }
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 try {
@@ -69,9 +69,14 @@ try {
   assert.ok(custom.includes('complete written quote required'))
   assert.ok(!custom.includes('Planning total: Rp 0'))
   const withMassage = [...three, { id: 'massage', service: 'massage-and-bodywork', day: 'Thursday', time: '16:00', participants: 1 }]
-  const mixed = estimateWellnessPlan({ ...plan, visits: withMassage })
-  assert.equal(mixed.saving, estimateWellnessPlan({ ...plan, visits: three }).saving)
-  for (const route of ['/villa-hotel-partners', '/wellness-plan', '/how-it-works', '/jakarta/north-jakarta', '/jakarta/west-jakarta', '/jakarta/east-jakarta']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  assert.equal(estimateWellnessPlan({ ...plan, visits: withMassage }).invalid, true)
+  assert.ok(!manifest.some((item) => item.path === '/professionals' || item.path.startsWith('/professionals/')))
+  assert.ok(!manifest.some((item) => item.path === '/reviews' || item.path === '/wellness-plan'))
+  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  const home = manifest.find((item) => item.path === '/')
+  assert.equal(home.noindex, false)
+  const held = manifest.find((item) => item.path === '/boxing-fitness')
+  assert.equal(held.noindex, true)
   const partnerHtml = await fs.readFile('dist/villa-hotel-partners.html', 'utf8')
   const headerHtml = partnerHtml.split('</header>')[0]
   const footerHtml = partnerHtml.split('<footer')[1]

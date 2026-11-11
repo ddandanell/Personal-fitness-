@@ -1,21 +1,22 @@
 import { ArrowUpRight, Check, Plus } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage } from '@/components/Primitives'
-import { AreaGrid, CtaBand, ExtraFees, ProgrammeGrid, Prose, ReviewGrid } from '@/components/SiteBlocks'
+import { CtaBand, ExtraFees, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
-import { cancellationRules, coreServices, listedServices } from '@/data/catalog'
+import WellnessSchedule from '@/components/WellnessSchedule'
+import { cancellationRules } from '@/data/catalog'
+import { publicServices } from '@/data/publicOffer'
 import { COMPANY_ADDRESS, COMPANY_MAPS_URL } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
 import { formatIdr } from '@/lib/money'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
-import WellnessDirectory, { WellnessPriceGuide } from '@/components/WellnessDirectory'
 
 export function Programmes() {
   return (
     <>
-      <PageIntro eyebrow="Programmes" title="Your wellness week, on repeat." description="Start with one paid session. Then mix training, yoga, mat Pilates and mobility into a prepaid two, three or four-week plan. Six, nine and twelve eligible visits receive 5%, 8% and 12% savings on session charges.">
-        <Link to="/wellness-plan" className="button button-primary">Build my wellness schedule<ArrowUpRight size={16} /></Link>
+      <PageIntro eyebrow="Programmes" title="Plan my sessions as a prepaid block." description="Start with one paid session. Then mix personal training, private yoga, mat Pilates and mobility into a prepaid two, three or four-week plan. Six, nine and twelve visits receive 5%, 8% and 12% savings on session charges.">
+        <a href="#schedule-builder" className="button button-primary">Plan my sessions<ArrowUpRight size={16} /></a>
       </PageIntro>
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
       <section className="section-compact section-light">
@@ -26,7 +27,13 @@ export function Programmes() {
           </ul>
         </div>
       </section>
-      <CtaBand dark title="Price a 6, 9 or 12 session block." copy="Pick the city and service first. The estimator applies the programme reduction on top." to="/pricing" label="Open the estimator" />
+      <section className="section" id="schedule-builder">
+        <div className="shell">
+          <div className="section-title"><div><Eyebrow>Planner</Eyebrow><h2>Build a weekly rhythm, then continue in WhatsApp.</h2></div></div>
+          <WellnessSchedule />
+        </div>
+      </section>
+      <CtaBand dark title="Price a 6, 9 or 12 session block." copy="Pick the city and service first. The estimator applies the programme reduction on top." to="/pricing" label="Estimate my price" />
     </>
   )
 }
@@ -34,8 +41,9 @@ export function Programmes() {
 export function ServiceAreas() {
   return (
     <>
-      <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is either inside the session price or added once per visit. If we cannot honour an address, we decline it rather than stretch a route." />
-      <section className="section"><div className="shell"><AreaGrid /></div></section>
+      <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is either inside the session starting price or added once per visit. If we cannot honour an address, we decline it rather than stretch a route.">
+        <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
+      </PageIntro>
       <section className="section-compact section-dark">
         <div className="shell split-feature">
           <div><h2>How travel is charged.</h2></div>
@@ -44,7 +52,7 @@ export function ServiceAreas() {
           </ul>
         </div>
       </section>
-      <CtaBand title="Check your address." copy="Area name and venue type are enough. A pin can wait until we are quoting." to="/contact" />
+      <CtaBand title="Check your address." copy="Area name and venue type are enough. A pin can wait until we are quoting." to="/contact" label="Check availability" />
     </>
   )
 }
@@ -57,24 +65,14 @@ export function Standards() {
         <div className="content-shell process-list">
           {[
             ['01', 'Identity and work eligibility', 'We confirm who is arriving at your door and that they can lawfully do the work.'],
-            ['02', 'Discipline competence', 'Personal training, yoga, mat Pilates, mobility, boxing fitness and swim are separate approvals.'],
+            ['02', 'Discipline competence', 'Personal training, yoga, mat Pilates and mobility are separate approvals.'],
             ['03', 'Practical delivery', 'A session in a real villa or apartment, not only a studio CV.'],
             ['04', 'Safety and conduct', 'Safeguarding, insurance, data conduct and a way to suspend someone quickly.'],
             ['05', 'Backup', 'A launched cluster needs two suitable people or an owner-approved safe equivalent.'],
           ].map(([n, t, c]) => <article key={n}><span className="process-number">{n}</span><div><h2>{t}</h2><p>{c}</p></div></article>)}
         </div>
       </section>
-      <CtaBand dark title="Ask who would be sent." copy="You can name a preference. Confirmation still waits on the diary." to="/professionals" label="Browse professionals" />
-    </>
-  )
-}
-
-export function Reviews() {
-  return (
-    <>
-      <PageIntro eyebrow="Guest notes" title="What people notice when the details hold." description="Notes from visits where the quote, access and session actually matched." />
-      <section className="section"><div className="shell"><ReviewGrid /></div></section>
-      <CtaBand dark title="Start with a precise enquiry." copy="Area, service, window, headcount. That is the whole first message." />
+      <CtaBand dark title="Ask who would be sent." copy="You can name a preference. Confirmation still waits on the diary and a written quote." to="/contact" label="Check availability" />
     </>
   )
 }
@@ -138,10 +136,10 @@ export function FaqPage() {
 
 export function HowItWorksPage() {
   const steps = [
-    ['01', 'Enquiry', 'You send service, city, area, window, headcount and a non-sensitive goal. You can name a professional.'],
+    ['01', 'Enquiry', 'You send service, city, area, window, headcount and a non-sensitive goal.'],
     ['02', 'Qualification', 'We check that the request is in scope: fitness, a usable space, a cluster we publish, no clinical work hiding in the brief.'],
     ['03', 'Supply check', 'A suitable professional accepts the exact window and cost ceiling, or we offer a second name.'],
-    ['04', 'Quote', 'You receive the total, extras, exclusions and cancellation terms. The website estimator is the planning version of this step.'],
+    ['04', 'Quote', 'You receive the total, extras, exclusions and cancellation terms. The website estimator shows the starting price for this step.'],
     ['05', 'Payment', 'You pay only on the merchant link in the quote. Nothing is booked on a screenshot.'],
     ['06', 'Confirmation', 'You get the professional, arrival window, access note and preparation list.'],
     ['07', 'Delivery', 'The session runs as confirmed. Deviations and incidents are recorded. Safety issues leave the normal queue.'],
@@ -162,24 +160,48 @@ export function HowItWorksPage() {
   )
 }
 
-export function ServicesHub() { return <WellnessDirectory /> }
+export function ServicesHub() {
+  return (
+    <>
+      <PageIntro eyebrow="Services" title="Four private sessions at your villa or home." description="Personal training, private yoga, mat Pilates and mobility coaching. Published starting prices, then a written quote before payment.">
+        <Link to="/pricing" className="button button-primary">See session prices<ArrowUpRight size={16} /></Link>
+      </PageIntro>
+      <section className="section">
+        <div className="shell">
+          <div className="service-card-grid">
+            {publicServices.map((service, index) => (
+              <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
+                <div className="service-card-image"><img src={service.image} alt={service.imageAlt} width="1200" height="800" /></div>
+                <span className="service-index">0{index + 1}</span>
+                <h3>{service.title}</h3>
+                <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
+                <span className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <CtaBand dark title="Check availability for your window." copy="City, area and a two-hour window are enough to start." to="/contact" label="Check availability" />
+    </>
+  )
+}
 
 export function PricingPage() {
   return (
     <>
-      <PageIntro eyebrow="Pricing" title="Published rates, then a live estimate." description="These are the session prices operations plans around. Extra people, outer-zone travel, 90 minutes and programmes change the total. The confirmed quote can still move after a supply and access check.">
-        <Link to="/contact" className="button button-primary">Request a confirmed quote<ArrowUpRight size={16} /></Link>
+      <PageIntro eyebrow="Pricing" title="Starting prices, then a live estimate." description="These are the published session starting prices. Extra people, outer-zone travel, 90 minutes and programmes change the total. The confirmed quote can still move after a supply and access check.">
+        <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section-compact">
         <div className="shell">
           <div className="price-board price-board-wide">
-            {coreServices.map((service) => (
+            {publicServices.map((service) => (
               <div key={service.slug}>
                 <span>{service.title}</span>
                 <strong>{service.prices.Bali ? formatIdr(service.prices.Bali) : ' - '}</strong>
-                <p>Bali · {service.durationMin} min</p>
+                <p>Bali starting price · {service.durationMin} min</p>
                 <strong>{service.prices.Jakarta ? formatIdr(service.prices.Jakarta) : ' - '}</strong>
-                <p>Jakarta · {service.durationMin} min</p>
+                <p>Jakarta starting price · {service.durationMin} min</p>
               </div>
             ))}
           </div>
@@ -191,23 +213,12 @@ export function PricingPage() {
             <Eyebrow>Extras</Eyebrow>
             <h2>The lines that sit on top of the session rate.</h2>
           </div>
-          <div>
-            <ExtraFees />
-            <div className="meta-table" style={{ marginTop: 18 }}>
-              {listedServices.filter((item) => item.status !== 'core').map((item) => (
-                <div key={item.slug}>
-                  <span>{item.title}</span>
-                  <strong>{item.prices.Bali ? formatIdr(item.prices.Bali) : 'Itemised'}</strong>
-                </div>
-              ))}
-            </div>
-          </div>
+          <ExtraFees />
         </div>
       </section>
-      <WellnessPriceGuide />
       <section className="section">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Build the number, then send it.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Estimate my price, then continue in WhatsApp.</h2></div></div>
           <QuoteEstimator />
         </div>
       </section>
@@ -226,7 +237,7 @@ export function PricingPage() {
 export function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Quote" title="Price it, then send it." description="The estimator uses the same rates as the pricing page. WhatsApp opens a chat with us. Nothing is booked until a written quote is accepted and payment is verified." />
+      <PageIntro eyebrow="Quote" title="Check availability, then send the estimate." description="The estimator uses the same starting prices as the pricing page. WhatsApp opens a chat with us. Nothing is booked until a written quote is accepted and payment is verified." />
       <section className="section-compact">
         <div className="shell">
           <div className="office-card">
@@ -260,16 +271,16 @@ export function ContactPage() {
 export function AboutPage() {
   return (
     <>
-      <PageIntro eyebrow="About" title="Fitness and wellness, around your place." description="PersonalFitness.id brings private fitness, relaxation, practical food routines and suitable specialist requests into one coordinated conversation. Choose a service, agree the practical details and receive a complete quote for the actual professional." />
+      <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates personal training, private yoga, mat Pilates and mobility coaching in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
       <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator in a private villa" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>What we sell</h2>
-          <p>A coordinated private session at a villa, home or other suitable lawful space in Bali or Jakarta. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
+          <p>A coordinated private fitness session at a villa, home or other suitable lawful space in Bali or Jakarta. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
           <h2>What we do not sell</h2>
-          <p>Each service page explains the available formats and requirements. Reformer instruction needs suitable equipment already at the property. Clinical and other specialist requests require a separate appropriate professional, scope and confirmation.</p>
+          <p>We do not publish a public trainer directory, guest reviews, clinical booking, nutrition plans or an expanded spa catalogue. Reformer instruction, swimming and other held requests are not on the live offer.</p>
           <h2>Scope</h2>
-          <p>General fitness, massage, cosmetic care and practical coaching each have a defined scope. Nutrition and clinical requests need appropriately qualified professionals and confidential intake.</p>
+          <p>The live offer is general fitness: personal training, private yoga, mat Pilates and mobility coaching. Nutrition and clinical requests are not booked on this site.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -319,7 +330,7 @@ const legalCopy = {
   terms: {
     eyebrow: 'Terms',
     title: 'The rules that sit under every quote.',
-    lede: 'A published website rate is a planning price. The contract for a session is the written quote you accept, plus these terms.',
+    lede: 'A published website rate is a starting price. The contract for a session is the written quote you accept, plus these terms.',
     cta: 'Ask about a quote',
     blocks: [
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
@@ -358,7 +369,7 @@ const legalCopy = {
     lede: 'Prices, clusters and professional names are treated as operational facts. Marketing adjectives are not.',
     cta: 'Suggest a correction',
     blocks: [
-      ['Sources', 'Session rates come from the operating workbook. Area travel fees are the published cluster rules. Professional profiles are the dispatch roster used on this site.'],
+      ['Sources', 'Session rates come from the operating workbook. Area travel fees are the published cluster rules. Named public profiles are not part of the live site.'],
       ['Corrections', 'If a price, area or name is wrong, the page is updated and the quote template follows. We do not leave a cheaper number on a banner than operations will honour.'],
       ['AI assistance', 'Copy may be drafted with AI. Release still needs a human pass for prices, safety and legal pages.'],
     ],
@@ -370,7 +381,7 @@ const legalCopy = {
     cta: 'Ask a fitness question instead',
     blocks: [
       ['Why it is held', 'Nutrition advice that looks clinical needs a qualified professional, a defined scope, a fee and a records rule. Those gates are not open.'],
-      ['What we can do', 'We can still quote training, yoga, Pilates and a private chef event. Chef is food service, not a clinical diet.'],
+      ['What we can do', 'We can still quote personal training, private yoga, mat Pilates and mobility coaching.'],
     ],
   },
   physio: {

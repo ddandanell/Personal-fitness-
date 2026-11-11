@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     primaryQuery: 'personal trainer in Bali',
     service: 'Personal training',
     city: 'Bali',
-    landingPage: '/bali/personal-training',
+    landingPage: '/personal-training',
     image: '/images/sessions/personal-training.webp',
     faqs: [
       { q: 'Is Rp 900.000 the final price?', a: 'It is the in-zone 60-minute rate for one person in Canggu–Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote.' },
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
     primaryQuery: 'home personal training in Jakarta',
     service: 'Personal training',
     city: 'Jakarta',
-    landingPage: '/jakarta/personal-training',
+    landingPage: '/personal-training',
     image: '/images/sessions/personal-training.webp',
     faqs: [
       { q: 'Do I need a home gym?', a: 'No. A clear living-room rectangle and an access plan are enough for the first hour.' },
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
     primaryQuery: 'private yoga in Bali',
     service: 'Private yoga',
     city: 'Bali',
-    landingPage: '/bali/private-yoga',
+    landingPage: '/private-yoga',
     image: '/images/sessions/private-yoga.webp',
     faqs: [
       { q: 'Are two people included?', a: 'Yes. The published Bali yoga rate includes up to two people. Extra people are quoted if the floor allows.' },

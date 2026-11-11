@@ -12,7 +12,7 @@ export function CtaBand({
   title,
   copy,
   to = '/contact',
-  label = 'Request a quote',
+  label = 'Check availability',
   dark = false,
 }: {
   eyebrow?: string
@@ -49,7 +49,7 @@ export function PricePills({ slug }: { slug: string }) {
         return (
           <div key={city} className="price-pill">
             <span>{city}</span>
-            <strong>{price ? `${formatIdr(price)} / ${service.durationMin} min` : 'Quote only'}</strong>
+            <strong>{price ? `Starting ${formatIdr(price)} / ${service.durationMin} min` : 'Quote only'}</strong>
           </div>
         )
       })}
@@ -123,7 +123,7 @@ export function ProgrammeGrid() {
           <p className="programme-save">{Math.round(item.discount * 100)}% off session rates</p>
           <p>{item.blurb}</p>
           <ul className="check-mini">{item.includes.map((line) => <li key={line}>{line}</li>)}</ul>
-          <Link to="/wellness-plan" className="text-link">Design this block<ArrowUpRight size={15} /></Link>
+          <Link to="/programmes#schedule-builder" className="text-link">Plan my sessions<ArrowUpRight size={15} /></Link>
         </article>
       ))}
     </div>
@@ -136,7 +136,7 @@ export function ExtraFees() {
       <div><span>Extra person, Bali</span><strong>{formatIdr(extraPersonFee.Bali)}</strong></div>
       <div><span>Extra person, Jakarta</span><strong>{formatIdr(extraPersonFee.Jakarta)}</strong></div>
       <div><span>90-minute session</span><strong>+45% of base rate</strong></div>
-      <div><span>Yoga / meditation pair</span><strong>Second person included</strong></div>
+      <div><span>Private yoga pair</span><strong>Second person included</strong></div>
     </div>
   )
 }

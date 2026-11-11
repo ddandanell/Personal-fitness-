@@ -5,7 +5,7 @@ import { formatIdr } from './money'
 export const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const
 export type PlanVisit = { id: string; service: string; day: string; time: string; participants: number }
 export type PlanInput = { city: City; area: string; weeks: number; startDate: string; visits: PlanVisit[] }
-export const planServices = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'massage-and-bodywork', 'guided-meditation', 'swimming']
+export const planServices = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching']
 export const defaultVisits: PlanVisit[] = [
   { id: 'yoga', service: 'private-yoga', day: 'Tuesday', time: '08:00', participants: 2 },
   { id: 'training', service: 'personal-training', day: 'Friday', time: '08:00', participants: 1 },
@@ -49,8 +49,8 @@ export function wellnessPlanMessage(input: PlanInput) {
     'Start date: ' + (input.startDate || 'To agree'),
     'Duration: ' + input.weeks + (input.weeks === 1 ? ' week' : ' weeks') + '; ' + estimate.totalVisits + ' requested visits',
     ...input.visits.map((visit) => visit.day + ' at ' + visit.time + ': ' + (getService(visit.service)?.title || visit.service) + ', ' + visit.participants + (visit.participants === 1 ? ' person' : ' people')),
-    estimate.requiresQuote ? 'Price: complete written quote required; any displayed subtotal covers priced items only.' : 'Planning total: ' + formatIdr(estimate.total),
-    estimate.saving ? 'Planning saving on eligible fitness sessions: ' + formatIdr(estimate.saving) + ' (' + Math.round(estimate.discountRate * 100) + '%).' : 'Please confirm any eligible programme saving.',
+    estimate.requiresQuote ? 'Price: complete written quote required; any displayed subtotal covers priced items only.' : 'Starting price: ' + formatIdr(estimate.total),
+    estimate.saving ? 'Programme saving on eligible fitness sessions: ' + formatIdr(estimate.saving) + ' (' + Math.round(estimate.discountRate * 100) + '%).' : 'Please confirm any eligible programme saving.',
     'Please itemise travel, staffing, equipment and any other fees. I would like to discuss one paid first visit before committing to a prepaid plan.',
     'Please explain the coordinator-managed wellness brief and how I can choose which non-clinical notes are shared with my coaches.',
     'This is a schedule enquiry, not a confirmed booking or payment authorisation.',

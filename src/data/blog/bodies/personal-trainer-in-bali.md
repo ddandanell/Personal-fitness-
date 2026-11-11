@@ -32,7 +32,7 @@ The [pricing page](/pricing) uses the same blocks operations uses. Bali personal
 
 A two-week block is six sessions at 5 percent off. Three weeks is nine sessions at 8 percent. Four weeks is twelve sessions at 12 percent. Those reductions are mechanical. They are not a mystery package. Unused sessions follow the validity window on the quote.
 
-If you want a named professional, browse [professionals](/professionals) and say so. Preference is allowed. Instant assignment is not. If that person is already booked, we offer a second match for the same service and cluster.
+If you want a named professional, say so in WhatsApp. Preference is allowed. Instant assignment is not. If that person is already booked, we offer a second match for the same service and cluster.
 
 ## What we will not sell you
 
@@ -44,7 +44,7 @@ Public sand, temples and busy bars need written venue permission and a usable pr
 
 Open the [homepage](/) if you still need the whole offer. Then message WhatsApp with four lines: personal training, Bali, the area and venue type, and a two-hour window. Add headcount. Add a one-line goal such as beginner strength or keep my routine. Keep health files, ID photos and card numbers out.
 
-We reply with a planning estimate or a request for one missing fact. The written quote is the document you accept. The confirmation is the document that names who is coming.
+We reply with a starting price or a request for one missing fact. The written quote is the document you accept. The confirmation is the document that names who is coming.
 
 If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you already know you want a programme, read [two, three and four-week blocks](/programmes) before you prepay a count you cannot use.
 

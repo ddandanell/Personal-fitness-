@@ -65,7 +65,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
     ...empty, ok: true, base, extraPeople, extraPeopleFee, travel, durationFee,
     sessions, subtotal, discountRate, discount, total, perSession: Math.round(total / sessions),
     notes: [
-      'Planning only. Exact professional, scope, equipment and availability are confirmed by written quote.',
+      'Starting estimate. Availability, extras and the payable total are confirmed by written quote.',
       'Participant count and format are checked before confirmation.',
       'Travel is charged per visit and is not reduced by a programme discount.',
       'Venue hire, parking, ingredients or unusual equipment are extra only when stated in the agreed quote.',
@@ -84,11 +84,11 @@ export function quoteMessage(result: QuoteResult, extras: { timing?: string; goa
     'Visit: ' + result.formatLabel,
     'Participants: ' + result.participants,
     result.sessions > 1 ? 'Programme: ' + result.sessions + ' visits' : 'One visit / scope to confirm',
-    extras.professional ? 'Professional preference: ' + extras.professional : 'Professional: please suggest a match',
+    extras.professional ? 'Preference: ' + extras.professional : 'Professional: please suggest a suitable match',
     extras.timing ? 'Preferred window: ' + extras.timing : 'Preferred window: to discuss',
     extras.goals ? 'General preference: ' + extras.goals : '',
     '',
-    result.ok ? 'Planning estimate: Rp ' + result.total.toLocaleString('id-ID') + (result.sessions > 1 ? ' for ' + result.sessions + ' visits' : '') : 'Price: written quote required. ' + (result.error || ''),
+    result.ok ? 'Starting price: Rp ' + result.total.toLocaleString('id-ID') + (result.sessions > 1 ? ' for ' + result.sessions + ' visits' : '') : 'Price: written quote required. ' + (result.error || ''),
     'Please confirm the actual professional, access, full payable total, inclusions and cancellation terms. This request is not a booking.',
   ].filter(Boolean).join('\n')
 }

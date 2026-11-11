@@ -32,7 +32,7 @@ In-zone travel for Canggu and Seminyak is inside the Rp 850.000 rate. Ubud and S
 
 Price it on [pricing](/pricing). Programme discounts apply if you want 6, 9 or 12 sessions. A three-night stay usually wants one or two hours, not a four-week block.
 
-Named teachers live on [professionals](/professionals). Lila and Arjun cover Bali yoga in different clusters and paces. Preference is a preference. The diary still has to be free.
+You can name a teacher preference in WhatsApp. Preference is a preference. The diary still has to be free.
 
 ## What private yoga is not
 

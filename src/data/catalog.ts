@@ -238,8 +238,8 @@ export const cities: Record<City, {
 }> = {
   Bali: {
     slug: 'bali',
-    headline: 'Private sessions in the villa or home you already have.',
-    lede: 'Bali is coordinated around Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
+    headline: 'Private fitness in Bali, at your villa or home.',
+    lede: 'A personal trainer, private yoga or mat Pilates in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
     audience: ['Villa guests keeping a routine', 'Month-long residents', 'Couples and small groups', 'Hosts arranging sessions for guests'],
     clusters: ['Canggu to Seminyak in-zone', 'Ubud and Sanur + Rp 150.000', 'Uluwatu / Bukit + Rp 200.000'],
     notes: [
@@ -250,8 +250,8 @@ export const cities: Record<City, {
   },
   Jakarta: {
     slug: 'jakarta',
-    headline: 'A private session that does not ask you to cross the city.',
-    lede: 'Jakarta is built for recurring residents and busy weeks. South and Central clusters are in-zone. Other municipalities are quoted with travel.',
+    headline: 'Home personal training in Jakarta.',
+    lede: 'Private personal training, yoga and mat Pilates at your apartment or house. South and Central Jakarta are in-zone. Other municipalities are quoted with travel.',
     audience: ['Professionals training before or after work', 'Beginners starting at home', 'Households sharing one coach', 'People who want a four-week block, not a one-off class'],
     clusters: ['South Jakarta in-zone', 'Central Jakarta in-zone', 'North, West, East and BSD quoted with travel'],
     notes: [

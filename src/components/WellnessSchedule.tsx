@@ -29,7 +29,7 @@ export default function WellnessSchedule() {
   return <div className="schedule-builder" id="schedule-builder">
     <div className="schedule-controls">
       <div className="schedule-heading"><CalendarDays size={23} /><div><Eyebrow>Your weekly rhythm</Eyebrow><h2>Make room for feeling good.</h2></div></div>
-      <p>Choose your visits for a typical week. We repeat that rhythm for your chosen number of weeks, then confirm the dates and professionals with you.</p>
+      <p>Choose your visits for a typical week. We repeat that rhythm for your chosen number of weeks, then confirm dates and availability with you.</p>
       <div className="plan-settings">
         <Field label="City"><select value={city} onChange={(event) => { const next = event.target.value as City; setCity(next); setArea(cityAreas(next)[0].slug); setReview(false) }}><option>Bali</option><option>Jakarta</option></select></Field>
         <Field label="Area"><select value={area} onChange={(event) => { setArea(event.target.value); setReview(false) }}>{cityAreas(city).map((item) => <option key={item.slug} value={item.slug}>{item.name}{item.travelQuote ? ' (quote travel)' : ''}</option>)}</select></Field>
@@ -49,16 +49,16 @@ export default function WellnessSchedule() {
         </fieldset>)}
       </div>
       <button type="button" className="button button-outline" onClick={add} disabled={visits.length >= 12}><Plus size={16} />Add another weekly visit</button>
-      <p className="small muted">Want a service from our wider catalogue? <Link className="inline-link" to="/contact">Request a custom schedule.</Link></p>
+      <p className="small muted">Need a different window or a pair session? <Link className="inline-link" to="/contact">Check availability.</Link></p>
     </div>
     <aside className="plan-summary" aria-label="Your plan summary">
       <Eyebrow light>Your plan, together</Eyebrow><h3>{estimate.totalVisits} visits.<br />One conversation.</h3>
       <div className="plan-week-preview">{[...visits].sort((a, b) => weekDays.indexOf(a.day as typeof weekDays[number]) - weekDays.indexOf(b.day as typeof weekDays[number]) || a.time.localeCompare(b.time)).map((visit) => <div key={visit.id}><span>{visit.day.slice(0, 3)}<small>{visit.time}</small></span><p>{getService(visit.service)?.title}<small>{visit.participants} {visit.participants === 1 ? 'person' : 'people'} · weekly</small></p></div>)}</div>
       <dl className="plan-totals"><div><dt>Priced sessions</dt><dd>{formatIdr(estimate.sessionTotal)}</dd></div><div><dt>Travel for priced visits</dt><dd>{formatIdr(estimate.travelTotal)}</dd></div><div><dt>Eligible programme saving</dt><dd>{estimate.saving ? '- ' + formatIdr(estimate.saving) : 'No tier yet'}</dd></div></dl>
-      <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Planning total for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
+      <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Starting price for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
       {estimate.requiresQuote && <p className="plan-warning" role="status">{estimate.collisions ? 'Some visits overlap. Choose different times to review your plan.' : estimate.invalid ? 'Check your area, visit time and whole participant count.' : 'A complete quote is required. Some services, group sizes or travel are not included in this subtotal.'}</p>}
       {estimate.discountRate > 0 && <p className="plan-saving"><Check size={16} />{Math.round(estimate.discountRate * 100)}% saving on eligible fitness visits</p>}
-      <p className="plan-small">The 6, 9 and 12 visit tiers apply to eligible training, yoga, mat Pilates and mobility sessions. Massage, other services, travel and external costs are quoted separately and do not earn or receive this saving. All dates depend on availability.</p>
+      <p className="plan-small">The 6, 9 and 12 visit tiers apply to personal training, private yoga, mat Pilates and mobility. Travel is quoted separately and does not receive this saving. All dates depend on availability.</p>
       <button type="button" className="button button-light" disabled={estimate.invalid} onClick={() => setReview(true)}>Review my schedule<ArrowUpRight size={16} /></button>
       <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
     </aside>

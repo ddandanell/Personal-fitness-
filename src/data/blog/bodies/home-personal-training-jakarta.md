@@ -43,7 +43,7 @@ That list is more useful than a warm-up video. The [Jakarta apartment setup note
 
 ## What the first message should contain
 
-Send WhatsApp with: personal training, Jakarta, neighbourhood, building type, a two-hour window, headcount, and beginner or returning. Name a professional from [professionals](/professionals) if you have a preference. Keep medical files out. Keep card numbers out.
+Send WhatsApp with: personal training, Jakarta, neighbourhood, building type, a two-hour window, headcount, and beginner or returning. Name a preference if you have one. Keep medical files out. Keep card numbers out.
 
 We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 24-hour reschedule line. You pay on the merchant link. You get a confirmation with the person and the access note.
 

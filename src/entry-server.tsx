@@ -4,22 +4,15 @@ import { StaticRouter } from 'react-router'
 import { PassThrough } from 'node:stream'
 import { Buffer } from 'node:buffer'
 import App from './App'
-import { areas, services } from './data/catalog'
-import { professionals } from './data/professionals'
+import { areas } from './data/catalog'
 import { blogPosts } from './data/blog'
-import { resources, pageMeta } from './data/content'
+import { resources } from './data/content'
+import { HELD_SERVICE_SLUGS, indexableStaticPaths } from './data/publicOffer'
 import { pageMetadata } from './lib/metadata'
 export { pageMetadata } from './lib/metadata'
 
 export function staticRoutes() {
-  const redirects = new Set(['/locations', '/blog'])
-  const paths = new Set(Object.keys(pageMeta).filter((path) => !redirects.has(path)))
-  for (const service of services) {
-    paths.add('/' + service.slug)
-    paths.add('/services/' + service.slug)
-    for (const city of service.cities) paths.add('/' + city.toLowerCase() + '/' + service.slug)
-  }
-  for (const person of professionals) paths.add('/professionals/' + person.slug)
+  const paths = new Set([...indexableStaticPaths, '/410', ...HELD_SERVICE_SLUGS.map((slug) => '/' + slug)])
   for (const area of areas) paths.add('/' + area.city.toLowerCase() + '/' + area.slug)
   for (const article of [...blogPosts, ...resources]) paths.add('/resources/' + article.slug)
   return [...paths].sort().map((path) => ({ path, ...pageMetadata(path) }))
