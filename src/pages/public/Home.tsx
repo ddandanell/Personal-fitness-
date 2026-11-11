@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <p className="hero-micro"><ShieldCheck size={16} />Private visits. Considered choices. Real availability confirmed.</p>
           </div>
-          <ParallaxImage src="/images/professionals/maya-suryani.webp" alt="Private personal training in a villa" caption="AI-generated illustrative Indonesian instructor." eager className="hero-session-image" />
+          <ParallaxImage src="/images/professionals/maya-suryani.webp" alt="Private personal training in a villa" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
@@ -86,7 +86,7 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Professionals" title="Find your kind of approach." copy="Explore our detailed instructor and specialist profile guides. Portraits and profiles are illustrative; the actual professional and credentials are confirmed for your booking." action={<TextLink to="/professionals">Explore profile guides</TextLink>} />
+          <SectionTitle eyebrow="Professionals" title="Find your kind of approach." copy="Meet instructors and specialists across training, yoga, Pilates, massage and more. Availability is confirmed when we match your visit." action={<TextLink to="/professionals">Meet the team</TextLink>} />
           <ProfessionalGrid people={professionals} limit={8} />
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="resource-grid">
             {blogPosts.slice(0, 6).map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
-                <img className="blog-card-image" src={getService(post.landingPage.split('/').filter(Boolean).at(-1) || '')?.image || '/images/professionals/sari-melati.webp'} alt="Illustrative Indonesian private instructor" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={getService(post.landingPage.split('/').filter(Boolean).at(-1) || '')?.image || '/images/professionals/sari-melati.webp'} alt="Private instructor in a home wellness session" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>

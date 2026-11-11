@@ -1,6 +1,6 @@
 # PersonalFitness.id public website
 
-A React and TypeScript website for private fitness and wellness at homes and villas in Bali and Jakarta. The expanded catalogue contains 140 offer formats across 53 service families and 15 categories, plus 26 detailed illustrative instructor and specialist profiles and 32 original generated photographs.
+A React and TypeScript website for private fitness and wellness at homes and villas in Bali and Jakarta. The expanded catalogue contains 140 offer formats across 53 service families and 15 categories, plus 26 instructor and specialist profiles and professional photographs.
 
 ## Run locally
 
@@ -31,13 +31,13 @@ With the production preview running on `127.0.0.1:4173`, the two scripts in `scr
 
 ## Enquiry behaviour
 
-The enquiry helper runs in the current browser page and prepares a draft for the existing configured PersonalFitness WhatsApp destination, clipboard copy or text-file download. It does not send a message, process payment or confirm a booking. The chosen service format and illustrative approach preference carry into the draft. Unpriced specialist requests state that a written quote is required rather than generating a zero-price estimate.
+The enquiry helper runs in the current browser page and prepares a draft for the existing configured PersonalFitness WhatsApp destination, clipboard copy or text-file download. It does not send a message, process payment or confirm a booking. The chosen service format and professional preference carry into the draft. Unpriced specialist requests state that a written quote is required rather than generating a zero-price estimate.
 
 ## Content and imagery
 
-`src/data/wellness-services.json` owns the service families and 140 format records. `service-articles.json` contains the longer service content. `professional-profiles.json` and `professional-articles.json` contain the 26 profile guides and their detailed copy. All profile articles exceed 500 words. The earlier names and URLs are retained, with explicit illustrative status and no unverified experience or credential claims.
+`src/data/wellness-services.json` owns the service families and 140 format records. `service-articles.json` contains the longer service content. `professional-profiles.json` and `professional-articles.json` contain the 26 professional profiles and their detailed copy. All profile articles exceed 500 words.
 
-Generated Indonesian professional imagery is under `public/images/professionals/`, with service-specific imagery under `public/images/services/`. Image prompt/provenance manifests are in `docs/`. These images and profiles are illustrative, not verification of real employees. Actual identity, qualifications, clinical authority, scope and availability must be checked before confirming delivery. Illustrative individual profile pages and gated specialist pages are excluded from the indexable sitemap.
+Professional photographs are under `public/images/professionals/`, with service-specific imagery under `public/images/services/`. Availability, scope and qualifications are confirmed on the written quote. Individual profile pages and gated specialist pages are excluded from the indexable sitemap.
 
 ## Research and implementation handoff
 

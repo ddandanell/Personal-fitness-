@@ -25,7 +25,7 @@ export function CityPage({ city }: { city: City }) {
       </PageIntro>
       <section className="section">
         <div className="shell city-feature">
-          <ParallaxImage src={image} alt={alt} caption={`Representative ${city} session imagery.`} eager />
+          <ParallaxImage src={image} alt={alt} eager />
           <div className="city-copy">
             <p className="eyebrow"><MapPin size={14} />{city} clusters</p>
             <h2>We publish the areas we can honour.</h2>
@@ -136,7 +136,7 @@ export function CityServicePage() {
       <PageIntro eyebrow={`${city} · ${service.title}`} title={`${service.title} in ${city}.`} description={`${service.short} ${price ? `Starting at ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Quote {city} {service.title.toLowerCase()}<ArrowUpRight size={16} /></Link>
       </PageIntro>
-      <section className="section-compact"><div className="shell"><ParallaxImage src={service.image} alt={service.imageAlt} caption="AI-generated illustrative Indonesian professional. Actual professional and venue are confirmed for your request." eager /></div></section>
+      <section className="section-compact"><div className="shell"><ParallaxImage src={service.image} alt={service.imageAlt} eager /></div></section>
       <section className="section-compact">
         <div className="shell split-feature">
           <div>

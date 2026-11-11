@@ -34,7 +34,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
       <div className="cluster" style={{ marginTop: 22 }}><Link to={request} className="button button-primary">{cta}<ArrowUpRight size={16} /></Link><a href="#formats" className="button button-outline">Explore formats</a></div>
     </PageIntro>
     <section className="section-compact"><div className="shell service-detail-grid">
-      <ParallaxImage src={service.image} alt={service.imageAlt} caption="AI-generated illustrative professional and setting. Your actual professional is confirmed separately." eager />
+      <ParallaxImage src={service.image} alt={service.imageAlt} eager />
       <div className="service-detail-copy"><Eyebrow>Thoughtfully coordinated</Eyebrow><h2>A private visit that fits your plans.</h2><p className="large-copy">{service.short}</p><ul className="check-list">{service.includes.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul><p className="status-note">{service.statusNote}</p></div>
     </div></section>
     <section className="section section-light" id="formats"><div className="shell">
@@ -48,7 +48,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
       </article>)}</div>
     </div></section>
     <section className="section"><div className="shell service-reading-layout"><div className="service-article">{article.map((section) => <section key={section.title}><h2>{section.title}</h2><p>{section.body}</p></section>)}</div><aside className="service-reading-aside"><Eyebrow>A little preparation</Eyebrow><h3>Before your visit</h3><ul>{service.prepare.map((item) => <li key={item}>{item}</li>)}</ul><h3>Outside the agreed scope</h3><ul>{service.excludes.map((item) => <li key={item}>{item}</li>)}</ul><Link to={request} className="button button-primary">{cta}<ArrowUpRight size={15} /></Link></aside></div></section>
-    {people.length > 0 && <section className="section-compact section-light"><div className="shell"><div className="section-title"><div><Eyebrow>Find your approach</Eyebrow><h2>Explore the kind of support you prefer.</h2><p>These are illustrative profile guides with generated portraits. We confirm the actual professional, credentials and availability in your quote.</p></div><Link to="/professionals" className="text-link">All profile guides<ArrowUpRight size={16} /></Link></div><ProfessionalGrid people={people} /></div></section>}
+    {people.length > 0 && <section className="section-compact section-light"><div className="shell"><div className="section-title"><div><Eyebrow>Find your approach</Eyebrow><h2>Explore the kind of support you prefer.</h2><p>These are some of the professionals who work in this service. Availability is confirmed on your quote.</p></div><Link to="/professionals" className="text-link">All professionals<ArrowUpRight size={16} /></Link></div><ProfessionalGrid people={people} /></div></section>}
     {published && <section className="section-compact"><div className="shell"><div className="section-title"><div><Eyebrow>Planning estimate</Eyebrow><h2>Put your visit together.</h2></div></div><QuoteEstimator compact initialService={service.slug} /></div></section>}
     <CtaBand dark title={'Bring ' + service.title.toLowerCase() + ' to your plans.'} copy="Share the city, area, date window and chosen format. We check professional fit, practical requirements and the full price before confirmation." to={request} label={cta} />
   </>

@@ -11,7 +11,7 @@ export const wellnessCategories = categoryData
 export function WellnessCategoryGrid() {
   return <div className="wellness-category-grid">{wellnessCategories.map((category) => (
     <Link key={category.id} to={`/services?category=${category.id}`} className="wellness-category-card">
-      <img src={category.image} alt={`Illustrative Indonesian ${category.title.toLowerCase()} professional`} loading="lazy" width="1200" height="800" />
+      <img src={category.image} alt={`${category.title} professional`} loading="lazy" width="1200" height="800" />
       <div><span>{String(category.offerCount).padStart(2, '0')} formats</span><h3>{category.title}</h3><ArrowUpRight size={19} aria-hidden="true" /></div>
     </Link>
   ))}</div>
@@ -43,7 +43,6 @@ export default function WellnessDirectory() {
           <div className="wellness-card-copy"><p className="eyebrow">{service.category}</p><h2><Link to={`/${service.slug}`}>{service.title}</Link></h2><p>{service.short}</p><div className="service-format-tags">{service.offers.slice(0, 3).map((offer) => <span key={offer.id}>{offer.name}</span>)}{service.offers.length > 3 && <span>+{service.offers.length - 3} formats</span>}</div><p className="wellness-card-price">{base ? <><strong>{formatIdr(base)}</strong><span> published Bali starting rate</span></> : service.status === 'partner' ? <strong>Personal quote</strong> : prices.length ? <><strong>{formatIdr(Math.min(...prices))}</strong><span> indicative format price</span></> : <strong>Personal quote</strong>}</p><Link to={`/${service.slug}`} className="text-link">Explore the service<ArrowUpRight size={16} /></Link></div>
         </article>
       })}</div> : <div className="directory-empty"><Eyebrow>A different combination</Eyebrow><h2>Tell us what you have in mind.</h2><p>No service matches these filters. Try a broader category or let the coordinator help you choose.</p><button className="button button-outline" onClick={() => { setSearch(''); setSetting(''); setParams({}) }}>Clear filters</button><Link to="/contact" className="text-link">Ask about a service<ArrowUpRight size={16} /></Link></div>}
-      <p className="image-disclosure">Images show AI-generated illustrative Indonesian professionals. Real identity, qualifications, location and availability are confirmed for the person assigned to your booking.</p>
     </div></section>
   </>
 }

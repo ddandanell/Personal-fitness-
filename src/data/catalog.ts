@@ -27,7 +27,6 @@ export type Service = {
   categoryIds: string[]
   deliveryModes: string[]
   quoteOnly: boolean
-  illustrativeImage: boolean
   offers: WellnessOffer[]
 }
 

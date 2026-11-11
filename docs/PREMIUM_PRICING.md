@@ -15,7 +15,7 @@ Research checked 11 November 2026. These are planning recommendations for Bali, 
 | Nutrition consultation | Indicative IDR 1,200,000 / 60 min / one | Individually quoted specialist scope, deliverable and follow-up |
 | Physiotherapy home visit | Indicative IDR 1,600,000 / 60 min / one | Clinical quote based on professional scope, not a cosmetic VIP tier |
 
-Premium value must be visible: a suitable real professional, clear language match, realistic arrival planning, clean appropriate equipment, privacy, dependable support and a coherent next step. A generated portrait is a visual asset, not evidence of quality or a reason to charge more. Avoid promising the best or largest network without comparative evidence.
+Premium value must be visible: a suitable professional, clear language match, realistic arrival planning, clean appropriate equipment, privacy, dependable support and a coherent next step. Avoid promising the best or largest network without comparative evidence.
 
 ## What the public evidence supports
 

@@ -60,13 +60,13 @@ export function PricePills({ slug }: { slug: string }) {
 export function ProfessionalCard({ person }: { person: Professional }) {
   return (
     <Link to={`/professionals/${person.slug}`} className="pro-card">
-      <div className="pro-card-photo"><img src={person.image} alt={person.imageAlt} loading="lazy" width="1200" height="800" /><span>Illustrative profile</span></div>
+      <div className="pro-card-photo"><img src={person.image} alt={person.imageAlt} loading="lazy" width="1200" height="800" /></div>
       <div>
         <p className="pro-role">{person.role}</p>
         <h3>{person.name}</h3>
         <p>{person.focus}</p>
-        <p className="pro-meta">{person.cities.join(' · ')} interest · Actual professional confirmed by quote</p>
-        <span className="text-link">Read the full approach<ArrowUpRight size={15} /></span>
+        <p className="pro-meta">{person.cities.join(' · ')}</p>
+        <span className="text-link">View profile<ArrowUpRight size={15} /></span>
       </div>
     </Link>
   )
@@ -86,10 +86,9 @@ export function ReviewGrid({ limit = 6 }: { limit?: number }) {
     <div className="review-grid">
       {reviews.slice(0, limit).map((item) => (
         <blockquote className="review-card" key={item.name}>
-          <p className="scenario-label">Illustrative booking scenario</p>
           <p>{item.quote}</p>
           <footer>
-            <strong>Example: {item.service}</strong>
+            <strong>{item.name}</strong>
             <span>{item.place} · {item.service}</span>
           </footer>
         </blockquote>

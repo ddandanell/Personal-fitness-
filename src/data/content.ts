@@ -138,7 +138,7 @@ export function getResource(slug: string) {
 }
 
 export const pageMeta: Record<string, [string, string]> = {
-  '/': ['Private Fitness and Wellness at Your Location', 'Private fitness and wellness in Bali and Jakarta. Explore 140 service formats, detailed profile guides and a clear quote.'],
+  '/': ['Private Fitness and Wellness at Your Location', 'Private fitness and wellness in Bali and Jakarta. Explore 140 service formats, named professionals and a clear quote.'],
   '/services': ['Private Fitness and Wellness Services', 'Explore 140 private service formats across 15 categories, with clear planning guides and a personal quote.'],
   '/personal-training': ['Personal Training at Your Location', 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta.'],
   '/private-yoga': ['Private Yoga at Your Villa or Home', 'Private yoga for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
@@ -149,7 +149,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/swimming': ['Private Swimming Lessons', '45-minute private swim coaching in Bali from Rp 1.050.000 plus pool checks.'],
   '/private-chef': ['Private Chef in Bali', 'Partner-delivered private meals, quoted item by item.'],
   '/programmes': ['Two, Three and Four-Week Programmes', 'Prepaid 6, 9 and 12 session blocks with published reductions.'],
-  '/professionals': ['Professionals We Coordinate', 'Explore detailed instructor and wellness specialist profile guides for private visits.'],
+  '/professionals': ['Professionals We Coordinate', 'Instructors and wellness specialists for private visits in Bali and Jakarta.'],
   '/locations': ['Bali and Jakarta', 'Choose a city, then an area cluster with its travel rule.'],
   '/bali': ['Personal Fitness in Bali', 'Canggu and Seminyak in-zone. Ubud, Sanur and Uluwatu with travel.'],
   '/jakarta': ['Personal Fitness in Jakarta', 'South and Central Jakarta in-zone. Recurring programmes for residents.'],

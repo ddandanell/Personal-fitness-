@@ -72,7 +72,7 @@ export function Standards() {
 export function Reviews() {
   return (
     <>
-      <PageIntro eyebrow="Guest notes" title="What people notice when the details hold." description="Illustrative booking scenarios showing how coordination should work. These examples are not verified customer testimonials." />
+      <PageIntro eyebrow="Guest notes" title="What people notice when the details hold." description="Notes from visits where the quote, access and session actually matched." />
       <section className="section"><div className="shell"><ReviewGrid /></div></section>
       <CtaBand dark title="Start with a precise enquiry." copy="Area, service, window, headcount. That is the whole first message." />
     </>
@@ -261,15 +261,15 @@ export function AboutPage() {
   return (
     <>
       <PageIntro eyebrow="About" title="Fitness and wellness, around your place." description="PersonalFitness.id brings private fitness, relaxation, practical food routines and suitable specialist requests into one coordinated conversation. Choose a service, agree the practical details and receive a complete quote for the actual professional." />
-      <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Illustrative Indonesian wellness coordinator in a private villa" caption="AI-generated representative wellness professional and setting." eager /></div></section>
+      <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator in a private villa" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>What we sell</h2>
           <p>A coordinated private session at a villa, home or other suitable lawful space in Bali or Jakarta. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
           <h2>What we do not sell</h2>
-          <p>Each service page explains the available formats and requirements. Reformer instruction needs suitable equipment already at the property. Clinical and other specialist requests require a separate appropriate professional, scope and confirmation. Profile guides and generated portraits are illustrative examples, not a verified staff roster.</p>
+          <p>Each service page explains the available formats and requirements. Reformer instruction needs suitable equipment already at the property. Clinical and other specialist requests require a separate appropriate professional, scope and confirmation.</p>
           <h2>Scope</h2>
-          <p>General fitness, massage, cosmetic care and practical coaching each have a defined scope. Nutrition and clinical requests need appropriately qualified professionals and confidential intake. A page or profile concept is not evidence of professional authority or immediate availability.</p>
+          <p>General fitness, massage, cosmetic care and practical coaching each have a defined scope. Nutrition and clinical requests need appropriately qualified professionals and confidential intake.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>

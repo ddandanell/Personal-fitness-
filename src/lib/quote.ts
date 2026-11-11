@@ -83,7 +83,7 @@ export function quoteMessage(result: QuoteResult, extras: { timing?: string; goa
     'Visit: ' + result.formatLabel,
     'Participants: ' + result.participants,
     result.sessions > 1 ? 'Programme: ' + result.sessions + ' visits' : 'One visit / scope to confirm',
-    extras.professional ? 'Illustrative approach preference: ' + extras.professional + ' (please confirm the actual available professional)' : 'Professional: please suggest an appropriate real match',
+    extras.professional ? 'Professional preference: ' + extras.professional : 'Professional: please suggest a match',
     extras.timing ? 'Preferred window: ' + extras.timing : 'Preferred window: to discuss',
     extras.goals ? 'General preference: ' + extras.goals : '',
     '',

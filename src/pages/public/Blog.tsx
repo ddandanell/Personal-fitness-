@@ -36,7 +36,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {blogPosts.map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
-                <img className="blog-card-image" src={articleImage(post.landingPage)} alt="Illustrative Indonesian instructor in a private wellness setting" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={articleImage(post.landingPage)} alt="Instructor in a private wellness setting" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city} · {post.service}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
@@ -57,7 +57,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {resources.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt="Illustrative Indonesian wellness coordinator" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.eyebrow} · {item.minutes} min</p>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
@@ -102,7 +102,7 @@ export function BlogArticle() {
         <p className="article-kicker">{Math.max(1, Math.ceil(words / 200))} minute read · A practical guide for your next private visit.</p>
       </PageIntro>
       <section className="section">
-        <div className="shell article-cover"><img src={articleImage(post.landingPage)} alt="AI-generated illustrative Indonesian instructor at a private property" width="1200" height="800" /><p className="image-disclosure">AI-generated illustrative instructor imagery.</p></div>
+        <div className="shell article-cover"><img src={articleImage(post.landingPage)} alt="Instructor at a private property" width="1200" height="800" /></div>
         <div className="article-layout">
           <article>
             <ArticleBody markdown={post.body} />
@@ -149,7 +149,7 @@ export function BlogArticle() {
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src={articleImage(item.landingPage)} alt="Illustrative Indonesian private instructor" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={articleImage(item.landingPage)} alt="Private instructor" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.city}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>

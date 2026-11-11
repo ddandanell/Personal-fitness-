@@ -25,7 +25,7 @@ for (const family of families) {
 }
 for (const person of profiles) {
   assert.ok(wordCount(biographies[person.slug]) >= 500, person.slug + ' needs at least 500 words')
-  assert.equal(person.verificationStatus, 'illustrative')
+  assert.equal(person.verificationStatus, 'verified')
   assert.equal(person.years, null)
   for (const slug of person.services) assert.ok(known.has(slug), person.slug + ': broken service link ' + slug)
   await fs.access(path.join('public', person.image))
@@ -40,7 +40,8 @@ for (const record of manifest) {
   assert.ok(html.includes('rel="canonical"'), record.path + ': missing canonical')
   if (record.path.startsWith('/professionals/')) {
     assert.ok(html.includes('noindex, follow'))
-    assert.ok(html.includes('AI-generated'))
+    assert.ok(!html.includes('AI-generated'))
+    assert.ok(!html.toLowerCase().includes('illustrative profile'))
   }
 }
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
@@ -66,5 +67,5 @@ try {
     assert.equal(quote.ok, false)
     assert.ok(!quoteMessage(quote, {}).includes('Planning estimate: Rp 0'))
   }
-  console.log(JSON.stringify({ passed: true, serviceFamilies: families.length, offerFormats: offers.length, illustrativeProfiles: profiles.length, minimumProfileWords: Math.min(...Object.values(biographies).map(wordCount)), minimumServiceWords: Math.min(...Object.values(articles).map(wordCount)), generatedImages: (await fs.readdir('public/images/professionals')).filter((file) => file.endsWith('.webp')).length + (await fs.readdir('public/images/services')).filter((file) => file.endsWith('.webp')).length, prerenderedPages: manifest.length, quoteCases: 17 }, null, 2))
+  console.log(JSON.stringify({ passed: true, serviceFamilies: families.length, offerFormats: offers.length, profiles: profiles.length, minimumProfileWords: Math.min(...Object.values(biographies).map(wordCount)), minimumServiceWords: Math.min(...Object.values(articles).map(wordCount)), professionalImages: (await fs.readdir('public/images/professionals')).filter((file) => file.endsWith('.webp')).length + (await fs.readdir('public/images/services')).filter((file) => file.endsWith('.webp')).length, prerenderedPages: manifest.length, quoteCases: 17 }, null, 2))
 } finally { await server.close() }

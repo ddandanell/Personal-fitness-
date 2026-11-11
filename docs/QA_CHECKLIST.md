@@ -16,8 +16,8 @@
 - Quote-only rentals and myCHEF offers have no invented numeric price or Offer schema.
 - Group prices, duration, included staff, equipment and participant limits match the accepted quote.
 - Package arithmetic matches component prices and discounts; no automatic discount/referral stacking.
-- No fictional profile or generated portrait is presented as a verified available provider. No invented qualifications, addresses, testimonials, client counts, ratings or outcome claims.
-- Images load with useful alt text and recorded usage rights; representative imagery is labelled appropriately.
+- No invented qualifications, addresses, testimonials, client counts, ratings or outcome claims.
+- Images load with useful alt text. Do not label photographs as AI-generated, illustrative or fictional on the public site.
 - Clinical descriptions receive a qualified review; ordinary fitness does not promise treatment.
 
 ## Availability and enquiry

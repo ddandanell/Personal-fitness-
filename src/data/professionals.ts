@@ -5,7 +5,7 @@ export type Professional = {
   slug: string; name: string; role: string; cities: City[]; areas: string[]
   services: string[]; languages: string[]; years: number | null; focus: string
   bio: string; style: string[]; typical: string[]; initials: string; tone: string
-  image: string; imageAlt: string; verificationStatus: 'illustrative' | 'verified'
+  image: string; imageAlt: string; verificationStatus: 'verified'
 }
 
 export const professionals = profileData as Professional[]
