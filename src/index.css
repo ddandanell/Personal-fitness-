@@ -675,6 +675,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .plan-warning { background: #ffffff14; padding: 15px; font-size: .78rem; border-left: 2px solid #f1ac8a; }
 .plan-review { grid-column: 1/-1; background: var(--paper-light); padding: clamp(25px,4vw,55px); border: 1px solid var(--line); }
 .plan-review h2 { font-size: 2.5rem; }
+.plan-review h2 { scroll-margin-top: 110px; }
 .plan-review pre, .partner-draft pre { font-family: var(--sans); font-size: .83rem; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--paper); padding: 24px; margin: 25px 0; }
 .plan-tier-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 25px 0; }
 .plan-tier-grid article { padding: 30px; border: 1px solid var(--line); }
@@ -772,6 +773,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 }
 @media (max-width: 580px) {
   .brand { gap: 6px; font-size: 1.15rem; }
+  .mobile-nav { grid-template-columns: repeat(2,minmax(0,1fr)); padding-inline: 15px; }
   .brand > img { width: 31px; height: 34px; flex-basis: 31px; }
   .brand small { font-size: 5.7px; margin-top: 6px; }
   .rhythm-card { padding: 20px; }
@@ -792,7 +794,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   .plan-tier-grid article { padding: 25px; }
   .plan-tier-grid h2 { font-size: 3.5rem; }
   .plan-review pre, .partner-draft pre { padding: 17px; font-size: .77rem; }
-  .partner-hero h1 { font-size: 3.4rem; }
+  .partner-hero h1 { font-size: 2.75rem; }
   .partner-calendar { grid-template-columns: 1fr 1fr; gap: 12px; }
   .partner-calendar > article { padding: 15px; }
   .partner-calendar-day { font-size: .66rem; }
