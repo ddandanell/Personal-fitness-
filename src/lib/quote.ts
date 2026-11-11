@@ -4,132 +4,90 @@ export type QuoteInput = {
   service: string
   city: City
   area?: string
-  durationMin: 45 | 60 | 90
-  participants: number
-  programme?: string
-}
-
-export type QuoteResult = {
-  ok: boolean
-  error?: string
-  serviceTitle: string
-  city: City
-  areaName: string
   durationMin: number
   participants: number
-  sessions: number
-  base: number
-  extraPeople: number
-  extraPeopleFee: number
-  travel: number
-  durationFee: number
-  subtotal: number
-  discountRate: number
-  discount: number
-  total: number
-  perSession: number
-  notes: string[]
+  programme?: string
+  offerId?: string
+}
+export type QuoteResult = {
+  ok: boolean; error?: string; serviceTitle: string; formatLabel: string; city: City
+  areaName: string; durationMin: number; participants: number; sessions: number
+  base: number; extraPeople: number; extraPeopleFee: number; travel: number
+  durationFee: number; subtotal: number; discountRate: number; discount: number
+  total: number; perSession: number; notes: string[]
 }
 
 export function estimateQuote(input: QuoteInput): QuoteResult {
   const service = getService(input.service)
   const area = input.area ? getArea(input.area) : undefined
   const programme = input.programme ? getProgramme(input.programme) : undefined
-  const empty = {
-    ok: false,
-    serviceTitle: service?.title || input.service,
-    city: input.city,
-    areaName: area?.name || 'To be confirmed',
-    durationMin: input.durationMin,
-    participants: input.participants,
-    sessions: programme?.sessions || 1,
-    base: 0,
-    extraPeople: 0,
-    extraPeopleFee: 0,
-    travel: 0,
-    durationFee: 0,
-    subtotal: 0,
-    discountRate: 0,
-    discount: 0,
-    total: 0,
-    perSession: 0,
-    notes: [] as string[],
+  const offer = service?.offers.find((item) => item.id === input.offerId) || service?.offers[0]
+  const isDefault = !input.offerId || offer?.id === service?.offers[0]?.id
+  const formatLabel = offer?.priceUnit === 'per_7_days_coordination_only' ? '7 days coordination; sessions extra' : offer?.priceUnit === 'per_12_visit_programme' ? 'Counted programme; dates to agree' : input.durationMin ? input.durationMin + ' minutes' : 'Period and scope to agree'
+  const empty: QuoteResult = {
+    ok: false, serviceTitle: offer?.name || service?.title || input.service, formatLabel, city: input.city,
+    areaName: area?.name || 'To be confirmed', durationMin: input.durationMin,
+    participants: input.participants, sessions: programme?.sessions || 1,
+    base: 0, extraPeople: 0, extraPeopleFee: 0, travel: 0, durationFee: 0,
+    subtotal: 0, discountRate: 0, discount: 0, total: 0, perSession: 0, notes: [],
   }
-
-  if (!service) return { ...empty, error: 'Choose a service to see a price.' }
-  if (service.prices[input.city] == null) {
-    return { ...empty, error: service.status === 'partner' ? 'This is quoted item by item. Use the enquiry form for a chef event.' : `This service is not priced for ${input.city} yet.` }
-  }
-  if (!service.cities.includes(input.city)) {
-    return { ...empty, error: `${service.title} is not offered in ${input.city}.` }
-  }
-  if (area && area.city !== input.city) {
-    return { ...empty, error: `${area.name} is in ${area.city}. Switch the city to match.` }
-  }
-  const people = Math.max(1, Math.min(service.maxParticipants, Number(input.participants) || 1))
-  if (people > service.maxParticipants) {
-    return { ...empty, error: `${service.title} is quoted up to ${service.maxParticipants} people.` }
-  }
-
-  const base = service.prices[input.city] as number
-  const extraPeople = Math.max(0, people - service.includedParticipants)
+  if (!service || !offer) return { ...empty, error: 'Choose a service and format to start your request.' }
+  if (input.offerId && !service.offers.some((item) => item.id === input.offerId)) return { ...empty, error: 'That format does not belong to the selected service.' }
+  if (!Number.isInteger(input.participants) || input.participants < 1) return { ...empty, error: 'Enter a whole participant count of at least one.' }
+  if (input.area && !area) return { ...empty, error: 'Choose a published area or select Confirm later.' }
+  if (area && area.city !== input.city) return { ...empty, error: area.name + ' is in ' + area.city + '. Choose a matching area.' }
+  if (input.programme && !programme) return { ...empty, error: 'Choose a valid programme or a single visit.' }
+  if (offer.quoteOnly || service.quoteOnly || !offer.durationMin) return { ...empty, error: 'This format needs a written specialist or supplier quote. We confirm suitability, professional, scope, equipment and total before booking.' }
+  if (input.city === 'Jakarta' && (!isDefault || service.prices.Jakarta == null)) return { ...empty, error: 'This format is not priced for Jakarta. Ask us to check local professional availability and a complete quote.' }
+  if (!service.cities.includes(input.city)) return { ...empty, error: 'We need to check this service for ' + input.city + ' before quoting.' }
+  const maximum = isDefault ? service.maxParticipants : offer.id === 'PF-029' ? 6 : offer.participants || 1
+  if (input.participants > maximum) return { ...empty, error: 'This format is planned for up to ' + maximum + ' people. Request a separately staffed group quote for a larger party.' }
+  const baseDuration = isDefault ? service.durationMin : offer.durationMin
+  const canExtend = isDefault && ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'].includes(service.slug)
+  if (input.durationMin !== baseDuration && !(canExtend && input.durationMin === 90 && baseDuration === 60)) return { ...empty, error: 'Choose the listed duration for this format. Different visit lengths need a separate quote.' }
+  const eligibleProgramme = isDefault && ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'].includes(service.slug)
+  if (programme && !eligibleProgramme) return { ...empty, error: 'A recurring block for this format needs a separate scope and quote.' }
+  const base = (isDefault ? service.prices[input.city] : offer.guidePrice) ?? offer.guidePrice
+  if (base == null) return { ...empty, error: 'A written quote is required for this format.' }
+  const included = isDefault ? service.includedParticipants : offer.participants || 1
+  const extraPeople = Math.max(0, input.participants - included)
   const extraPeopleFee = extraPeople * extraPersonFee[input.city]
-  const durationFee = input.durationMin === 90 ? Math.round(base * 0.45) : 0
+  const durationFee = input.durationMin !== baseDuration ? Math.round(base * 0.45) : 0
   const travel = area?.travelFee || 0
-  const sessionTotal = base + extraPeopleFee + durationFee + travel
   const sessions = programme?.sessions || 1
+  const sessionSubtotal = base + extraPeopleFee + durationFee
   const discountRate = programme?.discount || 0
-  const subtotal = sessionTotal * sessions
-  const discount = Math.round(subtotal * discountRate)
+  const subtotal = (sessionSubtotal + travel) * sessions
+  const discount = Math.round(sessionSubtotal * sessions * discountRate)
   const total = subtotal - discount
-  const notes = [
-    `${service.durationMin}-minute published rate for ${input.city} is the session base.`,
-    service.includedParticipants > 1 ? `Up to ${service.includedParticipants} people are included.` : 'The published rate is for one person.',
-    extraPeople ? `${extraPeople} extra ${extraPeople === 1 ? 'person' : 'people'} at ${extraPersonFee[input.city].toLocaleString('id-ID')} each.` : 'No extra-person fee in this estimate.',
-    travel ? `${area?.name} adds a travel fee of Rp ${travel.toLocaleString('id-ID')} per visit.` : 'In-zone travel is inside the session price.',
-    input.durationMin === 90 ? '90 minutes adds 45% of the base session rate.' : 'Standard duration selected.',
-    programme ? `${programme.title}: ${sessions} sessions with a ${Math.round(discountRate * 100)}% programme reduction.` : 'Single-session estimate.',
-    'Venue hire, parking, pool fees and villa staff charges are extra if they exist.',
-    'This is a planning estimate. The confirmed quote can change after supply, access and equipment checks.',
-  ]
-
   return {
-    ok: true,
-    serviceTitle: service.title,
-    city: input.city,
-    areaName: area?.name || 'Area to confirm',
-    durationMin: input.durationMin,
-    participants: people,
-    sessions,
-    base,
-    extraPeople,
-    extraPeopleFee,
-    travel,
-    durationFee,
-    subtotal,
-    discountRate,
-    discount,
-    total,
-    perSession: Math.round(total / sessions),
-    notes,
+    ...empty, ok: true, base, extraPeople, extraPeopleFee, travel, durationFee,
+    sessions, subtotal, discountRate, discount, total, perSession: Math.round(total / sessions),
+    notes: [
+      'Planning only. Exact professional, scope, equipment and availability are confirmed by written quote.',
+      'Participant count and format are checked before confirmation.',
+      'Travel is charged per visit and is not reduced by a programme discount.',
+      'Venue hire, parking, ingredients or unusual equipment are extra only when stated in the agreed quote.',
+      area ? 'Selected area: ' + area.name : 'Area not selected; the travel line is still to be confirmed.',
+    ],
   }
 }
 
 export function quoteMessage(result: QuoteResult, extras: { timing?: string; goals?: string; professional?: string }) {
   return [
-    'Hello PersonalFitness.id — I would like a confirmed quote.',
+    'Hello PersonalFitness.id - I would like a confirmed quote.',
     '',
-    `Service: ${result.serviceTitle}`,
-    `City: ${result.city}`,
-    `Area: ${result.areaName}`,
-    `Duration: ${result.durationMin} minutes`,
-    `Participants: ${result.participants}`,
-    result.sessions > 1 ? `Programme: ${result.sessions} sessions` : 'Single session',
-    extras.professional ? `Preferred professional: ${extras.professional}` : 'Professional: match for me',
-    extras.timing ? `Preferred window: ${extras.timing}` : 'Preferred window: to discuss',
-    extras.goals ? `Goals: ${extras.goals}` : '',
+    'Service / format: ' + result.serviceTitle,
+    'City: ' + result.city,
+    'Area: ' + result.areaName,
+    'Visit: ' + result.formatLabel,
+    'Participants: ' + result.participants,
+    result.sessions > 1 ? 'Programme: ' + result.sessions + ' visits' : 'One visit / scope to confirm',
+    extras.professional ? 'Illustrative approach preference: ' + extras.professional + ' (please confirm the actual available professional)' : 'Professional: please suggest an appropriate real match',
+    extras.timing ? 'Preferred window: ' + extras.timing : 'Preferred window: to discuss',
+    extras.goals ? 'General preference: ' + extras.goals : '',
     '',
-    `Planning estimate: Rp ${result.total.toLocaleString('id-ID')}${result.sessions > 1 ? ` for ${result.sessions} sessions (Rp ${result.perSession.toLocaleString('id-ID')} each)` : ''}`,
-    'Please confirm professional, access, full price, inclusions and cancellation terms. This is not a booking.',
+    result.ok ? 'Planning estimate: Rp ' + result.total.toLocaleString('id-ID') + (result.sessions > 1 ? ' for ' + result.sessions + ' visits' : '') : 'Price: written quote required. ' + (result.error || ''),
+    'Please confirm the actual professional, access, full payable total, inclusions and cancellation terms. This request is not a booking.',
   ].filter(Boolean).join('\n')
 }

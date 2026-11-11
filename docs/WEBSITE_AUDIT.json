@@ -1,0 +1,58 @@
+{
+  "reviewed_on": "2026-11-11",
+  "site": "https://www.personalfitness.id/",
+  "public_browser_pages_reviewed": [
+    "/",
+    "/services",
+    "/services/personal-training",
+    "/services/private-yoga",
+    "/services/mat-pilates",
+    "/locations",
+    "/pricing",
+    "/how-it-works",
+    "/about",
+    "/faq",
+    "/privacy",
+    "/contact"
+  ],
+  "observed_core_services": [
+    "Personal training",
+    "Private yoga",
+    "Mat Pilates"
+  ],
+  "observed_cities": [
+    "Bali",
+    "Jakarta"
+  ],
+  "server_get_observations": {
+    "/": 200,
+    "/services": 404,
+    "/pricing": 404,
+    "/contact": 404,
+    "/locations": 404,
+    "/robots.txt": 404,
+    "/sitemap.xml": 404
+  },
+  "direct_get_limits": "One research environment at one point in time. In-app browser navigation worked. Confirm with fresh uncached origin requests and Search Console URL inspection before diagnosing Google traffic.",
+  "contact_observation": "Form composes a message to copy or download. Public copy and code show no website submission, booking reservation or direct official WhatsApp link in this form.",
+  "current_pricing_observation": "Pricing page explains quote factors but has no numeric session rate card.",
+  "trust_observation": "Reviewed pages use representative imagery and do not show named practitioner credentials or verified client case studies.",
+  "unknowns": [
+    "actual Google indexing and traffic",
+    "current practitioners and contracted capacity",
+    "CMS and repository access",
+    "payment system",
+    "tax treatment",
+    "clinical partner permissions",
+    "current official WhatsApp number"
+  ],
+  "priority_fixes": [
+    "Serve existing valid deep routes with 200 and correct content on direct GET.",
+    "Keep unknown routes as genuine 404; do not blanket rewrite unknown pages to the homepage.",
+    "Add route-specific metadata, canonical URLs, crawlable links and appropriate pre-rendered content.",
+    "Publish a sitemap of indexable canonical pages and a clear robots file. A missing robots file alone is not proof of an indexing block.",
+    "Connect an owner-verified official enquiry destination and explicit lead handling, then update the privacy notice.",
+    "Create a data-driven service catalogue with honest availability and approved prices."
+  ],
+  "repository_update": "The repository acquired new pricing, profiles, blog and WhatsApp work during the research. Preserve that newer baseline; the initial audit is time-specific, not the final implementation state."
+}

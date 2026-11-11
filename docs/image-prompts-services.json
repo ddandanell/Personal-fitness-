@@ -1,0 +1,54 @@
+{
+  "generated_on": "2026-11-11",
+  "usage": "Original generated service photographs with illustrative fictional adult Indonesian professionals, not verified staff.",
+  "assets": [
+    {
+      "slug": "reformer-pilates",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian female Pilates instructor, about 33, standing beside a real professional Pilates reformer in a tasteful bright private property studio. Clearly show the reformer's padded moving carriage, footbar, rails, shoulder rests and straps, with plausible functional construction. Instructor alone in modest sage athletic clothing, relaxed friendly posture. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-2d51dfd8-f2fe-44c5-920e-4bcb4b0e013f.png",
+      "output": "public/images/services/reformer-pilates.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    },
+    {
+      "slug": "indoor-cycling",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian male indoor cycling coach, about 35, standing beside an actual stationary indoor cycling bike in a tasteful private home gym. A realistic functional bike with saddle, handlebars, flywheel and pedals is clearly visible. Coach alone in modest charcoal athletic clothing, welcoming confident posture. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-a1e0d3ad-a097-401b-a973-857eeb18e144.png",
+      "output": "public/images/services/indoor-cycling.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    },
+    {
+      "slug": "running-coaching",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian male running coach, about 34, alone on a quiet leafy Bali neighbourhood path beside tasteful homes and tropical greenery, wearing a modest charcoal running shirt, full length athletic trousers and running shoes. Natural relaxed standing pose, professional and approachable, the location feels appropriate for a private coached run starting near home. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-12572e26-36aa-4609-8d0f-c98693713cff.png",
+      "output": "public/images/services/running-coaching.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    },
+    {
+      "slug": "private-nail-care",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian female beauty professional, about 32, seated at a hygienic manicure workstation in a tasteful private villa room. Clearly show an organised small table with clean nail tools, files, professional polish bottles and fresh towels. Modest sage professional uniform, instructor alone with no client. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-f64da2c1-58c8-4339-a0f1-81373c6ec1f1.png",
+      "output": "public/images/services/private-nail-care.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    },
+    {
+      "slug": "scalp-spa",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian female head spa professional, about 35, standing beside a realistic portable hair-wash basin with neck support, a stable support stand, folded clean towels and neatly arranged hair products in a tasteful private villa room. Plausible mobile hair washing equipment, not a futuristic device. Modest charcoal spa uniform, professional alone. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-1134f9c3-ffe4-4deb-a07b-b3a20cffa664.png",
+      "output": "public/images/services/scalp-spa.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    },
+    {
+      "slug": "portable-sauna",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 premium natural editorial service hero photograph for a private fitness and wellness website. Primary request: An attractive adult Indonesian male equipment professional, about 37, standing beside a realistic compact portable sauna installed on a sheltered dry villa terrace. Show a small enclosed freestanding sauna cabin with an ordinary entrance and plausible real construction, no oversized futuristic controls. Modest cream polo and charcoal trousers, installer alone outside the sauna. Quiet tasteful tropical property setting. Composition: wide with both professional and service-specific equipment or setting clearly visible, enough room for responsive website cropping. Natural realistic skin and anatomy, gentle daylight, refined cream, charcoal and green palette, friendly credible service mood. No text, no logos, no certificate badges, no watermarks, no other people, no exaggerated health or beauty effects. This is illustrative fictional advertising imagery, not an actual verified employee.",
+      "source": "/workspace/scratch/020f37d0e1eb/generated_images/exec-6724f7b9-6e83-4f12-9ad3-1df363e2a217.png",
+      "output": "public/images/services/portable-sauna.webp",
+      "mode": "built-in image_gen",
+      "fictional": true
+    }
+  ]
+}

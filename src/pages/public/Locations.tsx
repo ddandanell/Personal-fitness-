@@ -8,7 +8,7 @@ const cities = [
     title: 'Your villa, your routine, your space.',
     copy: 'Keep your training or practice close to where you are staying or living. Share your area and venue type, and we will check whether the session, setting and schedule can be coordinated for you.',
     detail: 'For visitors, longer-stay residents, pairs, households and small groups looking for a private session in a suitable villa, home or other approved space.',
-    image: '/images/sessions/private-yoga.webp',
+    image: '/images/professionals/lila-prameswari.webp',
     alt: 'Representative private yoga session in a tropical indoor-outdoor setting',
   },
   {
@@ -16,7 +16,7 @@ const cities = [
     title: 'A private session that works around your day.',
     copy: 'Make room for training, yoga or mat Pilates without crossing the city for a class. Tell us your neighbourhood, preferred window and available space so we can review the right session format.',
     detail: 'For busy professionals, beginners, returning participants, pairs and households who prefer the convenience of a coordinated private session.',
-    image: '/images/sessions/mat-pilates.webp',
+    image: '/images/professionals/sofia-wijaya.webp',
     alt: 'Representative private mat Pilates session in a city apartment',
   },
 ]

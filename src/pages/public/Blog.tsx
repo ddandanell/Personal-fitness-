@@ -6,9 +6,12 @@ import { CtaBand } from '@/components/SiteBlocks'
 import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
+import { getService } from '@/data/catalog'
 import { COMPANY_ADDRESS } from '@/data/company'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
+
+function articleImage(path: string) { return getService(path.split('/').filter(Boolean).at(-1) || '')?.image || '/images/professionals/sari-melati.webp' }
 
 function wordCount(markdown: string) {
   return markdown.trim().split(/\s+/).filter((token) => /[A-Za-z0-9]/.test(token)).length
@@ -19,20 +22,21 @@ export function BlogIndex() {
     <>
       <PageIntro
         eyebrow="Blog"
-        title="Guides that send you to a real session, not another tab."
-        description="These articles follow the PersonalFitness.id editorial calendar. Each one answers a search with a checklist, a limit, a published price where it exists, and a path back to the homepage."
+        title="Practical guides for wellness at your place."
+        description="Understand private session formats, prices and preparation, with practical guidance for a home or villa visit in Bali and Jakarta."
       />
       <section className="section">
         <div className="shell">
           <div className="section-title">
             <div>
               <Eyebrow>Start here</Eyebrow>
-              <h2>Ten flagship pieces for the main keywords.</h2>
+              <h2>Start with the essentials.</h2>
             </div>
           </div>
           <div className="resource-grid">
             {blogPosts.map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
+                <img className="blog-card-image" src={articleImage(post.landingPage)} alt="Illustrative Indonesian instructor in a private wellness setting" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city} · {post.service}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
@@ -47,12 +51,13 @@ export function BlogIndex() {
           <div className="section-title">
             <div>
               <Eyebrow>Shorter notes</Eyebrow>
-              <h2>Setup pages that sit beside the flagship cluster.</h2>
+              <h2>Useful planning notes.</h2>
             </div>
           </div>
           <div className="resource-grid">
             {resources.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
+                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt="Illustrative Indonesian wellness coordinator" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.eyebrow} · {item.minutes} min</p>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
@@ -94,9 +99,10 @@ export function BlogArticle() {
     <>
       <ArticleSchema post={post} words={words} />
       <PageIntro eyebrow={`${post.briefId} · ${post.date}`} title={post.title} description={post.description}>
-        <p className="article-kicker">Written for “{post.primaryQuery}”. Use the <Link to="/">homepage</Link> when you want the whole offer, not only this guide.</p>
+        <p className="article-kicker">{Math.max(1, Math.ceil(words / 200))} minute read · A practical guide for your next private visit.</p>
       </PageIntro>
       <section className="section">
+        <div className="shell article-cover"><img src={articleImage(post.landingPage)} alt="AI-generated illustrative Indonesian instructor at a private property" width="1200" height="800" /><p className="image-disclosure">AI-generated illustrative instructor imagery.</p></div>
         <div className="article-layout">
           <article>
             <ArticleBody markdown={post.body} />
@@ -105,7 +111,7 @@ export function BlogArticle() {
               <div className="cluster">
                 <Link to="/" className="button button-dark">Go to the homepage<ArrowUpRight size={16} /></Link>
                 <Link to={post.landingPage} className="button button-outline">Open the session page</Link>
-                <a className="button button-primary" href={whatsappDraftUrl(`Hello PersonalFitness.id — I read “${post.title}” and I would like to check a session.`)} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+                <a className="button button-primary" href={whatsappDraftUrl(`Hello PersonalFitness.id. I read “${post.title}” and I would like to check a session.`)} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
               </div>
             </div>
           </article>
@@ -125,7 +131,7 @@ export function BlogArticle() {
       {post.faqs.length > 0 && (
         <section className="section-compact section-light">
           <div className="content-shell">
-            <div className="section-title"><div><Eyebrow>Quick answers</Eyebrow><h2>The objections this search usually carries.</h2></div></div>
+            <div className="section-title"><div><Eyebrow>Quick answers</Eyebrow><h2>Your questions answered.</h2></div></div>
             <div className="faq-list">
               {post.faqs.map((item) => (
                 <details className="faq-item" key={item.q}>
@@ -139,10 +145,11 @@ export function BlogArticle() {
       )}
       <section className="section-compact">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Keep reading</Eyebrow><h2>Other pieces in this cluster.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Keep reading</Eyebrow><h2>More guides for your plans.</h2></div></div>
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
+                <img className="blog-card-image" src={articleImage(item.landingPage)} alt="Illustrative Indonesian private instructor" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.city}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>

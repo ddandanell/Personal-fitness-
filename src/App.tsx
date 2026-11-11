@@ -28,8 +28,6 @@ const LegalTerms = lazy(() => import('@/pages/public/MorePages').then((m) => ({ 
 const LegalRefunds = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="refunds" /> })))
 const LegalSafety = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="safety" /> })))
 const LegalEditorial = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="editorial" /> })))
-const LegalNutrition = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="nutrition" /> })))
-const LegalPhysio = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="physio" /> })))
 
 export default function App() {
   return (
@@ -72,8 +70,9 @@ export default function App() {
           <Route path="/refunds-rescheduling" element={<LegalRefunds />} />
           <Route path="/safety" element={<LegalSafety />} />
           <Route path="/editorial-policy" element={<LegalEditorial />} />
-          <Route path="/nutrition-consultation" element={<LegalNutrition />} />
-          <Route path="/physiotherapy" element={<LegalPhysio />} />
+          <Route path="/nutrition-consultation" element={<ServicePage slug="nutrition-consultation" />} />
+          <Route path="/physiotherapy" element={<ServicePage slug="physiotherapy" />} />
+          <Route path="/:slug" element={<ServicePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

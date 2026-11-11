@@ -44,7 +44,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             ? [`${service.title} at Your Location`, service.short]
             : pageMeta[pathname] || ['Page Not Found', 'Return to PersonalFitness.id']
     const fullTitle = `${title} | PersonalFitness.id`
-    const canonical = `https://personalfitness.id${pathname === '/' ? '/' : pathname}`
+    const canonicalPath = service && pathname.startsWith('/services/') ? `/${service.slug}` : pathname
+    const canonical = `https://personalfitness.id${canonicalPath === '/' ? '/' : canonicalPath}`
     document.title = fullTitle
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
@@ -52,7 +53,8 @@ export default function Layout({ children }: { children: ReactNode }) {
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
     document.querySelector('meta[property="og:type"]')?.setAttribute('content', post ? 'article' : 'website')
-    const held = pathname === '/nutrition-consultation' || pathname === '/physiotherapy'
+    const known = Boolean(post || professional || resource || area || service || pageMeta[pathname])
+    const held = !known || Boolean(professional) || ['nutrition-consultation', 'physiotherapy', 'occupational-therapy', 'speech-therapy', 'psychology', 'acupuncture', 'lactation-support', 'birth-and-postpartum-support'].some((slug) => pathname === `/${slug}` || pathname === `/services/${slug}`)
     document.querySelector('meta[name="robots"]')?.setAttribute('content', held ? 'noindex, follow' : 'index, follow')
   }, [pathname])
 
@@ -92,7 +94,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="shell footer-grid footer-grid-wide">
           <div className="footer-brand">
             <Link to="/" className="brand brand-light"><span>PersonalFitness</span><b>.id</b></Link>
-            <p>Private sessions at villas and homes in Bali and Jakarta. Published prices. Named professionals.</p>
+            <p>Fitness and wellness at your home or villa. Explore the right format, then confirm the actual professional and full quote.</p>
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
             </p>
@@ -104,6 +106,9 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link to="/private-yoga">Private yoga</Link>
             <Link to="/mat-pilates">Mat Pilates</Link>
             <Link to="/mobility-coaching">Mobility</Link>
+            <Link to="/massage-and-bodywork">Private massage</Link>
+            <Link to="/nutrition-consultation">Nutrition requests</Link>
+            <Link to="/services">All wellness services</Link>
             <Link to="/programmes">Programmes</Link>
           </div>
           <div>

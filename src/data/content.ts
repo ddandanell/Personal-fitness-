@@ -41,10 +41,10 @@ export const faqs = [
   ['How much does a session cost?', 'Published starting prices are on the pricing page. Bali personal training starts at Rp 900.000. Jakarta personal training starts at Rp 950.000. Yoga includes up to two people. Travel, extra people, 90-minute sessions and programmes change the total. You get a written quote before payment.'],
   ['Is the number on the website the final price?', 'It is the planning rate for a standard in-zone session. Outer-zone travel, extra people, longer duration, venue fees and programmes are added or reduced in the estimator and then confirmed in writing.'],
   ['Does an enquiry reserve the time?', 'No. An enquiry starts the supply and access check. The session is confirmed only after you accept the quote and payment status is verified.'],
-  ['Can I choose a trainer?', 'Yes. Browse professionals and name a preference. If that person is not free, we offer a second match for the same service and area rather than inventing availability.'],
+  ['Can I choose a trainer?', 'Tell us the approach, language and relevant experience you prefer. Profile guides illustrate a style; your quote confirms the real professional, qualifications and availability. You can request a returning professional after a previous visit.'],
   ['Which Bali areas are in-zone?', 'Canggu and Seminyak (including Berawa, Pererenan, Petitenget) sit inside the published session price. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000.'],
   ['Which Jakarta areas are in-zone?', 'South Jakarta and Central Jakarta clusters are in-zone. North, West, East and BSD are quoted with travel after a timing check.'],
-  ['Do I need equipment?', 'Tell us what is already there. Mats, bands and light dumbbells can be used if present. Reformer machines are not part of the service. Boxing pads are brought when that session is approved.'],
+  ['Do I need equipment?', 'Tell us what is already there. Mats, bands and light dumbbells can be used if present. Mat sessions use portable equipment; reformer requests require suitable equipment already on site. Boxing pads are brought when that session is approved.'],
   ['Can two people share a session?', 'Yes. Private yoga and guided meditation include up to two people in the published rate. Other services add an extra-person fee. Larger groups need space approval.'],
   ['Are beginners accepted?', 'Yes. Say so in the enquiry. The session is matched to experience. It is still a fitness session, not a medical assessment.'],
   ['What if I have pain or an injury?', 'Stop and speak to an appropriate clinician first. We do not treat pain, diagnose or run physiotherapy. Do not send medical files in WhatsApp.'],
@@ -54,7 +54,7 @@ export const faqs = [
   ['Is this a marketplace of coaches?', 'No. PersonalFitness.id is a company-managed service. You request a session; we match, quote, confirm and support it. Profiles show who we coordinate, not a public booking grid.'],
   ['Do you cover the whole of Bali or Jakarta?', 'No. We publish clusters we can honour. Outside those clusters we either add travel or decline.'],
   ['Can you come to a hotel or beach club?', 'Only with written venue permission, a usable private space and any venue fee on the quote. Public sand and busy bars are not default venues.'],
-  ['What language are sessions in?', 'English at launch. Many professionals also speak Bahasa Indonesia. Spanish and Japanese are available on named profiles.'],
+  ['What language are sessions in?', 'Request English or Bahasa Indonesia. Other language preferences are checked individually with the actual professional before confirmation.'],
   ['Do you offer nutrition or physiotherapy?', 'Not as a live service. Those pages stay as information and referral enquiries until a qualified scope exists.'],
 ]
 
@@ -138,8 +138,8 @@ export function getResource(slug: string) {
 }
 
 export const pageMeta: Record<string, [string, string]> = {
-  '/': ['Private Fitness at Your Location', 'Personal training, private yoga and mat Pilates in Bali and Jakarta, with published prices and named professionals.'],
-  '/services': ['All Private Sessions', 'Personal training, yoga, mat Pilates, mobility, boxing fitness, swimming and private chef enquiries.'],
+  '/': ['Private Fitness and Wellness at Your Location', 'Private fitness and wellness in Bali and Jakarta. Explore 140 service formats, detailed profile guides and a clear quote.'],
+  '/services': ['Private Fitness and Wellness Services', 'Explore 140 private service formats across 15 categories, with clear planning guides and a personal quote.'],
   '/personal-training': ['Personal Training at Your Location', 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta.'],
   '/private-yoga': ['Private Yoga at Your Villa or Home', 'Private yoga for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
   '/mat-pilates': ['Private Mat Pilates', 'Mat-based Pilates from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer.'],
@@ -149,7 +149,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/swimming': ['Private Swimming Lessons', '45-minute private swim coaching in Bali from Rp 1.050.000 plus pool checks.'],
   '/private-chef': ['Private Chef in Bali', 'Partner-delivered private meals, quoted item by item.'],
   '/programmes': ['Two, Three and Four-Week Programmes', 'Prepaid 6, 9 and 12 session blocks with published reductions.'],
-  '/professionals': ['Professionals We Coordinate', 'Named trainers, yoga teachers and Pilates coaches in Bali and Jakarta.'],
+  '/professionals': ['Professionals We Coordinate', 'Explore detailed instructor and wellness specialist profile guides for private visits.'],
   '/locations': ['Bali and Jakarta', 'Choose a city, then an area cluster with its travel rule.'],
   '/bali': ['Personal Fitness in Bali', 'Canggu and Seminyak in-zone. Ubud, Sanur and Uluwatu with travel.'],
   '/jakarta': ['Personal Fitness in Jakarta', 'South and Central Jakarta in-zone. Recurring programmes for residents.'],

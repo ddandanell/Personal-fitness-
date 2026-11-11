@@ -1,0 +1,107 @@
+[
+  {
+    "id": "A",
+    "title": "Personal training and strength",
+    "description": "Qualified trainer; portable equipment or a verified home gym. No clinical treatment claims.",
+    "image": "/images/professionals/maya-suryani.webp",
+    "offerCount": 12
+  },
+  {
+    "id": "B",
+    "title": "Pilates and barre",
+    "description": "Mat and portable props travel easily. Reformer instruction needs approved existing equipment or a separately agreed studio partner.",
+    "image": "/images/professionals/sofia-wijaya.webp",
+    "offerCount": 8
+  },
+  {
+    "id": "C",
+    "title": "Yoga and private practice",
+    "description": "Teacher, style, mats, props and participant compatibility agreed. Styles are variants of a useful family page.",
+    "image": "/images/professionals/lila-prameswari.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "D",
+    "title": "Mobility, stretching and ergonomics",
+    "description": "General movement and workstation coaching. Treatment of pain or injury belongs with the clinical pathway.",
+    "image": "/images/professionals/kenji-nakamura.webp",
+    "offerCount": 8
+  },
+  {
+    "id": "E",
+    "title": "Boxing, dance and movement skills",
+    "description": "Non-contact fitness, suitable flooring and clearance. Children need a separate safeguarding and competence gate.",
+    "image": "/images/professionals/budi-santoso.webp",
+    "offerCount": 8
+  },
+  {
+    "id": "F",
+    "title": "Swimming and sport conditioning",
+    "description": "Pool, property access and rescue competence checked. Route sessions begin at the property; specialist sports skills may need a different venue.",
+    "image": "/images/professionals/putu-adi.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "G",
+    "title": "Massage and bodywork",
+    "description": "Bring table, clean linens and agreed products. Touch, draping, privacy and pressure consent are part of delivery.",
+    "image": "/images/professionals/dewi-lestari.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "H",
+    "title": "Recovery sessions and equipment",
+    "description": "Device use, suitability and installation are checked separately. Equipment rental quotes need period, setup, maintenance and collection.",
+    "image": "/images/professionals/rizky-aditya.webp",
+    "offerCount": 6
+  },
+  {
+    "id": "I",
+    "title": "Mindfulness, sleep routines and relaxation",
+    "description": "Separate ordinary coaching from clinical mental healthcare. Sound and Reiki are described as experiences without healing promises.",
+    "image": "/images/professionals/amira-fahlevi.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "J",
+    "title": "Nutrition, cooking and food routines",
+    "description": "Nutrition scope and secure intake checked. Chef work uses the existing myCHEF operation and its current written quote.",
+    "image": "/images/professionals/intan-maharani.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "K",
+    "title": "Women's life stages and postpartum support",
+    "description": "Specialist competence is required for pregnancy and postnatal work. Lactation and clinical concerns use an appropriate partner pathway.",
+    "image": "/images/professionals/sofia-wijaya.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "L",
+    "title": "Children, families, older adults and adaptive fitness",
+    "description": "Separate qualifications, consent, guardian presence and accessibility checks. General fitness is distinct from clinical rehabilitation or care.",
+    "image": "/images/professionals/anisa-rahma.webp",
+    "offerCount": 8
+  },
+  {
+    "id": "M",
+    "title": "Beauty, grooming and private spa",
+    "description": "A qualified mobile beauty partner, hygienic tools and realistic setup requirements. Restrict initial scope to non-invasive services.",
+    "image": "/images/professionals/ayu-kartika.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "N",
+    "title": "Clinical and specialist partner services",
+    "description": "Partner pathway only until professional permissions, home visit scope, contracting, insurance, consent and restricted records are verified.",
+    "image": "/images/professionals/fitri-handayani.webp",
+    "offerCount": 10
+  },
+  {
+    "id": "O",
+    "title": "Villa groups, workplaces and programmes",
+    "description": "These are packages or delivery formats of the underlying services. They are not ten new professions or ten automatic landing pages.",
+    "image": "/images/professionals/daniel-hartono.webp",
+    "offerCount": 10
+  }
+]

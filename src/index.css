@@ -2,6 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Private wellness catalogue and editorial profile pages. */
+.wellness-category-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.wellness-category-card { position: relative; min-height: 285px; overflow: hidden; background: #25382e; color: #fff; }
+.wellness-category-card > img { width: 100%; height: 100%; position: absolute; object-fit: cover; transition: transform .45s ease; }
+.wellness-category-card:after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 20%,rgba(10,24,17,.86)); }
+.wellness-category-card > div { position: absolute; z-index: 1; inset: auto 24px 22px; padding-right: 20px; }
+.wellness-category-card span { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.wellness-category-card h3 { font-size: 1.45rem; color: #fff; margin: 8px 0 0; font-family: Georgia,serif; font-weight: 400; }
+.wellness-category-card svg { position: absolute; bottom: 2px; right: 0; }
+.wellness-category-card:hover > img { transform: scale(1.035); }
+.directory-toolbar { display: grid; grid-template-columns: minmax(220px,1.35fr) 1fr .8fr; gap: 16px; align-items: end; margin-bottom: 24px; }
+.directory-search { display: flex; gap: 12px; align-items: center; border: 1px solid var(--line); min-height: 60px; padding: 0 18px; background: var(--paper-light); }
+.directory-search input { min-width: 0; width: 100%; border: 0; outline-offset: 5px; padding: 15px 0; background: transparent; color: var(--ink); }
+.directory-search svg { flex-shrink: 0; }
+.directory-select { display: grid; gap: 7px; min-width: 0; font-size: .8rem; }
+.directory-select > span { font-weight: 600; }
+.directory-select select { width: 100%; min-width: 0; padding: 16px 35px 16px 14px; min-height: 60px; background: var(--paper-light); color: var(--ink); border: 1px solid var(--line); }
+.directory-result-line { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .85rem; margin-bottom: 24px; }
+.directory-result-line p:first-child { display: flex; gap: 10px; align-items: center; }
+.directory-count { color: var(--muted); font-size: .85rem; }
+.wellness-service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+.wellness-service-card { display: flex; flex-direction: column; background: var(--paper-light); border: 1px solid var(--line); }
+.wellness-card-photo { display: block; position: relative; overflow: hidden; aspect-ratio: 3/2; }
+.wellness-card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.wellness-service-card:hover .wellness-card-photo img { transform: scale(1.025); }
+.wellness-card-photo > span { position: absolute; top: 15px; left: 15px; background: rgba(246,245,242,.94); padding: 6px 10px; font-size: .68rem; letter-spacing: .04em; }
+.wellness-card-copy { padding: 25px; display: flex; flex: 1; flex-direction: column; }
+.wellness-card-copy .eyebrow { font-size: .58rem; line-height: 1.7; margin-bottom: 12px; }
+.wellness-card-copy h2 { font-size: 1.95rem; letter-spacing: -.025em; line-height: 1.13; }
+.wellness-card-copy > p:not(.eyebrow) { font-size: .9rem; color: var(--muted); }
+.service-format-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 20px; }
+.service-format-tags span { padding: 4px 7px; background: #e7e8e1; color: #405145; font-size: .66rem; line-height: 1.55; }
+.wellness-card-price { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+.wellness-card-price strong { font-size: 1.1rem; color: var(--ink); }
+.wellness-card-price > span { display: block; font-size: .74rem; }
+.wellness-card-copy > .text-link { font-size: .8rem; margin-top: 5px; }
+.image-disclosure { margin: 30px 0 0; max-width: 850px; font-size: .75rem; color: var(--muted); }
+.directory-empty { background: var(--paper-light); padding: 50px; border: 1px solid var(--line); }
+.directory-empty .text-link { margin: 18px; }
+.service-request-label { padding: 15px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .9rem; }
+.offer-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.offer-card { background: var(--paper); border: 1px solid var(--line); padding: 27px; display: flex; flex-direction: column; scroll-margin-top: 110px; }
+.offer-card .eyebrow { font-size: .56rem; line-height: 1.7; }
+.offer-card h3 { font-family: Georgia,serif; font-size: 1.75rem; font-weight: 400; }
+.offer-card > p { font-size: .9rem; }
+.offer-facts { display: grid; gap: 8px; font-size: .76rem; margin: 10px 0 20px; }
+.offer-facts span { display: flex; align-items: center; gap: 8px; }
+.offer-facts svg { flex-shrink: 0; color: #48604b; }
+.offer-price { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+.offer-price strong { font-size: 1.35rem; }
+.offer-price span { display: block; font-size: .72rem; color: var(--muted); margin-top: 4px; }
+.offer-requirement { color: var(--muted); font-size: .75rem !important; line-height: 1.65; }
+.offer-card .text-link { font-size: .78rem; margin-top: 14px; }
+.service-reading-layout, .profile-reading-layout { display: grid; grid-template-columns: minmax(0,2fr) minmax(260px,1fr); gap: clamp(35px,7vw,100px); align-items: start; }
+.service-article, .profile-article { max-width: 800px; }
+.service-article section, .profile-article section { margin-bottom: 38px; }
+.service-article h2, .profile-article h2 { font-size: clamp(1.6rem,2.4vw,2.25rem); letter-spacing: -.025em; line-height: 1.15; }
+.service-article p, .profile-article p { font-size: 1.02rem; line-height: 1.85; color: var(--ink-soft); }
+.service-reading-aside, .profile-reading-aside { position: sticky; top: 110px; padding: 28px; border: 1px solid var(--line); background: var(--paper-light); }
+.service-reading-aside ul { padding-left: 18px; font-size: .85rem; color: var(--muted); margin-bottom: 28px; }
+.service-reading-aside li { margin-bottom: 12px; }
+.service-reading-aside .button, .profile-reading-aside .button { width: 100%; font-size: .75rem; }
+.profile-disclosure { background: #e2e8df; border-left: 3px solid #48604b; padding: 21px 25px; margin-bottom: 32px; max-width: 100%; }
+.profile-disclosure strong { font-size: .93rem; }
+.profile-disclosure p { font-size: .84rem; margin: 7px 0 0; max-width: 1060px; color: #465344; }
+.profile-type-note { border-left: 2px solid #48604b; padding-left: 15px; margin-bottom: 24px; font-size: .85rem; }
+.profile-feature { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: clamp(30px,6vw,85px); align-items: center; }
+.profile-feature .session-image { aspect-ratio: 4/3; min-height: 0; }
+.profile-feature-copy h2 { font-size: clamp(2rem,3.4vw,3.4rem); }
+.profile-feature-copy > p { color: var(--muted); }
+.profile-city-interest { font-size: .78rem; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 25px; }
+.profile-service-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 0; border-top: 1px solid var(--line); font-size: .88rem; }
+.profile-reading-aside > p:not(.eyebrow) { margin-top: 20px; color: var(--muted); font-size: .8rem; }
+.pro-grid { grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 28px !important; }
+.pro-card { display: block !important; padding: 0 !important; border: 1px solid var(--line) !important; background: var(--paper-light); overflow: hidden; }
+.pro-card > div:last-child { padding: 23px; }
+.pro-card-photo { aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.pro-card-photo img { height: 100%; width: 100%; object-fit: cover; object-position: center 38%; transition: transform .4s ease; }
+.pro-card:hover .pro-card-photo img { transform: scale(1.03); }
+.pro-card-photo span { position: absolute; top: 13px; left: 13px; padding: 5px 8px; background: rgba(246,245,242,.94); font-size: .59rem; letter-spacing: .04em; }
+.pro-card .pro-role { min-height: 2.5em; line-height: 1.55; margin-bottom: 9px; }
+.pro-card h3 { font-size: 1.9rem !important; }
+.pro-card .pro-meta { font-size: .7rem; margin-top: 13px; }
+.pro-card .text-link { font-size: .75rem; margin-top: 10px; }
+.price-guide-groups { border-top: 1px solid var(--line); }
+.price-guide-group { border-bottom: 1px solid var(--line); }
+.price-guide-group summary { cursor: pointer; padding: 22px 0; font-size: 1.04rem; font-weight: 600; }
+.price-guide-group summary span:last-child { float: right; font-size: .75rem; font-weight: 400; color: var(--muted); padding-right: 10px; }
+.table-scroll { overflow-x: auto; }
+.wellness-price-table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; min-width: 590px; text-align: left; }
+.wellness-price-table th { background: #e4e8e0; font-size: .74rem; }
+.wellness-price-table th, .wellness-price-table td { padding: 15px 16px; border-bottom: 1px solid var(--line); }
+.wellness-price-table td { font-size: .82rem; vertical-align: top; }
+.wellness-price-table td a { text-decoration: underline; text-underline-offset: 3px; }
+.wellness-price-table small { display: block; font-size: .67rem; color: var(--muted); }
+.quote-guide-note { padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); font-size: .8rem; }
+.scenario-label { font-size: .64rem !important; letter-spacing: .08em; text-transform: uppercase; color: var(--muted) !important; }
+.blog-card-image { width: 100%; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 24px; }
+@media (max-width: 1050px) {
+  .wellness-service-grid, .wellness-category-grid, .offer-grid, .pro-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  .directory-toolbar { grid-template-columns: 1fr 1fr; }
+  .directory-search { grid-column: 1/-1; }
+  .service-reading-layout, .profile-reading-layout { grid-template-columns: minmax(0,1.7fr) minmax(230px,1fr); gap: 28px; }
+  .service-reading-aside, .profile-reading-aside { padding: 22px; }
+}
+@media (max-width: 740px) {
+  .service-reading-layout, .profile-reading-layout, .profile-feature { grid-template-columns: 1fr; }
+  .service-reading-aside, .profile-reading-aside { position: static; }
+  .directory-result-line { display: block; }
+  .wellness-card-copy { padding: 21px; }
+  .offer-card { padding: 23px; }
+  .profile-feature .session-image { aspect-ratio: 3/2; }
+}
+@media (max-width: 580px) {
+  .wellness-service-grid, .wellness-category-grid, .offer-grid, .pro-grid { grid-template-columns: 1fr !important; }
+  .wellness-category-card { min-height: 275px; }
+  .directory-toolbar { grid-template-columns: 1fr; gap: 14px; }
+  .directory-search { grid-column: auto; }
+  .directory-search, .directory-select select { min-height: 53px; }
+  .profile-disclosure { padding: 18px; }
+  .directory-empty { padding: 28px; }
+  .pro-card-photo { aspect-ratio: 3/2; }
+  .price-guide-group summary { font-size: .92rem; padding-right: 2px; }
+  .price-guide-group summary span:last-child { float: none; display: block; margin: 5px 0 0 17px; }
+  .service-article p, .profile-article p { font-size: .98rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wellness-category-card > img, .wellness-card-photo img, .pro-card-photo img { transition: none; }
+}
+
 :root {
   --ink: #1b1b1b;
   --ink-soft: #343430;
@@ -456,3 +586,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .session-image img { transform: none !important; }
 }
+
+.article-cover { margin-bottom: 45px; }
+.article-cover img { width: 100%; max-height: 480px; aspect-ratio: 21/9; object-fit: cover; object-position: center 35%; }
+
+.offer-photo { width: 100%; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 22px; }

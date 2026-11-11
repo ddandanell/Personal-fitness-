@@ -1,6 +1,6 @@
 import { ArrowUpRight, Check, Plus } from 'lucide-react'
 import { Link, useParams } from 'react-router'
-import { Eyebrow, PageIntro } from '@/components/Primitives'
+import { Eyebrow, PageIntro, ParallaxImage } from '@/components/Primitives'
 import { AreaGrid, CtaBand, ExtraFees, ProgrammeGrid, Prose, ReviewGrid } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { cancellationRules, coreServices, listedServices } from '@/data/catalog'
@@ -9,6 +9,7 @@ import { faqs, getResource, resources } from '@/data/content'
 import { formatIdr } from '@/lib/money'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
+import WellnessDirectory, { WellnessPriceGuide } from '@/components/WellnessDirectory'
 
 export function Programmes() {
   return (
@@ -51,7 +52,7 @@ export function ServiceAreas() {
 export function Standards() {
   return (
     <>
-      <PageIntro eyebrow="Standards" title="Vetted for a named service and a named cluster." description="A professional is not “on the team” in the abstract. They are approved for a service, a city cluster, a language and a commercial term. That approval expires and can be suspended." />
+      <PageIntro eyebrow="Standards" title="The right professional for the exact service." description="A professional is not “on the team” in the abstract. They are approved for a service, a city cluster, a language and a commercial term. That approval expires and can be suspended." />
       <section className="section">
         <div className="content-shell process-list">
           {[
@@ -71,7 +72,7 @@ export function Standards() {
 export function Reviews() {
   return (
     <>
-      <PageIntro eyebrow="Guest notes" title="What people notice when the details hold." description="These notes describe the coordination: quote, access, start time, scope. They are illustrative of how the service is supposed to feel, written in the voice of completed stays and Jakarta blocks." />
+      <PageIntro eyebrow="Guest notes" title="What people notice when the details hold." description="Illustrative booking scenarios showing how coordination should work. These examples are not verified customer testimonials." />
       <section className="section"><div className="shell"><ReviewGrid /></div></section>
       <CtaBand dark title="Start with a precise enquiry." copy="Area, service, window, headcount. That is the whole first message." />
     </>
@@ -161,50 +162,7 @@ export function HowItWorksPage() {
   )
 }
 
-export function ServicesHub() {
-  return (
-    <>
-      <PageIntro eyebrow="Sessions" title="Every session we will quote." description="Core work is personal training, private yoga and mat Pilates. Mobility is a controlled extension. Boxing, meditation, swimming and private chef are by request after extra checks.">
-        <Link to="/pricing" className="button button-primary">See every price<ArrowUpRight size={16} /></Link>
-      </PageIntro>
-      <section className="section">
-        <div className="shell service-editorial-list">
-          {listedServices.map((service, index) => (
-            <article className="service-editorial" key={service.slug}>
-              <img src={service.image} alt={service.imageAlt} className="hub-image" />
-              <div className="service-editorial-copy">
-                <span className="service-index">0{index + 1} · {service.status}</span>
-                <h2>{service.title}</h2>
-                <p className="large-copy">{service.short}</p>
-                <p>{service.description}</p>
-                <p className="price-highlight">
-                  {service.prices.Bali ? `Bali ${formatIdr(service.prices.Bali)}` : 'Bali quote'}
-                  {service.prices.Jakarta ? ` · Jakarta ${formatIdr(service.prices.Jakarta)}` : service.cities.includes('Jakarta') ? '' : ' · Jakarta not listed'}
-                </p>
-                <Link to={`/${service.slug}`} className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="section-compact section-light">
-        <div className="shell">
-          <div className="section-title"><div><Eyebrow>Core three</Eyebrow><h2>Start here if you are not sure.</h2></div></div>
-          <div className="service-card-grid">
-            {coreServices.map((service, index) => (
-              <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={service.image} alt="" /></div>
-                <span className="service-index">0{index + 1}</span>
-                <h3>{service.title}</h3>
-                <p>{service.prices.Bali ? `From ${formatIdr(service.prices.Bali)}` : service.short}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+export function ServicesHub() { return <WellnessDirectory /> }
 
 export function PricingPage() {
   return (
@@ -218,9 +176,9 @@ export function PricingPage() {
             {coreServices.map((service) => (
               <div key={service.slug}>
                 <span>{service.title}</span>
-                <strong>{service.prices.Bali ? formatIdr(service.prices.Bali) : '—'}</strong>
+                <strong>{service.prices.Bali ? formatIdr(service.prices.Bali) : ' - '}</strong>
                 <p>Bali · {service.durationMin} min</p>
-                <strong>{service.prices.Jakarta ? formatIdr(service.prices.Jakarta) : '—'}</strong>
+                <strong>{service.prices.Jakarta ? formatIdr(service.prices.Jakarta) : ' - '}</strong>
                 <p>Jakarta · {service.durationMin} min</p>
               </div>
             ))}
@@ -246,6 +204,7 @@ export function PricingPage() {
           </div>
         </div>
       </section>
+      <WellnessPriceGuide />
       <section className="section">
         <div className="shell">
           <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Build the number, then send it.</h2></div></div>
@@ -301,15 +260,16 @@ export function ContactPage() {
 export function AboutPage() {
   return (
     <>
-      <PageIntro eyebrow="About" title="A managed mobile service, not a directory." description="PersonalFitness.id qualifies the request, checks supply, quotes a price, takes payment, sends a professional and owns recovery. You are not browsing a public marketplace of coaches." />
+      <PageIntro eyebrow="About" title="Fitness and wellness, around your place." description="PersonalFitness.id brings private fitness, relaxation, practical food routines and suitable specialist requests into one coordinated conversation. Choose a service, agree the practical details and receive a complete quote for the actual professional." />
+      <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Illustrative Indonesian wellness coordinator in a private villa" caption="AI-generated representative wellness professional and setting." eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>What we sell</h2>
           <p>A coordinated private session at a villa, home or other suitable lawful space in Bali or Jakarta. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
           <h2>What we do not sell</h2>
-          <p>Instant booking, island-wide coverage, 24/7 response, clinical care, reformer Pilates, or a feed of coaches you ping directly. Profiles exist so you can see who we coordinate and name a preference.</p>
+          <p>Each service page explains the available formats and requirements. Reformer instruction needs suitable equipment already at the property. Clinical and other specialist requests require a separate appropriate professional, scope and confirmation. Profile guides and generated portraits are illustrative examples, not a verified staff roster.</p>
           <h2>Scope</h2>
-          <p>Fitness only. Pain, injury, nutrition treatment and physiotherapy are out of scope until a separate qualified service exists. Those pages stay held.</p>
+          <p>General fitness, massage, cosmetic care and practical coaching each have a defined scope. Nutrition and clinical requests need appropriately qualified professionals and confidential intake. A page or profile concept is not evidence of professional authority or immediate availability.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -362,7 +322,7 @@ const legalCopy = {
     cta: 'Ask about a quote',
     blocks: [
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
-      ['Scope', 'Fitness sessions only. No diagnosis, physiotherapy, nutrition treatment, childcare or event security. Swimming requires a lawful pool you can access. Private chef is a partner event quote.'],
+      ['Scope', 'The selected service and written quote define the scope. General fitness and relaxation visits do not include clinical diagnosis or treatment. Clinical or qualified health requests require an appropriately authorised professional and any separate clinical agreement. Swimming requires a suitable permitted pool; chef and equipment requests are itemised separately.'],
       ['Quotes and payment', 'Nothing is confirmed until the quote is accepted and payment is verified on the merchant link. Chat messages are not settlement.'],
       ['Your space', 'You confirm permission to use the villa, home, hotel room or pool. Access failures, unsafe floors and missing permission can stop the session under the refund rules.'],
       ['Liability', 'You participate in physical activity at your own risk within a non-clinical fitness session. We stop work that looks unsafe. We do not accept clinical responsibility we are not qualified to hold.'],

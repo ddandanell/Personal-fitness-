@@ -39,7 +39,7 @@ export default function Contact() {
       return
     }
     const output = [
-      'Hello PersonalFitness.id — I would like to check the availability of a private session.',
+      'Hello PersonalFitness.id. I would like to check the availability of a private session.',
       '',
       `Service: ${selected?.title || form.service}`,
       `City: ${form.city}`,

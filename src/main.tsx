@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
 import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 import App from './App.tsx'
 
 async function removePreviousSiteCaches() {
-  const marker = 'personalfitness-public-site-2026-11'
+  const marker = 'personalfitness-public-site-2026-11-wellness-v3'
   try {
     if (!window.localStorage.getItem(marker) && 'caches' in window) {
       const keys = await window.caches.keys()
@@ -20,10 +20,7 @@ async function removePreviousSiteCaches() {
 
 void removePreviousSiteCaches().finally(() => registerSW({ immediate: true }))
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
-)
+const root = document.getElementById('root')!
+const app = <StrictMode><BrowserRouter><App /></BrowserRouter></StrictMode>
+if (root.dataset.prerendered && root.dataset.prerenderPath === window.location.pathname && !window.location.search) hydrateRoot(root, app)
+else createRoot(root).render(app)

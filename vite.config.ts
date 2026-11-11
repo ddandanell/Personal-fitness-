@@ -14,9 +14,9 @@ export default defineConfig({
       injectRegister: false,
       includeAssets: ['icons/icon-192.png', 'icons/icon-512.png'],
       manifest: {
-        name: 'PersonalFitness.id — Private Fitness at Your Location',
+        name: 'PersonalFitness.id - Fitness and Wellness at Your Location',
         short_name: 'PersonalFitness',
-        description: 'Personal training, private yoga and mat Pilates coordinated for your space in Bali and Jakarta.',
+        description: 'Private fitness and wellness coordinated for your home or villa in Bali and Jakarta.',
         theme_color: '#1b1b1b',
         background_color: '#ededed',
         display: 'standalone',
@@ -29,7 +29,8 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,png,svg,webp,ico}'],
+        navigateFallback: null,
+        globPatterns: ['assets/**/*.{js,css}', 'index.html', 'icons/*.{png,svg}', 'manifest.webmanifest'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         cleanupOutdatedCaches: true,
         clientsClaim: true,
@@ -38,7 +39,7 @@ export default defineConfig({
           {
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'NetworkFirst',
-            options: { cacheName: 'pf-public-pages-v2', networkTimeoutSeconds: 3, expiration: { maxEntries: 20, maxAgeSeconds: 86400 } },
+            options: { cacheName: 'pf-public-pages-v3-wellness', networkTimeoutSeconds: 3, expiration: { maxEntries: 20, maxAgeSeconds: 86400 } },
           },
         ],
       },

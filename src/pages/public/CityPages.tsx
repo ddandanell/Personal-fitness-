@@ -8,8 +8,8 @@ import { formatIdr } from '@/lib/money'
 import NotFound from './NotFound'
 
 const images: Record<City, [string, string]> = {
-  Bali: ['/images/sessions/private-yoga.webp', 'Villa yoga setting in Bali'],
-  Jakarta: ['/images/sessions/mat-pilates.webp', 'Apartment mat session in Jakarta'],
+  Bali: ['/images/professionals/lila-prameswari.webp', 'Villa yoga setting in Bali'],
+  Jakarta: ['/images/professionals/nadia-putri.webp', 'Apartment mat session in Jakarta'],
 }
 
 export function CityPage({ city }: { city: City }) {
@@ -58,7 +58,7 @@ export function CityPage({ city }: { city: City }) {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>People</Eyebrow><h2>Professionals covering {city}.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>People</Eyebrow><h2>Explore approaches for {city}.</h2></div></div>
           <ProfessionalGrid people={people} />
         </div>
       </section>
@@ -97,7 +97,7 @@ export function AreaPage() {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Sessions here</Eyebrow><h2>What we actually staff in {area.name}.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Sessions here</Eyebrow><h2>Services to enquire about in {area.name}.</h2></div></div>
           <div className="area-grid">
             {areaServices.map((service) => service && (
               <Link to={`/${cityPath}/${service.slug}`} className="area-card" key={service.slug}>
@@ -112,7 +112,7 @@ export function AreaPage() {
       {people.length > 0 && (
         <section className="section">
           <div className="shell">
-            <div className="section-title"><div><Eyebrow>Who covers this cluster</Eyebrow><h2>Named professionals, not a blank roster.</h2></div></div>
+            <div className="section-title"><div><Eyebrow>Who covers this cluster</Eyebrow><h2>Explore relevant professional approaches.</h2></div></div>
             <ProfessionalGrid people={people} />
           </div>
         </section>
@@ -136,6 +136,7 @@ export function CityServicePage() {
       <PageIntro eyebrow={`${city} · ${service.title}`} title={`${service.title} in ${city}.`} description={`${service.short} ${price ? `Starting at ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Quote {city} {service.title.toLowerCase()}<ArrowUpRight size={16} /></Link>
       </PageIntro>
+      <section className="section-compact"><div className="shell"><ParallaxImage src={service.image} alt={service.imageAlt} caption="AI-generated illustrative Indonesian professional. Actual professional and venue are confirmed for your request." eager /></div></section>
       <section className="section-compact">
         <div className="shell split-feature">
           <div>

@@ -2,8 +2,9 @@ import { ArrowRight, ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-rea
 import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import { ProfessionalGrid, ProgrammeGrid, ReviewGrid } from '@/components/SiteBlocks'
+import { WellnessCategoryGrid } from '@/components/WellnessDirectory'
 import { blogPosts } from '@/data/blog'
-import { coreServices } from '@/data/catalog'
+import { coreServices, getService } from '@/data/catalog'
 import { professionals } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
 
@@ -21,20 +22,20 @@ export default function Home() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Private sessions · Bali & Jakarta</Eyebrow>
-            <h1>Private fitness.<br /><em>Priced.</em><br />Staffed.</h1>
-            <p className="hero-lede">Personal training from {formatIdr(900_000)}, private yoga from {formatIdr(850_000)}, mat Pilates from {formatIdr(950_000)}. Named professionals. A quote before you pay.</p>
+            <h1>Your wellness.<br /><em>Your place.</em><br />Your time.</h1>
+            <p className="hero-lede">Personal training from {formatIdr(900_000)}, private yoga from {formatIdr(850_000)}, mat Pilates from {formatIdr(950_000)}. Private massage, specialist support and more, with a complete quote before you pay.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Get a quote<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See every price<ArrowRight size={16} /></Link>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />Published rates. Named people. No fake availability grid.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />Private visits. Considered choices. Real availability confirmed.</p>
           </div>
-          <ParallaxImage src="/images/sessions/personal-training.webp" alt="Private personal training in a villa" caption="Representative session imagery." eager className="hero-session-image" />
+          <ParallaxImage src="/images/professionals/maya-suryani.webp" alt="Private personal training in a villa" caption="AI-generated illustrative Indonesian instructor." eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
           <div><strong>{formatIdr(950_000)}</strong><span>Jakarta personal training, 60 minutes, in-zone.</span></div>
-          <div><strong>14 professionals</strong><span>Approved by service and cluster, not a public marketplace.</span></div>
+          <div><strong>140 service formats</strong><span>Fitness, relaxation, food routines and specialist requests.</span></div>
         </div>
       </section>
 
@@ -42,12 +43,12 @@ export default function Home() {
         <div className="shell split-statement">
           <div>
             <Eyebrow>Managed, not listed</Eyebrow>
-            <h2>You ask for a session.<br />We send a person.</h2>
+            <h2>A little more space<br />for feeling good.</h2>
           </div>
           <div className="statement-copy">
-            <p className="large-copy">This is not a directory of coaches to ping. It is a company-managed mobile service with prices on the wall.</p>
-            <p>Pick the work, the city and the cluster. The estimator builds a planning total. WhatsApp carries the request. A written quote confirms the professional, the access and the terms.</p>
-            <TextLink to="/how-it-works">Eight steps, start to aftercare</TextLink>
+            <p className="large-copy">From a stronger morning to a quieter evening, find a private service that fits your own home, villa and daily routine.</p>
+            <p>Choose a service and a preferred date, then let us bring the practical details together. Your quote confirms the actual professional, arrival, equipment, complete price and terms.</p>
+            <TextLink to="/how-it-works">How your private visit works</TextLink>
           </div>
         </div>
       </section>
@@ -69,6 +70,8 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section section-light"><div className="shell"><SectionTitle eyebrow="Your private wellness menu" title="Fifteen categories. One place to start." copy="Explore 140 formats across 53 service families. Availability and the right professional are checked for your actual request." action={<TextLink to="/services">Explore every service</TextLink>} /><WellnessCategoryGrid /></div></section>
+
       <section className="section section-dark home-journey">
         <div className="shell">
           <SectionTitle eyebrow="From message to session" title="The hour is confirmed. The click is not." />
@@ -83,7 +86,7 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Professionals" title="People we actually dispatch." copy="Fourteen named coaches across Bali and Jakarta. Preference is allowed. Instant booking is not." action={<TextLink to="/professionals">All professionals</TextLink>} />
+          <SectionTitle eyebrow="Professionals" title="Find your kind of approach." copy="Explore our detailed instructor and specialist profile guides. Portraits and profiles are illustrative; the actual professional and credentials are confirmed for your booking." action={<TextLink to="/professionals">Explore profile guides</TextLink>} />
           <ProfessionalGrid people={professionals} limit={8} />
         </div>
       </section>
@@ -114,17 +117,18 @@ export default function Home() {
 
       <section className="section section-light">
         <div className="shell">
-          <SectionTitle eyebrow="Guest notes" title="The coordination is the product." action={<TextLink to="/reviews">More notes</TextLink>} />
+          <SectionTitle eyebrow="Example visits" title="Thoughtful visits, from the first conversation." action={<TextLink to="/reviews">How a visit can work</TextLink>} />
           <ReviewGrid limit={3} />
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Blog" title="Guides that send traffic to a real session." copy="The first ten pieces from the editorial calendar: Bali and Jakarta training, yoga, mat Pilates, programmes and prices." action={<TextLink to="/resources">Open the blog</TextLink>} />
+          <SectionTitle eyebrow="Blog" title="Useful reading for your next private visit." copy="Practical guides to choosing a service, preparing your space and understanding a private session in Bali or Jakarta." action={<TextLink to="/resources">Open the blog</TextLink>} />
           <div className="resource-grid">
             {blogPosts.slice(0, 6).map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
+                <img className="blog-card-image" src={getService(post.landingPage.split('/').filter(Boolean).at(-1) || '')?.image || '/images/professionals/sari-melati.webp'} alt="Illustrative Indonesian private instructor" loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
@@ -155,7 +159,7 @@ export default function Home() {
         <div className="shell final-cta-inner">
           <Eyebrow light>Start with the number</Eyebrow>
           <h2>Tell us the area.<br />Tell us the hour.<br /><em>Get the price.</em></h2>
-          <p>Personal training, yoga, Pilates and the rest of the roster, quoted before payment.</p>
+          <p>Private fitness, relaxation, food routines and specialist requests, coordinated around your place and plans.</p>
           <Link to="/contact" className="button button-primary">Build a quote<ArrowUpRight size={17} /></Link>
         </div>
       </section>
