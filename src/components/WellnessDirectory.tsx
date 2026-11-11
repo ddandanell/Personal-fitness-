@@ -6,7 +6,7 @@ import categoryData from '@/data/wellness-categories.json'
 import { formatIdr } from '@/lib/money'
 import { Eyebrow, PageIntro } from './Primitives'
 
-export const wellnessCategories = categoryData
+const wellnessCategories = categoryData
 
 export function WellnessCategoryGrid() {
   return <div className="wellness-category-grid">{wellnessCategories.map((category) => (

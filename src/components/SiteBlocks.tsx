@@ -106,7 +106,7 @@ export function AreaGrid({ city }: { city?: City }) {
           <p className="eyebrow">{area.city}</p>
           <h3>{area.name}</h3>
           <p>{area.driveNote}</p>
-          <strong>{area.travelFee ? `Travel ${formatIdr(area.travelFee)}` : 'In-zone travel included'}</strong>
+          <strong>{area.travelQuote ? 'Availability and travel by quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)}` : 'In-zone travel included'}</strong>
         </Link>
       ))}
     </div>
@@ -123,7 +123,7 @@ export function ProgrammeGrid() {
           <p className="programme-save">{Math.round(item.discount * 100)}% off session rates</p>
           <p>{item.blurb}</p>
           <ul className="check-mini">{item.includes.map((line) => <li key={line}>{line}</li>)}</ul>
-          <Link to={`/contact?programme=${item.slug}`} className="text-link">Design this block<ArrowUpRight size={15} /></Link>
+          <Link to="/wellness-plan" className="text-link">Design this block<ArrowUpRight size={15} /></Link>
         </article>
       ))}
     </div>

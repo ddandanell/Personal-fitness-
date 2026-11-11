@@ -4,31 +4,12 @@ import { StaticRouter } from 'react-router'
 import { PassThrough } from 'node:stream'
 import { Buffer } from 'node:buffer'
 import App from './App'
-import { areas, services, getService } from './data/catalog'
-import { professionals, getProfessional } from './data/professionals'
-import { blogPosts, getBlogPost } from './data/blog'
-import { resources, getResource, pageMeta } from './data/content'
-
-const specialisms = new Set(['nutrition-consultation', 'physiotherapy', 'occupational-therapy', 'speech-therapy', 'psychology', 'acupuncture', 'lactation-support', 'birth-and-postpartum-support'])
-
-export function pageMetadata(pathname: string) {
-  const parts = pathname.split('/').filter(Boolean)
-  const slug = parts.at(-1) || ''
-  const service = getService(slug)
-  const professional = getProfessional(slug)
-  const post = getBlogPost(slug)
-  const resource = getResource(slug)
-  const area = areas.find((item) => item.slug === slug)
-  const [title, description] = post ? [post.title, post.description]
-    : professional ? [professional.name + ' · ' + professional.role, professional.focus]
-    : resource ? [resource.title, resource.summary]
-    : area ? [area.name + ' private sessions', area.copy]
-    : service ? [service.title + ' at Your Location', service.short]
-    : pageMeta[pathname] || ['Page Not Found', 'Explore private fitness and wellness at PersonalFitness.id.']
-  const canonicalPath = service && pathname.startsWith('/services/') ? '/' + service.slug : pathname
-  const known = Boolean(service || professional || post || resource || area || pageMeta[pathname])
-  return { title: title + ' | PersonalFitness.id', description, canonical: 'https://personalfitness.id' + canonicalPath, noindex: !known || Boolean(professional) || Boolean(service && specialisms.has(service.slug)), image: professional?.image || service?.image || '/images/professionals/maya-suryani.webp' }
-}
+import { areas, services } from './data/catalog'
+import { professionals } from './data/professionals'
+import { blogPosts } from './data/blog'
+import { resources, pageMeta } from './data/content'
+import { pageMetadata } from './lib/metadata'
+export { pageMetadata } from './lib/metadata'
 
 export function staticRoutes() {
   const redirects = new Set(['/locations', '/blog'])

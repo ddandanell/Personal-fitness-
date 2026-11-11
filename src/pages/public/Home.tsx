@@ -7,6 +7,7 @@ import { blogPosts } from '@/data/blog'
 import { coreServices, getService } from '@/data/catalog'
 import { professionals } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
+import { WeeklyRhythm, WellnessProfileStory } from '@/components/WellnessStory'
 
 const steps = [
   ['01', 'Tell us the session', 'Service, city, area, window, headcount. Name a professional if you want one.'],
@@ -23,14 +24,14 @@ export default function Home() {
           <div className="sales-hero-copy">
             <Eyebrow light>Private sessions · Bali & Jakarta</Eyebrow>
             <h1>Your wellness.<br /><em>Your place.</em><br />Your time.</h1>
-            <p className="hero-lede">Personal training from {formatIdr(900_000)}, private yoga from {formatIdr(850_000)}, mat Pilates from {formatIdr(950_000)}. Private massage, specialist support and more, with a complete quote before you pay.</p>
+            <p className="hero-lede">Yoga on Tuesday. A personal trainer on Friday. Private massage when you need a quieter moment. Your own wellness schedule, brought together at your home or villa in Bali and Jakarta.</p>
             <div className="cluster">
-              <Link to="/contact" className="button button-primary">Get a quote<ArrowUpRight size={17} /></Link>
-              <Link to="/pricing" className="button button-outline-light">See every price<ArrowRight size={16} /></Link>
+              <Link to="/wellness-plan" className="button button-primary">Build my wellness week<ArrowUpRight size={17} /></Link>
+              <Link to="/services" className="button button-outline-light">Explore services<ArrowRight size={16} /></Link>
             </div>
             <p className="hero-micro"><ShieldCheck size={16} />Private visits. Considered choices. Real availability confirmed.</p>
           </div>
-          <ParallaxImage src="/images/professionals/maya-suryani.webp" alt="Private personal training in a villa" eager className="hero-session-image" />
+          <ParallaxImage src="/images/wellness/villa-yoga-partners.webp" alt="Private yoga led by an Indonesian instructor in a Bali villa" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
@@ -38,6 +39,9 @@ export default function Home() {
           <div><strong>140 service formats</strong><span>Fitness, relaxation, food routines and specialist requests.</span></div>
         </div>
       </section>
+
+      <WeeklyRhythm />
+      <WellnessProfileStory />
 
       <section className="section section-light">
         <div className="shell split-statement">

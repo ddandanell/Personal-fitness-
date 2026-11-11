@@ -138,6 +138,8 @@ export function getResource(slug: string) {
 }
 
 export const pageMeta: Record<string, [string, string]> = {
+  '/villa-hotel-partners': ['Villa and Hotel Wellness Partnerships in Bali and Jakarta', 'Private yoga, massage and fitness schedules for villa managers, hotels and retreats. Plan recurring guest wellness with one coordinator.'],
+  '/wellness-plan': ['Build Your Personal Wellness Schedule', 'Mix yoga, training, Pilates and massage into one private schedule in Bali or Jakarta. Plan your visits and review eligible programme savings.'],
   '/': ['Private Fitness and Wellness at Your Location', 'Private fitness and wellness in Bali and Jakarta. Explore 140 service formats, named professionals and a clear quote.'],
   '/services': ['Private Fitness and Wellness Services', 'Explore 140 private service formats across 15 categories, with clear planning guides and a personal quote.'],
   '/personal-training': ['Personal Training at Your Location', 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta.'],
@@ -155,7 +157,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/jakarta': ['Personal Fitness in Jakarta', 'South and Central Jakarta in-zone. Recurring programmes for residents.'],
   '/service-areas': ['Service Areas and Travel Fees', 'Every published cluster, in-zone rule and surcharge.'],
   '/professional-standards': ['Professional Standards', 'How we vet, match and back up the people who arrive at your door.'],
-  '/how-it-works': ['How PersonalFitness.id Works', 'Enquiry, match, quote, payment, confirmation, delivery and aftercare.'],
+  '/how-it-works': ['How Your Personal Wellness Plan Works', 'Start with a paid first visit, then build a prepaid monthly wellness schedule with one coordinator and a personal wellness brief.'],
   '/pricing': ['Private Session Prices', 'Published IDR rates, extra-person fees, travel and a live estimator.'],
   '/about': ['About PersonalFitness.id', 'A company-managed mobile fitness service, not a coach marketplace.'],
   '/reviews': ['Guest Notes', 'What people notice when the quote, access and session actually match.'],

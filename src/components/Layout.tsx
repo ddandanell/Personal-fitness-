@@ -1,19 +1,17 @@
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, Menu, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, useLocation } from 'react-router'
-import { getArea, getService } from '@/data/catalog'
-import { getBlogPost } from '@/data/blog'
-import { getResource, pageMeta } from '@/data/content'
-import { getProfessional } from '@/data/professionals'
+import { cityAreas, type City } from '@/data/catalog'
+import { pageMetadata } from '@/lib/metadata'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { COMPANY_ADDRESS, COMPANY_MAPS_URL } from '@/data/company'
 import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
+import StructuredData from './StructuredData'
 
 const navigation = [
   ['/services', 'Sessions'],
   ['/professionals', 'Professionals'],
-  ['/bali', 'Bali'],
-  ['/jakarta', 'Jakarta'],
+  ['/wellness-plan', 'Build a plan'],
   ['/pricing', 'Pricing'],
   ['/how-it-works', 'How it works'],
   ['/resources', 'Blog'],
@@ -21,45 +19,27 @@ const navigation = [
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [menuPath, setMenuPath] = useState<string | null>(null)
+  const [locationsPath, setLocationsPath] = useState<string | null>(null)
   const { pathname } = useLocation()
   const menuOpen = menuPath === pathname
+  const locationsOpen = locationsPath === pathname
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
-    const parts = pathname.split('/').filter(Boolean)
-    const service = getService(parts.at(-1) || '')
-    const professional = getProfessional(parts.at(-1) || '')
-    const resource = getResource(parts.at(-1) || '')
-    const post = getBlogPost(parts.at(-1) || '')
-    const area = getArea(parts.at(-1) || '')
-    const [title, description] = post
-      ? [post.title, post.description]
-      : professional
-      ? [`${professional.name} · ${professional.role}`, professional.focus]
-      : resource
-        ? [resource.title, resource.summary]
-        : area
-          ? [`${area.name} private sessions`, area.copy]
-          : service && pathname !== '/services'
-            ? [`${service.title} at Your Location`, service.short]
-            : pageMeta[pathname] || ['Page Not Found', 'Return to PersonalFitness.id']
-    const fullTitle = `${title} | PersonalFitness.id`
-    const canonicalPath = service && pathname.startsWith('/services/') ? `/${service.slug}` : pathname
-    const canonical = `https://personalfitness.id${canonicalPath === '/' ? '/' : canonicalPath}`
-    document.title = fullTitle
+    const { title, description, canonical, noindex, image } = pageMetadata(pathname)
+    document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', fullTitle)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
-    document.querySelector('meta[property="og:type"]')?.setAttribute('content', post ? 'article' : 'website')
-    const known = Boolean(post || professional || resource || area || service || pageMeta[pathname])
-    const held = !known || Boolean(professional) || ['nutrition-consultation', 'physiotherapy', 'occupational-therapy', 'speech-therapy', 'psychology', 'acupuncture', 'lactation-support', 'birth-and-postpartum-support'].some((slug) => pathname === `/${slug}` || pathname === `/services/${slug}`)
-    document.querySelector('meta[name="robots"]')?.setAttribute('content', held ? 'noindex, follow' : 'index, follow')
+    document.querySelector('meta[property="og:type"]')?.setAttribute('content', pathname.startsWith('/resources/') ? 'article' : 'website')
+    document.querySelector('meta[property="og:image"]')?.setAttribute('content', 'https://personalfitness.id' + image)
+    document.querySelector('meta[name="robots"]')?.setAttribute('content', noindex ? 'noindex, follow' : 'index, follow')
   }, [pathname])
 
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuPath(null) }
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') { setMenuPath(null); setLocationsPath(null) } }
     window.addEventListener('keydown', close)
     return () => window.removeEventListener('keydown', close)
   }, [])
@@ -67,13 +47,15 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="app-shell">
       <a href="#main-content" className="skip-link">Skip to content</a>
+      <StructuredData data={{ '@context': 'https://schema.org', '@type': 'Organization', name: 'PersonalFitness.id', url: 'https://personalfitness.id', logo: 'https://personalfitness.id/brand/personalfitness-mark.png', telephone: '+628113703805', areaServed: ['Bali', 'Jakarta'] }} />
       <header className="site-header">
         <div className="shell header-main">
-          <Link to="/" className="brand" aria-label="PersonalFitness.id home"><span>PersonalFitness</span><b>.id</b></Link>
+          <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="40" height="40" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
-            {navigation.map(([to, label]) => (
-              <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}</NavLink>
-            ))}
+            {navigation.map(([to, label], index) => <div className="nav-item" key={to}>
+              {index === 2 && <div className="locations-navigation"><button className={'nav-link locations-toggle' + (pathname.startsWith('/bali') || pathname.startsWith('/jakarta') ? ' nav-active' : '')} type="button" aria-expanded={locationsOpen} aria-controls="locations-dropdown" onClick={() => setLocationsPath(locationsOpen ? null : pathname)}>Locations<ChevronDown size={13} /></button>{locationsOpen && <div className="locations-dropdown" id="locations-dropdown"><div className="locations-dropdown-heading"><span>Wellness, where you are.</span><Link to="/service-areas" onClick={() => setLocationsPath(null)}>All areas<ArrowUpRight size={14} /></Link></div><div className="locations-columns">{(['Bali', 'Jakarta'] as City[]).map((city) => <div key={city}><Link className="locations-city-link" to={'/' + city.toLowerCase()} onClick={() => setLocationsPath(null)}>{city}<ArrowUpRight size={15} /></Link>{cityAreas(city).map((area) => <Link to={'/' + city.toLowerCase() + '/' + area.slug} onClick={() => setLocationsPath(null)} key={area.slug}>{area.name}<small>{area.travelQuote ? 'By request' : area.travelFee ? 'Travel extra' : 'In-zone'}</small></Link>)}</div>)}</div></div>}</div>}
+              <NavLink to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'} onClick={() => setLocationsPath(null)}>{label}</NavLink>
+            </div>)}
           </nav>
           <div className="header-actions">
             <Link to="/contact" className="button button-primary header-cta">Get a quote<ArrowUpRight size={15} /></Link>
@@ -83,6 +65,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {menuOpen && (
           <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
             {navigation.map(([to, label]) => <NavLink key={to} to={to} onClick={() => setMenuPath(null)}>{label}</NavLink>)}
+            <div className="mobile-locations"><p className="eyebrow">Locations</p>{(['Bali', 'Jakarta'] as City[]).map((city) => <details key={city}><summary>{city}<ChevronDown size={16} /></summary><Link to={'/' + city.toLowerCase()} onClick={() => setMenuPath(null)}>Explore {city}</Link>{cityAreas(city).map((area) => <Link to={'/' + city.toLowerCase() + '/' + area.slug} onClick={() => setMenuPath(null)} key={area.slug}>{area.name}{area.travelQuote ? ' · by request' : ''}</Link>)}</details>)}</div>
             <NavLink to="/contact" onClick={() => setMenuPath(null)}>Get a quote</NavLink>
             <NavLink to="/programmes" onClick={() => setMenuPath(null)}>Programmes</NavLink>
             <NavLink to="/faq" onClick={() => setMenuPath(null)}>FAQ</NavLink>
@@ -93,7 +76,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <footer className="site-footer">
         <div className="shell footer-grid footer-grid-wide">
           <div className="footer-brand">
-            <Link to="/" className="brand brand-light"><span>PersonalFitness</span><b>.id</b></Link>
+            <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="40" height="40" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
             <p>Fitness and wellness at your home or villa. Explore the right format, then confirm the actual professional and full quote.</p>
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
@@ -110,6 +93,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link to="/nutrition-consultation">Nutrition requests</Link>
             <Link to="/services">All wellness services</Link>
             <Link to="/programmes">Programmes</Link>
+            <Link to="/wellness-plan">Build a wellness schedule</Link>
           </div>
           <div>
             <p className="footer-heading">Places</p>
@@ -124,6 +108,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link to="/professionals">Professionals</Link>
             <Link to="/pricing">Pricing</Link>
             <Link to="/about">About</Link>
+            <Link to="/villa-hotel-partners">Villa & hotel partners</Link>
             <Link to="/reviews">Guest notes</Link>
             <Link to="/resources">Blog</Link>
             <Link to="/faq">FAQ</Link>

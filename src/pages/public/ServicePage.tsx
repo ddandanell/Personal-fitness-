@@ -8,6 +8,7 @@ import { getService, type WellnessOffer } from '@/data/catalog'
 import { professionalsFor } from '@/data/professionals'
 import articleData from '@/data/service-articles.json'
 import { formatIdr } from '@/lib/money'
+import StructuredData from '@/components/StructuredData'
 import NotFound from './NotFound'
 
 function formatDuration(offer: WellnessOffer) {
@@ -29,9 +30,11 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
   const cta = clinical ? 'Ask about a specialist' : service.slug === 'wellness-equipment-rental' ? 'Request an equipment quote' : 'Plan this service'
   const request = '/contact?service=' + service.slug
   return <>
+    <StructuredData data={[{ '@context': 'https://schema.org', '@type': 'Service', name: service.title, description: service.description, url: 'https://personalfitness.id/' + service.slug, image: 'https://personalfitness.id' + service.image, serviceType: service.category, provider: { '@type': 'Organization', name: 'PersonalFitness.id', url: 'https://personalfitness.id' }, areaServed: service.cities.map((city) => ({ '@type': 'Place', name: city })) }, { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://personalfitness.id/' }, { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://personalfitness.id/services' }, { '@type': 'ListItem', position: 3, name: service.title, item: 'https://personalfitness.id/' + service.slug }] }]} />
     <PageIntro eyebrow={service.category + ' · ' + (service.status === 'core' ? 'Core session' : 'By request')} title={service.title} description={service.description}>
       {published ? <PricePills slug={service.slug} /> : <p className="service-request-label">A personal quote for your exact format and location.</p>}
       <div className="cluster" style={{ marginTop: 22 }}><Link to={request} className="button button-primary">{cta}<ArrowUpRight size={16} /></Link><a href="#formats" className="button button-outline">Explore formats</a></div>
+      <nav className="service-article-nav" aria-label="On this service page"><a href="#service-guide">Read the full guide</a><a href="#service-planning">Add to my week</a></nav>
     </PageIntro>
     <section className="section-compact"><div className="shell service-detail-grid">
       <ParallaxImage src={service.image} alt={service.imageAlt} eager />
@@ -47,7 +50,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
         <p className="offer-requirement">{offer.requirement}</p><Link to={request + '&offer=' + offer.id} className="text-link">Enquire about this format<ArrowUpRight size={15} /></Link>
       </article>)}</div>
     </div></section>
-    <section className="section"><div className="shell service-reading-layout"><div className="service-article">{article.map((section) => <section key={section.title}><h2>{section.title}</h2><p>{section.body}</p></section>)}</div><aside className="service-reading-aside"><Eyebrow>A little preparation</Eyebrow><h3>Before your visit</h3><ul>{service.prepare.map((item) => <li key={item}>{item}</li>)}</ul><h3>Outside the agreed scope</h3><ul>{service.excludes.map((item) => <li key={item}>{item}</li>)}</ul><Link to={request} className="button button-primary">{cta}<ArrowUpRight size={15} /></Link></aside></div></section>
+    <section className="section" id="service-guide"><div className="shell service-reading-layout"><article className="service-article" aria-label={service.title + ' complete guide'}>{article.map((section) => <section key={section.title}><h2>{section.title}</h2><p>{section.body}</p></section>)}</article><aside className="service-reading-aside"><Eyebrow>A little preparation</Eyebrow><h3>Before your visit</h3><ul>{service.prepare.map((item) => <li key={item}>{item}</li>)}</ul><h3>Outside the agreed scope</h3><ul>{service.excludes.map((item) => <li key={item}>{item}</li>)}</ul><Link to={request} className="button button-primary">{cta}<ArrowUpRight size={15} /></Link><div className="service-plan-callout" id="service-planning"><Eyebrow>Your wider wellness plan</Eyebrow><h3>Make this part of your week.</h3><p>Mix services into one personal schedule, with your coordinator bringing the details together.</p><Link to="/wellness-plan" className="text-link">Build my wellness week<ArrowUpRight size={15} /></Link><div className="cluster" style={{ marginTop: 18 }}>{service.cities.map((city) => <Link to={'/' + city.toLowerCase()} className="text-link" key={city}>Explore {city}<ArrowUpRight size={14} /></Link>)}</div></div></aside></div></section>
     {people.length > 0 && <section className="section-compact section-light"><div className="shell"><div className="section-title"><div><Eyebrow>Find your approach</Eyebrow><h2>Explore the kind of support you prefer.</h2><p>These are some of the professionals who work in this service. Availability is confirmed on your quote.</p></div><Link to="/professionals" className="text-link">All professionals<ArrowUpRight size={16} /></Link></div><ProfessionalGrid people={people} /></div></section>}
     {published && <section className="section-compact"><div className="shell"><div className="section-title"><div><Eyebrow>Planning estimate</Eyebrow><h2>Put your visit together.</h2></div></div><QuoteEstimator compact initialService={service.slug} /></div></section>}
     <CtaBand dark title={'Bring ' + service.title.toLowerCase() + ' to your plans.'} copy="Share the city, area, date window and chosen format. We check professional fit, practical requirements and the full price before confirmation." to={request} label={cta} />

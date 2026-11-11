@@ -12,7 +12,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,
-      includeAssets: ['icons/icon-192.png', 'icons/icon-512.png'],
+      includeAssets: ['icons/icon-192.png', 'icons/icon-512.png', 'icons/favicon-64.png', 'favicon.ico', 'brand/personalfitness-mark.png'],
       manifest: {
         name: 'PersonalFitness.id - Fitness and Wellness at Your Location',
         short_name: 'PersonalFitness',
@@ -39,7 +39,7 @@ export default defineConfig({
           {
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'NetworkFirst',
-            options: { cacheName: 'pf-public-pages-v3-wellness', networkTimeoutSeconds: 3, expiration: { maxEntries: 20, maxAgeSeconds: 86400 } },
+            options: { cacheName: 'pf-public-pages-v4-wellness-plans', networkTimeoutSeconds: 3, expiration: { maxEntries: 20, maxAgeSeconds: 86400 } },
           },
         ],
       },

@@ -36,6 +36,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
   if (!Number.isInteger(input.participants) || input.participants < 1) return { ...empty, error: 'Enter a whole participant count of at least one.' }
   if (input.area && !area) return { ...empty, error: 'Choose a published area or select Confirm later.' }
   if (area && area.city !== input.city) return { ...empty, error: area.name + ' is in ' + area.city + '. Choose a matching area.' }
+  if (area?.travelQuote) return { ...empty, error: 'Availability and travel for ' + area.name + ' need a written quote. No in-zone or zero-travel price is assumed.' }
   if (input.programme && !programme) return { ...empty, error: 'Choose a valid programme or a single visit.' }
   if (offer.quoteOnly || service.quoteOnly || !offer.durationMin) return { ...empty, error: 'This format needs a written specialist or supplier quote. We confirm suitability, professional, scope, equipment and total before booking.' }
   if (input.city === 'Jakarta' && (!isDefault || service.prices.Jakarta == null)) return { ...empty, error: 'This format is not priced for Jakarta. Ask us to check local professional availability and a complete quote.' }

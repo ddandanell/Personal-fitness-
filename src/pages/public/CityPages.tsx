@@ -5,6 +5,9 @@ import { AreaGrid, CtaBand, ProfessionalGrid } from '@/components/SiteBlocks'
 import { cities, cityAreas, coreServices, getArea, getService, type City } from '@/data/catalog'
 import { professionalsFor } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
+import areaArticles from '@/data/area-articles.json'
+import serviceArticles from '@/data/service-articles.json'
+import StructuredData from '@/components/StructuredData'
 import NotFound from './NotFound'
 
 const images: Record<City, [string, string]> = {
@@ -15,7 +18,6 @@ const images: Record<City, [string, string]> = {
 export function CityPage({ city }: { city: City }) {
   const data = cities[city]
   const people = professionalsFor({ city })
-  const localAreas = cityAreas(city)
   const [image, alt] = images[city]
 
   return (
@@ -28,7 +30,7 @@ export function CityPage({ city }: { city: City }) {
           <ParallaxImage src={image} alt={alt} eager />
           <div className="city-copy">
             <p className="eyebrow"><MapPin size={14} />{city} clusters</p>
-            <h2>We publish the areas we can honour.</h2>
+            <h2>Five areas. A plan around your place.</h2>
             <ul className="check-list">{data.clusters.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
             <ul className="check-list" style={{ marginTop: 24 }}>{data.notes.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
           </div>
@@ -52,7 +54,7 @@ export function CityPage({ city }: { city: City }) {
       </section>
       <section className="section">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Areas</Eyebrow><h2>{localAreas.length} published clusters.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Choose your area</Eyebrow><h2>Explore five {city} areas.</h2><p>Open a local guide to see venue details and travel rules. Requests outside our starting zones need a separate availability check.</p></div></div>
           <AreaGrid city={city} />
         </div>
       </section>
@@ -82,11 +84,13 @@ export function AreaPage() {
   const cityPath = city === 'Bali' ? 'bali' : 'jakarta'
   const people = professionalsFor({ city, area: area.slug })
   const areaServices = area.services.map((item) => getService(item)).filter(Boolean)
+  const story = (areaArticles as Record<string, { title: string; body: string }[]>)[area.slug] || []
 
   return (
     <>
-      <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={`Private sessions in ${area.name}.`} description={area.copy}>
-        <p className="price-highlight">{area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included in the session price'}</p>
+      <StructuredData data={{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: area.city, item: 'https://personalfitness.id/' + cityPath }, { '@type': 'ListItem', position: 2, name: area.name, item: 'https://personalfitness.id/' + cityPath + '/' + area.slug }] }} />
+      <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={`Private wellness in ${area.name}.`} description={area.copy}>
+        <p className="price-highlight">{area.travelQuote ? 'Availability and travel confirmed by written quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included in the core session price'}</p>
         <Link to={`/contact?city=${area.city}&area=${area.slug}`} className="button button-primary">Check {area.name}<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section-compact">
@@ -95,6 +99,7 @@ export function AreaPage() {
           <ul className="check-list large-list">{area.venues.map((item) => <li key={item}><Check size={19} />{item}</li>)}</ul>
         </div>
       </section>
+      <section className="section"><div className="shell area-story-grid"><article className="area-article" aria-label={area.name + ' wellness guide'}>{story.map((section) => <section key={section.title}><h2>{section.title}</h2><p>{section.body}</p></section>)}</article><aside className="area-article-aside"><img className="location-photo" src={area.city === 'Bali' ? '/images/wellness/villa-yoga-partners.webp' : '/images/professionals/nadia-putri.webp'} alt={area.city === 'Bali' ? 'Private yoga in a tropical villa setting' : 'Private mat instruction in a Jakarta apartment setting'} width="1200" height="800" loading="lazy" /><div><Eyebrow>Your weekly rhythm</Eyebrow><h3>A plan for your stay. Or your everyday.</h3><p>Try one paid visit, then combine the services you enjoy into an agreed prepaid programme.</p><Link to="/wellness-plan" className="button button-primary">Build my schedule<ArrowUpRight size={16} /></Link></div></aside></div></section>
       <section className="section-compact section-light">
         <div className="shell">
           <div className="section-title"><div><Eyebrow>Sessions here</Eyebrow><h2>Services to enquire about in {area.name}.</h2></div></div>
@@ -155,6 +160,7 @@ export function CityServicePage() {
           <AreaGrid city={city} />
         </div>
       </section>
+      <section className="section"><div className="shell service-reading-layout"><article className="service-article" aria-label={service.title + ' complete guide'}>{((serviceArticles as Record<string, { title: string; body: string }[]>)[service.slug] || []).map((section) => <section key={section.title}><h2>{section.title}</h2><p>{section.body}</p></section>)}</article><aside className="service-reading-aside"><Eyebrow>One connected schedule</Eyebrow><h3>Add this to your week.</h3><p>Combine private services around your household, dates and preferences.</p><Link to="/wellness-plan" className="button button-primary">Create my schedule<ArrowUpRight size={15} /></Link><Link to={'/' + service.slug} className="text-link" style={{ marginTop: 20 }}>All {service.title.toLowerCase()} formats<ArrowUpRight size={15} /></Link></aside></div></section>
       {people.length > 0 && (
         <section className="section">
           <div className="shell">

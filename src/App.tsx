@@ -19,7 +19,9 @@ const Reviews = lazy(() => import('@/pages/public/MorePages').then((m) => ({ def
 const BlogIndex = lazy(() => import('@/pages/public/Blog').then((m) => ({ default: m.BlogIndex })))
 const BlogArticle = lazy(() => import('@/pages/public/Blog').then((m) => ({ default: m.BlogArticle })))
 const FaqPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.FaqPage })))
-const HowItWorksPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.HowItWorksPage })))
+const HowItWorksPage = lazy(() => import('@/pages/public/WellnessHowItWorks'))
+const WellnessPlan = lazy(() => import('@/pages/public/WellnessPlan'))
+const Partners = lazy(() => import('@/pages/public/Partners'))
 const PricingPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.PricingPage })))
 const ContactPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ContactPage })))
 const AboutPage = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.AboutPage })))
@@ -47,6 +49,8 @@ export default function App() {
           <Route path="/private-chef" element={<ServicePage slug="private-chef" />} />
           <Route path="/private-chef-bali" element={<Navigate to="/private-chef" replace />} />
           <Route path="/programmes" element={<Programmes />} />
+          <Route path="/wellness-plan" element={<WellnessPlan />} />
+          <Route path="/villa-hotel-partners" element={<Partners />} />
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/professionals/:slug" element={<ProfessionalDetail />} />
           <Route path="/locations" element={<Navigate to="/service-areas" replace />} />

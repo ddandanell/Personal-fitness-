@@ -14,8 +14,8 @@ import WellnessDirectory, { WellnessPriceGuide } from '@/components/WellnessDire
 export function Programmes() {
   return (
     <>
-      <PageIntro eyebrow="Programmes" title="Two, three and four weeks, prepaid." description="A single session is for a short stay. A block is for people who already know they will be in the same cluster. Discounts are mechanical: 5%, 8% or 12% off the session rate.">
-        <Link to="/contact?programme=four-week" className="button button-primary">Design a block<ArrowUpRight size={16} /></Link>
+      <PageIntro eyebrow="Programmes" title="Your wellness week, on repeat." description="Start with one paid session. Then mix training, yoga, mat Pilates and mobility into a prepaid two, three or four-week plan. Six, nine and twelve eligible visits receive 5%, 8% and 12% savings on session charges.">
+        <Link to="/wellness-plan" className="button button-primary">Build my wellness schedule<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
       <section className="section-compact section-light">
@@ -308,7 +308,8 @@ const legalCopy = {
     lede: 'The estimator runs in your browser. We do not store card numbers, identity documents or medical files in this form.',
     cta: 'Prepare a non-sensitive enquiry',
     blocks: [
-      ['On this website', 'Service, city, area, duration, headcount and a one-line goal stay in the current page until you copy, download or open WhatsApp. Reloading the page clears them. There is no customer account.'],
+      ['On this website', 'The estimator, wellness planner and partnership form keep the details you enter in the current page until you copy, download or open a WhatsApp draft. Reloading the page clears them. These forms do not create an account, save a health record or send your details automatically.'],
+      ['Managed wellness brief', 'For an agreed programme, your coordinator can maintain practical goals, preferences and session feedback. You choose which relevant non-clinical notes can be shared with assigned professionals. Ask your coordinator about access, correction or ending this sharing. Clinical records stay with the responsible provider and are separate from the general wellness brief.'],
       ['WhatsApp', 'If you send the draft to PersonalFitness.id, it is used to qualify and coordinate the request. WhatsApp has its own terms. Keep payment-card, bank, ID and detailed health data out of that chat.'],
       ['Booking records', 'Confirmed sessions need a customer record on our side: name, contact, address type, session IDs, payment status. Health details, if ever required, use a restricted screening route, not the public site.'],
       ['Your choices', 'Ask a human, request a correction, or opt out of further messages. Complaints and safety issues go to a person, not an auto-reply.'],
@@ -324,6 +325,7 @@ const legalCopy = {
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
       ['Scope', 'The selected service and written quote define the scope. General fitness and relaxation visits do not include clinical diagnosis or treatment. Clinical or qualified health requests require an appropriately authorised professional and any separate clinical agreement. Swimming requires a suitable permitted pool; chef and equipment requests are itemised separately.'],
       ['Quotes and payment', 'Nothing is confirmed until the quote is accepted and payment is verified on the merchant link. Chat messages are not settlement.'],
+      ['Prepaid wellness plans', 'The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; travel, massage, clinical services, food, rentals and external costs are excluded.'],
       ['Your space', 'You confirm permission to use the villa, home, hotel room or pool. Access failures, unsafe floors and missing permission can stop the session under the refund rules.'],
       ['Liability', 'You participate in physical activity at your own risk within a non-clinical fitness session. We stop work that looks unsafe. We do not accept clinical responsibility we are not qualified to hold.'],
     ],

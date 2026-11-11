@@ -54,6 +54,7 @@ export type Area = {
   city: City
   cluster: string
   travelFee: number
+  travelQuote?: boolean
   driveNote: string
   copy: string
   venues: string[]
@@ -199,6 +200,30 @@ export const areas: Area[] = [
     copy: 'Central Jakarta sessions are built around building access. Lobby, parking and security names are collected before confirmation so the professional is not left downstairs.',
     venues: ['Serviced apartments', 'Family houses', 'Office-adjacent residences with written access'],
     bestFor: ['Early personal training', 'Private yoga at home', 'Three- and four-week resident blocks'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+  },
+  {
+    slug: 'north-jakarta', name: 'North Jakarta', city: 'Jakarta', cluster: 'North Jakarta · by request', travelFee: 0, travelQuote: true,
+    driveNote: 'Professional availability and travel are quoted for your exact address.',
+    copy: 'Request private wellness at homes and apartments around Kelapa Gading, Sunter, Pluit and other North Jakarta addresses. Your coordinator checks local professional availability, building permission and travel before confirming any visit.',
+    venues: ['Apartments with visiting-professional permission', 'Private houses with a clear practice space', 'Hotel rooms and gyms with management approval'],
+    bestFor: ['At-home yoga by request', 'A recurring household fitness enquiry', 'A private wellness schedule with realistic travel windows'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+  },
+  {
+    slug: 'west-jakarta', name: 'West Jakarta', city: 'Jakarta', cluster: 'West Jakarta · by request', travelFee: 0, travelQuote: true,
+    driveNote: 'Availability, access and a written travel quote are required before booking.',
+    copy: 'Plan a private training, yoga or Pilates enquiry for a home, apartment or approved hotel in West Jakarta. Puri Indah, Kebon Jeruk and nearby addresses are reviewed individually so your schedule is based on a professional who can reach the property.',
+    venues: ['Landed homes with suitable indoor floors', 'Apartments with security and lift access agreed', 'Private gyms approved for an outside professional'],
+    bestFor: ['A before-work fitness enquiry', 'Private yoga at home', 'A multi-week plan for residents'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+  },
+  {
+    slug: 'east-jakarta', name: 'East Jakarta', city: 'Jakarta', cluster: 'East Jakarta · by request', travelFee: 0, travelQuote: true,
+    driveNote: 'The exact neighbourhood and time determine whether a visit and travel quote are available.',
+    copy: 'Ask about a private wellness routine for your East Jakarta home or apartment. Rawamangun, Pulomas and surrounding addresses are considered after a local supply and access check. An enquiry does not imply guaranteed coverage across the municipality.',
+    venues: ['Private family homes', 'Apartment living rooms with clear floor space', 'Approved residential fitness rooms'],
+    bestFor: ['A resident yoga or training enquiry', 'A family wellness schedule', 'A regular time window near home'],
     services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
   },
 ]

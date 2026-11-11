@@ -42,3 +42,11 @@ Professional photographs are under `public/images/professionals/`, with service-
 ## Research and implementation handoff
 
 `docs/AI_AGENT_BLUEPRINT.md`, `SERVICE_CATALOGUE.json`, `RESEARCH_SOURCES.json`, `PREMIUM_PRICING.md` and `QA_CHECKLIST.md` retain the researched service expansion and future maintenance specification. New prices are indicative planning guides unless they are an existing published core rate. Chef and equipment prices require a supplier quote; no automatic clinical booking was added.
+
+## Wellness schedule and hospitality partnerships
+
+The upgraded public site adds `/wellness-plan`, `/villa-hotel-partners` and a rebuilt `/how-it-works` flow. The partner page is linked from the footer only. Desktop and mobile location navigation expose five Bali areas and the five Jakarta municipalities. North, West and East Jakarta require a professional availability and travel quote. All 53 service guides exceed 1,000 words, and city service views include the complete guide with a consolidated canonical URL.
+
+`src/lib/wellnessPlan.ts` calculates a mixed weekly schedule, applies one eligible 6/9/12-visit discount and keeps travel and excluded services outside the discount. It rejects invalid inputs and flags overlapping visits. Partner and schedule forms prepare reviewable WhatsApp drafts; no message is sent automatically. The shared wellness brief is described as a coordinator-managed service with guest sharing choices, not a deployed account, clinical-record or coach portal. There is no automatic subscription, checkout or health-data storage in these public forms.
+
+Run `npm run lint`, `npm run build`, `npm run verify` and `node scripts/verify-links.mjs`. The content verification includes mixed-plan pricing, unknown travel, participant validation and overlap checks. The link audit checks every prerendered page, internal link, image reference and JSON-LD block.

@@ -18,7 +18,7 @@ assert.equal(offers.length, 140)
 assert.equal(new Set(offers.map((offer) => offer.id)).size, 140)
 const known = new Set(families.map((family) => family.slug))
 for (const family of families) {
-  assert.ok(wordCount(articles[family.slug]) >= 500, family.slug + ' needs complete service content')
+  assert.ok(wordCount(articles[family.slug]) >= 1000, family.slug + ' needs at least 1,000 words of complete service content')
   await fs.access(path.join('public', family.image))
   assert.ok(family.offers.length > 0)
   for (const offer of family.offers) assert.ok(categories.some((category) => category.id === offer.categoryId))
@@ -47,6 +47,37 @@ for (const record of manifest) {
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 try {
   const { estimateQuote, quoteMessage } = await server.ssrLoadModule('/src/lib/quote.ts')
+  const { estimateWellnessPlan, defaultVisits, wellnessPlanMessage } = await server.ssrLoadModule('/src/lib/wellnessPlan.ts')
+  const { cityAreas } = await server.ssrLoadModule('/src/data/catalog.ts')
+  assert.equal(cityAreas('Bali').length, 5)
+  assert.equal(cityAreas('Jakarta').length, 5)
+  const plan = { city: 'Bali', area: 'canggu', weeks: 4, startDate: '', visits: defaultVisits }
+  assert.equal(estimateWellnessPlan(plan).total, 6650000)
+  assert.equal(estimateWellnessPlan(plan).discountRate, .05)
+  assert.equal(estimateWellnessPlan({ ...plan, weeks: 1 }).discountRate, 0)
+  const three = [...defaultVisits, { id: 'pilates', service: 'mat-pilates', day: 'Wednesday', time: '09:00', participants: 1 }]
+  assert.equal(estimateWellnessPlan({ ...plan, visits: three }).discountRate, .12)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: three, weeks: 3 }).discountRate, .08)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: three, area: 'ubud' }).travelTotal, 1800000)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: three, area: 'ubud' }).total, 11304000)
+  assert.equal(estimateWellnessPlan({ ...plan, city: 'Jakarta', area: 'north-jakarta' }).requiresQuote, true)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: [{ ...defaultVisits[0], participants: 0 }] }).invalid, true)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: [{ ...defaultVisits[0], participants: 1.5 }] }).invalid, true)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: [{ ...defaultVisits[0], time: '' }] }).invalid, true)
+  assert.equal(estimateWellnessPlan({ ...plan, visits: [defaultVisits[0], { ...defaultVisits[1], day: 'Tuesday', time: '08:30' }] }).collisions, true)
+  const custom = wellnessPlanMessage({ ...plan, city: 'Jakarta', area: 'north-jakarta' })
+  assert.ok(custom.includes('complete written quote required'))
+  assert.ok(!custom.includes('Planning total: Rp 0'))
+  const withMassage = [...three, { id: 'massage', service: 'massage-and-bodywork', day: 'Thursday', time: '16:00', participants: 1 }]
+  const mixed = estimateWellnessPlan({ ...plan, visits: withMassage })
+  assert.equal(mixed.saving, estimateWellnessPlan({ ...plan, visits: three }).saving)
+  for (const route of ['/villa-hotel-partners', '/wellness-plan', '/how-it-works', '/jakarta/north-jakarta', '/jakarta/west-jakarta', '/jakarta/east-jakarta']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  const partnerHtml = await fs.readFile('dist/villa-hotel-partners.html', 'utf8')
+  const headerHtml = partnerHtml.split('</header>')[0]
+  const footerHtml = partnerHtml.split('<footer')[1]
+  assert.ok(!headerHtml.includes('href="/villa-hotel-partners"'))
+  assert.ok(footerHtml.includes('href="/villa-hotel-partners"'))
+  for (const file of ['public/brand/personalfitness-mark.png', 'public/favicon.ico', 'public/icons/favicon-64.png', 'public/images/wellness/villa-yoga-partners.webp']) await fs.access(file)
   const base = { service: 'personal-training', city: 'Bali', durationMin: 60, participants: 1 }
   assert.equal(estimateQuote(base).total, 900000)
   assert.equal(estimateQuote({ ...base, city: 'Jakarta' }).total, 950000)
