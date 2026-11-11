@@ -22,7 +22,7 @@ export default function Home() {
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
             <h1>Private fitness sessions at your villa or home</h1>
-            <p className="hero-lede">Personal training, private yoga, mat Pilates and mobility coaching, delivered at your location in published Bali and Jakarta clusters.</p>
+            <p className="hero-lede">Personal training, yoga, mat Pilates, mobility, boxing fitness and guided meditation at your villa or home in published Bali and Jakarta clusters.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
@@ -34,13 +34,13 @@ export default function Home() {
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Starting price · Bali personal training, 60 minutes, in-zone.</span></div>
           <div><strong>{formatIdr(950_000)}</strong><span>Starting price · Jakarta personal training, 60 minutes, in-zone.</span></div>
-          <div><strong>Four sessions</strong><span>Training, yoga, mat Pilates and mobility.</span></div>
+          <div><strong>Six sessions</strong><span>Training, yoga, Pilates, mobility, boxing and meditation.</span></div>
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Sessions" title="Four private sessions with a published starting price." copy="Yoga includes up to two people. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Sessions" title="Six private sessions with a published starting price." copy="Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>

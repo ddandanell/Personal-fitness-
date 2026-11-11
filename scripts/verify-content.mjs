@@ -75,7 +75,11 @@ try {
   for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
   const home = manifest.find((item) => item.path === '/')
   assert.equal(home.noindex, false)
-  const held = manifest.find((item) => item.path === '/boxing-fitness')
+  const boxing = manifest.find((item) => item.path === '/boxing-fitness')
+  assert.equal(boxing.noindex, false)
+  const meditation = manifest.find((item) => item.path === '/guided-meditation')
+  assert.equal(meditation.noindex, false)
+  const held = manifest.find((item) => item.path === '/swimming')
   assert.equal(held.noindex, true)
   const partnerHtml = await fs.readFile('dist/villa-hotel-partners.html', 'utf8')
   const headerHtml = partnerHtml.split('</header>')[0]
@@ -95,6 +99,9 @@ try {
   assert.equal(estimateQuote({ ...base, area: 'made-up-area' }).ok, false)
   assert.equal(estimateQuote({ ...base, offerId: 'PF-076' }).ok, false)
   assert.equal(estimateQuote({ ...base, area: 'ubud', programme: 'two-week' }).total, 6030000)
+  assert.equal(estimateQuote({ ...base, service: 'boxing-fitness' }).total, 1000000)
+  assert.equal(estimateQuote({ ...base, service: 'boxing-fitness', participants: 2 }).ok, false)
+  assert.equal(estimateQuote({ ...base, service: 'guided-meditation', participants: 2 }).total, 800000)
   const swim = { ...base, service: 'swimming', durationMin: 45 }
   assert.equal(estimateQuote(swim).total, 1050000)
   assert.equal(estimateQuote({ ...swim, durationMin: 60 }).ok, false)
@@ -103,5 +110,5 @@ try {
     assert.equal(quote.ok, false)
     assert.ok(!quoteMessage(quote, {}).includes('Planning estimate: Rp 0'))
   }
-  console.log(JSON.stringify({ passed: true, serviceFamilies: families.length, offerFormats: offers.length, profiles: profiles.length, minimumProfileWords: Math.min(...Object.values(biographies).map(wordCount)), minimumServiceWords: Math.min(...Object.values(articles).map(wordCount)), professionalImages: (await fs.readdir('public/images/professionals')).filter((file) => file.endsWith('.webp')).length + (await fs.readdir('public/images/services')).filter((file) => file.endsWith('.webp')).length, prerenderedPages: manifest.length, quoteCases: 17 }, null, 2))
+  console.log(JSON.stringify({ passed: true, serviceFamilies: families.length, offerFormats: offers.length, profiles: profiles.length, minimumProfileWords: Math.min(...Object.values(biographies).map(wordCount)), minimumServiceWords: Math.min(...Object.values(articles).map(wordCount)), professionalImages: (await fs.readdir('public/images/professionals')).filter((file) => file.endsWith('.webp')).length + (await fs.readdir('public/images/services')).filter((file) => file.endsWith('.webp')).length, prerenderedPages: manifest.length, quoteCases: 20 }, null, 2))
 } finally { await server.close() }

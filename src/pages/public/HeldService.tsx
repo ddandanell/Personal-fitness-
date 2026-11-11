@@ -13,7 +13,7 @@ export default function HeldService({ slug: slugProp }: { slug?: string }) {
       <PageIntro
         eyebrow="Not currently available"
         title={title + ' is not currently available.'}
-        description="This service is not on the public offer. Check availability for personal training, private yoga, mat Pilates or mobility coaching at your villa or home."
+        description="This service is not on the public offer. Check availability for personal training, private yoga, mat Pilates, mobility, boxing fitness or guided meditation at your villa or home."
       >
         <div className="cluster">
           <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>

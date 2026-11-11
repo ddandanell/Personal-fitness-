@@ -5,12 +5,12 @@ import { formatIdr } from './money'
 export const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const
 export type PlanVisit = { id: string; service: string; day: string; time: string; participants: number }
 export type PlanInput = { city: City; area: string; weeks: number; startDate: string; visits: PlanVisit[] }
-export const planServices = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching']
+export const planServices = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation']
 export const defaultVisits: PlanVisit[] = [
   { id: 'yoga', service: 'private-yoga', day: 'Tuesday', time: '08:00', participants: 2 },
   { id: 'training', service: 'personal-training', day: 'Friday', time: '08:00', participants: 1 },
 ]
-const eligible = new Set(['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'])
+const eligible = new Set(['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'])
 
 export function estimateWellnessPlan(input: PlanInput) {
   const validWeeks = [1, 2, 3, 4].includes(input.weeks)

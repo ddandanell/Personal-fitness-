@@ -1,21 +1,96 @@
-import { ArrowUpRight, Check, Plus } from 'lucide-react'
+import { ArrowUpRight, Check, Plus, ShieldCheck } from 'lucide-react'
 import { Link, useParams } from 'react-router'
-import { Eyebrow, PageIntro, ParallaxImage } from '@/components/Primitives'
-import { CtaBand, ExtraFees, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
+import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
+import { CtaBand, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
-import { cancellationRules } from '@/data/catalog'
-import { publicServices } from '@/data/publicOffer'
+import { cancellationRules, extraPersonFee } from '@/data/catalog'
+import { CORE_SERVICE_SLUGS, publicServices } from '@/data/publicOffer'
+
+const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
 import { formatIdr } from '@/lib/money'
+import { estimateQuote } from '@/lib/quote'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
+
+const ratePhotos: Record<string, string> = {
+  'personal-training': '/images/sessions/personal-training.webp',
+  'private-yoga': '/images/sessions/private-yoga.webp',
+  'mat-pilates': '/images/sessions/mat-pilates.webp',
+  'boxing-fitness': '/images/sessions/boxing-fitness.webp',
+  'guided-meditation': '/images/sessions/guided-meditation.webp',
+}
+
+const priceExamples = [
+  {
+    place: 'Canggu',
+    title: 'Personal training',
+    note: '60 minutes · 1 person · in-zone travel included',
+    quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'canggu', durationMin: 60, participants: 1 }),
+  },
+  {
+    place: 'Ubud',
+    title: 'Personal training',
+    note: '60 minutes · 1 person · outer-zone travel added',
+    quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'ubud', durationMin: 60, participants: 1 }),
+  },
+  {
+    place: 'Canggu',
+    title: 'Private yoga for two',
+    note: '60 minutes · 2 people · second person included',
+    quote: estimateQuote({ service: 'private-yoga', city: 'Bali', area: 'canggu', durationMin: 60, participants: 2 }),
+  },
+  {
+    place: 'Canggu',
+    title: 'Personal training for two',
+    note: '60 minutes · 2 people · extra-person fee added',
+    quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'canggu', durationMin: 60, participants: 2 }),
+  },
+  {
+    place: 'Canggu',
+    title: 'Boxing fitness',
+    note: '60 minutes · 1 person · in-zone travel included',
+    quote: estimateQuote({ service: 'boxing-fitness', city: 'Bali', area: 'canggu', durationMin: 60, participants: 1 }),
+  },
+  {
+    place: 'Canggu',
+    title: 'Guided meditation for two',
+    note: '60 minutes · 2 people · second person included',
+    quote: estimateQuote({ service: 'guided-meditation', city: 'Bali', area: 'canggu', durationMin: 60, participants: 2 }),
+  },
+]
+
+const travelZones = [
+  ['Bali in-zone', 'Included', 'Canggu and Seminyak. Travel is already inside the published session price.'],
+  ['Ubud and Sanur', formatIdr(150_000), 'Added once per visit, not per person. Timing is checked before we confirm.'],
+  ['Uluwatu / Bukit', formatIdr(200_000), 'Added once per visit. Traffic windows are part of the quote, not an afterthought.'],
+  ['Jakarta in-zone', 'Included', 'South and Central Jakarta. Building access is collected before confirmation.'],
+  ['North, West, East Jakarta', 'By quote', 'No in-zone or zero-travel price is assumed. We confirm supply and travel in writing.'],
+]
+
+const quoteSteps = [
+  ['Starting price', 'The published 60-minute in-zone rate for the session and city.'],
+  ['People and length', 'Extra people and a 90-minute visit sit on top of that rate.'],
+  ['Travel', 'Outer-zone clusters add a per-visit line. In-zone travel is included.'],
+  ['Programme', '6, 9 and 12 visits take 5%, 8% and 12% off session charges, not travel.'],
+]
+
+const priceFaqKeys = [
+  'How much does a session cost?',
+  'Is the number on the website the final price?',
+  'Which Bali areas are in-zone?',
+  'Which Jakarta areas are in-zone?',
+  'Can two people share a session?',
+  'How do programmes work?',
+  'How do I pay?',
+]
 
 export function Programmes() {
   return (
     <>
-      <PageIntro eyebrow="Programmes" title="Plan my sessions as a prepaid block." description="Start with one paid session. Then mix personal training, private yoga, mat Pilates and mobility into a prepaid two, three or four-week plan. Six, nine and twelve visits receive 5%, 8% and 12% savings on session charges.">
+      <PageIntro eyebrow="Programmes" title="Plan my sessions as a prepaid block." description="Start with one paid session. Then mix training, yoga, Pilates, mobility, boxing and meditation into a prepaid two, three or four-week plan. Six, nine and twelve visits receive 5%, 8% and 12% savings on session charges.">
         <a href="#schedule-builder" className="button button-primary">Plan my sessions<ArrowUpRight size={16} /></a>
       </PageIntro>
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
@@ -65,7 +140,7 @@ export function Standards() {
         <div className="content-shell process-list">
           {[
             ['01', 'Identity and work eligibility', 'We confirm who is arriving at your door and that they can lawfully do the work.'],
-            ['02', 'Discipline competence', 'Personal training, yoga, mat Pilates and mobility are separate approvals.'],
+            ['02', 'Discipline competence', 'Personal training, yoga, mat Pilates, mobility, boxing and meditation are separate approvals.'],
             ['03', 'Practical delivery', 'A session in a real villa or apartment, not only a studio CV.'],
             ['04', 'Safety and conduct', 'Safeguarding, insurance, data conduct and a way to suspend someone quickly.'],
             ['05', 'Backup', 'A launched cluster needs two suitable people or an owner-approved safe equivalent.'],
@@ -163,7 +238,7 @@ export function HowItWorksPage() {
 export function ServicesHub() {
   return (
     <>
-      <PageIntro eyebrow="Services" title="Four private sessions at your villa or home." description="Personal training, private yoga, mat Pilates and mobility coaching. Published starting prices, then a written quote before payment.">
+      <PageIntro eyebrow="Services" title="Six private sessions at your villa or home." description="Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Published starting prices, then a written quote before payment.">
         <Link to="/pricing" className="button button-primary">See session prices<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section">
@@ -189,47 +264,199 @@ export function ServicesHub() {
 export function PricingPage() {
   return (
     <>
-      <PageIntro eyebrow="Pricing" title="Starting prices, then a live estimate." description="These are the published session starting prices. Extra people, outer-zone travel, 90 minutes and programmes change the total. The confirmed quote can still move after a supply and access check.">
-        <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
-      </PageIntro>
-      <section className="section-compact">
+      <section className="sales-hero">
+        <div className="shell sales-hero-grid">
+          <div className="sales-hero-copy">
+            <Eyebrow light>Published rates · Bali and Jakarta</Eyebrow>
+            <h1>What a private session costs at your villa or home</h1>
+            <p className="hero-lede">Six sessions, two cities, a starting price you can read before you message us. Extra people, outer-zone travel, 90 minutes and programmes change the total. The written quote is what you pay.</p>
+            <div className="cluster">
+              <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
+              <Link to="/contact" className="button button-outline-light">Check availability</Link>
+            </div>
+            <p className="hero-micro"><ShieldCheck size={16} />A number on this page is not a booking. Confirmation follows a written quote.</p>
+          </div>
+          <ParallaxImage src="/images/sessions/personal-training.webp" alt="Private personal training in a villa setting" eager className="hero-session-image" />
+        </div>
+        <div className="shell hero-facts">
+          <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
+          <div><strong>{formatIdr(950_000)}</strong><span>Jakarta personal training, 60 minutes, in-zone.</span></div>
+          <div><strong>Two people</strong><span>Yoga and meditation include a pair. Boxing stays one person.</span></div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="shell">
-          <div className="price-board price-board-wide">
-            {publicServices.map((service) => (
-              <div key={service.slug}>
-                <span>{service.title}</span>
-                <strong>{service.prices.Bali ? formatIdr(service.prices.Bali) : ' - '}</strong>
-                <p>Bali starting price · {service.durationMin} min</p>
-                <strong>{service.prices.Jakarta ? formatIdr(service.prices.Jakarta) : ' - '}</strong>
-                <p>Jakarta starting price · {service.durationMin} min</p>
-              </div>
+          <SectionTitle
+            eyebrow="Session rates"
+            title="Six private hours, priced in both cities."
+            copy="These are 60-minute in-zone starting prices. Open a session page for the format, then use the estimator for people, travel and programmes."
+            action={<Link to="/services" className="text-link">All sessions<ArrowUpRight size={15} /></Link>}
+          />
+          <div className="pricing-rate-grid">
+            {orderedServices.map((service) => (
+              <Link to={`/${service.slug}`} className="pricing-rate-card" key={service.slug}>
+                <div className="pricing-rate-photo">
+                  <img src={ratePhotos[service.slug] || service.image} alt={service.imageAlt} width="800" height="1000" />
+                </div>
+                <div className="pricing-rate-copy">
+                  <h3>{service.title}</h3>
+                  <p>{service.durationMin} minutes · up to {service.includedParticipants === 1 ? '1 person included' : `${service.includedParticipants} people included`}</p>
+                  <div className="pricing-rate-cities">
+                    <div>
+                      <span>Bali</span>
+                      <strong>{service.prices.Bali ? formatIdr(service.prices.Bali) : 'Quote'}</strong>
+                    </div>
+                    <div>
+                      <span>Jakarta</span>
+                      <strong>{service.prices.Jakarta ? formatIdr(service.prices.Jakarta) : 'Quote'}</strong>
+                    </div>
+                  </div>
+                  <span className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
-      <section className="section-compact section-light">
+
+      <section className="section section-light">
+        <div className="shell">
+          <SectionTitle eyebrow="How a quote is built" title="Start with the session rate. Then add only what applies." copy="Nothing is hidden in chat. If a line is not on the estimator, it is not assumed." />
+          <div className="quote-build">
+            {quoteSteps.map(([title, copy], index) => (
+              <article key={title}>
+                <span>0{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <SectionTitle
+            eyebrow="Worked examples"
+            title="The same maths the estimator uses."
+            copy="These are starting totals for named clusters. Availability, access and the payable amount are still confirmed in writing."
+          />
+          <div className="pricing-example-grid">
+            {priceExamples.map((item) => (
+              <article className="pricing-example" key={item.title + item.place}>
+                <p className="eyebrow">{item.place}</p>
+                <h3>{item.title}</h3>
+                <strong>{item.quote.ok ? formatIdr(item.quote.total) : 'Quote required'}</strong>
+                <p>{item.note}</p>
+                {item.quote.ok && item.quote.travel > 0 && <p className="small muted">Includes {formatIdr(item.quote.travel)} travel.</p>}
+                {item.quote.ok && item.quote.extraPeopleFee > 0 && <p className="small muted">Includes {formatIdr(item.quote.extraPeopleFee)} extra-person fee.</p>}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-dark">
+        <div className="shell">
+          <SectionTitle eyebrow="Travel" title="In-zone is included. Outer clusters add a per-visit line." copy="We do not claim island-wide or city-wide coverage. If we cannot honour the window, we say so before you pay." />
+          <div className="pricing-zone-grid">
+            {travelZones.map(([title, price, copy]) => (
+              <article key={title}>
+                <span>{title}</span>
+                <strong>{price}</strong>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+          <div className="cluster" style={{ marginTop: 36 }}>
+            <Link to="/bali" className="button button-light">Bali clusters</Link>
+            <Link to="/jakarta" className="button button-outline-light">Jakarta clusters</Link>
+            <Link to="/service-areas" className="button button-outline-light">Travel notes</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="shell split-feature">
           <div>
             <Eyebrow>Extras</Eyebrow>
-            <h2>The lines that sit on top of the session rate.</h2>
+            <h2>People, length and a pair session.</h2>
+            <p className="large-copy">Private yoga includes the second person. Other sessions add an extra-person fee. A 90-minute visit adds 45% of the base rate.</p>
+            <p>Venue hire, parking and unusual equipment appear only when they are written on the quote.</p>
           </div>
-          <ExtraFees />
+          <div className="price-board">
+            <div>
+              <span>Extra person · Bali</span>
+              <strong>{formatIdr(extraPersonFee.Bali)}</strong>
+              <p>Added once per extra person, not per minute.</p>
+            </div>
+            <div>
+              <span>Extra person · Jakarta</span>
+              <strong>{formatIdr(extraPersonFee.Jakarta)}</strong>
+              <p>Same rule. Building access is still checked first.</p>
+            </div>
+            <div>
+              <span>90-minute session</span>
+              <strong>+45%</strong>
+              <p>Of the 60-minute city rate, before travel.</p>
+            </div>
+            <div>
+              <span>Private yoga pair</span>
+              <strong>Included</strong>
+              <p>Two people at the published yoga rate.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="section">
+
+      <section className="section section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Estimate my price, then continue in WhatsApp.</h2></div></div>
+          <SectionTitle
+            eyebrow="Programmes"
+            title="6, 9 and 12 visits take a published reduction."
+            copy="The discount applies to session charges. Travel is still charged per visit. Unused prepaid sessions follow the validity window on your quote."
+            action={<Link to="/programmes" className="text-link">Plan a block<ArrowUpRight size={15} /></Link>}
+          />
+          <ProgrammeGrid />
+        </div>
+      </section>
+
+      <section className="section" id="estimator">
+        <div className="shell">
+          <SectionTitle eyebrow="Estimator" title="Estimate my price, then continue in WhatsApp." copy="Choose the session, city, cluster, people and length. The draft carries the numbers. Nothing is sent until you send it." />
           <QuoteEstimator />
         </div>
       </section>
+
+      <section className="section section-light">
+        <div className="content-shell faq-list">
+          <SectionTitle eyebrow="Questions" title="Prices, travel and what you actually pay." />
+          {faqs.filter(([question]) => priceFaqKeys.includes(question)).map(([question, answer]) => (
+            <details className="faq-item" key={question}>
+              <summary><span>{question}</span></summary>
+              <div className="faq-body"><p>{answer}</p></div>
+            </details>
+          ))}
+          <Link to="/faq" className="text-link">All questions<ArrowUpRight size={15} /></Link>
+        </div>
+      </section>
+
       <section className="section-compact section-dark">
         <div className="shell split-feature">
-          <div><h2>Cancellation, in one place.</h2></div>
+          <div>
+            <Eyebrow light>Before you pay</Eyebrow>
+            <h2>Cancellation, in one place.</h2>
+            <p>The quote repeats these lines. Pay only through the secure link on the confirmed quote. Never send card numbers, bank details or ID photos in WhatsApp.</p>
+            <Link to="/refunds-rescheduling" className="text-link">Full refund terms<ArrowUpRight size={15} /></Link>
+          </div>
           <div className="meta-table">
             {cancellationRules.map(([k, v]) => <div key={k}><span>{k}</span><strong>{v}</strong></div>)}
           </div>
         </div>
       </section>
+
+      <CtaBand dark title="Check availability for your window." copy="City, area and a two-hour window are enough to start. We confirm whether we can run the hour, then send the quote." to="/contact" label="Check availability" />
     </>
   )
 }
@@ -276,7 +503,7 @@ export function ContactPage() {
 export function AboutPage() {
   return (
     <>
-      <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates personal training, private yoga, mat Pilates and mobility coaching in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
+      <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
       <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator in a private villa" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
@@ -285,7 +512,7 @@ export function AboutPage() {
           <h2>What we do not sell</h2>
           <p>We do not publish a public trainer directory, guest reviews, clinical booking, nutrition plans or an expanded spa catalogue. Reformer instruction, swimming and other held requests are not on the live offer.</p>
           <h2>Scope</h2>
-          <p>The live offer is general fitness: personal training, private yoga, mat Pilates and mobility coaching. Nutrition and clinical requests are not booked on this site.</p>
+          <p>The live offer is general fitness: personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Nutrition and clinical requests are not booked on this site.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -386,7 +613,7 @@ const legalCopy = {
     cta: 'Ask a fitness question instead',
     blocks: [
       ['Why it is held', 'Nutrition advice that looks clinical needs a qualified professional, a defined scope, a fee and a records rule. Those gates are not open.'],
-      ['What we can do', 'We can still quote personal training, private yoga, mat Pilates and mobility coaching.'],
+      ['What we can do', 'We can still quote personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation.'],
     ],
   },
   physio: {

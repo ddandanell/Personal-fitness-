@@ -1236,14 +1236,14 @@
   },
   {
     "slug": "boxing-fitness",
-    "title": "Boxing and kickboxing fitness",
-    "short": "A private visit to enjoy a focused private workout while learning useful movement skills, coordinated around your own space.",
-    "description": "Boxing and kickboxing fitness at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
+    "title": "Boxing fitness",
+    "short": "Pad-only boxing fitness in a checked private space. Technique, combinations and conditioning — no sparring.",
+    "description": "Private boxing fitness at your home, villa or a suitable terrace or carport. Pads are brought. The space is checked for clearance and impact noise before confirmation. No sparring, no ring and no contact work.",
     "durationMin": 60,
     "includedParticipants": 1,
     "maxParticipants": 1,
-    "status": "request",
-    "statusNote": "By request. Format prices are indicative; the final quote confirms supply, inclusions and total.",
+    "status": "core",
+    "statusNote": "Published core rate; exact dates, space check and professional confirmed by quote.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -1271,8 +1271,8 @@
       "An appropriate format involving non-contact pad rounds, footwork, straightforward combinations and fitness conditioning",
       "A clear finish and any practical next steps within professional scope"
     ],
-    "image": "/images/professionals/budi-santoso.webp",
-    "imageAlt": "Indonesian professional in a private boxing and kickboxing fitness setting",
+    "image": "/images/sessions/boxing-fitness.webp",
+    "imageAlt": "Private boxing fitness pad work at a villa",
     "cities": [
       "Bali",
       "Jakarta"
@@ -2520,14 +2520,14 @@
   },
   {
     "slug": "guided-meditation",
-    "title": "Guided meditation and relaxation",
-    "short": "A private visit to make time for a practical private resting or attention practice, coordinated around your own space.",
-    "description": "Guided meditation and relaxation at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
+    "title": "Guided meditation",
+    "short": "A quiet 60-minute guided sit for one or two people at your villa or home. Not therapy.",
+    "description": "Private guided meditation at your home, villa or a quiet indoor room. One or two people sit with a guide for sixty minutes. This is a practical attention and relaxation session, not psychotherapy, clinical treatment or a sleep-disorder service.",
     "durationMin": 60,
     "includedParticipants": 2,
     "maxParticipants": 2,
-    "status": "request",
-    "statusNote": "By request. Format prices are indicative; the final quote confirms supply, inclusions and total.",
+    "status": "core",
+    "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -2555,8 +2555,8 @@
       "An appropriate format involving guided attention, body awareness, Yoga Nidra or progressive muscle relaxation",
       "A clear finish and any practical next steps within professional scope"
     ],
-    "image": "/images/professionals/amira-fahlevi.webp",
-    "imageAlt": "Indonesian professional in a private guided meditation and relaxation setting",
+    "image": "/images/sessions/guided-meditation.webp",
+    "imageAlt": "Private guided meditation in a quiet villa room",
     "cities": [
       "Bali",
       "Jakarta"

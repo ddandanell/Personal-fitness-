@@ -38,7 +38,7 @@ export const reviews = [
 ]
 
 export const faqs = [
-  ['How much does a session cost?', 'Published starting prices are on the pricing page. Bali personal training starts at Rp 900.000. Jakarta personal training starts at Rp 950.000. Yoga includes up to two people. Travel, extra people, 90-minute sessions and programmes change the total. You get a written quote before payment.'],
+  ['How much does a session cost?', 'Published starting prices are on the pricing page. Bali personal training starts at Rp 900.000. Jakarta personal training starts at Rp 950.000. Boxing fitness starts at Rp 1.000.000. Guided meditation starts at Rp 800.000 and includes two people. Yoga includes up to two people. Travel, extra people, 90-minute sessions and programmes change the total. You get a written quote before payment.'],
   ['Is the number on the website the final price?', 'It is the starting price for a standard in-zone session. Outer-zone travel, extra people, longer duration, venue fees and programmes are added or reduced in the estimator and then confirmed in writing.'],
   ['Does an enquiry reserve the time?', 'No. An enquiry starts the supply and access check. The session is confirmed only after you accept the quote and payment status is verified.'],
   ['Can I choose a trainer?', 'Tell us the approach, language and relevant experience you prefer. The written quote confirms the professional, qualifications and availability. You can request a returning professional after a previous visit.'],
@@ -140,14 +140,14 @@ export function getResource(slug: string) {
 export const pageMeta: Record<string, [string, string]> = {
   '/villa-hotel-partners': ['Villa and Hotel Wellness Partnerships in Bali and Jakarta', 'Private yoga and fitness schedules for villa managers, hotels and retreats. Recurring guest sessions with one coordinator.'],
   '/wellness-plan': ['2, 3 and 4 Week Fitness Programmes', 'Prepaid 6, 9 and 12 session blocks with published reductions.'],
-  '/': ['Private Fitness at Home in Bali & Jakarta', 'Private personal training, yoga and mat Pilates at your villa or home in Bali and Jakarta. Published starting prices and a written quote.'],
-  '/services': ['Private Fitness Sessions at Home', 'Personal training, private yoga, mat Pilates and mobility coaching at your villa or home in Bali and Jakarta.'],
+  '/': ['Private Fitness at Home in Bali & Jakarta', 'Private personal training, yoga, mat Pilates, boxing fitness and guided meditation at your villa or home in Bali and Jakarta. Published starting prices and a written quote.'],
+  '/services': ['Private Fitness Sessions at Home', 'Personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at your villa or home in Bali and Jakarta.'],
   '/personal-training': ['Personal Training at Your Location', 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta.'],
   '/private-yoga': ['Private Yoga at Your Villa or Home', 'Private yoga for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
   '/mat-pilates': ['Private Mat Pilates', 'Mat-based Pilates from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer.'],
   '/mobility-coaching': ['Private Mobility Coaching', 'Non-clinical mobility sessions from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
-  '/boxing-fitness': ['Boxing Fitness Enquiry', 'Pad-only boxing fitness from Rp 1.000.000, after a space check.'],
-  '/guided-meditation': ['Private Guided Meditation', 'A quiet 60-minute sit for one or two people. Not therapy.'],
+  '/boxing-fitness': ['Private Boxing Fitness at Home', 'Pad-only boxing fitness from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta, after a space check.'],
+  '/guided-meditation': ['Private Guided Meditation at Home', 'A quiet 60-minute sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. Not therapy.'],
   '/swimming': ['Private Swimming Lessons', '45-minute private swim coaching in Bali from Rp 1.050.000 plus pool checks.'],
   '/private-chef': ['Private Chef in Bali', 'Partner-delivered private meals, quoted item by item.'],
   '/programmes': ['Two, Three and Four-Week Programmes', 'Prepaid 6, 9 and 12 session blocks with published reductions.'],
@@ -159,7 +159,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/service-areas': ['Service Areas and Travel Fees', 'Every published cluster, in-zone rule and surcharge.'],
   '/professional-standards': ['Professional Standards', 'How we vet, match and back up the people who arrive at your door.'],
   '/how-it-works': ['How Private Home Fitness Works', 'Check availability, see the starting price, then continue in WhatsApp. A click is not a booking.'],
-  '/pricing': ['Private Session Prices', 'Published IDR rates, extra-person fees, travel and a live estimator.'],
+  '/pricing': ['Private Session Prices', 'Published IDR rates for six private sessions, extra-person fees, travel and a live estimator.'],
   '/about': ['About PersonalFitness.id', 'A company-managed mobile fitness service, not a coach marketplace.'],
   '/reviews': ['Guest Notes', 'What people notice when the quote, access and session actually match.'],
   '/faq': ['Personal Fitness FAQs', 'Prices, areas, trainers, cancellation, payment and scope.'],

@@ -24,6 +24,8 @@ const mobileGroups = [
       ['/private-yoga', 'Private yoga'],
       ['/mat-pilates', 'Mat Pilates'],
       ['/mobility-coaching', 'Mobility coaching'],
+      ['/boxing-fitness', 'Boxing fitness'],
+      ['/guided-meditation', 'Guided meditation'],
       ['/services', 'All sessions'],
     ],
   },
@@ -167,6 +169,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link to="/private-yoga">Private yoga</Link>
             <Link to="/mat-pilates">Mat Pilates</Link>
             <Link to="/mobility-coaching">Mobility coaching</Link>
+            <Link to="/boxing-fitness">Boxing fitness</Link>
+            <Link to="/guided-meditation">Guided meditation</Link>
             <Link to="/services">All sessions</Link>
             <Link to="/programmes">Programmes</Link>
             <Link to="/pricing">Prices</Link>

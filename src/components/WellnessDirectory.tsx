@@ -27,7 +27,7 @@ export default function WellnessDirectory() {
     return (!category || service.categoryIds.includes(category)) && (!setting || service.deliveryModes.includes(setting)) && (!search || text.includes(search.trim().toLowerCase()))
   }), [category, search, setting])
   return <>
-    <PageIntro eyebrow="Private sessions" title="Fitness at your villa or home." description="Personal training, private yoga, mat Pilates and mobility coaching in Bali and Jakarta. Choose a session, see the starting price and check availability."><Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link></PageIntro>
+    <PageIntro eyebrow="Private sessions" title="Fitness at your villa or home." description="Personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in Bali and Jakarta. Choose a session, see the starting price and check availability."><Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link></PageIntro>
     <section className="section-compact wellness-directory-section"><div className="shell">
       <div className="directory-toolbar">
         <label className="directory-search"><Search size={19} aria-hidden="true" /><span className="sr-only">Search services</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Try massage, pregnancy, swimming..." type="search" /></label>

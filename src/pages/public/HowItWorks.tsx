@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { PageIntro } from '@/components/Primitives'
 
 const journey = [
-  ['01', 'Share your session', 'Choose personal training, private yoga or mat Pilates. Add your city, area, venue type, preferred time, participants and non-sensitive goals.'],
+  ['01', 'Share your session', 'Choose personal training, private yoga, mat Pilates, mobility, boxing fitness or guided meditation. Add your city, area, venue type, preferred time, participants and non-sensitive goals.'],
   ['02', 'Let us check the details', 'We review the professional scope, location, venue, timing, participants and equipment needed for your request.'],
   ['03', 'Review your personal quote', 'You receive the full price, inclusions, exclusions and cancellation or rescheduling terms before making a payment decision.'],
   ['04', 'Confirm with clarity', 'Once the details and payment status are confirmed, you receive the session, arrival and preparation information for your booking.'],

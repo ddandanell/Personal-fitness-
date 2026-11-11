@@ -58,7 +58,7 @@ export default function WellnessSchedule() {
       <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Starting price for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
       {estimate.requiresQuote && <p className="plan-warning" role="status">{estimate.collisions ? 'Some visits overlap. Choose different times to review your plan.' : estimate.invalid ? 'Check your area, visit time and whole participant count.' : 'A complete quote is required. Some services, group sizes or travel are not included in this subtotal.'}</p>}
       {estimate.discountRate > 0 && <p className="plan-saving"><Check size={16} />{Math.round(estimate.discountRate * 100)}% saving on eligible fitness visits</p>}
-      <p className="plan-small">The 6, 9 and 12 visit tiers apply to personal training, private yoga, mat Pilates and mobility. Travel is quoted separately and does not receive this saving. All dates depend on availability.</p>
+      <p className="plan-small">The 6, 9 and 12 visit tiers apply to personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation. Travel is quoted separately and does not receive this saving. All dates depend on availability.</p>
       <button type="button" className="button button-light" disabled={estimate.invalid} onClick={() => setReview(true)}>Review my schedule<ArrowUpRight size={16} /></button>
       <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
     </aside>

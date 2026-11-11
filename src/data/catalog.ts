@@ -128,7 +128,7 @@ export const areas: Area[] = [
     copy: 'Canggu is the first Bali cluster we coordinate: villas, compounds and rented homes around Berawa, Batu Bolong, Pererenan and Echo Beach. Sessions run in private spaces with permission, not on packed beach clubs.',
     venues: ['Private villas', 'Rented homes with a clear indoor floor', 'Compound gym rooms', 'Shaded decks with neighbour-aware noise'],
     bestFor: ['Sunrise personal training', 'Couple yoga before the heat', 'Mat Pilates in a living room'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'swimming'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'swimming'],
   },
   {
     slug: 'seminyak',
@@ -140,7 +140,7 @@ export const areas: Area[] = [
     copy: 'Seminyak and nearby Petitenget work for guests who want a private session without leaving the villa. Access, one-way streets and villa-staff rules are checked before we send a professional.',
     venues: ['Villa living rooms', 'Upper-floor suites with lift access', 'Private gardens with shade'],
     bestFor: ['Private yoga for two', 'Short-stay personal training', 'Evening mobility after dinner plans'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'ubud',
@@ -152,7 +152,7 @@ export const areas: Area[] = [
     copy: 'Ubud sessions are coordinated for villas and houses with a usable floor and realistic access. We do not sell “yoga in the jungle” as a product. The session happens in your space after a travel and timing check.',
     venues: ['Valley villas with a clear indoor room', 'Family compounds', 'Quiet guesthouse suites with owner permission'],
     bestFor: ['Private yoga', 'Mobility after long walks', 'Personal training for longer stays'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'sanur',
@@ -164,7 +164,7 @@ export const areas: Area[] = [
     copy: 'Sanur works for families and longer-stay guests who want a calmer shoreline base. Travel is quoted because it sits outside the Canggu to Seminyak cluster.',
     venues: ['Family villas', 'Apartment living rooms', 'Hotel suites only with written venue permission'],
     bestFor: ['Morning training before the heat', 'Mat Pilates with a partner'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'uluwatu',
@@ -176,7 +176,7 @@ export const areas: Area[] = [
     copy: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses need a longer travel window. We only confirm when the professional can arrive, set up and leave inside a realistic block; not a clifftop photo promise.',
     venues: ['Clifftop villas with indoor floors', 'Private gym rooms', 'Pools with owner permission for swim enquiries'],
     bestFor: ['Stay-put villa training', 'Private yoga for two', 'Swim coaching where the pool is safe and permitted'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'swimming'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'swimming'],
   },
   {
     slug: 'south-jakarta',
@@ -188,7 +188,7 @@ export const areas: Area[] = [
     copy: 'South Jakarta is the first Jakarta cluster: apartments, townhouses and houses where a professional can reach you inside a planned window. Building access, parking and lift rules go on the quote.',
     venues: ['Apartments with a clear living-room floor', 'Landed-house gyms', 'Townhouse courtyards that can take a mat'],
     bestFor: ['Before-office personal training', 'Lunch-hour Pilates', 'Weekly resident programmes'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'central-jakarta',
@@ -200,7 +200,7 @@ export const areas: Area[] = [
     copy: 'Central Jakarta sessions are built around building access. Lobby, parking and security names are collected before confirmation so the professional is not left downstairs.',
     venues: ['Serviced apartments', 'Family houses', 'Office-adjacent residences with written access'],
     bestFor: ['Early personal training', 'Private yoga at home', 'Three- and four-week resident blocks'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'north-jakarta', name: 'North Jakarta', city: 'Jakarta', cluster: 'North Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -208,7 +208,7 @@ export const areas: Area[] = [
     copy: 'Request private wellness at homes and apartments around Kelapa Gading, Sunter, Pluit and other North Jakarta addresses. Your coordinator checks local professional availability, building permission and travel before confirming any visit.',
     venues: ['Apartments with visiting-professional permission', 'Private houses with a clear practice space', 'Hotel rooms and gyms with management approval'],
     bestFor: ['At-home yoga by request', 'A recurring household fitness enquiry', 'A private wellness schedule with realistic travel windows'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'west-jakarta', name: 'West Jakarta', city: 'Jakarta', cluster: 'West Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -216,7 +216,7 @@ export const areas: Area[] = [
     copy: 'Plan a private training, yoga or Pilates enquiry for a home, apartment or approved hotel in West Jakarta. Puri Indah, Kebon Jeruk and nearby addresses are reviewed individually so your schedule is based on a professional who can reach the property.',
     venues: ['Landed homes with suitable indoor floors', 'Apartments with security and lift access agreed', 'Private gyms approved for an outside professional'],
     bestFor: ['A before-work fitness enquiry', 'Private yoga at home', 'A multi-week plan for residents'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
   {
     slug: 'east-jakarta', name: 'East Jakarta', city: 'Jakarta', cluster: 'East Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -224,7 +224,7 @@ export const areas: Area[] = [
     copy: 'Ask about a private wellness routine for your East Jakarta home or apartment. Rawamangun, Pulomas and surrounding addresses are considered after a local supply and access check. An enquiry does not imply guaranteed coverage across the municipality.',
     venues: ['Private family homes', 'Apartment living rooms with clear floor space', 'Approved residential fitness rooms'],
     bestFor: ['A resident yoga or training enquiry', 'A family wellness schedule', 'A regular time window near home'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
   },
 ]
 
@@ -239,7 +239,7 @@ export const cities: Record<City, {
   Bali: {
     slug: 'bali',
     headline: 'Private fitness in Bali, at your villa or home.',
-    lede: 'A personal trainer, private yoga or mat Pilates in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
+    lede: 'A personal trainer, private yoga, mat Pilates, boxing fitness or guided meditation in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
     audience: ['Villa guests keeping a routine', 'Month-long residents', 'Couples and small groups', 'Hosts arranging sessions for guests'],
     clusters: ['Canggu to Seminyak in-zone', 'Ubud and Sanur + Rp 150.000', 'Uluwatu / Bukit + Rp 200.000'],
     notes: [
@@ -251,7 +251,7 @@ export const cities: Record<City, {
   Jakarta: {
     slug: 'jakarta',
     headline: 'Home personal training in Jakarta.',
-    lede: 'Private personal training, yoga and mat Pilates at your apartment or house. South and Central Jakarta are in-zone. Other municipalities are quoted with travel.',
+    lede: 'Private personal training, yoga, mat Pilates, boxing fitness and guided meditation at your apartment or house. South and Central Jakarta are in-zone. Other municipalities are quoted with travel.',
     audience: ['Professionals training before or after work', 'Beginners starting at home', 'Households sharing one coach', 'People who want a four-week block, not a one-off class'],
     clusters: ['South Jakarta in-zone', 'Central Jakarta in-zone', 'North, West, East and BSD quoted with travel'],
     notes: [

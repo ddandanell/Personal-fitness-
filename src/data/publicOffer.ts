@@ -1,13 +1,13 @@
 import { services } from './catalog'
 
-export const CORE_SERVICE_SLUGS = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'] as const
-export const HELD_SERVICE_SLUGS = ['boxing-fitness', 'guided-meditation', 'swimming', 'nutrition-consultation', 'physiotherapy'] as const
-export const CITY_SERVICE_RELEASED = ['personal-training', 'private-yoga', 'mat-pilates'] as const
+export const CORE_SERVICE_SLUGS = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'] as const
+export const HELD_SERVICE_SLUGS = ['swimming', 'nutrition-consultation', 'physiotherapy'] as const
+export const CITY_SERVICE_RELEASED = ['personal-training', 'private-yoga', 'mat-pilates', 'boxing-fitness', 'guided-meditation'] as const
 
 const core = new Set<string>(CORE_SERVICE_SLUGS)
 const held = new Set<string>(HELD_SERVICE_SLUGS)
 
-export const publicServices = services.filter((item) => core.has(item.slug))
+export const publicServices = CORE_SERVICE_SLUGS.map((slug) => services.find((item) => item.slug === slug)).filter((item): item is (typeof services)[number] => Boolean(item))
 export const heldServices = services.filter((item) => held.has(item.slug))
 export const unpublishedServiceSlugs = services.map((item) => item.slug).filter((slug) => !core.has(slug) && !held.has(slug))
 
@@ -59,6 +59,8 @@ export const indexableStaticPaths = [
   '/private-yoga',
   '/mat-pilates',
   '/mobility-coaching',
+  '/boxing-fitness',
+  '/guided-meditation',
   '/programmes',
   '/pricing',
   '/how-it-works',
@@ -70,9 +72,13 @@ export const indexableStaticPaths = [
   '/bali/personal-training',
   '/bali/private-yoga',
   '/bali/mat-pilates',
+  '/bali/boxing-fitness',
+  '/bali/guided-meditation',
   '/jakarta/personal-training',
   '/jakarta/private-yoga',
   '/jakarta/mat-pilates',
+  '/jakarta/boxing-fitness',
+  '/jakarta/guided-meditation',
   '/service-areas',
   '/professional-standards',
   '/resources',

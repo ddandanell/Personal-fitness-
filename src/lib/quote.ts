@@ -46,7 +46,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
   const baseDuration = isDefault ? service.durationMin : offer.durationMin
   const canExtend = isDefault && ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'].includes(service.slug)
   if (input.durationMin !== baseDuration && !(canExtend && input.durationMin === 90 && baseDuration === 60)) return { ...empty, error: 'Choose the listed duration for this format. Different visit lengths need a separate quote.' }
-  const eligibleProgramme = isDefault && ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching'].includes(service.slug)
+  const eligibleProgramme = isDefault && ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'].includes(service.slug)
   if (programme && !eligibleProgramme) return { ...empty, error: 'A recurring block for this format needs a separate scope and quote.' }
   const base = (isDefault ? service.prices[input.city] : offer.guidePrice) ?? offer.guidePrice
   if (base == null) return { ...empty, error: 'A written quote is required for this format.' }
