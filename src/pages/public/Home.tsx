@@ -15,10 +15,10 @@ const steps = [
 ]
 
 const homeFaqs = [
-  faqs[0],
-  faqs[2],
-  faqs[4],
-  faqs[7],
+  faqs.find((pair) => pair[0].includes('book a personal trainer')),
+  faqs.find((pair) => pair[0] === 'How much does a session cost?'),
+  faqs.find((pair) => pair[0].includes('enquiry reserve')),
+  faqs.find((pair) => pair[0].includes('Bali areas')),
   faqs.find((pair) => pair[0].includes('boxing at a villa')),
   faqs.find((pair) => pair[0].includes('guided meditation a therapy')),
 ].filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
@@ -35,6 +35,7 @@ export default function Home() {
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
+              <Link to="/bali/personal-training" className="button button-outline-light">Bali personal training</Link>
             </div>
             <p className="hero-micro"><ShieldCheck size={16} />A click is not a booking. Confirmation follows a written quote.</p>
           </div>
@@ -84,7 +85,7 @@ export default function Home() {
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta.</p>
-            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta are quoted after a timing check. We do not claim island-wide or city-wide coverage.</p>
+            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/bali/canggu">Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink> for in-zone Bali detail, and <TextLink to="/pricing">every starting rate</TextLink>. We do not claim island-wide or city-wide coverage.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>

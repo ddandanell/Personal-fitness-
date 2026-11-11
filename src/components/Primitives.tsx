@@ -108,7 +108,7 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
   return (
     <figure className={`session-figure ${className}`}>
       <div className="session-image" ref={frame}>
-        <img src={src} alt={alt} width={1200} height={1500} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
+        <img src={src} alt={alt} width={880} height={968} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

@@ -81,12 +81,14 @@ const quoteSteps = [
 ]
 
 const priceFaqKeys = [
+  'How do I book a personal trainer in Bali on WhatsApp?',
   'How much does a session cost?',
   'Is the number on the website the final price?',
   'Which Bali areas are in-zone?',
   'Which Jakarta areas are in-zone?',
   'Can two people share a session?',
   'How do programmes work?',
+  'Do you cover the whole of Bali or Jakarta?',
   'How do I pay?',
 ]
 
@@ -195,8 +197,11 @@ export function FaqPage() {
   return (
     <>
       <StructuredData data={faqJsonLd(faqs)} />
-      <PageIntro eyebrow="Questions" title="Personal trainer Bali and Jakarta FAQ." description="Prices, in-zone areas, extra people, cancellation and what we will not book. If the answer depends on your building, the estimator plus a written quote is next.">
-        <Link to="/pricing" className="button button-primary">Open prices<ArrowUpRight size={16} /></Link>
+      <PageIntro eyebrow="Questions" title="Personal trainer Bali and Jakarta, common questions." description="Prices, in-zone areas, extra people, cancellation and what we will not book. For numbers, open the pricing page; for clusters, Bali or Jakarta. If the answer depends on your building, use the estimator and wait for the written quote.">
+        <div className="cluster">
+          <Link to="/pricing" className="button button-primary">Open prices<ArrowUpRight size={16} /></Link>
+          <Link to="/contact" className="button button-outline">Check availability</Link>
+        </div>
       </PageIntro>
       <section className="section">
         <div className="content-shell faq-list">
@@ -208,7 +213,7 @@ export function FaqPage() {
           ))}
         </div>
       </section>
-      <CtaBand dark title="If it is not in this list, send the practical details." copy="Service, city, area, window, headcount. Keep health, ID and card numbers out." />
+      <CtaBand dark title="If it is not in this list, send the practical details." copy="Send service, city, area, window and headcount to Contact, WhatsApp +62 811-3803-488, or hallo@personalfitness.id. Keep health, ID and card numbers out." />
     </>
   )
 }
@@ -272,8 +277,8 @@ export function PricingPage() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Published rates · Bali and Jakarta</Eyebrow>
-            <h1>What a private session costs at your villa or home</h1>
-            <p className="hero-lede">Six sessions, two cities, a starting price you can read before you message us. Extra people, outer-zone travel, 90 minutes and programmes change the total. The written quote is what you pay.</p>
+            <h1>Personal trainer Bali and Jakarta prices</h1>
+            <p className="hero-lede">Six private sessions, two cities, starting rates you can read before WhatsApp. Extra people, outer-zone travel, 90 minutes and programmes change the total. The written quote is what you pay.</p>
             <div className="cluster">
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
@@ -301,7 +306,7 @@ export function PricingPage() {
             {orderedServices.map((service) => (
               <Link to={`/${service.slug}`} className="pricing-rate-card" key={service.slug}>
                 <div className="pricing-rate-photo">
-                  <img src={ratePhotos[service.slug] || service.image} alt={service.imageAlt} width="800" height="1000" />
+                  <img src={ratePhotos[service.slug] || service.image} alt={service.imageAlt} width="800" height="1000" loading="lazy" decoding="async" />
                 </div>
                 <div className="pricing-rate-copy">
                   <h3>{service.title}</h3>
@@ -468,14 +473,20 @@ export function PricingPage() {
 export function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Quote" title="Check availability, then send the estimate." description="The estimator uses the same starting prices as the pricing page. WhatsApp opens a chat with us. Nothing is booked until a written quote is accepted and payment is verified." />
+      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description="Use the estimator for starting prices, then send the draft on WhatsApp +62 811-3803-488. Nothing is booked until you accept the written quote. Email hallo@personalfitness.id if that is easier.">
+        <div className="cluster">
+          <Link to="/pricing" className="button button-outline">See session prices</Link>
+          <Link to="/faq" className="button button-outline">Read the FAQ</Link>
+          <Link to="/how-it-works" className="button button-outline">How it works</Link>
+        </div>
+      </PageIntro>
       <section className="section-compact">
         <div className="shell">
           <div className="office-card">
             <div>
               <p className="eyebrow">Office</p>
-              <h2>Find us in Denpasar.</h2>
-              <p>This is the company address. Sessions still run at your villa or home in the published Bali and Jakarta clusters.</p>
+              <h2>Denpasar office, not a walk-in studio.</h2>
+              <p>This is our registered office and coordination address. Sessions run at your villa or home in the published Bali and Jakarta clusters, not as drop-in classes at this address.</p>
               <address className="office-lines">
                 <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
               </address>
@@ -512,7 +523,7 @@ export function AboutPage() {
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>What we sell</h2>
-          <p>A coordinated private fitness session at a villa, home or other suitable lawful space in Bali or Jakarta. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
+          <p>A coordinated private fitness session at a villa, home or other suitable lawful space in Bali or Jakarta. Session starting prices are on the <Link to="/pricing">pricing page</Link>; city clusters on <Link to="/bali">Bali</Link> and <Link to="/jakarta">Jakarta</Link>; the eight-step flow on <Link to="/how-it-works">how it works</Link>. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
           <h2>What we do not sell</h2>
           <p>We do not publish a public trainer directory, guest reviews, clinical booking, nutrition plans or an expanded spa catalogue. Reformer instruction, swimming and other held requests are not on the live offer.</p>
           <h2>Scope</h2>

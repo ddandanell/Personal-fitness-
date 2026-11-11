@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 import { type ReactNode } from 'react'
 import { areas, extraPersonFee, programmes, services, type City } from '@/data/catalog'
 import { professionals, type Professional } from '@/data/professionals'
-import { reviews } from '@/data/content'
 import { formatIdr } from '@/lib/money'
 import { Eyebrow } from './Primitives'
 
@@ -77,22 +76,6 @@ export function ProfessionalGrid({ people = professionals, limit }: { people?: P
   return (
     <div className="pro-grid">
       {list.map((person) => <ProfessionalCard person={person} key={person.slug} />)}
-    </div>
-  )
-}
-
-export function ReviewGrid({ limit = 6 }: { limit?: number }) {
-  return (
-    <div className="review-grid">
-      {reviews.slice(0, limit).map((item) => (
-        <blockquote className="review-card" key={item.name}>
-          <p>{item.quote}</p>
-          <footer>
-            <strong>{item.name}</strong>
-            <span>{item.place} · {item.service}</span>
-          </footer>
-        </blockquote>
-      ))}
     </div>
   )
 }

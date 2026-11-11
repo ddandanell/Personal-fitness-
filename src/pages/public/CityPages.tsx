@@ -7,16 +7,38 @@ import { cities, getArea, getService, type City } from '@/data/catalog'
 import { CITY_SERVICE_RELEASED, offerState, publicServices, sessionPhoto } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
 import StructuredData from '@/components/StructuredData'
-import { serviceJsonLd } from '@/lib/schema'
-import { SITE_ORIGIN } from '@/data/company'
+import { cityServiceJsonLd } from '@/lib/schema'
 import { getSeo } from '@/data/seo'
 import Gone from './Gone'
 import HeldService from './HeldService'
 import NotFound from './NotFound'
 
 const images: Record<City, [string, string]> = {
-  Bali: ['/images/professionals/lila-prameswari.webp', 'Villa yoga setting in Bali'],
-  Jakarta: ['/images/professionals/nadia-putri.webp', 'Apartment mat session in Jakarta'],
+  Bali: ['/images/professionals/lila-prameswari.webp', 'Private fitness at a Bali villa'],
+  Jakarta: ['/images/professionals/nadia-putri.webp', 'Home personal training in a Jakarta apartment'],
+}
+
+const citySpace: Record<string, Record<City, string>> = {
+  'personal-training': {
+    Bali: 'A dry indoor rectangle that can hold a mat plus two steps each way is enough. A villa gym helps. It is not required.',
+    Jakarta: 'A living-room rectangle and a written lobby plan are enough. A building gym is optional and only useful if it is private.',
+  },
+  'private-yoga': {
+    Bali: 'Indoor tile or wood beats a midday deck. Two people are included when the floor allows both mats without a walkway fight.',
+    Jakarta: 'A quiet room with a door that can close matters more than a view. Two people share the published rate if the floor holds both.',
+  },
+  'mat-pilates': {
+    Bali: 'Mat work needs a level indoor floor. There is no reformer in the van, and a glossy pool deck is a poor substitute.',
+    Jakarta: 'Rug corners and furniture have to move before the hour starts. Extra people are billed. A reformer is not part of this visit.',
+  },
+  'boxing-fitness': {
+    Bali: 'Pad work needs ceiling clearance and a floor that will not slide. Wet decks and glass corners fail the space check. One person only.',
+    Jakarta: 'Pad rhythm is a neighbour issue. Thin walls and evening building rules belong on the first message. One person only.',
+  },
+  'guided-meditation': {
+    Bali: 'A room that can be quiet for 60 minutes is the product. Wind, staff crossing and a video call in the next chair will eat the sit.',
+    Jakarta: 'Shared walls and renovation noise should be named before the quote. Two people are included if both can sit without splitting the hour.',
+  },
 }
 
 export function CityPage({ city }: { city: City }) {
@@ -27,7 +49,12 @@ export function CityPage({ city }: { city: City }) {
   return (
     <>
       <PageIntro eyebrow={city} title={data.headline} description={data.lede}>
-        <Link to={`/contact?city=${city}`} className="button button-primary">Check {city} availability<ArrowUpRight size={16} /></Link>
+        <p className="price-highlight">{city === 'Bali' ? `Starting price · personal training ${formatIdr(900_000)} · 60 minutes · in-zone Canggu and Seminyak` : `Starting price · personal training ${formatIdr(950_000)} · 60 minutes · in-zone South and Central Jakarta`}</p>
+        <div className="cluster">
+          <Link to={`/contact?city=${city}`} className="button button-primary">Check {city} availability<ArrowUpRight size={16} /></Link>
+          <Link to={`/${cityPath}/personal-training`} className="button button-outline">{city} personal training</Link>
+          <Link to="/pricing" className="button button-outline">See session prices</Link>
+        </div>
       </PageIntro>
       <section className="section">
         <div className="shell city-feature">
@@ -89,7 +116,7 @@ export function AreaPage() {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Core sessions we can quote for {area.name}.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Core sessions we can quote for {area.name}.</h2><p>Starting prices for this cluster follow the {area.city} session page for each service, then travel if you are outside the in-zone list.</p></div></div>
           <div className="area-grid">
             {publicServices.map((service) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="area-card" key={service.slug}>
@@ -121,11 +148,7 @@ export function CityServicePage() {
 
   return (
     <>
-      <StructuredData data={{
-        ...serviceJsonLd(service, seo?.title || service.title + ' in ' + city, seo?.description || service.short + (price ? ' Starting price ' + formatIdr(price) + ' for ' + service.durationMin + ' minutes in ' + city + '.' : '')),
-        url: SITE_ORIGIN + '/' + cityPath + '/' + service.slug,
-        areaServed: [{ '@type': 'AdministrativeArea', name: city }],
-      }} />
+      <StructuredData data={cityServiceJsonLd(service, city, seo?.title, seo?.description)} />
       <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title ? seo.title + '.' : `${service.title} in ${city}.`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
@@ -137,6 +160,7 @@ export function CityServicePage() {
             <h2>{service.title} working rules in {city}.</h2>
             <p className="large-copy">{cities[city].lede}</p>
             <p>{access}</p>
+            {citySpace[service.slug]?.[city] && <p>{citySpace[service.slug][city]}</p>}
           </div>
           <ul className="check-list large-list">
             {service.includes.slice(0, 4).map((item) => <li key={item}><Check size={19} />{item}</li>)}

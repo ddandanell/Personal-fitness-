@@ -2,7 +2,7 @@ import { getArea, getService } from '@/data/catalog'
 import { getBlogPost } from '@/data/blog'
 import { getResource, pageMeta } from '@/data/content'
 import { canonicalPath as seoCanonical, getSeo } from '@/data/seo'
-import { isAreaPath, isHeldPath, offerState } from '@/data/publicOffer'
+import { isAreaPath, isHeldPath, offerState, sessionPhoto } from '@/data/publicOffer'
 import { SITE_ORIGIN } from '@/data/company'
 
 export function pageMetadata(pathname: string) {
@@ -25,8 +25,11 @@ export function pageMetadata(pathname: string) {
     : area ? ['Private fitness in ' + area.name + ', ' + area.city, area.copy]
     : service ? [service.title + (city ? ' in ' + city : ' at your villa or home'), service.short]
     : pageMeta[pathname] || ['Page Not Found', 'Explore private fitness at PersonalFitness.id.']
-  const canonicalPath = seoCanonical(pathname)
+  let canonicalPath = seoCanonical(pathname)
+  if (isAreaPath(pathname) && city) canonicalPath = '/' + city.toLowerCase()
+  else if (isHeldPath(pathname) || state === 'held') canonicalPath = '/services'
   const known = Boolean(locked || service || post || resource || area || gone || pageMeta[pathname])
   const noindex = !known || gone || isHeldPath(pathname) || isAreaPath(pathname) || state === 'held' || state === 'unpublished' || pathname === '/professionals'
-  return { title: title + ' | PersonalFitness.id', description, canonical: SITE_ORIGIN + (canonicalPath === '/' ? '/' : canonicalPath), noindex, image: service?.image || '/images/wellness/villa-yoga-partners.webp' }
+  const image = service ? sessionPhoto(service.slug, service.image) : post?.image || '/images/wellness/villa-yoga-partners.webp'
+  return { title: title + ' | PersonalFitness.id', description, canonical: SITE_ORIGIN + (canonicalPath === '/' ? '/' : canonicalPath), noindex, image }
 }

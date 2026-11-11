@@ -1,44 +1,6 @@
-export const reviews = [
-  {
-    name: 'Emma K.',
-    place: 'Canggu villa',
-    service: 'Personal training',
-    quote: 'I sent the area, the terrace size and a 7am window. The quote named the trainer, the price and the cancellation line before I paid. The session started on time.',
-  },
-  {
-    name: 'James & Hana',
-    place: 'Seminyak',
-    service: 'Private yoga',
-    quote: 'Two of us, one room, no studio commute. They asked about mats and neighbours, then sent a pair price that matched the site.',
-  },
-  {
-    name: 'Putri A.',
-    place: 'Kebayoran Baru',
-    service: 'Four-week programme',
-    quote: 'Twelve sessions, same coach most weeks, building access written on the confirmation. Unused sessions followed the terms on the quote, not a surprise policy.',
-  },
-  {
-    name: 'Marco L.',
-    place: 'Uluwatu',
-    service: 'Mat Pilates',
-    quote: 'Travel was on the estimate, which I wanted. The session stayed on the mat. Nobody tried to upsell a reformer that was not in the villa.',
-  },
-  {
-    name: 'Aisha R.',
-    place: 'Menteng',
-    service: 'Private yoga',
-    quote: 'Security desk, parking and the apartment floor were checked first. That is the whole point of paying for coordination.',
-  },
-  {
-    name: 'Tom S.',
-    place: 'Pererenan',
-    service: 'Mobility coaching',
-    quote: 'Stiff from the flight, not injured. The coach kept it in that lane and left a short floor sequence. No medical theatre.',
-  },
-]
-
 export const faqs = [
-  ['How much does a session cost?', 'Published starting prices are on the pricing page. Bali personal training starts at Rp 900.000. Jakarta personal training starts at Rp 950.000. Boxing fitness starts at Rp 1.000.000. Guided meditation starts at Rp 800.000 and includes two people. Yoga includes up to two people. Travel, extra people, 90-minute sessions and programmes change the total. You get a written quote before payment.'],
+  ['How do I book a personal trainer in Bali on WhatsApp?', 'Open Contact or the estimator, add city, area, service and a two-hour window, then send on WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. We confirm supply and access, then send a written quote. Pay only on the link in that quote.'],
+  ['How much does a session cost?', 'Published 60-minute in-zone starting prices are on the pricing page. Bali: personal training Rp 900.000; private yoga Rp 850.000 (two people included); mat Pilates Rp 950.000; mobility coaching Rp 850.000; boxing fitness Rp 1.000.000 (one person); guided meditation Rp 800.000 (two people included). Jakarta: personal training Rp 950.000; private yoga Rp 900.000; mat Pilates Rp 1.000.000; mobility coaching Rp 900.000; boxing fitness Rp 1.050.000; guided meditation Rp 850.000. Travel, extra people, 90 minutes and programmes change the total. You get a written quote before payment.'],
   ['Is the number on the website the final price?', 'It is the starting price for a standard in-zone session. Outer-zone travel, extra people, longer duration, venue fees and programmes are added or reduced in the estimator and then confirmed in writing.'],
   ['Does an enquiry reserve the time?', 'No. An enquiry starts the supply and access check. The session is confirmed only after you accept the quote and payment status is verified.'],
   ['Can I choose a trainer?', 'Tell us the approach, language and relevant experience you prefer. The written quote confirms the professional, qualifications and availability. You can request a returning professional after a previous visit.'],
@@ -47,6 +9,7 @@ export const faqs = [
   ['Do I need equipment?', 'Tell us what is already there. Mats, bands and light dumbbells can be used if present. Mat sessions use portable equipment; reformer requests require suitable equipment already on site. Boxing pads are brought when that session is approved.'],
   ['Can two people share a session?', 'Yes. Private yoga and guided meditation include up to two people in the published rate. Other services add an extra-person fee. Larger groups need space approval.'],
   ['Do you offer boxing at a villa?', 'Yes. Boxing fitness is pad-only, one person, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta after a space check. No sparring, no ring, no kickboxing. See the boxing page for the hour and the exclusions.'],
+  ['How much space do I need for boxing fitness at home?', 'A clear floor roughly three metres by three metres, enough height for arm work, and neighbour-aware noise. We bring pads. No ring and no sparring. If the space fails the check, we say so before you pay.'],
   ['Is guided meditation a therapy session?', 'No. Guided meditation is a quiet 60-minute sit for one or two people from Rp 800.000 in Bali. It is not counselling, clinical treatment or a breathwork show.'],
   ['Are beginners accepted?', 'Yes. Say so in the enquiry. The session is matched to experience. It is still a fitness session, not a medical assessment.'],
   ['What if I have pain or an injury?', 'Stop and speak to an appropriate clinician first. We do not treat pain, diagnose or run physiotherapy. Do not send medical files in WhatsApp.'],

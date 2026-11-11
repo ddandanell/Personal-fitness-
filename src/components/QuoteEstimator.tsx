@@ -1,5 +1,5 @@
 import { MessageCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { Suspense, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import { areas, programmes, type City } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
@@ -11,6 +11,14 @@ import { downloadText } from '@/lib/downloadText'
 
 type EstimatorProps = { compact?: boolean; initialService?: string; initialCity?: City }
 export default function QuoteEstimator(props: EstimatorProps) {
+  return (
+    <Suspense fallback={<div className="estimator estimator-pending" aria-hidden="true" />}>
+      <QuoteEstimatorReady {...props} />
+    </Suspense>
+  )
+}
+
+function QuoteEstimatorReady(props: EstimatorProps) {
   const [params] = useSearchParams()
   return <EstimatorForm key={(props.initialService || '') + (props.initialCity || '') + params.toString()} {...props} />
 }

@@ -121,7 +121,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
           </div>
         </section>
       )}
-      <CtaBand dark title={'Check ' + service.title.toLowerCase() + ' availability.'} copy="Share the city, area and a two-hour window. The written quote confirms the payable total." to={request} label="Check availability" />
+      <CtaBand dark title={'Check ' + service.title.toLowerCase() + ' availability.'} copy="Share the city, area and a two-hour window via Contact or WhatsApp +62 811-3803-488. The written quote confirms the payable total." to={request} label="Check availability" />
     </>
   )
 }

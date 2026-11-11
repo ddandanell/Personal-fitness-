@@ -93,7 +93,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <StructuredData data={siteGraph()} />
       <header className="site-header">
         <div className="shell header-main">
-          <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="40" height="40" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
+          <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {navigation.map(([to, label]) => (
               <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}</NavLink>
@@ -140,7 +140,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <footer className="site-footer">
         <div className="shell footer-grid footer-grid-wide">
           <div className="footer-brand">
-            <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="40" height="40" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
+            <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
             <p>Private fitness sessions at your villa or home in Bali and Jakarta.</p>
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>

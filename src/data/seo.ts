@@ -73,8 +73,8 @@ const hubs: SeoRecord[] = [
   {
     path: '/bali',
     primaryKeyword: 'personal trainer Bali',
-    title: 'Personal Trainer and Private Fitness in Bali',
-    description: 'In-villa personal trainer in Canggu and Seminyak from Rp 900.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Ubud, Sanur and Uluwatu with published travel.',
+    title: 'Personal Trainer in Bali, Villa and Home Sessions',
+    description: 'In-villa personal training from Rp 900.000 in Canggu and Seminyak. Private yoga, Pilates, boxing and meditation at your villa. Ubud, Sanur and Uluwatu with published travel. Written quote before you pay.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali/personal-training', label: 'Personal training in Bali' },
@@ -90,8 +90,8 @@ const hubs: SeoRecord[] = [
   {
     path: '/jakarta',
     primaryKeyword: 'home personal training Jakarta',
-    title: 'Home Personal Training in Jakarta',
-    description: 'Home personal trainer in South and Central Jakarta from Rp 950.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Recurring programmes quoted in writing.',
+    title: 'Home Personal Trainer Jakarta, Apartment and House',
+    description: 'Private personal training from Rp 950.000 in South and Central Jakarta. Yoga, Pilates, boxing and meditation at home. Building access on the quote; North, West and East by request.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/jakarta/personal-training', label: 'Personal training in Jakarta' },
@@ -122,7 +122,7 @@ const hubs: SeoRecord[] = [
     path: '/pricing',
     primaryKeyword: 'personal trainer Bali prices',
     title: 'Personal Trainer Bali and Jakarta Prices',
-    description: 'Published IDR rates for personal training, yoga, Pilates, mobility, boxing fitness and guided meditation, plus extra-person fees, travel and a live estimator.',
+    description: 'Published 60-minute starting prices: personal training Bali Rp 900.000 and Jakarta Rp 950.000, plus yoga, Pilates, mobility, boxing and meditation. Extra people, travel and programmes on the quote.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Personal training rates' },
@@ -207,8 +207,8 @@ const hubs: SeoRecord[] = [
   {
     path: '/contact',
     primaryKeyword: 'book personal trainer Bali WhatsApp',
-    title: 'Request a Private Fitness Quote',
-    description: 'Send city, area, service and window on WhatsApp. PersonalFitness.id returns a written quote before you pay.',
+    title: 'Book via WhatsApp, Personal Trainer Bali and Jakarta',
+    description: 'Message WhatsApp +62 811-3803-488 or email hallo@personalfitness.id with city, area, service and a two-hour window. Written quote before payment. Denpasar office is administration only.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'See prices first' },
@@ -230,7 +230,7 @@ const hubs: SeoRecord[] = [
     path: '/faq',
     primaryKeyword: 'personal trainer Bali FAQ',
     title: 'Personal Trainer Bali and Jakarta FAQ',
-    description: 'How much a private session costs, which Bali and Jakarta areas are in-zone, extra people, cancellation and what PersonalFitness.id will not book.',
+    description: 'Prices, Canggu and Seminyak plus South and Central Jakarta coverage, choosing a trainer, cancellation, payment and what we do not book. No physio. No marketplace directory.',
     group: 'page', lastmod: TODAY,
     related: [{ to: '/pricing', label: 'Prices' }, { to: '/refunds-rescheduling', label: 'Refunds' }, { to: '/contact', label: 'Ask a coordinator' }],
     crumbs: [HOME, { to: '/faq', label: 'FAQ' }],
@@ -307,8 +307,8 @@ const hubs: SeoRecord[] = [
 const serviceKeyword: Record<string, { keyword: string; title: string; description: string }> = {
   'personal-training': {
     keyword: 'personal trainer at home',
-    title: 'Personal Training at Home',
-    description: 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta, at your villa or home.',
+    title: 'Personal Trainer at Home, Bali and Jakarta',
+    description: 'Private 60-minute personal training at your villa or home. From Rp 900.000 in Bali and Rp 950.000 in Jakarta in published clusters. Written quote, then payment.',
   },
   'private-yoga': {
     keyword: 'private yoga at home',

@@ -5,12 +5,12 @@ import type { Service } from '@/data/catalog'
 const BUSINESS_ID = SITE_ORIGIN + '/#business'
 const WEBSITE_ID = SITE_ORIGIN + '/#website'
 
-function cityOffer(service: Service, city: 'Bali' | 'Jakarta') {
+function cityOffer(service: Service, city: 'Bali' | 'Jakarta', offerPath?: string) {
   const price = service.prices[city]
   if (price == null) return null
   return {
     '@type': 'Offer',
-    url: SITE_ORIGIN + '/' + service.slug,
+    url: SITE_ORIGIN + (offerPath || '/' + service.slug),
     name: service.title + ' in ' + city,
     description: service.short,
     price: String(price),
@@ -97,5 +97,21 @@ export function serviceJsonLd(service: Service, title?: string, description?: st
     provider: { '@id': BUSINESS_ID, '@type': 'LocalBusiness', name: 'PersonalFitness.id', url: SITE_ORIGIN },
     areaServed: service.cities.map((city) => ({ '@type': 'AdministrativeArea', name: city })),
     offers: [cityOffer(service, 'Bali'), cityOffer(service, 'Jakarta')].filter(Boolean),
+  }
+}
+
+export function cityServiceJsonLd(service: Service, city: 'Bali' | 'Jakarta', title?: string, description?: string) {
+  const path = '/' + city.toLowerCase() + '/' + service.slug
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: title || service.title + ' in ' + city,
+    description: description || service.short,
+    url: SITE_ORIGIN + path,
+    image: SITE_ORIGIN + service.image,
+    serviceType: service.title,
+    provider: { '@id': BUSINESS_ID, '@type': 'LocalBusiness', name: 'PersonalFitness.id', url: SITE_ORIGIN },
+    areaServed: [{ '@type': 'AdministrativeArea', name: city }],
+    offers: [cityOffer(service, city, path)].filter(Boolean),
   }
 }
