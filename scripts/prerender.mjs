@@ -24,9 +24,11 @@ try {
       .replace(/(<meta property="og:title" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.title) + '$2')
       .replace(/(<meta property="og:description" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.description) + '$2')
       .replace(/(<meta property="og:url" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.canonical) + '$2')
+      .replace(/(<meta property="og:image" content=")[^"]*("\s*\/?>)/, '$1' + escape('https://www.personalfitness.id' + record.image) + '$2')
+      .replace(/(<meta name="twitter:title" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.title) + '$2')
+      .replace(/(<meta name="twitter:description" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.description) + '$2')
+      .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/?>)/, '$1' + escape('https://www.personalfitness.id' + record.image) + '$2')
       .replace('<div id="root"></div>', '<div id="root" data-prerendered="true" data-prerender-path="' + escape(record.path) + '">' + body + '</div>')
-    const image = '<meta property="og:image" content="https://www.personalfitness.id' + escape(record.image) + '" />'
-    html = html.replace('</head>', image + '\n</head>')
     const filename = record.path === '/' ? path.join(dist, 'index.html') : path.join(dist, record.path.slice(1) + '.html')
     await fs.mkdir(path.dirname(filename), { recursive: true })
     await fs.writeFile(filename, html)
@@ -53,8 +55,9 @@ try {
     await fs.writeFile(path.join(dist, name), xml)
     await fs.writeFile(path.join(root, 'public', name), xml)
   }
-  await fs.writeFile(path.join(dist, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://www.personalfitness.id/sitemap.xml\n')
-  await fs.writeFile(path.join(root, 'public', 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: https://www.personalfitness.id/sitemap.xml\n')
+  const robots = 'User-agent: *\nAllow: /\nSitemap: https://www.personalfitness.id/sitemap.xml\n# Citation file: https://www.personalfitness.id/llms.txt\n'
+  await fs.writeFile(path.join(dist, 'robots.txt'), robots)
+  await fs.writeFile(path.join(root, 'public', 'robots.txt'), robots)
   await fs.writeFile(path.join(dist, 'route-manifest.json'), JSON.stringify(manifest, null, 2))
   console.log('Prerendered ' + manifest.length + ' complete pages, ' + seoEntries.length + ' canonical sitemap URLs and a genuine 404 page.')
 } finally { await server.close() }

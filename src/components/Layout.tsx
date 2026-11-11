@@ -7,6 +7,7 @@ import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, S
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import StructuredData from './StructuredData'
 import { Breadcrumbs, RelatedLinks } from './SeoCluster'
+import { siteGraph } from '@/lib/schema'
 
 const navigation = [
   ['/services', 'Services'],
@@ -65,6 +66,9 @@ export default function Layout({ children }: { children: ReactNode }) {
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
     document.querySelector('meta[property="og:type"]')?.setAttribute('content', pathname.startsWith('/resources/') ? 'article' : 'website')
     document.querySelector('meta[property="og:image"]')?.setAttribute('content', SITE_ORIGIN + image)
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', description)
+    document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', SITE_ORIGIN + image)
     document.querySelector('meta[name="robots"]')?.setAttribute('content', noindex ? 'noindex, follow' : 'index, follow')
   }, [pathname])
 
@@ -86,26 +90,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className={'app-shell' + (menuOpen ? ' is-menu-open' : '')}>
       <a href="#main-content" className="skip-link">Skip to content</a>
-      <StructuredData data={{
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'PersonalFitness.id',
-        url: SITE_ORIGIN,
-        logo: SITE_ORIGIN + '/brand/personalfitness-mark.png',
-        telephone: '+628113803488',
-        email: COMPANY_EMAIL,
-        priceRange: 'IDR 650000-1600000',
-        image: SITE_ORIGIN + '/images/wellness/villa-yoga-partners.webp',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
-          addressLocality: 'Denpasar Selatan',
-          addressRegion: 'Bali',
-          postalCode: '80226',
-          addressCountry: 'ID',
-        },
-        areaServed: ['Canggu', 'Seminyak', 'Ubud', 'Sanur', 'Uluwatu', 'South Jakarta', 'Central Jakarta'],
-      }} />
+      <StructuredData data={siteGraph()} />
       <header className="site-header">
         <div className="shell header-main">
           <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="40" height="40" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>

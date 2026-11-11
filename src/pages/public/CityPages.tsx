@@ -5,6 +5,9 @@ import { CtaBand } from '@/components/SiteBlocks'
 import { cities, getArea, getService, type City } from '@/data/catalog'
 import { CITY_SERVICE_RELEASED, offerState, publicServices } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
+import StructuredData from '@/components/StructuredData'
+import { serviceJsonLd } from '@/lib/schema'
+import { SITE_ORIGIN } from '@/data/company'
 import { getSeo } from '@/data/seo'
 import Gone from './Gone'
 import HeldService from './HeldService'
@@ -111,6 +114,11 @@ export function CityServicePage() {
 
   return (
     <>
+      <StructuredData data={{
+        ...serviceJsonLd(service, service.title + ' in ' + city, service.short + (price ? ' Starting price ' + formatIdr(price) + ' for ' + service.durationMin + ' minutes in ' + city + '.' : '')),
+        url: SITE_ORIGIN + '/' + city.toLowerCase() + '/' + service.slug,
+        areaServed: [{ '@type': 'AdministrativeArea', name: city }],
+      }} />
       <PageIntro eyebrow={`${city} · ${service.title}`} title={`${service.title} in ${city}.`} description={`${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>

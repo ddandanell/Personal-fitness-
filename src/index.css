@@ -182,13 +182,13 @@ main > *, .shell > *, .content-shell > * { min-width: 0; }
 .app-shell { min-width: 0; overflow-x: clip; }
 main p, main a { overflow-wrap: break-word; }
 
-.breadcrumbs { width: min(calc(100% - 48px), 1400px); margin: 18px auto 0; }
+.breadcrumbs { width: min(calc(100% - 48px), 1400px); margin: 18px auto 0; min-height: 28px; }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 6px 10px; list-style: none; padding: 0; margin: 0; font-size: .78rem; color: var(--muted); }
 .breadcrumbs li { display: flex; align-items: center; gap: 10px; }
 .breadcrumbs li:not(:last-child)::after { content: '/'; color: #b4b4ad; }
 .breadcrumbs a { color: var(--muted); }
 .breadcrumbs a:hover { color: var(--ink); }
-.seo-related { padding: 36px 0 56px; border-top: 1px solid var(--line); }
+.seo-related { padding: 36px 0 56px; border-top: 1px solid var(--line); min-height: 140px; contain: layout; }
 .seo-related ul { display: flex; flex-wrap: wrap; gap: 10px 14px; list-style: none; padding: 8px 0 0; margin: 0; }
 .seo-related a { display: inline-flex; min-height: 38px; align-items: center; padding: 0 12px; border: 1px solid var(--line); background: var(--paper-light); font-size: .82rem; }
 

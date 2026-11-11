@@ -4,6 +4,8 @@ import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Pri
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { publicServices } from '@/data/publicOffer'
 import { faqs } from '@/data/content'
+import StructuredData from '@/components/StructuredData'
+import { faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
 
 const steps = [
@@ -21,8 +23,8 @@ export default function Home() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
-            <h1>Private fitness sessions at your villa or home</h1>
-            <p className="hero-lede">Personal training, yoga, mat Pilates, mobility, boxing fitness and guided meditation at your villa or home in published Bali and Jakarta clusters.</p>
+            <h1>Personal trainer at your villa or home in Bali and Jakarta</h1>
+            <p className="hero-lede">PersonalFitness.id sends a private coach to your villa or home. Personal training from Rp 900.000 in Bali, plus yoga, mat Pilates, mobility, boxing fitness and guided meditation in published clusters.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
@@ -92,6 +94,7 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <StructuredData data={faqJsonLd(homeFaqs)} />
         <div className="content-shell faq-list">
           <div className="section-title"><div><Eyebrow>Questions</Eyebrow><h2>Prices, areas and confirmation.</h2></div></div>
           {homeFaqs.map(([q, a]) => (

@@ -5,8 +5,8 @@ import { CtaBand, PricePills } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { getService } from '@/data/catalog'
 import { getSeo } from '@/data/seo'
-import { SITE_ORIGIN } from '@/data/company'
 import StructuredData from '@/components/StructuredData'
+import { serviceJsonLd } from '@/lib/schema'
 import NotFound from './NotFound'
 
 export default function ServicePage({ slug: slugProp }: { slug?: string }) {
@@ -17,17 +17,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
   const seo = getSeo('/' + service.slug)
   return (
     <>
-      <StructuredData data={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: seo?.title || service.title,
-        description: seo?.description || service.description,
-        url: SITE_ORIGIN + '/' + service.slug,
-        image: SITE_ORIGIN + service.image,
-        serviceType: service.title,
-        provider: { '@type': 'Organization', name: 'PersonalFitness.id', url: SITE_ORIGIN },
-        areaServed: service.cities.map((city) => ({ '@type': 'Place', name: city })),
-      }} />
+      <StructuredData data={serviceJsonLd(service, seo?.title, seo?.description)} />
       <PageIntro eyebrow="Private session" title={seo?.title || service.title} description={seo?.description || service.description}>
         <PricePills slug={service.slug} />
         <div className="cluster" style={{ marginTop: 22 }}>

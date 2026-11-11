@@ -25,9 +25,9 @@ const BLOG: SeoLink = { to: '/resources', label: 'Blog' }
 const hubs: SeoRecord[] = [
   {
     path: '/',
-    primaryKeyword: 'private fitness Bali Jakarta',
-    title: 'Private Fitness at Home in Bali & Jakarta',
-    description: 'Private personal training, yoga, mat Pilates, boxing fitness and guided meditation at your villa or home in Bali and Jakarta. Published starting prices and a written quote.',
+    primaryKeyword: 'personal trainer at home Bali Jakarta',
+    title: 'Personal Trainer at Home in Bali and Jakarta',
+    description: 'Personal trainer at your villa or home in Bali from Rp 900.000 and Jakarta from Rp 950.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Written quote before payment.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Personal training at home' },
@@ -62,7 +62,7 @@ const hubs: SeoRecord[] = [
     path: '/bali',
     primaryKeyword: 'personal trainer Bali',
     title: 'Personal Trainer and Private Fitness in Bali',
-    description: 'In-villa personal training, private yoga and mat Pilates in Canggu and Seminyak. Ubud, Sanur and Uluwatu with published travel.',
+    description: 'In-villa personal trainer in Canggu and Seminyak from Rp 900.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Ubud, Sanur and Uluwatu with published travel.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali/personal-training', label: 'Personal training in Bali' },
@@ -79,7 +79,7 @@ const hubs: SeoRecord[] = [
     path: '/jakarta',
     primaryKeyword: 'home personal training Jakarta',
     title: 'Home Personal Training in Jakarta',
-    description: 'Private personal training, yoga and mat Pilates at home in South and Central Jakarta. Recurring programmes for residents, quoted in writing.',
+    description: 'Home personal trainer in South and Central Jakarta from Rp 950.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Recurring programmes quoted in writing.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/jakarta/personal-training', label: 'Personal training in Jakarta' },
@@ -213,8 +213,8 @@ const hubs: SeoRecord[] = [
   {
     path: '/faq',
     primaryKeyword: 'personal trainer Bali FAQ',
-    title: 'Private Fitness FAQs',
-    description: 'Answers on prices, areas, trainers, cancellation, payment and what PersonalFitness.id will and will not book.',
+    title: 'Personal Trainer Bali and Jakarta FAQ',
+    description: 'How much a private session costs, which Bali and Jakarta areas are in-zone, extra people, cancellation and what PersonalFitness.id will not book.',
     group: 'page', lastmod: TODAY,
     related: [{ to: '/pricing', label: 'Prices' }, { to: '/refunds-rescheduling', label: 'Refunds' }, { to: '/contact', label: 'Ask a coordinator' }],
     crumbs: [HOME, { to: '/faq', label: 'FAQ' }],
@@ -307,7 +307,7 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   'mobility-coaching': {
     keyword: 'mobility coaching at home',
     title: 'Private Mobility Coaching at Home',
-    description: 'Non-clinical mobility and assisted stretching at your home or villa in Bali and Jakarta.',
+    description: 'Non-clinical mobility and assisted stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta, at your home or villa.',
   },
   'massage-and-bodywork': {
     keyword: 'private massage at home Bali',

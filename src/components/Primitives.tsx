@@ -105,7 +105,7 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
   return (
     <figure className={`session-figure ${className}`}>
       <div className="session-image" ref={frame}>
-        <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />
+        <img src={src} alt={alt} width={1200} height={1500} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

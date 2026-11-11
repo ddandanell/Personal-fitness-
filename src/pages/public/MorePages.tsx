@@ -10,6 +10,8 @@ import { CORE_SERVICE_SLUGS, publicServices } from '@/data/publicOffer'
 const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
+import StructuredData from '@/components/StructuredData'
+import { faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
 import { estimateQuote } from '@/lib/quote'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
@@ -191,7 +193,8 @@ export function ResourceArticle() {
 export function FaqPage() {
   return (
     <>
-      <PageIntro eyebrow="Questions" title="Prices, areas, trainers, cancellation." description="If the answer depends on your building or your pool, the estimator plus a human quote is the next step.">
+      <StructuredData data={faqJsonLd(faqs)} />
+      <PageIntro eyebrow="Questions" title="Personal trainer Bali and Jakarta FAQ." description="Prices, in-zone areas, extra people, cancellation and what we will not book. If the answer depends on your building, the estimator plus a written quote is next.">
         <Link to="/pricing" className="button button-primary">Open prices<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section">
