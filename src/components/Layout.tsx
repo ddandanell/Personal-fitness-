@@ -3,8 +3,8 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, useLocation } from 'react-router'
 import { pageMetadata } from '@/lib/metadata'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
-import { COMPANY_ADDRESS, COMPANY_MAPS_URL, SITE_ORIGIN } from '@/data/company'
-import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
+import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, SITE_ORIGIN } from '@/data/company'
+import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import StructuredData from './StructuredData'
 import { Breadcrumbs, RelatedLinks } from './SeoCluster'
 
@@ -16,13 +16,44 @@ const navigation = [
   ['/resources', 'Guides'],
 ]
 
+const mobileGroups = [
+  {
+    heading: 'Sessions',
+    links: [
+      ['/personal-training', 'Personal training'],
+      ['/private-yoga', 'Private yoga'],
+      ['/mat-pilates', 'Mat Pilates'],
+      ['/mobility-coaching', 'Mobility coaching'],
+      ['/services', 'All sessions'],
+    ],
+  },
+  {
+    heading: 'Plan a visit',
+    links: [
+      ['/pricing', 'Prices'],
+      ['/how-it-works', 'How it works'],
+      ['/programmes', 'Programmes'],
+      ['/resources', 'Guides'],
+      ['/faq', 'FAQ'],
+    ],
+  },
+  {
+    heading: 'Places',
+    links: [
+      ['/bali', 'Bali'],
+      ['/jakarta', 'Jakarta'],
+      ['/service-areas', 'Travel and clusters'],
+    ],
+  },
+]
+
 export default function Layout({ children }: { children: ReactNode }) {
-  const [menuPath, setMenuPath] = useState<string | null>(null)
+  const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
-  const menuOpen = menuPath === pathname
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
+    setMenuOpen(false)
     const { title, description, canonical, noindex, image } = pageMetadata(pathname)
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
@@ -36,13 +67,22 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [pathname])
 
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuPath(null) }
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuOpen(false) }
     window.addEventListener('keydown', close)
     return () => window.removeEventListener('keydown', close)
   }, [])
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('menu-open', menuOpen)
+    document.body.classList.toggle('menu-open', menuOpen)
+    return () => {
+      document.documentElement.classList.remove('menu-open')
+      document.body.classList.remove('menu-open')
+    }
+  }, [menuOpen])
+
   return (
-    <div className="app-shell">
+    <div className={'app-shell' + (menuOpen ? ' is-menu-open' : '')}>
       <a href="#main-content" className="skip-link">Skip to content</a>
       <StructuredData data={{
         '@context': 'https://schema.org',
@@ -50,7 +90,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         name: 'PersonalFitness.id',
         url: SITE_ORIGIN,
         logo: SITE_ORIGIN + '/brand/personalfitness-mark.png',
-        telephone: '+628113703805',
+        telephone: '+628113803488',
+        email: COMPANY_EMAIL,
         priceRange: 'IDR 650000-1600000',
         image: SITE_ORIGIN + '/images/wellness/villa-yoga-partners.webp',
         address: {
@@ -72,20 +113,38 @@ export default function Layout({ children }: { children: ReactNode }) {
             ))}
           </nav>
           <div className="header-actions">
-            <Link to="/contact" className="button button-primary header-cta">Check availability<ArrowUpRight size={15} /></Link>
-            <button className="icon-button mobile-menu-button" onClick={() => setMenuPath(menuOpen ? null : pathname)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
+            <Link to="/contact" className="button button-primary header-cta">
+              <span className="header-cta-full">Check availability</span>
+              <span className="header-cta-short">Check</span>
+              <ArrowUpRight size={15} />
+            </Link>
+            <button className="icon-button mobile-menu-button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
           </div>
         </div>
-        {menuOpen && (
-          <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
-            {navigation.map(([to, label]) => <NavLink key={to} to={to} onClick={() => setMenuPath(null)}>{label}</NavLink>)}
-            <NavLink to="/bali" onClick={() => setMenuPath(null)}>Bali</NavLink>
-            <NavLink to="/jakarta" onClick={() => setMenuPath(null)}>Jakarta</NavLink>
-            <NavLink to="/faq" onClick={() => setMenuPath(null)}>FAQ</NavLink>
-            <NavLink to="/contact" onClick={() => setMenuPath(null)}>Check availability</NavLink>
-          </nav>
-        )}
       </header>
+      {menuOpen && (
+        <div className="mobile-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title">
+          <button className="mobile-sheet-backdrop" type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)} />
+          <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
+            <div className="mobile-nav-head">
+              <p className="eyebrow" id="mobile-navigation-title">Menu</p>
+            </div>
+            {mobileGroups.map((group) => (
+              <div className="mobile-nav-group" key={group.heading}>
+                <p className="footer-heading">{group.heading}</p>
+                {group.links.map(([to, label]) => (
+                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={() => setMenuOpen(false)}>{label}</NavLink>
+                ))}
+              </div>
+            ))}
+            <div className="mobile-nav-cta">
+              <Link to="/contact" className="button button-primary" onClick={() => setMenuOpen(false)}>Check availability<ArrowUpRight size={16} /></Link>
+              <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer">WhatsApp {WHATSAPP_DISPLAY}</a>
+              <a className="button button-outline" href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>
+            </div>
+          </nav>
+        </div>
+      )}
       <main id="main-content" tabIndex={-1}>
         <Breadcrumbs path={pathname} />
         {children}
@@ -99,6 +158,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
             </p>
+            <p className="footer-address"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
             <Link to="/contact" className="text-link">Check availability<ArrowUpRight size={15} /></Link>
           </div>
           <div>
@@ -138,7 +198,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
         <div className="shell footer-bottom">
           <p>Starting prices: Bali personal training Rp 900.000 · Jakarta Rp 950.000. Outer-zone travel and extra people are quoted on top.</p>
-          <p>WhatsApp {WHATSAPP_DISPLAY}. Never send payment-card, bank, personal-ID or detailed health information in chat.</p>
+          <p>WhatsApp {WHATSAPP_DISPLAY}. Email {COMPANY_EMAIL}. Never send payment-card, bank, personal-ID or detailed health information in chat.</p>
         </div>
       </footer>
       <WhatsAppFloat />

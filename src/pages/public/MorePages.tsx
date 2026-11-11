@@ -6,7 +6,7 @@ import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
 import { cancellationRules } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
-import { COMPANY_ADDRESS, COMPANY_MAPS_URL } from '@/data/company'
+import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
 import { formatIdr } from '@/lib/money'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
@@ -254,6 +254,11 @@ export function ContactPage() {
               <p className="office-phone">{WHATSAPP_DISPLAY}</p>
               <a className="button button-primary" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer">Open WhatsApp<ArrowUpRight size={16} /></a>
             </div>
+            <div>
+              <p className="eyebrow">Email</p>
+              <p className="office-phone"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
+              <a className="button button-outline" href={COMPANY_EMAIL_HREF}>Write to us<ArrowUpRight size={16} /></a>
+            </div>
           </div>
           <div className="enquiry-warning contact-warning">
             <div>
@@ -284,7 +289,7 @@ export function AboutPage() {
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
-          <p>WhatsApp {WHATSAPP_DISPLAY}.</p>
+          <p>WhatsApp {WHATSAPP_DISPLAY}. Email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
           <Link to="/professional-standards" className="button button-primary">Read the vetting standard<ArrowUpRight size={16} /></Link>
         </div>
       </section>
@@ -324,7 +329,7 @@ const legalCopy = {
       ['WhatsApp', 'If you send the draft to PersonalFitness.id, it is used to qualify and coordinate the request. WhatsApp has its own terms. Keep payment-card, bank, ID and detailed health data out of that chat.'],
       ['Booking records', 'Confirmed sessions need a customer record on our side: name, contact, address type, session IDs, payment status. Health details, if ever required, use a restricted screening route, not the public site.'],
       ['Your choices', 'Ask a human, request a correction, or opt out of further messages. Complaints and safety issues go to a person, not an auto-reply.'],
-      ['Company address', COMPANY_ADDRESS + '. WhatsApp ' + WHATSAPP_DISPLAY + '.'],
+      ['Company address', COMPANY_ADDRESS + '. WhatsApp ' + WHATSAPP_DISPLAY + '. Email ' + COMPANY_EMAIL + '.'],
     ],
   },
   terms: {

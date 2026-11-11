@@ -7,7 +7,7 @@ import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
 import { getService } from '@/data/catalog'
-import { COMPANY_ADDRESS, SITE_ORIGIN } from '@/data/company'
+import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
@@ -107,7 +107,7 @@ export function BlogArticle() {
           <article>
             <ArticleBody markdown={post.body} />
             <div className="article-cta">
-              <p>If the next step is a session, start on the <Link to="/">PersonalFitness.id homepage</Link>, then send a WhatsApp to {WHATSAPP_DISPLAY}.</p>
+              <p>If the next step is a session, start on the <Link to="/">PersonalFitness.id homepage</Link>, then send a WhatsApp to {WHATSAPP_DISPLAY} or email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
               <div className="cluster">
                 <Link to="/" className="button button-dark">Go to the homepage<ArrowUpRight size={16} /></Link>
                 <Link to={post.landingPage} className="button button-outline">Open the session page</Link>
@@ -124,7 +124,7 @@ export function BlogArticle() {
               <li>Price it on <Link to="/pricing">pricing</Link>.</li>
               <li>Message {WHATSAPP_DISPLAY} with city, area and window.</li>
             </ol>
-            <p className="small muted">Office: {COMPANY_ADDRESS}. Sessions still run at your location.</p>
+            <p className="small muted">Office: {COMPANY_ADDRESS}. Email {COMPANY_EMAIL}. Sessions still run at your location.</p>
           </aside>
         </div>
       </section>
