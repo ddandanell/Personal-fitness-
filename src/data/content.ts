@@ -46,6 +46,8 @@ export const faqs = [
   ['Which Jakarta areas are in-zone?', 'South Jakarta and Central Jakarta clusters are in-zone. North, West, East and BSD are quoted with travel after a timing check.'],
   ['Do I need equipment?', 'Tell us what is already there. Mats, bands and light dumbbells can be used if present. Mat sessions use portable equipment; reformer requests require suitable equipment already on site. Boxing pads are brought when that session is approved.'],
   ['Can two people share a session?', 'Yes. Private yoga and guided meditation include up to two people in the published rate. Other services add an extra-person fee. Larger groups need space approval.'],
+  ['Do you offer boxing at a villa?', 'Yes. Boxing fitness is pad-only, one person, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta after a space check. No sparring, no ring, no kickboxing. See the boxing page for the hour and the exclusions.'],
+  ['Is guided meditation a therapy session?', 'No. Guided meditation is a quiet 60-minute sit for one or two people from Rp 800.000 in Bali. It is not counselling, clinical treatment or a breathwork show.'],
   ['Are beginners accepted?', 'Yes. Say so in the enquiry. The session is matched to experience. It is still a fitness session, not a medical assessment.'],
   ['What if I have pain or an injury?', 'Stop and speak to an appropriate clinician first. We do not treat pain, diagnose or run physiotherapy. Do not send medical files in WhatsApp.'],
   ['How do programmes work?', 'Two, three and four-week blocks prepaid for 6, 9 or 12 sessions. The discount is on the quote. Unused sessions follow the validity window written there.'],

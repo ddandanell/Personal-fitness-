@@ -9,17 +9,17 @@ import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { CopyButton, Field } from './Primitives'
 import { downloadText } from '@/lib/downloadText'
 
-type EstimatorProps = { compact?: boolean; initialService?: string }
+type EstimatorProps = { compact?: boolean; initialService?: string; initialCity?: City }
 export default function QuoteEstimator(props: EstimatorProps) {
   const [params] = useSearchParams()
-  return <EstimatorForm key={(props.initialService || '') + params.toString()} {...props} />
+  return <EstimatorForm key={(props.initialService || '') + (props.initialCity || '') + params.toString()} {...props} />
 }
 
-function EstimatorForm({ compact = false, initialService }: EstimatorProps) {
+function EstimatorForm({ compact = false, initialService, initialCity }: EstimatorProps) {
   const [params] = useSearchParams()
   const first = publicServices.find((item) => item.slug === (initialService || params.get('service'))) || publicServices[0]
   const [service, setService] = useState(first.slug)
-  const [city, setCity] = useState<City>(params.get('city') === 'Jakarta' ? 'Jakarta' : 'Bali')
+  const [city, setCity] = useState<City>(initialCity || (params.get('city') === 'Jakarta' ? 'Jakarta' : 'Bali'))
   const [area, setArea] = useState(params.get('area') || '')
   const [durationMin, setDurationMin] = useState(Number(params.get('duration')) || first.durationMin)
   const [participants, setParticipants] = useState(params.get('participants') || '1')

@@ -1,17 +1,20 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link, useParams } from 'react-router'
-import { useEffect } from 'react'
 import { Eyebrow, PageIntro } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
+import StructuredData from '@/components/StructuredData'
 import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
-import { getService } from '@/data/catalog'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
+import { sessionPhoto } from '@/data/publicOffer'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
-function articleImage(path: string) { return getService(path.split('/').filter(Boolean).at(-1) || '')?.image || '/images/professionals/sari-melati.webp' }
+function articleImage(path: string) {
+  const slug = path.split('/').filter(Boolean).at(-1) || ''
+  return sessionPhoto(slug)
+}
 
 function wordCount(markdown: string) {
   return markdown.trim().split(/\s+/).filter((token) => /[A-Za-z0-9]/.test(token)).length
@@ -102,7 +105,7 @@ export function BlogArticle() {
         <p className="article-kicker">{Math.max(1, Math.round(words / 220))} minute read · PersonalFitness.id editorial</p>
       </PageIntro>
       <section className="section">
-        <div className="shell article-cover"><img src={articleImage(post.landingPage)} alt="Instructor at a private property" width="1200" height="800" /></div>
+        <div className="shell article-cover"><img src={post.image || articleImage(post.landingPage)} alt={post.service + ' at a private villa or home'} width="1200" height="800" /></div>
         <div className="article-layout">
           <article>
             <ArticleBody markdown={post.body} />
@@ -164,17 +167,15 @@ export function BlogArticle() {
 }
 
 function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof getBlogPost>>; words: number }) {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.id = 'blog-schema'
-    script.text = JSON.stringify({
+  return (
+    <StructuredData data={{
       '@context': 'https://schema.org',
       '@graph': [
         {
           '@type': 'BlogPosting',
           headline: post.title,
           description: post.description,
+          image: SITE_ORIGIN + (post.image || articleImage(post.landingPage)),
           datePublished: post.date,
           dateModified: post.date,
           wordCount: words,
@@ -188,14 +189,6 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           },
         },
         {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN + '/' },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE_ORIGIN + '/resources' },
-            { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_ORIGIN}/resources/${post.slug}` },
-          ],
-        },
-        {
           '@type': 'FAQPage',
           mainEntity: post.faqs.map((item) => ({
             '@type': 'Question',
@@ -204,10 +197,6 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           })),
         },
       ],
-    })
-    document.getElementById('blog-schema')?.remove()
-    document.head.appendChild(script)
-    return () => script.remove()
-  }, [post, words])
-  return null
+    }} />
+  )
 }

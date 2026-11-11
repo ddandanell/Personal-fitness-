@@ -2,7 +2,7 @@ import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
-import { publicServices } from '@/data/publicOffer'
+import { publicServices, sessionPhoto } from '@/data/publicOffer'
 import { faqs } from '@/data/content'
 import StructuredData from '@/components/StructuredData'
 import { faqJsonLd } from '@/lib/schema'
@@ -14,7 +14,14 @@ const steps = [
   ['03', 'Continue in WhatsApp', 'The draft carries the numbers. Nothing is booked until you accept the quote and payment is verified.'],
 ]
 
-const homeFaqs = faqs.slice(0, 5)
+const homeFaqs = [
+  faqs[0],
+  faqs[2],
+  faqs[4],
+  faqs[7],
+  faqs.find((pair) => pair[0].includes('boxing at a villa')),
+  faqs.find((pair) => pair[0].includes('guided meditation a therapy')),
+].filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
 
 export default function Home() {
   return (
@@ -46,7 +53,7 @@ export default function Home() {
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={service.image} alt={service.imageAlt} width="1200" height="800" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>

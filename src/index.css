@@ -188,9 +188,13 @@ main p, main a { overflow-wrap: break-word; }
 .breadcrumbs li:not(:last-child)::after { content: '/'; color: #b4b4ad; }
 .breadcrumbs a { color: var(--muted); }
 .breadcrumbs a:hover { color: var(--ink); }
-.seo-related { padding: 36px 0 56px; border-top: 1px solid var(--line); min-height: 140px; contain: layout; }
-.seo-related ul { display: flex; flex-wrap: wrap; gap: 10px 14px; list-style: none; padding: 8px 0 0; margin: 0; }
-.seo-related a { display: inline-flex; min-height: 38px; align-items: center; padding: 0 12px; border: 1px solid var(--line); background: var(--paper-light); font-size: .82rem; }
+.seo-related { padding: 36px 0 56px; border-top: 1px solid var(--line); min-height: 220px; contain: layout; }
+.seo-related ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; list-style: none; padding: 8px 0 0; margin: 0; }
+.seo-related a { display: flex; min-height: 44px; align-items: center; padding: 8px 12px; border: 1px solid var(--line); background: var(--paper-light); font-size: .82rem; }
+@media (min-width: 901px) {
+  .seo-related { min-height: 180px; }
+  .seo-related ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 .shell { width: min(calc(100% - 48px), 1400px); margin-inline: auto; }
 .content-shell { width: min(calc(100% - 48px), 1080px); margin-inline: auto; }
@@ -243,10 +247,13 @@ main p, main a { overflow-wrap: break-word; }
 .section-dark .text-link:hover, .site-footer .text-link:hover { color: var(--orange-light); }
 .icon-button { border: 0; background: transparent; min-width: 44px; min-height: 44px; padding: 8px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 
+#main-content { min-height: 75vh; }
+.route-fallback { min-height: 75vh; }
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(237,237,237,.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); padding-top: env(safe-area-inset-top); }
 .header-main { min-height: 80px; display: flex; align-items: center; gap: 24px; }
 .brand { display: inline-flex; align-items: baseline; gap: 0; white-space: nowrap; color: var(--ink); font-family: var(--serif); font-size: 1.4rem; font-weight: 400; letter-spacing: -.055em; }
-.brand b { color: var(--orange); font-family: var(--mono); font-size: .85em; letter-spacing: -.06em; }
+.brand b { color: #8a2014; font-family: var(--mono); font-size: .85em; letter-spacing: -.06em; }
+.brand-light b { color: var(--orange-light); }
 .desktop-nav { display: flex; align-items: center; gap: clamp(14px, 1.8vw, 28px); margin-left: auto; }
 .nav-link { font-size: .76rem; font-weight: 600; padding: 29px 0 25px; position: relative; white-space: nowrap; }
 .nav-link::after { content: ''; position: absolute; bottom: 19px; left: 0; width: 0; height: 2px; background: var(--orange); transition: width .2s ease; }
@@ -273,7 +280,7 @@ main p, main a { overflow-wrap: break-word; }
 .hero-micro svg { flex: 0 0 auto; color: var(--orange-light); }
 .session-figure { margin: 0; min-width: 0; }
 .session-image { --parallax-y: 0px; position: relative; overflow: hidden; width: 100%; aspect-ratio: 4 / 3; background: #d8d7d1; }
-.session-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08) translate3d(0, var(--parallax-y), 0); transition: transform .16s ease-out; }
+.session-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08) translate3d(0, var(--parallax-y), 0); }
 .session-figure figcaption { color: var(--muted); font-size: .68rem; line-height: 1.45; margin-top: 10px; max-width: 70ch; }
 .sales-hero .session-figure figcaption { color: #aaa9a2; }
 .hero-session-image .session-image { aspect-ratio: 4 / 4.7; }
@@ -684,6 +691,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
   .meta-table > div { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; }
   .next-step-panel { padding: 28px 0; }
   .final-cta h2 { font-size: clamp(2.1rem, 11vw, 3.2rem); }
+  .seo-related { min-height: 400px; }
+  .seo-related ul { grid-template-columns: 1fr; }
   .seo-related a { min-height: 44px; }
   .article-cover img { aspect-ratio: 16 / 10; max-height: none; }
   .article-aside { padding: 22px 18px; }

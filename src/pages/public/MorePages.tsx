@@ -5,7 +5,7 @@ import { CtaBand, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
 import { cancellationRules, extraPersonFee } from '@/data/catalog'
-import { CORE_SERVICE_SLUGS, publicServices } from '@/data/publicOffer'
+import { CORE_SERVICE_SLUGS, publicServices, sessionPhoto } from '@/data/publicOffer'
 
 const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
@@ -23,6 +23,7 @@ const ratePhotos: Record<string, string> = {
   'mat-pilates': '/images/sessions/mat-pilates.webp',
   'boxing-fitness': '/images/sessions/boxing-fitness.webp',
   'guided-meditation': '/images/sessions/guided-meditation.webp',
+  'mobility-coaching': '/images/professionals/kenji-nakamura.webp',
 }
 
 const priceExamples = [
@@ -249,7 +250,7 @@ export function ServicesHub() {
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={service.image} alt={service.imageAlt} width="1200" height="800" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>

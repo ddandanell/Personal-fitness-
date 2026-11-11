@@ -1,7 +1,8 @@
-import { areas, services } from './catalog'
+import { areas, services, type City } from './catalog'
 import { blogPosts } from './blog'
 import { resources } from './content'
 import { CITY_SERVICE_RELEASED, CORE_SERVICE_SLUGS, HELD_SERVICE_SLUGS } from './publicOffer'
+import { formatIdr } from '@/lib/money'
 
 export type SeoLink = { to: string; label: string }
 export type SeoRecord = {
@@ -15,7 +16,18 @@ export type SeoRecord = {
   crumbs: SeoLink[]
 }
 
-const TODAY = '2026-11-11'
+const TODAY = '2026-11-12'
+
+function cityServiceDescription(slug: string, city: City, price: number | null | undefined) {
+  const start = price ? ' from ' + formatIdr(price) : ''
+  const place = city === 'Bali' ? 'villa or home' : 'home or apartment'
+  if (slug === 'personal-training') return `Personal trainer at your ${place} in ${city}${start} for 60 minutes in published clusters. Written quote before payment.`
+  if (slug === 'private-yoga') return `Private yoga at your ${place} in ${city}${start}, for one or two people. Written quote before payment.`
+  if (slug === 'mat-pilates') return `Private mat Pilates at your ${place} in ${city}${start}. No reformer. Written quote before payment.`
+  if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. No sparring. Space check first, then a written quote.`
+  if (slug === 'guided-meditation') return `Private guided meditation at your ${place} in ${city}${start} for one or two people. Not therapy.`
+  return `Private ${slug.replace(/-/g, ' ')} at your ${place} in ${city}${start}. Written quote before payment.`
+}
 const SPECIALISMS = new Set(['nutrition-consultation', 'physiotherapy', 'occupational-therapy', 'speech-therapy', 'psychology', 'acupuncture', 'lactation-support', 'birth-and-postpartum-support'])
 const HOME: SeoLink = { to: '/', label: 'Home' }
 const SERVICES: SeoLink = { to: '/services', label: 'Services' }
@@ -130,6 +142,8 @@ const hubs: SeoRecord[] = [
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'Estimate my price' },
+      { to: '/boxing-fitness', label: 'Add boxing fitness' },
+      { to: '/guided-meditation', label: 'Add guided meditation' },
       { to: '/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay', label: 'Choose a 2, 3 or 4 week block' },
       { to: '/contact', label: 'Check availability' },
     ],
@@ -139,7 +153,7 @@ const hubs: SeoRecord[] = [
     path: '/wellness-plan',
     primaryKeyword: 'private wellness schedule at home',
     title: 'Build a Private Wellness Schedule',
-    description: 'Mix training, yoga, Pilates and massage into one private schedule at your Bali villa or Jakarta home, then review programme savings.',
+    description: 'Mix training, yoga, Pilates, boxing and meditation into one private schedule at your Bali villa or Jakarta home, then review programme savings.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/programmes', label: 'Prepaid programmes' },
@@ -178,11 +192,13 @@ const hubs: SeoRecord[] = [
     path: '/resources',
     primaryKeyword: 'personal trainer Bali guide',
     title: 'Personal Trainer Bali and Jakarta Guides',
-    description: 'Guides to in-villa personal training, Jakarta home sessions, private yoga, mat Pilates, prices and programmes.',
+    description: 'Guides to in-villa personal training, Jakarta home sessions, private yoga, boxing fitness, guided meditation, prices and programmes.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes', label: 'Personal trainer in Bali' },
       { to: '/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session', label: 'Home training in Jakarta' },
+      { to: '/resources/private-boxing-fitness-at-home-what-pad-only-means', label: 'Boxing fitness at home' },
+      { to: '/resources/guided-meditation-at-home-what-the-hour-is-and-is-not', label: 'Guided meditation at home' },
       { to: '/pricing', label: 'Published prices' },
       { to: '/', label: 'Private fitness homepage' },
     ],
@@ -232,9 +248,9 @@ const hubs: SeoRecord[] = [
     path: '/villa-hotel-partners',
     primaryKeyword: 'villa wellness partner Bali',
     title: 'Villa and Hotel Wellness Partnerships',
-    description: 'Private yoga, massage and fitness schedules for villa managers, hotels and retreats in Bali and Jakarta.',
+    description: 'Private yoga, personal training, boxing fitness and guided meditation schedules for villa managers, hotels and retreats in Bali and Jakarta.',
     group: 'page', lastmod: TODAY,
-    related: [{ to: '/private-yoga', label: 'Private yoga' }, { to: '/personal-training', label: 'Personal training' }, { to: '/contact', label: 'Partner enquiry' }],
+    related: [{ to: '/private-yoga', label: 'Private yoga' }, { to: '/personal-training', label: 'Personal training' }, { to: '/boxing-fitness', label: 'Boxing fitness' }, { to: '/guided-meditation', label: 'Guided meditation' }, { to: '/contact', label: 'Partner enquiry' }],
     crumbs: [HOME, { to: '/villa-hotel-partners', label: 'Partners' }],
   },
   {
@@ -335,12 +351,12 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   canggu: {
     keyword: 'personal trainer Canggu',
     title: 'Personal Trainer in Canggu',
-    description: 'In-villa personal training, private yoga and mat Pilates in Canggu, Berawa, Pererenan and Echo Beach. In-zone travel included.',
+    description: 'In-villa personal training, private yoga, boxing fitness and mat Pilates in Canggu, Berawa, Pererenan and Echo Beach. In-zone travel included.',
   },
   seminyak: {
     keyword: 'private yoga Seminyak',
     title: 'Private Yoga and Training in Seminyak',
-    description: 'Private yoga, personal training and mat Pilates at Seminyak and Petitenget villas. In-zone for core sessions.',
+    description: 'Private yoga, personal training, boxing fitness and mat Pilates at Seminyak and Petitenget villas. In-zone for core sessions.',
   },
   ubud: {
     keyword: 'private yoga Ubud',
@@ -355,12 +371,12 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   uluwatu: {
     keyword: 'personal trainer Uluwatu',
     title: 'Personal Trainer in Uluwatu',
-    description: 'In-villa personal training, private yoga and swim coaching in Uluwatu, Pecatu and Bingin, with Rp 200.000 Bukit travel.',
+    description: 'In-villa personal training, private yoga, boxing fitness and mat Pilates in Uluwatu, Pecatu and Bingin, with Rp 200.000 Bukit travel.',
   },
   'south-jakarta': {
     keyword: 'personal trainer South Jakarta',
     title: 'Personal Trainer in South Jakarta',
-    description: 'Home personal training, yoga and mat Pilates in Kebayoran, Senopati, Kemang and Cilandak. In-zone for core sessions.',
+    description: 'Home personal training, yoga, boxing fitness and mat Pilates in Kebayoran, Senopati, Kemang and Cilandak. In-zone for core sessions.',
   },
   'central-jakarta': {
     keyword: 'home personal training Menteng',
@@ -428,15 +444,19 @@ function cityServiceRecords(): SeoRecord[] {
         path: '/' + city + '/' + slug,
         primaryKeyword: (locked?.keyword || slug.replace(/-/g, ' ')) + ' ' + label,
         title: (locked?.title || service?.title || slug) + ' in ' + label,
-        description: (service?.short || '') + ' Starting prices published for ' + label + ', with travel written on the quote.',
+        description: cityServiceDescription(slug, label, service?.prices[label]),
         group: 'page' as const,
         lastmod: TODAY,
-        related: [
+        related: uniqueLinks([
           { to: '/' + slug, label: service?.title || slug },
           { to: '/' + city, label: 'Private fitness in ' + label },
+          ...CITY_SERVICE_RELEASED.filter((item) => item !== slug).slice(0, 4).map((item) => {
+            const sibling = services.find((row) => row.slug === item)
+            return { to: '/' + city + '/' + item, label: (sibling?.title || item) + ' in ' + label }
+          }),
           { to: '/pricing', label: 'See session prices' },
           { to: '/contact', label: 'Check availability' },
-        ],
+        ]).slice(0, 8),
         crumbs: [HOME, { to: '/' + city, label }, { to: '/' + city + '/' + slug, label: service?.title || slug }],
       }
     }),
@@ -450,9 +470,9 @@ function areaRecords(): SeoRecord[] {
     const siblings = areas.filter((item) => item.city === area.city && item.slug !== area.slug).slice(0, 3)
     const related: SeoLink[] = [
       { to: cityPath, label: 'Private fitness in ' + area.city },
-      ...area.services.slice(0, 4).map((slug) => {
+      ...CITY_SERVICE_RELEASED.filter((slug) => area.services.includes(slug)).slice(0, 5).map((slug) => {
         const service = services.find((item) => item.slug === slug)
-        return { to: '/' + slug, label: (service?.title || slug) + ' in ' + area.name }
+        return { to: cityPath + '/' + slug, label: (service?.title || slug) + ' in ' + area.name }
       }),
       ...siblings.map((item) => ({ to: cityPath + '/' + item.slug, label: item.name })),
       { to: '/service-areas', label: 'All service areas' },

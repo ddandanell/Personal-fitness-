@@ -77,10 +77,13 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
   const frame = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (eager) return
     const node = frame.current
     if (!node || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     let queued = false
+    let armed = false
     const update = () => {
+      if (!armed) return
       const rect = node.getBoundingClientRect()
       const distance = window.innerHeight / 2 - (rect.top + rect.height / 2)
       const progress = Math.max(-1, Math.min(1, distance / (window.innerHeight + rect.height)))
@@ -88,24 +91,24 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
       queued = false
     }
     const onScroll = () => {
+      armed = true
       if (!queued) {
         queued = true
         window.requestAnimationFrame(update)
       }
     }
-    update()
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
-  }, [])
+  }, [eager])
 
   return (
     <figure className={`session-figure ${className}`}>
       <div className="session-image" ref={frame}>
-        <img src={src} alt={alt} width={1200} height={1500} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />
+        <img src={src} alt={alt} width={1200} height={1500} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

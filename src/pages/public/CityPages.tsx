@@ -1,9 +1,10 @@
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link, Navigate, useLocation, useParams } from 'react-router'
-import { Eyebrow, PageIntro, ParallaxImage } from '@/components/Primitives'
+import { Eyebrow, PageIntro, ParallaxImage, TextLink } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
+import QuoteEstimator from '@/components/QuoteEstimator'
 import { cities, getArea, getService, type City } from '@/data/catalog'
-import { CITY_SERVICE_RELEASED, offerState, publicServices } from '@/data/publicOffer'
+import { CITY_SERVICE_RELEASED, offerState, publicServices, sessionPhoto } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
 import StructuredData from '@/components/StructuredData'
 import { serviceJsonLd } from '@/lib/schema'
@@ -45,7 +46,7 @@ export function CityPage({ city }: { city: City }) {
           <div className="service-card-grid">
             {publicServices.filter((item) => item.cities.includes(city)).map((service, index) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={service.image} alt={service.imageAlt} width="1200" height="800" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>{service.prices[city] ? `Starting price ${formatIdr(service.prices[city]!)} / ${service.durationMin} min` : service.short}</p>
@@ -91,7 +92,7 @@ export function AreaPage() {
           <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Core sessions we can quote for {area.name}.</h2></div></div>
           <div className="area-grid">
             {publicServices.map((service) => (
-              <Link to={`/${service.slug}`} className="area-card" key={service.slug}>
+              <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="area-card" key={service.slug}>
                 <p className="eyebrow">{area.name}</p>
                 <h3>{service.title}</h3>
                 <p>{service.prices[city] ? `${formatIdr(service.prices[city]!)} starting price` : 'Written quote'}</p>
@@ -111,28 +112,61 @@ export function CityServicePage() {
   const service = slug ? getService(slug) : undefined
   if (!city || !service || !service.cities.includes(city)) return <NotFound />
   const price = service.prices[city]
+  const cityPath = city.toLowerCase()
+  const seo = getSeo('/' + cityPath + '/' + service.slug)
+  const access = city === 'Bali'
+    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. The Denpasar office is an office, not a walk-in studio.'
+    : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. South and Central Jakarta are in-zone. North, West, East and BSD are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
+  const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
 
   return (
     <>
       <StructuredData data={{
-        ...serviceJsonLd(service, service.title + ' in ' + city, service.short + (price ? ' Starting price ' + formatIdr(price) + ' for ' + service.durationMin + ' minutes in ' + city + '.' : '')),
-        url: SITE_ORIGIN + '/' + city.toLowerCase() + '/' + service.slug,
+        ...serviceJsonLd(service, seo?.title || service.title + ' in ' + city, seo?.description || service.short + (price ? ' Starting price ' + formatIdr(price) + ' for ' + service.durationMin + ' minutes in ' + city + '.' : '')),
+        url: SITE_ORIGIN + '/' + cityPath + '/' + service.slug,
         areaServed: [{ '@type': 'AdministrativeArea', name: city }],
       }} />
-      <PageIntro eyebrow={`${city} · ${service.title}`} title={`${service.title} in ${city}.`} description={`${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
+      <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title ? seo.title + '.' : `${service.title} in ${city}.`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
+        <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
-      <section className="section-compact"><div className="shell"><ParallaxImage src={service.image} alt={service.imageAlt} eager /></div></section>
+      <section className="section-compact"><div className="shell"><ParallaxImage src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} eager /></div></section>
       <section className="section-compact">
         <div className="shell split-feature">
           <div>
-            <h2>Local working rules.</h2>
+            <h2>{service.title} working rules in {city}.</h2>
             <p className="large-copy">{cities[city].lede}</p>
+            <p>{access}</p>
           </div>
           <ul className="check-list large-list">
             {service.includes.slice(0, 4).map((item) => <li key={item}><Check size={19} />{item}</li>)}
             <li><Check size={19} />{price ? `${formatIdr(price)} starting ${city} price before extras.` : 'Written quote only.'}</li>
+            {cities[city].clusters.slice(0, 3).map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
+        </div>
+      </section>
+      <section className="section-compact section-light">
+        <div className="shell">
+          <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Estimate {service.title.toLowerCase()} in {city}.</h2></div></div>
+          <QuoteEstimator compact initialService={service.slug} initialCity={city} />
+        </div>
+      </section>
+      <section className="section-compact">
+        <div className="shell split-feature">
+          <div>
+            <Eyebrow>Same city</Eyebrow>
+            <h2>Other private sessions we can quote in {city}.</h2>
+            <p>Each session is a separate hour. Mix them on a programme only after the first paid visit.</p>
+            <div className="cluster" style={{ marginTop: 18 }}>
+              <TextLink to={'/' + service.slug}>All {service.title.toLowerCase()} details</TextLink>
+              <TextLink to="/pricing">See session prices</TextLink>
+            </div>
+          </div>
+          <div>
+            {siblings.map((item) => (
+              <p key={item.slug}><TextLink to={`/${cityPath}/${item.slug}`}>{item.title} in {city}</TextLink></p>
+            ))}
+          </div>
         </div>
       </section>
       <CtaBand dark title="Send the area and the window." copy={cities[city].clusters.join(' · ')} to={`/contact?city=${city}&service=${service.slug}`} label="Check availability" />

@@ -29,6 +29,9 @@ try {
       .replace(/(<meta name="twitter:description" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.description) + '$2')
       .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/?>)/, '$1' + escape('https://www.personalfitness.id' + record.image) + '$2')
       .replace('<div id="root"></div>', '<div id="root" data-prerendered="true" data-prerender-path="' + escape(record.path) + '">' + body + '</div>')
+    if (record.path === '/') {
+      html = html.replace('<link rel="canonical"', '<link rel="preload" as="image" href="/images/wellness/villa-yoga-partners.webp" fetchpriority="high" />\n    <link rel="canonical"')
+    }
     const filename = record.path === '/' ? path.join(dist, 'index.html') : path.join(dist, record.path.slice(1) + '.html')
     await fs.mkdir(path.dirname(filename), { recursive: true })
     await fs.writeFile(filename, html)
@@ -50,7 +53,7 @@ try {
   const urlset = (entries) => '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + entries.map((item) => '  <url><loc>https://www.personalfitness.id' + (item.path === '/' ? '/' : item.path) + '</loc><lastmod>' + item.lastmod + '</lastmod></url>').join('\n') + '\n</urlset>\n'
   const pagesXml = urlset(seoEntries.filter((item) => item.group === 'page'))
   const postsXml = urlset(seoEntries.filter((item) => item.group === 'post'))
-  const indexXml = '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>https://www.personalfitness.id/sitemap-pages.xml</loc><lastmod>2026-11-11</lastmod></sitemap>\n  <sitemap><loc>https://www.personalfitness.id/sitemap-posts.xml</loc><lastmod>2026-11-11</lastmod></sitemap>\n</sitemapindex>\n'
+  const indexXml = '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <sitemap><loc>https://www.personalfitness.id/sitemap-pages.xml</loc><lastmod>2026-11-12</lastmod></sitemap>\n  <sitemap><loc>https://www.personalfitness.id/sitemap-posts.xml</loc><lastmod>2026-11-12</lastmod></sitemap>\n</sitemapindex>\n'
   for (const [name, xml] of [['sitemap.xml', indexXml], ['sitemap-pages.xml', pagesXml], ['sitemap-posts.xml', postsXml]]) {
     await fs.writeFile(path.join(dist, name), xml)
     await fs.writeFile(path.join(root, 'public', name), xml)

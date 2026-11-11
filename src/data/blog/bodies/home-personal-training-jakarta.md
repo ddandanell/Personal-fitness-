@@ -47,7 +47,7 @@ Send WhatsApp with: personal training, Jakarta, neighbourhood, building type, a 
 
 We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 24-hour reschedule line. You pay on the merchant link. You get a confirmation with the person and the access note.
 
-If you want a month of Tuesdays, read [programmes](/programmes). A single session is the right tool for a test. A four-week block is the right tool if you already know the building will let us in three mornings a week.
+If you want a month of Tuesdays, read [programmes](/programmes). A single session is the right tool for a test. A four-week block is the right tool if you already know the building will let us in three mornings a week. Pad-only [boxing fitness in Jakarta](/jakarta/boxing-fitness) and [guided meditation in Jakarta](/jakarta/guided-meditation) are separate published hours if that is the better first visit.
 
 ## Limits you should want us to keep
 

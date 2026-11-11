@@ -1,15 +1,13 @@
-import { lazy, Suspense, type ComponentType } from 'react'
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router'
 import Layout from '@/components/Layout'
 import { Loading } from '@/components/Primitives'
-import type { City } from '@/data/catalog'
+import Home from '@/pages/public/Home'
+import ServiceGate from '@/pages/public/ServiceGate'
+import { CityPage, CityOrAreaOrService } from '@/pages/public/CityPages'
 
-const Home = lazy(() => import('@/pages/public/Home'))
-const ServiceGate = lazy(() => import('@/pages/public/ServiceGate'))
 const Gone = lazy(() => import('@/pages/public/Gone'))
 const NotFound = lazy(() => import('@/pages/public/NotFound'))
-const CityPage = lazy(() => import('@/pages/public/CityPages').then((m) => ({ default: m.CityPage as ComponentType<{ city: City }> })))
-const CityOrAreaOrService = lazy(() => import('@/pages/public/CityPages').then((m) => ({ default: m.CityOrAreaOrService })))
 const ServicesHub = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ServicesHub })))
 const Programmes = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.Programmes })))
 const ServiceAreas = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: m.ServiceAreas })))
@@ -28,10 +26,18 @@ const LegalRefunds = lazy(() => import('@/pages/public/MorePages').then((m) => (
 const LegalSafety = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="safety" /> })))
 const LegalEditorial = lazy(() => import('@/pages/public/MorePages').then((m) => ({ default: () => <m.LegalPage kind="editorial" /> })))
 
+function RouteFallback() {
+  return (
+    <div className="route-fallback" aria-hidden="true">
+      <Loading />
+    </div>
+  )
+}
+
 export default function App() {
   return (
     <Layout>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/410" element={<Gone />} />

@@ -9,6 +9,8 @@ import jakartaPrices from './bodies/personal-trainer-jakarta-prices.md?raw'
 import yogaPrices from './bodies/private-yoga-prices-bali.md?raw'
 import matPrices from './bodies/mat-pilates-prices.md?raw'
 import paidFirst from './bodies/free-intro-vs-paid-first-session.md?raw'
+import boxingHome from './bodies/boxing-fitness-at-home-bali-jakarta.md?raw'
+import meditationHome from './bodies/guided-meditation-at-home-bali-jakarta.md?raw'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -190,6 +192,42 @@ export const blogPosts: BlogPost[] = [
       { q: 'Can a villa host comp a guest?', a: 'The host can pay the published rate. We will not hide a free hour.' },
     ],
     body: paidFirst,
+  },
+  {
+    slug: 'private-boxing-fitness-at-home-what-pad-only-means',
+    briefId: 'B011',
+    title: 'Private boxing fitness at home: what pad-only means',
+    description: 'Pad-only boxing at a villa or home from Rp 1.000.000 in Bali. No sparring, one person, after a space check.',
+    date: '2026-11-28',
+    primaryQuery: 'private boxing fitness at home',
+    service: 'Boxing fitness',
+    city: 'Bali & Jakarta',
+    landingPage: '/boxing-fitness',
+    image: '/images/sessions/boxing-fitness.webp',
+    faqs: [
+      { q: 'Is sparring included?', a: 'No. Pads only. One person.' },
+      { q: 'Do you bring a bag?', a: 'Pads are brought when the session is approved. A heavy bag is not required and often will not fit.' },
+      { q: 'Can two people share boxing?', a: 'Not in the published boxing rate. Quote two hours or pick a session that bills extra people.' },
+    ],
+    body: boxingHome,
+  },
+  {
+    slug: 'guided-meditation-at-home-what-the-hour-is-and-is-not',
+    briefId: 'B012',
+    title: 'Guided meditation at home: what the hour is, and is not',
+    description: 'A quiet 60-minute sit for one or two people from Rp 800.000 in Bali. Not therapy. Not a breathwork show.',
+    date: '2026-11-29',
+    primaryQuery: 'guided meditation at home',
+    service: 'Guided meditation',
+    city: 'Bali & Jakarta',
+    landingPage: '/guided-meditation',
+    image: '/images/sessions/guided-meditation.webp',
+    faqs: [
+      { q: 'Is this therapy?', a: 'No. It is a guided sit. Speak to a clinician if you need treatment.' },
+      { q: 'Are two people included?', a: 'Yes, in the published meditation rate, if the room can be quiet for both.' },
+      { q: 'Can you combine it with yoga in one hour?', a: 'No. Those are separate published sessions.' },
+    ],
+    body: meditationHome,
   },
 ]
 

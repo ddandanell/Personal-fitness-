@@ -2,13 +2,15 @@
 
 PersonalFitness.id is a company-managed private fitness service. Coaches come to your villa or home in published Bali and Jakarta clusters. It is not a public trainer marketplace.
 
+Canonical host: https://www.personalfitness.id/
+
 ## What we book
 
 - Personal training: 60 minutes from Rp 900.000 in Bali and Rp 950.000 in Jakarta
 - Private yoga: 60 minutes for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta
 - Mat Pilates: 60 minutes from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer
 - Mobility coaching: non-clinical stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta
-- Boxing fitness: pad-only, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
+- Boxing fitness: pad-only, one person, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
 - Guided meditation: a quiet sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. Not therapy
 
 A click is not a booking. Availability, access and the payable total are confirmed in a written quote.
@@ -26,6 +28,31 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16, Panjer is an office, no
 Website: https://www.personalfitness.id/
 WhatsApp: +62 811-3803-488
 Email: hallo@personalfitness.id
+Sitemap: https://www.personalfitness.id/sitemap.xml
+
+## Indexable money pages
+
+- https://www.personalfitness.id/
+- https://www.personalfitness.id/personal-training
+- https://www.personalfitness.id/private-yoga
+- https://www.personalfitness.id/mat-pilates
+- https://www.personalfitness.id/mobility-coaching
+- https://www.personalfitness.id/boxing-fitness
+- https://www.personalfitness.id/guided-meditation
+- https://www.personalfitness.id/pricing
+- https://www.personalfitness.id/programmes
+- https://www.personalfitness.id/bali
+- https://www.personalfitness.id/jakarta
+- https://www.personalfitness.id/faq
+- https://www.personalfitness.id/how-it-works
+- https://www.personalfitness.id/resources
+
+## Resources
+
+- https://www.personalfitness.id/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes
+- https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session
+- https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means
+- https://www.personalfitness.id/resources/guided-meditation-at-home-what-the-hour-is-and-is-not
 
 ## Not booked here
 

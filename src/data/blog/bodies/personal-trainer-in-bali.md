@@ -46,7 +46,7 @@ Open the [homepage](/) if you still need the whole offer. Then message WhatsApp 
 
 We reply with a starting price or a request for one missing fact. The written quote is the document you accept. The confirmation is the document that names who is coming.
 
-If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you already know you want a programme, read [two, three and four-week blocks](/programmes) before you prepay a count you cannot use.
+If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you already know you want a programme, read [two, three and four-week blocks](/programmes) before you prepay a count you cannot use. Pad-only [boxing fitness](/bali/boxing-fitness) and a quiet [guided meditation](/bali/guided-meditation) sit are separate published hours, not add-ons hidden inside personal training.
 
 ## A checklist you can actually use
 

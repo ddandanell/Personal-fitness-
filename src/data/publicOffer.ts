@@ -8,6 +8,19 @@ const core = new Set<string>(CORE_SERVICE_SLUGS)
 const held = new Set<string>(HELD_SERVICE_SLUGS)
 
 export const publicServices = CORE_SERVICE_SLUGS.map((slug) => services.find((item) => item.slug === slug)).filter((item): item is (typeof services)[number] => Boolean(item))
+
+export const SESSION_PHOTOS: Record<string, string> = {
+  'personal-training': '/images/sessions/personal-training.webp',
+  'private-yoga': '/images/sessions/private-yoga.webp',
+  'mat-pilates': '/images/sessions/mat-pilates.webp',
+  'mobility-coaching': '/images/professionals/kenji-nakamura.webp',
+  'boxing-fitness': '/images/sessions/boxing-fitness.webp',
+  'guided-meditation': '/images/sessions/guided-meditation.webp',
+}
+
+export function sessionPhoto(slug: string, fallback?: string) {
+  return SESSION_PHOTOS[slug] || fallback || '/images/sessions/personal-training.webp'
+}
 export const heldServices = services.filter((item) => held.has(item.slug))
 export const unpublishedServiceSlugs = services.map((item) => item.slug).filter((slug) => !core.has(slug) && !held.has(slug))
 
