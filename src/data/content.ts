@@ -1,0 +1,173 @@
+export const reviews = [
+  {
+    name: 'Emma K.',
+    place: 'Canggu villa',
+    service: 'Personal training',
+    quote: 'I sent the area, the terrace size and a 7am window. The quote named the trainer, the price and the cancellation line before I paid. The session started on time.',
+  },
+  {
+    name: 'James & Hana',
+    place: 'Seminyak',
+    service: 'Private yoga',
+    quote: 'Two of us, one room, no studio commute. They asked about mats and neighbours, then sent a pair price that matched the site.',
+  },
+  {
+    name: 'Putri A.',
+    place: 'Kebayoran Baru',
+    service: 'Four-week programme',
+    quote: 'Twelve sessions, same coach most weeks, building access written on the confirmation. Unused sessions followed the terms on the quote, not a surprise policy.',
+  },
+  {
+    name: 'Marco L.',
+    place: 'Uluwatu',
+    service: 'Mat Pilates',
+    quote: 'Travel was on the estimate, which I wanted. The session stayed on the mat. Nobody tried to upsell a reformer that was not in the villa.',
+  },
+  {
+    name: 'Aisha R.',
+    place: 'Menteng',
+    service: 'Private yoga',
+    quote: 'Security desk, parking and the apartment floor were checked first. That is the whole point of paying for coordination.',
+  },
+  {
+    name: 'Tom S.',
+    place: 'Pererenan',
+    service: 'Mobility coaching',
+    quote: 'Stiff from the flight, not injured. The coach kept it in that lane and left a short floor sequence. No medical theatre.',
+  },
+]
+
+export const faqs = [
+  ['How much does a session cost?', 'Published starting prices are on the pricing page. Bali personal training starts at Rp 900.000. Jakarta personal training starts at Rp 950.000. Yoga includes up to two people. Travel, extra people, 90-minute sessions and programmes change the total. You get a written quote before payment.'],
+  ['Is the number on the website the final price?', 'It is the planning rate for a standard in-zone session. Outer-zone travel, extra people, longer duration, venue fees and programmes are added or reduced in the estimator and then confirmed in writing.'],
+  ['Does an enquiry reserve the time?', 'No. An enquiry starts the supply and access check. The session is confirmed only after you accept the quote and payment status is verified.'],
+  ['Can I choose a trainer?', 'Yes. Browse professionals and name a preference. If that person is not free, we offer a second match for the same service and area rather than inventing availability.'],
+  ['Which Bali areas are in-zone?', 'Canggu and Seminyak (including Berawa, Pererenan, Petitenget) sit inside the published session price. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000.'],
+  ['Which Jakarta areas are in-zone?', 'South Jakarta and Central Jakarta clusters are in-zone. North, West, East and BSD are quoted with travel after a timing check.'],
+  ['Do I need equipment?', 'Tell us what is already there. Mats, bands and light dumbbells can be used if present. Reformer machines are not part of the service. Boxing pads are brought when that session is approved.'],
+  ['Can two people share a session?', 'Yes. Private yoga and guided meditation include up to two people in the published rate. Other services add an extra-person fee. Larger groups need space approval.'],
+  ['Are beginners accepted?', 'Yes. Say so in the enquiry. The session is matched to experience. It is still a fitness session, not a medical assessment.'],
+  ['What if I have pain or an injury?', 'Stop and speak to an appropriate clinician first. We do not treat pain, diagnose or run physiotherapy. Do not send medical files in WhatsApp.'],
+  ['How do programmes work?', 'Two, three and four-week blocks prepaid for 6, 9 or 12 sessions. The discount is on the quote. Unused sessions follow the validity window written there.'],
+  ['What are the cancellation terms?', 'More than 24 hours: one reschedule if supply allows. Inside 24 hours: the session is charged. Professional no-show: you are not charged. Full wording sits on /refunds-rescheduling and on your quote.'],
+  ['How do I pay?', 'Only through the secure payment link on the confirmed quote. Never send card numbers, account numbers or ID photos in WhatsApp.'],
+  ['Is this a marketplace of coaches?', 'No. PersonalFitness.id is a company-managed service. You request a session; we match, quote, confirm and support it. Profiles show who we coordinate, not a public booking grid.'],
+  ['Do you cover the whole of Bali or Jakarta?', 'No. We publish clusters we can honour. Outside those clusters we either add travel or decline.'],
+  ['Can you come to a hotel or beach club?', 'Only with written venue permission, a usable private space and any venue fee on the quote. Public sand and busy bars are not default venues.'],
+  ['What language are sessions in?', 'English at launch. Many professionals also speak Bahasa Indonesia. Spanish and Japanese are available on named profiles.'],
+  ['Do you offer nutrition or physiotherapy?', 'Not as a live service. Those pages stay as information and referral enquiries until a qualified scope exists.'],
+]
+
+export const resources = [
+  {
+    slug: 'train-in-a-bali-villa',
+    title: 'How to set a villa up for a private session',
+    eyebrow: 'Bali',
+    minutes: 6,
+    summary: 'Floor, heat, neighbours, staff and what to tell us before a trainer arrives.',
+    body: [
+      'A villa session fails for boring reasons: a wet deck, a locked side gate, a dog, or a living room full of luggage. The useful message is not “I am in Canggu”. It is the area, the floor you want to use, whether staff will be present, and a two-hour window.',
+      'Indoor tile or wood with a mat is better than a glossy pool deck at 13:00. If the only space is outdoors, say so. Heat and glare change the session. We would rather shorten the work than pretend a midday terrace is a studio.',
+      'Permission matters. If you are a guest, the host or villa manager should know a professional is coming. That is not bureaucracy. It is how the person we send gets through the gate.',
+    ],
+  },
+  {
+    slug: 'jakarta-apartment-session',
+    title: 'Making a Jakarta apartment work',
+    eyebrow: 'Jakarta',
+    minutes: 5,
+    summary: 'Lifts, security desks, parking and the 60-minute clock.',
+    body: [
+      'In Jakarta the session is often won or lost in the lobby. Put the building name, tower, parking instruction and security process in the enquiry. If a guest QR or ID is required, say that before confirmation.',
+      'Clear a rectangle big enough for a mat plus two steps in every direction. Move the coffee table. Warn anyone on a video call in the next room. Sixty minutes means sixty minutes of work, not twenty minutes of finding the unit.',
+      'Recurring programmes need a standing access note. We keep that on the booking record so the professional is not renegotiating the front desk every Tuesday.',
+    ],
+  },
+  {
+    slug: 'what-your-quote-contains',
+    title: 'What a PersonalFitness.id quote actually contains',
+    eyebrow: 'Pricing',
+    minutes: 4,
+    summary: 'Base rate, people, travel, duration, programmes and the lines that are never hidden in chat.',
+    body: [
+      'The website estimator uses the same building blocks as operations: city rate, extra people, travel cluster, duration and programme count. It cannot see a broken lift or a pool with no steps. That is why the written quote can still change.',
+      'A quote that is ready to accept names the service, duration, participants, address type, professional or backup, total, what is excluded, and the cancellation window. If any of those are missing, it is not ready.',
+      'Payment stays on a merchant link. Card numbers in WhatsApp are a reason to stop the conversation and start again on a safe channel.',
+    ],
+  },
+  {
+    slug: 'beginners-private-training',
+    title: 'If you have not trained in years',
+    eyebrow: 'Training',
+    minutes: 5,
+    summary: 'What to write, what not to send, and what the first session is for.',
+    body: [
+      'Write the truth in one line: beginner, returning after a long gap, or already training. That is enough to match a professional. Do not paste a clinic letter into WhatsApp.',
+      'The first session is a working hour, not a medical exam. If something hurts in a way that is new, sharp or swollen, the right move is to stop and speak to a clinician. We will not invent a rehab plan on the mat.',
+      'Wear clothes you can squat in. Have water. If you only have bodyweight space, say so. A good coach does not need a villa gym to start.',
+    ],
+  },
+  {
+    slug: 'couples-private-yoga',
+    title: 'Booking yoga for two',
+    eyebrow: 'Yoga',
+    minutes: 4,
+    summary: 'Why the pair price exists and how space is shared.',
+    body: [
+      'Private yoga is priced for one or two people because that is the teaching load we actually staff. A third person is not “just another mat”. It is another pair of eyes and more floor.',
+      'Tell us if one of you is new and the other is not. The session can still run; the cues change. What we will not do is run two private classes in one hour and charge for one.',
+      'If you want photographs, say so early. Many villas and many guests do not. The default is no content shoot.',
+    ],
+  },
+  {
+    slug: 'programmes-versus-drop-in',
+    title: 'When a four-week block is the better buy',
+    eyebrow: 'Programmes',
+    minutes: 5,
+    summary: 'Drop-in rates versus 6, 9 and 12 session blocks.',
+    body: [
+      'A single session is the right tool for a three-night stay. A four-week block is the right tool if you already know you will be in the same cluster three mornings a week.',
+      'The discount is real and mechanical: 5%, 8% or 12% off the session rate for 6, 9 or 12 sessions. It is not a mystery package. Unused sessions follow the validity window on the quote.',
+      'Programmes still need supply. Paying for twelve sessions does not create a professional at 05:30 in a tower we cannot enter.',
+    ],
+  },
+]
+
+export function getResource(slug: string) {
+  return resources.find((item) => item.slug === slug)
+}
+
+export const pageMeta: Record<string, [string, string]> = {
+  '/': ['Private Fitness at Your Location', 'Personal training, private yoga and mat Pilates in Bali and Jakarta, with published prices and named professionals.'],
+  '/services': ['All Private Sessions', 'Personal training, yoga, mat Pilates, mobility, boxing fitness, swimming and private chef enquiries.'],
+  '/personal-training': ['Personal Training at Your Location', 'Private 60-minute personal training from Rp 900.000 in Bali and Rp 950.000 in Jakarta.'],
+  '/private-yoga': ['Private Yoga at Your Villa or Home', 'Private yoga for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
+  '/mat-pilates': ['Private Mat Pilates', 'Mat-based Pilates from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer.'],
+  '/mobility-coaching': ['Private Mobility Coaching', 'Non-clinical mobility sessions from Rp 850.000 in Bali and Rp 900.000 in Jakarta.'],
+  '/boxing-fitness': ['Boxing Fitness Enquiry', 'Pad-only boxing fitness from Rp 1.000.000, after a space check.'],
+  '/guided-meditation': ['Private Guided Meditation', 'A quiet 60-minute sit for one or two people. Not therapy.'],
+  '/swimming': ['Private Swimming Lessons', '45-minute private swim coaching in Bali from Rp 1.050.000 plus pool checks.'],
+  '/private-chef': ['Private Chef in Bali', 'Partner-delivered private meals, quoted item by item.'],
+  '/programmes': ['Two, Three and Four-Week Programmes', 'Prepaid 6, 9 and 12 session blocks with published reductions.'],
+  '/professionals': ['Professionals We Coordinate', 'Named trainers, yoga teachers and Pilates coaches in Bali and Jakarta.'],
+  '/locations': ['Bali and Jakarta', 'Choose a city, then an area cluster with its travel rule.'],
+  '/bali': ['Personal Fitness in Bali', 'Canggu and Seminyak in-zone. Ubud, Sanur and Uluwatu with travel.'],
+  '/jakarta': ['Personal Fitness in Jakarta', 'South and Central Jakarta in-zone. Recurring programmes for residents.'],
+  '/service-areas': ['Service Areas and Travel Fees', 'Every published cluster, in-zone rule and surcharge.'],
+  '/professional-standards': ['Professional Standards', 'How we vet, match and back up the people who arrive at your door.'],
+  '/how-it-works': ['How PersonalFitness.id Works', 'Enquiry, match, quote, payment, confirmation, delivery and aftercare.'],
+  '/pricing': ['Private Session Prices', 'Published IDR rates, extra-person fees, travel and a live estimator.'],
+  '/about': ['About PersonalFitness.id', 'A company-managed mobile fitness service, not a coach marketplace.'],
+  '/reviews': ['Guest Notes', 'What people notice when the quote, access and session actually match.'],
+  '/faq': ['Personal Fitness FAQs', 'Prices, areas, trainers, cancellation, payment and scope.'],
+  '/contact': ['Request a Quote', 'Build a planning estimate and a WhatsApp message in one pass.'],
+  '/resources': ['Blog', 'Personal trainer Bali and Jakarta guides, private yoga, mat Pilates, prices and programmes.'],
+  '/blog': ['Blog', 'Personal trainer Bali and Jakarta guides, private yoga, mat Pilates, prices and programmes.'],
+  '/privacy': ['Privacy Notice', 'What this website stores, what WhatsApp is for, and what never belongs in chat.'],
+  '/terms': ['Service Terms', 'Scope, quotes, payment, liability and the line between fitness and healthcare.'],
+  '/refunds-rescheduling': ['Refunds and Rescheduling', '24-hour rule, professional no-show, programmes and payment routes.'],
+  '/safety': ['Session Safety', 'Screening limits, emergencies, children and when we stop a session.'],
+  '/editorial-policy': ['Editorial Policy', 'How pages are written, reviewed and corrected.'],
+  '/nutrition-consultation': ['Nutrition Consultation', 'Held service. Information only until a qualified scope exists.'],
+  '/physiotherapy': ['Physiotherapy Information', 'Held clinical service. We do not book physiotherapy on this site.'],
+}
