@@ -4,10 +4,12 @@ import { Eyebrow, PageIntro, ParallaxImage, TextLink } from '@/components/Primit
 import { CtaBand } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { cities, getArea, getService, type City } from '@/data/catalog'
+import { blogPosts } from '@/data/blog'
+import { faqs } from '@/data/content'
 import { CITY_SERVICE_RELEASED, offerState, publicServices, sessionPhoto } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
 import StructuredData from '@/components/StructuredData'
-import { cityServiceJsonLd } from '@/lib/schema'
+import { cityHubJsonLd, cityServiceJsonLd, faqJsonLd } from '@/lib/schema'
 import { getSeo } from '@/data/seo'
 import Gone from './Gone'
 import HeldService from './HeldService'
@@ -41,13 +43,70 @@ const citySpace: Record<string, Record<City, string>> = {
   },
 }
 
+const areaGuides: Record<string, Array<{ title: string; body: string }>> = {
+  canggu: [
+    { title: 'Private fitness around life in Canggu', body: 'A Canggu stay often has several activities competing for the same morning: breakfast, a beach visit, school routines or time at the laptop. Berawa, Batu Bolong, Pererenan and Echo Beach addresses can have very different access, even in the same cluster. Name the lane, the villa entrance and a dry indoor floor. A shaded outdoor option is useful only if the heat and neighbours allow it.' },
+    { title: 'What to send in the first Canggu enquiry', body: 'Start with Canggu, the venue type, the session, headcount and one or two windows. Personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation each need a different rectangle. There is no need to send health records. Your coordinator checks supply before the written quote.' },
+  ],
+  seminyak: [
+    { title: 'Private sessions in Seminyak villas', body: 'A Seminyak or Petitenget villa is often compact. Tell us the usable indoor space rather than the listing size. One-way streets, parking and villa-staff rules are checked before we send a professional. Couples often take yoga; other household members book their own training hour.' },
+    { title: 'What to send in the first Seminyak enquiry', body: 'Name Seminyak or Petitenget, the session, people and a two-hour window. If someone else manages the property, include the person who can open the gate. The published in-zone rate applies when the address sits in this cluster.' },
+  ],
+  ubud: [
+    { title: 'Ubud access before the view', body: 'An Ubud property may have a peaceful deck and a complicated walk from the road. Steps, paths and the carry from the vehicle matter more than a valley caption. A level indoor room and a realistic arrival window are what we quote. Travel is Rp 150.000 per visit on top of the Bali session rate.' },
+    { title: 'What to send in the first Ubud enquiry', body: 'Give the village or road if you know it, the session, people and whether the floor is indoor. Recurring days help when you are staying longer than a long weekend. We do not sell jungle yoga as a product.' },
+  ],
+  sanur: [
+    { title: 'Sanur for a calmer shoreline base', body: 'Sanur works for families and longer-stay guests who want a quieter morning than Canggu. Travel is Rp 150.000 per visit because it sits outside the Canggu to Seminyak cluster. Hotel suites need written venue permission. Family villas with a living-room rectangle are the usual setup.' },
+    { title: 'What to send in the first Sanur enquiry', body: 'Name Sanur, the venue type, the session and whether children will be in the room. A parent or guardian must stay for any minor. The quote still uses the Bali session rate plus travel.' },
+  ],
+  uluwatu: [
+    { title: 'Uluwatu needs a traffic window, not a cliff caption', body: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses add Rp 200.000 travel per visit. We only confirm when the professional can arrive, set up and leave inside a realistic block. Indoor floors beat a windy deck. Swimming stays held even if the villa has a pool.' },
+    { title: 'What to send in the first Uluwatu enquiry', body: 'Give the Bukit area, the session, people and two windows that survive traffic. Clifftop photos are not a venue. If the only floor is outdoor stone at midday, say so before the quote.' },
+  ],
+  'south-jakarta': [
+    { title: 'South Jakarta apartments and houses', body: 'Kebayoran, Senopati, SCBD, Kemang and Cilandak sit inside the published Jakarta rate when we can time the visit. The session is often won or lost in the lobby. Put the building name, tower, parking and visitor process in the first message.' },
+    { title: 'What to send in the first South Jakarta enquiry', body: 'Name the neighbourhood, the session, people and a two-hour window. A living-room rectangle is enough. A building gym is optional and only useful if it is private. Recurring programmes need a standing access note.' },
+  ],
+  'central-jakarta': [
+    { title: 'Central Jakarta is a building-access product', body: 'Menteng, Gondangdia, Thamrin and nearby residences are in-zone. Lobby names, parking and security desks are collected before confirmation so the professional is not left downstairs. Serviced apartments work when the front desk already expects a visitor.' },
+    { title: 'What to send in the first Central Jakarta enquiry', body: 'Give the building, the session, people and the window. If a guest QR or ID is required, say that before the quote. We will not pretend a lobby refusal is a completed hour.' },
+  ],
+  'north-jakarta': [
+    { title: 'North Jakarta is quoted, not assumed', body: 'Kelapa Gading, Sunter, Pluit and nearby addresses are by request. Supply, building permission and travel are checked before any visit. An enquiry does not mean we cover the municipality.' },
+    { title: 'What to send in the first North Jakarta enquiry', body: 'Name the exact area, the session and two windows. We either add travel, find a professional who can reach you, or decline. The written quote is the only coverage claim.' },
+  ],
+  'west-jakarta': [
+    { title: 'West Jakarta visits follow supply', body: 'Puri Indah, Kebon Jeruk and nearby homes are reviewed individually. Availability, access and a written travel quote come before booking. We do not publish a West Jakarta in-zone rate.' },
+    { title: 'What to send in the first West Jakarta enquiry', body: 'Give the neighbourhood, the session, people and a realistic morning or evening window. Landed homes with a clear indoor floor are easier than towers with no visitor process.' },
+  ],
+  'east-jakarta': [
+    { title: 'East Jakarta is a timing check', body: 'Rawamangun, Pulomas and surrounding addresses are considered after a local supply check. Coverage is not implied across the municipality. Travel and the professional’s diary decide whether the hour can run.' },
+    { title: 'What to send in the first East Jakarta enquiry', body: 'Name the area, the session and two windows. Family homes with a clear floor are the usual setup. Wait for the quote before assuming a weekly slot.' },
+  ],
+}
+
+function cityFaqs(city: City) {
+  const keys = city === 'Bali'
+    ? ['book a personal trainer in Bali', 'Bali areas', 'How much does a session cost?', 'boxing at a villa']
+    : ['South Jakarta', 'Jakarta areas', 'How much does a session cost?', 'enquiry reserve']
+  return keys
+    .map((key) => faqs.find((pair) => pair[0].includes(key)))
+    .filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
+}
+
 export function CityPage({ city }: { city: City }) {
   const data = cities[city]
   const [image, alt] = images[city]
   const cityPath = city.toLowerCase()
+  const seo = getSeo('/' + cityPath)
+  const pageFaqs = cityFaqs(city)
+  const guides = blogPosts.filter((post) => post.city === city || post.city.includes(city)).slice(0, 3)
 
   return (
     <>
+      <StructuredData data={cityHubJsonLd(city, seo?.title || data.headline, seo?.description || data.lede)} />
+      {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={city} title={data.headline} description={data.lede}>
         <p className="price-highlight">{city === 'Bali' ? `Starting price · personal training ${formatIdr(900_000)} · 60 minutes · in-zone Canggu and Seminyak` : `Starting price · personal training ${formatIdr(950_000)} · 60 minutes · in-zone South and Central Jakarta`}</p>
         <div className="cluster">
@@ -83,6 +142,51 @@ export function CityPage({ city }: { city: City }) {
           </div>
         </div>
       </section>
+      <section className="section-compact">
+        <div className="shell split-feature">
+          <div>
+            <Eyebrow>Who books here</Eyebrow>
+            <h2>{city === 'Bali' ? 'Villa guests, month-long stays and hosts.' : 'Residents, apartment routines and four-week blocks.'}</h2>
+            <p className="large-copy">{city === 'Bali'
+              ? 'The hour happens in your villa or home, not at a walk-in studio in Denpasar. Canggu and Seminyak sit inside the published rate. Ubud, Sanur and Uluwatu add travel. Beach clubs and public sand are not default venues.'
+              : 'The hour happens in your apartment or house. South and Central Jakarta sit inside the published rate. North, West, East and BSD are timing-and-travel checks. A building gym is optional and only useful if it is private.'}</p>
+          </div>
+          <ul className="check-list large-list">
+            {data.audience.map((item) => <li key={item}><Check size={19} />{item}</li>)}
+          </ul>
+        </div>
+      </section>
+      {guides.length > 0 && (
+        <section className="section-compact section-light">
+          <div className="shell">
+            <div className="section-title"><div><Eyebrow>Guides</Eyebrow><h2>How a {city} session is actually set up.</h2></div></div>
+            <div className="resource-grid">
+              {guides.map((post) => (
+                <Link to={'/resources/' + post.slug} className="resource-card" key={post.slug}>
+                  <p className="eyebrow">{post.service}</p>
+                  <h3>{post.title}</h3>
+                  <p>{post.description}</p>
+                  <span className="text-link">Read the guide</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {pageFaqs.length > 0 && (
+        <section className="section-compact">
+          <div className="content-shell faq-list">
+            <div className="section-title"><div><Eyebrow>Questions</Eyebrow><h2>{city} prices, clusters and confirmation.</h2></div></div>
+            {pageFaqs.map(([question, answer]) => (
+              <details className="faq-item" key={question}>
+                <summary><span>{question}</span></summary>
+                <div className="faq-body"><p>{answer}</p></div>
+              </details>
+            ))}
+            <TextLink to="/faq">All questions</TextLink>
+          </div>
+        </section>
+      )}
       <CtaBand dark title={`Tell us where in ${city}.`} copy="Area, venue type and a two-hour window are enough to start the availability check." to={`/contact?city=${city}`} label="Check availability" />
     </>
   )
@@ -101,6 +205,7 @@ export function AreaPage() {
   const area = slug ? getArea(slug) : undefined
   if (!city || !area || area.city !== city) return <NotFound />
   const cityPath = city === 'Bali' ? 'bali' : 'jakarta'
+  const guides = areaGuides[area.slug] || []
 
   return (
     <>
@@ -128,6 +233,19 @@ export function AreaPage() {
           </div>
         </div>
       </section>
+      {guides.length > 0 && (
+        <section className="section-compact">
+          <div className="content-shell privacy-prose">
+            {guides.map((block) => (
+              <div key={block.title}>
+                <h2>{block.title}</h2>
+                <p>{block.body}</p>
+              </div>
+            ))}
+            <p>City rules and starting prices sit on <TextLink to={'/' + cityPath}>{area.city} private fitness</TextLink>. Pay only after a written quote.</p>
+          </div>
+        </section>
+      )}
       <CtaBand dark title={`Request ${area.name}.`} copy="We confirm availability after a timing and access check." to={`/contact?city=${area.city}&area=${area.slug}`} label="Check availability" />
     </>
   )
@@ -145,10 +263,15 @@ export function CityServicePage() {
     ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. The Denpasar office is an office, not a walk-in studio.'
     : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. South and Central Jakarta are in-zone. North, West, East and BSD are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
+  const pageFaqs = faqs.filter((pair) => {
+    const hay = (pair[0] + ' ' + pair[1]).toLowerCase()
+    return hay.includes(service.title.toLowerCase()) || hay.includes(service.slug.replace(/-/g, ' '))
+  }).slice(0, 4)
 
   return (
     <>
       <StructuredData data={cityServiceJsonLd(service, city, seo?.title, seo?.description)} />
+      {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title ? seo.title + '.' : `${service.title} in ${city}.`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
@@ -193,6 +316,19 @@ export function CityServicePage() {
           </div>
         </div>
       </section>
+      {pageFaqs.length > 0 && (
+        <section className="section-compact section-light">
+          <div className="content-shell faq-list">
+            <div className="section-title"><div><Eyebrow>Questions</Eyebrow><h2>{service.title} in {city}.</h2></div></div>
+            {pageFaqs.map(([question, answer]) => (
+              <details className="faq-item" key={question}>
+                <summary><span>{question}</span></summary>
+                <div className="faq-body"><p>{answer}</p></div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
       <CtaBand dark title="Send the area and the window." copy={cities[city].clusters.join(' · ')} to={`/contact?city=${city}&service=${service.slug}`} label="Check availability" />
     </>
   )

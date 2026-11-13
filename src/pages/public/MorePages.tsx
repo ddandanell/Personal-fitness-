@@ -4,14 +4,14 @@ import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Pr
 import { CtaBand, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
-import { cancellationRules, extraPersonFee } from '@/data/catalog'
+import { areas, cancellationRules, extraPersonFee } from '@/data/catalog'
 import { CORE_SERVICE_SLUGS, publicServices, sessionPhoto } from '@/data/publicOffer'
 
 const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
 import StructuredData from '@/components/StructuredData'
-import { faqJsonLd } from '@/lib/schema'
+import { collectionJsonLd, contactPageJsonLd, faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
 import { estimateQuote } from '@/lib/quote'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
@@ -82,6 +82,7 @@ const quoteSteps = [
 
 const priceFaqKeys = [
   'How do I book a personal trainer in Bali on WhatsApp?',
+  'Can I book a personal trainer in South Jakarta?',
   'How much does a session cost?',
   'Is the number on the website the final price?',
   'Which Bali areas are in-zone?',
@@ -119,10 +120,15 @@ export function Programmes() {
 }
 
 export function ServiceAreas() {
+  const bali = areas.filter((area) => area.city === 'Bali')
+  const jakarta = areas.filter((area) => area.city === 'Jakarta')
   return (
     <>
       <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is either inside the session starting price or added once per visit. If we cannot honour an address, we decline it rather than stretch a route.">
-        <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
+        <div className="cluster">
+          <Link to="/bali" className="button button-primary">Bali clusters<ArrowUpRight size={16} /></Link>
+          <Link to="/jakarta" className="button button-outline">Jakarta clusters</Link>
+        </div>
       </PageIntro>
       <section className="section-compact section-dark">
         <div className="shell split-feature">
@@ -130,6 +136,44 @@ export function ServiceAreas() {
           <ul className="check-list large-list">
             {['In-zone: Canggu–Seminyak, South Jakarta, Central Jakarta', 'Ubud and Sanur: Rp 150.000 per visit', 'Uluwatu / Bukit: Rp 200.000 per visit', 'Other Jakarta municipalities: quoted after a timing check', 'Parking, building fees and pool entry stay extra if they exist'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
+        </div>
+      </section>
+      <section className="section">
+        <div className="shell">
+          <div className="section-title"><div><Eyebrow>Bali</Eyebrow><h2>Villa and home clusters we publish.</h2><p>Open the Bali hub for session rates. Area pages explain access; they point back to the city page.</p></div></div>
+          <div className="area-grid">
+            {bali.map((area) => (
+              <Link to={'/bali/' + area.slug} className="area-card" key={area.slug}>
+                <p className="eyebrow">{area.cluster}</p>
+                <h3>{area.name}</h3>
+                <p>{area.travelQuote ? 'Travel quoted after a timing check' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included'}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="cluster" style={{ marginTop: 28 }}>
+            <Link to="/bali/personal-training" className="text-link">Personal training in Bali<ArrowUpRight size={15} /></Link>
+            <Link to="/bali/private-yoga" className="text-link">Private yoga in Bali<ArrowUpRight size={15} /></Link>
+            <Link to="/pricing" className="text-link">All starting prices<ArrowUpRight size={15} /></Link>
+          </div>
+        </div>
+      </section>
+      <section className="section section-light">
+        <div className="shell">
+          <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate. Other municipalities wait on supply and a travel line.</p></div></div>
+          <div className="area-grid">
+            {jakarta.map((area) => (
+              <Link to={'/jakarta/' + area.slug} className="area-card" key={area.slug}>
+                <p className="eyebrow">{area.cluster}</p>
+                <h3>{area.name}</h3>
+                <p>{area.travelQuote ? 'Travel quoted after a timing check' : 'In-zone travel included'}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="cluster" style={{ marginTop: 28 }}>
+            <Link to="/jakarta/personal-training" className="text-link">Personal training in Jakarta<ArrowUpRight size={15} /></Link>
+            <Link to="/jakarta/private-yoga" className="text-link">Private yoga in Jakarta<ArrowUpRight size={15} /></Link>
+            <Link to="/contact" className="text-link">Check a building<ArrowUpRight size={15} /></Link>
+          </div>
         </div>
       </section>
       <CtaBand title="Check your address." copy="Area name and venue type are enough. A pin can wait until we are quoting." to="/contact" label="Check availability" />
@@ -218,35 +262,15 @@ export function FaqPage() {
   )
 }
 
-export function HowItWorksPage() {
-  const steps = [
-    ['01', 'Enquiry', 'You send service, city, area, window, headcount and a non-sensitive goal.'],
-    ['02', 'Qualification', 'We check that the request is in scope: fitness, a usable space, a cluster we publish, no clinical work hiding in the brief.'],
-    ['03', 'Supply check', 'A suitable professional accepts the exact window and cost ceiling, or we offer a second name.'],
-    ['04', 'Quote', 'You receive the total, extras, exclusions and cancellation terms. The website estimator shows the starting price for this step.'],
-    ['05', 'Payment', 'You pay only on the merchant link in the quote. Nothing is booked on a screenshot.'],
-    ['06', 'Confirmation', 'You get the professional, arrival window, access note and preparation list.'],
-    ['07', 'Delivery', 'The session runs as confirmed. Deviations and incidents are recorded. Safety issues leave the normal queue.'],
-    ['08', 'Aftercare', 'A next-session hold if you want one, and a human owner if something failed.'],
-  ]
-  return (
-    <>
-      <PageIntro eyebrow="How it works" title="A click is not a booking." description="Eight steps from the first message to aftercare. The website can estimate a price. Only a written quote plus verified payment confirms the hour.">
-        <Link to="/contact" className="button button-primary">Start at step one<ArrowUpRight size={16} /></Link>
-      </PageIntro>
-      <section className="section">
-        <div className="content-shell process-list">
-          {steps.map(([n, t, c]) => <article key={n}><span className="process-number">{n}</span><div><h2>{t}</h2><p>{c}</p></div></article>)}
-        </div>
-      </section>
-      <CtaBand dark title="Put the details in one message." copy="The estimator builds the numbers. WhatsApp carries the request. The quote closes the loop." />
-    </>
-  )
-}
-
 export function ServicesHub() {
   return (
     <>
+      <StructuredData data={collectionJsonLd(
+        'Private fitness sessions at home',
+        '/services',
+        'Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation at your villa or home in Bali and Jakarta.',
+        publicServices.map((service) => ({ name: service.title, url: '/' + service.slug })),
+      )} />
       <PageIntro eyebrow="Services" title="Six private sessions at your villa or home." description="Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Published starting prices, then a written quote before payment.">
         <Link to="/pricing" className="button button-primary">See session prices<ArrowUpRight size={16} /></Link>
       </PageIntro>
@@ -263,6 +287,20 @@ export function ServicesHub() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="section-compact section-light">
+        <div className="shell split-feature">
+          <div>
+            <Eyebrow>Scope</Eyebrow>
+            <h2>Fitness at your location. Not a marketplace. Not a clinic.</h2>
+            <p className="large-copy">Yoga and guided meditation include up to two people. Boxing is one person and pad-only. Mobility is stretching, not physiotherapy. Swimming, nutrition and clinical requests stay held.</p>
+          </div>
+          <ul className="check-list large-list">
+            {['Open the Bali or Jakarta page for that city’s clusters', 'Use pricing for extras, travel and programmes', 'Send WhatsApp +62 811-3803-488 after the estimator'].map((item) => (
+              <li key={item}><Check size={19} />{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
       <CtaBand dark title="Check availability for your window." copy="City, area and a two-hour window are enough to start." to="/contact" label="Check availability" />
@@ -439,6 +477,7 @@ export function PricingPage() {
       </section>
 
       <section className="section section-light">
+        <StructuredData data={faqJsonLd(faqs.filter(([question]) => priceFaqKeys.includes(question)))} />
         <div className="content-shell faq-list">
           <SectionTitle eyebrow="Questions" title="Prices, travel and what you actually pay." />
           {faqs.filter(([question]) => priceFaqKeys.includes(question)).map(([question, answer]) => (
@@ -473,6 +512,7 @@ export function PricingPage() {
 export function ContactPage() {
   return (
     <>
+      <StructuredData data={contactPageJsonLd()} />
       <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description="Use the estimator for starting prices, then send the draft on WhatsApp +62 811-3803-488. Nothing is booked until you accept the written quote. Email hallo@personalfitness.id if that is easier.">
         <div className="cluster">
           <Link to="/pricing" className="button button-outline">See session prices</Link>
@@ -583,7 +623,7 @@ const legalCopy = {
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
       ['Scope', 'The selected service and written quote define the scope. General fitness and relaxation visits do not include clinical diagnosis or treatment. Clinical or qualified health requests require an appropriately authorised professional and any separate clinical agreement. Swimming requires a suitable permitted pool; chef and equipment requests are itemised separately.'],
       ['Quotes and payment', 'Nothing is confirmed until the quote is accepted and payment is verified on the merchant link. Chat messages are not settlement.'],
-      ['Prepaid wellness plans', 'The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; travel, massage, clinical services, food, rentals and external costs are excluded.'],
+      ['Prepaid wellness plans', 'The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; travel, held services, food, rentals and external costs are excluded.'],
       ['Your space', 'You confirm permission to use the villa, home, hotel room or pool. Access failures, unsafe floors and missing permission can stop the session under the refund rules.'],
       ['Liability', 'You participate in physical activity at your own risk within a non-clinical fitness session. We stop work that looks unsafe. We do not accept clinical responsibility we are not qualified to hold.'],
     ],

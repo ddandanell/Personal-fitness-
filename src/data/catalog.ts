@@ -175,7 +175,7 @@ export const areas: Area[] = [
     driveNote: 'Bukit travel of Rp 200.000 is added once per visit. Traffic windows are checked before confirmation.',
     copy: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses need a longer travel window. We only confirm when the professional can arrive, set up and leave inside a realistic block; not a clifftop photo promise.',
     venues: ['Clifftop villas with indoor floors', 'Private gym rooms', 'Pools with owner permission for swim enquiries'],
-    bestFor: ['Stay-put villa training', 'Private yoga for two', 'Swim coaching where the pool is safe and permitted'],
+    bestFor: ['Stay-put villa training', 'Private yoga for two', 'Pad-only boxing after a space check'],
     services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'swimming'],
   },
   {

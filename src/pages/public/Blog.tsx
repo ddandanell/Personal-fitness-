@@ -8,6 +8,7 @@ import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { sessionPhoto } from '@/data/publicOffer'
+import { collectionJsonLd } from '@/lib/schema'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
@@ -23,9 +24,15 @@ function wordCount(markdown: string) {
 export function BlogIndex() {
   return (
     <>
+      <StructuredData data={collectionJsonLd(
+        'Personal trainer Bali and Jakarta guides',
+        '/resources',
+        'Guides to in-villa personal training, Jakarta home sessions, private yoga, boxing fitness, guided meditation, prices and programmes.',
+        [...blogPosts.map((post) => ({ name: post.title, url: '/resources/' + post.slug })), ...resources.map((item) => ({ name: item.title, url: '/resources/' + item.slug }))],
+      )} />
       <PageIntro
         eyebrow="Blog"
-        title="Practical guides for wellness at your place."
+        title="Practical guides for a villa or home session."
         description="Understand private session formats, prices and preparation, with practical guidance for a home or villa visit in Bali and Jakarta."
       />
       <section className="section">
@@ -39,7 +46,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {blogPosts.map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
-                <img className="blog-card-image" src={articleImage(post.landingPage)} alt="Instructor in a private wellness setting" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={articleImage(post.landingPage)} alt={post.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city} · {post.service}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
@@ -60,7 +67,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {resources.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt={item.title} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.eyebrow} · {item.minutes} min</p>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
@@ -86,7 +93,7 @@ export function BlogArticle() {
         <section className="section">
           <div className="content-shell privacy-prose">
             {note.body.map((p) => <p key={p}>{p}</p>)}
-            <p><Link to="/">Private fitness at your location</Link> is the homepage. Use it if you already know the city and the session.</p>
+            <p>Open <Link to="/bali">Bali private fitness</Link>, <Link to="/jakarta">home training in Jakarta</Link> or <Link to="/pricing">published prices</Link> if you already know the city. The <Link to="/">homepage</Link> holds the full offer.</p>
             <Link to="/contact" className="button button-primary">Use this in an enquiry<ArrowUpRight size={16} /></Link>
           </div>
         </section>
@@ -152,7 +159,7 @@ export function BlogArticle() {
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src={articleImage(item.landingPage)} alt="Private instructor" loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={articleImage(item.landingPage)} alt={item.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.city}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -185,8 +192,11 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           publisher: {
             '@type': 'Organization',
             name: 'PersonalFitness.id',
+            logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/brand/personalfitness-mark.png' },
             address: COMPANY_ADDRESS,
           },
+          isPartOf: { '@id': SITE_ORIGIN + '/#website' },
+          about: { '@id': SITE_ORIGIN + '/#business' },
         },
         {
           '@type': 'FAQPage',

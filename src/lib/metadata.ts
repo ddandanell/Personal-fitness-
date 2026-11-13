@@ -31,5 +31,22 @@ export function pageMetadata(pathname: string) {
   const known = Boolean(locked || service || post || resource || area || gone || pageMeta[pathname])
   const noindex = !known || gone || isHeldPath(pathname) || isAreaPath(pathname) || state === 'held' || state === 'unpublished' || pathname === '/professionals'
   const image = service ? sessionPhoto(service.slug, service.image) : post?.image || '/images/wellness/villa-yoga-partners.webp'
-  return { title: title + ' | PersonalFitness.id', description, canonical: SITE_ORIGIN + (canonicalPath === '/' ? '/' : canonicalPath), noindex, image }
+  const imageAlt = service?.imageAlt || post?.title || (city === 'Jakarta' ? 'Home personal training in Jakarta' : city === 'Bali' ? 'Private fitness at a Bali villa' : 'Private yoga in a Bali villa')
+  const sessionShot = image.includes('/sessions/') || image.includes('kenji-nakamura')
+  const imageWidth = sessionShot ? '800' : image.includes('villa-yoga') ? '1100' : '1200'
+  const imageHeight = sessionShot ? '870' : image.includes('villa-yoga') ? '619' : '800'
+  const region = city === 'Jakarta' || pathname.startsWith('/jakarta') ? 'ID-JK' : city === 'Bali' || pathname.startsWith('/bali') ? 'ID-BA' : 'ID-BA,ID-JK'
+  const placename = region === 'ID-JK' ? 'Jakarta' : region === 'ID-BA' ? 'Bali' : 'Bali and Jakarta'
+  return {
+    title: title + ' | PersonalFitness.id',
+    description,
+    canonical: SITE_ORIGIN + (canonicalPath === '/' ? '/' : canonicalPath),
+    noindex,
+    image,
+    imageAlt,
+    imageWidth,
+    imageHeight,
+    region,
+    placename,
+  }
 }

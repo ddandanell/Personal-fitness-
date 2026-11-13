@@ -3,6 +3,7 @@
 PersonalFitness.id is a company-managed private fitness service. Coaches come to your villa or home in published Bali and Jakarta clusters. It is not a public trainer marketplace.
 
 Canonical host: https://www.personalfitness.id/
+Language: English (en-ID)
 
 ## What we book
 
@@ -41,19 +42,40 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 - https://www.personalfitness.id/guided-meditation
 - https://www.personalfitness.id/pricing
 - https://www.personalfitness.id/programmes
-- https://www.personalfitness.id/bali
-- https://www.personalfitness.id/jakarta
-- https://www.personalfitness.id/faq
 - https://www.personalfitness.id/how-it-works
+- https://www.personalfitness.id/contact
+- https://www.personalfitness.id/faq
+- https://www.personalfitness.id/bali
+- https://www.personalfitness.id/bali/personal-training
+- https://www.personalfitness.id/bali/private-yoga
+- https://www.personalfitness.id/bali/mat-pilates
+- https://www.personalfitness.id/bali/boxing-fitness
+- https://www.personalfitness.id/bali/guided-meditation
+- https://www.personalfitness.id/jakarta
+- https://www.personalfitness.id/jakarta/personal-training
+- https://www.personalfitness.id/jakarta/private-yoga
+- https://www.personalfitness.id/jakarta/mat-pilates
+- https://www.personalfitness.id/jakarta/boxing-fitness
+- https://www.personalfitness.id/jakarta/guided-meditation
+- https://www.personalfitness.id/service-areas
 - https://www.personalfitness.id/resources
 
 ## Resources
 
 - https://www.personalfitness.id/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes
 - https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session
+- https://www.personalfitness.id/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained
+- https://www.personalfitness.id/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not
+- https://www.personalfitness.id/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay
+- https://www.personalfitness.id/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like
+- https://www.personalfitness.id/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs
+- https://www.personalfitness.id/resources/private-yoga-prices-in-bali-duration-travel-and-group-size
+- https://www.personalfitness.id/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ
+- https://www.personalfitness.id/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers
 - https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means
 - https://www.personalfitness.id/resources/guided-meditation-at-home-what-the-hour-is-and-is-not
 
 ## Not booked here
 
 Swimming, nutrition consultation and physiotherapy stay held. We do not diagnose, treat injury or sell meal plans on this site.
+Area cluster URLs such as /bali/canggu exist for visitors and canonicalise to the city hub. They are not the indexable landing pages.

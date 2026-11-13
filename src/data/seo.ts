@@ -16,7 +16,7 @@ export type SeoRecord = {
   crumbs: SeoLink[]
 }
 
-const TODAY = '2026-11-12'
+const TODAY = '2026-11-13'
 
 function cityServiceDescription(slug: string, city: City, price: number | null | undefined) {
   const start = price ? ' from ' + formatIdr(price) : ''
@@ -45,6 +45,7 @@ const hubs: SeoRecord[] = [
       { to: '/personal-training', label: 'Personal training at home' },
       { to: '/private-yoga', label: 'Private yoga at your villa' },
       { to: '/mat-pilates', label: 'Mat Pilates at home' },
+      { to: '/mobility-coaching', label: 'Mobility coaching at home' },
       { to: '/boxing-fitness', label: 'Boxing fitness at home' },
       { to: '/guided-meditation', label: 'Guided meditation at home' },
       { to: '/bali', label: 'Private fitness in Bali' },
@@ -113,6 +114,8 @@ const hubs: SeoRecord[] = [
     related: [
       { to: '/bali', label: 'Bali private fitness' },
       { to: '/jakarta', label: 'Jakarta home training' },
+      { to: '/bali/personal-training', label: 'Personal training in Bali' },
+      { to: '/jakarta/personal-training', label: 'Personal training in Jakarta' },
       { to: '/pricing', label: 'Session prices' },
       { to: '/contact', label: 'Check availability' },
     ],
@@ -164,9 +167,9 @@ const hubs: SeoRecord[] = [
   },
   {
     path: '/how-it-works',
-    primaryKeyword: 'how private home fitness works',
-    title: 'How Private Home Fitness Works',
-    description: 'Enquiry, match, written quote, payment and the session at your home or villa. Availability is confirmed before you pay.',
+    primaryKeyword: 'how to book a personal trainer at home Bali',
+    title: 'How to Book a Personal Trainer at Home',
+    description: 'Eight steps from WhatsApp to aftercare: enquiry, match, written quote, payment and the session at your villa or home in Bali or Jakarta. A click is not a booking.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/contact', label: 'Check availability' },

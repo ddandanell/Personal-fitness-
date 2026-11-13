@@ -67,7 +67,7 @@ export default function Home() {
 
       <section className="section section-dark home-journey">
         <div className="shell">
-          <SectionTitle eyebrow="How it works" title="Three steps from the first message to a confirmed hour." />
+          <SectionTitle eyebrow="How it works" title="From the first message to a confirmed hour." />
           <div className="journey-grid">
             {steps.map(([number, title, copy]) => (
               <div className="journey-step" key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></div>
