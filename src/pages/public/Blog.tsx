@@ -7,15 +7,10 @@ import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
-import { sessionPhoto } from '@/data/publicOffer'
+import { EditorialPhoto, pageImage, responsiveSource } from '@/components/EditorialPhoto'
 import { collectionJsonLd } from '@/lib/schema'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
-
-function articleImage(path: string) {
-  const slug = path.split('/').filter(Boolean).at(-1) || ''
-  return sessionPhoto(slug)
-}
 
 function wordCount(markdown: string) {
   return markdown.trim().split(/\s+/).filter((token) => /[A-Za-z0-9]/.test(token)).length
@@ -46,7 +41,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {blogPosts.map((post) => (
               <Link to={`/resources/${post.slug}`} className="resource-card" key={post.slug}>
-                <img className="blog-card-image" src={articleImage(post.landingPage)} alt={post.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={post.image} srcSet={responsiveSource(post.image)} sizes="(max-width: 700px) 90vw, 30vw" alt={post.imageAlt || post.title} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{post.city} · {post.service}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
@@ -67,7 +62,7 @@ export function BlogIndex() {
           <div className="resource-grid">
             {resources.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src="/images/professionals/eka-pranata.webp" alt={item.title} loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={pageImage('/resources/' + item.slug)?.src} srcSet={responsiveSource(pageImage('/resources/' + item.slug)?.src || '')} sizes="(max-width: 700px) 90vw, 30vw" alt={pageImage('/resources/' + item.slug)?.alt || item.title} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.eyebrow} · {item.minutes} min</p>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
@@ -90,6 +85,7 @@ export function BlogArticle() {
     return (
       <>
         <PageIntro eyebrow={note.eyebrow} title={note.title} description={note.summary} />
+        <section className="section-compact"><div className="shell"><EditorialPhoto path={'/resources/' + note.slug} eager /></div></section>
         <section className="section">
           <div className="content-shell privacy-prose">
             {note.body.map((p) => <p key={p}>{p}</p>)}
@@ -112,15 +108,15 @@ export function BlogArticle() {
         <p className="article-kicker">{Math.max(1, Math.round(words / 220))} minute read · PersonalFitness.id editorial</p>
       </PageIntro>
       <section className="section">
-        <div className="shell article-cover"><img src={post.image || articleImage(post.landingPage)} alt={post.service + ' at a private villa or home'} width="1200" height="800" /></div>
+        <div className="shell article-cover"><EditorialPhoto path={'/resources/' + post.slug} eager /></div>
         <div className="article-layout">
           <article>
             <ArticleBody markdown={post.body} />
             <div className="article-cta">
-              <p>If the next step is a session, start on the <Link to="/">PersonalFitness.id homepage</Link>, then send a WhatsApp to {WHATSAPP_DISPLAY} or email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
+              <p>If the next step is a session, open the <Link to={post.landingPage}>relevant session page</Link>, then send a WhatsApp to {WHATSAPP_DISPLAY} or email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
               <div className="cluster">
-                <Link to="/" className="button button-dark">Go to the homepage<ArrowUpRight size={16} /></Link>
-                <Link to={post.landingPage} className="button button-outline">Open the session page</Link>
+                <Link to={post.landingPage} className="button button-dark">Explore this service<ArrowUpRight size={16} /></Link>
+                <Link to="/contact" className="button button-outline">Check availability</Link>
                 <a className="button button-primary" href={whatsappDraftUrl(`Hello PersonalFitness.id. I read “${post.title}” and I would like to check a session.`)} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
               </div>
             </div>
@@ -129,7 +125,7 @@ export function BlogArticle() {
             <p className="eyebrow">Use this page</p>
             <h2>What to do after you read it.</h2>
             <ol>
-              <li>Open the <Link to="/">homepage</Link> if you still need the whole offer.</li>
+              <li>Choose your location on the <Link to="/service-areas">service-area directory</Link>.</li>
               <li>Open the <Link to={post.landingPage}>{post.service.toLowerCase()} page</Link>.</li>
               <li>Price it on <Link to="/pricing">pricing</Link>.</li>
               <li>Message {WHATSAPP_DISPLAY} with city, area and window.</li>
@@ -159,7 +155,7 @@ export function BlogArticle() {
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src={articleImage(item.landingPage)} alt={item.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={item.image} alt={item.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
                 <p className="eyebrow">{item.city}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -182,7 +178,7 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           '@type': 'BlogPosting',
           headline: post.title,
           description: post.description,
-          image: SITE_ORIGIN + (post.image || articleImage(post.landingPage)),
+          image: SITE_ORIGIN + (post.image || post.image),
           datePublished: post.date,
           dateModified: post.date,
           wordCount: words,

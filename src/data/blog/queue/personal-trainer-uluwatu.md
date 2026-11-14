@@ -67,3 +67,8 @@ Evening sessions on the Bukit compete with traffic the other way. A 16:00–18:0
 We will not run a circuit on a cliff edge. We will not sell a sunrise photoshoot. We will not treat a villa Instagram as a booking. We will not add swimming because the infinity pool is in the brief. Swimming stays held. The live hours are training, yoga, Pilates, mobility, boxing fitness and meditation. Pick one. Send the floor. Send the window.
 
 If the stay is two nights, buy one visit. If the stay is two weeks in Pecatu, a six-session training block can make sense, still with Rp 200.000 travel on each visit. WhatsApp +62 811-3803-488. The [Uluwatu area page](/bali/uluwatu) stays noindex. This article is the indexable record.
+
+
+## Confirm the session format
+
+Read the [personal training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.

@@ -19,8 +19,8 @@ const forbidden = [
   'NIB',
 ]
 
-function jakartaDate() {
-  return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Jakarta' })
+function publicationDate() {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Makassar' })
 }
 
 function wordCount(text) {
@@ -50,7 +50,7 @@ async function readJson(file, fallback) {
 }
 
 const state = await readJson(stateFile, { lastPublished: null })
-const today = jakartaDate()
+const today = publicationDate()
 if (state.lastPublished === today) {
   console.log(JSON.stringify({ skipped: true, reason: 'already-published-today', date: today }))
   process.exit(0)
@@ -58,8 +58,7 @@ if (state.lastPublished === today) {
 
 const manifest = await readJson(manifestFile, [])
 if (!manifest.length) {
-  console.log(JSON.stringify({ skipped: true, reason: 'queue-empty', date: today }))
-  process.exit(0)
+  throw new Error('Publishing queue is empty; replenish it before claiming a daily release.')
 }
 
 const posts = await readJson(postsFile)
@@ -69,6 +68,15 @@ if (posts.some((item) => item.slug === next.slug)) throw new Error('Slug already
 const source = path.join(queueDir, next.bodyFile)
 const body = await fs.readFile(source, 'utf8')
 assertSafe(next, body)
+if (!body.includes('](' + next.landingPage + ')')) throw new Error('Missing contextual commercial-owner link')
+if (!next.image?.startsWith('/images/editorial/')) throw new Error('A distinct original editorial image is required')
+if (posts.some(item => item.image === next.image)) throw new Error('Primary image already belongs to a published guide')
+await fs.access(path.join(root, 'public', next.image))
+await fs.access(path.join(root, 'public', next.image.replace('.webp', '-640.webp')))
+const lock = await readJson(path.join(root, 'seo-keyword-lock.json'))
+if (lock.pages['/resources/' + next.slug]?.primaryKeyword !== next.primaryQuery) throw new Error('Missing or changed keyword owner')
+const imageManifest = await readJson(path.join(root, 'src/data/page-images.json'))
+if (imageManifest['/resources/' + next.slug]?.src !== next.image) throw new Error('Missing matching page image record')
 
 await fs.copyFile(source, path.join(bodiesDir, next.bodyFile))
 await fs.unlink(source)

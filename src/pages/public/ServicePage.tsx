@@ -10,6 +10,7 @@ import { CITY_SERVICE_RELEASED, publicServices, sessionPhoto } from '@/data/publ
 import StructuredData from '@/components/StructuredData'
 import { faqJsonLd, serviceJsonLd } from '@/lib/schema'
 import { faqs } from '@/data/content'
+import { DetailedServiceGuide } from '@/components/DetailedServiceGuide'
 import NotFound from './NotFound'
 
 export default function ServicePage({ slug: slugProp }: { slug?: string }) {
@@ -77,6 +78,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
           </div>
         </div>
       </section>
+      <DetailedServiceGuide service={service} />
       {cityReleased && (
         <section className="section-compact section-light">
           <div className="shell split-feature">

@@ -1,6 +1,6 @@
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link, Navigate, useLocation, useParams } from 'react-router'
-import { Eyebrow, PageIntro, ParallaxImage, TextLink } from '@/components/Primitives'
+import { Eyebrow, PageIntro, TextLink } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { areaPockets, cities, getArea, getService, quoteAreas, type City } from '@/data/catalog'
@@ -12,14 +12,13 @@ import { formatIdr } from '@/lib/money'
 import StructuredData from '@/components/StructuredData'
 import { cityHubJsonLd, cityServiceJsonLd, faqJsonLd } from '@/lib/schema'
 import { getSeo } from '@/data/seo'
+import { LocationGuide, CityPlanningGuide } from '@/components/LocationGuide'
+import { EditorialPhoto, pageImage, responsiveSource } from '@/components/EditorialPhoto'
+import { DetailedServiceGuide } from '@/components/DetailedServiceGuide'
+import { SITE_ORIGIN } from '@/data/company'
 import Gone from './Gone'
 import HeldService from './HeldService'
 import NotFound from './NotFound'
-
-const images: Record<City, [string, string]> = {
-  Bali: ['/images/professionals/lila-prameswari.webp', 'Private fitness at a Bali villa'],
-  Jakarta: ['/images/professionals/nadia-putri.webp', 'Home personal training in a Jakarta apartment'],
-}
 
 const citySpace: Record<string, Record<City, string>> = {
   'personal-training': {
@@ -27,7 +26,7 @@ const citySpace: Record<string, Record<City, string>> = {
     Jakarta: 'A living-room rectangle and a written lobby plan are enough. A building gym is optional and only useful if it is private.',
   },
   'private-yoga': {
-    Bali: 'Indoor tile or wood beats a midday deck. Two people are included when the floor allows both mats without a walkway fight.',
+    Bali: 'Indoor tile or wood beats a midday deck. Two people are included when there is sufficient clear space for both mats and the agreed movements.',
     Jakarta: 'A quiet room with a door that can close matters more than a view. Two people share the published rate if the floor holds both.',
   },
   'mat-pilates': {
@@ -39,124 +38,9 @@ const citySpace: Record<string, Record<City, string>> = {
     Jakarta: 'Pad rhythm is a neighbour issue. Thin walls and evening building rules belong on the first message. One person only.',
   },
   'guided-meditation': {
-    Bali: 'A room that can be quiet for 60 minutes is the product. Wind, staff crossing and a video call in the next chair will eat the sit.',
+    Bali: 'Choose a quiet private room for the agreed session. Tell the coordinator about household activity and any practical noise restrictions.',
     Jakarta: 'Shared walls and renovation noise should be named before the quote. Two people are included if both can sit without splitting the hour.',
   },
-}
-
-const areaGuides: Record<string, Array<{ title: string; body: string }>> = {
-  canggu: [
-    { title: 'Private fitness around life in Canggu', body: 'A Canggu stay often has several activities competing for the same morning: breakfast, a beach visit, school routines or time at the laptop. Berawa, Batu Bolong, Pererenan and Echo Beach addresses can have very different access, even in the same cluster. Name the lane, the villa entrance and a dry indoor floor. A shaded outdoor option is useful only if the heat and neighbours allow it.' },
-    { title: 'What to send in the first Canggu enquiry', body: 'Start with Canggu, the venue type, the session, headcount and one or two windows. Personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation each need a different rectangle. There is no need to send health records. Your coordinator checks supply before the written quote.' },
-  ],
-  seminyak: [
-    { title: 'Private sessions in Seminyak villas', body: 'A Seminyak or Petitenget villa is often compact. Tell us the usable indoor space rather than the listing size. One-way streets, parking and villa-staff rules are checked before we send a professional. Couples often take yoga; other household members book their own training hour.' },
-    { title: 'What to send in the first Seminyak enquiry', body: 'Name Seminyak or Petitenget, the session, people and a two-hour window. If someone else manages the property, include the person who can open the gate. The published in-zone rate applies when the address sits in this cluster.' },
-  ],
-  ubud: [
-    { title: 'Ubud access before the view', body: 'An Ubud property may have a peaceful deck and a complicated walk from the road. Steps, paths and the carry from the vehicle matter more than a valley caption. A level indoor room and a realistic arrival window are what we quote. Travel is Rp 150.000 per visit on top of the Bali session rate.' },
-    { title: 'What to send in the first Ubud enquiry', body: 'Give the village or road if you know it, the session, people and whether the floor is indoor. Recurring days help when you are staying longer than a long weekend. We do not sell jungle yoga as a product.' },
-  ],
-  sanur: [
-    { title: 'Sanur for a calmer shoreline base', body: 'Sanur works for families and longer-stay guests who want a quieter morning than Canggu. Travel is Rp 150.000 per visit because it sits outside the Canggu to Seminyak cluster. Hotel suites need written venue permission. Family villas with a living-room rectangle are the usual setup.' },
-    { title: 'What to send in the first Sanur enquiry', body: 'Name Sanur, the venue type, the session and whether children will be in the room. A parent or guardian must stay for any minor. The quote still uses the Bali session rate plus travel.' },
-  ],
-  uluwatu: [
-    { title: 'Uluwatu needs a traffic window, not a cliff caption', body: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses add Rp 200.000 travel per visit. We only confirm when the professional can arrive, set up and leave inside a realistic block. Indoor floors beat a windy deck. Swimming stays held even if the villa has a pool.' },
-    { title: 'What to send in the first Uluwatu enquiry', body: 'Give the Bukit area, the session, people and two windows that survive traffic. Clifftop photos are not a venue. If the only floor is outdoor stone at midday, say so before the quote.' },
-  ],
-  'south-jakarta': [
-    { title: 'South Jakarta apartments and houses', body: 'Kebayoran, Senopati, SCBD, Kemang and Cilandak sit inside the published Jakarta rate when we can time the visit. The session is often won or lost in the lobby. Put the building name, tower, parking and visitor process in the first message.' },
-    { title: 'What to send in the first South Jakarta enquiry', body: 'Name the neighbourhood, the session, people and a two-hour window. A living-room rectangle is enough. A building gym is optional and only useful if it is private. Recurring programmes need a standing access note.' },
-  ],
-  'central-jakarta': [
-    { title: 'Central Jakarta is a building-access product', body: 'Menteng, Gondangdia, Thamrin and nearby residences are in-zone. Lobby names, parking and security desks are collected before confirmation so the professional is not left downstairs. Serviced apartments work when the front desk already expects a visitor.' },
-    { title: 'What to send in the first Central Jakarta enquiry', body: 'Give the building, the session, people and the window. If a guest QR or ID is required, say that before the quote. We will not pretend a lobby refusal is a completed hour.' },
-  ],
-  'north-jakarta': [
-    { title: 'North Jakarta is quoted, not assumed', body: 'Kelapa Gading, Sunter, Pluit and nearby addresses are by request. Supply, building permission and travel are checked before any visit. An enquiry does not mean we cover the municipality.' },
-    { title: 'What to send in the first North Jakarta enquiry', body: 'Name the exact area, the session and two windows. We either add travel, find a professional who can reach you, or decline. The written quote is the only coverage claim.' },
-  ],
-  'west-jakarta': [
-    { title: 'West Jakarta visits follow supply', body: 'Puri Indah, Kebon Jeruk and nearby homes are reviewed individually. Availability, access and a written travel quote come before booking. We do not publish a West Jakarta in-zone rate.' },
-    { title: 'What to send in the first West Jakarta enquiry', body: 'Give the neighbourhood, the session, people and a realistic morning or evening window. Landed homes with a clear indoor floor are easier than towers with no visitor process.' },
-  ],
-  'east-jakarta': [
-    { title: 'East Jakarta is a timing check', body: 'Rawamangun, Pulomas and surrounding addresses are considered after a local supply check. Coverage is not implied across the municipality. Travel and the professional’s diary decide whether the hour can run.' },
-    { title: 'What to send in the first East Jakarta enquiry', body: 'Name the area, the session and two windows. Family homes with a clear floor are the usual setup. Wait for the quote before assuming a weekly slot.' },
-  ],
-  kemang: [
-    { title: 'Kemang is a house-and-compound hour', body: 'Kemang often means a landed house, parking and a dog, not a tower QR. It still sits inside the published South Jakarta rate when we can time the visit. Send the street. “Kemang-ish” is not an area. A living-room rectangle is enough; a home gym is optional.' },
-    { title: 'What to send in the first Kemang enquiry', body: 'Name Kemang, the session, people and a two-hour window. Say if a helper stays and if a child will watch. Extra people are billed on training; yoga includes two when the floor holds both mats. WhatsApp +62 811-3803-488.' },
-  ],
-  senopati: [
-    { title: 'Senopati is usually won or lost in the lobby', body: 'Senopati towers need a guest QR, a named tower and a front desk that expects a coach. The published Jakarta rate applies in-zone. A 15-minute lift wait still eats the hour if you do not put access on the quote.' },
-    { title: 'What to send in the first Senopati enquiry', body: 'Building, tower, session, people and a two-hour window. If the desk blocks outside professionals, say so before anyone travels. A building gym is only useful if it is private.' },
-  ],
-  scbd: [
-    { title: 'SCBD weekday mornings are a security script', body: 'SCBD residences are in-zone South Jakarta. A 06:30 weekday is lifts and a visitor list, not a studio class. Name the tower. Rooftop gyms need permission and privacy or we stay in your living room.' },
-    { title: 'What to send in the first SCBD enquiry', body: 'Tower, weekday or weekend, session and window. Pad-only boxing needs a neighbour and ceiling check. Personal training needs a rectangle, not a view of the roundabout.' },
-  ],
-  kebayoran: [
-    { title: 'Kebayoran is in-zone when you name Baru or Lama', body: 'Kebayoran houses and apartments sit in South Jakarta in-zone. Family living rooms are the usual setup. Say Kebayoran Baru or Kebayoran Lama. Public parks and club gyms are not default venues.' },
-    { title: 'What to send in the first Kebayoran enquiry', body: 'The pocket, the session, people and a two-hour window. A parent stays if a child watches. Recurring programmes need a standing access note.' },
-  ],
-  cilandak: [
-    { title: 'Cilandak landed houses still need a traffic window', body: 'Cilandak is in-zone South Jakarta when we can time the visit. Compounds, helpers and school-run gates belong on the first message. The hour is one session, not a family circuit class unless you buy extra people or a second hour.' },
-    { title: 'What to send in the first Cilandak enquiry', body: 'Cilandak, venue type, session, people and two windows. Indoor tile or wood beats a midday garden. Travel is already inside the published Jakarta rate for this pocket.' },
-  ],
-  'pondok-indah': [
-    { title: 'Pondok Indah is estate access, not a club class', body: 'Pondok Indah sits in the in-zone South Jakarta cluster next to Cilandak. Estate security and a side gate decide the start time. A tennis club or mall gym is not this product. The hour runs in your house or apartment.' },
-    { title: 'What to send in the first Pondok Indah enquiry', body: 'Estate or apartment name, session, people and a two-hour window. If a driver or staff opens the gate, put that number on the quote thread.' },
-  ],
-  kuningan: [
-    { title: 'Kuningan shares the SCBD in-zone cluster', body: 'Kuningan residences are in-zone South Jakarta with Setiabudi and SCBD streets we can time. Towers and serviced apartments need lobby names. A shared office gym is not a private hour.' },
-    { title: 'What to send in the first Kuningan enquiry', body: 'Building, session, people and weekday or weekend window. If evening pad work is noisy, say so. We would rather quote training or Pilates than collect a complaint.' },
-  ],
-  menteng: [
-    { title: 'Menteng is a house-and-one-way-street product', body: 'Menteng sits inside Central Jakarta in-zone. Parking, a house helper at the gate and a usable indoor floor matter more than a pin. The published Jakarta rate applies when we can time the visit.' },
-    { title: 'What to send in the first Menteng enquiry', body: 'Menteng, house or apartment, session, people and a two-hour window. One-way loops still need that window. Do not send medical files.' },
-  ],
-  gondangdia: [
-    { title: 'Gondangdia is compact Central Jakarta', body: 'Gondangdia sits next to Menteng inside the in-zone Central Jakarta rate. Older houses and apartments need a named entrance. A corridor is not a yoga room.' },
-    { title: 'What to send in the first Gondangdia enquiry', body: 'The street if you know it, the session, people and whether parking is on-street. Indoor floor first. The city hub remains Jakarta.' },
-  ],
-  thamrin: [
-    { title: 'Thamrin is a tower and a visitor pass', body: 'Thamrin residences are in-zone Central Jakarta. Serviced apartments work when the desk already expects a visitor. A 06:30 weekday is not a Sunday Menteng house visit. Name the tower.' },
-    { title: 'What to send in the first Thamrin enquiry', body: 'Building, parking, visitor process, session and window. If a guest QR is required, say that before the quote.' },
-  ],
-  'kelapa-gading': [
-    { title: 'Kelapa Gading is quoted, not in-zone', body: 'Kelapa Gading is North Jakarta by request. We do not publish a zero-travel rate here. Supply, building permission and travel are checked before any visit. An enquiry does not mean we cover the mall precinct.' },
-    { title: 'What to send in the first Kelapa Gading enquiry', body: 'Exact cluster, session, people and two windows. We add travel, find a professional who can reach you, or decline. The written quote is the coverage claim.' },
-  ],
-  sunter: [
-    { title: 'Sunter follows a North Jakarta timing check', body: 'Sunter is not South Jakarta in-zone. Homes are quoted after supply and access. Do not screenshot the Rp 950.000 line as if it already includes this pocket.' },
-    { title: 'What to send in the first Sunter enquiry', body: 'Sunter, session and two windows. Family houses with a clear floor are the usual setup. Wait for the quote.' },
-  ],
-  pluit: [
-    { title: 'Pluit access can fail before the hour starts', body: 'Pluit is North Jakarta by request. Parking, water and building rules belong on the first message. The in-zone Jakarta rate does not automatically apply.' },
-    { title: 'What to send in the first Pluit enquiry', body: 'Pluit, house or apartment, session and two windows. We will not pretend a promenade is a private venue.' },
-  ],
-  pik: [
-    { title: 'PIK is a North Jakarta travel check', body: 'Pantai Indah Kapuk is not an in-zone South Jakarta rate. Estate gates, weekend traffic and a long unload are why we quote. Send the cluster inside PIK, not only the acronym.' },
-    { title: 'What to send in the first PIK enquiry', body: 'Which PIK pocket, estate or apartment, session, people and two windows. A programme still needs supply on each visit. Travel is per visit if we accept the address.' },
-  ],
-  'puri-indah': [
-    { title: 'Puri Indah is West Jakarta by request', body: 'Puri Indah homes are reviewed individually. There is no published West Jakarta in-zone rate. Landed houses with a clear indoor floor are easier than a tower with no visitor process.' },
-    { title: 'What to send in the first Puri Indah enquiry', body: 'Puri Indah, session, people and a realistic morning or evening window. Wait for the written quote before promising a guest a Monday slot.' },
-  ],
-  'kebon-jeruk': [
-    { title: 'Kebon Jeruk is not South Jakarta in-zone', body: 'Kebon Jeruk addresses are a West Jakarta supply check. Name the neighbourhood. We will not stretch a South Jakarta professional across the city and call travel included.' },
-    { title: 'What to send in the first Kebon Jeruk enquiry', body: 'Kebon Jeruk, session, people and two windows. Family houses with indoor floors are the usual setup.' },
-  ],
-  rawamangun: [
-    { title: 'Rawamangun is an East Jakarta timing check', body: 'Rawamangun is considered after local supply. Coverage is not implied across East Jakarta. Family homes with a clear floor are the usual setup.' },
-    { title: 'What to send in the first Rawamangun enquiry', body: 'Rawamangun, session and two windows. Do not assume a weekly slot until the quote exists.' },
-  ],
-  pulomas: [
-    { title: 'Pulomas follows the same East Jakarta rule', body: 'Pulomas is by request. The South Jakarta starting price is not this page’s rate. We add travel, confirm, or decline after a supply check.' },
-    { title: 'What to send in the first Pulomas enquiry', body: 'Pulomas, session, people and two windows. A programme is only useful if the first visit can actually be staffed.' },
-  ],
 }
 
 function cityFaqs(city: City) {
@@ -170,7 +54,6 @@ function cityFaqs(city: City) {
 
 export function CityPage({ city }: { city: City }) {
   const data = cities[city]
-  const [image, alt] = images[city]
   const cityPath = city.toLowerCase()
   const seo = getSeo('/' + cityPath)
   const pageFaqs = cityFaqs(city)
@@ -190,7 +73,7 @@ export function CityPage({ city }: { city: City }) {
       </PageIntro>
       <section className="section">
         <div className="shell city-feature">
-          <ParallaxImage src={image} alt={alt} eager />
+          <EditorialPhoto path={'/' + cityPath} eager />
           <div className="city-copy">
             <p className="eyebrow"><MapPin size={14} />{city} clusters</p>
             <h2>Published clusters, with travel written on the quote.</h2>
@@ -201,7 +84,7 @@ export function CityPage({ city }: { city: City }) {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Locations</Eyebrow><h2>{city === 'Bali' ? 'Villa clusters we publish in Bali.' : 'Jakarta municipalities and neighbourhood pages.'}</h2><p>{city === 'Bali' ? 'Area pages explain access. They point back to the Bali hub for booking and rates.' : 'South and Central pockets sit inside the published rate. North, West and East neighbourhoods wait on a written travel quote. Each page stays a location note, not a separate city site.'}</p></div></div>
+          <div className="section-title"><div><Eyebrow>Locations</Eyebrow><h2>{city === 'Bali' ? 'Villa clusters for your Bali stay.' : 'Jakarta municipalities and neighbourhood pages.'}</h2><p>{city === 'Bali' ? 'Area pages explain access. They point back to the Bali hub for booking and rates.' : 'South and Central pockets sit inside the published rate. North, West and East neighbourhoods wait on a written travel quote. Each page stays a location note, not a separate city site.'}</p></div></div>
           <LocationClusters city={city} />
         </div>
       </section>
@@ -211,7 +94,7 @@ export function CityPage({ city }: { city: City }) {
           <div className="service-card-grid">
             {publicServices.filter((item) => item.cities.includes(city)).map((service, index) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>{service.prices[city] ? `Starting price ${formatIdr(service.prices[city]!)} / ${service.durationMin} min` : service.short}</p>
@@ -266,6 +149,7 @@ export function CityPage({ city }: { city: City }) {
           </div>
         </section>
       )}
+      <CityPlanningGuide city={city} />
       <CtaBand dark title={`Tell us where in ${city}.`} copy="Area, venue type and a two-hour window are enough to start the availability check." to={`/contact?city=${city}`} label="Check availability" />
     </>
   )
@@ -284,7 +168,6 @@ export function AreaPage() {
   const area = slug ? getArea(slug) : undefined
   if (!city || !area || area.city !== city) return <NotFound />
   const cityPath = city === 'Bali' ? 'bali' : 'jakarta'
-  const guides = areaGuides[area.slug] || []
   const parent = area.parent ? getArea(area.parent) : undefined
   const relatedAreas = parent
     ? [parent, ...areaPockets(parent.slug).filter((item) => item.slug !== area.slug)]
@@ -292,10 +175,12 @@ export function AreaPage() {
 
   return (
     <>
+      <StructuredData data={{'@context':'https://schema.org','@type':'WebPage','@id':SITE_ORIGIN + '/' + cityPath + '/' + area.slug + '#webpage',url:SITE_ORIGIN + '/' + cityPath + '/' + area.slug,name:getSeo('/' + cityPath + '/' + area.slug)?.title,description:getSeo('/' + cityPath + '/' + area.slug)?.description,about:{'@type':'Service',name:'Private fitness sessions in ' + area.name,provider:{'@id':SITE_ORIGIN + '/#business'},areaServed:{'@type':'Place',name:area.name + ', ' + area.city}},primaryImageOfPage:{'@type':'ImageObject',url:SITE_ORIGIN + pageImage('/' + cityPath + '/' + area.slug)!.src},inLanguage:'en-ID'}} />
       <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={(getSeo('/' + cityPath + '/' + area.slug)?.title || ('Private fitness in ' + area.name)) + '.'} description={getSeo('/' + cityPath + '/' + area.slug)?.description || area.copy}>
         <p className="price-highlight">{area.travelQuote ? 'Availability and travel confirmed by written quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included in the session starting price'}</p>
         <Link to={`/contact?city=${area.city}&area=${area.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
+      <section className="section-compact"><div className="shell"><EditorialPhoto path={'/' + cityPath + '/' + area.slug} eager /></div></section>
       <section className="section-compact">
         <div className="shell split-feature">
           <div><Eyebrow>Venues we can use</Eyebrow><h2>{area.driveNote}</h2></div>
@@ -304,7 +189,7 @@ export function AreaPage() {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Core sessions we can quote for {area.name}.</h2><p>Starting prices for this cluster follow the {area.city} session page for each service, then travel if you are outside the in-zone list.</p></div></div>
+          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Private fitness sessions in {area.name}.</h2><p>Starting prices for this cluster follow the {area.city} session page for each service, then travel if you are outside the in-zone list.</p></div></div>
           <div className="area-grid">
             {publicServices.map((service) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="area-card" key={service.slug}>
@@ -316,23 +201,11 @@ export function AreaPage() {
           </div>
         </div>
       </section>
-      {guides.length > 0 && (
-        <section className="section-compact">
-          <div className="content-shell privacy-prose">
-            {guides.map((block) => (
-              <div key={block.title}>
-                <h2>{block.title}</h2>
-                <p>{block.body}</p>
-              </div>
-            ))}
-            <p>City rules and starting prices sit on <TextLink to={'/' + cityPath}>{area.city} private fitness</TextLink>{parent ? <> and the <TextLink to={'/' + cityPath + '/' + parent.slug}>{parent.name} cluster</TextLink></> : null}. Pay only after a written quote.</p>
-          </div>
-        </section>
-      )}
+      <LocationGuide area={area} />
       {relatedAreas.length > 0 && (
         <section className="section-compact section-light">
           <div className="shell">
-            <div className="section-title"><div><Eyebrow>Nearby</Eyebrow><h2>Other {area.city} locations in this cluster.</h2></div></div>
+            <div className="section-title"><div><Eyebrow>Nearby</Eyebrow><h2>Related {area.city} locations.</h2></div></div>
             <div className="area-grid">
               {relatedAreas.map((item) => (
                 <Link to={'/' + cityPath + '/' + item.slug} className="area-card" key={item.slug}>
@@ -379,7 +252,8 @@ export function CityServicePage() {
         <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
-      <section className="section-compact"><div className="shell"><ParallaxImage src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} eager /></div></section>
+      <section className="section-compact"><div className="shell"><EditorialPhoto path={'/' + cityPath + '/' + service.slug} eager /></div></section>
+      <DetailedServiceGuide service={service} city={city} />
       <section className="section-compact">
         <div className="shell split-feature">
           <div>

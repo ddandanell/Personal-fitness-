@@ -1,0 +1,744 @@
+{
+  "generatedAt": "2026-11-14T08:28:15.839Z",
+  "pages": [
+    {
+      "path": "/",
+      "mainWords": 1018,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/home.webp"
+    },
+    {
+      "path": "/410",
+      "mainWords": 46,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/410",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/about",
+      "mainWords": 226,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/about",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/about.webp"
+    },
+    {
+      "path": "/bali",
+      "mainWords": 1699,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/bali.webp"
+    },
+    {
+      "path": "/bali/boxing-fitness",
+      "mainWords": 1541,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/boxing-fitness",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/bali-boxing-fitness.webp"
+    },
+    {
+      "path": "/bali/canggu",
+      "mainWords": 1377,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/canggu",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/canggu.webp"
+    },
+    {
+      "path": "/bali/guided-meditation",
+      "mainWords": 1536,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/guided-meditation",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/bali-guided-meditation.webp"
+    },
+    {
+      "path": "/bali/mat-pilates",
+      "mainWords": 1605,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/mat-pilates",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/bali-mat-pilates.webp"
+    },
+    {
+      "path": "/bali/personal-training",
+      "mainWords": 1770,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/personal-training",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/bali-personal-training.webp"
+    },
+    {
+      "path": "/bali/private-yoga",
+      "mainWords": 1699,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/private-yoga",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/bali-private-yoga.webp"
+    },
+    {
+      "path": "/bali/sanur",
+      "mainWords": 1341,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/sanur",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/sanur.webp"
+    },
+    {
+      "path": "/bali/seminyak",
+      "mainWords": 1360,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/seminyak",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/seminyak.webp"
+    },
+    {
+      "path": "/bali/ubud",
+      "mainWords": 1351,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/ubud",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/ubud.webp"
+    },
+    {
+      "path": "/bali/uluwatu",
+      "mainWords": 1347,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/bali/uluwatu",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/uluwatu.webp"
+    },
+    {
+      "path": "/boxing-fitness",
+      "mainWords": 1285,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/boxing-fitness",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/core-boxing-fitness.webp"
+    },
+    {
+      "path": "/contact",
+      "mainWords": 164,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/contact",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/editorial-policy",
+      "mainWords": 142,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/editorial-policy",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/faq",
+      "mainWords": 1248,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/faq",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/guided-meditation",
+      "mainWords": 1295,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/guided-meditation",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/core-guided-meditation.webp"
+    },
+    {
+      "path": "/how-it-works",
+      "mainWords": 520,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/how-it-works",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/how-it-works.webp"
+    },
+    {
+      "path": "/jakarta",
+      "mainWords": 1866,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/jakarta.webp"
+    },
+    {
+      "path": "/jakarta/boxing-fitness",
+      "mainWords": 1594,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/boxing-fitness",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/jakarta-boxing-fitness.webp"
+    },
+    {
+      "path": "/jakarta/central-jakarta",
+      "mainWords": 1368,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/central-jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/central-jakarta.webp"
+    },
+    {
+      "path": "/jakarta/cilandak",
+      "mainWords": 1345,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/cilandak",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/cilandak.webp"
+    },
+    {
+      "path": "/jakarta/east-jakarta",
+      "mainWords": 1370,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/east-jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/east-jakarta.webp"
+    },
+    {
+      "path": "/jakarta/gondangdia",
+      "mainWords": 1321,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/gondangdia",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/gondangdia.webp"
+    },
+    {
+      "path": "/jakarta/guided-meditation",
+      "mainWords": 1596,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/guided-meditation",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/jakarta-guided-meditation.webp"
+    },
+    {
+      "path": "/jakarta/kebayoran",
+      "mainWords": 1346,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/kebayoran",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/kebayoran.webp"
+    },
+    {
+      "path": "/jakarta/kebon-jeruk",
+      "mainWords": 1346,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/kebon-jeruk",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/kebon-jeruk.webp"
+    },
+    {
+      "path": "/jakarta/kelapa-gading",
+      "mainWords": 1380,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/kelapa-gading",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/kelapa-gading.webp"
+    },
+    {
+      "path": "/jakarta/kemang",
+      "mainWords": 1363,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/kemang",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/kemang.webp"
+    },
+    {
+      "path": "/jakarta/kuningan",
+      "mainWords": 1346,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/kuningan",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/kuningan.webp"
+    },
+    {
+      "path": "/jakarta/mat-pilates",
+      "mainWords": 1662,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/mat-pilates",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/jakarta-mat-pilates.webp"
+    },
+    {
+      "path": "/jakarta/menteng",
+      "mainWords": 1315,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/menteng",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/menteng.webp"
+    },
+    {
+      "path": "/jakarta/north-jakarta",
+      "mainWords": 1401,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/north-jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/north-jakarta.webp"
+    },
+    {
+      "path": "/jakarta/personal-training",
+      "mainWords": 1825,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/personal-training",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/jakarta-personal-training.webp"
+    },
+    {
+      "path": "/jakarta/pik",
+      "mainWords": 1397,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/pik",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/pik.webp"
+    },
+    {
+      "path": "/jakarta/pluit",
+      "mainWords": 1350,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/pluit",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/pluit.webp"
+    },
+    {
+      "path": "/jakarta/pondok-indah",
+      "mainWords": 1377,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/pondok-indah",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/pondok-indah.webp"
+    },
+    {
+      "path": "/jakarta/private-yoga",
+      "mainWords": 1739,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/private-yoga",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/jakarta-private-yoga.webp"
+    },
+    {
+      "path": "/jakarta/pulomas",
+      "mainWords": 1315,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/pulomas",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/pulomas.webp"
+    },
+    {
+      "path": "/jakarta/puri-indah",
+      "mainWords": 1357,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/puri-indah",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/puri-indah.webp"
+    },
+    {
+      "path": "/jakarta/rawamangun",
+      "mainWords": 1329,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/rawamangun",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/rawamangun.webp"
+    },
+    {
+      "path": "/jakarta/scbd",
+      "mainWords": 1346,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/scbd",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/scbd.webp"
+    },
+    {
+      "path": "/jakarta/senopati",
+      "mainWords": 1355,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/senopati",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/senopati.webp"
+    },
+    {
+      "path": "/jakarta/south-jakarta",
+      "mainWords": 1408,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/south-jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/south-jakarta.webp"
+    },
+    {
+      "path": "/jakarta/sunter",
+      "mainWords": 1357,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/sunter",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/sunter.webp"
+    },
+    {
+      "path": "/jakarta/thamrin",
+      "mainWords": 1319,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/thamrin",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/thamrin.webp"
+    },
+    {
+      "path": "/jakarta/west-jakarta",
+      "mainWords": 1376,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/jakarta/west-jakarta",
+      "localMinimum": true,
+      "primaryImage": "/images/locations/west-jakarta.webp"
+    },
+    {
+      "path": "/mat-pilates",
+      "mainWords": 1385,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/mat-pilates",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/core-mat-pilates.webp"
+    },
+    {
+      "path": "/mobility-coaching",
+      "mainWords": 1285,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/mobility-coaching",
+      "localMinimum": false,
+      "primaryImage": "/images/locations/mobility-coaching.webp"
+    },
+    {
+      "path": "/nutrition-consultation",
+      "mainWords": 43,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/services",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/personal-training",
+      "mainWords": 1483,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/personal-training",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/core-personal-training.webp"
+    },
+    {
+      "path": "/physiotherapy",
+      "mainWords": 43,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/services",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/pricing",
+      "mainWords": 1590,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/pricing",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/pricing.webp"
+    },
+    {
+      "path": "/privacy",
+      "mainWords": 255,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/privacy",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/private-yoga",
+      "mainWords": 1484,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/private-yoga",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/core-private-yoga.webp"
+    },
+    {
+      "path": "/professional-standards",
+      "mainWords": 160,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/professional-standards",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/professional-standards.webp"
+    },
+    {
+      "path": "/programmes",
+      "mainWords": 569,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/programmes",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/programmes.webp"
+    },
+    {
+      "path": "/refunds-rescheduling",
+      "mainWords": 146,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/refunds-rescheduling",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/resources",
+      "mainWords": 860,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/resources/beginners-private-training",
+      "mainWords": 177,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/beginners-private-training",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/beginners-private-training.webp"
+    },
+    {
+      "path": "/resources/couples-private-yoga",
+      "mainWords": 162,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/couples-private-yoga",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/couples-private-yoga.webp"
+    },
+    {
+      "path": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
+      "mainWords": 1427,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/extra-people-and-pair-pricing-yoga-training-and-boxing.webp"
+    },
+    {
+      "path": "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
+      "mainWords": 1516,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/free-introduction-vs-paid-first-session-what-personalfitness-id-offers.webp"
+    },
+    {
+      "path": "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
+      "mainWords": 1461,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/guided-meditation-at-home-what-the-hour-is-and-is-not.webp"
+    },
+    {
+      "path": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+      "mainWords": 1543,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/home-personal-training-in-jakarta-how-to-set-up-your-first-session.webp"
+    },
+    {
+      "path": "/resources/jakarta-apartment-session",
+      "mainWords": 172,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/jakarta-apartment-session",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/jakarta-apartment-session.webp"
+    },
+    {
+      "path": "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
+      "mainWords": 1470,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/mat-pilates-at-home-what-you-need-and-what-you-do-not.webp"
+    },
+    {
+      "path": "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+      "mainWords": 1423,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ.webp"
+    },
+    {
+      "path": "/resources/mobility-coaching-at-home-what-it-is-and-is-not",
+      "mainWords": 1552,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/mobility-coaching-at-home-what-it-is-and-is-not",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/mobility-coaching-at-home-what-it-is-and-is-not.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
+      "mainWords": 1422,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+      "mainWords": 1583,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-in-bali-what-a-managed-in-villa-session-includes.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+      "mainWords": 1449,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-in-canggu-villa-access-and-in-zone-rates.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+      "mainWords": 1455,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
+      "mainWords": 1489,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs.webp"
+    },
+    {
+      "path": "/resources/private-boxing-fitness-at-home-what-pad-only-means",
+      "mainWords": 1575,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/private-boxing-fitness-at-home-what-pad-only-means.webp"
+    },
+    {
+      "path": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+      "mainWords": 1441,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing.webp"
+    },
+    {
+      "path": "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
+      "mainWords": 1503,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained.webp"
+    },
+    {
+      "path": "/resources/private-yoga-or-mat-pilates-choosing-a-home-session",
+      "mainWords": 1634,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/private-yoga-or-mat-pilates-choosing-a-home-session",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/private-yoga-or-mat-pilates-choosing-a-home-session.webp"
+    },
+    {
+      "path": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+      "mainWords": 1374,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/private-yoga-prices-in-bali-duration-travel-and-group-size.webp"
+    },
+    {
+      "path": "/resources/programmes-versus-drop-in",
+      "mainWords": 162,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/programmes-versus-drop-in",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/programmes-versus-drop-in.webp"
+    },
+    {
+      "path": "/resources/train-in-a-bali-villa",
+      "mainWords": 207,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/train-in-a-bali-villa",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/train-in-a-bali-villa.webp"
+    },
+    {
+      "path": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+      "mainWords": 1444,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay.webp"
+    },
+    {
+      "path": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
+      "mainWords": 1484,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer.webp"
+    },
+    {
+      "path": "/resources/what-your-quote-contains",
+      "mainWords": 176,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/what-your-quote-contains",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/what-your-quote-contains.webp"
+    },
+    {
+      "path": "/safety",
+      "mainWords": 133,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/safety",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/service-areas",
+      "mainWords": 1292,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/service-areas",
+      "localMinimum": true,
+      "primaryImage": "/images/editorial/service-areas.webp"
+    },
+    {
+      "path": "/services",
+      "mainWords": 225,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/services",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/swimming",
+      "mainWords": 43,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/services",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/terms",
+      "mainWords": 262,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/terms",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villa-hotel-partners",
+      "mainWords": 1490,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/villa-hotel-partners",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/villa-hotel-partners.webp"
+    }
+  ],
+  "locationPages": 41,
+  "minimumLocationWords": 1292,
+  "uniquePrimaryImages": 79
+}

@@ -8,6 +8,7 @@ export type BlogPost = {
   service: string
   city: string
   landingPage: string
+  imageAlt?: string
   image: string
   faqs: { q: string; a: string }[]
   body: string

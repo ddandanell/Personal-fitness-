@@ -3,6 +3,7 @@ import { blogPosts } from './blog'
 import { resources } from './content'
 import { CITY_SERVICE_RELEASED, CORE_SERVICE_SLUGS, HELD_SERVICE_SLUGS } from './publicOffer'
 import { formatIdr } from '@/lib/money'
+import editorial from './location-editorial.json'
 
 export type SeoLink = { to: string; label: string }
 export type SeoRecord = {
@@ -388,7 +389,7 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
     description: 'Home personal training, yoga, boxing fitness and mat Pilates in Kebayoran, Senopati, Kemang and Cilandak. In-zone for core sessions.',
   },
   'central-jakarta': {
-    keyword: 'home personal training Menteng',
+    keyword: 'personal trainer Central Jakarta',
     title: 'Home Personal Training in Central Jakarta',
     description: 'Private training, yoga and Pilates at Menteng, Gondangdia and Thamrin homes, with building access on the quote.',
   },
@@ -567,6 +568,14 @@ function cityServiceRecords(): SeoRecord[] {
   )
 }
 
+
+function locationDescription(area: (typeof areas)[number]) {
+  const local = (editorial as Record<string, string[]>)[area.slug]
+  if (!local) throw new Error('Missing local content: ' + area.slug)
+  const travel = area.travelQuote ? 'Availability and travel quoted.' : area.travelFee ? 'Travel ' + formatIdr(area.travelFee) + ' per visit.' : 'In-zone travel included.'
+  return 'Private training, yoga and mat Pilates at your ' + area.name + ' ' + (area.city === 'Bali' ? 'villa or home. ' : 'home or apartment. ') + travel + ' View session options and request a quote.'
+}
+
 function areaRecords(): SeoRecord[] {
   return areas.map((area) => {
     const cityPath = '/' + area.city.toLowerCase()
@@ -579,7 +588,7 @@ function areaRecords(): SeoRecord[] {
       { to: cityPath, label: 'Private fitness in ' + area.city },
       ...CITY_SERVICE_RELEASED.filter((slug) => area.services.includes(slug)).slice(0, 5).map((slug) => {
         const service = services.find((item) => item.slug === slug)
-        return { to: cityPath + '/' + slug, label: (service?.title || slug) + ' in ' + area.name }
+        return { to: cityPath + '/' + slug, label: area.city + ' ' + (service?.title.toLowerCase() || slug) + ' details' }
       }),
       ...siblings.map((item) => ({ to: cityPath + '/' + item.slug, label: item.name })),
       { to: '/service-areas', label: 'All service areas' },
@@ -588,11 +597,11 @@ function areaRecords(): SeoRecord[] {
       path: cityPath + '/' + area.slug,
       primaryKeyword: locked?.keyword || ('personal trainer ' + area.name),
       title: locked?.title || ('Private Wellness in ' + area.name),
-      description: locked?.description || area.copy,
+      description: locationDescription(area),
       group: 'page' as const,
       lastmod: TODAY,
       related: uniqueLinks(related).slice(0, 8),
-      crumbs: [HOME, AREAS, { to: cityPath, label: area.city }, { to: cityPath + '/' + area.slug, label: area.name }],
+      crumbs: [HOME, AREAS, { to: cityPath, label: area.city }, ...(parent ? [{to: cityPath + '/' + parent.slug, label: parent.name}] : []), { to: cityPath + '/' + area.slug, label: area.name }],
     }
   })
 }
@@ -679,7 +688,6 @@ export function indexableSeoRecords() {
     const serviceSlug = parts[0] === 'services' || parts[0] === 'bali' || parts[0] === 'jakarta' ? parts[1] : parts[0]
     if (serviceSlug && held.has(serviceSlug)) return false
     if (serviceSlug && services.some((entry) => entry.slug === serviceSlug) && !core.has(serviceSlug) && !held.has(serviceSlug)) return false
-    if ((parts[0] === 'bali' || parts[0] === 'jakarta') && parts[1] && areas.some((area) => area.slug === parts[1])) return false
     if ((parts[0] === 'bali' || parts[0] === 'jakarta') && parts[1] && core.has(parts[1]) && !cityReleased.has(parts[1])) return false
     return true
   })

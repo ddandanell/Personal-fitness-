@@ -1,11 +1,12 @@
 import { COMPANY_EMAIL, SITE_ORIGIN } from '@/data/company'
 import { CITY_SERVICE_RELEASED, publicServices, sessionPhoto } from '@/data/publicOffer'
+import { pageImage } from '@/components/EditorialPhoto'
 import type { Service } from '@/data/catalog'
 
 const BUSINESS_ID = SITE_ORIGIN + '/#business'
 const WEBSITE_ID = SITE_ORIGIN + '/#website'
 const LOGO = SITE_ORIGIN + '/brand/personalfitness-mark.png'
-const HERO = SITE_ORIGIN + '/images/wellness/villa-yoga-partners.webp'
+const HERO = SITE_ORIGIN + '/images/editorial/home.webp'
 
 function cityOffer(service: Service, city: 'Bali' | 'Jakarta', offerPath?: string) {
   const price = service.prices[city]
@@ -101,7 +102,7 @@ export function cityHubJsonLd(city: 'Bali' | 'Jakarta', title: string, descripti
     name: title,
     description,
     url: SITE_ORIGIN + path,
-    image: HERO,
+    image: SITE_ORIGIN + (pageImage(path)?.src || '/images/editorial/home.webp'),
     serviceType: 'Private fitness at home',
     provider: { '@id': BUSINESS_ID, '@type': 'LocalBusiness', name: 'PersonalFitness.id', url: SITE_ORIGIN },
     areaServed: { '@type': 'AdministrativeArea', name: city },
@@ -208,7 +209,7 @@ export function cityServiceJsonLd(service: Service, city: 'Bali' | 'Jakarta', ti
     name: title || service.title + ' in ' + city,
     description: description || service.short,
     url: SITE_ORIGIN + path,
-    image: SITE_ORIGIN + sessionPhoto(service.slug, service.image),
+    image: SITE_ORIGIN + (pageImage(path)?.src || sessionPhoto(service.slug, service.image)),
     serviceType: service.title,
     provider: { '@id': BUSINESS_ID, '@type': 'LocalBusiness', name: 'PersonalFitness.id', url: SITE_ORIGIN },
     areaServed: [{ '@type': 'AdministrativeArea', name: city }],

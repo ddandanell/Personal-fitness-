@@ -1,0 +1,487 @@
+{
+  "version": 1,
+  "created": "2026-11-14",
+  "policy": "Preserve every existing URL and primary keyword owner. Add distinct supporting intents without copying an existing commercial intent. New entries require an explicit intent-overlap review.",
+  "pages": {
+    "/": {
+      "primaryKeyword": "personal trainer at home Bali Jakarta",
+      "role": "hub-or-service",
+      "commercialOwner": "/"
+    },
+    "/services": {
+      "primaryKeyword": "private wellness services at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/services"
+    },
+    "/bali": {
+      "primaryKeyword": "personal trainer Bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/bali"
+    },
+    "/jakarta": {
+      "primaryKeyword": "home personal training Jakarta",
+      "role": "hub-or-service",
+      "commercialOwner": "/jakarta"
+    },
+    "/service-areas": {
+      "primaryKeyword": "private fitness service areas Bali Jakarta",
+      "role": "hub-or-service",
+      "commercialOwner": "/service-areas"
+    },
+    "/pricing": {
+      "primaryKeyword": "personal trainer Bali prices",
+      "role": "hub-or-service",
+      "commercialOwner": "/pricing"
+    },
+    "/programmes": {
+      "primaryKeyword": "two three four week fitness programme",
+      "role": "hub-or-service",
+      "commercialOwner": "/programmes"
+    },
+    "/how-it-works": {
+      "primaryKeyword": "how to book a personal trainer at home Bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/how-it-works"
+    },
+    "/resources": {
+      "primaryKeyword": "personal trainer Bali guide",
+      "role": "hub-or-service",
+      "commercialOwner": "/resources"
+    },
+    "/contact": {
+      "primaryKeyword": "book personal trainer Bali WhatsApp",
+      "role": "hub-or-service",
+      "commercialOwner": "/contact"
+    },
+    "/about": {
+      "primaryKeyword": "PersonalFitness.id private fitness company",
+      "role": "hub-or-service",
+      "commercialOwner": "/about"
+    },
+    "/faq": {
+      "primaryKeyword": "personal trainer Bali FAQ",
+      "role": "hub-or-service",
+      "commercialOwner": "/faq"
+    },
+    "/villa-hotel-partners": {
+      "primaryKeyword": "villa wellness partner Bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/villa-hotel-partners"
+    },
+    "/professional-standards": {
+      "primaryKeyword": "private trainer vetting Bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/professional-standards"
+    },
+    "/privacy": {
+      "primaryKeyword": "PersonalFitness.id privacy",
+      "role": "hub-or-service",
+      "commercialOwner": "/privacy"
+    },
+    "/terms": {
+      "primaryKeyword": "PersonalFitness.id service terms",
+      "role": "hub-or-service",
+      "commercialOwner": "/terms"
+    },
+    "/refunds-rescheduling": {
+      "primaryKeyword": "personal training cancellation policy",
+      "role": "hub-or-service",
+      "commercialOwner": "/refunds-rescheduling"
+    },
+    "/safety": {
+      "primaryKeyword": "private session safety",
+      "role": "hub-or-service",
+      "commercialOwner": "/safety"
+    },
+    "/editorial-policy": {
+      "primaryKeyword": "PersonalFitness.id editorial policy",
+      "role": "hub-or-service",
+      "commercialOwner": "/editorial-policy"
+    },
+    "/personal-training": {
+      "primaryKeyword": "personal trainer at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/personal-training"
+    },
+    "/mat-pilates": {
+      "primaryKeyword": "mat pilates at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/mat-pilates"
+    },
+    "/private-yoga": {
+      "primaryKeyword": "private yoga at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/private-yoga"
+    },
+    "/mobility-coaching": {
+      "primaryKeyword": "mobility coaching at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/mobility-coaching"
+    },
+    "/boxing-fitness": {
+      "primaryKeyword": "private boxing fitness at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/boxing-fitness"
+    },
+    "/guided-meditation": {
+      "primaryKeyword": "private guided meditation at home",
+      "role": "hub-or-service",
+      "commercialOwner": "/guided-meditation"
+    },
+    "/bali/personal-training": {
+      "primaryKeyword": "personal trainer at home Bali",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/personal-training"
+    },
+    "/bali/private-yoga": {
+      "primaryKeyword": "private yoga at home Bali",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/private-yoga"
+    },
+    "/bali/mat-pilates": {
+      "primaryKeyword": "mat pilates at home Bali",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/mat-pilates"
+    },
+    "/bali/boxing-fitness": {
+      "primaryKeyword": "private boxing fitness at home Bali",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/boxing-fitness"
+    },
+    "/bali/guided-meditation": {
+      "primaryKeyword": "private guided meditation at home Bali",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/guided-meditation"
+    },
+    "/jakarta/personal-training": {
+      "primaryKeyword": "personal trainer at home Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/personal-training"
+    },
+    "/jakarta/private-yoga": {
+      "primaryKeyword": "private yoga at home Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/private-yoga"
+    },
+    "/jakarta/mat-pilates": {
+      "primaryKeyword": "mat pilates at home Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/mat-pilates"
+    },
+    "/jakarta/boxing-fitness": {
+      "primaryKeyword": "private boxing fitness at home Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/boxing-fitness"
+    },
+    "/jakarta/guided-meditation": {
+      "primaryKeyword": "private guided meditation at home Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/guided-meditation"
+    },
+    "/bali/canggu": {
+      "primaryKeyword": "personal trainer Canggu",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/canggu"
+    },
+    "/bali/seminyak": {
+      "primaryKeyword": "private yoga Seminyak",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/seminyak"
+    },
+    "/bali/ubud": {
+      "primaryKeyword": "private yoga Ubud",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/ubud"
+    },
+    "/bali/sanur": {
+      "primaryKeyword": "personal trainer Sanur",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/sanur"
+    },
+    "/bali/uluwatu": {
+      "primaryKeyword": "personal trainer Uluwatu",
+      "role": "location-or-city-service",
+      "commercialOwner": "/bali/uluwatu"
+    },
+    "/jakarta/south-jakarta": {
+      "primaryKeyword": "personal trainer South Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/south-jakarta"
+    },
+    "/jakarta/central-jakarta": {
+      "primaryKeyword": "personal trainer Central Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/central-jakarta"
+    },
+    "/jakarta/north-jakarta": {
+      "primaryKeyword": "personal trainer North Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/north-jakarta"
+    },
+    "/jakarta/west-jakarta": {
+      "primaryKeyword": "personal trainer West Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/west-jakarta"
+    },
+    "/jakarta/east-jakarta": {
+      "primaryKeyword": "personal trainer East Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/east-jakarta"
+    },
+    "/jakarta/kemang": {
+      "primaryKeyword": "personal trainer Kemang",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/kemang"
+    },
+    "/jakarta/senopati": {
+      "primaryKeyword": "personal trainer Senopati",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/senopati"
+    },
+    "/jakarta/scbd": {
+      "primaryKeyword": "personal trainer SCBD",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/scbd"
+    },
+    "/jakarta/kebayoran": {
+      "primaryKeyword": "personal trainer Kebayoran",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/kebayoran"
+    },
+    "/jakarta/cilandak": {
+      "primaryKeyword": "personal trainer Cilandak",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/cilandak"
+    },
+    "/jakarta/pondok-indah": {
+      "primaryKeyword": "personal trainer Pondok Indah",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/pondok-indah"
+    },
+    "/jakarta/kuningan": {
+      "primaryKeyword": "personal trainer Kuningan Jakarta",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/kuningan"
+    },
+    "/jakarta/menteng": {
+      "primaryKeyword": "personal trainer Menteng",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/menteng"
+    },
+    "/jakarta/gondangdia": {
+      "primaryKeyword": "personal trainer Gondangdia",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/gondangdia"
+    },
+    "/jakarta/thamrin": {
+      "primaryKeyword": "personal trainer Thamrin",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/thamrin"
+    },
+    "/jakarta/kelapa-gading": {
+      "primaryKeyword": "personal trainer Kelapa Gading",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/kelapa-gading"
+    },
+    "/jakarta/sunter": {
+      "primaryKeyword": "personal trainer Sunter",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/sunter"
+    },
+    "/jakarta/pluit": {
+      "primaryKeyword": "personal trainer Pluit",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/pluit"
+    },
+    "/jakarta/pik": {
+      "primaryKeyword": "personal trainer PIK",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/pik"
+    },
+    "/jakarta/puri-indah": {
+      "primaryKeyword": "personal trainer Puri Indah",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/puri-indah"
+    },
+    "/jakarta/kebon-jeruk": {
+      "primaryKeyword": "personal trainer Kebon Jeruk",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/kebon-jeruk"
+    },
+    "/jakarta/rawamangun": {
+      "primaryKeyword": "personal trainer Rawamangun",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/rawamangun"
+    },
+    "/jakarta/pulomas": {
+      "primaryKeyword": "personal trainer Pulomas",
+      "role": "location-or-city-service",
+      "commercialOwner": "/jakarta/pulomas"
+    },
+    "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes": {
+      "primaryKeyword": "personal trainer in bali: what a managed in-villa session includes",
+      "role": "supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session": {
+      "primaryKeyword": "home personal training in jakarta: how to set up your first session",
+      "role": "supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained": {
+      "primaryKeyword": "private yoga in bali: one-to-one, couples and villa groups explained",
+      "role": "supporting-guide",
+      "commercialOwner": "/private-yoga"
+    },
+    "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not": {
+      "primaryKeyword": "mat pilates at home: what you need, and what you do not",
+      "role": "supporting-guide",
+      "commercialOwner": "/mat-pilates"
+    },
+    "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay": {
+      "primaryKeyword": "two, three or four weeks: choosing a fitness programme for your stay",
+      "role": "supporting-guide",
+      "commercialOwner": "/programmes"
+    },
+    "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like": {
+      "primaryKeyword": "personal trainer bali prices: how to compare quotes like for like",
+      "role": "supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs": {
+      "primaryKeyword": "personal trainer jakarta prices: studio, home and managed service costs",
+      "role": "supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size": {
+      "primaryKeyword": "private yoga prices in bali: duration, travel and group size",
+      "role": "supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ": {
+      "primaryKeyword": "mat pilates prices: why mat, reformer, studio and home sessions differ",
+      "role": "supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers": {
+      "primaryKeyword": "free introduction vs paid first session: what personalfitness.id offers",
+      "role": "supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/private-boxing-fitness-at-home-what-pad-only-means": {
+      "primaryKeyword": "private boxing fitness at home: what pad-only means",
+      "role": "supporting-guide",
+      "commercialOwner": "/boxing-fitness"
+    },
+    "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not": {
+      "primaryKeyword": "guided meditation at home: what the hour is, and is not",
+      "role": "supporting-guide",
+      "commercialOwner": "/guided-meditation"
+    },
+    "/resources/mobility-coaching-at-home-what-it-is-and-is-not": {
+      "primaryKeyword": "mobility coaching at home: what it is, and is not",
+      "role": "supporting-guide",
+      "commercialOwner": "/mobility-coaching"
+    },
+    "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates": {
+      "primaryKeyword": "preparing villa access for a trainer in Canggu",
+      "role": "supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing": {
+      "primaryKeyword": "private yoga in a jakarta apartment: space, access and pair pricing",
+      "role": "supporting-guide",
+      "commercialOwner": "/private-yoga"
+    },
+    "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer": {
+      "primaryKeyword": "what to put in a whatsapp enquiry for a home trainer",
+      "role": "supporting-guide",
+      "commercialOwner": "/contact"
+    },
+    "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates": {
+      "primaryKeyword": "Seminyak villa trainer access and quote planning",
+      "role": "supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing": {
+      "primaryKeyword": "extra people and pair pricing: yoga, training and boxing",
+      "role": "supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/private-yoga-or-mat-pilates-choosing-a-home-session": {
+      "primaryKeyword": "private yoga or mat Pilates for a home session",
+      "role": "supporting-guide",
+      "commercialOwner": "/services"
+    },
+    "/resources/train-in-a-bali-villa": {
+      "primaryKeyword": "how to set a villa up for a private session",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/train-in-a-bali-villa"
+    },
+    "/resources/jakarta-apartment-session": {
+      "primaryKeyword": "making a jakarta apartment work",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/jakarta-apartment-session"
+    },
+    "/resources/what-your-quote-contains": {
+      "primaryKeyword": "what a personalfitness.id quote actually contains",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/what-your-quote-contains"
+    },
+    "/resources/beginners-private-training": {
+      "primaryKeyword": "if you have not trained in years",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/beginners-private-training"
+    },
+    "/resources/couples-private-yoga": {
+      "primaryKeyword": "booking yoga for two",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/couples-private-yoga"
+    },
+    "/resources/programmes-versus-drop-in": {
+      "primaryKeyword": "when a four-week block is the better buy",
+      "role": "supporting-guide",
+      "commercialOwner": "/resources/programmes-versus-drop-in"
+    },
+    "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates": {
+      "primaryKeyword": "personal trainer in ubud: travel, access and outer-zone rates",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted": {
+      "primaryKeyword": "60 or 90 minutes: how home session duration is quoted",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/how-villa-managers-book-guest-fitness-sessions": {
+      "primaryKeyword": "how villa managers book guest fitness sessions",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/villa-hotel-partners"
+    },
+    "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access": {
+      "primaryKeyword": "personal trainer in south jakarta: kemang, senopati and lobby access",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors": {
+      "primaryKeyword": "personal trainer in uluwatu: bukit travel and indoor floors",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/personal-training"
+    },
+    "/resources/what-a-written-quote-includes-before-you-pay": {
+      "primaryKeyword": "what a written quote includes before you pay",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/pricing"
+    },
+    "/resources/boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person": {
+      "primaryKeyword": "boxing fitness in a jakarta apartment: pads, noise and one person",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/boxing-fitness"
+    },
+    "/resources/private-yoga-for-beginners-at-home-in-bali-and-jakarta": {
+      "primaryKeyword": "private yoga for beginners at home in bali and jakarta",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/private-yoga"
+    }
+  }
+}

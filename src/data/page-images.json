@@ -1,0 +1,611 @@
+{
+  "/bali/canggu": {
+    "src": "/images/locations/canggu.webp",
+    "alt": "A trainer coaching a client with a resistance band",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/seminyak": {
+    "src": "/images/locations/seminyak.webp",
+    "alt": "Female Indonesian yoga instructor demonstrating a gentle standing side stretch to an adult European couple",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/ubud": {
+    "src": "/images/locations/ubud.webp",
+    "alt": "Male Indonesian mobility coach demonstrating a seated shoulder movement to an adult European man",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/sanur": {
+    "src": "/images/locations/sanur.webp",
+    "alt": "Female Indonesian mat Pilates instructor coaching an adult Australian woman on a floor mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/uluwatu": {
+    "src": "/images/locations/uluwatu.webp",
+    "alt": "Male Indonesian fitness coach holding focus mitts for an adult European female visitor doing a controlled single punch inside a spacious contemporary limestone villa gym, gloves correctly fitted, no sparring",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/south-jakarta": {
+    "src": "/images/locations/south-jakarta.webp",
+    "alt": "Female Indonesian fitness coach demonstrating a light dumbbell shoulder movement to an adult European male resident",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/central-jakarta": {
+    "src": "/images/locations/central-jakarta.webp",
+    "alt": "Male Indonesian yoga instructor coaching an adult British woman through a standing mountain pose",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/north-jakarta": {
+    "src": "/images/locations/north-jakarta.webp",
+    "alt": "Female Indonesian mobility instructor demonstrating a standing gentle arm stretch to an adult European female resident",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/west-jakarta": {
+    "src": "/images/locations/west-jakarta.webp",
+    "alt": "Male Indonesian Pilates instructor demonstrating a seated upright mat position to an adult Australian man",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/east-jakarta": {
+    "src": "/images/locations/east-jakarta.webp",
+    "alt": "Female Indonesian personal trainer discussing a simple exercise plan with an adult European couple beside mats and light dumbbells",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/kemang": {
+    "src": "/images/locations/kemang.webp",
+    "alt": "Male Indonesian trainer coaching an adult Australian woman through a supported bodyweight squat beside a stable chair",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/senopati": {
+    "src": "/images/locations/senopati.webp",
+    "alt": "Female Indonesian Pilates instructor guiding an adult European male client",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/scbd": {
+    "src": "/images/locations/scbd.webp",
+    "alt": "Male Indonesian boxing fitness coach with focus mitts working with an adult British businessman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/kebayoran": {
+    "src": "/images/locations/kebayoran.webp",
+    "alt": "Female Indonesian yoga instructor demonstrating a standing balance with both feet safely near the floor to an adult Australian woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/cilandak": {
+    "src": "/images/locations/cilandak.webp",
+    "alt": "Male Indonesian fitness instructor coaching an adult European man using a light resistance band",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/pondok-indah": {
+    "src": "/images/locations/pondok-indah.webp",
+    "alt": "Female Indonesian personal trainer coaching an adult Australian male client through a controlled light dumbbell row with a hand supported on a sturdy workout bench",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/kuningan": {
+    "src": "/images/locations/kuningan.webp",
+    "alt": "Male Indonesian yoga teacher demonstrating a simple standing side bend to an adult European woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/menteng": {
+    "src": "/images/locations/menteng.webp",
+    "alt": "Female Indonesian mat Pilates coach guiding an adult European woman through an upright seated mat movement",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/gondangdia": {
+    "src": "/images/locations/gondangdia.webp",
+    "alt": "Male Indonesian mobility coach demonstrating a seated arm stretch to an adult British male client",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/thamrin": {
+    "src": "/images/locations/thamrin.webp",
+    "alt": "Female Indonesian fitness coach demonstrating a bodyweight squat to an adult Australian man",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/kelapa-gading": {
+    "src": "/images/locations/kelapa-gading.webp",
+    "alt": "Male Indonesian yoga instructor sitting cross-legged and guiding an adult European couple seated on two separate mats",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/sunter": {
+    "src": "/images/locations/sunter.webp",
+    "alt": "Female Indonesian personal trainer observing an adult European female resident performing a simple light dumbbell biceps curl",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/pluit": {
+    "src": "/images/locations/pluit.webp",
+    "alt": "Male Indonesian Pilates instructor showing an adult Australian woman a seated upright mat position",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/pik": {
+    "src": "/images/locations/pik.webp",
+    "alt": "Female Indonesian fitness instructor coaching an adult British man through a supported bodyweight squat beside a stable chair",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/puri-indah": {
+    "src": "/images/locations/puri-indah.webp",
+    "alt": "Male Indonesian trainer guiding an adult European woman holding a light resistance band",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/kebon-jeruk": {
+    "src": "/images/locations/kebon-jeruk.webp",
+    "alt": "Female Indonesian Pilates instructor demonstrating a standing posture beside a mat to an adult Australian male resident",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/rawamangun": {
+    "src": "/images/locations/rawamangun.webp",
+    "alt": "Male Indonesian yoga teacher demonstrating a gentle standing stretch to an adult European woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/pulomas": {
+    "src": "/images/locations/pulomas.webp",
+    "alt": "Female Indonesian fitness instructor reviewing the workout setup with an adult European couple beside two exercise mats",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali": {
+    "src": "/images/locations/bali.webp",
+    "alt": "Female Indonesian personal trainer coaching an adult European male visitor doing a controlled standing light dumbbell curl",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta": {
+    "src": "/images/locations/jakarta.webp",
+    "alt": "Male Indonesian personal trainer coaching an adult British woman doing a simple bodyweight squat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/mobility-coaching": {
+    "src": "/images/locations/mobility-coaching.webp",
+    "alt": "Male Indonesian mobility instructor aged thirty demonstrating a seated shoulder mobility movement to an adult Australian female client",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes": {
+    "src": "/images/editorial/personal-trainer-in-bali-what-a-managed-in-villa-session-includes.webp",
+    "alt": "Male Indonesian trainer demonstrating a controlled bodyweight squat to a European female visitor",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session": {
+    "src": "/images/editorial/home-personal-training-in-jakarta-how-to-set-up-your-first-session.webp",
+    "alt": "Female Indonesian personal trainer coaching an Australian male resident with light dumbbells",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained": {
+    "src": "/images/editorial/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained.webp",
+    "alt": "Female Indonesian yoga teacher demonstrating a simple standing side bend to a European couple on separate mats",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not": {
+    "src": "/images/editorial/mat-pilates-at-home-what-you-need-and-what-you-do-not.webp",
+    "alt": "Male Indonesian Pilates instructor guiding a European female client seated upright on a mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay": {
+    "src": "/images/editorial/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay.webp",
+    "alt": "Female Indonesian fitness coach discussing a weekly plan on a blank tablet with an Australian couple beside mats",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like": {
+    "src": "/images/editorial/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like.webp",
+    "alt": "Male Indonesian trainer discussing a blank quote sheet with an adult European woman seated at a Bali villa table, training equipment",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs": {
+    "src": "/images/editorial/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs.webp",
+    "alt": "Female Indonesian fitness instructor reviewing a blank tablet with an adult European male resident",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size": {
+    "src": "/images/editorial/private-yoga-prices-in-bali-duration-travel-and-group-size.webp",
+    "alt": "Male Indonesian yoga teacher preparing two mats with an Australian couple",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ": {
+    "src": "/images/editorial/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ.webp",
+    "alt": "Female Indonesian mat Pilates instructor coaching an adult European man seated on a floor mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers": {
+    "src": "/images/editorial/free-introduction-vs-paid-first-session-what-personalfitness-id-offers.webp",
+    "alt": "Male Indonesian fitness trainer greeting an adult European female guest beside a clear home exercise area, relaxed welcoming professional interaction",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-boxing-fitness-at-home-what-pad-only-means": {
+    "src": "/images/editorial/private-boxing-fitness-at-home-what-pad-only-means.webp",
+    "alt": "Trainer holding focus mitts for a client practising a controlled boxing jab",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not": {
+    "src": "/images/editorial/guided-meditation-at-home-what-the-hour-is-and-is-not.webp",
+    "alt": "Male Indonesian meditation instructor seated cross-legged guiding an adult European female visitor on a separate cushion",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/mobility-coaching-at-home-what-it-is-and-is-not": {
+    "src": "/images/editorial/mobility-coaching-at-home-what-it-is-and-is-not.webp",
+    "alt": "Female Indonesian mobility coach demonstrating a seated shoulder movement to an adult British male client on separate stable chairs",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates": {
+    "src": "/images/editorial/personal-trainer-in-canggu-villa-access-and-in-zone-rates.webp",
+    "alt": "Male Indonesian fitness instructor demonstrating a light dumbbell curl to an adult European woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing": {
+    "src": "/images/editorial/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing.webp",
+    "alt": "Female Indonesian yoga teacher demonstrating a seated upright pose to an adult European couple",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer": {
+    "src": "/images/editorial/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer.webp",
+    "alt": "Male Indonesian personal trainer discussing the planned home session with an adult European female client holding a phone with screen hidden, villa exercise room",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates": {
+    "src": "/images/editorial/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates.webp",
+    "alt": "Female Indonesian fitness instructor guiding an adult Australian male visitor with a light resistance band",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing": {
+    "src": "/images/editorial/extra-people-and-pair-pricing-yoga-training-and-boxing.webp",
+    "alt": "Male Indonesian yoga instructor setting out two mats while an adult European couple listen",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/": {
+    "src": "/images/editorial/home.webp",
+    "alt": "Female Indonesian personal trainer coaching an adult European woman through a simple standing light dumbbell exercise",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/pricing": {
+    "src": "/images/editorial/pricing.webp",
+    "alt": "Male Indonesian fitness coach discussing a blank tablet with an adult Australian couple at a villa table, clear home exercise area behind them",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/about": {
+    "src": "/images/editorial/about.webp",
+    "alt": "Female Indonesian instructor and a male Indonesian instructor meeting an adult European couple beside a prepared home workout area, warm approachable professional scene",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/professional-standards": {
+    "src": "/images/editorial/professional-standards.webp",
+    "alt": "Male Indonesian personal trainer demonstrating safe light dumbbell handling to an adult European female visitor",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/villa-hotel-partners": {
+    "src": "/images/editorial/villa-hotel-partners.webp",
+    "alt": "Female Indonesian yoga teacher guiding three adult European and Australian villa guests",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/programmes": {
+    "src": "/images/editorial/programmes.webp",
+    "alt": "Male Indonesian coach reviewing a blank weekly planner tablet with an adult European woman beside light dumbbells and a mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/how-it-works": {
+    "src": "/images/editorial/how-it-works.webp",
+    "alt": "Female Indonesian personal trainer welcoming an adult Australian male client into a prepared private home exercise room, simple professional warm-up conversation",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/service-areas": {
+    "src": "/images/editorial/service-areas.webp",
+    "alt": "Male Indonesian trainer with a small equipment bag greeting an adult European woman at the open doorway of a bright private villa",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/personal-training": {
+    "src": "/images/editorial/bali-personal-training.webp",
+    "alt": "Female Indonesian personal trainer coaching an adult European man through a controlled bodyweight squat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/private-yoga": {
+    "src": "/images/editorial/bali-private-yoga.webp",
+    "alt": "Male Indonesian yoga instructor guiding an adult Australian woman through a standing side stretch",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/mat-pilates": {
+    "src": "/images/editorial/bali-mat-pilates.webp",
+    "alt": "Female Indonesian Pilates instructor guiding an adult European male client",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/boxing-fitness": {
+    "src": "/images/editorial/bali-boxing-fitness.webp",
+    "alt": "Male Indonesian boxing fitness coach holding focus mitts for an adult British female client wearing gloves practicing a simple controlled jab",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/bali/guided-meditation": {
+    "src": "/images/editorial/bali-guided-meditation.webp",
+    "alt": "Female Indonesian meditation instructor guiding an adult European couple seated upright on separate cushions",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/personal-training": {
+    "src": "/images/editorial/jakarta-personal-training.webp",
+    "alt": "Female Indonesian personal trainer coaching an adult European man through a controlled bodyweight squat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/private-yoga": {
+    "src": "/images/editorial/jakarta-private-yoga.webp",
+    "alt": "Male Indonesian yoga instructor guiding an adult Australian woman through a standing side stretch",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/mat-pilates": {
+    "src": "/images/editorial/jakarta-mat-pilates.webp",
+    "alt": "Female Indonesian Pilates instructor guiding an adult European male client",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/boxing-fitness": {
+    "src": "/images/editorial/jakarta-boxing-fitness.webp",
+    "alt": "Male Indonesian boxing fitness coach holding focus mitts for an adult British female client wearing gloves practicing a simple controlled jab",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/jakarta/guided-meditation": {
+    "src": "/images/editorial/jakarta-guided-meditation.webp",
+    "alt": "Female Indonesian meditation instructor guiding an adult European couple seated upright on separate cushions",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-yoga-or-mat-pilates-choosing-a-home-session": {
+    "src": "/images/editorial/private-yoga-or-mat-pilates-choosing-a-home-session.webp",
+    "alt": "Indonesian female yoga instructor and an Indonesian male Pilates coach explaining two separate mats to an adult European woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates": {
+    "src": "/images/editorial/personal-trainer-in-ubud-travel-access-and-outer-zone-rates.webp",
+    "alt": "Indonesian male trainer coaching an adult European woman through a light dumbbell curl",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted": {
+    "src": "/images/editorial/sixty-or-ninety-minutes-how-home-session-duration-is-quoted.webp",
+    "alt": "Indonesian female trainer reviewing a blank tablet with an adult Australian male client beside a wall clock with no readable numerals",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/how-villa-managers-book-guest-fitness-sessions": {
+    "src": "/images/editorial/how-villa-managers-book-guest-fitness-sessions.webp",
+    "alt": "Indonesian male yoga instructor guiding three adult European villa guests through a simple standing stretch",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access": {
+    "src": "/images/editorial/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access.webp",
+    "alt": "Indonesian female personal trainer coaching an adult European man",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors": {
+    "src": "/images/editorial/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors.webp",
+    "alt": "Indonesian male trainer guiding an adult Australian woman through a controlled resistance band movement",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/what-a-written-quote-includes-before-you-pay": {
+    "src": "/images/editorial/what-a-written-quote-includes-before-you-pay.webp",
+    "alt": "Indonesian female coach discussing a blank paper quote with an adult European couple at a villa dining table, exercise mats nearby",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person": {
+    "src": "/images/editorial/boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person.webp",
+    "alt": "Indonesian male boxing coach holding focus mitts for an adult European woman wearing boxing gloves and doing a controlled jab",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/private-yoga-for-beginners-at-home-in-bali-and-jakarta": {
+    "src": "/images/editorial/private-yoga-for-beginners-at-home-in-bali-and-jakarta.webp",
+    "alt": "Indonesian female yoga teacher demonstrating a seated upright pose to an adult Australian male beginner on a separate mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/train-in-a-bali-villa": {
+    "src": "/images/editorial/train-in-a-bali-villa.webp",
+    "alt": "Indonesian male personal trainer discussing the clear exercise floor with an adult Australian woman",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/jakarta-apartment-session": {
+    "src": "/images/editorial/jakarta-apartment-session.webp",
+    "alt": "Indonesian female Pilates coach demonstrating an upright seated mat position to an adult European male resident",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/what-your-quote-contains": {
+    "src": "/images/editorial/what-your-quote-contains.webp",
+    "alt": "Indonesian male fitness instructor reviewing a blank tablet with an adult European couple at their home table, exercise room behind",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/beginners-private-training": {
+    "src": "/images/editorial/beginners-private-training.webp",
+    "alt": "Indonesian female personal trainer demonstrating a simple bodyweight squat to an adult Australian man beside a stable chair",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/couples-private-yoga": {
+    "src": "/images/editorial/couples-private-yoga.webp",
+    "alt": "Indonesian male yoga teacher guiding an adult European couple through a standing gentle side stretch on separate mats at a villa",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/resources/programmes-versus-drop-in": {
+    "src": "/images/editorial/programmes-versus-drop-in.webp",
+    "alt": "Indonesian female fitness coach discussing a blank weekly planner with an adult European woman beside light workout equipment",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/personal-training": {
+    "src": "/images/editorial/core-personal-training.webp",
+    "alt": "Male Indonesian trainer coaching an adult Australian woman doing a bodyweight squat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/private-yoga": {
+    "src": "/images/editorial/core-private-yoga.webp",
+    "alt": "Female Indonesian yoga instructor guiding an adult European couple through a standing side stretch",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/mat-pilates": {
+    "src": "/images/editorial/core-mat-pilates.webp",
+    "alt": "Male Indonesian Pilates instructor guiding an adult European woman sitting upright with knees bent on a mat",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/boxing-fitness": {
+    "src": "/images/editorial/core-boxing-fitness.webp",
+    "alt": "Female Indonesian boxing instructor holding focus mitts for an adult British male client wearing gloves, simple controlled jab",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/guided-meditation": {
+    "src": "/images/editorial/core-guided-meditation.webp",
+    "alt": "Male Indonesian meditation instructor guiding an adult European couple seated cross-legged on separate cushions",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  }
+}

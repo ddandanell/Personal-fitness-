@@ -1,6 +1,6 @@
 # PersonalFitness.id public website
 
-A React and TypeScript website for private fitness and wellness at homes and villas in Bali and Jakarta. The expanded catalogue contains 140 offer formats across 53 service families and 15 categories, plus 26 instructor and specialist profiles and professional photographs.
+A React and TypeScript website for private fitness and wellness at homes and villas in Bali and Jakarta. The live public offer contains six core private fitness sessions. Legacy research data retains the wider catalogue and profile records, which do not establish live service availability or verified public staff assignments.
 
 ## Run locally
 
@@ -50,3 +50,9 @@ The upgraded public site adds `/wellness-plan`, `/villa-hotel-partners` and a re
 `src/lib/wellnessPlan.ts` calculates a mixed weekly schedule, applies one eligible 6/9/12-visit discount and keeps travel and excluded services outside the discount. It rejects invalid inputs and flags overlapping visits. Partner and schedule forms prepare reviewable WhatsApp drafts; no message is sent automatically. The shared wellness brief is described as a coordinator-managed service with guest sharing choices, not a deployed account, clinical-record or coach portal. There is no automatic subscription, checkout or health-data storage in these public forms.
 
 Run `npm run lint`, `npm run build`, `npm run verify` and `node scripts/verify-links.mjs`. The content verification includes mixed-plan pricing, unknown travel, participant validation and overlap checks. The link audit checks every prerendered page, internal link, image reference and JSON-LD block.
+
+## SEO and location maintenance, November 2026
+
+Read AGENTS.md and docs/seo/AUTOPILOT.md before changes. The 28 area pages, both city hubs, service-area directory and ten city service pages have at least 1,000 main-content words. Location pages use self canonicals and appear in the generated sitemap. Run npm run check:release before publishing. The audit covers 92 rendered pages, metadata, keyword ownership, links, image assets, pricing cases and location word counts.
+
+The page image registry owns distinct primary illustrations, responsive WebP variants and alt text. The daily maintenance automation replenishes useful content and validates changes. A backup GitHub workflow releases at most one queued guide per Bali date after the same release checks. Check production build-info.json against the exact GitHub revision before claiming publication.

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { createServer } from 'vite'
+import { execFileSync } from 'node:child_process'
 
 const root = process.cwd()
 const dist = path.join(root, 'dist')
@@ -36,8 +37,9 @@ try {
       .replace(/(<meta name="twitter:description" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.description) + '$2')
       .replace(/(<meta name="twitter:image" content=")[^"]*("\s*\/?>)/, '$1' + escape('https://www.personalfitness.id' + record.image) + '$2')
       .replace(/(<meta name="twitter:image:alt" content=")[^"]*("\s*\/?>)/, '$1' + escape(record.imageAlt) + '$2')
+      .replace(/(<meta property="og:type" content=")[^"]*("\s*\/?>)/, '$1' + (record.path.startsWith('/resources/') ? 'article' : 'website') + '$2')
       .replace('<div id="root"></div>', '<div id="root" data-prerendered="true" data-prerender-path="' + escape(record.path) + '">' + body + '</div>')
-    if (record.image) {
+    if (body.includes('src="' + record.image + '"')) {
       html = html.replace('<link rel="canonical"', '<link rel="preload" as="image" href="' + escape(record.image) + '" fetchpriority="high" />\n    <link rel="canonical"')
     }
     const filename = record.path === '/' ? path.join(dist, 'index.html') : path.join(dist, record.path.slice(1) + '.html')
@@ -73,5 +75,8 @@ try {
   await fs.writeFile(path.join(dist, 'robots.txt'), robots)
   await fs.writeFile(path.join(root, 'public', 'robots.txt'), robots)
   await fs.writeFile(path.join(dist, 'route-manifest.json'), JSON.stringify(manifest, null, 2))
+  let revision = process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || ''
+  if (!revision) { try { revision = execFileSync('git', ['rev-parse', 'HEAD'], {encoding:'utf8'}).trim() } catch { revision = 'local' } }
+  await fs.writeFile(path.join(dist, 'build-info.json'), JSON.stringify({revision, builtAt: new Date().toISOString()}))
   console.log('Prerendered ' + manifest.length + ' complete pages, ' + seoEntries.length + ' canonical sitemap URLs and a genuine 404 page.')
 } finally { await server.close() }

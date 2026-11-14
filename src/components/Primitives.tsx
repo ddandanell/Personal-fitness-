@@ -1,6 +1,7 @@
 import { ArrowUpRight, Check, Copy, LoaderCircle } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
+import { EditorialPhoto, responsiveSource } from './EditorialPhoto'
 
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return <p className={`eyebrow ${light ? 'eyebrow-light' : ''}`}>{children}</p>
@@ -12,13 +13,18 @@ export function PageIntro({ eyebrow, title, description, children }: {
   description: string
   children?: ReactNode
 }) {
+  const { pathname } = useLocation()
+  const autoPhoto = ['/programmes', '/service-areas', '/professional-standards', '/how-it-works'].includes(pathname)
   return (
+    <>
     <section className="page-intro">
       <div className="shell page-intro-grid">
         <div><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1></div>
         <div className="page-intro-copy"><p>{description}</p>{children}</div>
       </div>
     </section>
+    {autoPhoto && <section className="section-compact"><div className="shell"><EditorialPhoto path={pathname} eager /></div></section>}
+    </>
   )
 }
 
@@ -108,9 +114,9 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
   return (
     <figure className={`session-figure ${className}`}>
       <div className="session-image" ref={frame}>
-        <img src={src} alt={alt} width={880} height={968} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
+        <img src={src} srcSet={responsiveSource(src)} alt={alt} width={responsiveSource(src) ? 1440 : 880} height={responsiveSource(src) ? 960 : 968} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
-      {caption && <figcaption>{caption}</figcaption>}
+      {(caption || responsiveSource(src)) && <figcaption>{caption || 'Illustrative session image. Your professional is confirmed with your booking.'}</figcaption>}
     </figure>
   )
 }

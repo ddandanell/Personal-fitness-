@@ -1,20 +1,17 @@
-name: Daily SEO guide
-
+name: Daily validated SEO guide
 on:
   schedule:
     - cron: '0 1 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: daily-seo-guide
   cancel-in-progress: false
-
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,19 +19,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Publish the next queued guide
-        run: node scripts/publish-next-guide.mjs
-      - name: Commit and push if a guide was released
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Release at most one guide for the Bali date
+        id: release
+        shell: bash
         run: |
-          git add src/data/blog public/llms.txt
-          if git diff --cached --quiet; then
-            echo "No guide published today."
-            exit 0
-          fi
-          git -c user.name="PersonalFitness.id publisher" -c user.email="hallo@personalfitness.id" commit -m "$(cat <<'EOF'
-          Publish the next lock-safe SEO guide from the daily queue.
-
-          One unique article per day, with word-count and internal-link gates, so the site grows without thin pages.
-          EOF
-          )"
-          git push
+          result=$(node scripts/publish-next-guide.mjs)
+          echo "$result"
+          node -e 'const x=JSON.parse(process.argv[1]);console.log("published="+Boolean(x.published));console.log("slug="+(x.slug||""))' "$result" >> "$GITHUB_OUTPUT"
+      - name: Validate the full website before committing
+        if: steps.release.outputs.published == 'true'
+        run: npm run check:release
+      - name: Commit the tested release without overwriting concurrent work
+        if: steps.release.outputs.published == 'true'
+        shell: bash
+        run: |
+          expected=$(git rev-parse HEAD)
+          git fetch origin main
+          test "$expected" = "$(git rev-parse origin/main)"
+          git add src/data/blog public/llms.txt public/sitemap*.xml docs/seo/page-audit.json
+          git -c user.name="PersonalFitness.id publisher" -c user.email="hallo@personalfitness.id" commit -m "Publish a validated daily fitness guide"
+          git push origin HEAD:main
+          echo "### Daily content release" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://www.personalfitness.id/resources/${{ steps.release.outputs.slug }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Source pushed. Production must be checked separately; a successful push alone does not prove the live revision." >> "$GITHUB_STEP_SUMMARY"

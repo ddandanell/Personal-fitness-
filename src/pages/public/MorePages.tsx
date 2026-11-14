@@ -1,9 +1,11 @@
+import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, Plus, ShieldCheck } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
 import { CtaBand, LocationClusters, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
+import { DirectoryPlanningGuide } from '@/components/DirectoryPlanningGuide'
 import { areas, cancellationRules, extraPersonFee } from '@/data/catalog'
 import { CORE_SERVICE_SLUGS, publicServices, sessionPhoto } from '@/data/publicOffer'
 
@@ -18,12 +20,12 @@ import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
 const ratePhotos: Record<string, string> = {
-  'personal-training': '/images/sessions/personal-training.webp',
-  'private-yoga': '/images/sessions/private-yoga.webp',
-  'mat-pilates': '/images/sessions/mat-pilates.webp',
-  'boxing-fitness': '/images/sessions/boxing-fitness.webp',
-  'guided-meditation': '/images/sessions/guided-meditation.webp',
-  'mobility-coaching': '/images/professionals/kenji-nakamura.webp',
+  'personal-training': '/images/editorial/core-personal-training.webp',
+  'private-yoga': '/images/editorial/core-private-yoga.webp',
+  'mat-pilates': '/images/editorial/core-mat-pilates.webp',
+  'boxing-fitness': '/images/editorial/core-boxing-fitness.webp',
+  'guided-meditation': '/images/editorial/core-guided-meditation.webp',
+  'mobility-coaching': '/images/locations/mobility-coaching.webp',
 }
 
 const priceExamples = [
@@ -173,6 +175,7 @@ export function ServiceAreas() {
         </div>
       </section>
       <CtaBand title="Check your address." copy="Area name and venue type are enough. A pin can wait until we are quoting." to="/contact" label="Check availability" />
+      <DirectoryPlanningGuide />
     </>
   )
 }
@@ -275,7 +278,7 @@ export function ServicesHub() {
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
@@ -319,7 +322,7 @@ export function PricingPage() {
             </div>
             <p className="hero-micro"><ShieldCheck size={16} />A number on this page is not a booking. Confirmation follows a written quote.</p>
           </div>
-          <ParallaxImage src="/images/sessions/personal-training.webp" alt="Private personal training in a villa setting" eager className="hero-session-image" />
+          <ParallaxImage src="/images/editorial/pricing.webp" alt="Instructor discussing the appointment details with adult clients" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
@@ -340,7 +343,7 @@ export function PricingPage() {
             {orderedServices.map((service) => (
               <Link to={`/${service.slug}`} className="pricing-rate-card" key={service.slug}>
                 <div className="pricing-rate-photo">
-                  <img src={ratePhotos[service.slug] || service.image} alt={service.imageAlt} width="800" height="1000" loading="lazy" decoding="async" />
+                  <img src={ratePhotos[service.slug] || service.image} srcSet={responsiveSource(ratePhotos[service.slug] || service.image)} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="1000" loading="lazy" decoding="async" />
                 </div>
                 <div className="pricing-rate-copy">
                   <h3>{service.title}</h3>
@@ -556,7 +559,7 @@ export function AboutPage() {
   return (
     <>
       <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
-      <section className="section-compact"><div className="shell"><ParallaxImage src="/images/professionals/eka-pranata.webp" alt="Wellness coordinator in a private villa" eager /></div></section>
+      <section className="section-compact"><div className="shell"><ParallaxImage src="/images/editorial/about.webp" alt="Instructors discussing a private home session with adult clients" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>What we sell</h2>
@@ -654,6 +657,7 @@ const legalCopy = {
     cta: 'Suggest a correction',
     blocks: [
       ['Sources', 'Session rates come from the operating workbook. Area travel fees are the published cluster rules. Named public profiles are not part of the live site.'],
+      ['Illustrative images', 'Some session images are generated illustrations showing the type of private coaching we coordinate. They do not identify actual staff, customers, properties or guaranteed local availability. The professional and appointment details are confirmed with your booking.'],
       ['Corrections', 'If a price, area or name is wrong, the page is updated and the quote template follows. We do not leave a cheaper number on a banner than operations will honour.'],
       ['AI assistance', 'Copy may be drafted with AI. Release still needs a human pass for prices, safety and legal pages.'],
     ],

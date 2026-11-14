@@ -5,6 +5,7 @@ import { areaPockets, areas, extraPersonFee, programmes, quoteAreas, services, t
 import { professionals, type Professional } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
 import { Eyebrow } from './Primitives'
+import { pageImage, responsiveSource } from './EditorialPhoto'
 
 export function CtaBand({
   eyebrow = 'Next step',
@@ -88,6 +89,7 @@ export function AreaCard({ area }: { area: (typeof areas)[number] }) {
   const cityPath = area.city === 'Bali' ? 'bali' : 'jakarta'
   return (
     <Link to={`/${cityPath}/${area.slug}`} className="area-card">
+      <img className="location-card-photo" src={pageImage(`/${cityPath}/${area.slug}`)?.src} srcSet={responsiveSource(pageImage(`/${cityPath}/${area.slug}`)?.src || '')} sizes="(max-width: 700px) 88vw, 30vw" alt={pageImage(`/${cityPath}/${area.slug}`)?.alt || 'Private fitness session'} width="1440" height="960" loading="lazy" decoding="async" />
       <p className="eyebrow">{area.cluster}</p>
       <h3>{area.name}</h3>
       <p>{travelLabel(area)}</p>

@@ -69,3 +69,8 @@ If your helper will be in the kitchen, say so. If a child will watch from the so
 A 06:30 weekday in a tower is a lift and a security script. A 09:00 Sunday in a house is a parking and a dog. Both can work. Mixing them in one message as “morning sometime” cannot. Send weekday or weekend. Send the tower name. Send whether a helper stays.
 
 If you live in South Jakarta five days and bounce to Bali on Friday, say so. A Jakarta programme does not include Bali travel. A Bali programme does not include a Kemang hour. Two cities are two quotes. The [Jakarta hub](/jakarta) and [Bali hub](/bali) stay separate on purpose.
+
+
+## Confirm the session format
+
+Read the [personal training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.

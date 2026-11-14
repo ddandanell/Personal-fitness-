@@ -1,0 +1,467 @@
+{
+  "date": "2026-11-14",
+  "method": "Built-in image generation, photorealistic-natural",
+  "policy": "Illustrative images, not real staff or customer documentation. Indonesian adult instructors and international adult clients. 1440-pixel and 640-pixel WebP outputs. Inspected contact sheets and regenerated one boxing scene to make instructor/client roles clear.",
+  "scenes": [
+    {
+      "slug": "seminyak",
+      "scene": "a female Indonesian yoga instructor demonstrating a gentle standing side stretch to an adult European couple in a compact elegant teak and cream villa, mats spaced on a dry indoor floor"
+    },
+    {
+      "slug": "ubud",
+      "scene": "a male Indonesian mobility coach demonstrating a seated shoulder movement to an adult European man in a serene Ubud villa room facing a lush green valley, level timber floor, no treatment table"
+    },
+    {
+      "slug": "sanur",
+      "scene": "a female Indonesian mat Pilates instructor coaching an adult Australian woman on a floor mat in a bright family villa living room with white curtains and a quiet tropical courtyard"
+    },
+    {
+      "slug": "uluwatu",
+      "scene": "a male Indonesian fitness coach holding focus mitts for an adult European female visitor doing a controlled single punch inside a spacious contemporary limestone villa gym, gloves correctly fitted, no sparring"
+    },
+    {
+      "slug": "south-jakarta",
+      "scene": "a female Indonesian fitness coach demonstrating a light dumbbell shoulder movement to an adult European male resident in an airy Jakarta house with a home workout corner"
+    },
+    {
+      "slug": "central-jakarta",
+      "scene": "a male Indonesian yoga instructor coaching an adult British woman through a standing mountain pose in a modern central Jakarta apartment with city windows"
+    },
+    {
+      "slug": "north-jakarta",
+      "scene": "a female Indonesian mobility instructor demonstrating a standing gentle arm stretch to an adult European female resident in a North Jakarta apartment living room with blue grey city views"
+    },
+    {
+      "slug": "west-jakarta",
+      "scene": "a male Indonesian Pilates instructor demonstrating a seated upright mat position to an adult Australian man in a modern Jakarta townhouse, muted ochre upholstery"
+    },
+    {
+      "slug": "east-jakarta",
+      "scene": "a female Indonesian personal trainer discussing a simple exercise plan with an adult European couple beside mats and light dumbbells in a family home, no visible writing"
+    },
+    {
+      "slug": "kemang",
+      "scene": "a male Indonesian trainer coaching an adult Australian woman through a supported bodyweight squat beside a stable chair in a leafy Kemang home, polished dry stone floor"
+    },
+    {
+      "slug": "senopati",
+      "scene": "a female Indonesian Pilates instructor guiding an adult European male client in a seated mat exercise in a refined residential tower apartment, tall skyline window, soft afternoon light"
+    },
+    {
+      "slug": "scbd",
+      "scene": "a male Indonesian boxing fitness coach with focus mitts working with an adult British businessman in simple workout clothes and boxing gloves in a spacious private apartment workout room"
+    },
+    {
+      "slug": "kebayoran",
+      "scene": "a female Indonesian yoga instructor demonstrating a standing balance with both feet safely near the floor to an adult Australian woman in a Jakarta family house, wood shelves and garden outlook"
+    },
+    {
+      "slug": "cilandak",
+      "scene": "a male Indonesian fitness instructor coaching an adult European man using a light resistance band in a shaded indoor family living room, cream brick walls and garden doors"
+    },
+    {
+      "slug": "pondok-indah",
+      "scene": "a female Indonesian personal trainer coaching an adult Australian male client through a controlled light dumbbell row with a hand supported on a sturdy workout bench in a private Jakarta house gym"
+    },
+    {
+      "slug": "kuningan",
+      "scene": "a male Indonesian yoga teacher demonstrating a simple standing side bend to an adult European woman in a Kuningan apartment with soft evening city light"
+    },
+    {
+      "slug": "menteng",
+      "scene": "a female Indonesian mat Pilates coach guiding an adult European woman through an upright seated mat movement in a refined Jakarta family house with tall wooden windows"
+    },
+    {
+      "slug": "gondangdia",
+      "scene": "a male Indonesian mobility coach demonstrating a seated arm stretch to an adult British male client in a compact bright Jakarta apartment, chair stable and feet on floor"
+    },
+    {
+      "slug": "thamrin",
+      "scene": "a female Indonesian fitness coach demonstrating a bodyweight squat to an adult Australian man in a modern high-rise apartment living room, skyline through large windows"
+    },
+    {
+      "slug": "kelapa-gading",
+      "scene": "a male Indonesian yoga instructor sitting cross-legged and guiding an adult European couple seated on two separate mats in a spacious Jakarta residential living room"
+    },
+    {
+      "slug": "sunter",
+      "scene": "a female Indonesian personal trainer observing an adult European female resident performing a simple light dumbbell biceps curl in a bright private house with warm tile floor"
+    },
+    {
+      "slug": "pluit",
+      "scene": "a male Indonesian Pilates instructor showing an adult Australian woman a seated upright mat position in a modern apartment with cream decor and a modest distant city window"
+    },
+    {
+      "slug": "pik",
+      "scene": "a female Indonesian fitness instructor coaching an adult British man through a supported bodyweight squat beside a stable chair in a contemporary Indonesian estate house with broad garden doors"
+    },
+    {
+      "slug": "puri-indah",
+      "scene": "a male Indonesian trainer guiding an adult European woman holding a light resistance band in a bright townhouse living room, understated olive and cream interior"
+    },
+    {
+      "slug": "kebon-jeruk",
+      "scene": "a female Indonesian Pilates instructor demonstrating a standing posture beside a mat to an adult Australian male resident in a calm Jakarta home with wood accents"
+    },
+    {
+      "slug": "rawamangun",
+      "scene": "a male Indonesian yoga teacher demonstrating a gentle standing stretch to an adult European woman in a private family house room, plenty of mat clearance"
+    },
+    {
+      "slug": "pulomas",
+      "scene": "a female Indonesian fitness instructor reviewing the workout setup with an adult European couple beside two exercise mats in a private Jakarta family living room"
+    },
+    {
+      "slug": "mobility-coaching",
+      "scene": "a male Indonesian mobility instructor aged thirty demonstrating a seated shoulder mobility movement to an adult Australian female client in an elegant Bali villa, separate stable chairs, clearly general movement coaching"
+    },
+    {
+      "slug": "bali",
+      "scene": "a female Indonesian personal trainer coaching an adult European male visitor doing a controlled standing light dumbbell curl in an elegant Bali villa overlooking a green courtyard"
+    },
+    {
+      "slug": "jakarta",
+      "scene": "a male Indonesian personal trainer coaching an adult British woman doing a simple bodyweight squat in a bright private Jakarta apartment, city backdrop and substantial exercise clearance"
+    },
+    {
+      "key": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+      "slug": "personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+      "folder": "editorial",
+      "scene": "a male Indonesian trainer demonstrating a controlled bodyweight squat to a European female visitor in a tropical villa, wide architectural room view",
+      "alt": "Private coaching scene illustrating personal trainer in bali what a managed in-villa session includes"
+    },
+    {
+      "key": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+      "slug": "home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+      "folder": "editorial",
+      "scene": "a female Indonesian personal trainer coaching an Australian male resident with light dumbbells in a Jakarta apartment, city window",
+      "alt": "Private coaching scene illustrating home personal training in jakarta how to set up your first session"
+    },
+    {
+      "key": "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
+      "slug": "private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
+      "folder": "editorial",
+      "scene": "a female Indonesian yoga teacher demonstrating a simple standing side bend to a European couple on separate mats in a private Bali villa",
+      "alt": "Private coaching scene illustrating private yoga in bali one-to-one, couples and villa groups explained"
+    },
+    {
+      "key": "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
+      "slug": "mat-pilates-at-home-what-you-need-and-what-you-do-not",
+      "folder": "editorial",
+      "scene": "a male Indonesian Pilates instructor guiding a European female client seated upright on a mat in a refined home, low camera angle",
+      "alt": "Private coaching scene illustrating mat pilates at home what you need, and what you do not"
+    },
+    {
+      "key": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+      "slug": "two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+      "folder": "editorial",
+      "scene": "a female Indonesian fitness coach discussing a weekly plan on a blank tablet with an Australian couple beside mats in a bright villa lounge",
+      "alt": "Private coaching scene illustrating two, three or four weeks choosing a fitness programme for your stay"
+    },
+    {
+      "key": "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
+      "slug": "personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
+      "folder": "editorial",
+      "scene": "a male Indonesian trainer discussing a blank quote sheet with an adult European woman seated at a Bali villa table, training equipment in background, no readable writing",
+      "alt": "Private coaching scene illustrating personal trainer bali prices how to compare quotes like for like"
+    },
+    {
+      "key": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
+      "slug": "personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
+      "folder": "editorial",
+      "scene": "a female Indonesian fitness instructor reviewing a blank tablet with an adult European male resident in a Jakarta apartment, exercise area behind them",
+      "alt": "Private coaching scene illustrating personal trainer jakarta prices studio, home and managed service costs"
+    },
+    {
+      "key": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+      "slug": "private-yoga-prices-in-bali-duration-travel-and-group-size",
+      "folder": "editorial",
+      "scene": "a male Indonesian yoga teacher preparing two mats with an Australian couple in a Bali villa practice room, wide unobstructed floor",
+      "alt": "Private coaching scene illustrating private yoga prices in bali duration, travel and group size"
+    },
+    {
+      "key": "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+      "slug": "mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+      "folder": "editorial",
+      "scene": "a female Indonesian mat Pilates instructor coaching an adult European man seated on a floor mat in a minimal residential practice space",
+      "alt": "Private coaching scene illustrating mat pilates prices why mat, reformer, studio and home sessions differ"
+    },
+    {
+      "key": "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
+      "slug": "free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
+      "folder": "editorial",
+      "scene": "a male Indonesian fitness trainer greeting an adult European female guest beside a clear home exercise area, relaxed welcoming professional interaction",
+      "alt": "Private coaching scene illustrating free introduction vs paid first session what personalfitnessid offers"
+    },
+    {
+      "key": "/resources/private-boxing-fitness-at-home-what-pad-only-means",
+      "slug": "private-boxing-fitness-at-home-what-pad-only-means",
+      "folder": "editorial",
+      "scene": "a female Indonesian boxing fitness instructor holding focus mitts for an adult Australian male client wearing boxing gloves, simple controlled jab, generous space",
+      "alt": "Private coaching scene illustrating private boxing fitness at home what pad-only means"
+    },
+    {
+      "key": "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
+      "slug": "guided-meditation-at-home-what-the-hour-is-and-is-not",
+      "folder": "editorial",
+      "scene": "a male Indonesian meditation instructor seated cross-legged guiding an adult European female visitor on a separate cushion in a peaceful Bali villa room",
+      "alt": "Private coaching scene illustrating guided meditation at home what the hour is, and is not"
+    },
+    {
+      "key": "/resources/mobility-coaching-at-home-what-it-is-and-is-not",
+      "slug": "mobility-coaching-at-home-what-it-is-and-is-not",
+      "folder": "editorial",
+      "scene": "a female Indonesian mobility coach demonstrating a seated shoulder movement to an adult British male client on separate stable chairs in a bright private living room",
+      "alt": "Private coaching scene illustrating mobility coaching at home what it is, and is not"
+    },
+    {
+      "key": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+      "slug": "personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+      "folder": "editorial",
+      "scene": "a male Indonesian fitness instructor demonstrating a light dumbbell curl to an adult European woman in a Canggu villa with teak beams",
+      "alt": "Private coaching scene illustrating personal trainer in canggu villa access and in-zone rates"
+    },
+    {
+      "key": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+      "slug": "private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+      "folder": "editorial",
+      "scene": "a female Indonesian yoga teacher demonstrating a seated upright pose to an adult European couple in a Jakarta apartment with a skyline window",
+      "alt": "Private coaching scene illustrating private yoga in a jakarta apartment space, access and pair pricing"
+    },
+    {
+      "key": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
+      "slug": "what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
+      "folder": "editorial",
+      "scene": "a male Indonesian personal trainer discussing the planned home session with an adult European female client holding a phone with screen hidden, villa exercise room",
+      "alt": "Private coaching scene illustrating what to put in a whatsapp enquiry for a home trainer"
+    },
+    {
+      "key": "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+      "slug": "personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+      "folder": "editorial",
+      "scene": "a female Indonesian fitness instructor guiding an adult Australian male visitor with a light resistance band in an elegant compact Seminyak villa",
+      "alt": "Private coaching scene illustrating personal trainer in seminyak petitenget villas and in-zone rates"
+    },
+    {
+      "key": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
+      "slug": "extra-people-and-pair-pricing-yoga-training-and-boxing",
+      "folder": "editorial",
+      "scene": "a male Indonesian yoga instructor setting out two mats while an adult European couple listen in a spacious bright residential room",
+      "alt": "Private coaching scene illustrating extra people and pair pricing yoga, training and boxing"
+    },
+    {
+      "key": "/",
+      "slug": "home",
+      "folder": "editorial",
+      "scene": "a female Indonesian personal trainer coaching an adult European woman through a simple standing light dumbbell exercise in a premium Bali villa, another adult European male guest resting seated in background",
+      "alt": "Instructor and clients illustrating home for a private home session"
+    },
+    {
+      "key": "/pricing",
+      "slug": "pricing",
+      "folder": "editorial",
+      "scene": "a male Indonesian fitness coach discussing a blank tablet with an adult Australian couple at a villa table, clear home exercise area behind them",
+      "alt": "Instructor and clients illustrating pricing for a private home session"
+    },
+    {
+      "key": "/about",
+      "slug": "about",
+      "folder": "editorial",
+      "scene": "a female Indonesian instructor and a male Indonesian instructor meeting an adult European couple beside a prepared home workout area, warm approachable professional scene",
+      "alt": "Instructor and clients illustrating about for a private home session"
+    },
+    {
+      "key": "/professional-standards",
+      "slug": "professional-standards",
+      "folder": "editorial",
+      "scene": "a male Indonesian personal trainer demonstrating safe light dumbbell handling to an adult European female visitor in a villa room, clear attention to instruction",
+      "alt": "Instructor and clients illustrating professional standards for a private home session"
+    },
+    {
+      "key": "/villa-hotel-partners",
+      "slug": "villa-hotel-partners",
+      "folder": "editorial",
+      "scene": "a female Indonesian yoga teacher guiding three adult European and Australian villa guests in a simple standing yoga stretch on separate mats under a spacious sheltered private pavilion",
+      "alt": "Instructor and clients illustrating villa hotel partners for a private home session"
+    },
+    {
+      "key": "/programmes",
+      "slug": "programmes",
+      "folder": "editorial",
+      "scene": "a male Indonesian coach reviewing a blank weekly planner tablet with an adult European woman beside light dumbbells and a mat in a bright villa",
+      "alt": "Instructor and clients illustrating programmes for a private home session"
+    },
+    {
+      "key": "/how-it-works",
+      "slug": "how-it-works",
+      "folder": "editorial",
+      "scene": "a female Indonesian personal trainer welcoming an adult Australian male client into a prepared private home exercise room, simple professional warm-up conversation",
+      "alt": "Instructor and clients illustrating how it works for a private home session"
+    },
+    {
+      "key": "/service-areas",
+      "slug": "service-areas",
+      "folder": "editorial",
+      "scene": "a male Indonesian trainer with a small equipment bag greeting an adult European woman at the open doorway of a bright private villa",
+      "alt": "Instructor and clients illustrating service areas for a private home session"
+    },
+    {
+      "key": "/bali/personal-training",
+      "slug": "bali-personal-training",
+      "folder": "editorial",
+      "scene": "a female Indonesian personal trainer coaching an adult European man through a controlled bodyweight squat in an elegant Bali villa with garden views",
+      "alt": "personal training coaching in a private villa"
+    },
+    {
+      "key": "/bali/private-yoga",
+      "slug": "bali-private-yoga",
+      "folder": "editorial",
+      "scene": "a male Indonesian yoga instructor guiding an adult Australian woman through a standing side stretch in an elegant Bali villa with garden views",
+      "alt": "private yoga coaching in a private villa"
+    },
+    {
+      "key": "/bali/mat-pilates",
+      "slug": "bali-mat-pilates",
+      "folder": "editorial",
+      "scene": "a female Indonesian Pilates instructor guiding an adult European male client in a seated upright mat exercise in an elegant Bali villa with garden views",
+      "alt": "mat pilates coaching in a private villa"
+    },
+    {
+      "key": "/bali/boxing-fitness",
+      "slug": "bali-boxing-fitness",
+      "folder": "editorial",
+      "scene": "a male Indonesian boxing fitness coach holding focus mitts for an adult British female client wearing gloves practicing a simple controlled jab in an elegant Bali villa with garden views",
+      "alt": "boxing fitness coaching in a private villa"
+    },
+    {
+      "key": "/bali/guided-meditation",
+      "slug": "bali-guided-meditation",
+      "folder": "editorial",
+      "scene": "a female Indonesian meditation instructor guiding an adult European couple seated upright on separate cushions in an elegant Bali villa with garden views",
+      "alt": "guided meditation coaching in a private villa"
+    },
+    {
+      "key": "/jakarta/personal-training",
+      "slug": "jakarta-personal-training",
+      "folder": "editorial",
+      "scene": "a female Indonesian personal trainer coaching an adult European man through a controlled bodyweight squat in a sophisticated private Jakarta apartment with city views",
+      "alt": "personal training coaching in a private apartment"
+    },
+    {
+      "key": "/jakarta/private-yoga",
+      "slug": "jakarta-private-yoga",
+      "folder": "editorial",
+      "scene": "a male Indonesian yoga instructor guiding an adult Australian woman through a standing side stretch in a sophisticated private Jakarta apartment with city views",
+      "alt": "private yoga coaching in a private apartment"
+    },
+    {
+      "key": "/jakarta/mat-pilates",
+      "slug": "jakarta-mat-pilates",
+      "folder": "editorial",
+      "scene": "a female Indonesian Pilates instructor guiding an adult European male client in a seated upright mat exercise in a sophisticated private Jakarta apartment with city views",
+      "alt": "mat pilates coaching in a private apartment"
+    },
+    {
+      "key": "/jakarta/boxing-fitness",
+      "slug": "jakarta-boxing-fitness",
+      "folder": "editorial",
+      "scene": "a male Indonesian boxing fitness coach holding focus mitts for an adult British female client wearing gloves practicing a simple controlled jab in a sophisticated private Jakarta apartment with city views",
+      "alt": "boxing fitness coaching in a private apartment"
+    },
+    {
+      "key": "/jakarta/guided-meditation",
+      "slug": "jakarta-guided-meditation",
+      "folder": "editorial",
+      "scene": "a female Indonesian meditation instructor guiding an adult European couple seated upright on separate cushions in a sophisticated private Jakarta apartment with city views",
+      "alt": "guided meditation coaching in a private apartment"
+    },
+    {
+      "slug": "train-in-a-bali-villa",
+      "scene": "an Indonesian male personal trainer discussing the clear exercise floor with an adult Australian woman in a Bali villa room"
+    },
+    {
+      "slug": "jakarta-apartment-session",
+      "scene": "an Indonesian female Pilates coach demonstrating an upright seated mat position to an adult European male resident in a Jakarta apartment"
+    },
+    {
+      "slug": "what-your-quote-contains",
+      "scene": "an Indonesian male fitness instructor reviewing a blank tablet with an adult European couple at their home table, exercise room behind"
+    },
+    {
+      "slug": "beginners-private-training",
+      "scene": "an Indonesian female personal trainer demonstrating a simple bodyweight squat to an adult Australian man beside a stable chair in a bright home"
+    },
+    {
+      "slug": "couples-private-yoga",
+      "scene": "an Indonesian male yoga teacher guiding an adult European couple through a standing gentle side stretch on separate mats at a villa"
+    },
+    {
+      "slug": "programmes-versus-drop-in",
+      "scene": "an Indonesian female fitness coach discussing a blank weekly planner with an adult European woman beside light workout equipment in a private home"
+    },
+    {
+      "slug": "personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+      "scene": "an Indonesian male trainer coaching an adult European woman through a light dumbbell curl in a sheltered Ubud villa room with green valley view"
+    },
+    {
+      "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+      "scene": "an Indonesian female trainer reviewing a blank tablet with an adult Australian male client beside a wall clock with no readable numerals in a private home"
+    },
+    {
+      "slug": "how-villa-managers-book-guest-fitness-sessions",
+      "scene": "an Indonesian male yoga instructor guiding three adult European villa guests through a simple standing stretch in a spacious sheltered pavilion"
+    },
+    {
+      "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+      "scene": "an Indonesian female personal trainer coaching an adult European man in a modern South Jakarta apartment living room with a skyline window"
+    },
+    {
+      "slug": "personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+      "scene": "an Indonesian male trainer guiding an adult Australian woman through a controlled resistance band movement in a private Uluwatu limestone villa room"
+    },
+    {
+      "slug": "what-a-written-quote-includes-before-you-pay",
+      "scene": "an Indonesian female coach discussing a blank paper quote with an adult European couple at a villa dining table, exercise mats nearby"
+    },
+    {
+      "slug": "boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person",
+      "scene": "an Indonesian male boxing coach holding focus mitts for an adult European woman wearing boxing gloves and doing a controlled jab in a spacious Jakarta apartment"
+    },
+    {
+      "slug": "private-yoga-for-beginners-at-home-in-bali-and-jakarta",
+      "scene": "an Indonesian female yoga teacher demonstrating a seated upright pose to an adult Australian male beginner on a separate mat in a calm private home"
+    },
+    {
+      "slug": "private-yoga-or-mat-pilates-choosing-a-home-session",
+      "scene": "an Indonesian female yoga instructor and an Indonesian male Pilates coach explaining two separate mats to an adult European woman in a private villa practice room"
+    },
+    {
+      "slug": "core-personal-training",
+      "scene": "a male Indonesian trainer coaching an adult Australian woman doing a bodyweight squat in an elegant tropical villa, full bodies visible"
+    },
+    {
+      "slug": "core-private-yoga",
+      "scene": "a female Indonesian yoga instructor guiding an adult European couple through a standing side stretch in a private Bali home, three separate mats"
+    },
+    {
+      "slug": "core-mat-pilates",
+      "scene": "a male Indonesian Pilates instructor guiding an adult European woman sitting upright with knees bent on a mat in a bright private home"
+    },
+    {
+      "slug": "core-boxing-fitness",
+      "scene": "a female Indonesian boxing instructor holding focus mitts for an adult British male client wearing gloves, simple controlled jab in a spacious private room"
+    },
+    {
+      "slug": "core-guided-meditation",
+      "scene": "a male Indonesian meditation instructor guiding an adult European couple seated cross-legged on separate cushions in a quiet Bali villa room"
+    },
+    {
+      "slug": "canggu",
+      "scene": "Indonesian male instructor coaching a foreign adult woman with a resistance band in a private villa living room"
+    },
+    {
+      "slug": "private-boxing-fitness-at-home-what-pad-only-means",
+      "scene": "Indonesian male instructor holding focus mitts for a foreign adult female client practising a controlled boxing jab"
+    }
+  ]
+}

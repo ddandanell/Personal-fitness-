@@ -1,3 +1,4 @@
+import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
@@ -41,7 +42,7 @@ export default function Home() {
             </div>
             <p className="hero-micro"><ShieldCheck size={16} />A click is not a booking. Confirmation follows a written quote.</p>
           </div>
-          <ParallaxImage src="/images/wellness/villa-yoga-partners.webp" alt="Private yoga in a Bali villa" eager className="hero-session-image" />
+          <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
           <div><strong>{formatIdr(900_000)}</strong><span>Starting price · Bali personal training, 60 minutes, in-zone.</span></div>
@@ -52,11 +53,11 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Sessions" title="Six private sessions with a published starting price." copy="Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Sessions" title="Six private fitness sessions at your place." copy="Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
                 <span className="service-index">0{index + 1}</span>
                 <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
@@ -83,7 +84,7 @@ export default function Home() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Areas</Eyebrow>
-            <h2>Bali and Jakarta clusters we publish.</h2>
+            <h2>Find your Bali or Jakarta location.</h2>
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>

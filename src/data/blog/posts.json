@@ -4,17 +4,17 @@
     "briefId": "B001",
     "title": "Personal trainer in Bali: what a managed in-villa session includes",
     "description": "What you get in a 60-minute managed villa session, what you do not, and how the Rp 900.000 Bali rate is built.",
-    "date": "2026-11-16",
-    "primaryQuery": "personal trainer in Bali",
+    "date": "2026-11-14",
+    "primaryQuery": "personal trainer in bali: what a managed in-villa session includes",
     "service": "Personal training",
     "city": "Bali",
     "landingPage": "/personal-training",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/personal-trainer-in-bali-what-a-managed-in-villa-session-includes.webp",
     "bodyFile": "personal-trainer-in-bali.md",
     "faqs": [
       {
         "q": "Is Rp 900.000 the final price?",
-        "a": "It is the in-zone 60-minute rate for one person in Canggu–Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote."
+        "a": "It is the in-zone 60-minute rate for one person in Canggu\u2013Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote."
       },
       {
         "q": "Can I pick the trainer?",
@@ -24,19 +24,20 @@
         "q": "Does an enquiry reserve 07:00?",
         "a": "No. Only the confirmation after payment status does."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian trainer demonstrating a controlled bodyweight squat to a European female visitor"
   },
   {
     "slug": "home-personal-training-in-jakarta-how-to-set-up-your-first-session",
     "briefId": "B002",
     "title": "Home personal training in Jakarta: how to set up your first session",
     "description": "Building access, floor setup and the Rp 950.000 Jakarta rate for a first private session at home.",
-    "date": "2026-11-17",
-    "primaryQuery": "home personal training in Jakarta",
+    "date": "2026-11-14",
+    "primaryQuery": "home personal training in jakarta: how to set up your first session",
     "service": "Personal training",
     "city": "Jakarta",
     "landingPage": "/personal-training",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/home-personal-training-in-jakarta-how-to-set-up-your-first-session.webp",
     "bodyFile": "home-personal-training-jakarta.md",
     "faqs": [
       {
@@ -51,19 +52,20 @@
         "q": "Is South Jakarta in-zone?",
         "a": "Yes for the published cluster. BSD and outer municipalities are quoted with travel or declined."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian personal trainer coaching an Australian male resident with light dumbbells"
   },
   {
     "slug": "private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
     "briefId": "B003",
     "title": "Private yoga in Bali: one-to-one, couples and villa groups explained",
     "description": "How pair pricing, extra people and space rules work for private yoga in a Bali villa.",
-    "date": "2026-11-18",
-    "primaryQuery": "private yoga in Bali",
+    "date": "2026-11-14",
+    "primaryQuery": "private yoga in bali: one-to-one, couples and villa groups explained",
     "service": "Private yoga",
     "city": "Bali",
     "landingPage": "/private-yoga",
-    "image": "/images/sessions/private-yoga.webp",
+    "image": "/images/editorial/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained.webp",
     "bodyFile": "private-yoga-in-bali.md",
     "faqs": [
       {
@@ -78,19 +80,20 @@
         "q": "Can beginners join a stronger partner?",
         "a": "Yes if you say so. We will not run two private classes in one hour."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian yoga teacher demonstrating a simple standing side bend to a European couple on separate mats"
   },
   {
     "slug": "mat-pilates-at-home-what-you-need-and-what-you-do-not",
     "briefId": "B004",
     "title": "Mat Pilates at home: what you need, and what you do not",
     "description": "Floor, mats and limits for private mat Pilates. No reformer. No clinical rehab sold as a class.",
-    "date": "2026-11-19",
-    "primaryQuery": "mat pilates at home",
+    "date": "2026-11-14",
+    "primaryQuery": "mat pilates at home: what you need, and what you do not",
     "service": "Mat Pilates",
     "city": "Bali & Jakarta",
     "landingPage": "/mat-pilates",
-    "image": "/images/sessions/mat-pilates.webp",
+    "image": "/images/editorial/mat-pilates-at-home-what-you-need-and-what-you-do-not.webp",
     "bodyFile": "mat-pilates-at-home.md",
     "faqs": [
       {
@@ -105,19 +108,20 @@
         "q": "Is a second person free?",
         "a": "No. Unlike yoga, mat extra people are billed."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian Pilates instructor guiding a European female client seated upright on a mat"
   },
   {
     "slug": "two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
     "briefId": "B005",
     "title": "Two, three or four weeks: choosing a fitness programme for your stay",
     "description": "How 6, 9 and 12 session blocks work, who they are for, and when a single session is the better buy.",
-    "date": "2026-11-20",
-    "primaryQuery": "two three or four week fitness programme Bali Jakarta",
+    "date": "2026-11-14",
+    "primaryQuery": "two, three or four weeks: choosing a fitness programme for your stay",
     "service": "Programmes",
     "city": "Bali & Jakarta",
     "landingPage": "/programmes",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay.webp",
     "bodyFile": "two-three-four-week-programmes.md",
     "faqs": [
       {
@@ -132,19 +136,20 @@
         "q": "What happens to unused sessions?",
         "a": "They follow the validity window on the quote. They are not cash."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian fitness coach discussing a weekly plan on a blank tablet with an Australian couple beside mats"
   },
   {
     "slug": "personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
     "briefId": "B006",
     "title": "Personal trainer Bali prices: how to compare quotes like for like",
     "description": "A like-for-like method for Bali private training quotes, using the published Rp 900.000 in-zone rate.",
-    "date": "2026-11-23",
-    "primaryQuery": "personal trainer Bali prices",
+    "date": "2026-11-14",
+    "primaryQuery": "personal trainer bali prices: how to compare quotes like for like",
     "service": "Personal training",
     "city": "Bali",
     "landingPage": "/pricing",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like.webp",
     "bodyFile": "personal-trainer-bali-prices.md",
     "faqs": [
       {
@@ -159,19 +164,20 @@
         "q": "Can I pay in WhatsApp?",
         "a": "No. Use the merchant link on the quote."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian trainer discussing a blank quote sheet with an adult European woman seated at a Bali villa table, training equipment"
   },
   {
     "slug": "personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
     "briefId": "B007",
     "title": "Personal trainer Jakarta prices: studio, home and managed service costs",
     "description": "How to separate studio packs, building gyms and a Rp 950.000 managed home visit in Jakarta.",
-    "date": "2026-11-24",
-    "primaryQuery": "personal trainer Jakarta prices",
+    "date": "2026-11-14",
+    "primaryQuery": "personal trainer jakarta prices: studio, home and managed service costs",
     "service": "Personal training",
     "city": "Jakarta",
     "landingPage": "/pricing",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs.webp",
     "bodyFile": "personal-trainer-jakarta-prices.md",
     "faqs": [
       {
@@ -186,19 +192,20 @@
         "q": "Are twelve sessions cheaper?",
         "a": "Yes, 12 percent off if you actually attend them."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian fitness instructor reviewing a blank tablet with an adult European male resident"
   },
   {
     "slug": "private-yoga-prices-in-bali-duration-travel-and-group-size",
     "briefId": "B008",
     "title": "Private yoga prices in Bali: duration, travel and group size",
     "description": "How Rp 850.000 pair pricing changes with 90 minutes, Ubud/Uluwatu travel and extra people.",
-    "date": "2026-11-25",
-    "primaryQuery": "private yoga prices in Bali",
+    "date": "2026-11-14",
+    "primaryQuery": "private yoga prices in bali: duration, travel and group size",
     "service": "Private yoga",
     "city": "Bali",
     "landingPage": "/pricing",
-    "image": "/images/sessions/private-yoga.webp",
+    "image": "/images/editorial/private-yoga-prices-in-bali-duration-travel-and-group-size.webp",
     "bodyFile": "private-yoga-prices-bali.md",
     "faqs": [
       {
@@ -213,19 +220,20 @@
         "q": "What about rain?",
         "a": "Have an indoor fallback. Outdoor-only decks get moved or rescheduled."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian yoga teacher preparing two mats with an Australian couple"
   },
   {
     "slug": "mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
     "briefId": "B009",
     "title": "Mat Pilates prices: why mat, reformer, studio and home sessions differ",
     "description": "Do not compare a group reformer class to a private home mat hour. Here is the four-product split.",
-    "date": "2026-11-26",
-    "primaryQuery": "mat pilates prices",
+    "date": "2026-11-14",
+    "primaryQuery": "mat pilates prices: why mat, reformer, studio and home sessions differ",
     "service": "Mat Pilates",
     "city": "Bali & Jakarta",
     "landingPage": "/pricing",
-    "image": "/images/sessions/mat-pilates.webp",
+    "image": "/images/editorial/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ.webp",
     "bodyFile": "mat-pilates-prices.md",
     "faqs": [
       {
@@ -240,19 +248,20 @@
         "q": "Is a second person included?",
         "a": "No. Extra people are billed on mat work."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian mat Pilates instructor coaching an adult European man seated on a floor mat"
   },
   {
     "slug": "free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
     "briefId": "B010",
     "title": "Free introduction vs paid first session: what PersonalFitness.id offers",
     "description": "We do not run a free intro hour. The first session is the published rate, quoted in writing.",
-    "date": "2026-11-27",
-    "primaryQuery": "free introduction vs paid first session personal training",
+    "date": "2026-11-14",
+    "primaryQuery": "free introduction vs paid first session: what personalfitness.id offers",
     "service": "Personal training",
     "city": "Bali & Jakarta",
     "landingPage": "/personal-training",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/free-introduction-vs-paid-first-session-what-personalfitness-id-offers.webp",
     "bodyFile": "free-intro-vs-paid-first-session.md",
     "faqs": [
       {
@@ -267,19 +276,20 @@
         "q": "Can a villa host comp a guest?",
         "a": "The host can pay the published rate. We will not hide a free hour."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian fitness trainer greeting an adult European female guest beside a clear home exercise area, relaxed welcoming professional interaction"
   },
   {
     "slug": "private-boxing-fitness-at-home-what-pad-only-means",
     "briefId": "B011",
     "title": "Private boxing fitness at home: what pad-only means",
     "description": "Pad-only boxing at a villa or home from Rp 1.000.000 in Bali. No sparring, one person, after a space check.",
-    "date": "2026-11-28",
-    "primaryQuery": "private boxing fitness at home",
+    "date": "2026-11-14",
+    "primaryQuery": "private boxing fitness at home: what pad-only means",
     "service": "Boxing fitness",
     "city": "Bali & Jakarta",
     "landingPage": "/boxing-fitness",
-    "image": "/images/sessions/boxing-fitness.webp",
+    "image": "/images/editorial/private-boxing-fitness-at-home-what-pad-only-means.webp",
     "bodyFile": "boxing-fitness-at-home-bali-jakarta.md",
     "faqs": [
       {
@@ -294,19 +304,20 @@
         "q": "Can two people share boxing?",
         "a": "Not in the published boxing rate. Quote two hours or pick a session that bills extra people."
       }
-    ]
+    ],
+    "imageAlt": "Trainer holding focus mitts for a client practising a controlled boxing jab"
   },
   {
     "slug": "guided-meditation-at-home-what-the-hour-is-and-is-not",
     "briefId": "B012",
     "title": "Guided meditation at home: what the hour is, and is not",
     "description": "A quiet 60-minute sit for one or two people from Rp 800.000 in Bali. Not therapy. Not a breathwork show.",
-    "date": "2026-11-29",
-    "primaryQuery": "guided meditation at home",
+    "date": "2026-11-14",
+    "primaryQuery": "guided meditation at home: what the hour is, and is not",
     "service": "Guided meditation",
     "city": "Bali & Jakarta",
     "landingPage": "/guided-meditation",
-    "image": "/images/sessions/guided-meditation.webp",
+    "image": "/images/editorial/guided-meditation-at-home-what-the-hour-is-and-is-not.webp",
     "bodyFile": "guided-meditation-at-home-bali-jakarta.md",
     "faqs": [
       {
@@ -321,19 +332,20 @@
         "q": "Can you combine it with yoga in one hour?",
         "a": "No. Those are separate published sessions."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian meditation instructor seated cross-legged guiding an adult European female visitor on a separate cushion"
   },
   {
     "slug": "mobility-coaching-at-home-what-it-is-and-is-not",
     "briefId": "B013",
     "title": "Mobility coaching at home: what it is, and is not",
     "description": "Non-clinical mobility and assisted stretching from Rp 850.000 in Bali. Not physiotherapy. Not a second yoga hour.",
-    "date": "2026-12-01",
-    "primaryQuery": "mobility coaching at home",
+    "date": "2026-11-14",
+    "primaryQuery": "mobility coaching at home: what it is, and is not",
     "service": "Mobility and assisted stretching",
     "city": "Bali & Jakarta",
     "landingPage": "/mobility-coaching",
-    "image": "/images/professionals/kenji-nakamura.webp",
+    "image": "/images/editorial/mobility-coaching-at-home-what-it-is-and-is-not.webp",
     "bodyFile": "mobility-coaching-at-home.md",
     "faqs": [
       {
@@ -348,19 +360,20 @@
         "q": "What is the Bali starting price?",
         "a": "Rp 850.000 for 60 minutes, one person, in-zone. Jakarta is Rp 900.000."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian mobility coach demonstrating a seated shoulder movement to an adult British male client on separate stable chairs"
   },
   {
     "slug": "personal-trainer-in-canggu-villa-access-and-in-zone-rates",
     "briefId": "B014",
     "title": "Personal trainer in Canggu: villa access and in-zone rates",
     "description": "Canggu is in-zone for Bali personal training from Rp 900.000. How gates, heat and Berawa-to-Pererenan access change the quote.",
-    "date": "2026-12-02",
-    "primaryQuery": "personal trainer in Canggu",
+    "date": "2026-11-14",
+    "primaryQuery": "preparing villa access for a trainer in Canggu",
     "service": "Personal training",
     "city": "Bali",
     "landingPage": "/personal-training",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/personal-trainer-in-canggu-villa-access-and-in-zone-rates.webp",
     "bodyFile": "personal-trainer-canggu.md",
     "faqs": [
       {
@@ -375,19 +388,20 @@
         "q": "Does an enquiry reserve 07:00 in Canggu?",
         "a": "No. Confirmation waits on supply, access and payment."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian fitness instructor demonstrating a light dumbbell curl to an adult European woman"
   },
   {
     "slug": "private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
     "briefId": "B015",
     "title": "Private yoga in a Jakarta apartment: space, access and pair pricing",
     "description": "Jakarta private yoga from Rp 900.000 includes two people. How lobby access and a living-room rectangle decide the hour.",
-    "date": "2026-12-03",
-    "primaryQuery": "private yoga in Jakarta",
+    "date": "2026-11-14",
+    "primaryQuery": "private yoga in a jakarta apartment: space, access and pair pricing",
     "service": "Private yoga",
     "city": "Jakarta",
     "landingPage": "/private-yoga",
-    "image": "/images/sessions/private-yoga.webp",
+    "image": "/images/editorial/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing.webp",
     "bodyFile": "private-yoga-jakarta-apartment.md",
     "faqs": [
       {
@@ -402,19 +416,20 @@
         "q": "Can you teach in the building gym?",
         "a": "Only with written permission and a private setup. A shared gym is not the default."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian yoga teacher demonstrating a seated upright pose to an adult European couple"
   },
   {
     "slug": "what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
     "briefId": "B016",
     "title": "What to put in a WhatsApp enquiry for a home trainer",
     "description": "Five lines that get a written quote: session, city, area, two-hour window and headcount. What never belongs in chat.",
-    "date": "2026-12-04",
-    "primaryQuery": "how to book a personal trainer at home WhatsApp",
+    "date": "2026-11-14",
+    "primaryQuery": "what to put in a whatsapp enquiry for a home trainer",
     "service": "Booking",
     "city": "Bali & Jakarta",
     "landingPage": "/contact",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer.webp",
     "bodyFile": "whatsapp-enquiry-home-trainer.md",
     "faqs": [
       {
@@ -429,7 +444,8 @@
         "q": "Can I send my card number in chat?",
         "a": "No. Pay only on the merchant link in the written quote."
       }
-    ]
+    ],
+    "imageAlt": "Male Indonesian personal trainer discussing the planned home session with an adult European female client holding a phone with screen hidden, villa exercise room"
   },
   {
     "slug": "personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
@@ -437,11 +453,11 @@
     "title": "Personal trainer in Seminyak: Petitenget villas and in-zone rates",
     "description": "Seminyak and Petitenget sit inside the Rp 900.000 Bali personal training rate. Compact villas, one-way streets and how the quote is built.",
     "date": "2026-11-14",
-    "primaryQuery": "personal trainer in Seminyak",
+    "primaryQuery": "Seminyak villa trainer access and quote planning",
     "service": "Personal training",
     "city": "Bali",
     "landingPage": "/personal-training",
-    "image": "/images/sessions/personal-training.webp",
+    "image": "/images/editorial/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates.webp",
     "bodyFile": "personal-trainer-seminyak.md",
     "faqs": [
       {
@@ -456,7 +472,8 @@
         "q": "Is Canggu a different rate?",
         "a": "No. Canggu and Seminyak share the in-zone Bali rate. Access still differs."
       }
-    ]
+    ],
+    "imageAlt": "Female Indonesian fitness instructor guiding an adult Australian male visitor with a light resistance band"
   },
   {
     "slug": "extra-people-and-pair-pricing-yoga-training-and-boxing",
@@ -464,11 +481,11 @@
     "title": "Extra people and pair pricing: yoga, training and boxing",
     "description": "Yoga and meditation include two people. Training and Pilates bill extras. Boxing stays one person. How the quote is built.",
     "date": "2026-11-14",
-    "primaryQuery": "can two people share a personal trainer",
+    "primaryQuery": "extra people and pair pricing: yoga, training and boxing",
     "service": "Booking",
     "city": "Bali & Jakarta",
     "landingPage": "/pricing",
-    "image": "/images/sessions/private-yoga.webp",
+    "image": "/images/editorial/extra-people-and-pair-pricing-yoga-training-and-boxing.webp",
     "bodyFile": "extra-people-and-pair-pricing.md",
     "faqs": [
       {
@@ -482,6 +499,35 @@
       {
         "q": "Can two people share boxing?",
         "a": "Not on the published boxing rate. Quote two hours or pick a session that bills extra people."
+      }
+    ],
+    "imageAlt": "Male Indonesian yoga instructor setting out two mats while an adult European couple listen"
+  },
+  {
+    "slug": "private-yoga-or-mat-pilates-choosing-a-home-session",
+    "briefId": "B027",
+    "title": "Private yoga or mat Pilates: choosing your home session",
+    "description": "Compare yoga and mat Pilates for your villa or home: the format, room, participant rules, travel and questions to ask before booking.",
+    "date": "2026-11-14",
+    "primaryQuery": "private yoga or mat Pilates for a home session",
+    "service": "Session planning",
+    "city": "Bali & Jakarta",
+    "landingPage": "/services",
+    "image": "/images/editorial/private-yoga-or-mat-pilates-choosing-a-home-session.webp",
+    "imageAlt": "Indonesian female yoga instructor and an Indonesian male Pilates coach explaining two separate mats to an adult European woman",
+    "bodyFile": "private-yoga-or-mat-pilates.md",
+    "faqs": [
+      {
+        "q": "Does mat Pilates include a reformer?",
+        "a": "No. The published core service is mat-based. A reformer is a different format and is not included."
+      },
+      {
+        "q": "Can two people share private yoga?",
+        "a": "The published core yoga format includes one or two people, subject to suitable space and confirmation."
+      },
+      {
+        "q": "Can I start with one visit?",
+        "a": "Yes. Request a paid single visit, then discuss a longer programme if the format and confirmed dates fit your plans."
       }
     ]
   }

@@ -2,8 +2,9 @@ import { getArea, getService } from '@/data/catalog'
 import { getBlogPost } from '@/data/blog'
 import { getResource, pageMeta } from '@/data/content'
 import { canonicalPath as seoCanonical, getSeo } from '@/data/seo'
-import { isAreaPath, isHeldPath, offerState, sessionPhoto } from '@/data/publicOffer'
+import { isHeldPath, offerState, sessionPhoto } from '@/data/publicOffer'
 import { SITE_ORIGIN } from '@/data/company'
+import { pageImage } from '@/components/EditorialPhoto'
 
 export function pageMetadata(pathname: string) {
   const parts = pathname.split('/').filter(Boolean)
@@ -26,15 +27,15 @@ export function pageMetadata(pathname: string) {
     : service ? [service.title + (city ? ' in ' + city : ' at your villa or home'), service.short]
     : pageMeta[pathname] || ['Page Not Found', 'Explore private fitness at PersonalFitness.id.']
   let canonicalPath = seoCanonical(pathname)
-  if (isAreaPath(pathname) && city) canonicalPath = '/' + city.toLowerCase()
-  else if (isHeldPath(pathname) || state === 'held') canonicalPath = '/services'
+  if (isHeldPath(pathname) || state === 'held') canonicalPath = '/services'
   const known = Boolean(locked || service || post || resource || area || gone || pageMeta[pathname])
-  const noindex = !known || gone || isHeldPath(pathname) || isAreaPath(pathname) || state === 'held' || state === 'unpublished' || pathname === '/professionals'
-  const image = service ? sessionPhoto(service.slug, service.image) : post?.image || '/images/wellness/villa-yoga-partners.webp'
-  const imageAlt = service?.imageAlt || post?.title || (city === 'Jakarta' ? 'Home personal training in Jakarta' : city === 'Bali' ? 'Private fitness at a Bali villa' : 'Private yoga in a Bali villa')
+  const noindex = !known || gone || isHeldPath(pathname) || state === 'held' || state === 'unpublished' || pathname === '/professionals'
+  const assignedImage = pageImage(pathname)
+  const image = assignedImage?.src || (service ? sessionPhoto(service.slug, service.image) : post?.image || '/images/wellness/villa-yoga-partners.webp')
+  const imageAlt = assignedImage?.alt || service?.imageAlt || post?.title || (city === 'Jakarta' ? 'Home personal training in Jakarta' : city === 'Bali' ? 'Private fitness at a Bali villa' : 'Private yoga in a Bali villa')
   const sessionShot = image.includes('/sessions/') || image.includes('kenji-nakamura')
-  const imageWidth = sessionShot ? '800' : image.includes('villa-yoga') ? '1100' : '1200'
-  const imageHeight = sessionShot ? '870' : image.includes('villa-yoga') ? '619' : '800'
+  const imageWidth = assignedImage ? String(assignedImage.width) : sessionShot ? '800' : image.includes('villa-yoga') ? '1100' : '1200'
+  const imageHeight = assignedImage ? String(assignedImage.height) : sessionShot ? '870' : image.includes('villa-yoga') ? '619' : '800'
   const region = city === 'Jakarta' || pathname.startsWith('/jakarta') ? 'ID-JK' : city === 'Bali' || pathname.startsWith('/bali') ? 'ID-BA' : 'ID-BA,ID-JK'
   const placename = region === 'ID-JK' ? 'Jakarta' : region === 'ID-BA' ? 'Bali' : 'Bali and Jakarta'
   return {

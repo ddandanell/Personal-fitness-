@@ -81,7 +81,9 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 - https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates
 - https://www.personalfitness.id/resources/extra-people-and-pair-pricing-yoga-training-and-boxing
 
+- https://www.personalfitness.id/resources/private-yoga-or-mat-pilates-choosing-a-home-session
+
 ## Not booked here
 
 Swimming, nutrition consultation and physiotherapy stay held. We do not diagnose, treat injury or sell meal plans on this site.
-Area cluster URLs such as /bali/canggu exist for visitors and canonicalise to the city hub. They are not the indexable landing pages.
+The 28 area pages, such as /bali/canggu and /jakarta/kemang, have detailed local planning content, self-referencing canonical URLs and sitemap inclusion. Coverage still follows each page’s stated travel and availability conditions.
