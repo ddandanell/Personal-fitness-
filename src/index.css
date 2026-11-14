@@ -491,6 +491,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .review-card footer { display: flex; flex-direction: column; gap: 2px; color: var(--muted); font-size: .78rem; }
 .review-card strong { color: var(--ink); font-size: .88rem; }
 
+.location-clusters { display: grid; gap: 42px; }
+.location-cluster .eyebrow { margin-bottom: 14px; }
 .area-grid, .programme-grid, .resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .area-card, .programme-card, .resource-card { display: flex; flex-direction: column; min-width: 0; border-top: 1px solid var(--ink); padding-top: 16px; }
 .area-card h3, .programme-card h3, .resource-card h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; margin: 0 0 10px; }

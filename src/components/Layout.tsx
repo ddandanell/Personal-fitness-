@@ -45,7 +45,12 @@ const mobileGroups = [
     links: [
       ['/bali', 'Bali'],
       ['/jakarta', 'Jakarta'],
-      ['/service-areas', 'Travel and clusters'],
+      ['/jakarta/south-jakarta', 'South Jakarta'],
+      ['/jakarta/central-jakarta', 'Central Jakarta'],
+      ['/jakarta/kemang', 'Kemang'],
+      ['/jakarta/menteng', 'Menteng'],
+      ['/jakarta/kelapa-gading', 'Kelapa Gading'],
+      ['/service-areas', 'All locations'],
     ],
   },
 ]
@@ -171,7 +176,11 @@ export default function Layout({ children }: { children: ReactNode }) {
             <p className="footer-heading">Places</p>
             <Link to="/bali">Private fitness in Bali</Link>
             <Link to="/jakarta">Home training in Jakarta</Link>
-            <Link to="/service-areas">Travel and clusters</Link>
+            <Link to="/jakarta/south-jakarta">South Jakarta</Link>
+            <Link to="/jakarta/kemang">Kemang</Link>
+            <Link to="/jakarta/menteng">Menteng</Link>
+            <Link to="/jakarta/kelapa-gading">Kelapa Gading</Link>
+            <Link to="/service-areas">All locations</Link>
             <Link to="/how-it-works">How it works</Link>
             <Link to="/contact">Check availability</Link>
           </div>

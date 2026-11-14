@@ -111,7 +111,7 @@ const hubs: SeoRecord[] = [
     path: '/service-areas',
     primaryKeyword: 'private fitness service areas Bali Jakarta',
     title: 'Service Areas in Bali and Jakarta',
-    description: 'Canggu, Seminyak, Ubud, Sanur, Uluwatu, South and Central Jakarta, plus by-request clusters. Travel rules stay on the quote.',
+    description: 'Canggu, Seminyak, Ubud, Sanur, Uluwatu, South and Central Jakarta neighbourhoods including Kemang, Senopati, Menteng and Thamrin, plus North, West and East clusters by request. Travel rules stay on the quote.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali', label: 'Bali private fitness' },
@@ -407,6 +407,96 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
     title: 'Personal Trainer in East Jakarta',
     description: 'Private training and yoga at East Jakarta homes, confirmed after a local supply and access check.',
   },
+  kemang: {
+    keyword: 'personal trainer Kemang',
+    title: 'Personal Trainer in Kemang',
+    description: 'Home personal training and private yoga in Kemang, South Jakarta. In-zone for core sessions when we can time the visit.',
+  },
+  senopati: {
+    keyword: 'personal trainer Senopati',
+    title: 'Personal Trainer in Senopati',
+    description: 'Home personal training in Senopati apartments, with lobby access on the quote. In-zone South Jakarta.',
+  },
+  scbd: {
+    keyword: 'personal trainer SCBD',
+    title: 'Personal Trainer in SCBD',
+    description: 'Private training, yoga and boxing fitness at SCBD residences. In-zone South Jakarta after a building-access check.',
+  },
+  kebayoran: {
+    keyword: 'personal trainer Kebayoran',
+    title: 'Personal Trainer in Kebayoran',
+    description: 'Home personal training in Kebayoran Baru and nearby South Jakarta streets. In-zone when we can time the visit.',
+  },
+  cilandak: {
+    keyword: 'personal trainer Cilandak',
+    title: 'Personal Trainer in Cilandak',
+    description: 'Private training and yoga at Cilandak houses and compounds. In-zone South Jakarta for core sessions.',
+  },
+  'pondok-indah': {
+    keyword: 'personal trainer Pondok Indah',
+    title: 'Personal Trainer in Pondok Indah',
+    description: 'In-home personal training in Pondok Indah, South Jakarta. Estate access on the quote. In-zone when we can time the visit.',
+  },
+  kuningan: {
+    keyword: 'personal trainer Kuningan Jakarta',
+    title: 'Personal Trainer in Kuningan',
+    description: 'Home personal training at Kuningan residences. In-zone South Jakarta with SCBD and Setiabudi streets we can time.',
+  },
+  menteng: {
+    keyword: 'personal trainer Menteng',
+    title: 'Personal Trainer in Menteng',
+    description: 'Home personal training and private yoga in Menteng, Central Jakarta. In-zone for core sessions.',
+  },
+  gondangdia: {
+    keyword: 'personal trainer Gondangdia',
+    title: 'Personal Trainer in Gondangdia',
+    description: 'Private training at Gondangdia homes next to Menteng. In-zone Central Jakarta.',
+  },
+  thamrin: {
+    keyword: 'personal trainer Thamrin',
+    title: 'Personal Trainer in Thamrin',
+    description: 'Home personal training at Thamrin residences and serviced apartments. In-zone Central Jakarta after lobby access is confirmed.',
+  },
+  'kelapa-gading': {
+    keyword: 'personal trainer Kelapa Gading',
+    title: 'Personal Trainer in Kelapa Gading',
+    description: 'Private training and yoga enquiries in Kelapa Gading, quoted after North Jakarta availability and travel checks.',
+  },
+  sunter: {
+    keyword: 'personal trainer Sunter',
+    title: 'Personal Trainer in Sunter',
+    description: 'Home training enquiries in Sunter, North Jakarta, confirmed after a supply and travel check.',
+  },
+  pluit: {
+    keyword: 'personal trainer Pluit',
+    title: 'Personal Trainer in Pluit',
+    description: 'Private wellness at Pluit homes, quoted after North Jakarta access and travel checks.',
+  },
+  pik: {
+    keyword: 'personal trainer PIK',
+    title: 'Personal Trainer in Pantai Indah Kapuk',
+    description: 'Home training enquiries in PIK, North Jakarta. Travel and estate access are quoted. Not an in-zone South Jakarta rate.',
+  },
+  'puri-indah': {
+    keyword: 'personal trainer Puri Indah',
+    title: 'Personal Trainer in Puri Indah',
+    description: 'Home training and private yoga enquiries in Puri Indah, West Jakarta, after availability and travel checks.',
+  },
+  'kebon-jeruk': {
+    keyword: 'personal trainer Kebon Jeruk',
+    title: 'Personal Trainer in Kebon Jeruk',
+    description: 'Private training enquiries in Kebon Jeruk, West Jakarta. No in-zone rate is assumed.',
+  },
+  rawamangun: {
+    keyword: 'personal trainer Rawamangun',
+    title: 'Personal Trainer in Rawamangun',
+    description: 'Home training and yoga enquiries in Rawamangun, East Jakarta, confirmed after a local supply check.',
+  },
+  pulomas: {
+    keyword: 'personal trainer Pulomas',
+    title: 'Personal Trainer in Pulomas',
+    description: 'Private training enquiries in Pulomas, East Jakarta, quoted after availability and access checks.',
+  },
 }
 
 function uniqueLinks(links: SeoLink[]) {
@@ -481,7 +571,10 @@ function areaRecords(): SeoRecord[] {
   return areas.map((area) => {
     const cityPath = '/' + area.city.toLowerCase()
     const locked = areaKeyword[area.slug]
-    const siblings = areas.filter((item) => item.city === area.city && item.slug !== area.slug).slice(0, 3)
+    const parent = area.parent ? areas.find((item) => item.slug === area.parent) : undefined
+    const siblings = parent
+      ? [parent, ...areas.filter((item) => item.parent === parent.slug && item.slug !== area.slug)].slice(0, 4)
+      : [...areas.filter((item) => item.parent === area.slug).slice(0, 3), ...areas.filter((item) => item.city === area.city && !item.parent && item.slug !== area.slug).slice(0, 2)]
     const related: SeoLink[] = [
       { to: cityPath, label: 'Private fitness in ' + area.city },
       ...CITY_SERVICE_RELEASED.filter((slug) => area.services.includes(slug)).slice(0, 5).map((slug) => {

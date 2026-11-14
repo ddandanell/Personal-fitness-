@@ -3,7 +3,8 @@ import { Link, Navigate, useLocation, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage, TextLink } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
-import { cities, getArea, getService, type City } from '@/data/catalog'
+import { areaPockets, cities, getArea, getService, quoteAreas, type City } from '@/data/catalog'
+import { LocationClusters } from '@/components/SiteBlocks'
 import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
 import { CITY_SERVICE_RELEASED, offerState, publicServices, sessionPhoto } from '@/data/publicOffer'
@@ -84,12 +85,84 @@ const areaGuides: Record<string, Array<{ title: string; body: string }>> = {
     { title: 'East Jakarta is a timing check', body: 'Rawamangun, Pulomas and surrounding addresses are considered after a local supply check. Coverage is not implied across the municipality. Travel and the professional’s diary decide whether the hour can run.' },
     { title: 'What to send in the first East Jakarta enquiry', body: 'Name the area, the session and two windows. Family homes with a clear floor are the usual setup. Wait for the quote before assuming a weekly slot.' },
   ],
+  kemang: [
+    { title: 'Kemang is a house-and-compound hour', body: 'Kemang often means a landed house, parking and a dog, not a tower QR. It still sits inside the published South Jakarta rate when we can time the visit. Send the street. “Kemang-ish” is not an area. A living-room rectangle is enough; a home gym is optional.' },
+    { title: 'What to send in the first Kemang enquiry', body: 'Name Kemang, the session, people and a two-hour window. Say if a helper stays and if a child will watch. Extra people are billed on training; yoga includes two when the floor holds both mats. WhatsApp +62 811-3803-488.' },
+  ],
+  senopati: [
+    { title: 'Senopati is usually won or lost in the lobby', body: 'Senopati towers need a guest QR, a named tower and a front desk that expects a coach. The published Jakarta rate applies in-zone. A 15-minute lift wait still eats the hour if you do not put access on the quote.' },
+    { title: 'What to send in the first Senopati enquiry', body: 'Building, tower, session, people and a two-hour window. If the desk blocks outside professionals, say so before anyone travels. A building gym is only useful if it is private.' },
+  ],
+  scbd: [
+    { title: 'SCBD weekday mornings are a security script', body: 'SCBD residences are in-zone South Jakarta. A 06:30 weekday is lifts and a visitor list, not a studio class. Name the tower. Rooftop gyms need permission and privacy or we stay in your living room.' },
+    { title: 'What to send in the first SCBD enquiry', body: 'Tower, weekday or weekend, session and window. Pad-only boxing needs a neighbour and ceiling check. Personal training needs a rectangle, not a view of the roundabout.' },
+  ],
+  kebayoran: [
+    { title: 'Kebayoran is in-zone when you name Baru or Lama', body: 'Kebayoran houses and apartments sit in South Jakarta in-zone. Family living rooms are the usual setup. Say Kebayoran Baru or Kebayoran Lama. Public parks and club gyms are not default venues.' },
+    { title: 'What to send in the first Kebayoran enquiry', body: 'The pocket, the session, people and a two-hour window. A parent stays if a child watches. Recurring programmes need a standing access note.' },
+  ],
+  cilandak: [
+    { title: 'Cilandak landed houses still need a traffic window', body: 'Cilandak is in-zone South Jakarta when we can time the visit. Compounds, helpers and school-run gates belong on the first message. The hour is one session, not a family circuit class unless you buy extra people or a second hour.' },
+    { title: 'What to send in the first Cilandak enquiry', body: 'Cilandak, venue type, session, people and two windows. Indoor tile or wood beats a midday garden. Travel is already inside the published Jakarta rate for this pocket.' },
+  ],
+  'pondok-indah': [
+    { title: 'Pondok Indah is estate access, not a club class', body: 'Pondok Indah sits in the in-zone South Jakarta cluster next to Cilandak. Estate security and a side gate decide the start time. A tennis club or mall gym is not this product. The hour runs in your house or apartment.' },
+    { title: 'What to send in the first Pondok Indah enquiry', body: 'Estate or apartment name, session, people and a two-hour window. If a driver or staff opens the gate, put that number on the quote thread.' },
+  ],
+  kuningan: [
+    { title: 'Kuningan shares the SCBD in-zone cluster', body: 'Kuningan residences are in-zone South Jakarta with Setiabudi and SCBD streets we can time. Towers and serviced apartments need lobby names. A shared office gym is not a private hour.' },
+    { title: 'What to send in the first Kuningan enquiry', body: 'Building, session, people and weekday or weekend window. If evening pad work is noisy, say so. We would rather quote training or Pilates than collect a complaint.' },
+  ],
+  menteng: [
+    { title: 'Menteng is a house-and-one-way-street product', body: 'Menteng sits inside Central Jakarta in-zone. Parking, a house helper at the gate and a usable indoor floor matter more than a pin. The published Jakarta rate applies when we can time the visit.' },
+    { title: 'What to send in the first Menteng enquiry', body: 'Menteng, house or apartment, session, people and a two-hour window. One-way loops still need that window. Do not send medical files.' },
+  ],
+  gondangdia: [
+    { title: 'Gondangdia is compact Central Jakarta', body: 'Gondangdia sits next to Menteng inside the in-zone Central Jakarta rate. Older houses and apartments need a named entrance. A corridor is not a yoga room.' },
+    { title: 'What to send in the first Gondangdia enquiry', body: 'The street if you know it, the session, people and whether parking is on-street. Indoor floor first. The city hub remains Jakarta.' },
+  ],
+  thamrin: [
+    { title: 'Thamrin is a tower and a visitor pass', body: 'Thamrin residences are in-zone Central Jakarta. Serviced apartments work when the desk already expects a visitor. A 06:30 weekday is not a Sunday Menteng house visit. Name the tower.' },
+    { title: 'What to send in the first Thamrin enquiry', body: 'Building, parking, visitor process, session and window. If a guest QR is required, say that before the quote.' },
+  ],
+  'kelapa-gading': [
+    { title: 'Kelapa Gading is quoted, not in-zone', body: 'Kelapa Gading is North Jakarta by request. We do not publish a zero-travel rate here. Supply, building permission and travel are checked before any visit. An enquiry does not mean we cover the mall precinct.' },
+    { title: 'What to send in the first Kelapa Gading enquiry', body: 'Exact cluster, session, people and two windows. We add travel, find a professional who can reach you, or decline. The written quote is the coverage claim.' },
+  ],
+  sunter: [
+    { title: 'Sunter follows a North Jakarta timing check', body: 'Sunter is not South Jakarta in-zone. Homes are quoted after supply and access. Do not screenshot the Rp 950.000 line as if it already includes this pocket.' },
+    { title: 'What to send in the first Sunter enquiry', body: 'Sunter, session and two windows. Family houses with a clear floor are the usual setup. Wait for the quote.' },
+  ],
+  pluit: [
+    { title: 'Pluit access can fail before the hour starts', body: 'Pluit is North Jakarta by request. Parking, water and building rules belong on the first message. The in-zone Jakarta rate does not automatically apply.' },
+    { title: 'What to send in the first Pluit enquiry', body: 'Pluit, house or apartment, session and two windows. We will not pretend a promenade is a private venue.' },
+  ],
+  pik: [
+    { title: 'PIK is a North Jakarta travel check', body: 'Pantai Indah Kapuk is not an in-zone South Jakarta rate. Estate gates, weekend traffic and a long unload are why we quote. Send the cluster inside PIK, not only the acronym.' },
+    { title: 'What to send in the first PIK enquiry', body: 'Which PIK pocket, estate or apartment, session, people and two windows. A programme still needs supply on each visit. Travel is per visit if we accept the address.' },
+  ],
+  'puri-indah': [
+    { title: 'Puri Indah is West Jakarta by request', body: 'Puri Indah homes are reviewed individually. There is no published West Jakarta in-zone rate. Landed houses with a clear indoor floor are easier than a tower with no visitor process.' },
+    { title: 'What to send in the first Puri Indah enquiry', body: 'Puri Indah, session, people and a realistic morning or evening window. Wait for the written quote before promising a guest a Monday slot.' },
+  ],
+  'kebon-jeruk': [
+    { title: 'Kebon Jeruk is not South Jakarta in-zone', body: 'Kebon Jeruk addresses are a West Jakarta supply check. Name the neighbourhood. We will not stretch a South Jakarta professional across the city and call travel included.' },
+    { title: 'What to send in the first Kebon Jeruk enquiry', body: 'Kebon Jeruk, session, people and two windows. Family houses with indoor floors are the usual setup.' },
+  ],
+  rawamangun: [
+    { title: 'Rawamangun is an East Jakarta timing check', body: 'Rawamangun is considered after local supply. Coverage is not implied across East Jakarta. Family homes with a clear floor are the usual setup.' },
+    { title: 'What to send in the first Rawamangun enquiry', body: 'Rawamangun, session and two windows. Do not assume a weekly slot until the quote exists.' },
+  ],
+  pulomas: [
+    { title: 'Pulomas follows the same East Jakarta rule', body: 'Pulomas is by request. The South Jakarta starting price is not this page’s rate. We add travel, confirm, or decline after a supply check.' },
+    { title: 'What to send in the first Pulomas enquiry', body: 'Pulomas, session, people and two windows. A programme is only useful if the first visit can actually be staffed.' },
+  ],
 }
 
 function cityFaqs(city: City) {
   const keys = city === 'Bali'
     ? ['book a personal trainer in Bali', 'Canggu in-zone', 'How much does a session cost?', 'boxing at a villa']
-    : ['South Jakarta', 'Jakarta areas', 'How much does a session cost?', 'first WhatsApp']
+    : ['South Jakarta', 'Jakarta areas', 'Kemang', 'Kelapa Gading']
   return keys
     .map((key) => faqs.find((pair) => pair[0].includes(key)))
     .filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
@@ -127,6 +200,12 @@ export function CityPage({ city }: { city: City }) {
         </div>
       </section>
       <section className="section-compact section-light">
+        <div className="shell">
+          <div className="section-title"><div><Eyebrow>Locations</Eyebrow><h2>{city === 'Bali' ? 'Villa clusters we publish in Bali.' : 'Jakarta municipalities and neighbourhood pages.'}</h2><p>{city === 'Bali' ? 'Area pages explain access. They point back to the Bali hub for booking and rates.' : 'South and Central pockets sit inside the published rate. North, West and East neighbourhoods wait on a written travel quote. Each page stays a location note, not a separate city site.'}</p></div></div>
+          <LocationClusters city={city} />
+        </div>
+      </section>
+      <section className="section-compact">
         <div className="shell">
           <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>{city} sessions with a published starting price.</h2></div></div>
           <div className="service-card-grid">
@@ -206,6 +285,10 @@ export function AreaPage() {
   if (!city || !area || area.city !== city) return <NotFound />
   const cityPath = city === 'Bali' ? 'bali' : 'jakarta'
   const guides = areaGuides[area.slug] || []
+  const parent = area.parent ? getArea(area.parent) : undefined
+  const relatedAreas = parent
+    ? [parent, ...areaPockets(parent.slug).filter((item) => item.slug !== area.slug)]
+    : [...quoteAreas(city).filter((item) => item.slug !== area.slug).slice(0, 2), ...areaPockets(area.slug)]
 
   return (
     <>
@@ -242,7 +325,23 @@ export function AreaPage() {
                 <p>{block.body}</p>
               </div>
             ))}
-            <p>City rules and starting prices sit on <TextLink to={'/' + cityPath}>{area.city} private fitness</TextLink>. Pay only after a written quote.</p>
+            <p>City rules and starting prices sit on <TextLink to={'/' + cityPath}>{area.city} private fitness</TextLink>{parent ? <> and the <TextLink to={'/' + cityPath + '/' + parent.slug}>{parent.name} cluster</TextLink></> : null}. Pay only after a written quote.</p>
+          </div>
+        </section>
+      )}
+      {relatedAreas.length > 0 && (
+        <section className="section-compact section-light">
+          <div className="shell">
+            <div className="section-title"><div><Eyebrow>Nearby</Eyebrow><h2>Other {area.city} locations in this cluster.</h2></div></div>
+            <div className="area-grid">
+              {relatedAreas.map((item) => (
+                <Link to={'/' + cityPath + '/' + item.slug} className="area-card" key={item.slug}>
+                  <p className="eyebrow">{item.cluster}</p>
+                  <h3>{item.name}</h3>
+                  <p>{item.travelQuote ? 'Travel quoted after a timing check' : item.travelFee ? `Travel ${formatIdr(item.travelFee)} per visit` : 'In-zone travel included'}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       )}
@@ -261,7 +360,7 @@ export function CityServicePage() {
   const seo = getSeo('/' + cityPath + '/' + service.slug)
   const access = city === 'Bali'
     ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. The Denpasar office is an office, not a walk-in studio.'
-    : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. South and Central Jakarta are in-zone. North, West, East and BSD are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
+    : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
   const articles = blogPosts.filter((post) =>
     post.landingPage === '/' + service.slug ||

@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react'
 import { Suspense, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router'
-import { areas, programmes, type City } from '@/data/catalog'
+import { areaPockets, programmes, quoteAreas, type City } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
@@ -36,7 +36,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
   const [goals, setGoals] = useState('')
   const selected = publicServices.find((item) => item.slug === service) || publicServices[0]
   const canExtend = selected.durationMin === 60
-  const cityAreas = useMemo(() => areas.filter((item) => item.city === city), [city])
+  const cityHubs = useMemo(() => quoteAreas(city), [city])
   const quote = useMemo(() => estimateQuote({
     service,
     city,
@@ -77,11 +77,17 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           <Field label="Area cluster">
             <select value={area} onChange={(event) => setArea(event.target.value)}>
               <option value="">Confirm later</option>
-              {cityAreas.map((item) => (
-                <option value={item.slug} key={item.slug}>
-                  {item.name}{item.travelQuote ? ' (travel by quote)' : item.travelFee ? ' (+ travel)' : ''}
-                </option>
-              ))}
+              {cityHubs.map((hub) => {
+                const pockets = areaPockets(hub.slug)
+                const label = (item: typeof hub) => item.name + (item.travelQuote ? ' (travel by quote)' : item.travelFee ? ' (+ travel)' : '')
+                if (!pockets.length) return <option value={hub.slug} key={hub.slug}>{label(hub)}</option>
+                return (
+                  <optgroup label={hub.name} key={hub.slug}>
+                    <option value={hub.slug}>{label(hub)}</option>
+                    {pockets.map((item) => <option value={item.slug} key={item.slug}>{label(item)}</option>)}
+                  </optgroup>
+                )
+              })}
             </select>
           </Field>
           <Field label="Visit length">

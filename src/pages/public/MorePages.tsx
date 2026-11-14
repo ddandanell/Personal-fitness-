@@ -1,7 +1,7 @@
 import { ArrowUpRight, Check, Plus, ShieldCheck } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
-import { CtaBand, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
+import { CtaBand, LocationClusters, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WellnessSchedule from '@/components/WellnessSchedule'
 import { areas, cancellationRules, extraPersonFee } from '@/data/catalog'
@@ -125,8 +125,7 @@ export function Programmes() {
 }
 
 export function ServiceAreas() {
-  const bali = areas.filter((area) => area.city === 'Bali')
-  const jakarta = areas.filter((area) => area.city === 'Jakarta')
+  const bali = areas.filter((area) => area.city === 'Bali' && !area.parent)
   return (
     <>
       <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is either inside the session starting price or added once per visit. If we cannot honour an address, we decline it rather than stretch a route.">
@@ -164,16 +163,8 @@ export function ServiceAreas() {
       </section>
       <section className="section section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate. Other municipalities wait on supply and a travel line.</p></div></div>
-          <div className="area-grid">
-            {jakarta.map((area) => (
-              <Link to={'/jakarta/' + area.slug} className="area-card" key={area.slug}>
-                <p className="eyebrow">{area.cluster}</p>
-                <h3>{area.name}</h3>
-                <p>{area.travelQuote ? 'Travel quoted after a timing check' : 'In-zone travel included'}</p>
-              </Link>
-            ))}
-          </div>
+          <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate, including named neighbourhood pages. Other municipalities wait on supply and a travel line.</p></div></div>
+          <LocationClusters city="Jakarta" />
           <div className="cluster" style={{ marginTop: 28 }}>
             <Link to="/jakarta/personal-training" className="text-link">Personal training in Jakarta<ArrowUpRight size={15} /></Link>
             <Link to="/jakarta/private-yoga" className="text-link">Private yoga in Jakarta<ArrowUpRight size={15} /></Link>

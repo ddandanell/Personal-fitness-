@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarDays, Check, Download, Plus, Trash2 } from 'lucide-react'
-import { cityAreas, getService, type City } from '@/data/catalog'
+import { getService, quoteAreas, type City } from '@/data/catalog'
 import { CopyButton, Eyebrow, Field } from './Primitives'
 import { defaultVisits, estimateWellnessPlan, planServices, weekDays, wellnessPlanMessage, type PlanVisit } from '@/lib/wellnessPlan'
 import { formatIdr } from '@/lib/money'
@@ -31,8 +31,8 @@ export default function WellnessSchedule() {
       <div className="schedule-heading"><CalendarDays size={23} /><div><Eyebrow>Your weekly rhythm</Eyebrow><h2>Make room for feeling good.</h2></div></div>
       <p>Choose your visits for a typical week. We repeat that rhythm for your chosen number of weeks, then confirm dates and availability with you.</p>
       <div className="plan-settings">
-        <Field label="City"><select value={city} onChange={(event) => { const next = event.target.value as City; setCity(next); setArea(cityAreas(next)[0].slug); setReview(false) }}><option>Bali</option><option>Jakarta</option></select></Field>
-        <Field label="Area"><select value={area} onChange={(event) => { setArea(event.target.value); setReview(false) }}>{cityAreas(city).map((item) => <option key={item.slug} value={item.slug}>{item.name}{item.travelQuote ? ' (quote travel)' : ''}</option>)}</select></Field>
+        <Field label="City"><select value={city} onChange={(event) => { const next = event.target.value as City; setCity(next); setArea(quoteAreas(next)[0].slug); setReview(false) }}><option>Bali</option><option>Jakarta</option></select></Field>
+        <Field label="Area"><select value={area} onChange={(event) => { setArea(event.target.value); setReview(false) }}>{quoteAreas(city).map((item) => <option key={item.slug} value={item.slug}>{item.name}{item.travelQuote ? ' (quote travel)' : ''}</option>)}</select></Field>
         <Field label="Plan length"><select value={weeks} onChange={(event) => { setWeeks(Number(event.target.value)); setReview(false) }}>{[1, 2, 3, 4].map((count) => <option key={count} value={count}>{count} {count === 1 ? 'week' : 'weeks'}</option>)}</select></Field>
         <Field label="Preferred start date" hint="Optional, local date"><input type="date" value={startDate} onChange={(event) => { setStartDate(event.target.value); setReview(false) }} /></Field>
       </div>

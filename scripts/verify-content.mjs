@@ -57,9 +57,11 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 try {
   const { estimateQuote, quoteMessage } = await server.ssrLoadModule('/src/lib/quote.ts')
   const { estimateWellnessPlan, defaultVisits, wellnessPlanMessage } = await server.ssrLoadModule('/src/lib/wellnessPlan.ts')
-  const { cityAreas } = await server.ssrLoadModule('/src/data/catalog.ts')
+  const { cityAreas, quoteAreas } = await server.ssrLoadModule('/src/data/catalog.ts')
+  assert.equal(quoteAreas('Bali').length, 5)
+  assert.equal(quoteAreas('Jakarta').length, 5)
   assert.equal(cityAreas('Bali').length, 5)
-  assert.equal(cityAreas('Jakarta').length, 5)
+  assert.equal(cityAreas('Jakarta').length, 23)
   const plan = { city: 'Bali', area: 'canggu', weeks: 4, startDate: '', visits: defaultVisits }
   assert.equal(estimateWellnessPlan(plan).total, 6650000)
   assert.equal(estimateWellnessPlan(plan).discountRate, .05)
@@ -81,7 +83,7 @@ try {
   assert.equal(estimateWellnessPlan({ ...plan, visits: withMassage }).invalid, true)
   assert.ok(!manifest.some((item) => item.path === '/professionals' || item.path.startsWith('/professionals/')))
   assert.ok(!manifest.some((item) => item.path === '/reviews' || item.path === '/wellness-plan'))
-  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta', '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta', '/jakarta/kemang', '/jakarta/menteng', '/jakarta/kelapa-gading', '/jakarta/pik', '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
   const home = manifest.find((item) => item.path === '/')
   assert.equal(home.noindex, false)
   const boxing = manifest.find((item) => item.path === '/boxing-fitness')
@@ -99,6 +101,9 @@ try {
   const base = { service: 'personal-training', city: 'Bali', durationMin: 60, participants: 1 }
   assert.equal(estimateQuote(base).total, 900000)
   assert.equal(estimateQuote({ ...base, city: 'Jakarta' }).total, 950000)
+  assert.equal(estimateQuote({ ...base, city: 'Jakarta', area: 'kemang' }).total, 950000)
+  assert.equal(estimateQuote({ ...base, city: 'Jakarta', area: 'menteng' }).total, 950000)
+  assert.equal(estimateQuote({ ...base, city: 'Jakarta', area: 'kelapa-gading' }).ok, false)
   assert.equal(estimateQuote({ ...base, participants: 2 }).total, 1150000)
   assert.equal(estimateQuote({ ...base, durationMin: 90 }).total, 1305000)
   assert.equal(estimateQuote({ ...base, participants: 999 }).ok, false)

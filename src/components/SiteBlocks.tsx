@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { type ReactNode } from 'react'
-import { areas, extraPersonFee, programmes, services, type City } from '@/data/catalog'
+import { areaPockets, areas, extraPersonFee, programmes, quoteAreas, services, type City } from '@/data/catalog'
 import { professionals, type Professional } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
 import { Eyebrow } from './Primitives'
@@ -80,18 +80,46 @@ export function ProfessionalGrid({ people = professionals, limit }: { people?: P
   )
 }
 
+function travelLabel(area: (typeof areas)[number]) {
+  return area.travelQuote ? 'Travel quoted after a timing check' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included'
+}
+
+export function AreaCard({ area }: { area: (typeof areas)[number] }) {
+  const cityPath = area.city === 'Bali' ? 'bali' : 'jakarta'
+  return (
+    <Link to={`/${cityPath}/${area.slug}`} className="area-card">
+      <p className="eyebrow">{area.cluster}</p>
+      <h3>{area.name}</h3>
+      <p>{travelLabel(area)}</p>
+    </Link>
+  )
+}
+
+export function LocationClusters({ city }: { city: City }) {
+  const hubs = quoteAreas(city)
+  return (
+    <div className="location-clusters">
+      {hubs.map((hub) => {
+        const pockets = areaPockets(hub.slug)
+        return (
+          <div className="location-cluster" key={hub.slug}>
+            {pockets.length > 0 && <p className="eyebrow">{hub.name}</p>}
+            <div className="area-grid">
+              <AreaCard area={hub} />
+              {pockets.map((pocket) => <AreaCard area={pocket} key={pocket.slug} />)}
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export function AreaGrid({ city }: { city?: City }) {
-  const list = city ? areas.filter((item) => item.city === city) : areas
+  if (city) return <LocationClusters city={city} />
   return (
     <div className="area-grid">
-      {list.map((area) => (
-        <Link to={`/${area.city === 'Bali' ? 'bali' : 'jakarta'}/${area.slug}`} className="area-card" key={area.slug}>
-          <p className="eyebrow">{area.city}</p>
-          <h3>{area.name}</h3>
-          <p>{area.driveNote}</p>
-          <strong>{area.travelQuote ? 'Availability and travel by quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)}` : 'In-zone travel included'}</strong>
-        </Link>
-      ))}
+      {areas.filter((item) => !item.parent).map((area) => <AreaCard area={area} key={area.slug} />)}
     </div>
   )
 }
