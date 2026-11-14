@@ -11,7 +11,8 @@
     "verify": "node scripts/verify-content.mjs",
     "publish:next": "node scripts/publish-next-guide.mjs",
     "verify:seo": "node scripts/verify-seo.mjs",
-    "check:release": "npm run build && npm run verify && node scripts/verify-links.mjs && npm run verify:seo"
+    "check:release": "npm run build && npm run verify && node scripts/verify-links.mjs && npm run verify:seo",
+    "verify:live": "node scripts/verify-live.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",

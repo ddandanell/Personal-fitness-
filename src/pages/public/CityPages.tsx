@@ -176,7 +176,7 @@ export function AreaPage() {
   return (
     <>
       <StructuredData data={{'@context':'https://schema.org','@type':'WebPage','@id':SITE_ORIGIN + '/' + cityPath + '/' + area.slug + '#webpage',url:SITE_ORIGIN + '/' + cityPath + '/' + area.slug,name:getSeo('/' + cityPath + '/' + area.slug)?.title,description:getSeo('/' + cityPath + '/' + area.slug)?.description,about:{'@type':'Service',name:'Private fitness sessions in ' + area.name,provider:{'@id':SITE_ORIGIN + '/#business'},areaServed:{'@type':'Place',name:area.name + ', ' + area.city}},primaryImageOfPage:{'@type':'ImageObject',url:SITE_ORIGIN + pageImage('/' + cityPath + '/' + area.slug)!.src},inLanguage:'en-ID'}} />
-      <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={(getSeo('/' + cityPath + '/' + area.slug)?.title || ('Private fitness in ' + area.name)) + '.'} description={getSeo('/' + cityPath + '/' + area.slug)?.description || area.copy}>
+      <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={getSeo('/' + cityPath + '/' + area.slug)?.title || ('Private fitness in ' + area.name)} description={getSeo('/' + cityPath + '/' + area.slug)?.description || area.copy}>
         <p className="price-highlight">{area.travelQuote ? 'Availability and travel confirmed by written quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included in the session starting price'}</p>
         <Link to={`/contact?city=${area.city}&area=${area.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
@@ -248,7 +248,7 @@ export function CityServicePage() {
     <>
       <StructuredData data={cityServiceJsonLd(service, city, seo?.title, seo?.description)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
-      <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title ? seo.title + '.' : `${service.title} in ${city}.`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
+      <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title || `${service.title} in ${city}`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
         <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>

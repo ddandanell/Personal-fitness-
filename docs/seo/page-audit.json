@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T08:28:15.839Z",
+  "generatedAt": "2026-11-14T08:32:35.848Z",
   "pages": [
     {
       "path": "/",
@@ -35,7 +35,7 @@
     },
     {
       "path": "/bali/boxing-fitness",
-      "mainWords": 1541,
+      "mainWords": 1539,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/boxing-fitness",
       "localMinimum": true,
@@ -51,7 +51,7 @@
     },
     {
       "path": "/bali/guided-meditation",
-      "mainWords": 1536,
+      "mainWords": 1534,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/guided-meditation",
       "localMinimum": true,
@@ -59,7 +59,7 @@
     },
     {
       "path": "/bali/mat-pilates",
-      "mainWords": 1605,
+      "mainWords": 1603,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/mat-pilates",
       "localMinimum": true,
@@ -67,7 +67,7 @@
     },
     {
       "path": "/bali/personal-training",
-      "mainWords": 1770,
+      "mainWords": 1766,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/personal-training",
       "localMinimum": true,
@@ -75,7 +75,7 @@
     },
     {
       "path": "/bali/private-yoga",
-      "mainWords": 1699,
+      "mainWords": 1697,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/private-yoga",
       "localMinimum": true,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/jakarta/boxing-fitness",
-      "mainWords": 1594,
+      "mainWords": 1592,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/boxing-fitness",
       "localMinimum": true,
@@ -211,7 +211,7 @@
     },
     {
       "path": "/jakarta/guided-meditation",
-      "mainWords": 1596,
+      "mainWords": 1594,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/guided-meditation",
       "localMinimum": true,
@@ -259,7 +259,7 @@
     },
     {
       "path": "/jakarta/mat-pilates",
-      "mainWords": 1662,
+      "mainWords": 1660,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/mat-pilates",
       "localMinimum": true,
@@ -283,7 +283,7 @@
     },
     {
       "path": "/jakarta/personal-training",
-      "mainWords": 1825,
+      "mainWords": 1821,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/personal-training",
       "localMinimum": true,
@@ -315,7 +315,7 @@
     },
     {
       "path": "/jakarta/private-yoga",
-      "mainWords": 1739,
+      "mainWords": 1736,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/private-yoga",
       "localMinimum": true,

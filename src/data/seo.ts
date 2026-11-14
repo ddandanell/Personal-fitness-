@@ -540,6 +540,13 @@ function cityServiceRecords(): SeoRecord[] {
       const service = services.find((item) => item.slug === slug)
       const locked = serviceKeyword[slug]
       const label = city === 'bali' ? 'Bali' : 'Jakarta'
+      const cityTitles: Record<string, string> = {
+        'personal-training': city === 'bali' ? 'Private Personal Trainer in Bali' : 'Home Personal Trainer in Jakarta',
+        'private-yoga': city === 'bali' ? 'Private Yoga at Your Villa in Bali' : 'Private Yoga at Home in Jakarta',
+        'mat-pilates': 'Private Mat Pilates in ' + label,
+        'boxing-fitness': 'Private Boxing Fitness in ' + label,
+        'guided-meditation': 'Private Guided Meditation in ' + label,
+      }
       const posts = blogPosts.filter((post) =>
         (post.landingPage === '/' + slug || post.service.toLowerCase() === (service?.title || '').toLowerCase()) &&
         (post.city === label || post.city.includes(label) || post.city.includes('Bali & Jakarta'))
@@ -547,7 +554,7 @@ function cityServiceRecords(): SeoRecord[] {
       return {
         path: '/' + city + '/' + slug,
         primaryKeyword: (locked?.keyword || slug.replace(/-/g, ' ')) + ' ' + label,
-        title: (locked?.title || service?.title || slug) + ' in ' + label,
+        title: cityTitles[slug] || (service?.title || slug) + ' in ' + label,
         description: cityServiceDescription(slug, label, service?.prices[label]),
         group: 'page' as const,
         lastmod: TODAY,
