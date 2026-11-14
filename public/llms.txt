@@ -74,6 +74,10 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 - https://www.personalfitness.id/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers
 - https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means
 - https://www.personalfitness.id/resources/guided-meditation-at-home-what-the-hour-is-and-is-not
+- https://www.personalfitness.id/resources/mobility-coaching-at-home-what-it-is-and-is-not
+- https://www.personalfitness.id/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates
+- https://www.personalfitness.id/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing
+- https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer
 
 ## Not booked here
 

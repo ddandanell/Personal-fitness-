@@ -82,6 +82,8 @@ const quoteSteps = [
 
 const priceFaqKeys = [
   'How do I book a personal trainer in Bali on WhatsApp?',
+  'Is Canggu in-zone for a personal trainer?',
+  'What should I write in the first WhatsApp?',
   'Can I book a personal trainer in South Jakarta?',
   'How much does a session cost?',
   'Is the number on the website the final price?',
@@ -102,7 +104,10 @@ export function Programmes() {
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
       <section className="section-compact section-light">
         <div className="shell split-feature">
-          <div><h2>What you are actually buying.</h2></div>
+          <div>
+            <h2>What you are actually buying.</h2>
+            <p style={{ marginTop: 18 }}><Link to="/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay" className="text-link">How to choose a 2, 3 or 4 week block<ArrowUpRight size={15} /></Link></p>
+          </div>
           <ul className="check-list large-list">
             {['A named session count, not an open membership', 'The same professional where supply allows, with a backup named if not', 'A validity window for unused sessions, written on the quote', 'The 24-hour reschedule rule still applies inside the block'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
@@ -513,11 +518,12 @@ export function ContactPage() {
   return (
     <>
       <StructuredData data={contactPageJsonLd()} />
-      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description="Use the estimator for starting prices, then send the draft on WhatsApp +62 811-3803-488. Nothing is booked until you accept the written quote. Email hallo@personalfitness.id if that is easier.">
+      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description="Use the estimator for starting prices, then send the draft on WhatsApp +62 811-3803-488. Five lines are enough: session, city, area, window and headcount. Nothing is booked until you accept the written quote. Email hallo@personalfitness.id if that is easier.">
         <div className="cluster">
           <Link to="/pricing" className="button button-outline">See session prices</Link>
           <Link to="/faq" className="button button-outline">Read the FAQ</Link>
           <Link to="/how-it-works" className="button button-outline">How it works</Link>
+          <Link to="/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer" className="button button-outline">WhatsApp template</Link>
         </div>
       </PageIntro>
       <section className="section-compact">

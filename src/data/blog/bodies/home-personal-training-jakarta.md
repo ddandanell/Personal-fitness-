@@ -61,4 +61,6 @@ If the hour worked, the next decision is cadence: one drop-in, two sessions a we
 
 Ask for the same professional if the match was good. Ask for a different one if it was not. That is a normal operations request, not a complaint until you make it one.
 
+If the first hour should be yoga for two, use [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing). If you are still writing the message, use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
+
 The first home session is successful when the lobby, the floor and the quote all match. PersonalFitness.id is built to make that match boring. Boring is the point. Start on the [homepage](/) if you still need the offer, then send the building name.

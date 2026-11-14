@@ -61,4 +61,6 @@ If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you alre
 9. Open [how it works](/how-it-works) if you want the eight steps in order.
 10. Send the message. Wait for the quote. Pay only on the link.
 
+If the villa is in Canggu, continue with [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are still writing the first message, use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
+
 A personal trainer in Bali is useful when the hour is real. The way to make it real is to treat the villa as a workplace for 60 minutes, not as a backdrop. PersonalFitness.id exists to hold that line from the first WhatsApp to aftercare. If that is what you wanted when you typed the query, start on the [homepage](/) and send the area.

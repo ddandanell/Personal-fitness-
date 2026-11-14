@@ -11,6 +11,10 @@ import matPrices from './bodies/mat-pilates-prices.md?raw'
 import paidFirst from './bodies/free-intro-vs-paid-first-session.md?raw'
 import boxingHome from './bodies/boxing-fitness-at-home-bali-jakarta.md?raw'
 import meditationHome from './bodies/guided-meditation-at-home-bali-jakarta.md?raw'
+import mobilityHome from './bodies/mobility-coaching-at-home.md?raw'
+import cangguTrainer from './bodies/personal-trainer-canggu.md?raw'
+import jakartaYoga from './bodies/private-yoga-jakarta-apartment.md?raw'
+import whatsappEnquiry from './bodies/whatsapp-enquiry-home-trainer.md?raw'
 
 export const blogPosts: BlogPost[] = [
   {
@@ -229,6 +233,78 @@ export const blogPosts: BlogPost[] = [
     ],
     body: meditationHome,
   },
+  {
+    slug: 'mobility-coaching-at-home-what-it-is-and-is-not',
+    briefId: 'B013',
+    title: 'Mobility coaching at home: what it is, and is not',
+    description: 'Non-clinical mobility and assisted stretching from Rp 850.000 in Bali. Not physiotherapy. Not a second yoga hour.',
+    date: '2026-12-01',
+    primaryQuery: 'mobility coaching at home',
+    service: 'Mobility and assisted stretching',
+    city: 'Bali & Jakarta',
+    landingPage: '/mobility-coaching',
+    image: '/images/professionals/kenji-nakamura.webp',
+    faqs: [
+      { q: 'Is this physiotherapy?', a: 'No. It is a fitness stretching hour. Speak to a clinician if you need treatment.' },
+      { q: 'Are two people included?', a: 'No. Extra people are billed, unlike private yoga.' },
+      { q: 'What is the Bali starting price?', a: 'Rp 850.000 for 60 minutes, one person, in-zone. Jakarta is Rp 900.000.' },
+    ],
+    body: mobilityHome,
+  },
+  {
+    slug: 'personal-trainer-in-canggu-villa-access-and-in-zone-rates',
+    briefId: 'B014',
+    title: 'Personal trainer in Canggu: villa access and in-zone rates',
+    description: 'Canggu is in-zone for Bali personal training from Rp 900.000. How gates, heat and Berawa-to-Pererenan access change the quote.',
+    date: '2026-12-02',
+    primaryQuery: 'personal trainer in Canggu',
+    service: 'Personal training',
+    city: 'Bali',
+    landingPage: '/personal-training',
+    image: '/images/sessions/personal-training.webp',
+    faqs: [
+      { q: 'Is Canggu in-zone?', a: 'Yes. Canggu including Berawa, Pererenan and Echo Beach sits inside the Rp 900.000 Bali personal training rate.' },
+      { q: 'Is the beach the venue?', a: 'No. Public sand is not a default venue. The hour runs in a private villa or home with permission.' },
+      { q: 'Does an enquiry reserve 07:00 in Canggu?', a: 'No. Confirmation waits on supply, access and payment.' },
+    ],
+    body: cangguTrainer,
+  },
+  {
+    slug: 'private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing',
+    briefId: 'B015',
+    title: 'Private yoga in a Jakarta apartment: space, access and pair pricing',
+    description: 'Jakarta private yoga from Rp 900.000 includes two people. How lobby access and a living-room rectangle decide the hour.',
+    date: '2026-12-03',
+    primaryQuery: 'private yoga in Jakarta',
+    service: 'Private yoga',
+    city: 'Jakarta',
+    landingPage: '/private-yoga',
+    image: '/images/sessions/private-yoga.webp',
+    faqs: [
+      { q: 'Are two people included in Jakarta?', a: 'Yes, in the published Rp 900.000 rate, if the floor holds both mats.' },
+      { q: 'Is South Jakarta in-zone for yoga?', a: 'Yes for the published cluster. Building access still goes on the quote.' },
+      { q: 'Can you teach in the building gym?', a: 'Only with written permission and a private setup. A shared gym is not the default.' },
+    ],
+    body: jakartaYoga,
+  },
+  {
+    slug: 'what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer',
+    briefId: 'B016',
+    title: 'What to put in a WhatsApp enquiry for a home trainer',
+    description: 'Five lines that get a written quote: session, city, area, two-hour window and headcount. What never belongs in chat.',
+    date: '2026-12-04',
+    primaryQuery: 'how to book a personal trainer at home WhatsApp',
+    service: 'Booking',
+    city: 'Bali & Jakarta',
+    landingPage: '/contact',
+    image: '/images/sessions/personal-training.webp',
+    faqs: [
+      { q: 'What is the WhatsApp number?', a: '+62 811-3803-488. Email hallo@personalfitness.id if that is easier.' },
+      { q: 'Does the first message reserve the time?', a: 'No. Only the confirmation after you accept the quote and payment is verified.' },
+      { q: 'Can I send my card number in chat?', a: 'No. Pay only on the merchant link in the written quote.' },
+    ],
+    body: whatsappEnquiry,
+  },
 ]
 
 export function getBlogPost(slug: string) {
@@ -238,5 +314,5 @@ export function getBlogPost(slug: string) {
 export function relatedPosts(slug: string) {
   const current = getBlogPost(slug)
   if (!current) return blogPosts.slice(0, 3)
-  return blogPosts.filter((item) => item.slug !== slug && (item.service === current.service || item.city === current.city)).slice(0, 3)
+  return blogPosts.filter((item) => item.slug !== slug && (item.service === current.service || item.city === current.city || item.service === 'Booking')).slice(0, 4)
 }

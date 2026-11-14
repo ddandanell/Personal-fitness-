@@ -67,4 +67,6 @@ If you are returning after a long gap, the first home session is a map, not a pu
 
 Jakarta apartments often have less continuous floor and more rules. Bali villas often have more floor and more heat. The rate difference (Rp 50.000 on the base) is not a quality claim. It is a city cost. Access in Jakarta is the harder problem. Heat in Bali is the harder problem. Tell us which one you have.
 
+If you wanted stretching rather than mat work, that hour is [mobility coaching at home](/resources/mobility-coaching-at-home-what-it-is-and-is-not). It is still not physiotherapy.
+
 Mat Pilates at home is useful when you want precise coaching without a commute. PersonalFitness.id will only sell that. Start at the [homepage](/) for the full map, or enquire from [mat Pilates](/mat-pilates) if the floor is already clear.

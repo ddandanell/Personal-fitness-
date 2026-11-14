@@ -88,8 +88,8 @@ const areaGuides: Record<string, Array<{ title: string; body: string }>> = {
 
 function cityFaqs(city: City) {
   const keys = city === 'Bali'
-    ? ['book a personal trainer in Bali', 'Bali areas', 'How much does a session cost?', 'boxing at a villa']
-    : ['South Jakarta', 'Jakarta areas', 'How much does a session cost?', 'enquiry reserve']
+    ? ['book a personal trainer in Bali', 'Canggu in-zone', 'How much does a session cost?', 'boxing at a villa']
+    : ['South Jakarta', 'Jakarta areas', 'How much does a session cost?', 'first WhatsApp']
   return keys
     .map((key) => faqs.find((pair) => pair[0].includes(key)))
     .filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
@@ -101,7 +101,7 @@ export function CityPage({ city }: { city: City }) {
   const cityPath = city.toLowerCase()
   const seo = getSeo('/' + cityPath)
   const pageFaqs = cityFaqs(city)
-  const guides = blogPosts.filter((post) => post.city === city || post.city.includes(city)).slice(0, 3)
+  const guides = blogPosts.filter((post) => post.city === city || post.city.includes(city)).slice(-3).reverse()
 
   return (
     <>
@@ -263,6 +263,10 @@ export function CityServicePage() {
     ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. The Denpasar office is an office, not a walk-in studio.'
     : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. South and Central Jakarta are in-zone. North, West, East and BSD are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
+  const articles = blogPosts.filter((post) =>
+    post.landingPage === '/' + service.slug ||
+    (post.service.toLowerCase() === service.title.toLowerCase() && (post.city === city || post.city.includes(city)))
+  ).slice(0, 3)
   const pageFaqs = faqs.filter((pair) => {
     const hay = (pair[0] + ' ' + pair[1]).toLowerCase()
     return hay.includes(service.title.toLowerCase()) || hay.includes(service.slug.replace(/-/g, ' '))
@@ -307,9 +311,13 @@ export function CityServicePage() {
             <div className="cluster" style={{ marginTop: 18 }}>
               <TextLink to={'/' + service.slug}>All {service.title.toLowerCase()} details</TextLink>
               <TextLink to="/pricing">See session prices</TextLink>
+              <TextLink to="/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer">WhatsApp enquiry template</TextLink>
             </div>
           </div>
           <div>
+            {articles.map((post) => (
+              <p key={post.slug}><TextLink to={'/resources/' + post.slug}>{post.title}</TextLink></p>
+            ))}
             {siblings.map((item) => (
               <p key={item.slug}><TextLink to={`/${cityPath}/${item.slug}`}>{item.title} in {city}</TextLink></p>
             ))}

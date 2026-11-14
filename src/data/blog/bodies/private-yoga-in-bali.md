@@ -69,4 +69,6 @@ In Canggu, 07:00 still works more often than 12:00. In Uluwatu, the route may ne
 
 If your stay is two nights, book one hour well, not three hours badly. If your stay is a month, read [programmes](/programmes).
 
+If the session is an apartment in Jakarta, use [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing). The pair rule is the same. The lobby is not.
+
 Private yoga in Bali is useful when the room is quiet and the quote is complete. PersonalFitness.id exists to keep those two facts in the same document. Start at the [homepage](/) if you are still choosing a service, or go straight to [Bali yoga](/bali/private-yoga) if the decision is already yoga.

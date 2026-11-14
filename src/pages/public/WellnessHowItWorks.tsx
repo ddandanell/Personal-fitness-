@@ -57,6 +57,7 @@ export default function WellnessHowItWorks() {
             <p className="large-copy">The quote names the session, the people, the travel and the cancellation line. If a cost is not written there, it is not assumed.</p>
             <div className="cluster" style={{ marginTop: 18 }}>
               <TextLink to="/pricing">Published starting prices</TextLink>
+              <TextLink to="/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer">WhatsApp enquiry template</TextLink>
               <TextLink to="/faq">Common questions</TextLink>
             </div>
           </div>

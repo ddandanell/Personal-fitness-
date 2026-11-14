@@ -19,7 +19,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
   const request = '/contact?service=' + service.slug
   const seo = getSeo('/' + service.slug)
   const cityReleased = CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number])
-  const articles = blogPosts.filter((post) => post.landingPage === '/' + service.slug || post.service.toLowerCase() === service.title.toLowerCase()).slice(0, 3)
+  const articles = blogPosts.filter((post) => post.landingPage === '/' + service.slug || post.service.toLowerCase() === service.title.toLowerCase()).slice(0, 4)
   const siblings = publicServices.filter((item) => item.slug !== service.slug).slice(0, 5)
   const pageFaqs = faqs.filter((pair) => {
     const hay = (pair[0] + ' ' + pair[1]).toLowerCase()
@@ -108,6 +108,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
               <div className="cluster" style={{ marginTop: 18 }}>
                 <TextLink to="/pricing">See session prices</TextLink>
                 <TextLink to="/programmes">Plan a programme</TextLink>
+                <TextLink to="/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer">WhatsApp enquiry template</TextLink>
               </div>
             </div>
             <div>

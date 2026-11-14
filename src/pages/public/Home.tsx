@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import { publicServices, sessionPhoto } from '@/data/publicOffer'
+import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
 import StructuredData from '@/components/StructuredData'
 import { faqJsonLd } from '@/lib/schema'
@@ -21,6 +22,7 @@ const homeFaqs = [
   faqs.find((pair) => pair[0].includes('Bali areas')),
   faqs.find((pair) => pair[0].includes('boxing at a villa')),
   faqs.find((pair) => pair[0].includes('guided meditation a therapy')),
+  faqs.find((pair) => pair[0].includes('Canggu in-zone')),
 ].filter((pair): pair is (typeof faqs)[number] => Boolean(pair))
 
 export default function Home() {
@@ -85,7 +87,7 @@ export default function Home() {
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta.</p>
-            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/bali/canggu">Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink> for in-zone Bali detail, and <TextLink to="/pricing">every starting rate</TextLink>. We do not claim island-wide or city-wide coverage.</p>
+            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink>, <TextLink to="/bali/canggu">Canggu access notes</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink> for in-zone Bali detail, and <TextLink to="/pricing">every starting rate</TextLink>. We do not claim island-wide or city-wide coverage.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>
@@ -128,6 +130,22 @@ export default function Home() {
               ))}
             </ul>
             <TextLink to="/pricing">See session prices</TextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-compact section-light">
+        <div className="shell">
+          <SectionTitle eyebrow="Guides" title="How a villa or home session actually works." copy="Start with Canggu access, Jakarta yoga, mobility scope or the WhatsApp template, then send the window." action={<TextLink to="/resources">All guides</TextLink>} />
+          <div className="resource-grid">
+            {blogPosts.slice(-4).reverse().map((post) => (
+              <Link to={'/resources/' + post.slug} className="resource-card" key={post.slug}>
+                <p className="eyebrow">{post.city} · {post.service}</p>
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+                <span className="text-link">Read the guide<ArrowUpRight size={15} /></span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

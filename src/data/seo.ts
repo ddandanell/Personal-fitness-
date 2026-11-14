@@ -16,7 +16,7 @@ export type SeoRecord = {
   crumbs: SeoLink[]
 }
 
-const TODAY = '2026-11-13'
+const TODAY = '2026-11-14'
 
 function cityServiceDescription(slug: string, city: City, price: number | null | undefined) {
   const start = price ? ' from ' + formatIdr(price) : ''
@@ -84,6 +84,7 @@ const hubs: SeoRecord[] = [
       { to: '/bali/boxing-fitness', label: 'Boxing fitness in Bali' },
       { to: '/bali/guided-meditation', label: 'Guided meditation in Bali' },
       { to: '/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes', label: 'What a Bali villa session includes' },
+      { to: '/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates', label: 'Personal trainer in Canggu' },
       { to: '/jakarta', label: 'Home training in Jakarta' },
     ],
     crumbs: [HOME, AREAS, { to: '/bali', label: 'Bali' }],
@@ -101,6 +102,7 @@ const hubs: SeoRecord[] = [
       { to: '/jakarta/boxing-fitness', label: 'Boxing fitness in Jakarta' },
       { to: '/jakarta/guided-meditation', label: 'Guided meditation in Jakarta' },
       { to: '/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session', label: 'Set up a Jakarta home session' },
+      { to: '/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing', label: 'Private yoga in a Jakarta apartment' },
       { to: '/bali', label: 'Private fitness in Bali' },
     ],
     crumbs: [HOME, AREAS, { to: '/jakarta', label: 'Jakarta' }],
@@ -174,6 +176,7 @@ const hubs: SeoRecord[] = [
     related: [
       { to: '/contact', label: 'Check availability' },
       { to: '/pricing', label: 'See session prices' },
+      { to: '/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer', label: 'What to put in the WhatsApp' },
       { to: '/professional-standards', label: 'How we match professionals' },
     ],
     crumbs: [HOME, { to: '/how-it-works', label: 'How it works' }],
@@ -195,13 +198,13 @@ const hubs: SeoRecord[] = [
     path: '/resources',
     primaryKeyword: 'personal trainer Bali guide',
     title: 'Personal Trainer Bali and Jakarta Guides',
-    description: 'Guides to in-villa personal training, Jakarta home sessions, private yoga, boxing fitness, guided meditation, prices and programmes.',
+    description: 'Guides to in-villa personal training, Canggu access, Jakarta home yoga, mobility coaching, boxing, meditation, prices and programmes.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes', label: 'Personal trainer in Bali' },
-      { to: '/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session', label: 'Home training in Jakarta' },
-      { to: '/resources/private-boxing-fitness-at-home-what-pad-only-means', label: 'Boxing fitness at home' },
-      { to: '/resources/guided-meditation-at-home-what-the-hour-is-and-is-not', label: 'Guided meditation at home' },
+      { to: '/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates', label: 'Personal trainer in Canggu' },
+      { to: '/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing', label: 'Private yoga in Jakarta' },
+      { to: '/resources/mobility-coaching-at-home-what-it-is-and-is-not', label: 'Mobility coaching at home' },
+      { to: '/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer', label: 'WhatsApp enquiry template' },
       { to: '/pricing', label: 'Published prices' },
       { to: '/', label: 'Private fitness homepage' },
     ],
@@ -216,6 +219,7 @@ const hubs: SeoRecord[] = [
     related: [
       { to: '/pricing', label: 'See prices first' },
       { to: '/how-it-works', label: 'How booking works' },
+      { to: '/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer', label: 'What to put in the WhatsApp' },
       { to: '/faq', label: 'Common questions' },
     ],
     crumbs: [HOME, { to: '/contact', label: 'Contact' }],
@@ -416,7 +420,7 @@ function serviceRecords(): SeoRecord[] {
   return services.filter((service) => (CORE_SERVICE_SLUGS as readonly string[]).includes(service.slug)).map((service) => {
     const locked = serviceKeyword[service.slug]
     const siblings = services.filter((item) => (CORE_SERVICE_SLUGS as readonly string[]).includes(item.slug) && item.slug !== service.slug)
-    const posts = blogPosts.filter((post) => post.landingPage.includes(service.slug) || post.service.toLowerCase().includes(service.title.split(' ')[0].toLowerCase())).slice(0, 2)
+    const posts = blogPosts.filter((post) => post.landingPage.includes(service.slug) || post.service.toLowerCase() === service.title.toLowerCase()).slice(0, 3)
     const related: SeoLink[] = [
       ...siblings.map((item) => ({ to: '/' + item.slug, label: item.title })),
       ...service.cities.map((city) => ({ to: '/' + city.toLowerCase(), label: city + ' private sessions' })),
@@ -443,6 +447,10 @@ function cityServiceRecords(): SeoRecord[] {
       const service = services.find((item) => item.slug === slug)
       const locked = serviceKeyword[slug]
       const label = city === 'bali' ? 'Bali' : 'Jakarta'
+      const posts = blogPosts.filter((post) =>
+        (post.landingPage === '/' + slug || post.service.toLowerCase() === (service?.title || '').toLowerCase()) &&
+        (post.city === label || post.city.includes(label) || post.city.includes('Bali & Jakarta'))
+      ).slice(0, 2)
       return {
         path: '/' + city + '/' + slug,
         primaryKeyword: (locked?.keyword || slug.replace(/-/g, ' ')) + ' ' + label,
@@ -453,7 +461,8 @@ function cityServiceRecords(): SeoRecord[] {
         related: uniqueLinks([
           { to: '/' + slug, label: service?.title || slug },
           { to: '/' + city, label: 'Private fitness in ' + label },
-          ...CITY_SERVICE_RELEASED.filter((item) => item !== slug).slice(0, 4).map((item) => {
+          ...posts.map((post) => ({ to: '/resources/' + post.slug, label: post.primaryQuery })),
+          ...CITY_SERVICE_RELEASED.filter((item) => item !== slug).slice(0, 3).map((item) => {
             const sibling = services.find((row) => row.slug === item)
             return { to: '/' + city + '/' + item, label: (sibling?.title || item) + ' in ' + label }
           }),
@@ -502,7 +511,7 @@ function postRecords(): SeoRecord[] {
       ...(cityPath ? [{ to: cityPath, label: post.city + ' sessions' }] : []),
       { to: '/', label: 'Private fitness homepage' },
       { to: '/pricing', label: 'See prices' },
-      ...blogPosts.filter((item) => item.slug !== post.slug && (item.service === post.service || item.city === post.city)).slice(0, 2).map((item) => ({ to: '/resources/' + item.slug, label: item.primaryQuery })),
+      ...blogPosts.filter((item) => item.slug !== post.slug && (item.service === post.service || item.city === post.city || item.service === 'Booking')).slice(0, 3).map((item) => ({ to: '/resources/' + item.slug, label: item.primaryQuery })),
     ]
     return {
       path: '/resources/' + post.slug,
@@ -526,6 +535,8 @@ function postRecords(): SeoRecord[] {
       { to: '/resources', label: 'All guides' },
       { to: '/', label: 'Homepage' },
       { to: '/contact', label: 'Use this in an enquiry' },
+      { to: '/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer', label: 'WhatsApp enquiry template' },
+      { to: '/pricing', label: 'See session prices' },
     ],
     crumbs: [HOME, BLOG, { to: '/resources/' + item.slug, label: item.title }],
   }))
