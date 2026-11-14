@@ -17,6 +17,15 @@ const offers = families.flatMap((family) => family.offers)
 assert.equal(offers.length, 140)
 assert.equal(new Set(offers.map((offer) => offer.id)).size, 140)
 const known = new Set(families.map((family) => family.slug))
+const blogPosts = JSON.parse(await fs.readFile('src/data/blog/posts.json', 'utf8'))
+assert.ok(blogPosts.length >= 18, 'expected at least 18 published guides')
+for (const post of blogPosts) {
+  const body = await fs.readFile(path.join('src/data/blog/bodies', post.bodyFile), 'utf8')
+  const words = body.trim().split(/\s+/).filter((token) => /[A-Za-z0-9]/.test(token)).length
+  assert.ok(words >= 1000, post.slug + ' needs at least 1,000 words')
+  assert.ok(!body.includes('AI-generated'))
+  assert.ok(!body.toLowerCase().includes('illustrative profile'))
+}
 for (const family of families) {
   assert.ok(wordCount(articles[family.slug]) >= 1000, family.slug + ' needs at least 1,000 words of complete service content')
   await fs.access(path.join('public', family.image))
@@ -72,7 +81,7 @@ try {
   assert.equal(estimateWellnessPlan({ ...plan, visits: withMassage }).invalid, true)
   assert.ok(!manifest.some((item) => item.path === '/professionals' || item.path.startsWith('/professionals/')))
   assert.ok(!manifest.some((item) => item.path === '/reviews' || item.path === '/wellness-plan'))
-  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta', '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
   const home = manifest.find((item) => item.path === '/')
   assert.equal(home.noindex, false)
   const boxing = manifest.find((item) => item.path === '/boxing-fitness')

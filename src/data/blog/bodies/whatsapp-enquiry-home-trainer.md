@@ -28,7 +28,7 @@ Use the [contact](/contact) estimator or the [pricing](/pricing) page to see the
 
 The number on the website is the starting price. The written quote is the payable total. A screenshot of a transfer is not settlement. A “yes” in chat is not confirmation.
 
-In-zone Bali is Canggu and Seminyak. In-zone Jakarta is South and Central Jakarta. If you are in Canggu, the longer access note is [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are in an apartment, use [home personal training in Jakarta](/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session) or [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing).
+In-zone Bali is Canggu and Seminyak. In-zone Jakarta is South and Central Jakarta. If you are in Canggu, the longer access note is [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are in Seminyak or Petitenget, use [personal trainer in Seminyak](/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates). If two of you want to share the hour, read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing) before you promise a second mat. If you are in an apartment, use [home personal training in Jakarta](/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session) or [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing).
 
 ## Worked examples you can copy
 

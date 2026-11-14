@@ -12,3 +12,5 @@ export type BlogPost = {
   faqs: { q: string; a: string }[]
   body: string
 }
+
+export type BlogPostRecord = Omit<BlogPost, 'body'> & { bodyFile: string }

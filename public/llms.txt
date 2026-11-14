@@ -78,6 +78,8 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 - https://www.personalfitness.id/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates
 - https://www.personalfitness.id/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing
 - https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer
+- https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates
+- https://www.personalfitness.id/resources/extra-people-and-pair-pricing-yoga-training-and-boxing
 
 ## Not booked here
 

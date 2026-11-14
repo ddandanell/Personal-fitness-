@@ -1,0 +1,40 @@
+name: Daily SEO guide
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-seo-guide
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publish the next queued guide
+        run: node scripts/publish-next-guide.mjs
+      - name: Commit and push if a guide was released
+        run: |
+          git add src/data/blog public/llms.txt
+          if git diff --cached --quiet; then
+            echo "No guide published today."
+            exit 0
+          fi
+          git -c user.name="PersonalFitness.id publisher" -c user.email="hallo@personalfitness.id" commit -m "$(cat <<'EOF'
+          Publish the next lock-safe SEO guide from the daily queue.
+
+          One unique article per day, with word-count and internal-link gates, so the site grows without thin pages.
+          EOF
+          )"
+          git push

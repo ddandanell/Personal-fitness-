@@ -1,0 +1,210 @@
+[
+  {
+    "slug": "personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+    "briefId": "B019",
+    "title": "Personal trainer in Ubud: travel, access and outer-zone rates",
+    "description": "Ubud personal training is Rp 900.000 plus Rp 150.000 travel per visit. Valley access, indoor floors and how the quote is built.",
+    "primaryQuery": "personal trainer in Ubud",
+    "service": "Personal training",
+    "city": "Bali",
+    "landingPage": "/personal-training",
+    "image": "/images/sessions/personal-training.webp",
+    "bodyFile": "personal-trainer-ubud.md",
+    "faqs": [
+      {
+        "q": "Is Ubud in-zone?",
+        "a": "No. Ubud adds Rp 150.000 travel per visit on top of the Bali session rate."
+      },
+      {
+        "q": "Is the valley view the venue?",
+        "a": "No. The hour needs a level indoor floor and a realistic walk from the road."
+      },
+      {
+        "q": "Does travel apply once for a whole stay?",
+        "a": "No. Travel is per visit. A six-session Ubud block includes travel six times."
+      }
+    ]
+  },
+  {
+    "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+    "briefId": "B020",
+    "title": "60 or 90 minutes: how home session duration is quoted",
+    "description": "Ninety minutes add 45 percent of the city base, before travel. When to extend a home session and when to buy two hours.",
+    "primaryQuery": "90 minute personal training at home",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/pricing",
+    "image": "/images/sessions/personal-training.webp",
+    "bodyFile": "sixty-vs-ninety-minutes.md",
+    "faqs": [
+      {
+        "q": "How much is 90 minutes?",
+        "a": "It adds 45 percent of the city base rate, before extra people and travel."
+      },
+      {
+        "q": "Does 90 minutes include two services?",
+        "a": "No. One session stays one session. Two services are two quotes."
+      },
+      {
+        "q": "Should a first visit be 90 minutes?",
+        "a": "Usually no. A first visit is 60 minutes unless the floor, window and goal already justify the extension."
+      }
+    ]
+  },
+  {
+    "slug": "how-villa-managers-book-guest-fitness-sessions",
+    "briefId": "B021",
+    "title": "How villa managers book guest fitness sessions",
+    "description": "One coordinator, a named session and a written quote. How hosts book training, yoga, Pilates, boxing or meditation for guests.",
+    "primaryQuery": "villa manager book personal trainer Bali",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/villa-hotel-partners",
+    "image": "/images/sessions/private-yoga.webp",
+    "bodyFile": "villa-manager-guest-sessions.md",
+    "faqs": [
+      {
+        "q": "Can a villa book without the guest on the thread?",
+        "a": "Yes. One property contact is better. The guest can still receive the confirmation."
+      },
+      {
+        "q": "Is a wedding week an automatic surcharge?",
+        "a": "No. It is a diary problem. Send the dates and wait for a written yes, a second window, or a decline."
+      },
+      {
+        "q": "Can the trainer also treat a guest shoulder?",
+        "a": "No. Live hours stay fitness. Physiotherapy and nutrition stay held."
+      }
+    ]
+  },
+  {
+    "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+    "briefId": "B022",
+    "title": "Personal trainer in South Jakarta: Kemang, Senopati and lobby access",
+    "description": "South Jakarta personal training from Rp 950.000. Kemang houses, Senopati towers and the lobby rules that decide the hour.",
+    "primaryQuery": "personal trainer in South Jakarta",
+    "service": "Personal training",
+    "city": "Jakarta",
+    "landingPage": "/personal-training",
+    "image": "/images/sessions/personal-training.webp",
+    "bodyFile": "south-jakarta-home-training.md",
+    "faqs": [
+      {
+        "q": "Is South Jakarta in-zone?",
+        "a": "Yes for published clusters such as Kemang, Senopati, SCBD and Cilandak. The building still goes on the quote."
+      },
+      {
+        "q": "Do I need a home gym?",
+        "a": "No. A clear living-room rectangle and an access plan are enough for the first hour."
+      },
+      {
+        "q": "Is BSD the same rate?",
+        "a": "No. BSD and outer municipalities are quoted after a timing check, or declined."
+      }
+    ]
+  },
+  {
+    "slug": "personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+    "briefId": "B023",
+    "title": "Personal trainer in Uluwatu: Bukit travel and indoor floors",
+    "description": "Uluwatu personal training is Rp 900.000 plus Rp 200.000 travel per visit. Bingin, Pecatu, indoor floors and what we will not sell on a cliff.",
+    "primaryQuery": "personal trainer in Uluwatu",
+    "service": "Personal training",
+    "city": "Bali",
+    "landingPage": "/personal-training",
+    "image": "/images/sessions/personal-training.webp",
+    "bodyFile": "personal-trainer-uluwatu.md",
+    "faqs": [
+      {
+        "q": "Is Uluwatu in-zone?",
+        "a": "No. Uluwatu, Pecatu and Bingin add Rp 200.000 travel per visit."
+      },
+      {
+        "q": "Can we train on the cliff?",
+        "a": "No. The hour needs a dry indoor floor. A cliff caption is not a venue."
+      },
+      {
+        "q": "Does travel apply once for the stay?",
+        "a": "No. Travel is per visit, including on a six-session block."
+      }
+    ]
+  },
+  {
+    "slug": "what-a-written-quote-includes-before-you-pay",
+    "briefId": "B024",
+    "title": "What a written quote includes before you pay",
+    "description": "The written quote is the contract for the visit: service, people, cluster, total, exclusions and the 24-hour rule. A website number is only a start.",
+    "primaryQuery": "what does a personal trainer quote include",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/pricing",
+    "image": "/images/sessions/personal-training.webp",
+    "bodyFile": "what-a-written-quote-includes.md",
+    "faqs": [
+      {
+        "q": "Is the website price the payable total?",
+        "a": "No. It is the starting price. The written quote is the payable total."
+      },
+      {
+        "q": "Can I pay in WhatsApp?",
+        "a": "No. Pay only on the merchant link in the quote."
+      },
+      {
+        "q": "What if the quote is wrong?",
+        "a": "Reply in the same thread before payment. Name the field that changed."
+      }
+    ]
+  },
+  {
+    "slug": "boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person",
+    "briefId": "B025",
+    "title": "Boxing fitness in a Jakarta apartment: pads, noise and one person",
+    "description": "Jakarta boxing fitness from Rp 1.050.000 is pad-only, one person, after a ceiling and neighbour check. No sparring and no second person in the rate.",
+    "primaryQuery": "boxing fitness at home Jakarta",
+    "service": "Boxing fitness",
+    "city": "Jakarta",
+    "landingPage": "/boxing-fitness",
+    "image": "/images/sessions/boxing-fitness.webp",
+    "bodyFile": "boxing-fitness-jakarta-apartment.md",
+    "faqs": [
+      {
+        "q": "Can two people share Jakarta boxing?",
+        "a": "Not on the published boxing rate. Quote two hours or pick a session that bills extra people."
+      },
+      {
+        "q": "Do I need a heavy bag?",
+        "a": "No. We bring pads when the session is approved. You need permission and a usable ceiling."
+      },
+      {
+        "q": "Is evening pad work allowed?",
+        "a": "Only if the building allows impact noise. Put the rule on the first message."
+      }
+    ]
+  },
+  {
+    "slug": "private-yoga-for-beginners-at-home-in-bali-and-jakarta",
+    "briefId": "B026",
+    "title": "Private yoga for beginners at home in Bali and Jakarta",
+    "description": "Beginner private yoga from Rp 850.000 in Bali and Rp 900.000 in Jakarta, with two people included when the floor holds both mats.",
+    "primaryQuery": "beginner private yoga at home",
+    "service": "Private yoga",
+    "city": "Bali & Jakarta",
+    "landingPage": "/private-yoga",
+    "image": "/images/sessions/private-yoga.webp",
+    "bodyFile": "private-yoga-beginners-at-home.md",
+    "faqs": [
+      {
+        "q": "Do I need to be experienced?",
+        "a": "No. Write beginner in the first message. The hour is still yoga, not therapy."
+      },
+      {
+        "q": "Are two beginners included?",
+        "a": "Yes, in the published yoga rate, if the floor holds both mats."
+      },
+      {
+        "q": "Do you bring a studio of props?",
+        "a": "No. A mat you already have is enough unless the quote says otherwise."
+      }
+    ]
+  }
+]

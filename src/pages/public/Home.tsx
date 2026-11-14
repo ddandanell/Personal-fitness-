@@ -136,7 +136,7 @@ export default function Home() {
 
       <section className="section-compact section-light">
         <div className="shell">
-          <SectionTitle eyebrow="Guides" title="How a villa or home session actually works." copy="Start with Canggu access, Jakarta yoga, mobility scope or the WhatsApp template, then send the window." action={<TextLink to="/resources">All guides</TextLink>} />
+          <SectionTitle eyebrow="Guides" title="How a villa or home session actually works." copy="Start with Seminyak villas, extra-people pricing, Jakarta yoga or the WhatsApp template, then send the window." action={<TextLink to="/resources">All guides</TextLink>} />
           <div className="resource-grid">
             {blogPosts.slice(-4).reverse().map((post) => (
               <Link to={'/resources/' + post.slug} className="resource-card" key={post.slug}>

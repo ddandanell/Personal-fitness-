@@ -48,7 +48,7 @@ The sequence sits on [how it works](/how-it-works). The city hub sits on [person
 
 We will not claim every street from Echo Beach to Seminyak is the same driveway. We will not run a default session on packed sand. We will not confirm 07:00 before supply and access are checked. We will not take payment in chat. We will not invent island-wide coverage because Canggu is famous.
 
-If the stay is actually in Ubud, say Ubud. If it is Seminyak, say Seminyak. Honest geography is cheaper than a wasted visit.
+If the stay is actually in Ubud, say Ubud. If it is Seminyak, use [personal trainer in Seminyak](/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates). Honest geography is cheaper than a wasted visit.
 
 ## A checklist you can actually use
 
