@@ -72,7 +72,7 @@ Ubud, valley or ridge, indoor teak or outdoor deck, one or two people, training 
 
 If the professional cannot reach you on the day, the hour is at risk. Keep the same number on the quote. If you change villas after payment, send the new pocket before the 24-hour line. Travel to Ubud is still Rp 150.000 each visit. Moving to Canggu mid-stay is a new cluster, not a free transfer.
 
-The [Ubud area page](/bali/ubud) stays noindex. This article is the indexable record. The [Bali hub](/bali) is the city page. WhatsApp +62 811-3803-488.
+The [Ubud area page](/bali/ubud) is an indexable local planning page with the current travel rule and enquiry route. This article answers the narrower question of training access and quote preparation. The [Bali hub](/bali) compares the wider service area. WhatsApp +62 811-3803-488.
 
 
 ## Confirm the session format

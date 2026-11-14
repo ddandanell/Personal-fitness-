@@ -1,32 +1,5 @@
 [
   {
-    "slug": "personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
-    "briefId": "B019",
-    "title": "Personal trainer in Ubud: travel, access and outer-zone rates",
-    "description": "Ubud personal training is Rp 900.000 plus Rp 150.000 travel per visit. Valley access, indoor floors and how the quote is built.",
-    "primaryQuery": "personal trainer in ubud: travel, access and outer-zone rates",
-    "service": "Personal training",
-    "city": "Bali",
-    "landingPage": "/personal-training",
-    "image": "/images/editorial/personal-trainer-in-ubud-travel-access-and-outer-zone-rates.webp",
-    "bodyFile": "personal-trainer-ubud.md",
-    "faqs": [
-      {
-        "q": "Is Ubud in-zone?",
-        "a": "No. Ubud adds Rp 150.000 travel per visit on top of the Bali session rate."
-      },
-      {
-        "q": "Is the valley view the venue?",
-        "a": "No. The hour needs a level indoor floor and a realistic walk from the road."
-      },
-      {
-        "q": "Does travel apply once for a whole stay?",
-        "a": "No. Travel is per visit. A six-session Ubud block includes travel six times."
-      }
-    ],
-    "imageAlt": "Indonesian male trainer coaching an adult European woman through a light dumbbell curl"
-  },
-  {
     "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
     "briefId": "B020",
     "title": "60 or 90 minutes: how home session duration is quoted",
@@ -214,5 +187,32 @@
       }
     ],
     "imageAlt": "Indonesian female yoga teacher demonstrating a seated upright pose to an adult Australian male beginner on a separate mat"
+  },
+  {
+    "slug": "how-to-prepare-a-quiet-room-for-guided-meditation-at-home",
+    "briefId": "B028",
+    "title": "How to prepare a quiet room for guided meditation at home",
+    "description": "Prepare a Bali villa or Jakarta apartment for private guided meditation: seating, phones, access, temperature and the details needed for a written quote.",
+    "primaryQuery": "how to prepare a quiet room for guided meditation at home",
+    "service": "Guided meditation",
+    "city": "Bali & Jakarta",
+    "landingPage": "/guided-meditation",
+    "image": "/images/editorial/how-to-prepare-a-quiet-room-for-guided-meditation-at-home.webp",
+    "bodyFile": "how-to-prepare-a-quiet-room-for-guided-meditation-at-home.md",
+    "faqs": [
+      {
+        "q": "Do I need meditation cushions?",
+        "a": "No. A stable chair or a cushion you already use is enough. Each adult needs a separate comfortable place to sit."
+      },
+      {
+        "q": "Can two adults join the same guided meditation session?",
+        "a": "Yes. The published 60-minute format includes one or two adults when the room and appointment are confirmed."
+      },
+      {
+        "q": "Does the room need to be completely silent?",
+        "a": "No. Choose the quietest room you can control and reduce avoidable interruptions such as phones, doorbells and household traffic."
+      }
+    ],
+    "imageAlt": "Indonesian female meditation instructor using an open-hand breathing cue while guiding an adult European man and Australian woman seated on separate cushions in a quiet private home"
   }
 ]

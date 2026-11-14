@@ -14,7 +14,7 @@
     "faqs": [
       {
         "q": "Is Rp 900.000 the final price?",
-        "a": "It is the in-zone 60-minute rate for one person in Canggu\u2013Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote."
+        "a": "It is the in-zone 60-minute rate for one person in Canggu–Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote."
       },
       {
         "q": "Can I pick the trainer?",
@@ -530,5 +530,33 @@
         "a": "Yes. Request a paid single visit, then discuss a longer programme if the format and confirmed dates fit your plans."
       }
     ]
+  },
+  {
+    "slug": "personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+    "briefId": "B019",
+    "title": "Personal trainer in Ubud: travel, access and outer-zone rates",
+    "description": "Ubud personal training is Rp 900.000 plus Rp 150.000 travel per visit. Valley access, indoor floors and how the quote is built.",
+    "primaryQuery": "personal trainer in ubud: travel, access and outer-zone rates",
+    "service": "Personal training",
+    "city": "Bali",
+    "landingPage": "/personal-training",
+    "image": "/images/editorial/personal-trainer-in-ubud-travel-access-and-outer-zone-rates.webp",
+    "bodyFile": "personal-trainer-ubud.md",
+    "faqs": [
+      {
+        "q": "Is Ubud in-zone?",
+        "a": "No. Ubud adds Rp 150.000 travel per visit on top of the Bali session rate."
+      },
+      {
+        "q": "Is the valley view the venue?",
+        "a": "No. The hour needs a level indoor floor and a realistic walk from the road."
+      },
+      {
+        "q": "Does travel apply once for a whole stay?",
+        "a": "No. Travel is per visit. A six-session Ubud block includes travel six times."
+      }
+    ],
+    "imageAlt": "Indonesian male trainer coaching an adult European woman through a light dumbbell curl",
+    "date": "2026-11-15"
   }
 ]

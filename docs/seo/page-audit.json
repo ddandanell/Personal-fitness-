@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-14T08:32:35.848Z",
+  "generatedAt": "2026-11-14T23:50:23.678Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1018,
+      "mainWords": 1019,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -99,7 +99,7 @@
     },
     {
       "path": "/bali/ubud",
-      "mainWords": 1351,
+      "mainWords": 1366,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/ubud",
       "localMinimum": true,
@@ -483,7 +483,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 860,
+      "mainWords": 897,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -600,6 +600,14 @@
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
       "localMinimum": false,
       "primaryImage": "/images/editorial/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+      "mainWords": 1574,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-in-ubud-travel-access-and-outer-zone-rates.webp"
     },
     {
       "path": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
@@ -740,5 +748,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1292,
-  "uniquePrimaryImages": 79
+  "uniquePrimaryImages": 80
 }
