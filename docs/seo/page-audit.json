@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-14T23:50:23.678Z",
+  "generatedAt": "2026-11-15T23:15:13.294Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1019,
+      "mainWords": 1021,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 1699,
+      "mainWords": 1703,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -163,7 +163,7 @@
     },
     {
       "path": "/jakarta",
-      "mainWords": 1866,
+      "mainWords": 1869,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta",
       "localMinimum": true,
@@ -435,7 +435,7 @@
     },
     {
       "path": "/pricing",
-      "mainWords": 1590,
+      "mainWords": 1595,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/pricing",
       "localMinimum": false,
@@ -483,7 +483,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 897,
+      "mainWords": 936,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -666,6 +666,14 @@
       "primaryImage": "/images/editorial/programmes-versus-drop-in.webp"
     },
     {
+      "path": "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+      "mainWords": 1417,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/sixty-or-ninety-minutes-how-home-session-duration-is-quoted.webp"
+    },
+    {
       "path": "/resources/train-in-a-bali-villa",
       "mainWords": 207,
       "indexable": true,
@@ -748,5 +756,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1292,
-  "uniquePrimaryImages": 80
+  "uniquePrimaryImages": 81
 }

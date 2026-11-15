@@ -85,6 +85,8 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 
 - https://www.personalfitness.id/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates
 
+- https://www.personalfitness.id/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted
+
 ## Not booked here
 
 Swimming, nutrition consultation and physiotherapy stay held. We do not diagnose, treat injury or sell meal plans on this site.

@@ -1,32 +1,5 @@
 [
   {
-    "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
-    "briefId": "B020",
-    "title": "60 or 90 minutes: how home session duration is quoted",
-    "description": "Ninety minutes add 45 percent of the city base, before travel. When to extend a home session and when to buy two hours.",
-    "primaryQuery": "60 or 90 minutes: how home session duration is quoted",
-    "service": "Booking",
-    "city": "Bali & Jakarta",
-    "landingPage": "/pricing",
-    "image": "/images/editorial/sixty-or-ninety-minutes-how-home-session-duration-is-quoted.webp",
-    "bodyFile": "sixty-vs-ninety-minutes.md",
-    "faqs": [
-      {
-        "q": "How much is 90 minutes?",
-        "a": "It adds 45 percent of the city base rate, before extra people and travel."
-      },
-      {
-        "q": "Does 90 minutes include two services?",
-        "a": "No. One session stays one session. Two services are two quotes."
-      },
-      {
-        "q": "Should a first visit be 90 minutes?",
-        "a": "Usually no. A first visit is 60 minutes unless the floor, window and goal already justify the extension."
-      }
-    ],
-    "imageAlt": "Indonesian female trainer reviewing a blank tablet with an adult Australian male client beside a wall clock with no readable numerals"
-  },
-  {
     "slug": "how-villa-managers-book-guest-fitness-sessions",
     "briefId": "B021",
     "title": "How villa managers book guest fitness sessions",
@@ -214,5 +187,32 @@
       }
     ],
     "imageAlt": "Indonesian female meditation instructor using an open-hand breathing cue while guiding an adult European man and Australian woman seated on separate cushions in a quiet private home"
+  },
+  {
+    "slug": "mobility-coaching-or-personal-training-which-home-session-fits",
+    "briefId": "B029",
+    "title": "Mobility coaching or personal training: which home session fits?",
+    "description": "Compare mobility coaching and personal training at home: session focus, room setup, Bali and Jakarta prices, clinical boundaries and what to request.",
+    "primaryQuery": "mobility coaching or personal training at home",
+    "service": "Session planning",
+    "city": "Bali & Jakarta",
+    "landingPage": "/services",
+    "image": "/images/editorial/mobility-coaching-or-personal-training-which-home-session-fits.webp",
+    "bodyFile": "mobility-coaching-or-personal-training-which-home-session-fits.md",
+    "faqs": [
+      {
+        "q": "What is the main difference between mobility coaching and personal training?",
+        "a": "Mobility coaching centres on controlled range and non-clinical stretching. Personal training centres on a coached strength and fitness workout."
+      },
+      {
+        "q": "Can either service treat an injury?",
+        "a": "No. Both are fitness services. Diagnosis, injury treatment and rehabilitation require an appropriate clinical professional."
+      },
+      {
+        "q": "Can I include both services in a programme?",
+        "a": "They can be scheduled as separate named visits when the dates, professionals, location and complete written quote are confirmed."
+      }
+    ],
+    "imageAlt": "Indonesian male mobility coach guiding an Australian man through a seated shoulder movement while an Indonesian female personal trainer coaches a European woman using light dumbbells in the same private villa room"
   }
 ]

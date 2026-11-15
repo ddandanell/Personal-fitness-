@@ -445,7 +445,7 @@ export function PricingPage() {
             <div>
               <span>90-minute session</span>
               <strong>+45%</strong>
-              <p>Of the 60-minute city rate, before travel.</p>
+              <p>Of the 60-minute city rate, before travel. <Link to="/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted">Compare 60 and 90 minutes.</Link></p>
             </div>
             <div>
               <span>Private yoga pair</span>

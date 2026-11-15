@@ -487,6 +487,11 @@
       "primaryKeyword": "how to prepare a quiet room for guided meditation at home",
       "role": "queued-supporting-guide",
       "commercialOwner": "/guided-meditation"
+    },
+    "/resources/mobility-coaching-or-personal-training-which-home-session-fits": {
+      "primaryKeyword": "mobility coaching or personal training at home",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/services"
     }
   }
 }

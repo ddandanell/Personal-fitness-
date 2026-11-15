@@ -558,5 +558,33 @@
     ],
     "imageAlt": "Indonesian male trainer coaching an adult European woman through a light dumbbell curl",
     "date": "2026-11-15"
+  },
+  {
+    "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+    "briefId": "B020",
+    "title": "60 or 90 minutes: how home session duration is quoted",
+    "description": "Ninety minutes add 45 percent of the city base, before travel. When to extend a home session and when to buy two hours.",
+    "primaryQuery": "60 or 90 minutes: how home session duration is quoted",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/pricing",
+    "image": "/images/editorial/sixty-or-ninety-minutes-how-home-session-duration-is-quoted.webp",
+    "bodyFile": "sixty-vs-ninety-minutes.md",
+    "faqs": [
+      {
+        "q": "How much is 90 minutes?",
+        "a": "It adds 45 percent of the city base rate, before extra people and travel."
+      },
+      {
+        "q": "Does 90 minutes include two services?",
+        "a": "No. One session stays one session. Two services are two quotes."
+      },
+      {
+        "q": "Should a first visit be 90 minutes?",
+        "a": "Usually no. A first visit is 60 minutes unless the floor, window and goal already justify the extension."
+      }
+    ],
+    "imageAlt": "Indonesian female trainer reviewing a blank tablet with an adult Australian male client beside a wall clock with no readable numerals",
+    "date": "2026-11-16"
   }
 ]
