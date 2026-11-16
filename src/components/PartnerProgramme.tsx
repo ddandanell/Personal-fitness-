@@ -256,14 +256,14 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
       <section className="partner-hero" lang={lang}>
         <div className="shell partner-hero-top">
           <div>
-            <Eyebrow light>{text.eyebrow}</Eyebrow>
+            <Eyebrow>{text.eyebrow}</Eyebrow>
             <h1>{text.h1}</h1>
           </div>
           <div>
             <p className="large-copy">{text.sub}</p>
             <div className="cluster">
               <a className="button button-primary" href={whatsappDraftUrl(heroMessage)} target="_blank" rel="noopener noreferrer" onClick={() => { trackWhatsApp('partner_hero', { service: 'partner' }); trackEvent('partner_whatsapp_click', { location: 'partner_hero' }) }}>{text.primary}<ArrowUpRight size={16} /></a>
-              <a className="button button-outline-light" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a>
+              <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a>
             </div>
             <p className="partner-hero-note"><Link to={text.switchTo}>{text.switch}</Link> · <Link to="/partner-terms">{text.terms}</Link></p>
           </div>

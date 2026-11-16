@@ -845,7 +845,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .partner-process { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(35px,8vw,110px); }
 .partner-process > div:first-child p:not(.eyebrow) { color: var(--muted); }
 .partner-process article { display: flex; gap: 27px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
-.partner-process article > span { color: var(--orange); font-family: var(--mono); font-size: .8rem; }
+.partner-process article > span { color: var(--orange-dark); font-family: var(--mono); font-size: .8rem; }
 .partner-process article h3 { font-family: var(--serif); font-size: 1.85rem; font-weight: 400; }
 .partner-process article p { font-size: .9rem; color: var(--muted); margin-bottom: 0; }
 .partner-deliverables { border: 1px solid var(--line); padding: 32px; background: var(--paper); }
