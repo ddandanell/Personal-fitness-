@@ -586,5 +586,33 @@
     ],
     "imageAlt": "Indonesian female trainer reviewing a blank tablet with an adult Australian male client beside a wall clock with no readable numerals",
     "date": "2026-11-16"
+  },
+  {
+    "slug": "how-villa-managers-book-guest-fitness-sessions",
+    "briefId": "B021",
+    "title": "How villa managers book guest fitness sessions",
+    "description": "One coordinator, a named session and a written quote. How hosts book training, yoga, Pilates, boxing or meditation for guests.",
+    "primaryQuery": "how villa managers book guest fitness sessions",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/villa-hotel-partners",
+    "image": "/images/editorial/how-villa-managers-book-guest-fitness-sessions.webp",
+    "bodyFile": "villa-manager-guest-sessions.md",
+    "faqs": [
+      {
+        "q": "Can a villa book without the guest on the thread?",
+        "a": "Yes. One property contact is better. The guest can still receive the confirmation."
+      },
+      {
+        "q": "Is a wedding week an automatic surcharge?",
+        "a": "No. It is a diary problem. Send the dates and wait for a written yes, a second window, or a decline."
+      },
+      {
+        "q": "Can the trainer also treat a guest shoulder?",
+        "a": "No. Live hours stay fitness. Physiotherapy and nutrition stay held."
+      }
+    ],
+    "imageAlt": "Indonesian male yoga instructor guiding three adult European villa guests through a simple standing stretch",
+    "date": "2026-11-17"
   }
 ]

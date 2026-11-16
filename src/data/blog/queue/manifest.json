@@ -1,32 +1,5 @@
 [
   {
-    "slug": "how-villa-managers-book-guest-fitness-sessions",
-    "briefId": "B021",
-    "title": "How villa managers book guest fitness sessions",
-    "description": "One coordinator, a named session and a written quote. How hosts book training, yoga, Pilates, boxing or meditation for guests.",
-    "primaryQuery": "how villa managers book guest fitness sessions",
-    "service": "Booking",
-    "city": "Bali & Jakarta",
-    "landingPage": "/villa-hotel-partners",
-    "image": "/images/editorial/how-villa-managers-book-guest-fitness-sessions.webp",
-    "bodyFile": "villa-manager-guest-sessions.md",
-    "faqs": [
-      {
-        "q": "Can a villa book without the guest on the thread?",
-        "a": "Yes. One property contact is better. The guest can still receive the confirmation."
-      },
-      {
-        "q": "Is a wedding week an automatic surcharge?",
-        "a": "No. It is a diary problem. Send the dates and wait for a written yes, a second window, or a decline."
-      },
-      {
-        "q": "Can the trainer also treat a guest shoulder?",
-        "a": "No. Live hours stay fitness. Physiotherapy and nutrition stay held."
-      }
-    ],
-    "imageAlt": "Indonesian male yoga instructor guiding three adult European villa guests through a simple standing stretch"
-  },
-  {
     "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
     "briefId": "B022",
     "title": "Personal trainer in South Jakarta: Kemang, Senopati and lobby access",
@@ -214,5 +187,32 @@
       }
     ],
     "imageAlt": "Indonesian male mobility coach guiding an Australian man through a seated shoulder movement while an Indonesian female personal trainer coaches a European woman using light dumbbells in the same private villa room"
+  },
+  {
+    "slug": "how-to-plan-a-weekly-villa-wellness-schedule-for-guests",
+    "briefId": "B030",
+    "title": "How to plan a weekly villa wellness schedule for guests",
+    "description": "Plan a villa wellness timetable without promising unconfirmed instructors: sessions, rooms, access, prices, privacy and guest booking steps.",
+    "primaryQuery": "how to plan a weekly villa wellness schedule for guests",
+    "service": "Villa partnerships",
+    "city": "Bali & Jakarta",
+    "landingPage": "/villa-hotel-partners",
+    "image": "/images/editorial/how-to-plan-a-weekly-villa-wellness-schedule-for-guests.webp",
+    "bodyFile": "how-to-plan-a-weekly-villa-wellness-schedule-for-guests.md",
+    "faqs": [
+      {
+        "q": "Does a weekly villa wellness menu guarantee an instructor at every listed time?",
+        "a": "No. It presents useful options. Each guest request still needs professional, property, participant and schedule confirmation in writing."
+      },
+      {
+        "q": "Who pays for a guest wellness session?",
+        "a": "The guest pays PersonalFitness.id unless the villa clearly agrees to pay. The written quote identifies the service and complete total."
+      },
+      {
+        "q": "Can the villa publish a shared group yoga price?",
+        "a": "Only when a current group format and rate have been formally confirmed. Do not invent a shared-class price from the private yoga rate."
+      }
+    ],
+    "imageAlt": "Indonesian female yoga instructor guiding two foreign adult guests through standing side stretches while an Indonesian male personal trainer coaches a foreign adult man using resistance bands in the same Bali villa room"
   }
 ]

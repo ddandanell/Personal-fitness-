@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-16T08:18:48.899Z",
+  "generatedAt": "2026-11-16T23:41:55.776Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1374,
+      "mainWords": 1372,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 1819,
+      "mainWords": 1814,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id/mitra-villa",
-      "mainWords": 501,
+      "mainWords": 508,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id/mitra-villa",
       "localMinimum": false,
@@ -179,7 +179,7 @@
     },
     {
       "path": "/jakarta",
-      "mainWords": 1986,
+      "mainWords": 1984,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta",
       "localMinimum": true,
@@ -515,7 +515,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 1020,
+      "mainWords": 1053,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -568,6 +568,14 @@
       "canonical": "https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
       "localMinimum": false,
       "primaryImage": "/images/editorial/home-personal-training-in-jakarta-how-to-set-up-your-first-session.webp"
+    },
+    {
+      "path": "/resources/how-villa-managers-book-guest-fitness-sessions",
+      "mainWords": 1444,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/how-villa-managers-book-guest-fitness-sessions",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/how-villa-managers-book-guest-fitness-sessions.webp"
     },
     {
       "path": "/resources/jakarta-apartment-session",
@@ -787,7 +795,7 @@
     },
     {
       "path": "/villa-hotel-partners",
-      "mainWords": 531,
+      "mainWords": 537,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/villa-hotel-partners",
       "localMinimum": false,
@@ -796,5 +804,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1282,
-  "uniquePrimaryImages": 81
+  "uniquePrimaryImages": 82
 }

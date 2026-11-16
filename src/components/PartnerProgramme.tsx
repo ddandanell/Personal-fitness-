@@ -310,6 +310,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
             <Eyebrow>{lang === 'id' ? 'Jadwal yoga' : 'Weekly yoga'}</Eyebrow>
             <h2>{text.calendarTitle}</h2>
             <p className="large-copy">{text.calendar}</p>
+            <p><Link to="/resources/how-villa-managers-book-guest-fitness-sessions">{lang === 'id' ? 'Lihat panduan booking tamu untuk pengelola (English).' : 'See the villa manager guest-booking checklist.'}</Link></p>
             {groupLine && <p>{groupLine}</p>}
           </div>
           <ul className="check-list large-list">

@@ -512,6 +512,11 @@
       "primaryKeyword": "mobility coaching or personal training at home",
       "role": "queued-supporting-guide",
       "commercialOwner": "/services"
+    },
+    "/resources/how-to-plan-a-weekly-villa-wellness-schedule-for-guests": {
+      "primaryKeyword": "how to plan a weekly villa wellness schedule for guests",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/villa-hotel-partners"
     }
   }
 }
