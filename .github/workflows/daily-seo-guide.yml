@@ -1,3 +1,5 @@
+# Follow docs/seo/AUTOPILOT.md. Growth goal is villa-manager partners first.
+# Read docs/seo/WEBSITE_CHANGES_PROMPT.md and src/config/partner.ts before changes.
 name: Daily validated SEO guide
 on:
   schedule:

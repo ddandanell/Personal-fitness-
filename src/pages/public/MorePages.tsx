@@ -19,6 +19,7 @@ import { formatIdr } from '@/lib/money'
 import { estimateQuote } from '@/lib/quote'
 import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
+import { partner } from '@/config/partner'
 import NotFound from './NotFound'
 
 const ratePhotos: Record<string, string> = {
@@ -293,12 +294,14 @@ export function ServicesHub() {
       <section className="section-compact section-light">
         <div className="shell split-feature">
           <div>
-            <Eyebrow>Scope</Eyebrow>
-            <h2>Fitness at your location. Not a marketplace. Not a clinic.</h2>
-            <p className="large-copy">Yoga and guided meditation include up to two people. Boxing is one person and pad-only. Mobility is stretching, not physiotherapy. Swimming, nutrition and clinical requests stay held.</p>
+            <Eyebrow>Who each hour suits</Eyebrow>
+            <h2>Pick the format that matches the room and the people.</h2>
+            <p className="large-copy">Personal training is the individual coached hour. Private yoga suits one or two people who want a mat practice. Mat Pilates needs a dry even floor, not a reformer. Mobility is stretching and range, not treatment. Boxing fitness is pad work and conditioning for one person. Guided meditation is a calm sit for one or two people; for clinical support, see a licensed professional.</p>
+            <p>Booking is the same for every format. Send city, area, session and a two-hour window. A coordinator matches a professional, you receive a written quote, then the hour runs at your villa or home. Open <Link to="/bali">Bali</Link> or <Link to="/jakarta">Jakarta</Link> for clusters, then <Link to="/pricing">pricing</Link> for extras, travel and programmes.</p>
+            <p>Villa managers who want a guest menu can start on the <Link to="/villa-hotel-partners">partner programme</Link>. Guests still pay the published website price. WhatsApp +62 811-3803-488 or email hallo@personalfitness.id after the estimator.</p>
           </div>
           <ul className="check-list large-list">
-            {['Open the Bali or Jakarta page for that city’s clusters', 'Use pricing for extras, travel and programmes', 'Send WhatsApp +62 811-3803-488 after the estimator'].map((item) => (
+            {['Open the Bali or Jakarta page for that city’s clusters', 'Use pricing for extras, travel and programmes', 'Send WhatsApp +62 811-3803-488 after the estimator', 'Yoga and meditation include up to two people', 'Boxing stays one person, pad work only', 'The coach who arrives is named on the quote'].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -322,7 +325,7 @@ export function PricingPage() {
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />The estimator shows a starting total. The written quote is what you pay.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />These are starting prices for 60 minutes. Your written quote shows the final total.</p>
           </div>
           <ParallaxImage src="/images/editorial/pricing.webp" alt="Instructor discussing the appointment details with adult clients" eager className="hero-session-image" />
         </div>
@@ -364,6 +367,25 @@ export function PricingPage() {
                 </div>
               </Link>
             ))}
+            {partner.GROUP_YOGA_RATE_BALI && partner.GROUP_YOGA_MAX_PEOPLE && (
+              <article className="pricing-rate-card">
+                <div className="pricing-rate-copy">
+                  <h3>Villa group yoga</h3>
+                  <p>60 minutes · up to {partner.GROUP_YOGA_MAX_PEOPLE} people in one space</p>
+                  <div className="pricing-rate-cities">
+                    <div>
+                      <span>Bali</span>
+                      <strong>{formatIdr(partner.GROUP_YOGA_RATE_BALI)}</strong>
+                    </div>
+                    <div>
+                      <span>Jakarta</span>
+                      <strong>Quote</strong>
+                    </div>
+                  </div>
+                  <p>Shared class in a checked terrace, studio or large living room. Not a private pair rate.</p>
+                </div>
+              </article>
+            )}
           </div>
         </div>
       </section>
@@ -409,7 +431,7 @@ export function PricingPage() {
 
       <section className="section section-dark">
         <div className="shell">
-          <SectionTitle eyebrow="Travel" title="In-zone is included. Outer clusters add a per-visit line." copy="We do not claim island-wide or city-wide coverage. If we cannot honour the window, we say so before you pay." />
+          <SectionTitle eyebrow="Travel" title="In-zone is included. Outer clusters add a per-visit line." copy="We work in these areas so your coach arrives on time. If we cannot honour the window, we say so before you pay." />
           <div className="pricing-zone-grid">
             {travelZones.map(([title, price, copy]) => (
               <article key={title}>
@@ -555,6 +577,22 @@ export function ContactPage() {
           <QuoteEstimator />
         </div>
       </section>
+      <section className="section">
+        <div className="content-shell faq-list">
+          <div className="section-title"><div><Eyebrow>Before you write</Eyebrow><h2>Short answers for a first message.</h2></div></div>
+          {[
+            ['What should I send?', 'Session, city, area, a two-hour window and headcount. Villa or apartment notes help. Keep card numbers and medical files out.'],
+            ['Does the estimator book the hour?', 'No. It shows a starting total. The written quote is what you pay, after we confirm supply and access.'],
+            ['Can villa managers use this page?', 'Guests book here. Managers who want a menu in every villa should open the partner programme.'],
+          ].map(([q, a]) => (
+            <details className="faq-item" key={q}>
+              <summary><span>{q}</span></summary>
+              <div className="faq-body"><p>{a}</p></div>
+            </details>
+          ))}
+          <Link to="/villa-hotel-partners" className="text-link">For villa managers</Link>
+        </div>
+      </section>
     </>
   )
 }
@@ -566,14 +604,18 @@ export function AboutPage() {
       <section className="section-compact"><div className="shell"><ParallaxImage src="/images/editorial/about.webp" alt="Instructors discussing a private home session with adult clients" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
-          <h2>What we sell</h2>
-          <p>A coordinated private fitness session at a villa, home or other suitable lawful space in Bali or Jakarta. Session starting prices are on the <Link to="/pricing">pricing page</Link>; city clusters on <Link to="/bali">Bali</Link> and <Link to="/jakarta">Jakarta</Link>; the eight-step flow on <Link to="/how-it-works">how it works</Link>. The product is the sequence: enquiry, match, quote, confirmation, delivery, aftercare.</p>
-          <h2>What we do not sell</h2>
-          <p>We do not publish a public trainer directory, guest reviews, clinical booking, nutrition plans or an expanded spa catalogue. Reformer instruction, swimming and other held requests are not on the live offer.</p>
-          <h2>Scope</h2>
-          <p>The live offer is general fitness: personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Nutrition and clinical requests are not booked on this site.</p>
+          <h2>Why this exists</h2>
+          <p>Villa and home guests in Bali and Jakarta kept asking the same thing: a private hour in the place they already paid for, with a clear price and a person who actually arrives. PersonalFitness.id was built as a company-managed service for that request. You do not pick from a public trainer directory. A coordinator matches the session, cluster and window, then names the professional on a written quote.</p>
+          <h2>How coaches are chosen</h2>
+          <p>Matching follows the <Link to="/professional-standards">professional standards</Link>: a published fitness format, a usable private space, and a professional who can honour the window. Backup cover exists if supply changes before confirmation. Photographs on this site show the type of hour we coordinate. They do not identify the person who will walk through your gate. That name sits on the quote. Read the <Link to="/team">team page</Link> for how we publish people only when a real photograph and certification exist.</p>
+          <h2>Where we work</h2>
+          <p>Bali in-zone is Canggu and Seminyak. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
+          <h2>What we focus on</h2>
+          <p>Six live sessions: personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
+          <h2>Villa managers</h2>
+          <p>The main growth channel is now villas: put a wellness menu in every property you manage, guests book on WhatsApp, our coach comes to the villa, the guest pays us, you earn a commission on every session. There are no sales meetings and no calendar booking. Read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
           <h2>Office</h2>
-          <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters, not as walk-in studio classes at this address.</p>
+          <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
           <p>WhatsApp {WHATSAPP_DISPLAY}. Email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
           <Link to="/professional-standards" className="button button-primary">Read the vetting standard<ArrowUpRight size={16} /></Link>
@@ -611,6 +653,7 @@ const legalCopy = {
     cta: 'Prepare a non-sensitive enquiry',
     blocks: [
       ['On this website', 'The estimator, wellness planner and partnership form keep the details you enter in the current page until you copy, download or open a WhatsApp draft. Reloading the page clears them. These forms do not create an account, save a health record or send your details automatically.'],
+      ['Analytics cookies', 'If a measurement ID is configured, this site may load Google Analytics after you interact, to understand page views and WhatsApp clicks. You can refuse analytics cookies in your browser. We do not use them to invent reviews or to store health details.'],
       ['Managed wellness brief', 'For an agreed programme, your coordinator can maintain practical goals, preferences and session feedback. You choose which relevant non-clinical notes can be shared with assigned professionals. Ask your coordinator about access, correction or ending this sharing. Clinical records stay with the responsible provider and are separate from the general wellness brief.'],
       ['WhatsApp', 'If you send the draft to PersonalFitness.id, it is used to qualify and coordinate the request. WhatsApp has its own terms. Keep payment-card, bank, ID and detailed health data out of that chat.'],
       ['Booking records', 'Confirmed sessions need a customer record on our side: name, contact, address type, session IDs, payment status. Health details, if ever required, use a restricted screening route, not the public site.'],

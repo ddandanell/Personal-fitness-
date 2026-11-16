@@ -73,6 +73,21 @@
       "role": "hub-or-service",
       "commercialOwner": "/villa-hotel-partners"
     },
+    "/partner-terms": {
+      "primaryKeyword": "villa partner terms Bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/partner-terms"
+    },
+    "/team": {
+      "primaryKeyword": "PersonalFitness.id team",
+      "role": "hub-or-service",
+      "commercialOwner": "/team"
+    },
+    "/id/mitra-villa": {
+      "primaryKeyword": "program mitra wellness villa bali",
+      "role": "hub-or-service",
+      "commercialOwner": "/id/mitra-villa"
+    },
     "/professional-standards": {
       "primaryKeyword": "private trainer vetting Bali",
       "role": "hub-or-service",

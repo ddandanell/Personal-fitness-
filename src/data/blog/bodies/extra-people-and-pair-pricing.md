@@ -38,7 +38,7 @@ If you are comparing a studio couple-class to a villa pair hour, they are not li
 
 ## What we will not sell you
 
-We will not hide a group class inside a private rate. We will not let boxing become two-person pad sharing on the published one-person line. We will not treat a third yoga guest as complimentary. We will not take card numbers in WhatsApp +62 811-3803-488. Pay only on the merchant link in the written quote.
+Groups of 3 or more book a written villa-group quote, not a private pair rate. When a villa group yoga rate is published, that is the rate used. We will not let boxing become two-person pad sharing on the published one-person line. We will not treat a third yoga guest as complimentary. We will not take card numbers in WhatsApp +62 811-3803-488. Pay only on the merchant link in the written quote.
 
 If someone in the pair has pain, swelling or a recent procedure, that person needs a clinician first. We will not run rehab under a couple-yoga label.
 

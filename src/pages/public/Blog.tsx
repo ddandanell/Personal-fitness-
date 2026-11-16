@@ -83,8 +83,29 @@ export function BlogArticle() {
   if (!post && !note) return <NotFound />
 
   if (note && !post) {
+    const words = note.body.join(' ').trim().split(/\s+/).length
     return (
       <>
+        <StructuredData data={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'BlogPosting',
+              headline: note.title,
+              description: note.summary,
+              datePublished: '2026-11-14',
+              wordCount: words,
+              inLanguage: 'en',
+              mainEntityOfPage: SITE_ORIGIN + '/resources/' + note.slug,
+              author: { '@type': 'Organization', name: 'PersonalFitness.id' },
+              publisher: { '@type': 'Organization', name: 'PersonalFitness.id' },
+            },
+            ...(note.faqs?.length ? [{
+              '@type': 'FAQPage',
+              mainEntity: note.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+            }] : []),
+          ],
+        }} />
         <PageIntro eyebrow={note.eyebrow} title={note.title} description={note.summary} />
         <section className="section-compact"><div className="shell"><EditorialPhoto path={'/resources/' + note.slug} eager /></div></section>
         <section className="section">
@@ -94,6 +115,18 @@ export function BlogArticle() {
             <Link to="/contact" className="button button-primary">Use this in an enquiry<ArrowUpRight size={16} /></Link>
           </div>
         </section>
+        {note.faqs && note.faqs.length > 0 && (
+          <section className="section-compact section-light">
+            <div className="content-shell faq-list">
+              {note.faqs.map(([q, a]) => (
+                <details className="faq-item" key={q}>
+                  <summary><span>{q}</span></summary>
+                  <div className="faq-body"><p>{a}</p></div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
       </>
     )
   }

@@ -1,4 +1,5 @@
 import { COMPANY_EMAIL, SITE_ORIGIN } from '@/data/company'
+import { founderReady, partner } from '@/config/partner'
 import { CITY_SERVICE_RELEASED, publicServices, sessionPhoto } from '@/data/publicOffer'
 import { pageImage } from '@/components/EditorialPhoto'
 import type { Service } from '@/data/catalog'
@@ -140,6 +141,12 @@ export function siteGraph() {
         currenciesAccepted: 'IDR',
         paymentAccepted: 'Invoice, online payment link',
         availableLanguage: ['English', 'Indonesian'],
+        ...(partner.OFFICE_GEO ? { geo: { '@type': 'GeoCoordinates', latitude: partner.OFFICE_GEO.lat, longitude: partner.OFFICE_GEO.lng } } : {}),
+        ...(partner.COORDINATION_HOURS ? { openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: partner.COORDINATION_HOURS.split('-')[0], closes: partner.COORDINATION_HOURS.split('-')[1] } } : {}),
+        ...(([partner.INSTAGRAM_URL, partner.GBP_URL].filter((value): value is string => Boolean(value))).length
+          ? { sameAs: [partner.INSTAGRAM_URL, partner.GBP_URL].filter((value): value is string => Boolean(value)) }
+          : {}),
+        ...(founderReady && partner.FOUNDER ? { founder: { '@type': 'Person', name: partner.FOUNDER.name } } : {}),
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
@@ -166,11 +173,27 @@ export function siteGraph() {
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Private fitness sessions at home',
-          itemListElement: publicServices.map((service) => ({
-            '@type': 'OfferCatalog',
-            name: service.title,
-            itemListElement: [cityOffer(service, 'Bali'), cityOffer(service, 'Jakarta')].filter(Boolean),
-          })),
+          itemListElement: [
+            ...publicServices.map((service) => ({
+              '@type': 'OfferCatalog',
+              name: service.title,
+              itemListElement: [cityOffer(service, 'Bali'), cityOffer(service, 'Jakarta')].filter(Boolean),
+            })),
+            ...(partner.GROUP_YOGA_RATE_BALI && partner.GROUP_YOGA_MAX_PEOPLE
+              ? [{
+                  '@type': 'OfferCatalog',
+                  name: 'Villa group yoga',
+                  itemListElement: [{
+                    '@type': 'Offer',
+                    name: `Villa group yoga up to ${partner.GROUP_YOGA_MAX_PEOPLE}`,
+                    price: String(partner.GROUP_YOGA_RATE_BALI),
+                    priceCurrency: 'IDR',
+                    availability: 'https://schema.org/InStock',
+                    areaServed: { '@type': 'AdministrativeArea', name: 'Bali' },
+                  }],
+                }]
+              : []),
+          ],
         },
       },
       {

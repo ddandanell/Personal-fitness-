@@ -2,10 +2,11 @@ import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, useLocation } from 'react-router'
 import { hreflangFor, pageMetadata } from '@/lib/metadata'
-import { installAnalytics, trackWhatsApp } from '@/lib/analytics'
+import { installAnalytics, trackEvent, trackPageView, trackWhatsApp } from '@/lib/analytics'
+import { partner } from '@/config/partner'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, SITE_ORIGIN } from '@/data/company'
-import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
+import { capturePartnerRef, partnerRef, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import StructuredData from './StructuredData'
 import { Breadcrumbs, RelatedLinks } from './SeoCluster'
 import { siteGraph } from '@/lib/schema'
@@ -14,7 +15,7 @@ const navigation = [
   ['/services', 'Services'],
   ['/pricing', 'Prices'],
   ['/how-it-works', 'How it works'],
-  ['/programmes', 'Programmes'],
+  ['/villa-hotel-partners', 'For villa managers'],
   ['/resources', 'Guides'],
 ]
 
@@ -39,6 +40,7 @@ const mobileGroups = [
       ['/programmes', 'Programmes'],
       ['/resources', 'Guides'],
       ['/faq', 'FAQ'],
+      ['/villa-hotel-partners', 'For villa managers'],
     ],
   },
   {
@@ -58,12 +60,14 @@ const mobileGroups = [
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { pathname } = useLocation()
+  const { pathname, search } = useLocation()
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
     setMenuOpen(false)
+    capturePartnerRef(search)
     const { title, description, canonical, noindex, image, imageAlt, imageWidth, imageHeight, region, placename, htmlLang, locale } = pageMetadata(pathname)
+    const hideIndex = noindex || (pathname === '/contact' && Boolean(search))
     document.title = title
     document.documentElement.lang = htmlLang
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
@@ -92,9 +96,13 @@ export default function Layout({ children }: { children: ReactNode }) {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', description)
     document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', SITE_ORIGIN + image)
     document.querySelector('meta[name="twitter:image:alt"]')?.setAttribute('content', imageAlt)
-    document.querySelector('meta[name="robots"]')?.setAttribute('content', noindex ? 'noindex, follow' : 'index, follow')
+    document.querySelector('meta[name="robots"]')?.setAttribute('content', hideIndex ? 'noindex, follow' : 'index, follow')
+    document.body.classList.toggle('print-a5', pathname === '/partners/menu')
     installAnalytics()
-  }, [pathname])
+    trackPageView(pathname + search)
+    const code = partnerRef()
+    if (code) trackEvent('partner_code', { partner_code: code })
+  }, [pathname, search])
 
   useEffect(() => {
     const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuOpen(false) }
@@ -151,7 +159,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div className="mobile-nav-cta">
               <Link to="/contact" className="button button-primary" onClick={() => setMenuOpen(false)}>Check availability<ArrowUpRight size={16} /></Link>
               <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('mobile_menu')}>WhatsApp {WHATSAPP_DISPLAY}</a>
-              <a className="button button-outline" href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>
+              <a className="button button-outline" href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'mobile_menu' })}>{COMPANY_EMAIL}</a>
             </div>
           </nav>
         </div>
@@ -169,7 +177,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
             </p>
-            <p className="footer-address"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
+            <p className="footer-address"><a href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'footer' })}>{COMPANY_EMAIL}</a></p>
+            {partner.INSTAGRAM_URL && <p className="footer-address"><a href={partner.INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a></p>}
             <p className="footer-address"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
             <Link to="/contact" className="text-link">Check availability<ArrowUpRight size={15} /></Link>
           </div>
@@ -201,7 +210,10 @@ export default function Layout({ children }: { children: ReactNode }) {
             <p className="footer-heading">Company</p>
             <Link to="/about">About</Link>
             <Link to="/professional-standards">Standards</Link>
-            <Link to="/villa-hotel-partners">Villa & hotel partners</Link>
+            <Link to="/villa-hotel-partners">Partner programme</Link>
+            <Link to="/partner-terms">Partner terms</Link>
+            <Link to="/team">Team</Link>
+            <Link to="/id/mitra-villa">Untuk villa</Link>
             <Link to="/resources">Guides</Link>
             <Link to="/faq">FAQ</Link>
           </div>

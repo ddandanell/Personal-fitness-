@@ -1,4 +1,4 @@
-PersonalFitness.id does not sell a free introduction hour. The first session is a paid, quoted, confirmed hour at the published rate. If you want to test the service, buy 60 minutes. If you want a discount, buy a 6, 9 or 12 session block. There is no secret complimentary class behind a WhatsApp “hi”.
+PersonalFitness.id does not sell a free introduction hour. The first session is a paid, quoted, confirmed hour at the published rate. If you want to test the service, buy 60 minutes. If you want a discount, buy a 6, 9 or 12 session block. There is no secret complimentary class behind a WhatsApp “hi”. Villa partners: guest first sessions are still paid. A one-off team demo is used only when that policy is published in the partner terms.
 
 That is the whole policy. The rest of this article is why, how it compares to common Bali and Jakarta teaser models, and how to use a paid first session without feeling played. The [homepage](/) still holds the offer. [Pricing](/pricing) holds the numbers.
 

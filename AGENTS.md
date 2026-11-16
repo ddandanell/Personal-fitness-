@@ -3,7 +3,7 @@
 Live site: https://www.personalfitness.id
 Repository: ddandanell/Personal-fitness-, production branch main, Vercel Git deployment.
 
-Read docs/seo/AUTOPILOT.md, seo-keyword-lock.json and the latest docs/seo records before changes.
+Read docs/seo/AUTOPILOT.md, docs/seo/WEBSITE_CHANGES_PROMPT.md, src/config/partner.ts, seo-keyword-lock.json and the latest docs/seo records before changes. The live commercial goal is villa-manager partners first. Never publish placeholder values from partner.ts; hide blocks whose founder fields are still null.
 
 ## Content and location requirements
 

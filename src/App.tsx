@@ -10,6 +10,10 @@ import { AboutPage, ContactPage, FaqPage, LegalPage, PricingPage, Programmes, Se
 import { BlogArticle, BlogIndex } from '@/pages/public/Blog'
 import HowItWorksPage from '@/pages/public/WellnessHowItWorks'
 import Partners from '@/pages/public/Partners'
+import IndonesianPartners from '@/pages/public/IndonesianPartners'
+import PartnerTerms from '@/pages/public/PartnerTerms'
+import PartnerMenu from '@/pages/public/PartnerMenu'
+import Team from '@/pages/public/Team'
 
 export default function App() {
   return (
@@ -17,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/id" element={<IndonesianHome />} />
+        <Route path="/id/mitra-villa" element={<IndonesianPartners />} />
         <Route path="/410" element={<Gone />} />
         <Route path="/services" element={<ServicesHub />} />
         <Route path="/services/:slug" element={<ServiceGate />} />
@@ -33,6 +38,9 @@ export default function App() {
         <Route path="/wellness-plan" element={<Navigate to="/programmes" replace />} />
         <Route path="/fitness-programmes" element={<Navigate to="/programmes" replace />} />
         <Route path="/villa-hotel-partners" element={<Partners />} />
+        <Route path="/partner-terms" element={<PartnerTerms />} />
+        <Route path="/partners/menu" element={<PartnerMenu />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/professionals" element={<Navigate to="/professional-standards" replace />} />
         <Route path="/professionals/:slug" element={<Gone />} />
         <Route path="/locations" element={<Navigate to="/service-areas" replace />} />

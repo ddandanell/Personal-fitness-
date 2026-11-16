@@ -12,7 +12,7 @@ Language: English (en-ID). Indonesian landing page: https://www.personalfitness.
 - Mat Pilates: 60 minutes from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer
 - Mobility coaching: non-clinical stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta
 - Boxing fitness: pad-only, one person, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
-- Guided meditation: a quiet sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. Not therapy
+- Guided meditation: a calm, guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta
 
 Availability, access and the payable total are confirmed in a written quote. The first visit uses the published rate; there is no free introduction session.
 
@@ -59,6 +59,21 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 - https://www.personalfitness.id/jakarta/guided-meditation
 - https://www.personalfitness.id/service-areas
 - https://www.personalfitness.id/resources
+- https://www.personalfitness.id/villa-hotel-partners
+- https://www.personalfitness.id/id/mitra-villa
+- https://www.personalfitness.id/partner-terms
+- https://www.personalfitness.id/team
+
+## Villa partners
+
+Villa managers, agencies and boutique hosts can put a wellness menu in every villa they manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, and the partner earns a commission on every session. There are no sales meetings and no calendar booking.
+
+- Partner programme: https://www.personalfitness.id/villa-hotel-partners
+- Bahasa: https://www.personalfitness.id/id/mitra-villa
+- Partner terms: https://www.personalfitness.id/partner-terms
+- Printable menu: https://www.personalfitness.id/partners/menu
+- PDF: https://www.personalfitness.id/partners/villa-wellness-menu.pdf
+- WhatsApp: +62 811-3803-488
 
 ## Resources
 

@@ -42,7 +42,7 @@ export default function Home() {
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
               <Link to="/bali/personal-training" className="button button-outline-light">Bali personal training</Link>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />A coordinator matches a professional. You confirm on a written quote.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />You get a clear written quote before you pay.</p>
           </div>
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
             <Eyebrow>What the hour is for</Eyebrow>
             <h2>You train in your villa or home, with one professional in the room.</h2>
             <p className="large-copy">The result is a private 60-minute session at the address you already have: coached training, yoga, Pilates, mobility, pad-only boxing or a quiet sit. You leave with a completed hour, not a class pack, a meal plan or a clinical diagnosis.</p>
-            <p>The professional is named on the quote after a match for the session, cluster and window. There is no public trainer directory and no stock of invented reviews on this site. Read <TextLink to="/professional-standards">matching standards</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
+            <p>The professional is named on the quote after a match for the session, cluster and window. There is no public trainer directory and no stock of invented reviews on this site. Read <TextLink to="/professional-standards">matching standards</TextLink>, <TextLink to="/villa-hotel-partners">the villa partner programme</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
             {['Company-managed matching, not a freelance marketplace', 'Named professional on the written quote', 'Backup cover if supply changes before confirmation', 'WhatsApp +62 811-3803-488 and hallo@personalfitness.id', 'Denpasar office is administration, not a walk-in studio'].map((item) => (
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>
-            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. We do not claim island-wide or city-wide coverage.</p>
+            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. We work in these areas so your coach arrives on time.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>

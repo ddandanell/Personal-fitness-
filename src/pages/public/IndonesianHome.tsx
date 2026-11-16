@@ -30,6 +30,7 @@ export default function IndonesianHome() {
               <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">Lihat harga sesi</Link>
               <Link to="/" className="button button-outline-light">English</Link>
+              <Link to="/id/mitra-villa" className="button button-outline-light">Untuk villa</Link>
             </div>
             <p className="hero-micro">Koordinator mencocokkan profesional, lalu Anda menerima kutipan tertulis di WhatsApp {WHATSAPP_DISPLAY}.</p>
           </div>

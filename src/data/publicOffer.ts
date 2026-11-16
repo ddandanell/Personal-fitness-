@@ -102,4 +102,8 @@ export const indexableStaticPaths = [
   '/safety',
   '/editorial-policy',
   '/villa-hotel-partners',
+  '/partner-terms',
+  '/team',
+  '/id/mitra-villa',
+  '/partners/menu',
 ]

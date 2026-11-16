@@ -97,8 +97,25 @@ try {
   const partnerHtml = await fs.readFile('dist/villa-hotel-partners.html', 'utf8')
   const headerHtml = partnerHtml.split('</header>')[0]
   const footerHtml = partnerHtml.split('<footer')[1]
-  assert.ok(!headerHtml.includes('href="/villa-hotel-partners"'))
+  assert.ok(headerHtml.includes('href="/villa-hotel-partners"'))
   assert.ok(footerHtml.includes('href="/villa-hotel-partners"'))
+  assert.ok(footerHtml.includes('href="/partner-terms"'))
+  assert.ok(partnerHtml.includes('Wellness for every villa you manage'))
+  for (const price of ['Rp 900.000', 'Rp 850.000', 'Rp 950.000', 'Rp 1.000.000', 'Rp 800.000']) {
+    assert.ok(partnerHtml.includes(price), 'partner page missing ' + price)
+  }
+  assert.ok(!partnerHtml.includes('[COMMISSION_PCT]'))
+  assert.ok(!partnerHtml.includes('[FOUNDER'))
+  for (const route of ['/partner-terms', '/team', '/id/mitra-villa', '/partners/menu']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  const menu = manifest.find((item) => item.path === '/partners/menu')
+  assert.equal(menu.noindex, true)
+  await fs.access('public/partners/villa-wellness-menu.pdf')
+  await fs.access('public/partners/default-qr.svg')
+  const sitemapPages = await fs.readFile('public/sitemap-pages.xml', 'utf8')
+  assert.ok(sitemapPages.includes('/partner-terms'))
+  assert.ok(sitemapPages.includes('/team'))
+  assert.ok(sitemapPages.includes('/id/mitra-villa'))
+  assert.ok(!sitemapPages.includes('/partners/menu'))
   for (const file of ['public/brand/personalfitness-mark.png', 'public/favicon.ico', 'public/icons/favicon-64.png', 'public/images/wellness/villa-yoga-partners.webp']) await fs.access(file)
   const base = { service: 'personal-training', city: 'Bali', durationMin: 60, participants: 1 }
   assert.equal(estimateQuote(base).total, 900000)

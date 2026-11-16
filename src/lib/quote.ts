@@ -76,19 +76,14 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
 
 export function quoteMessage(result: QuoteResult, extras: { timing?: string; goals?: string; professional?: string }) {
   return [
-    'Hello PersonalFitness.id - I would like a confirmed quote.',
+    "Hi PersonalFitness.id, I'd like " + result.serviceTitle + ' in ' + result.areaName + (extras.timing ? ' on ' + extras.timing : '') + ' for ' + result.participants + (Number(result.participants) === 1 ? ' person' : ' people') + '.',
     '',
-    'Service / format: ' + result.serviceTitle,
+    'Service: ' + result.serviceTitle,
     'City: ' + result.city,
     'Area: ' + result.areaName,
     'Visit: ' + result.formatLabel,
-    'Participants: ' + result.participants,
-    result.sessions > 1 ? 'Programme: ' + result.sessions + ' visits' : 'One visit / scope to confirm',
-    extras.professional ? 'Preference: ' + extras.professional : 'Professional: please suggest a suitable match',
-    extras.timing ? 'Preferred window: ' + extras.timing : 'Preferred window: to discuss',
-    extras.goals ? 'General preference: ' + extras.goals : '',
-    '',
+    extras.professional ? 'Preference: ' + extras.professional : '',
+    extras.goals ? 'Note: ' + extras.goals : '',
     result.ok ? 'Starting price: Rp ' + result.total.toLocaleString('id-ID') + (result.sessions > 1 ? ' for ' + result.sessions + ' visits' : '') : 'Price: written quote required. ' + (result.error || ''),
-    'Please confirm the actual professional, access, full payable total, inclusions and cancellation terms. This request is not a booking.',
   ].filter(Boolean).join('\n')
 }

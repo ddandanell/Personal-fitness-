@@ -5,7 +5,7 @@ import { areaPockets, programmes, quoteAreas, type City } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
-import { trackWhatsApp } from '@/lib/analytics'
+import { trackEvent, trackWhatsApp } from '@/lib/analytics'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { CopyButton, Field } from './Primitives'
 import { downloadText } from '@/lib/downloadText'
@@ -142,7 +142,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           </>
         )}
         <div className="cluster">
-          <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp('estimator')}><MessageCircle size={16} />Continue in WhatsApp</a>
+          <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => { trackWhatsApp('estimator', { service, city }); trackEvent('estimator_used', { service, city }) }}><MessageCircle size={16} />Continue in WhatsApp</a>
           <CopyButton value={message} label="Copy request" />
           <button type="button" className="button button-outline-light" onClick={() => downloadText('PersonalFitness-request.txt', message)}>Download</button>
         </div>
