@@ -8,7 +8,7 @@ If you searched whether two people can share a personal trainer at home, start w
 
 [Personal training](/personal-training) is priced for one person: Rp 900.000 in Bali and Rp 950.000 in Jakarta. Extra people add Rp 250.000 in Bali and Rp 275.000 in Jakarta, once per extra person, not per minute. [Mat Pilates](/mat-pilates) and [mobility coaching](/mobility-coaching) follow that extra-person line. [Boxing fitness](/boxing-fitness) does not: the published boxing rate is one person after a space check. Two boxers is two hours or a different session.
 
-A click is not a booking. A villa of four guests is not automatically a group class. Larger groups need space approval and a written quote.
+A villa of four guests is not automatically a group class. Larger groups need space approval and a written quote.
 
 ## Why yoga includes two and training does not
 

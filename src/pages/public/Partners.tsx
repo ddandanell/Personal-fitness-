@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarDays, Check, ClipboardList, HeartHandshake, Plus, Users } from 'lucide-react'
 import { CopyButton, Eyebrow, Field } from '@/components/Primitives'
+import { trackWhatsApp } from '@/lib/analytics'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 
 const calendar = [
@@ -42,7 +43,7 @@ function PartnerEnquiry() {
     <Field label="Partnership interest"><select value={model} onChange={(event) => { setModel(event.target.value); setDraft('') }}>{['Weekly recurring wellness calendar', 'On-demand guest wellness', 'Retreat or wellness day', 'A mix of recurring and on-demand'].map((item) => <option key={item}>{item}</option>)}</select></Field>
     <Field label="Areas, services and preferred rhythm" hint="Optional. Please leave guest identities and health information out."><textarea value={note} onChange={(event) => { setNote(event.target.value); setDraft('') }} maxLength={1200} rows={4} placeholder="For example: 12 villas in Canggu, Monday yoga and Tuesday boxing appointments." /></Field>
     <button type="submit" className="button button-primary">Prepare partnership enquiry<ArrowUpRight size={16} /></button><p className="small muted">You review the message before opening WhatsApp. This form does not send your details automatically.</p>
-  </form>{draft && <div className="partner-draft" aria-live="polite"><h3>Your partnership enquiry</h3><pre>{draft}</pre><div className="cluster"><a className="button button-primary" href={whatsappDraftUrl(draft)} target="_blank" rel="noopener noreferrer">Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={draft} label="Copy enquiry" /></div></div>}</div></div></section>
+  </form>{draft && <div className="partner-draft" aria-live="polite"><h3>Your partnership enquiry</h3><pre>{draft}</pre><div className="cluster"><a className="button button-primary" href={whatsappDraftUrl(draft)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('partners')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={draft} label="Copy enquiry" /></div></div>}</div></div></section>
 }
 
 export default function Partners() {

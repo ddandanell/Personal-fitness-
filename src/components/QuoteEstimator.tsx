@@ -5,6 +5,7 @@ import { areaPockets, programmes, quoteAreas, type City } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
+import { trackWhatsApp } from '@/lib/analytics'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { CopyButton, Field } from './Primitives'
 import { downloadText } from '@/lib/downloadText'
@@ -131,7 +132,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
               {quote.travel > 0 && <li><span>Travel per visit</span><strong>{formatIdr(quote.travel)}</strong></li>}
               {quote.discount > 0 && <li><span>Programme reduction</span><strong>-{formatIdr(quote.discount)}</strong></li>}
             </ul>
-            <p className="small muted">Not a booking. {area ? 'Selected-area travel is included above.' : 'Area and travel remain to be confirmed.'} The written quote confirms all inclusions and the payable total.</p>
+            <p className="small muted">Starting estimate. {area ? 'Selected-area travel is included above.' : 'Area and travel remain to be confirmed.'} The written quote confirms all inclusions and the payable total.</p>
           </>
         ) : (
           <>
@@ -141,7 +142,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           </>
         )}
         <div className="cluster">
-          <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer"><MessageCircle size={16} />Continue in WhatsApp</a>
+          <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => trackWhatsApp('estimator')}><MessageCircle size={16} />Continue in WhatsApp</a>
           <CopyButton value={message} label="Copy request" />
           <button type="button" className="button button-outline-light" onClick={() => downloadText('PersonalFitness-request.txt', message)}>Download</button>
         </div>

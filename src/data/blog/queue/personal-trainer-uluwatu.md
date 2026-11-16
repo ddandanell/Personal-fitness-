@@ -8,7 +8,7 @@ Uluwatu adds Rp 200.000 travel per visit, once, not per person. Canggu and Semin
 
 The hour is one person at Rp 900.000 plus travel. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. Programme discounts do not reduce travel. Read [programmes](/programmes) before you prepay twelve Bukit visits.
 
-A click is not a booking. A sunset reel is not supply. PersonalFitness.id matches, quotes and confirms.
+A sunset reel is not supply. PersonalFitness.id matches, quotes and confirms.
 
 ## Wind, stone and permission
 

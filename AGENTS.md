@@ -13,7 +13,7 @@ Every existing location page, city hub and city-specific service page must retai
 
 The live public offer is the six core services in src/data/publicOffer.ts. Preserve held services, existing prices, participant limits, confirmation rules and the true availability conditions. North, West and East Jakarta are by request. Do not invent offices, professional supply, credentials, testimonials, clinical results or guarantees.
 
-Session images should show Indonesian adult male and female instructors working with international adult clients. Use a distinct relevant primary image for each substantive page. Illustrative scenes do not establish staff identity, real attendance or property availability. Preserve visible disclosure, accurate alt text, responsive WebP assets and the page image registry.
+Session images should show Indonesian adult male and female instructors working with international adult clients. Use a distinct relevant primary image for each substantive page. Photographs do not establish staff identity, real attendance or property availability. Do not label public images as AI-generated or illustrative. Keep accurate alt text, responsive WebP assets and the page image registry. The professional who arrives is named on the written quote.
 
 ## Release
 

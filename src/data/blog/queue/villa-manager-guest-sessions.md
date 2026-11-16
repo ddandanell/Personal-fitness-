@@ -8,7 +8,7 @@ The property is buying a coordinated private hour at a villa, home or other suit
 
 The product is the sequence: enquiry, match, quote, payment, confirmation, delivery, aftercare. It is not a public trainer directory in your lobby. It is not a walk-in class at the Denpasar office.
 
-A click is not a booking. A WhatsApp “we have a guest who wants yoga tomorrow” without an area, window and headcount is not supply.
+A WhatsApp “we have a guest who wants yoga tomorrow” without an area, window and headcount is not supply.
 
 ## What the first host message must include
 

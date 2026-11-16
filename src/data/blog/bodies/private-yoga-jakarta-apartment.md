@@ -8,7 +8,7 @@ The published Jakarta yoga rate is Rp 900.000 for 60 minutes, one or two people,
 
 A third person is not “just another mat”. Extra people are quoted if the floor allows. Larger groups need space approval. We will not run a living-room class of six at the pair price.
 
-A click is not a booking. A building gym with other residents walking through is not a private yoga room unless you have written permission and a door that can close. PersonalFitness.id matches, quotes and confirms. There is no public teacher directory.
+A building gym with other residents walking through is not a private yoga room unless you have written permission and a door that can close. PersonalFitness.id matches, quotes and confirms. There is no public teacher directory.
 
 ## Space and noise in an apartment
 

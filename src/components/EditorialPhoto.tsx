@@ -7,7 +7,6 @@ export function EditorialPhoto({path, eager = false, className = ''}: {path: str
   const photo = pageImage(path)
   if (!photo) return null
   return <figure className={'editorial-photo ' + className}>
-    <img src={photo.src} srcSet={responsiveSource(photo.src)} sizes="(max-width: 700px) 92vw, 1200px" alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'auto'} data-image-origin={photo.origin}/>
-    <figcaption>Illustrative session image. Your professional is confirmed with your booking.</figcaption>
+    <img src={photo.src} srcSet={responsiveSource(photo.src)} sizes="(max-width: 700px) 92vw, 1200px" alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'auto'} />
   </figure>
 }

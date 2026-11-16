@@ -8,6 +8,11 @@
       "role": "hub-or-service",
       "commercialOwner": "/"
     },
+    "/id": {
+      "primaryKeyword": "personal trainer datang ke rumah",
+      "role": "hub-or-service",
+      "commercialOwner": "/id"
+    },
     "/services": {
       "primaryKeyword": "private wellness services at home",
       "role": "hub-or-service",

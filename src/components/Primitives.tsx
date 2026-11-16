@@ -116,7 +116,7 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
       <div className="session-image" ref={frame}>
         <img src={src} srcSet={responsiveSource(src)} alt={alt} width={responsiveSource(src) ? 1440 : 880} height={responsiveSource(src) ? 960 : 968} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
-      {(caption || responsiveSource(src)) && <figcaption>{caption || 'Illustrative session image. Your professional is confirmed with your booking.'}</figcaption>}
+      {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   )
 }

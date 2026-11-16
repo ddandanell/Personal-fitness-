@@ -67,6 +67,7 @@ export function isHeldPath(pathname: string) {
 
 export const indexableStaticPaths = [
   '/',
+  '/id',
   '/services',
   '/personal-training',
   '/private-yoga',

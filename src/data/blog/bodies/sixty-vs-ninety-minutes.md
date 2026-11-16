@@ -8,7 +8,7 @@ The published rates are 60-minute in-zone starting prices. Personal training is 
 
 Ninety minutes add 45 percent of that city base, not 45 percent of travel. Bali training for 90 minutes is Rp 900.000 plus Rp 405.000, then extra people and travel if they apply. The [pricing page](/pricing) estimator uses the same block.
 
-A click is not a booking. Asking for “a long session” in WhatsApp is not a duration. Write 60 or 90.
+Asking for “a long session” in WhatsApp is not a duration. Write 60 or 90.
 
 ## When 60 minutes is the right buy
 

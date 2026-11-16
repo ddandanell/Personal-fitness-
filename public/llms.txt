@@ -3,7 +3,7 @@
 PersonalFitness.id is a company-managed private fitness service. Coaches come to your villa or home in published Bali and Jakarta clusters. It is not a public trainer marketplace.
 
 Canonical host: https://www.personalfitness.id/
-Language: English (en-ID)
+Language: English (en-ID). Indonesian landing page: https://www.personalfitness.id/id
 
 ## What we book
 
@@ -14,7 +14,7 @@ Language: English (en-ID)
 - Boxing fitness: pad-only, one person, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
 - Guided meditation: a quiet sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. Not therapy
 
-A click is not a booking. Availability, access and the payable total are confirmed in a written quote.
+Availability, access and the payable total are confirmed in a written quote. The first visit uses the published rate; there is no free introduction session.
 
 ## Areas
 

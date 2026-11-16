@@ -5,6 +5,7 @@ import { getService, quoteAreas, type City } from '@/data/catalog'
 import { CopyButton, Eyebrow, Field } from './Primitives'
 import { defaultVisits, estimateWellnessPlan, planServices, weekDays, wellnessPlanMessage, type PlanVisit } from '@/lib/wellnessPlan'
 import { formatIdr } from '@/lib/money'
+import { trackWhatsApp } from '@/lib/analytics'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { downloadText } from '@/lib/downloadText'
 
@@ -63,7 +64,7 @@ export default function WellnessSchedule() {
       <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
     </aside>
     {review && <section className="plan-review" aria-label="Review schedule enquiry">
-      <Eyebrow>Ready for your coordinator</Eyebrow><h2 ref={reviewHeading} tabIndex={-1}>Your schedule enquiry.</h2><p>Review the details, then open WhatsApp to send your request. This planner does not process payment, save a health record or confirm a booking.</p><pre>{message}</pre><div className="cluster"><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-primary">Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
+      <Eyebrow>Ready for your coordinator</Eyebrow><h2 ref={reviewHeading} tabIndex={-1}>Your schedule enquiry.</h2><p>Review the details, then open WhatsApp to send your request. This planner does not process payment, save a health record or confirm a booking.</p><pre>{message}</pre><div className="cluster"><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-primary" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
     </section>}
   </div>
 }

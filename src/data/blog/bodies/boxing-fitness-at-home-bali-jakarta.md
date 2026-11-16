@@ -8,7 +8,7 @@ Pad-only means the professional holds pads and you hit them with an agreed patte
 
 The published rate is for 60 minutes and one participant. Extra people are not a casual add-on on this session. If two of you want to train, that is two quotes or a different session such as [personal training](/personal-training) where an extra person can be billed. Do not assume a villa group can share pads in one hour. The floor and the insurance line will not stretch that far.
 
-A click is not a booking. A photo of gloves is not a space check. A WhatsApp “yes” from a coach you found elsewhere is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation.
+A photo of gloves is not a space check. A WhatsApp “yes” from a coach you found elsewhere is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation.
 
 ## Space, noise and what we will refuse
 

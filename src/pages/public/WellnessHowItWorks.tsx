@@ -28,9 +28,9 @@ const pageFaqs = [
 export default function WellnessHowItWorks() {
   return (
     <>
-      <StructuredData data={howToJsonLd('How to book a personal trainer at home in Bali or Jakarta', 'Eight steps from the first WhatsApp to aftercare. A click is not a booking. Only a written quote plus verified payment confirms the hour.', steps)} />
+      <StructuredData data={howToJsonLd('How to book a personal trainer at home in Bali or Jakarta', 'Eight steps from the first WhatsApp to aftercare. A written quote plus verified payment confirms the hour at your villa or home.', steps)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
-      <PageIntro eyebrow="How it works" title="A click is not a booking." description="Eight steps from the first message to aftercare. The website can estimate a starting price. Only a written quote plus verified payment confirms the session at your villa or home.">
+      <PageIntro eyebrow="How it works" title="How a private session is confirmed." description="Eight steps from the first message to aftercare. We match a professional, send a written quote, then confirm the hour at your villa or home after payment is verified.">
         <div className="cluster">
           <Link to="/contact" className="button button-primary">Start at step one<ArrowUpRight size={16} /></Link>
           <Link to="/pricing" className="button button-outline">See session prices</Link>

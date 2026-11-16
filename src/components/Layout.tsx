@@ -1,7 +1,8 @@
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, useLocation } from 'react-router'
-import { pageMetadata } from '@/lib/metadata'
+import { hreflangFor, pageMetadata } from '@/lib/metadata'
+import { installAnalytics, trackWhatsApp } from '@/lib/analytics'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, SITE_ORIGIN } from '@/data/company'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
@@ -62,11 +63,21 @@ export default function Layout({ children }: { children: ReactNode }) {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
     setMenuOpen(false)
-    const { title, description, canonical, noindex, image, imageAlt, imageWidth, imageHeight, region, placename } = pageMetadata(pathname)
+    const { title, description, canonical, noindex, image, imageAlt, imageWidth, imageHeight, region, placename, htmlLang, locale } = pageMetadata(pathname)
     document.title = title
+    document.documentElement.lang = htmlLang
     document.querySelector('meta[name="description"]')?.setAttribute('content', description)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
-    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((node) => node.setAttribute('href', canonical))
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((node) => node.remove())
+    const canonicalLink = document.querySelector('link[rel="canonical"]')
+    hreflangFor(pathname).forEach((tag) => {
+      const link = document.createElement('link')
+      link.rel = 'alternate'
+      link.hreflang = tag.hreflang
+      link.href = tag.href
+      canonicalLink?.parentNode?.insertBefore(link, canonicalLink)
+    })
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', locale)
     document.querySelector('meta[name="geo.region"]')?.setAttribute('content', region)
     document.querySelector('meta[name="geo.placename"]')?.setAttribute('content', placename)
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
@@ -82,6 +93,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', SITE_ORIGIN + image)
     document.querySelector('meta[name="twitter:image:alt"]')?.setAttribute('content', imageAlt)
     document.querySelector('meta[name="robots"]')?.setAttribute('content', noindex ? 'noindex, follow' : 'index, follow')
+    installAnalytics()
   }, [pathname])
 
   useEffect(() => {
@@ -138,7 +150,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             ))}
             <div className="mobile-nav-cta">
               <Link to="/contact" className="button button-primary" onClick={() => setMenuOpen(false)}>Check availability<ArrowUpRight size={16} /></Link>
-              <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer">WhatsApp {WHATSAPP_DISPLAY}</a>
+              <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('mobile_menu')}>WhatsApp {WHATSAPP_DISPLAY}</a>
               <a className="button button-outline" href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>
             </div>
           </nav>
@@ -158,6 +170,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
             </p>
             <p className="footer-address"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
+            <p className="footer-address"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
             <Link to="/contact" className="text-link">Check availability<ArrowUpRight size={15} /></Link>
           </div>
           <div>

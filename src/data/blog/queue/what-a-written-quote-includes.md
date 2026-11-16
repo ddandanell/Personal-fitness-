@@ -10,7 +10,7 @@ Starting prices live on [pricing](/pricing): personal training from Rp 900.000 i
 
 If a line is not on the quote, it is not assumed. Venue hire, parking and unusual equipment appear only when written.
 
-A click is not a booking. The eight steps on [how it works](/how-it-works) put the quote at step four, after qualification and supply, before payment.
+The eight steps on [how it works](/how-it-works) put the quote at step four, after qualification and supply, before payment.
 
 ## What the quote is not
 

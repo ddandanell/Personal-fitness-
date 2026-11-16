@@ -8,7 +8,7 @@ Outer-zone means the published Bali personal training rate does not already incl
 
 The hour is one person at Rp 900.000 plus travel. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is not discounted on [programmes](/programmes). Session charges can be.
 
-A click is not a booking. A jungle path is not a studio. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
+A jungle path is not a studio. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
 ## Access, floor and permission
 

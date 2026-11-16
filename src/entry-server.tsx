@@ -9,7 +9,7 @@ import { blogPosts } from './data/blog'
 import { resources } from './data/content'
 import { HELD_SERVICE_SLUGS, indexableStaticPaths } from './data/publicOffer'
 import { pageMetadata } from './lib/metadata'
-export { pageMetadata } from './lib/metadata'
+export { pageMetadata, hreflangFor } from './lib/metadata'
 
 export function staticRoutes() {
   const paths = new Set([...indexableStaticPaths, '/410', ...HELD_SERVICE_SLUGS.map((slug) => '/' + slug)])

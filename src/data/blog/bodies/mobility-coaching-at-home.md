@@ -8,7 +8,7 @@ Mobility coaching is assisted stretching and movement practice. The professional
 
 The published rate is for 60 minutes. Extra people are billed. Unlike [private yoga](/private-yoga), a second person is not included. If two of you want to stretch, the extra-person line is Rp 250.000 in Bali and Rp 275.000 in Jakarta, and the floor still has to hold both of you without a walkway fight.
 
-A click is not a booking. A video of someone folding in half is not a session plan. A WhatsApp “can you fix my back” is a reason to stop and send you to a clinician. PersonalFitness.id owns the request, the match, the quote and the confirmation.
+A video of someone folding in half is not a session plan. A WhatsApp “can you fix my back” is a reason to stop and send you to a clinician. PersonalFitness.id owns the request, the match, the quote and the confirmation.
 
 ## What it is not
 

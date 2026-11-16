@@ -50,6 +50,8 @@ for (const record of manifest) {
   if (record.noindex) assert.ok(html.includes('noindex, follow'), record.path + ': expected noindex')
   assert.ok(!html.includes('AI-generated'))
   assert.ok(!html.toLowerCase().includes('illustrative profile'))
+  assert.ok(!html.toLowerCase().includes('generated illustration'))
+  assert.ok(!html.includes('Illustrative session image'))
   assert.ok(!html.includes('140 service'))
   assert.ok(!html.includes('53 service'))
 }
@@ -83,7 +85,7 @@ try {
   assert.equal(estimateWellnessPlan({ ...plan, visits: withMassage }).invalid, true)
   assert.ok(!manifest.some((item) => item.path === '/professionals' || item.path.startsWith('/professionals/')))
   assert.ok(!manifest.some((item) => item.path === '/reviews' || item.path === '/wellness-plan'))
-  for (const route of ['/', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta', '/jakarta/kemang', '/jakarta/menteng', '/jakarta/kelapa-gading', '/jakarta/pik', '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
+  for (const route of ['/', '/id', '/services', '/personal-training', '/programmes', '/villa-hotel-partners', '/how-it-works', '/410', '/jakarta/north-jakarta', '/jakarta/kemang', '/jakarta/menteng', '/jakarta/kelapa-gading', '/jakarta/pik', '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing']) assert.ok(manifest.some((item) => item.path === route), route + ' must be prerendered')
   const home = manifest.find((item) => item.path === '/')
   assert.equal(home.noindex, false)
   const boxing = manifest.find((item) => item.path === '/boxing-fitness')

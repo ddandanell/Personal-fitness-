@@ -8,7 +8,7 @@ Beginner means you have not practised, or you are returning after a long gap, or
 
 The published pair rate includes two people. Tell us if one of you is new and the other is not. The session can still run. The cues change. What we will not do is charge for one hour and teach two incompatible classes. Bali villa pairs are covered in [private yoga in Bali](/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained). Jakarta apartments are covered in [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing).
 
-A click is not a booking. A beginner discount is not a product we hide. There is no free intro hour. The first visit is the published rate, quoted in writing.
+A beginner discount is not a product we hide. There is no free intro hour. The first visit is the published rate, quoted in writing.
 
 ## Space, heat and permission
 

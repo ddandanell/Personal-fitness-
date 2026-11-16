@@ -8,7 +8,7 @@ Pad-only means the professional holds pads and you hit them with an agreed patte
 
 The published Jakarta rate is Rp 1.050.000 for 60 minutes, one participant, in-zone. Extra people are not a casual add-on. If two of you want to train, that is two quotes or [personal training](/jakarta/personal-training) where an extra person can be billed. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 
-A click is not a booking. A photo of gloves is not a space check.
+A photo of gloves is not a space check.
 
 ## Noise, ceiling and the lobby
 

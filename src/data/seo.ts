@@ -52,8 +52,24 @@ const hubs: SeoRecord[] = [
       { to: '/bali', label: 'Private fitness in Bali' },
       { to: '/jakarta', label: 'Home personal training in Jakarta' },
       { to: '/resources', label: 'Private fitness guides' },
+      { to: '/id', label: 'Personal trainer datang ke rumah' },
     ],
     crumbs: [HOME],
+  },
+  {
+    path: '/id',
+    primaryKeyword: 'personal trainer datang ke rumah',
+    title: 'Personal Trainer Datang ke Rumah di Bali dan Jakarta',
+    description: 'Personal trainer datang ke villa atau rumah di Bali dari Rp 900.000 dan Jakarta dari Rp 950.000. Yoga, Pilates, boxing, dan meditasi privat. Kutipan tertulis sebelum bayar.',
+    group: 'page', lastmod: '2026-11-16',
+    related: [
+      { to: '/', label: 'English homepage' },
+      { to: '/pricing', label: 'Harga sesi' },
+      { to: '/bali', label: 'Personal trainer Bali' },
+      { to: '/jakarta', label: 'Personal trainer Jakarta' },
+      { to: '/contact', label: 'Cek ketersediaan' },
+    ],
+    crumbs: [{ to: '/id', label: 'Bahasa Indonesia' }],
   },
   {
     path: '/services',
@@ -173,7 +189,7 @@ const hubs: SeoRecord[] = [
     path: '/how-it-works',
     primaryKeyword: 'how to book a personal trainer at home Bali',
     title: 'How to Book a Personal Trainer at Home',
-    description: 'Eight steps from WhatsApp to aftercare: enquiry, match, written quote, payment and the session at your villa or home in Bali or Jakarta. A click is not a booking.',
+    description: 'Eight steps from WhatsApp to aftercare: enquiry, match, written quote, payment and the session at your villa or home in Bali or Jakarta.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/contact', label: 'Check availability' },

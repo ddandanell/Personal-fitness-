@@ -1,3 +1,4 @@
+import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 
 function WhatsAppMark() {
@@ -18,6 +19,7 @@ export default function WhatsAppFloat() {
       href={whatsappDraftUrl()}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsApp('float')}
       aria-label={`Chat on WhatsApp at ${WHATSAPP_DISPLAY}`}
     >
       <WhatsAppMark />

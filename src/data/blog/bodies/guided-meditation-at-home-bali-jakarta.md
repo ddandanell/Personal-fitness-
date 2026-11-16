@@ -8,7 +8,7 @@ The professional guides a sit matched to the brief you approved: beginners, retu
 
 The session is fitness-adjacent stillness. It is not psychotherapy. It is not a medical assessment. It is not a promise that anxiety, insomnia or grief will resolve in 60 minutes. If you need a clinician, stop and speak to one. Do not send diagnosis letters in WhatsApp. We will not relabel treatment as meditation to take the payment.
 
-A click is not a booking. A spa menu screenshot is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation. You do not pick from a public directory of teachers.
+A spa menu screenshot is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation. You do not pick from a public directory of teachers.
 
 ## Space, sound and household rules
 

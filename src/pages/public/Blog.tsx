@@ -9,6 +9,7 @@ import { ArticleBody } from '@/lib/articleMarkup'
 import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { EditorialPhoto, pageImage, responsiveSource } from '@/components/EditorialPhoto'
 import { collectionJsonLd } from '@/lib/schema'
+import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
@@ -117,7 +118,7 @@ export function BlogArticle() {
               <div className="cluster">
                 <Link to={post.landingPage} className="button button-dark">Explore this service<ArrowUpRight size={16} /></Link>
                 <Link to="/contact" className="button button-outline">Check availability</Link>
-                <a className="button button-primary" href={whatsappDraftUrl(`Hello PersonalFitness.id. I read “${post.title}” and I would like to check a session.`)} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+                <a className="button button-primary" href={whatsappDraftUrl(`Hello PersonalFitness.id. I read “${post.title}” and I would like to check a session.`)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('article')}>WhatsApp us</a>
               </div>
             </div>
           </article>

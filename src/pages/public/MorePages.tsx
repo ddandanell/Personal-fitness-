@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
 import { CtaBand, LocationClusters, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
+import WhyTheRate from '@/components/WhyTheRate'
 import WellnessSchedule from '@/components/WellnessSchedule'
 import { DirectoryPlanningGuide } from '@/components/DirectoryPlanningGuide'
 import { areas, cancellationRules, extraPersonFee } from '@/data/catalog'
@@ -16,6 +17,7 @@ import StructuredData from '@/components/StructuredData'
 import { collectionJsonLd, contactPageJsonLd, faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
 import { estimateQuote } from '@/lib/quote'
+import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import NotFound from './NotFound'
 
@@ -320,7 +322,7 @@ export function PricingPage() {
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />A number on this page is not a booking. Confirmation follows a written quote.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />The estimator shows a starting total. The written quote is what you pay.</p>
           </div>
           <ParallaxImage src="/images/editorial/pricing.webp" alt="Instructor discussing the appointment details with adult clients" eager className="hero-session-image" />
         </div>
@@ -365,6 +367,8 @@ export function PricingPage() {
           </div>
         </div>
       </section>
+
+      <WhyTheRate />
 
       <section className="section section-light">
         <div className="shell">
@@ -534,7 +538,7 @@ export function ContactPage() {
             <div>
               <p className="eyebrow">WhatsApp</p>
               <p className="office-phone">{WHATSAPP_DISPLAY}</p>
-              <a className="button button-primary" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer">Open WhatsApp<ArrowUpRight size={16} /></a>
+              <a className="button button-primary" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('contact')}>Open WhatsApp<ArrowUpRight size={16} /></a>
             </div>
             <div>
               <p className="eyebrow">Email</p>
@@ -657,7 +661,7 @@ const legalCopy = {
     cta: 'Suggest a correction',
     blocks: [
       ['Sources', 'Session rates come from the operating workbook. Area travel fees are the published cluster rules. Named public profiles are not part of the live site.'],
-      ['Illustrative images', 'Some session images are generated illustrations showing the type of private coaching we coordinate. They do not identify actual staff, customers, properties or guaranteed local availability. The professional and appointment details are confirmed with your booking.'],
+      ['Session photographs', 'Photographs show the type of private coaching we coordinate. They do not identify the professional who will arrive, a customer, a property or guaranteed local availability. The person who attends is named on your written quote.'],
       ['Corrections', 'If a price, area or name is wrong, the page is updated and the quote template follows. We do not leave a cheaper number on a banner than operations will honour.'],
       ['AI assistance', 'Copy may be drafted with AI. Release still needs a human pass for prices, safety and legal pages.'],
     ],

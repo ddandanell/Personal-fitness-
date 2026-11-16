@@ -3,6 +3,7 @@ import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
+import WhyTheRate from '@/components/WhyTheRate'
 import { publicServices, sessionPhoto } from '@/data/publicOffer'
 import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
@@ -19,6 +20,7 @@ const steps = [
 const homeFaqs = [
   faqs.find((pair) => pair[0].includes('book a personal trainer')),
   faqs.find((pair) => pair[0] === 'How much does a session cost?'),
+  faqs.find((pair) => pair[0].includes('more expensive')),
   faqs.find((pair) => pair[0].includes('enquiry reserve')),
   faqs.find((pair) => pair[0].includes('Bali areas')),
   faqs.find((pair) => pair[0].includes('boxing at a villa')),
@@ -40,7 +42,7 @@ export default function Home() {
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
               <Link to="/bali/personal-training" className="button button-outline-light">Bali personal training</Link>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />A click is not a booking. Confirmation follows a written quote.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />A coordinator matches a professional. You confirm on a written quote.</p>
           </div>
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
@@ -65,6 +67,22 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-light">
+        <div className="shell split-feature">
+          <div>
+            <Eyebrow>What the hour is for</Eyebrow>
+            <h2>You train in your villa or home, with one professional in the room.</h2>
+            <p className="large-copy">The result is a private 60-minute session at the address you already have: coached training, yoga, Pilates, mobility, pad-only boxing or a quiet sit. You leave with a completed hour, not a class pack, a meal plan or a clinical diagnosis.</p>
+            <p>The professional is named on the quote after a match for the session, cluster and window. There is no public trainer directory and no stock of invented reviews on this site. Read <TextLink to="/professional-standards">matching standards</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
+          </div>
+          <ul className="check-list large-list">
+            {['Company-managed matching, not a freelance marketplace', 'Named professional on the written quote', 'Backup cover if supply changes before confirmation', 'WhatsApp +62 811-3803-488 and hallo@personalfitness.id', 'Denpasar office is administration, not a walk-in studio'].map((item) => (
+              <li key={item}><Check size={19} />{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -103,6 +121,8 @@ export default function Home() {
           <QuoteEstimator />
         </div>
       </section>
+
+      <WhyTheRate />
 
       <section className="section">
         <StructuredData data={faqJsonLd(homeFaqs)} />

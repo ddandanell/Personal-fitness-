@@ -8,7 +8,7 @@ In-zone means the published 60-minute personal training rate already includes tr
 
 The hour is one person at Rp 900.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Yoga in the same villa is a different product: [private yoga in Bali](/private-yoga) includes two people in the published rate. Do not mix those rules in one WhatsApp sentence.
 
-A click is not a booking. A villa Instagram that says “we can arrange a trainer” is not this service. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
+A villa Instagram that says “we can arrange a trainer” is not this service. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
 ## Compact villas, heat and permission
 

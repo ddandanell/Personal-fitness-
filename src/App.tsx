@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router'
 import Layout from '@/components/Layout'
 import Home from '@/pages/public/Home'
+import IndonesianHome from '@/pages/public/IndonesianHome'
 import ServiceGate from '@/pages/public/ServiceGate'
 import Gone from '@/pages/public/Gone'
 import NotFound from '@/pages/public/NotFound'
@@ -15,6 +16,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/id" element={<IndonesianHome />} />
         <Route path="/410" element={<Gone />} />
         <Route path="/services" element={<ServicesHub />} />
         <Route path="/services/:slug" element={<ServiceGate />} />

@@ -8,7 +8,7 @@ In-zone means the published 60-minute personal training rate already includes tr
 
 The hour is one person at Rp 950.000. Extra people add Rp 275.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are quoted after a timing check, with travel or a decline.
 
-A click is not a booking. A building gym with other residents walking through is not a private hour unless you have written permission and a door that can close.
+A building gym with other residents walking through is not a private hour unless you have written permission and a door that can close.
 
 ## Lobby, floor and permission
 

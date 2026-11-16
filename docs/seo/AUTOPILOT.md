@@ -11,13 +11,25 @@ The daily maintenance task performs actual implementation and publication. It ch
 1. Open a current checkout, inspect the remote head and any unfinished run or open changes. Resume incomplete publication before adding content. Use connected query, traffic and enquiry data if available. Record unavailable sources without inventing metrics or purchasing units.
 2. Review the inventory and select one underserved service or genuine local planning question. Record the distinct informational query, commercial owner, relevant existing location and the intent excluded to protect its owner. Add a new keyword-lock entry without moving an existing owner.
 3. Create an original useful guide with accurate current business facts, clear headings, contextual owner and location links, relevant FAQs and a direct next step. Prefer practical session selection and coordination topics over unsupported medical claims. Preserve the 1,000-word minimum for queued guides and all existing location pages. No copied or city-swapped content.
-4. Generate a distinct relevant image showing Indonesian adult instructors and international adult clients. Inspect the result. Save a 1440-pixel WebP and 640-pixel variant in public/images/editorial. Add the route to src/data/page-images.json with accurate alt text and dimensions. Preserve the visible illustrative-image disclosure. Never portray generated people as actual confirmed professionals.
+4. Generate a distinct relevant image showing Indonesian adult instructors and international adult clients. Inspect the result. Save a 1440-pixel WebP and 640-pixel variant in public/images/editorial. Add the route to src/data/page-images.json with accurate alt text and dimensions. Do not label the public site as AI-generated or illustrative. Never portray generated people as named staff.
 5. Add the article record and body to src/data/blog/queue and its lock before publication. The queue publisher validates ownership, a contextual commercial link, original image paths, image existence and at least 1,000 words. Keep a buffer of seven useful queued articles where feasible. Do not create seven repetitive articles just to fill it.
 6. Run npm run publish:next. It uses Asia/Makassar and publishes at most once per date. If that date is already released, keep the new guide queued. An empty queue is an error, not a successful silent stop.
 7. Run npm run check:release. It builds complete HTML, verifies content and pricing cases, checks every link and asset and audits metadata, schema parsing, self canonicals, sitemap inclusion, unique primary images and every location's minimum main-content count.
 8. Review the diff. Refresh remote main and integrate concurrent changes without overwriting them. Commit and push the tested source and a dated run note. main is the existing production branch. If protection requires a PR, create and merge one only after its actual required checks; do not bypass protection.
 9. Observe GitHub's Vercel status for the exact commit. Run npm run verify:live -- <published-SHA> after deployment; it checks the revision, 41 public location routes, homepage, new guide, image variants and sitemap. The connected Vercel project may not be visible to this session, so do not create another project. Verify production /build-info.json matches the commit, then fetch changed routes, canonical, robots, image and sitemap. Check representative mobile and desktop layouts without sending live enquiries.
 10. Record the actual result, URLs, commit, checks, queue balance, data limitations and next action. If publication fails, retain the tested change and report the exact failure. Make at most two focused repairs; revert only this run's faulty work when needed.
+
+## Standing conversion and trust work
+
+Each daily run should also take one lock-safe item from this list, in order, without inventing reviews, credentials, Instagram, NIB, clinical results or a Google Business Profile that does not exist:
+
+1. Trust that is true: company-managed matching, named professional on the quote, coordinator, backup, WhatsApp, email, Denpasar office-as-office. No fake reviews or AggregateRating.
+2. Explain the published rate versus cheaper freelance Bali hours. Keep the no-free-intro fact.
+3. Reduce defensive repetition. Keep one confirmation line and one meditation-is-not-therapy line on the service page.
+4. WhatsApp click events (`whatsapp_click`) plus GA4 when `VITE_GA_MEASUREMENT_ID` is set in Vercel. Missing GA4 is unavailable evidence, not zero traffic.
+5. Indonesian coverage: `/id` owns `personal trainer datang ke rumah`. Add further ID money pages only with unique copy and return hreflang.
+6. Area uniqueness: keep every location page above 1,000 main words with local access notes, not city-swapped padding.
+7. Operator tasks that code cannot invent: create/claim Google Business Profile as a service-area business (not a walk-in studio), connect Search Console, add the GA4 measurement ID, collect consented guest notes if they exist. Record these as blocked until the owner supplies them.
 
 ## Backup publisher
 

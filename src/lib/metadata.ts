@@ -40,6 +40,8 @@ export function pageMetadata(pathname: string) {
   const placename = region === 'ID-JK' ? 'Jakarta' : region === 'ID-BA' ? 'Bali' : 'Bali and Jakarta'
   return {
     title: title + ' | PersonalFitness.id',
+    htmlLang: pathname === '/id' ? 'id' : 'en',
+    locale: pathname === '/id' ? 'id_ID' : 'en_ID',
     description,
     canonical: SITE_ORIGIN + (canonicalPath === '/' ? '/' : canonicalPath),
     noindex,
@@ -50,4 +52,19 @@ export function pageMetadata(pathname: string) {
     region,
     placename,
   }
+}
+
+export function hreflangFor(pathname: string) {
+  if (pathname === '/' || pathname === '/id') {
+    return [
+      { hreflang: 'en-ID', href: SITE_ORIGIN + '/' },
+      { hreflang: 'id-ID', href: SITE_ORIGIN + '/id' },
+      { hreflang: 'x-default', href: SITE_ORIGIN + '/' },
+    ]
+  }
+  const canonical = SITE_ORIGIN + (seoCanonical(pathname) === '/' ? '/' : seoCanonical(pathname))
+  return [
+    { hreflang: 'en-ID', href: canonical },
+    { hreflang: 'x-default', href: canonical },
+  ]
 }
