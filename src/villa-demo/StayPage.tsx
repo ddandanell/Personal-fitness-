@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 import { formatIdr } from '@/lib/money'
-import { getVilla, services, trainers } from './data'
+import { CONCIERGE_LINE, POLICY_LINE, getVilla, services, trainers, travelFee } from './data'
 import { DemoLink } from './shell'
 
 export default function StayPage() {
@@ -25,11 +25,12 @@ export default function StayPage() {
           <p className="kicker">In-villa wellness · {villa.area}</p>
           <h1>{villa.name}</h1>
           <p className="lede" style={{ marginTop: 16 }}>{villa.line} The current sample stay is {villa.stay}. Scan the card in the room, choose an hour, and the request is added to the stay.</p>
-          <p className="quiet">{villa.bedrooms} bedrooms · the trainer comes to the house</p>
+          <p className="quiet">{villa.bedrooms} bedrooms · a vetted instructor comes to the house. {CONCIERGE_LINE}</p>
+          {travelFee(villa.slug) > 0 && <p className="quiet">Uluwatu is an outer area. Travel is a flat fee of Rp 50.000–100.000.</p>}
           <div className="mobile-bar">
             <div>
               <p className="quiet">From</p>
-              <strong>{formatIdr(800000)}</strong>
+              <strong>{formatIdr(1050000)}</strong>
             </div>
             <DemoLink to={`/book?villa=${villa.slug}&service=private-yoga`} className="btn">Request an hour</DemoLink>
           </div>
@@ -63,9 +64,9 @@ export default function StayPage() {
           <div className="rail-head">
             <div>
               <p className="kicker">People who come to the house</p>
-              <h2>Sample trainers.</h2>
+              <h2>Sample instructors.</h2>
             </div>
-            <p className="quiet">Names and scores are invented. The person who arrives is named on the written quote.</p>
+            <p className="quiet">Names and scores are invented. The instructor who arrives is named when the hour is confirmed. {POLICY_LINE}</p>
           </div>
           <div className="trainer-rail">
             {trainers.map((trainer) => (

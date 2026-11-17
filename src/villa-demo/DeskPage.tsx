@@ -1,6 +1,6 @@
 import { useMemo, useState, type FormEvent } from 'react'
 import { formatIdr } from '@/lib/money'
-import { bookableDates, formatDay, getService, getTrainer, getVilla, services, sessionTotal, trainers, trainersFor, villas, weekDays, type Booking, type Schedule } from './data'
+import { CONCIERGE_LINE, POLICY_LINE, bookableDates, formatDay, getService, getTrainer, getVilla, packs, quoteTotal, services, trainers, trainersFor, villas, weekDays, type Booking, type PackId, type Schedule } from './data'
 import { demoHref } from './host'
 import { DemoLink } from './shell'
 import { useDemoState } from './demo-state'
@@ -97,7 +97,9 @@ function DeskBook() {
   const [trainerSlug, setTrainerSlug] = useState(roster[0]?.slug ?? '')
   const [date, setDate] = useState(bookableDates[0])
   const [time, setTime] = useState('08:00')
-  const [people, setPeople] = useState(service.included)
+  const [people, setPeople] = useState(1)
+  const [packId, setPackId] = useState<PackId>('single')
+  const quote = quoteTotal(packId, people, villaSlug)
   const [guest, setGuest] = useState('')
   const [done, setDone] = useState<Booking | null>(null)
   const [error, setError] = useState('')
@@ -114,7 +116,8 @@ function DeskBook() {
       date,
       time,
       people,
-      total: sessionTotal(service.slug, people),
+      total: quote.total,
+      packId,
       status: 'confirmed',
       chargeToStay: true,
       note: 'Placed from the desk.',
@@ -128,7 +131,7 @@ function DeskBook() {
   return (
     <form onSubmit={submit}>
       <p className="kicker">Place an hour</p>
-      <h1>Book a trainer for a guest.</h1>
+      <h1>Book an instructor for a guest.</h1>
       <p className="lede" style={{ margin: '12px 0 18px' }}>The request lands on the coming-up list for this browser only.</p>
       {done && <p className="success">{done.id} is on the desk for {getVilla(done.villa)?.name}. <a href={demoHref('/desk')}>See today.</a></p>}
       <div className="panel">
@@ -137,26 +140,31 @@ function DeskBook() {
         </label>
         <label className="field"><span>Guest</span><input value={guest} onChange={(event) => setGuest(event.target.value)} placeholder="Name on the stay" /></label>
         <label className="field"><span>Session</span>
-          <select value={service.slug} onChange={(event) => { setServiceSlug(event.target.value); const next = trainersFor(event.target.value); setTrainerSlug(next[0]?.slug ?? ''); setPeople(getService(event.target.value)?.included ?? 1) }}>
+          <select value={service.slug} onChange={(event) => { setServiceSlug(event.target.value); const next = trainersFor(event.target.value); setTrainerSlug(next[0]?.slug ?? ''); setPeople(1) }}>
             {services.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}
           </select>
         </label>
-        <label className="field"><span>Trainer</span>
+        <label className="field"><span>Instructor</span>
           <select value={trainerSlug} onChange={(event) => setTrainerSlug(event.target.value)}>{roster.map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}</select>
         </label>
         <label className="field"><span>Day</span>
           <select value={date} onChange={(event) => setDate(event.target.value)}>{bookableDates.map((item) => <option key={item} value={item}>{formatDay(item)}</option>)}</select>
         </label>
         <label className="field"><span>Time</span><input value={time} onChange={(event) => setTime(event.target.value)} placeholder="07:00" /></label>
-        <div className="field"><span>People · up to {service.max}</span>
+        <label className="field"><span>Pack</span>
+          <select value={packId} onChange={(event) => setPackId(event.target.value as PackId)}>{packs.map((item) => <option key={item.id} value={item.id}>{item.popular ? `${item.label} · most popular` : item.label} · {formatIdr(item.perSession)} a session</option>)}</select>
+        </label>
+        <div className="field"><span>Guests · second guest Rp 250.000 a session</span>
           <div className="stepper">
-            <button type="button" onClick={() => setPeople((value) => Math.max(1, value - 1))} aria-label="Fewer people">−</button>
+            <button type="button" onClick={() => setPeople((value) => Math.max(1, value - 1))} aria-label="Fewer guests">−</button>
             <strong>{people}</strong>
-            <button type="button" onClick={() => setPeople((value) => Math.min(service.max, value + 1))} aria-label="More people">+</button>
+            <button type="button" onClick={() => setPeople((value) => Math.min(2, value + 1))} aria-label="More guests">+</button>
           </div>
         </div>
+        {quote.travel > 0 && <p className="quiet">Uluwatu travel, flat fee within Rp 50.000–100.000. This sample uses {formatIdr(quote.travel)}.</p>}
+        <p className="quiet">{CONCIERGE_LINE} {POLICY_LINE}</p>
         {error && <p className="form-error">{error}</p>}
-        <div className="total-line"><span>Stay charge</span><strong>{formatIdr(sessionTotal(service.slug, people))}</strong></div>
+        <div className="total-line"><span>Stay charge</span><strong>{formatIdr(quote.total)}</strong></div>
         <button className="btn" type="submit">Add to the stay</button>
       </div>
     </form>
@@ -166,7 +174,7 @@ function DeskBook() {
 function Schedules() {
   const state = useDemoState()
   const [name, setName] = useState('Evening stretch')
-  const [serviceSlug, setServiceSlug] = useState('mobility-coaching')
+  const [serviceSlug, setServiceSlug] = useState('bodywork-recovery')
   const [time, setTime] = useState('17:30')
   const [days, setDays] = useState<string[]>(['Tue', 'Thu'])
   const [selected, setSelected] = useState<string[]>(['pavilion-echo'])
@@ -236,7 +244,7 @@ function Roster() {
   return (
     <>
       <p className="kicker">Who can be sent</p>
-      <h1>The roster for these houses.</h1>
+      <h1>Vetted instructors for these houses.</h1>
       <div className="roster-grid" style={{ marginTop: 22 }}>
         {hours.map(({ trainer }) => (
           <article className="roster-card" key={trainer.slug}>

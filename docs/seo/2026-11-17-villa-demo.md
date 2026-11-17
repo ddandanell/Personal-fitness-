@@ -18,4 +18,4 @@ Search Console and GA4 were not queried. This record is not a traffic claim.
 
 ## Domain
 
-`villademo.personalfitness.id` still needs to be attached to the existing Vercel project. The rewrite itself is in `proxy.js`.
+`villademo.personalfitness.id` still needs to be attached to the existing Vercel project. Host routing is a rewrite in `vercel.json`. The preview rates follow the villa-demo brief: single session Rp 1.050.000, packs down to Rp 800.000 a session, and Uluwatu travel of Rp 50.000–100.000. Guest copy says vetted instructors.
