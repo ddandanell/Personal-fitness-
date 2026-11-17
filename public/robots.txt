@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /villademo
 Sitemap: https://www.personalfitness.id/sitemap.xml
 # Citation file: https://www.personalfitness.id/llms.txt

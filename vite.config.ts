@@ -97,7 +97,7 @@ export default defineConfig({
       devOptions: { enabled: false },
     }),
   ],
-  server: { port: 3000 },
+  server: { port: 3000, allowedHosts: ['villademo.localhost', 'villademo.personalfitness.id'] },
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
   build: {
     rollupOptions: {

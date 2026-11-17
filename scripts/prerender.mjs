@@ -73,7 +73,7 @@ try {
     await fs.writeFile(path.join(dist, name), xml)
     await fs.writeFile(path.join(root, 'public', name), xml)
   }
-  const robots = 'User-agent: *\nAllow: /\nSitemap: https://www.personalfitness.id/sitemap.xml\n# Citation file: https://www.personalfitness.id/llms.txt\n'
+  const robots = 'User-agent: *\nAllow: /\nDisallow: /villademo\nSitemap: https://www.personalfitness.id/sitemap.xml\n# Citation file: https://www.personalfitness.id/llms.txt\n'
   await fs.writeFile(path.join(dist, 'robots.txt'), robots)
   await fs.writeFile(path.join(root, 'public', 'robots.txt'), robots)
   await fs.writeFile(path.join(dist, 'route-manifest.json'), JSON.stringify(manifest, null, 2))

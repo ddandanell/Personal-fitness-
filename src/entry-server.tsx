@@ -9,10 +9,11 @@ import { blogPosts } from './data/blog'
 import { resources } from './data/content'
 import { HELD_SERVICE_SLUGS, indexableStaticPaths } from './data/publicOffer'
 import { pageMetadata } from './lib/metadata'
+import { villaDemoPaths } from './villa-demo/data'
 export { pageMetadata, hreflangFor } from './lib/metadata'
 
 export function staticRoutes() {
-  const paths = new Set([...indexableStaticPaths, '/410', ...HELD_SERVICE_SLUGS.map((slug) => '/' + slug)])
+  const paths = new Set([...indexableStaticPaths, '/410', ...villaDemoPaths(), ...HELD_SERVICE_SLUGS.map((slug) => '/' + slug)])
   for (const area of areas) paths.add('/' + area.city.toLowerCase() + '/' + area.slug)
   for (const article of [...blogPosts, ...resources]) paths.add('/resources/' + article.slug)
   return [...paths].sort().map((path) => ({ path, ...pageMetadata(path) }))
