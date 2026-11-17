@@ -1,3 +1,5 @@
+// Run locally when the guest card changes: node scripts/generate-villa-cards.mjs
+// It needs ffmpeg, which GitHub Actions and Vercel do not provide. Commit the PDFs it writes.
 import { spawnSync } from 'node:child_process'
 import fs from 'node:fs/promises'
 import os from 'node:os'
