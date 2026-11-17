@@ -184,6 +184,7 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
       ? ['Halo PersonalFitness.id, saya mengelola villa dan ingin menu partner.', 'Perusahaan: ' + company.trim(), 'Nama: ' + name.trim(), role.trim() ? 'Jabatan: ' + role.trim() : '', 'WhatsApp: ' + phone.trim(), email.trim() ? 'Email: ' + email.trim() : '', 'Jumlah villa: ' + villas, 'Lokasi: ' + (areas.join(', ') || '—'), start.trim() ? 'Villa mulai: ' + start.trim() : '', 'Ruang 2 matras: ' + mats, 'Bahasa menu: ' + menuLang]
       : ['Hi PersonalFitness.id, I manage villas and want the partner menu.', 'Company: ' + company.trim(), 'Name: ' + name.trim(), role.trim() ? 'Role: ' + role.trim() : '', 'WhatsApp: ' + phone.trim(), email.trim() ? 'Email: ' + email.trim() : '', 'Villas: ' + villas, 'Areas: ' + (areas.join(', ') || '—'), start.trim() ? 'Start with: ' + start.trim() : '', 'Space for 2 yoga mats: ' + mats, 'Guest menu language: ' + menuLang]
     const message = lines.filter(Boolean).join('\n')
+    window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
     setSending(true)
     setNotice('')
     setNoticeTone('')
@@ -202,14 +203,10 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
     if (result.ok) {
       setNoticeTone('success')
       setNotice(lang === 'id' ? `Terkirim. Kami membalas ke ${email.trim()}. Draft WhatsApp juga terbuka.` : `Sent. We will reply to ${email.trim()}. A WhatsApp draft is open as well.`)
-      window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
       return
     }
     setNoticeTone('error')
     setNotice(result.message)
-    if (result.code === 'unavailable' || result.code === 'send_failed' || result.code === 'rate' || result.code === 'forbidden') {
-      window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
-    }
   }
   return (
     <form className="partner-form" onSubmit={submit}>

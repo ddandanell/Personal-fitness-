@@ -60,10 +60,19 @@ function allowedOrigin(origin?: string, referer?: string): boolean {
   if (!candidate) return true
   try {
     const host = new URL(candidate).hostname
-    return host === 'www.personalfitness.id' || host === 'personalfitness.id' || host === 'localhost' || host === '127.0.0.1'
+    return host === 'www.personalfitness.id' || host === 'personalfitness.id' || host === 'localhost' || host === '127.0.0.1' || host.endsWith('.vercel.app')
   } catch {
     return false
   }
+}
+
+function looksLikePaymentCard(message: string): boolean {
+  const redacted = message
+    .split('\n')
+    .filter((line) => !/^\s*(whatsapp|phone|tel|mobile|hp|nomor)\b/i.test(line))
+    .join('\n')
+    .replace(/\+\d[\d\s().-]{6,}\d/g, '')
+  return /\d(?:[ -]?\d){12,}/.test(redacted)
 }
 
 function parseEnquiry(raw: unknown): { ok: true; value: ParsedEnquiry } | { ok: false; code: EnquiryCode; error: string } {
@@ -77,7 +86,7 @@ function parseEnquiry(raw: unknown): { ok: true; value: ParsedEnquiry } | { ok: 
   if (!email) return { ok: false, code: 'invalid_email', error: 'Add a valid email address so we can reply.' }
   const message = String(input.message ?? '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim()
   if (message.length < 10 || message.length > 8000) return { ok: false, code: 'missing_message', error: 'Add the practical details of the request.' }
-  if (/\d(?:[ -]?\d){12,}/.test(message)) return { ok: false, code: 'invalid', error: 'Keep card numbers and long ID numbers out of this message.' }
+  if (looksLikePaymentCard(message)) return { ok: false, code: 'invalid', error: 'Keep card numbers and long ID numbers out of this message.' }
   const page = cleanLine(input.page, 200)
   const safePage = page.startsWith('/') || page.startsWith('https://www.personalfitness.id') || page.startsWith('https://personalfitness.id') ? page : ''
   return {

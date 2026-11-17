@@ -85,6 +85,29 @@ try {
   })
   assert.equal(injected.status, 400)
 
+  const partnerPhone = await enquiry.handleEnquiry({
+    kind: 'partner',
+    name: 'Sari',
+    email: 'sari@example.com',
+    phone: '+62 812-3456-7890',
+    message: 'Hi PersonalFitness.id, I manage villas in Canggu.\nWhatsApp: +62 812-3456-7890\nCompany: Sari Villas',
+    page: '/villa-hotel-partners',
+  }, {
+    env: {},
+    ip: '203.0.113.60',
+    origin: 'https://personalfitness-git-example.vercel.app',
+    send: async () => {},
+  })
+  assert.equal(partnerPhone.status, 200)
+  const card = await enquiry.handleEnquiry({
+    ...valid,
+    message: 'Please use card 4111 1111 1111 1111 for the session tomorrow morning.',
+  }, { env: {}, ip: '203.0.113.61', origin: 'https://www.personalfitness.id' })
+  assert.equal(card.status, 400)
+  assert.equal(card.body.code, 'invalid')
+  const preview = await enquiry.handleEnquiry(valid, { env: {}, ip: '203.0.113.62', origin: 'https://personalfitness-preview.vercel.app' })
+  assert.equal(preview.status, 503)
+
   const cross = await enquiry.handleEnquiry(valid, {
     env: {},
     ip: '203.0.113.15',
