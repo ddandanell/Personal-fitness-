@@ -4,7 +4,7 @@ Choose the block with your calendar, not with the discount. A three-night villa 
 
 ## What you are actually buying
 
-You are buying a named number of private sessions in a validity window, usually the block length plus a short tail written on the quote. You are buying the same professional where supply allows, with a backup named if not. You are buying the 36-hour reschedule rule inside the block. You are not buying an open gym, unlimited WhatsApp programming, or a meal plan.
+You are buying a named number of private sessions in a validity window, usually the block length plus a short tail written on the quote. You are asking for the same professional where supply allows. A backup is named where available. You are buying the 36-hour reschedule rule inside the block. You are not buying an open gym, unlimited WhatsApp programming, or a meal plan.
 
 The session rate underneath the discount is still the city rate for the service. Bali private strength training is Rp 1.050.000. Jakarta private strength training is Rp 950.000. Yoga and Pilates have their own bases. Travel and extra people still add. The percentage comes off after those lines. Run it on [pricing](/pricing) so you see the total, not a slogan.
 
@@ -43,7 +43,7 @@ Building access must be solved once. A four-week Jakarta block without a standin
 5. Choose the cluster. Do not mix Uluwatu and Canggu and pretend travel is free.
 6. Name a professional if you care. Accept a backup.
 7. Read [refunds](/refunds-rescheduling).
-8. Pay on the merchant link, never in chat.
+8. Pay securely using the payment details in your written quote, never in chat.
 
 If you cannot finish that list, buy one session from the [homepage](/) path and decide after the hour.
 

@@ -38,7 +38,7 @@ If two of you want yoga, the pair rule is in [extra people and pair pricing](/re
 
 Message WhatsApp +62 811-3803-488 or hello@personalfitness.id with five lines: private strength training, Ubud plus the village or road if you know it, house or villa, a two-hour window, and headcount. Add whether the floor is indoor. Add steps or a long path if they exist.
 
-Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep card numbers and medical files out. The sequence sits on [how it works](/how-it-works). Pay only on the merchant link in the written quote.
+Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep card numbers and medical files out. The sequence sits on [how it works](/how-it-works). Pay securely using the payment details in your written quote.
 
 A recurring plan is useful when you want the same days reserved while keeping space for excursions. Start with one paid visit if you have never used the floor.
 

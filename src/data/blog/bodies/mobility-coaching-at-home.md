@@ -46,7 +46,7 @@ A Jakarta yoga hour is a different product. If you wanted a pair session, open [
 
 There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix mobility with training or yoga only after you know the first hour fitted the room.
 
-Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 

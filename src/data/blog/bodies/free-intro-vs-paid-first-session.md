@@ -18,7 +18,7 @@ None of those are a 60-minute private session with a named professional, travel,
 
 ## What you get when you pay first
 
-You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 36-hour line. You get a professional who is being paid for the diary slot, which is how you get a backup when someone is sick. You get a quote you can compare to the second quote, because the number did not change after the handshake.
+You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 36-hour line. You get a professional who is being paid for the diary slot, A backup instructor can be named where available if someone is unwell. You get a quote you can compare to the second quote, because the number did not change after the handshake.
 
 Bali private strength training Rp 1.050.000. Jakarta Rp 950.000. Yoga Rp 850.000 Bali with two people included. Mat Pilates Rp 950.000 Bali. Those are first-session prices and tenth-session prices, before programme percentages.
 

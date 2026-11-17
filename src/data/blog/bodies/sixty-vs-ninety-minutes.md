@@ -30,7 +30,7 @@ Programmes apply about 9.5, 14.3 and 23.8 percent to session charges, including 
 
 We will not split 90 minutes into two services. Yoga plus boxing in one visit is two sessions. We will not treat 90 minutes as physiotherapy. We will not let a late lobby become unpaid overtime. If access ate the hour, the refund rules on [refunds and rescheduling](/refunds-rescheduling) apply; they are not a free extension.
 
-We will not take a card number in WhatsApp +62 811-3803-488 to “lock 90 minutes now”. Pay on the merchant link in the written quote.
+We will not take a card number in WhatsApp +62 811-3803-488 to “lock 90 minutes now”. Pay securely using the payment details in your written quote.
 
 ## How to send the duration in the first message
 

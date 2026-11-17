@@ -521,7 +521,7 @@ export function PricingPage() {
           <div>
             <Eyebrow light>Before you pay</Eyebrow>
             <h2>Cancellation, in one place.</h2>
-            <p>The quote repeats these lines. Pay only through the secure link on the confirmed quote. Never send card numbers, bank details or ID photos in WhatsApp.</p>
+            <p>The quote repeats these lines. Pay securely using the payment details in your written quote. Never send card numbers, bank details or ID photos in WhatsApp.</p>
             <Link to="/refunds-rescheduling" className="text-link">Full refund terms<ArrowUpRight size={15} /></Link>
           </div>
           <div className="meta-table">
@@ -539,7 +539,7 @@ export function ContactPage() {
   return (
     <>
       <StructuredData data={contactPageJsonLd()} />
-      <PageIntro eyebrow="Villa partners" title="Talk to us about your villas." description={`Tell us the areas, how many villas, and the week you want covered. Email ${COMPANY_EMAIL} or use the form. Guests can still check a starting price here, including a personal trainer in Bali on WhatsApp +62 811-3803-488. Nothing is booked until the written quote is accepted.`}>
+      <PageIntro eyebrow="Book" title="Check availability for your session." description={`Send the city, area, session and a two-hour window. Email ${COMPANY_EMAIL} or use the form, or message WhatsApp +62 811-3803-488. Nothing is booked until you accept the written quote.`}>
         <div className="cluster">
           <Link to="/pricing" className="button button-outline">See session prices</Link>
           <Link to="/faq" className="button button-outline">Read the FAQ</Link>
@@ -572,7 +572,7 @@ export function ContactPage() {
           <div className="enquiry-warning contact-warning">
             <div>
               <strong>Keep card numbers, ID photos and medical files out of this message.</strong>
-              <p>Area, window, headcount and a one-line goal are enough. Screening and payment use separate channels.</p>
+              <p>Area, window, headcount and a one-line goal are enough. Payment details are shared in your written quote.</p>
             </div>
           </div>
           <QuoteEstimator />
@@ -608,13 +608,13 @@ export function AboutPage() {
           <h2>Why this exists</h2>
           <p>Villa and home guests in Bali and Jakarta kept asking the same thing: a private hour in the place they already paid for, with a clear price and a person who actually arrives. PersonalFitness.id was built as a company-managed service for that request. You do not pick from a public trainer directory. A coordinator matches the session, cluster and window, then names the professional on a written quote.</p>
           <h2>How coaches are chosen</h2>
-          <p>Matching follows the <Link to="/professional-standards">professional standards</Link>: a published fitness format, a usable private space, and a professional who can honour the window. Backup cover exists if supply changes before confirmation. Photographs on this site show the type of hour we coordinate. They do not identify the person who will walk through your gate. That name sits on the quote. Read the <Link to="/team">team page</Link> for how we publish people only when a real photograph and certification exist.</p>
+          <p>Matching follows the <Link to="/professional-standards">professional standards</Link>: a published fitness format, a usable private space, and a professional who can take the window, as supply allows. A backup instructor is named where available if supply changes before confirmation. Photographs on this site show the type of hour we coordinate. They do not identify the person who will walk through your gate. That name sits on the quote. Read the <Link to="/team">team page</Link> for how we publish people only when a real photograph and certification exist.</p>
           <h2>Where we work</h2>
           <p>Bali in-zone is Canggu and Seminyak. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
           <h2>What we focus on</h2>
-          <p>Six live sessions: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
+          <p>Eight live sessions: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness, guided meditation, bodywork and recovery, and Zumba and dance fitness. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
           <h2>Villa managers</h2>
-          <p>The main growth channel is now villas: put a wellness menu in every property you manage, guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, you earn a commission on every session. There are no sales meetings and no calendar booking. Read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
+          <p>These pages are for the person booking a session. Villa managers who want a menu for the properties they look after can read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -670,7 +670,7 @@ const legalCopy = {
     blocks: [
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
       ['Scope', 'The selected service and written quote define the scope. General fitness and relaxation visits do not include clinical diagnosis or treatment. Clinical or qualified health requests require an appropriately authorised professional and any separate clinical agreement. Swimming requires a suitable permitted pool; chef and equipment requests are itemised separately.'],
-      ['Quotes and payment', 'Nothing is confirmed until the quote is accepted and payment is verified on the merchant link. Chat messages are not settlement.'],
+      ['Quotes and payment', 'Nothing is confirmed until the quote is accepted and payment is confirmed using the details in the written quote. Chat messages are not settlement.'],
       ['Prepaid wellness plans', 'The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; travel, held services, food, rentals and external costs are excluded.'],
       ['Your space', 'You confirm permission to use the villa, home, hotel room or pool. Access failures, unsafe floors and missing permission can stop the session under the refund rules.'],
       ['Liability', 'You participate in physical activity at your own risk within a non-clinical fitness session. We stop work that looks unsafe. We do not accept clinical responsibility we are not qualified to hold.'],
@@ -683,7 +683,7 @@ const legalCopy = {
     cta: 'Ask about a booking',
     blocks: [
       ...cancellationRules.map(([k, v]) => [k, v] as [string, string]),
-      ['Payment route', 'Refunds, if due, go back through the same merchant path. We will not ask you to message a card number to “speed it up”.'],
+      ['Refunds', 'Refunds, if due, are returned to the original payment method where applicable. We will not ask you to message a card number to “speed it up”.'],
     ],
   },
   safety: {

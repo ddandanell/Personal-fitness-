@@ -1,10 +1,10 @@
-A written quote is the document you accept. A website number is a starting price. A WhatsApp “ok” is not settlement. PersonalFitness.id confirms private sessions at villas and homes in published Bali and Jakarta clusters only after you accept the quote and payment is verified on the merchant link. The commercial pages are [contact](/contact), [pricing](/pricing) and [how it works](/how-it-works). This article is the investigation layer: what the quote must name, what it never hides, and how to read it before you pay.
+A written quote is the document you accept. A website number is a starting price. A WhatsApp “ok” is not settlement. PersonalFitness.id confirms private sessions at villas and homes in published Bali and Jakarta clusters only after you accept the quote and payment is confirmed using the details in the written quote. The commercial pages are [contact](/contact), [pricing](/pricing) and [how it works](/how-it-works). This article is the investigation layer: what the quote must name, what it never hides, and how to read it before you pay.
 
 If you searched what you actually pay for a personal trainer at home, start here, not on a screenshot of a rate card.
 
 ## What the quote must name
 
-The quote names the session, the city, the cluster, the duration, the headcount, the session charge, extra-person fees if they apply, travel if it applies, programme reduction if it applies, exclusions, and cancellation. It names that payment is on the merchant link. It does not name a card number for you to type into WhatsApp.
+The quote names the session, the city, the cluster, the duration, the headcount, the session charge, extra-person fees if they apply, travel if it applies, programme reduction if it applies, exclusions, and cancellation. It names that payment details are in the written quote. It does not name a card number for you to type into WhatsApp.
 
 Starting prices live on [pricing](/pricing): private strength training from Rp 1.050.000, yoga from Rp 850.000 and Rp 900.000 with two people included, and the other four live sessions at their published lines. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Extra people are Rp 250.000 in Bali and Rp 250.000 in Jakarta when the session bills them. Ninety minutes add 45 percent of the base.
 
@@ -32,7 +32,7 @@ If any of those seven lines is missing, reply before you pay. Do not send a card
 
 ## Payment and confirmation
 
-Pay only on the merchant link in the quote. WhatsApp +62 811-3803-488 and hello@personalfitness.id are for the request. After payment status is verified, confirmation names the professional, arrival window, access note and preparation list. That is the booking.
+Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 and hello@personalfitness.id are for the request. After payment status is verified, confirmation names the professional, arrival window, access note and preparation list. That is the booking.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is the coordination address, not a place you pay in cash at a desk for a drop-in class.
 
@@ -51,7 +51,7 @@ We will not invent island-wide coverage. We will not relabel rehab as mobility. 
 1. Read the seven lines.
 2. Match them to your villa or apartment.
 3. Refuse to pay in chat.
-4. Use the merchant link.
+4. Use the payment details in your written quote.
 5. Wait for confirmation, not the first tick.
 6. Keep the quote with the access note.
 7. Open [pricing](/pricing) if a number looks new.

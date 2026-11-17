@@ -38,7 +38,7 @@ There is no free intro sit. The first meditation visit is the published rate, qu
 
 Yoga and meditation are neighbours, not the same product. Yoga includes two people and movement. Meditation includes two people and a sit. Do not ask us to fold both into one 60-minute visit. That is two hours.
 
-Pay only on the merchant link in the quote. Never send card numbers in chat. Cancellation follows the written terms on [refunds](/refunds-rescheduling): more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers in chat. Cancellation follows the written terms on [refunds](/refunds-rescheduling): more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 

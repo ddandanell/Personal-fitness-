@@ -24,7 +24,7 @@ Traffic is the second product. A 07:00 request may need the professional on the 
 
 The [pricing page](/pricing) uses the same blocks operations uses. Uluwatu private strength training starts at Rp 1.050.000 plus an outer-area travel fee confirmed in the quote. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A Canggu quote without travel is not an Uluwatu quote.
 
-There is no cliff premium beyond travel. There is no sunrise tax. There is no free intro. Pay only on the merchant link in the written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
+There is no cliff premium beyond travel. There is no sunrise tax. There is no free intro. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
 
 If two of you want yoga on the same deck, that is a different session and a pair rule. Training still bills extra people. See [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 

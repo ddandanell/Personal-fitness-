@@ -45,7 +45,7 @@ That list is more useful than a warm-up video. The [Jakarta apartment setup note
 
 Send WhatsApp with: private strength training, Jakarta, neighbourhood, building type, a two-hour window, headcount, and beginner or returning. Name a preference if you have one. Keep medical files out. Keep card numbers out.
 
-We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 36-hour reschedule line. You pay on the merchant link. You get a confirmation with the person and the access note.
+We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 36-hour reschedule line. Payment details are shared in your written quote. You get a confirmation with the person and the access note.
 
 If you want a month of Tuesdays, read [programmes](/programmes). A single session is the right tool for a test. A four-week block is the right tool if you already know the building will let us in three mornings a week. Pad-only [boxing fitness in Jakarta](/jakarta/boxing-fitness) and [guided meditation in Jakarta](/jakarta/guided-meditation) are separate published hours if that is the better first visit.
 
