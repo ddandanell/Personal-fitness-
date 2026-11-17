@@ -1,0 +1,33 @@
+{
+  "eyebrow": "Your wellness. Your place.",
+  "headline": ["A little more wellness.", "A little more you."],
+  "lede": "Private sessions for individuals, couples and groups, arranged at your villa around the way you want to spend your stay.",
+  "services": [
+    ["Private Strength Training", "Keep your routine, on your terms."],
+    ["Private yoga", "Your space. Your pace. Your practice."],
+    ["Pilates & mobility", "Move with focus and control."],
+    ["Bodywork & Recovery", "An unhurried hour, when the day can slow down."],
+    ["Zumba & Dance Fitness", "An easy, social hour at the house."],
+    ["A quieter hour", "A calm sit on the terrace."]
+  ],
+  "ask": "Ask your villa team to arrange your private wellness experience.",
+  "stayKicker": "Single sessions or a thoughtfully planned stay",
+  "stayHeadline": ["Make it your kind", "of wellness stay."],
+  "stayLede": "Choose one experience or mix your favourites. We help coordinate the right professional, timing and setting for each visit.",
+  "rhythms": [
+    ["An active morning", "Private strength training, Pilates or a yoga practice before the rest of the day begins."],
+    ["A slower afternoon", "Bodywork and recovery, or a quiet hour, when the afternoon can slow down."],
+    ["A well-rounded stay", "Mix movement and relaxation with healthy cooking or a private chef experience."]
+  ],
+  "collectionTitle": "Explore the wider wellness collection",
+  "columns": [
+    ["Move", "Private strength training, yoga, Pilates, mobility, Zumba and dance fitness."],
+    ["Rest", "Bodywork and recovery, and a quieter hour on the terrace."],
+    ["Care", "Nutrition and chefs, beauty, women and family support, adaptive fitness and specialist requests."]
+  ],
+  "arrange": "Arrange your private session",
+  "whatsappDisplay": "+62 811-3703-805",
+  "whatsappHref": "https://wa.me/628113703805",
+  "note": "Please include your villa name. Subject to instructor availability and location confirmation. Free rescheduling up to 12 hours before your session. Sessions are delivered by vetted instructors.",
+  "powered": "Powered by PersonalFitness.id"
+}

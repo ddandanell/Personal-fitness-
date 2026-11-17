@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent } from 'react'
 import { useNavigate, useSearchParams } from 'react-router'
 import { formatIdr } from '@/lib/money'
-import { bookableDates, formatDay, getService, getTrainer, getVilla, services, sessionTotal, trainersFor, villas, type Booking } from './data'
+import { CONCIERGE_LINE, POLICY_LINE, bookableDates, formatDay, getService, getTrainer, getVilla, packs, quoteTotal, services, trainersFor, villas, type Booking, type PackId } from './data'
 import { demoHref } from './host'
 import { useDemoState } from './demo-state'
 
@@ -20,28 +20,28 @@ export default function BookPage() {
   const trainer = getTrainer(trainerSlug) ?? options[0]
   const [date, setDate] = useState(bookableDates[0])
   const [time, setTime] = useState(trainer?.slots[1] ?? trainer?.slots[0] ?? '07:00')
-  const [people, setPeople] = useState(Math.min(service.included, service.max))
+  const [packId, setPackId] = useState<PackId>('pack-5')
+  const [people, setPeople] = useState(1)
   const [guest, setGuest] = useState('')
   const [note, setNote] = useState('')
   const [charge, setCharge] = useState(true)
   const [error, setError] = useState('')
   const villa = getVilla(villaSlug) ?? villas[0]
   const taken = useMemo(() => new Set(state.bookings.filter((item) => item.status !== 'completed').map((item) => `${item.trainer}|${item.date}|${item.time}`)), [state.bookings])
-  const total = sessionTotal(service.slug, people)
+  const quote = quoteTotal(packId, people, villa.slug)
 
   function chooseService(slug: string) {
     setServiceSlug(slug)
-    const next = getService(slug)
     const roster = trainersFor(slug)
     setTrainerSlug(roster[0]?.slug ?? '')
-    setPeople(Math.min(next?.included ?? 1, next?.max ?? 1))
+    setPeople(1)
     setTime(roster[0]?.slots[0] ?? '07:00')
   }
 
   function submit(event: FormEvent) {
     event.preventDefault()
     if (!guest.trim()) { setError('Add the guest name as it should appear on the stay.'); return }
-    if (!trainer) { setError('Choose a trainer from the sample roster.'); return }
+    if (!trainer) { setError('Choose an instructor from the sample roster.'); return }
     const booking: Booking = {
       id: state.nextBookingId(),
       villa: villa.slug,
@@ -51,7 +51,8 @@ export default function BookPage() {
       date,
       time,
       people,
-      total,
+      total: quote.total,
+      packId,
       status: 'requested',
       chargeToStay: charge,
       note: note.trim(),
@@ -66,7 +67,7 @@ export default function BookPage() {
         <div>
           <p className="kicker">{villa.name}</p>
           <h1>Request the hour.</h1>
-          <p className="lede" style={{ marginTop: 14 }}>It is added to {villa.stay}. The preview stops on the confirmation screen. No email leaves this page.</p>
+          <p className="lede" style={{ marginTop: 14 }}>It is added to {villa.stay}. {CONCIERGE_LINE} No email leaves this page.</p>
           <img src={service.image.src} alt={service.image.alt} width={service.image.width} height={service.image.height} style={{ marginTop: 22, height: 240, width: '100%', objectFit: 'cover' }} />
         </div>
         <form className="panel" onSubmit={submit}>
@@ -87,7 +88,7 @@ export default function BookPage() {
             </div>
           </div>
           <div className="field">
-            <span>Trainer</span>
+            <span>Instructor</span>
             <div style={{ display: 'grid', gap: 8 }}>
               {options.map((item) => (
                 <button key={item.slug} type="button" className={item.slug === trainer?.slug ? 'choice is-on' : 'choice'} onClick={() => { setTrainerSlug(item.slug); setTime(item.slots[0]) }}>
@@ -115,11 +116,21 @@ export default function BookPage() {
             </div>
           </div>
           <div className="field">
-            <span>People · up to {service.max}</span>
+            <span>60-minute rate</span>
+            <div className="slot-row">
+              {packs.map((pack) => (
+                <button key={pack.id} type="button" className={pack.id === packId ? 'chip is-on' : 'chip'} onClick={() => setPackId(pack.id)}>
+                  {pack.popular ? '5-Session · popular' : pack.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="field">
+            <span>Guests · a second guest is Rp 250.000 a session</span>
             <div className="stepper">
-              <button type="button" onClick={() => setPeople((value) => Math.max(1, value - 1))} aria-label="Fewer people">−</button>
+              <button type="button" onClick={() => setPeople((value) => Math.max(1, value - 1))} aria-label="Fewer guests">−</button>
               <strong>{people}</strong>
-              <button type="button" onClick={() => setPeople((value) => Math.min(service.max, value + 1))} aria-label="More people">+</button>
+              <button type="button" onClick={() => setPeople((value) => Math.min(2, value + 1))} aria-label="More guests">+</button>
             </div>
           </div>
           <label className="field">
@@ -132,12 +143,14 @@ export default function BookPage() {
           </label>
           <label className="check">
             <input type="checkbox" checked={charge} onChange={(event) => setCharge(event.target.checked)} />
-            <span>Charge this hour to the {villa.name} stay. The written quote still confirms the person and the total.</span>
+            <span>Charge this to the {villa.name} stay. {CONCIERGE_LINE}</span>
           </label>
+          {quote.travel > 0 && <p className="quiet">Uluwatu travel is a flat fee within Rp 50.000–100.000. This sample uses {formatIdr(quote.travel)}.</p>}
+          <p className="quiet">{POLICY_LINE}</p>
           {error && <p className="form-error">{error}</p>}
           <div className="total-line">
-            <span>Sample total</span>
-            <strong>{formatIdr(total)}</strong>
+            <span>{quote.pack.sessions === 1 ? 'Single session' : `${quote.pack.label} · ${formatIdr(quote.perSession)} a session`}</span>
+            <strong>{formatIdr(quote.total)}</strong>
           </div>
           <button className="btn" type="submit" style={{ width: '100%' }}>Send the request</button>
         </form>

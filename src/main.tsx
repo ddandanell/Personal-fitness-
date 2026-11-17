@@ -29,5 +29,6 @@ const root = document.getElementById('root')!
 const app = <StrictMode><BrowserRouter><App /></BrowserRouter></StrictMode>
 const path = window.location.pathname
 const demoSurface = isVillaDemoHost() || path === '/villademo' || path.startsWith('/villademo/')
+if (demoSurface) document.documentElement.classList.add('villa-demo-ready')
 if (root.dataset.prerendered && root.dataset.prerenderPath === path && !window.location.search && !demoSurface) hydrateRoot(root, app)
 else createRoot(root).render(app)
