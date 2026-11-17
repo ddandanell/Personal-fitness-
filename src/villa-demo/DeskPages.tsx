@@ -12,21 +12,25 @@ export function PartnerDesk() {
     event.preventDefault()
     const form = new FormData(event.currentTarget)
     const service = services.find((item) => item.slug === String(form.get('service'))) ?? services[0]
+    const name = String(form.get('name') || '').trim()
+    const whatsapp = String(form.get('whatsapp') || '').trim()
+    const date = String(form.get('date') || '')
     const result = submit({
-      idempotencyKey: 'desk-' + String(form.get('name')),
+      idempotencyKey: ['desk', name, whatsapp, service.slug, date].join('|'),
       serviceSlug: service.slug,
       serviceName: service.name,
-      date: String(form.get('date')),
+      date,
       time: '09:00',
       participants: 1,
-      name: String(form.get('name')),
-      whatsapp: String(form.get('whatsapp')),
+      name,
+      whatsapp,
       email: '',
       note: 'Created from the villa desk in this demonstration.',
       preference: '',
       total: 1_050_000,
     })
-    setMade(result.booking.reference)
+    const saved = `${result.booking.reference}: ${result.booking.serviceName} on ${result.booking.date}`
+    setMade(result.created ? `Saved ${saved}` : `Already saved as ${saved}`)
   }
 
   return (
@@ -87,7 +91,7 @@ export function PartnerDesk() {
         <label className="field"><span>Date</span><input type="date" name="date" required defaultValue={baliISO(1)} /></label>
         <button className="action" type="submit">Save sample request</button>
       </form>
-      {made && <p className="note">Saved {made} in this browser. The private link stays off the printed QR.</p>}
+      {made && <p className="note">{made}. The private link stays off the printed QR.</p>}
     </div>
   )
 }
