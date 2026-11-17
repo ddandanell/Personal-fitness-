@@ -17,9 +17,9 @@ const OG_BY_PATH: Record<string, { src: string; alt: string; width: string; heig
   '/refunds-rescheduling': { src: '/images/locations/ubud.webp', alt: 'Home session in Ubud', width: '1440', height: '960' },
   '/safety': { src: '/images/locations/mobility-coaching.webp', alt: 'Guided mobility session at home', width: '1440', height: '960' },
   '/editorial-policy': { src: '/images/editorial/core-mat-pilates.webp', alt: 'Mat Pilates at home', width: '1440', height: '960' },
-  '/villa-hotel-partners': { src: '/images/editorial/villa-hotel-partners.webp', alt: 'Private yoga at a Bali villa', width: '1440', height: '960' },
-  '/id/mitra-villa': { src: '/images/editorial/villa-hotel-partners.webp', alt: 'Sesi yoga privat di villa Bali', width: '1440', height: '960' },
-  '/partner-terms': { src: '/images/editorial/villa-hotel-partners.webp', alt: 'Villa partner programme', width: '1440', height: '960' },
+  '/villa-hotel-partners': { src: '/images/editorial/villa-hotel-partners-20261118.webp', alt: 'Private yoga at a Bali villa', width: '1440', height: '960' },
+  '/id/mitra-villa': { src: '/images/editorial/villa-hotel-partners-20261118.webp', alt: 'Sesi yoga privat di villa Bali', width: '1440', height: '960' },
+  '/partner-terms': { src: '/images/editorial/villa-hotel-partners-20261118.webp', alt: 'Villa partner programme', width: '1440', height: '960' },
   '/team': { src: '/images/editorial/about.webp', alt: 'Coordinating a private fitness visit', width: '1440', height: '960' },
 }
 

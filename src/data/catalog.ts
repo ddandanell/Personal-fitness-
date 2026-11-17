@@ -55,7 +55,7 @@ export type Area = {
   cluster: string
   travelFee: number
   travelQuote?: boolean
-  /** Outer Bali clusters: travel is a confirmed flat fee, not added as a fixed estimator line. */
+  /** Legacy area flag. Travel is included in all five published Bali areas. */
   outerTravel?: boolean
   driveNote: string
   copy: string
@@ -407,8 +407,8 @@ export const areas: Area[] = [
     city: 'Bali',
     cluster: 'Outer Bali',
     travelFee: 0,
-    outerTravel: true,
-    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
+    outerTravel: false,
+    driveNote: 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
     copy: 'Ubud sessions are coordinated for villas and houses with a usable floor and realistic access. We do not sell “yoga in the jungle” as a product. The session happens in your space after a travel and timing check.',
     venues: ['Valley villas with a clear indoor room', 'Family compounds', 'Quiet guesthouse suites with owner permission'],
     bestFor: ['Private yoga', 'Mobility after long walks', 'Private Strength Training for longer stays'],
@@ -420,8 +420,8 @@ export const areas: Area[] = [
     city: 'Bali',
     cluster: 'Outer Bali',
     travelFee: 0,
-    outerTravel: true,
-    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
+    outerTravel: false,
+    driveNote: 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
     copy: 'Sanur works for families and longer-stay guests who want a calmer shoreline base. Travel is quoted because it sits outside the Canggu to Seminyak cluster.',
     venues: ['Family villas', 'Apartment living rooms', 'Hotel suites only with written venue permission'],
     bestFor: ['Morning training before the heat', 'Mat Pilates with a partner'],
@@ -433,8 +433,8 @@ export const areas: Area[] = [
     city: 'Bali',
     cluster: 'Bukit',
     travelFee: 0,
-    outerTravel: true,
-    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
+    outerTravel: false,
+    driveNote: 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
     copy: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses need a longer travel window. We only confirm when the professional can arrive, set up and leave inside a realistic block; not a clifftop photo promise.',
     venues: ['Clifftop villas with indoor floors', 'Private gym rooms', 'Pools with owner permission for swim enquiries'],
     bestFor: ['Stay-put villa training', 'Private yoga for two', 'Pad-only boxing after a space check'],
@@ -502,9 +502,9 @@ export const cities: Record<City, {
   Bali: {
     slug: 'bali',
     headline: 'Personal trainer in Bali, at your villa or home.',
-    lede: 'Private Strength Training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
+    lede: 'Private strength training, private yoga and mat Pilates across Canggu, Seminyak, Sanur, Ubud and Uluwatu, with travel included. Mobility, boxing, guided meditation, bodywork and dance fitness are on request.',
     audience: ['Villa guests keeping a routine', 'Month-long residents', 'Couples and small groups', 'Hosts arranging sessions for guests'],
-    clusters: ['Canggu to Seminyak, travel included', 'Ubud, Sanur and Uluwatu: flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in the quote'],
+    clusters: ['Canggu to Seminyak, travel included', 'Sanur, Ubud and Uluwatu, travel included; other Bali areas on request'],
     notes: [
       'We do not claim island-wide coverage.',
       'Beach clubs, temples and public sand are not default venues.',
@@ -555,8 +555,8 @@ export function servicePrice(slug: string, city: City) {
 }
 
 export const cancellationRules = [
-  ['More than 36 hours', 'Free rescheduling up to 36 hours before your session. Sessions are delivered by vetted instructors.'],
-  ['Inside 36 hours', 'The session is charged. Another time depends on instructor availability.'],
+  ['More than 24 hours', 'Free rescheduling up to 24 hours before your session, if supply allows. Inside 24 hours, the session is charged. A 50% deposit confirms each booking; packs are paid in full upfront.'],
+  ['Inside 24 hours', 'The session is charged. Another time depends on instructor availability.'],
   ['Instructor late or unable to attend', 'The session is not charged. Another window is offered when an instructor is available.'],
   ['Unsafe space, weather or access failure', 'We stop the session, record the reason and re-quote or refund per the written terms.'],
   ['Unused pack sessions', 'Unused prepaid sessions follow the validity window on your quote.'],

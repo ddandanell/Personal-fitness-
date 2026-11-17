@@ -1,3 +1,4 @@
+import { ServiceRequestBadge } from '@/components/PolicyLines'
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link, Navigate, useLocation, useParams } from 'react-router'
 import { Eyebrow, PageIntro, TextLink } from '@/components/Primitives'
@@ -94,9 +95,9 @@ export function CityPage({ city }: { city: City }) {
           <div className="service-card-grid">
             {publicServices.filter((item) => item.cities.includes(city)).map((service, index) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div><p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p>
                 <span className="service-index">0{index + 1}</span>
-                <h3>{service.title}</h3>
+                <h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
                 <p>{service.prices[city] ? `Starting price ${formatIdr(service.prices[city]!)} / ${service.durationMin} min` : service.short}</p>
                 <span className="text-link">{service.title} in {city}</span>
               </Link>
@@ -194,7 +195,7 @@ export function AreaPage() {
             {publicServices.map((service) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="area-card" key={service.slug}>
                 <p className="eyebrow">{area.name}</p>
-                <h3>{service.title}</h3>
+                <h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
                 <p>{service.prices[city] ? `${formatIdr(service.prices[city]!)} starting price` : 'Written quote'}</p>
               </Link>
             ))}
@@ -232,7 +233,7 @@ export function CityServicePage() {
   const cityPath = city.toLowerCase()
   const seo = getSeo('/' + cityPath + '/' + service.slug)
   const access = city === 'Bali'
-    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. The Denpasar office is an office, not a walk-in studio.'
+    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. The Denpasar office is an office, not a walk-in studio.'
     : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
   const articles = blogPosts.filter((post) =>

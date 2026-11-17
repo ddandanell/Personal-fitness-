@@ -1,3 +1,5 @@
+import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
+import { TRAVEL_DISCLAIMER, TRAVEL_DISCLAIMER_ID } from '@/data/offerCopy'
 import { useMemo } from 'react'
 import { useSearchParams } from 'react-router'
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
@@ -5,6 +7,7 @@ import { formatIdr } from '@/lib/money'
 import { guestMenuMessage, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import { partner } from '@/config/partner'
 
+const menuSlugs: Record<string, string> = { 'Private yoga': 'private-yoga', 'Private Strength Training': 'personal-training', 'Bodywork & Recovery': 'bodywork-recovery', 'Zumba & Dance Fitness': 'zumba-dance-fitness', 'Mat Pilates': 'mat-pilates', 'Mobility & stretching': 'mobility-coaching', 'Boxing fitness': 'boxing-fitness', 'Guided meditation': 'guided-meditation' }
 const lines = [
   ['Private yoga', 850_000, 'up to 2 people'],
   ['Private Strength Training', 1_050_000, '1 guest'],
@@ -12,9 +15,30 @@ const lines = [
   ['Zumba & Dance Fitness', 1_050_000, 'fun cardio'],
   ['Mat Pilates', 950_000, 'no reformer'],
   ['Mobility & stretching', 850_000, 'guided movement'],
-  ['Boxing fitness', 1_000_000, 'pads only'],
+  ['Boxing fitness', 1_000_000, 'pads only · 1 guest'],
   ['Guided meditation', 800_000, 'up to 2 people'],
 ]
+
+const partnerCardId: Record<string, string> = {
+  "Private yoga": "Yoga privat",
+  "Private Strength Training": "Latihan kekuatan privat",
+  "Bodywork & Recovery": "Bodywork & pemulihan",
+  "Zumba & Dance Fitness": "Zumba & kebugaran tari",
+  "Mat Pilates": "Mat Pilates",
+  "Mobility & stretching": "Mobilitas & peregangan",
+  "Boxing fitness": "Kebugaran tinju",
+  "Guided meditation": "Meditasi terpandu",
+  "up to 2": "maks. 2 orang",
+  "Rp 1.050.000 single": "Rp 1.050.000 satu orang",
+  "wellness hour": "jam pemulihan",
+  "fun cardio": "kardio santai",
+  "no reformer": "tanpa reformer",
+  "guided movement": "gerakan terpandu",
+  "pads only": "hanya pad",
+  "pads only · 1 guest": "hanya pad · 1 orang",
+  "up to 2 people": "maks. 2 orang",
+  "1 guest": "1 orang"
+}
 
 export default function PartnerMenu() {
   const [params] = useSearchParams()
@@ -27,22 +51,23 @@ export default function PartnerMenu() {
     <div className="menu-card" lang={lang}>
       <p className="eyebrow">PersonalFitness.id</p>
       <h1>{heading}</h1>
-      <p className="large-copy">{lang === 'id' ? 'Instruktur yang sudah diseleksi datang ke villa Anda.' : 'Vetted instructors come to your villa.'}</p>
+      <p className="large-copy">{lang === 'id' ? 'Instruktur untuk sesi Anda disebutkan pada kutipan tertulis.' : 'Instructors come to your villa.'}</p>
       <ul className="menu-rates">
         {lines.map(([title, price, note]) => (
-          <li key={String(title)}><strong>{title}</strong><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(Number(price))} · {note}</span></li>
+          <li key={String(title)}><strong>{lang === 'id' ? partnerCardId[String(title)] || title : title}</strong><ServiceRequestBadge slug={menuSlugs[String(title)]} lang={lang} /><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(Number(price))} · {lang === 'id' ? partnerCardId[String(note)] || note : note}</span></li>
         ))}
       </ul>
       {partner.GROUP_YOGA_RATE_BALI && partner.GROUP_YOGA_MAX_PEOPLE && (
         <p>Villa group yoga · up to {partner.GROUP_YOGA_MAX_PEOPLE} · from {formatIdr(partner.GROUP_YOGA_RATE_BALI)}</p>
       )}
       <p>{lang === 'id'
-        ? 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00. Pesan paling lambat pukul 18:00 sehari sebelumnya, tergantung ketersediaan instruktur.'
-        : 'Example: private yoga Monday, private strength training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before, as supply allows.'}</p>
+        ? 'Contoh saja, tergantung ketersediaan: yoga privat Senin, latihan kekuatan privat Rabu, dan mat Pilates Jumat pukul 08:00. Tamu bisa meminta slot paling lambat pukul 18:00 sehari sebelumnya. Sesi baru terkunci setelah kutipan tertulis diterima.'
+        : 'Example only, as supply allows: private yoga Monday, private strength training Wednesday and mat Pilates Friday at 08:00. Guests can request a slot by 18:00 the day before. A session is confirmed only after the written quote is accepted.'}</p>
       {code && <p className="menu-code">Partner {code}</p>}
-      <p className="small muted">60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.</p>
+      <p className="small muted">{lang === 'id' ? TRAVEL_DISCLAIMER_ID : TRAVEL_DISCLAIMER}</p><PolicySummary lang={lang} />
       <p className="small"><a href={href}>WhatsApp {WHATSAPP_DISPLAY}</a></p>
       <p className="small"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
+      <p className="small muted">{lang === 'id' ? 'Kami membalas pukul 08:00-20:00 waktu Bali.' : 'We reply between 08:00 and 20:00 Bali time.'}</p>
     </div>
   )
 }

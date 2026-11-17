@@ -19,7 +19,7 @@ export type CoachCard = {
 
 export type PartnerConfig = {
   COMMISSION_PCT: number | null
-  COMMISSION_BASE: 'session' | 'session-excluding-travel-and-extras' | null
+  COMMISSION_BASE: 'session' | 'session-excluding-travel-and-extras' | 'guest-payment' | null
   COMMISSION_PAYOUT_DAY: string | null
   GROUP_YOGA_RATE_BALI: number | null
   GROUP_YOGA_MAX_PEOPLE: number | null
@@ -35,9 +35,9 @@ export type PartnerConfig = {
 }
 
 export const partner: PartnerConfig = {
-  COMMISSION_PCT: null,
-  COMMISSION_BASE: null,
-  COMMISSION_PAYOUT_DAY: null,
+  COMMISSION_PCT: 10,
+  COMMISSION_BASE: 'guest-payment',
+  COMMISSION_PAYOUT_DAY: 'Monthly by bank transfer, with a statement',
   GROUP_YOGA_RATE_BALI: null,
   GROUP_YOGA_MAX_PEOPLE: null,
   DEMO_POLICY: 'off',
@@ -47,7 +47,7 @@ export const partner: PartnerConfig = {
   INSTAGRAM_URL: null,
   GBP_URL: null,
   OFFICE_GEO: null,
-  COORDINATION_HOURS: null,
+  COORDINATION_HOURS: '08:00-20:00',
   GA4_ID: null,
 }
 
@@ -56,8 +56,8 @@ export const PARTNER_MENU_PDF = '/partners/villa-wellness-menu.pdf'
 export function commissionShare(lang: 'en' | 'id' = 'en') {
   if (partner.COMMISSION_PCT != null) {
     return lang === 'id'
-      ? `${partner.COMMISSION_PCT}% dari setiap sesi yang dibayar`
-      : `${partner.COMMISSION_PCT}% of every paid session`
+      ? `${partner.COMMISSION_PCT}% dari yang dibayar tamu`
+      : `${partner.COMMISSION_PCT}% of what the guest paid`
   }
   return lang === 'id' ? 'komisi dari setiap sesi' : 'a commission on every session'
 }
@@ -65,8 +65,8 @@ export function commissionShare(lang: 'en' | 'id' = 'en') {
 export function commissionSentence(lang: 'en' | 'id' = 'en') {
   if (partner.COMMISSION_PCT != null) {
     return lang === 'id'
-      ? `Anda dapat ${partner.COMMISSION_PCT}% dari setiap sesi yang dibayar.`
-      : `You earn ${partner.COMMISSION_PCT}% of every paid session.`
+      ? `Anda mendapat komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu.`
+      : `You earn a ${partner.COMMISSION_PCT}% commission of what the guest paid.`
   }
   return lang === 'id'
     ? 'Anda dapat komisi dari setiap sesi.'

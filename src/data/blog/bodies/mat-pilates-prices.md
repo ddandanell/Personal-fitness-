@@ -12,7 +12,7 @@ A studio private: you travel, you might get a reformer, you pay for exclusive co
 
 A home private mat session: the coach travels, you stay, the floor is yours, there is no machine unless you already own one, which we still will not treat as a reformer service.
 
-Our rate is the last one. Extra people Rp 250.000 in Bali, Rp 250.000 in Jakarta. Travel extra outside in-zone clusters. Ninety minutes plus 45 percent of base.
+Our rate is the last one. A second guest adds Rp 250.000 in Bali and Jakarta. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. South and Central Jakarta retain included travel; other Jakarta areas are checked on request. Ninety minutes adds 45 percent of the base when accepted.
 
 ## Why reformer and mat should never share a “from” price
 
@@ -24,7 +24,7 @@ If you already train reformer at a Jakarta studio, keep that studio. Add home ma
 
 - City: Jakarta is Rp 50.000 above Bali on the base.
 - People: the second person is not free on mat, unlike yoga.
-- Cluster: Uluwatu travel is Rp 200.000.
+- Area: travel included in Canggu, Seminyak, Sanur, Ubud and Uluwatu; other areas on request.
 - Duration.
 - Programme percentage.
 - Props you want us to bring versus props you have. We do not haul a reformer. We may plan around a band.
@@ -41,7 +41,7 @@ If the studio has a machine you love, stay. If the studio is a 40-minute disappo
 
 Demand: mat or reformer, group or private, duration, people, travel, cancellation, named coach, payment path. If the quote says “Pilates” only, it is unfinished.
 
-Our 36-hour cancel rule still applies. Reformer studios often sell packs that expire. Home programmes expire too, but the window is on the quote. Read [refunds](/refunds-rescheduling).
+Our 24-hour cancel rule still applies. Reformer studios often sell packs that expire. Home programmes expire too, but the window is on the quote. Read [refunds](/refunds-rescheduling).
 
 ## First-session price
 
@@ -55,11 +55,11 @@ Estimator: mat Pilates, city, area, people, duration. WhatsApp the result. Open 
 
 Example A. One person, 60 minutes, Canggu living room. Planning estimate: Rp 950.000. No travel. No extra person.
 
-Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.000.000 plus extra person Rp 250.000 equals Rp 1.275.000, plus building access still has to work.
+Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.000.000 plus a second guest at Rp 250.000 equals Rp 1.250.000, while building access still has to be agreed.
 
-Example C. One person, 60 minutes, Uluwatu. Bali base Rp 950.000 plus travel Rp 200.000 equals Rp 1.150.000. If you also want 90 minutes, add 45 percent of 950.000 (Rp 427.500) before travel, because travel is per visit, not per minute.
+Example C. One person, 60 minutes, Uluwatu. The Bali mat Pilates base is Rp 950.000 with travel included. If you request 90 minutes and the longer visit is accepted, add 45 percent of Rp 950.000, which is Rp 427.500. The 90-minute session total is Rp 1.377.500, with no Uluwatu travel line.
 
-Example D. Twelve Jakarta sessions, one person, in-zone. Rp 1.000.000 times 12 equals Rp 12.000.000, minus 12 percent equals Rp 10.560.000. That only helps if you attend. Four unused sessions at the end of a pack is how “cheap” becomes expensive.
+Example D. A Jakarta mat Pilates pack should use the eligible 3, 5 or 10-session option shown on the pricing page. The quote confirms that service’s per-session rate, total and validity window before payment. Choose a count that you can attend; unused sessions follow the written validity terms.
 
 ## What a reformer studio should put on its quote, so you can walk away cleanly
 

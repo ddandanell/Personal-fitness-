@@ -32,7 +32,7 @@ Mat Pilates uses the body, the floor and simple props. It travels. It fits a vil
 
 Arrive window, floor check, a short settle, then coached work. Cues are the product. If you wanted to follow a muted Instagram video, you would not be paying for a person in the room. Expect form stops. Expect fewer moves than a class. Expect to finish with the room usable again.
 
-The session is 60 minutes unless you buy 90 at plus 45 percent of the base. Travel is included in Canggu–Seminyak and South/Central Jakarta. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.
+The session is 60 minutes unless you buy 90 at plus 45 percent of the base. Travel is included in Canggu–Seminyak and South/Central Jakarta. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.
 
 Name a coach preference in WhatsApp if you have one. Confirmation waits on the diary and a written quote.
 
@@ -51,7 +51,7 @@ Name a coach preference in WhatsApp if you have one. Confirmation waits on the d
 
 Open [pricing](/pricing) and run the estimator: mat Pilates, city, area, people, duration, programme. Then send WhatsApp with those same facts. The [homepage](/) can wait if this is the only service you want. It should not wait if you also want training or yoga in the same stay. Those are different professionals and different rates.
 
-A four-week block is twelve sessions. Useful for Jakarta residents. Excessive for a five-night villa. Match the count to the calendar, not to a discount percentage.
+A longer routine should use the eligible 3, 5 or 10-session pack shown on the pricing page, with the mat Pilates rate and validity confirmed on the written quote. A 10-session pack may be useful for a resident and excessive for a five-night stay. Match the count to the calendar before comparing savings.
 
 ## Limits
 

@@ -56,7 +56,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
   const pairReady = PACK_SERVICES.includes(service.slug)
   if (!pairReady && programme.slug !== 'single') return { ...empty, error: 'A package for this format needs a separate scope and quote.' }
   const listedMax = isDefault ? service.maxParticipants : offer.id === 'PF-029' ? 6 : offer.participants || 1
-  const maximum = pairReady ? Math.max(listedMax, 2) : listedMax
+  const maximum = service.slug === 'boxing-fitness' ? 1 : pairReady ? 2 : listedMax
   if (input.participants > maximum) return { ...empty, error: 'This format is planned for up to ' + maximum + ' people. Request a separate quote for a larger party.' }
   const baseDuration = isDefault ? service.durationMin : offer.durationMin
   const canExtend = pairReady && baseDuration === 60
@@ -95,7 +95,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
       singleRate === SESSION_ANCHOR
         ? 'Package savings are the exact difference from Rp 1.050.000 per session.'
         : 'This discipline keeps its own 60-minute rate. Package savings are the same share of that rate as the anchor packs.',
-      area?.outerTravel ? 'Selected area: ' + area.name + '. The flat outer-area travel fee is confirmed in the written quote and is not inside this total.' : area ? 'Selected area: ' + area.name + '.' : 'Area not selected; location is confirmed in the written quote.',
+      area ? 'Selected area: ' + area.name + (input.city === 'Bali' ? '. Travel is included.' : '.') : 'Area not selected; location is confirmed in the written quote.',
     ],
   }
 }

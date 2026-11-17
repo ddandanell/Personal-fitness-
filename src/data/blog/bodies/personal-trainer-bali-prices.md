@@ -1,4 +1,4 @@
-Personal trainer Bali prices only become comparable when the quotes contain the same lines: duration, people, travel cluster, extras, cancellation, and whether a professional is actually confirmed. A cheaper number that hides Uluwatu travel or a second person is not cheaper. It is incomplete.
+Personal trainer Bali prices become comparable when the quotes contain the same lines: duration, people, service area, extras, cancellation and whether a professional is actually confirmed. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. A quote should identify other areas as on request and show the correct participant price before you decide.
 
 PersonalFitness.id publishes Bali private strength training at Rp 900.000 for 60 minutes, one person, in-zone. The live estimator is on [pricing](/pricing). The [homepage](/) is the offer. This article is the like-for-like method.
 
@@ -19,7 +19,7 @@ If any of those are missing, it is a conversation, not a quote. We will not pret
 
 ## What Rp 900.000 contains, and what it does not
 
-It contains a 60-minute in-zone session for one person, professional travel inside Canggu and Seminyak, and the coordination around the hour. It does not contain extra people (Rp 250.000 each), 90-minute uplift (45 percent of base), Ubud or Sanur travel (Rp 150.000), Uluwatu travel (Rp 200.000), villa staff fees, parking, or a reformer that is not in the house.
+It contains a 60-minute private strength training session for one person, professional travel across Canggu, Seminyak, Sanur, Ubud and Uluwatu, and coordination around the hour. A second guest adds Rp 250.000; a 90-minute session adds 45 percent of the base. Separately agreed venue or access costs are shown on the quote. A reformer is not part of this service.
 
 It does not contain a free intro hour unless a separate campaign says so in writing. See the article on paid first sessions in this cluster.
 
@@ -32,7 +32,7 @@ Put them in a table, even a note on your phone.
 1. Convert both to 60 minutes. A 45-minute session that looks cheaper may be the same rate per minute.
 2. Count people. A pair price against a solo price is a different product. Our yoga rate includes two. Our training rate does not.
 3. Put travel on its own row. “Free anywhere in Bali” is either a lie or a loss-leader you will pay for in lateness.
-4. Check cancellation. Inside 36 hours we charge the session. If another quote is “cancel anytime”, ask who funds the coach’s empty window.
+4. Check cancellation. Inside 24 hours we charge the session. If another quote is “cancel anytime”, ask who funds the coach’s empty window.
 5. Check payment. Card in WhatsApp is a reason to walk away, including from us if anyone ever asked. They should not.
 
 When the rows match, pick the operator you trust to show up. Price is not the only line. It is the line people forget to define.
@@ -47,7 +47,7 @@ If you want the studio, go to a studio. If you want the villa hour, use [Bali pr
 
 ## Programmes versus drop-in
 
-Six sessions at 5 percent, nine at 8 percent, twelve at 12 percent. The discount applies to the session rate after extras. It is a worse deal if you cannot attend. It is a better deal if you already live in the cluster for a month. Run the estimator. Do not do the percentage in your head while drunk on a Canggu sunset.
+Eligible packs use 3, 5 or 10 sessions, with reductions of about 9.5%, 14.3% or 23.8% against the single-session rate. The written quote shows the selected service, eligible pack price and any separate extras. Buy only the appointments you can realistically attend within the stated validity window.
 
 ## Red flags in Bali fitness pricing
 
@@ -69,11 +69,11 @@ Open [pricing](/pricing). Set private strength training, Bali, area, duration, p
 
 Example A. One person, 60 minutes, Canggu villa gym. Planning estimate: Rp 900.000.
 
-Example B. Two people, 60 minutes, Seminyak. Rp 900.000 plus Rp 250.000 equals Rp 1.150.000. Yoga would have included the second person. Training does not. That is not a trick. It is a different coaching load.
+Example B. Two people, 60 minutes, Seminyak. Rp 1.050.000 plus Rp 250.000 equals Rp 1.300.000, with travel included. Yoga already includes a second guest at its own published pair rate. Training uses an individual starting rate with a second-guest addition.
 
-Example C. One person, 60 minutes, Uluwatu. Rp 900.000 plus an outer-area travel fee confirmed in the quote equals Rp 1.100.000. If the villa then asks you to add a friend at 06:40, the extra-person line still applies.
+Example C. One person, 60 minutes, Uluwatu. The published private strength training price is Rp 1.050.000, with travel included. There is no Uluwatu travel line to add. If another guest would like to join, the training participant addition still applies and belongs on the accepted written quote.
 
-Example D. Six sessions, one person, in-zone. Rp 900.000 times 6 equals Rp 5.400.000, minus 5 percent equals Rp 5.130.000. Per session: Rp 855.000. Still private. Still in the villa.
+Example D. Three private strength training sessions, one person, in one of the five included Bali areas. The pack total is Rp 2.850.000, or Rp 950.000 per session, compared with Rp 3.150.000 for three single sessions. The saving is Rp 300.000. Travel is included and the quote confirms the dates and validity.
 
 If a competitor is Rp 700.000 “anywhere”, add the missing travel in your table until they admit a cluster. If they will not, stop the comparison.
 

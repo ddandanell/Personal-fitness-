@@ -45,7 +45,7 @@ The sequence sits on [how it works](/how-it-works). If the space fails, we say s
 3. Name neighbour and building noise rules.
 4. Name the lobby process.
 5. Open [Jakarta boxing fitness](/jakarta/boxing-fitness).
-6. Send WhatsApp. Wait for the quote. Pay only on the link.
+6. Send WhatsApp. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Jakarta apartment boxing is useful when the pads, the walls and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [boxing fitness](/boxing-fitness) and send the building.
 

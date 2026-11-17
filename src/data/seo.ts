@@ -40,7 +40,7 @@ const hubs: SeoRecord[] = [
     path: '/',
     primaryKeyword: 'personal trainer at home Bali Jakarta',
     title: 'Personal Trainer at Home in Bali & Jakarta',
-    description: 'A vetted instructor at your villa or home in Bali and Jakarta. Private strength training from Rp 1.050.000. Written quote before you pay.',
+    description: 'An instructor at your villa or home in Bali and Jakarta. Private strength training from Rp 1.050.000. Written quote before you pay.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Private Strength Training at home' },
@@ -335,7 +335,7 @@ const hubs: SeoRecord[] = [
     path: '/refunds-rescheduling',
     primaryKeyword: 'personal training cancellation policy',
     title: 'Refunds and Rescheduling',
-    description: '36-hour rule, professional no-show, unused programme sessions and refunds to the original payment method.',
+    description: '24-hour rule, professional no-show, unused programme sessions and refunds to the original payment method.',
     group: 'page', lastmod: TODAY, related: [{ to: '/faq', label: 'FAQ' }, { to: '/pricing', label: 'Pricing' }],
     crumbs: [HOME, { to: '/refunds-rescheduling', label: 'Refunds' }],
   },
@@ -391,7 +391,7 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   swimming: {
     keyword: 'private swimming lessons Bali',
     title: 'Private Swimming Lessons in Bali',
-    description: '45-minute private swim coaching in a pool you can lawfully use, from Rp 1.050.000 in Bali.',
+    description: '45-minute private swim coaching in a pool you have permission to use, from Rp 1.050.000 in Bali.',
   },
   'guided-meditation': {
     keyword: 'private guided meditation at home',
@@ -424,17 +424,17 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   ubud: {
     keyword: 'private yoga Ubud',
     title: 'Private Yoga and Training in Ubud',
-    description: 'Private yoga, mobility and private strength training at Ubud villas and houses, with an outer-area travel fee confirmed in the written quote.',
+    description: 'Private training, yoga and Pilates at Ubud villas, with travel included. Check property access and instructor availability before booking.',
   },
   sanur: {
     keyword: 'personal trainer Sanur',
     title: 'Personal Trainer in Sanur',
-    description: 'Private training, yoga and mat Pilates for Sanur family villas and apartments, with outer-zone travel quoted.',
+    description: 'Private training, yoga and mat Pilates at Sanur villas and apartments, with travel included. Your instructor and total are confirmed in writing.',
   },
   uluwatu: {
     keyword: 'personal trainer Uluwatu',
     title: 'Personal Trainer in Uluwatu',
-    description: 'In-villa private strength training, private yoga, boxing fitness and mat Pilates in Uluwatu, Pecatu and Bingin, with an outer-area travel fee confirmed in the written quote.',
+    description: 'Private training, yoga and Pilates at Uluwatu, Pecatu and Bingin villas, with travel included. A clear quote confirms your instructor and time.',
   },
   'south-jakarta': {
     keyword: 'personal trainer South Jakarta',

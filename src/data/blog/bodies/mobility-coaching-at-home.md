@@ -28,7 +28,7 @@ Heat changes the work. Midday sun on a west-facing deck is a reason to move insi
 
 ## How the Bali quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali mobility starts at Rp 850.000 for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base rate when the session can extend.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali mobility starts at Rp 850.000 for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a stretch studio and it is not a walk-in. You train at the villa or home you already have permission to use.
 
@@ -44,9 +44,9 @@ A Jakarta yoga hour is a different product. If you wanted a pair session, open [
 
 ## Programmes, first sessions and what you actually pay
 
-There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix mobility with training or yoga only after you know the first hour fitted the room.
+There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 9.5%, 14.3% or 23.8%, on session charges, not travel. Mix mobility with training or yoga only after you know the first hour fitted the room.
 
-Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 
@@ -65,6 +65,6 @@ We reply with a starting price or a request for one missing fact. The written qu
 5. Write a one-line non-clinical goal.
 6. Pick a two-hour window, not a single minute.
 7. Open [how it works](/how-it-works) if you want the sequence in order.
-8. Send the message. Wait for the quote. Pay only on the link.
+8. Send the message. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Private mobility coaching is useful when the floor, the scope and the quote all match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or the [mobility page](/mobility-coaching) and send the area.

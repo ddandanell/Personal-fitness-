@@ -47,9 +47,9 @@ If a visitor wants a longer personal programme, compare the actual available dat
 
 ## Use the right location rule
 
-The weekly idea must match the villa's actual address. The [Bali service hub](/bali) explains the published clusters. Canggu and Seminyak are within the published in-zone Bali starting prices. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote..
+The weekly idea must match the villa’s actual address. The [Bali service hub](/bali) explains the published areas. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas are on request. The exact property, guest setup and professional’s diary still need confirmation before a recurring slot can be agreed.
 
-That travel fee applies to each accepted visit. Three Ubud appointments therefore carry three travel charges. A programme reduction does not erase travel.
+Travel is included on every accepted visit within the five named Bali areas. Three Ubud appointments therefore carry three session charges and no guest travel fees. Any eligible pack reduction is applied to the session price as published and confirmed on the written quote.
 
 For Jakarta properties, use the [Jakarta service hub](/jakarta). Accepted South and Central Jakarta pockets use the published in-zone starting prices. North, West and East Jakarta remain by request. Building access, tower details and visitor rules need to be included before the appointment is confirmed.
 
@@ -93,7 +93,7 @@ One villa contact is enough for access and property details. The guest can recei
 
 The named professional is confirmed in writing. A website image helps explain the type of session but does not assign a particular instructor to the villa. If the original professional becomes unavailable, the coordinator communicates the available replacement or timing options rather than silently sending a different scope.
 
-The 36-hour rescheduling rule still applies. More than 36 hours allows one reschedule when supply permits. Inside 36 hours the session is charged. A professional no-show is not charged. The complete wording is on [refunds and rescheduling](/refunds-rescheduling) and the written quote.
+The 24-hour rescheduling rule still applies. More than 24 hours allows one reschedule when supply permits. Inside 24 hours the session is charged. A professional no-show is not charged. The complete wording is on [refunds and rescheduling](/refunds-rescheduling) and the written quote.
 
 ## Review the weekly plan after real guest use
 

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T16:12:52.809Z",
+  "generatedAt": "2026-11-17T16:45:21.124Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1525,
+      "mainWords": 1673,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -19,7 +19,7 @@
     },
     {
       "path": "/about",
-      "mainWords": 427,
+      "mainWords": 438,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/about",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 1931,
+      "mainWords": 2032,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -35,7 +35,7 @@
     },
     {
       "path": "/bali/boxing-fitness",
-      "mainWords": 1626,
+      "mainWords": 1589,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/boxing-fitness",
       "localMinimum": true,
@@ -43,7 +43,7 @@
     },
     {
       "path": "/bali/canggu",
-      "mainWords": 1585,
+      "mainWords": 1618,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/canggu",
       "localMinimum": true,
@@ -51,7 +51,7 @@
     },
     {
       "path": "/bali/guided-meditation",
-      "mainWords": 1612,
+      "mainWords": 1577,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/guided-meditation",
       "localMinimum": true,
@@ -59,7 +59,7 @@
     },
     {
       "path": "/bali/mat-pilates",
-      "mainWords": 1682,
+      "mainWords": 1647,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/mat-pilates",
       "localMinimum": true,
@@ -67,7 +67,7 @@
     },
     {
       "path": "/bali/personal-training",
-      "mainWords": 1859,
+      "mainWords": 1824,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/personal-training",
       "localMinimum": true,
@@ -75,7 +75,7 @@
     },
     {
       "path": "/bali/private-yoga",
-      "mainWords": 1776,
+      "mainWords": 1741,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/private-yoga",
       "localMinimum": true,
@@ -83,7 +83,7 @@
     },
     {
       "path": "/bali/sanur",
-      "mainWords": 1557,
+      "mainWords": 1579,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/sanur",
       "localMinimum": true,
@@ -91,7 +91,7 @@
     },
     {
       "path": "/bali/seminyak",
-      "mainWords": 1550,
+      "mainWords": 1583,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/seminyak",
       "localMinimum": true,
@@ -99,7 +99,7 @@
     },
     {
       "path": "/bali/ubud",
-      "mainWords": 1609,
+      "mainWords": 1624,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/ubud",
       "localMinimum": true,
@@ -107,7 +107,7 @@
     },
     {
       "path": "/bali/uluwatu",
-      "mainWords": 1580,
+      "mainWords": 1594,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/uluwatu",
       "localMinimum": true,
@@ -115,7 +115,7 @@
     },
     {
       "path": "/bodywork-recovery",
-      "mainWords": 996,
+      "mainWords": 1061,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bodywork-recovery",
       "localMinimum": false,
@@ -123,7 +123,7 @@
     },
     {
       "path": "/boxing-fitness",
-      "mainWords": 1266,
+      "mainWords": 1349,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/boxing-fitness",
       "localMinimum": false,
@@ -131,7 +131,7 @@
     },
     {
       "path": "/contact",
-      "mainWords": 240,
+      "mainWords": 323,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/contact",
       "localMinimum": false,
@@ -147,7 +147,7 @@
     },
     {
       "path": "/faq",
-      "mainWords": 1360,
+      "mainWords": 1390,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/faq",
       "localMinimum": false,
@@ -155,7 +155,7 @@
     },
     {
       "path": "/guided-meditation",
-      "mainWords": 1272,
+      "mainWords": 1346,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/guided-meditation",
       "localMinimum": false,
@@ -163,7 +163,7 @@
     },
     {
       "path": "/how-it-works",
-      "mainWords": 514,
+      "mainWords": 544,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/how-it-works",
       "localMinimum": false,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id",
-      "mainWords": 660,
+      "mainWords": 853,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id",
       "localMinimum": false,
@@ -179,7 +179,7 @@
     },
     {
       "path": "/id/mitra-villa",
-      "mainWords": 610,
+      "mainWords": 779,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id/mitra-villa",
       "localMinimum": false,
@@ -187,7 +187,7 @@
     },
     {
       "path": "/jakarta",
-      "mainWords": 2044,
+      "mainWords": 2195,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta",
       "localMinimum": true,
@@ -195,7 +195,7 @@
     },
     {
       "path": "/jakarta/boxing-fitness",
-      "mainWords": 1596,
+      "mainWords": 1617,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/boxing-fitness",
       "localMinimum": true,
@@ -203,7 +203,7 @@
     },
     {
       "path": "/jakarta/central-jakarta",
-      "mainWords": 1550,
+      "mainWords": 1583,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/central-jakarta",
       "localMinimum": true,
@@ -211,7 +211,7 @@
     },
     {
       "path": "/jakarta/cilandak",
-      "mainWords": 1574,
+      "mainWords": 1607,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/cilandak",
       "localMinimum": true,
@@ -219,7 +219,7 @@
     },
     {
       "path": "/jakarta/east-jakarta",
-      "mainWords": 1591,
+      "mainWords": 1624,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/east-jakarta",
       "localMinimum": true,
@@ -227,7 +227,7 @@
     },
     {
       "path": "/jakarta/gondangdia",
-      "mainWords": 1516,
+      "mainWords": 1549,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/gondangdia",
       "localMinimum": true,
@@ -235,7 +235,7 @@
     },
     {
       "path": "/jakarta/guided-meditation",
-      "mainWords": 1589,
+      "mainWords": 1612,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/guided-meditation",
       "localMinimum": true,
@@ -243,7 +243,7 @@
     },
     {
       "path": "/jakarta/kebayoran",
-      "mainWords": 1549,
+      "mainWords": 1582,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/kebayoran",
       "localMinimum": true,
@@ -251,7 +251,7 @@
     },
     {
       "path": "/jakarta/kebon-jeruk",
-      "mainWords": 1531,
+      "mainWords": 1564,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/kebon-jeruk",
       "localMinimum": true,
@@ -259,7 +259,7 @@
     },
     {
       "path": "/jakarta/kelapa-gading",
-      "mainWords": 1600,
+      "mainWords": 1633,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/kelapa-gading",
       "localMinimum": true,
@@ -267,7 +267,7 @@
     },
     {
       "path": "/jakarta/kemang",
-      "mainWords": 1570,
+      "mainWords": 1603,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/kemang",
       "localMinimum": true,
@@ -275,7 +275,7 @@
     },
     {
       "path": "/jakarta/kuningan",
-      "mainWords": 1544,
+      "mainWords": 1577,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/kuningan",
       "localMinimum": true,
@@ -283,7 +283,7 @@
     },
     {
       "path": "/jakarta/mat-pilates",
-      "mainWords": 1656,
+      "mainWords": 1679,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/mat-pilates",
       "localMinimum": true,
@@ -291,7 +291,7 @@
     },
     {
       "path": "/jakarta/menteng",
-      "mainWords": 1529,
+      "mainWords": 1562,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/menteng",
       "localMinimum": true,
@@ -299,7 +299,7 @@
     },
     {
       "path": "/jakarta/north-jakarta",
-      "mainWords": 1606,
+      "mainWords": 1639,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/north-jakarta",
       "localMinimum": true,
@@ -307,7 +307,7 @@
     },
     {
       "path": "/jakarta/personal-training",
-      "mainWords": 1831,
+      "mainWords": 1854,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/personal-training",
       "localMinimum": true,
@@ -315,7 +315,7 @@
     },
     {
       "path": "/jakarta/pik",
-      "mainWords": 1617,
+      "mainWords": 1650,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/pik",
       "localMinimum": true,
@@ -323,7 +323,7 @@
     },
     {
       "path": "/jakarta/pluit",
-      "mainWords": 1542,
+      "mainWords": 1575,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/pluit",
       "localMinimum": true,
@@ -331,7 +331,7 @@
     },
     {
       "path": "/jakarta/pondok-indah",
-      "mainWords": 1605,
+      "mainWords": 1638,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/pondok-indah",
       "localMinimum": true,
@@ -339,7 +339,7 @@
     },
     {
       "path": "/jakarta/private-yoga",
-      "mainWords": 1732,
+      "mainWords": 1755,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/private-yoga",
       "localMinimum": true,
@@ -347,7 +347,7 @@
     },
     {
       "path": "/jakarta/pulomas",
-      "mainWords": 1500,
+      "mainWords": 1533,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/pulomas",
       "localMinimum": true,
@@ -355,7 +355,7 @@
     },
     {
       "path": "/jakarta/puri-indah",
-      "mainWords": 1572,
+      "mainWords": 1605,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/puri-indah",
       "localMinimum": true,
@@ -363,7 +363,7 @@
     },
     {
       "path": "/jakarta/rawamangun",
-      "mainWords": 1545,
+      "mainWords": 1578,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/rawamangun",
       "localMinimum": true,
@@ -371,7 +371,7 @@
     },
     {
       "path": "/jakarta/scbd",
-      "mainWords": 1559,
+      "mainWords": 1592,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/scbd",
       "localMinimum": true,
@@ -379,7 +379,7 @@
     },
     {
       "path": "/jakarta/senopati",
-      "mainWords": 1584,
+      "mainWords": 1617,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/senopati",
       "localMinimum": true,
@@ -387,7 +387,7 @@
     },
     {
       "path": "/jakarta/south-jakarta",
-      "mainWords": 1610,
+      "mainWords": 1643,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/south-jakarta",
       "localMinimum": true,
@@ -395,7 +395,7 @@
     },
     {
       "path": "/jakarta/sunter",
-      "mainWords": 1555,
+      "mainWords": 1588,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/sunter",
       "localMinimum": true,
@@ -403,7 +403,7 @@
     },
     {
       "path": "/jakarta/thamrin",
-      "mainWords": 1515,
+      "mainWords": 1548,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/thamrin",
       "localMinimum": true,
@@ -411,7 +411,7 @@
     },
     {
       "path": "/jakarta/west-jakarta",
-      "mainWords": 1601,
+      "mainWords": 1634,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/west-jakarta",
       "localMinimum": true,
@@ -419,7 +419,7 @@
     },
     {
       "path": "/mat-pilates",
-      "mainWords": 1361,
+      "mainWords": 1432,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/mat-pilates",
       "localMinimum": false,
@@ -427,7 +427,7 @@
     },
     {
       "path": "/mobility-coaching",
-      "mainWords": 1263,
+      "mainWords": 1333,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/mobility-coaching",
       "localMinimum": false,
@@ -443,7 +443,7 @@
     },
     {
       "path": "/partner-terms",
-      "mainWords": 208,
+      "mainWords": 221,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/partner-terms",
       "localMinimum": false,
@@ -451,7 +451,7 @@
     },
     {
       "path": "/partners/menu",
-      "mainWords": 117,
+      "mainWords": 212,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/partners/menu",
       "localMinimum": false,
@@ -459,7 +459,7 @@
     },
     {
       "path": "/personal-training",
-      "mainWords": 1475,
+      "mainWords": 1545,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/personal-training",
       "localMinimum": false,
@@ -475,7 +475,7 @@
     },
     {
       "path": "/pricing",
-      "mainWords": 1923,
+      "mainWords": 2202,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/pricing",
       "localMinimum": false,
@@ -491,7 +491,7 @@
     },
     {
       "path": "/private-yoga",
-      "mainWords": 1462,
+      "mainWords": 1533,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/private-yoga",
       "localMinimum": false,
@@ -499,7 +499,7 @@
     },
     {
       "path": "/professional-standards",
-      "mainWords": 151,
+      "mainWords": 169,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/professional-standards",
       "localMinimum": false,
@@ -507,7 +507,7 @@
     },
     {
       "path": "/programmes",
-      "mainWords": 600,
+      "mainWords": 651,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/programmes",
       "localMinimum": false,
@@ -515,7 +515,7 @@
     },
     {
       "path": "/refunds-rescheduling",
-      "mainWords": 144,
+      "mainWords": 172,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/refunds-rescheduling",
       "localMinimum": false,
@@ -523,7 +523,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 1067,
+      "mainWords": 1060,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -531,7 +531,7 @@
     },
     {
       "path": "/resources/beginners-private-training",
-      "mainWords": 888,
+      "mainWords": 901,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/beginners-private-training",
       "localMinimum": false,
@@ -539,7 +539,7 @@
     },
     {
       "path": "/resources/couples-private-yoga",
-      "mainWords": 884,
+      "mainWords": 893,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/couples-private-yoga",
       "localMinimum": false,
@@ -547,7 +547,7 @@
     },
     {
       "path": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
-      "mainWords": 1439,
+      "mainWords": 1455,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
       "localMinimum": false,
@@ -555,7 +555,7 @@
     },
     {
       "path": "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
-      "mainWords": 1536,
+      "mainWords": 1549,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
       "localMinimum": false,
@@ -563,7 +563,7 @@
     },
     {
       "path": "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
-      "mainWords": 1463,
+      "mainWords": 1472,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
       "localMinimum": false,
@@ -571,7 +571,7 @@
     },
     {
       "path": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
-      "mainWords": 1546,
+      "mainWords": 1561,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
       "localMinimum": false,
@@ -579,7 +579,7 @@
     },
     {
       "path": "/resources/how-villa-managers-book-guest-fitness-sessions",
-      "mainWords": 1470,
+      "mainWords": 1480,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/how-villa-managers-book-guest-fitness-sessions",
       "localMinimum": false,
@@ -587,7 +587,7 @@
     },
     {
       "path": "/resources/jakarta-apartment-session",
-      "mainWords": 1048,
+      "mainWords": 1061,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/jakarta-apartment-session",
       "localMinimum": false,
@@ -595,7 +595,7 @@
     },
     {
       "path": "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
-      "mainWords": 1479,
+      "mainWords": 1504,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
       "localMinimum": false,
@@ -603,7 +603,7 @@
     },
     {
       "path": "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
-      "mainWords": 1413,
+      "mainWords": 1476,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
       "localMinimum": false,
@@ -611,7 +611,7 @@
     },
     {
       "path": "/resources/mobility-coaching-at-home-what-it-is-and-is-not",
-      "mainWords": 1555,
+      "mainWords": 1565,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/mobility-coaching-at-home-what-it-is-and-is-not",
       "localMinimum": false,
@@ -619,7 +619,7 @@
     },
     {
       "path": "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
-      "mainWords": 1447,
+      "mainWords": 1473,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
       "localMinimum": false,
@@ -627,7 +627,7 @@
     },
     {
       "path": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
-      "mainWords": 1596,
+      "mainWords": 1629,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
       "localMinimum": false,
@@ -635,7 +635,7 @@
     },
     {
       "path": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
-      "mainWords": 1476,
+      "mainWords": 1466,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
       "localMinimum": false,
@@ -643,7 +643,7 @@
     },
     {
       "path": "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
-      "mainWords": 1477,
+      "mainWords": 1480,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
       "localMinimum": false,
@@ -651,7 +651,7 @@
     },
     {
       "path": "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
-      "mainWords": 1589,
+      "mainWords": 1684,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
       "localMinimum": false,
@@ -659,7 +659,7 @@
     },
     {
       "path": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
-      "mainWords": 1489,
+      "mainWords": 1518,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
       "localMinimum": false,
@@ -667,7 +667,7 @@
     },
     {
       "path": "/resources/private-boxing-fitness-at-home-what-pad-only-means",
-      "mainWords": 1578,
+      "mainWords": 1588,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means",
       "localMinimum": false,
@@ -675,7 +675,7 @@
     },
     {
       "path": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
-      "mainWords": 1428,
+      "mainWords": 1453,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
       "localMinimum": false,
@@ -683,7 +683,7 @@
     },
     {
       "path": "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
-      "mainWords": 1513,
+      "mainWords": 1510,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
       "localMinimum": false,
@@ -691,7 +691,7 @@
     },
     {
       "path": "/resources/private-yoga-or-mat-pilates-choosing-a-home-session",
-      "mainWords": 1670,
+      "mainWords": 1677,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-yoga-or-mat-pilates-choosing-a-home-session",
       "localMinimum": false,
@@ -699,7 +699,7 @@
     },
     {
       "path": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
-      "mainWords": 1369,
+      "mainWords": 1431,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
       "localMinimum": false,
@@ -707,7 +707,7 @@
     },
     {
       "path": "/resources/programmes-versus-drop-in",
-      "mainWords": 843,
+      "mainWords": 894,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/programmes-versus-drop-in",
       "localMinimum": false,
@@ -715,7 +715,7 @@
     },
     {
       "path": "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
-      "mainWords": 1416,
+      "mainWords": 1460,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
       "localMinimum": false,
@@ -723,7 +723,7 @@
     },
     {
       "path": "/resources/train-in-a-bali-villa",
-      "mainWords": 1175,
+      "mainWords": 1181,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/train-in-a-bali-villa",
       "localMinimum": false,
@@ -731,7 +731,7 @@
     },
     {
       "path": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
-      "mainWords": 1443,
+      "mainWords": 1610,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
       "localMinimum": false,
@@ -739,7 +739,7 @@
     },
     {
       "path": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
-      "mainWords": 1486,
+      "mainWords": 1511,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
       "localMinimum": false,
@@ -747,7 +747,7 @@
     },
     {
       "path": "/resources/what-your-quote-contains",
-      "mainWords": 923,
+      "mainWords": 931,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/what-your-quote-contains",
       "localMinimum": false,
@@ -763,7 +763,7 @@
     },
     {
       "path": "/service-areas",
-      "mainWords": 1317,
+      "mainWords": 1364,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/service-areas",
       "localMinimum": true,
@@ -771,7 +771,7 @@
     },
     {
       "path": "/services",
-      "mainWords": 421,
+      "mainWords": 535,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/services",
       "localMinimum": false,
@@ -795,7 +795,7 @@
     },
     {
       "path": "/terms",
-      "mainWords": 265,
+      "mainWords": 315,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/terms",
       "localMinimum": false,
@@ -803,15 +803,15 @@
     },
     {
       "path": "/villa-hotel-partners",
-      "mainWords": 668,
+      "mainWords": 840,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/villa-hotel-partners",
       "localMinimum": false,
-      "primaryImage": "/images/editorial/villa-hotel-partners.webp"
+      "primaryImage": "/images/editorial/villa-hotel-partners-20261118.webp"
     },
     {
       "path": "/villademo",
-      "mainWords": 307,
+      "mainWords": 326,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id",
       "localMinimum": false,
@@ -835,7 +835,7 @@
     },
     {
       "path": "/villademo/help",
-      "mainWords": 217,
+      "mainWords": 237,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/help",
       "localMinimum": false,
@@ -843,7 +843,7 @@
     },
     {
       "path": "/villademo/request/bodywork",
-      "mainWords": 161,
+      "mainWords": 188,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/bodywork",
       "localMinimum": false,
@@ -851,7 +851,7 @@
     },
     {
       "path": "/villademo/request/boxing",
-      "mainWords": 164,
+      "mainWords": 188,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/boxing",
       "localMinimum": false,
@@ -859,7 +859,7 @@
     },
     {
       "path": "/villademo/request/mat-pilates",
-      "mainWords": 164,
+      "mainWords": 191,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/mat-pilates",
       "localMinimum": false,
@@ -867,7 +867,7 @@
     },
     {
       "path": "/villademo/request/mobility",
-      "mainWords": 164,
+      "mainWords": 191,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/mobility",
       "localMinimum": false,
@@ -875,7 +875,7 @@
     },
     {
       "path": "/villademo/request/private-strength",
-      "mainWords": 164,
+      "mainWords": 191,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/private-strength",
       "localMinimum": false,
@@ -883,7 +883,7 @@
     },
     {
       "path": "/villademo/request/private-yoga",
-      "mainWords": 164,
+      "mainWords": 191,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/private-yoga",
       "localMinimum": false,
@@ -891,7 +891,7 @@
     },
     {
       "path": "/villademo/request/quieter-hour",
-      "mainWords": 164,
+      "mainWords": 191,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/quieter-hour",
       "localMinimum": false,
@@ -899,7 +899,7 @@
     },
     {
       "path": "/villademo/request/zumba",
-      "mainWords": 166,
+      "mainWords": 193,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/request/zumba",
       "localMinimum": false,
@@ -907,7 +907,7 @@
     },
     {
       "path": "/villademo/services",
-      "mainWords": 254,
+      "mainWords": 260,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services",
       "localMinimum": false,
@@ -915,7 +915,7 @@
     },
     {
       "path": "/villademo/services/bodywork",
-      "mainWords": 189,
+      "mainWords": 230,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/bodywork",
       "localMinimum": false,
@@ -923,7 +923,7 @@
     },
     {
       "path": "/villademo/services/boxing",
-      "mainWords": 203,
+      "mainWords": 234,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/boxing",
       "localMinimum": false,
@@ -931,7 +931,7 @@
     },
     {
       "path": "/villademo/services/mat-pilates",
-      "mainWords": 197,
+      "mainWords": 236,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/mat-pilates",
       "localMinimum": false,
@@ -939,7 +939,7 @@
     },
     {
       "path": "/villademo/services/mobility",
-      "mainWords": 198,
+      "mainWords": 239,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/mobility",
       "localMinimum": false,
@@ -947,7 +947,7 @@
     },
     {
       "path": "/villademo/services/private-strength",
-      "mainWords": 204,
+      "mainWords": 243,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/private-strength",
       "localMinimum": false,
@@ -955,7 +955,7 @@
     },
     {
       "path": "/villademo/services/private-yoga",
-      "mainWords": 212,
+      "mainWords": 245,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/private-yoga",
       "localMinimum": false,
@@ -963,7 +963,7 @@
     },
     {
       "path": "/villademo/services/quieter-hour",
-      "mainWords": 197,
+      "mainWords": 232,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/quieter-hour",
       "localMinimum": false,
@@ -971,7 +971,7 @@
     },
     {
       "path": "/villademo/services/zumba",
-      "mainWords": 212,
+      "mainWords": 253,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/zumba",
       "localMinimum": false,
@@ -979,7 +979,7 @@
     },
     {
       "path": "/zumba-dance-fitness",
-      "mainWords": 972,
+      "mainWords": 1037,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/zumba-dance-fitness",
       "localMinimum": false,
@@ -987,6 +987,6 @@
     }
   ],
   "locationPages": 41,
-  "minimumLocationWords": 1317,
+  "minimumLocationWords": 1364,
   "uniquePrimaryImages": 84
 }

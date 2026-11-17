@@ -64,3 +64,7 @@ Current official guidance consulted on 14 November 2026:
 - https://developers.google.com/search/docs/crawling-indexing/links-crawlable
 
 A word count is the owner's content requirement, not a Google ranking threshold. Monitor indexing and useful enquiries when data becomes available. Allow at least 14 complete days for an initial content assessment and 28 for conversion comparisons; do not keep rewriting titles based on unmeasured daily fluctuations.
+
+## Current owner policy override 18 November 2026
+
+Use src/data/offerCopy.ts for all current booking, travel, reply and photo-caption rules. The explicit owner brief requires the illustrative photo caption and a [Company legal name] placeholder beside the registered address. Published standard sessions are strength training, yoga and mat Pilates. The other five public services remain live and labelled On request. Boxing is one person, with no second-guest option. Bali travel is included in all five published areas. Never restore old fees, 36-hour rules, or unverified vetting claims from older notes. Configured partner commission is 10% of what the guest paid, with monthly bank-transfer settlement and a statement. Refresh the designed partner PDF and matching PNG together after changes.

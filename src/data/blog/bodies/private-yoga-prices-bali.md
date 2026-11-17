@@ -6,17 +6,17 @@ The commercial pages are [pricing](/pricing) and [Bali private yoga](/bali/priva
 
 Sixty minutes is the default. It is long enough for a settle, a stand, a floor, and a close. Ninety minutes costs an extra 45 percent of the base, not an extra 45 percent of your patience. Forty-five minute yoga is not a published SKU. If you only have 45, say so. We may decline rather than rush.
 
-A sunrise slot is not a different price because it is pretty. It is a different price if it sits in Uluwatu and needs a travel line. Pretty is not a billing code.
+A sunrise slot does not have a separate scenic premium. Travel is included across the five named Bali areas, including Uluwatu. The coordinator checks whether the requested early time, access and instructor are workable before confirming the session.
 
 Back-to-back yoga and training in the same morning is two services. Two quotes. Two recoveries. Do not ask for a combo discount that pretends one professional is two people.
 
 ## Travel
 
-In-zone: Canggu, Seminyak, Berawa, Pererenan, Petitenget. Travel is inside Rp 850.000.
+Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Berawa, Pererenan and Petitenget remain part of the Canggu–Seminyak area. The published yoga starting price is Rp 850.000 for 60 minutes and up to two people.
 
-Ubud and Sanur: Rp 150.000 per visit, not per person.
+Ubud and Sanur: travel included in the published yoga session price, with no per-visit travel charge.
 
-Uluwatu, Pecatu, Bingin and nearby Bukit: Rp 200.000 per visit, and a realistic arrival window. Clifftop traffic is not a vibe. It is minutes.
+Uluwatu, including a checked Bukit address: travel included. Allow a realistic arrival window because clifftop access and road traffic still affect scheduling.
 
 We do not sell “anywhere in Bali” at the Canggu rate. If your villa is in Sidemen, expect a conversation or a no.
 
@@ -40,7 +40,7 @@ Our quote names service, duration, people, cluster, total, exclusions, cancellat
 
 ## Programmes
 
-Yoga blocks use the same 6/9/12 counts and 5/8/12 percent reductions. A fortnight of sunrise pair yoga is a six-session thought. A month of three slow mornings is a twelve-session thought. Price it. Do not buy twelve because you liked one sunset class in Ubud last year.
+Yoga pack enquiries should use the eligible 3, 5 or 10-session options shown on the pricing page. The quote confirms the yoga rate, schedule and validity. A fortnight of practice may need fewer appointments than a month-long stay. Count the mornings you will attend before choosing the pack rather than treating the length of the holiday as a fixed session count.
 
 ## How to get a number that survives the week
 
@@ -59,9 +59,9 @@ If you still might want training or Pilates, open the [homepage](/) before you l
 
 Example A. Two people, 60 minutes, Seminyak indoor. Planning estimate: Rp 850.000. No travel line. No extra-person line. Ninety minutes would add 45 percent of 850.000, which is Rp 382.500, for a session total of Rp 1.232.500 before any villa fee.
 
-Example B. Two people, 60 minutes, Ubud. Base Rp 850.000 plus an outer-area travel fee confirmed in the quote equals Rp 1.000.000 for that visit. If you want four mornings in Ubud, travel is four times Rp 150.000 unless you move the villa into an in-zone cluster. Geography is a cost.
+Example B. Two people, 60 minutes, Ubud. The published yoga base is Rp 850.000, including both guests and travel. Four accepted single visits at that rate total Rp 3.400.000, with no Ubud travel charge. If a suitable pack is proposed, the quote states its eligible session price and dates.
 
-Example C. Four people, 60 minutes, Canggu. Two included, two extra at Rp 250.000 equals Rp 500.000, plus Rp 850.000 base, equals Rp 1.350.000 if the floor is approved. If the deck only fits two mats, the quote is not the problem. The deck is.
+Example C. Four people, 60 minutes, Canggu. This is a group request rather than the published private pair offer. Ask for a space check and a written group quote. Shared or group sessions are quoted on request and are not a standard published service yet.
 
 These examples are the estimator’s logic. They are not a live diary. Supply, rain fallback and permission can still change the written quote. That is the point of the written quote.
 
@@ -75,7 +75,7 @@ Heat still cuts useful work. A 60-minute vinyasa on an unshaded noon deck is a m
 
 English is the public-site language. Many Bali teachers also speak Bahasa Indonesia. If you need a specific language, name it. If you need no photos, name it. If you need no music, name it. None of those should change the base rate. They change the brief.
 
-What does change the rate: extra people, extra minutes, extra kilometres, extra mats we must source, a hotel permit fee. If a villa wants six branded mats delivered for one hour, that is a kit line, not a spiritual upgrade.
+What can change the quote: extra minutes, an agreed group format, specialist props or an external venue permit. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas stay on request. Any additional equipment should be described and priced before the quote is accepted.
 
 ## After you have the number
 

@@ -1,3 +1,5 @@
+import { PolicySummary, ServiceRequestBadge } from './PolicyLines'
+import { PHOTO_CAPTION, PHOTO_CAPTION_ID } from '@/data/offerCopy'
 import { useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, Check } from 'lucide-react'
@@ -13,7 +15,6 @@ import { PARTNER_ENQUIRY_MESSAGE, PARTNER_ENQUIRY_MESSAGE_ID, WHATSAPP_DISPLAY, 
 import {
   PARTNER_MENU_PDF,
   commissionSentence,
-  commissionShare,
   exampleCommission,
   partner,
   EXAMPLE_MONTHLY_SESSION_VALUE,
@@ -29,15 +30,36 @@ const guestCards = [
   { to: '/zumba-dance-fitness', title: 'Zumba & Dance Fitness', note: 'fun cardio', bali: 1_050_000 },
   { to: '/mat-pilates', title: 'Mat Pilates', note: 'no reformer', bali: 950_000 },
   { to: '/mobility-coaching', title: 'Mobility & stretching', note: 'guided movement', bali: 850_000 },
-  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only', bali: 1_000_000 },
+  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only · 1 guest', bali: 1_000_000 },
   { to: '/guided-meditation', title: 'Guided meditation', note: 'up to 2', bali: 800_000 },
 ]
+
+const partnerCardId: Record<string, string> = {
+  "Private yoga": "Yoga privat",
+  "Private Strength Training": "Latihan kekuatan privat",
+  "Bodywork & Recovery": "Bodywork & pemulihan",
+  "Zumba & Dance Fitness": "Zumba & kebugaran tari",
+  "Mat Pilates": "Mat Pilates",
+  "Mobility & stretching": "Mobilitas & peregangan",
+  "Boxing fitness": "Kebugaran tinju",
+  "Guided meditation": "Meditasi terpandu",
+  "up to 2": "maks. 2 orang",
+  "Rp 1.050.000 single": "Rp 1.050.000 satu orang",
+  "wellness hour": "jam pemulihan",
+  "fun cardio": "kardio santai",
+  "no reformer": "tanpa reformer",
+  "guided movement": "gerakan terpandu",
+  "pads only": "hanya pad",
+  "pads only · 1 guest": "hanya pad · 1 orang",
+  "up to 2 people": "maks. 2 orang",
+  "1 guest": "1 orang"
+}
 
 const copy = {
   en: {
     eyebrow: 'For villa managers',
     h1: 'Wellness for every villa you manage. You earn on every session.',
-    sub: `Built for villa managers and hospitality teams. Put yoga, private strength training, Pilates, stretching, boxing and meditation on the menu in the villas you manage. A coordinator can plan the week, as supply allows. A vetted instructor comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
+    sub: `Built for villa managers and hospitality teams. Put yoga, private strength training, Pilates, stretching, boxing and meditation on the menu in the villas you manage. A coordinator can plan the week, as supply allows. An instructor comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
     primary: 'Talk to us',
     secondary: 'Download the partner menu (PDF)',
     switch: 'Bahasa Indonesia',
@@ -46,13 +68,13 @@ const copy = {
     steps: [
       'Tell your coordinator which villas, areas and days you want covered.',
       'Guests request the session by email or WhatsApp. The request carries your partner code.',
-      'A vetted instructor comes to the villa. The guest pays us.',
-      `You earn ${commissionShare('en')}, with a simple statement from our team each month.`,
+      'An instructor comes to the villa. The guest pays us.',
+      `You earn a ${partner.COMMISSION_PCT}% commission of what the guest paid, paid monthly by bank transfer with a statement.`,
     ],
     guestsTitle: 'What your guests can book',
-    priceNote: 'Bali prices, 60 minutes. Private strength training is Rp 1.050.000 for one session; a 5-session pack is Rp 900.000 per session. Standard travel included in central areas; outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
+    priceNote: 'Bali prices, 60 minutes. Private strength training is Rp 1.050.000 for one session; a 5-session pack is Rp 900.000 per session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
     calendarTitle: 'Set a week across the villas you manage.',
-    calendar: 'Example: private yoga Monday, private strength training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests can reserve by 18:00 the day before, as supply allows. Your coordinator keeps the diary.',
+    calendar: 'Example only, as supply allows: private yoga Monday, private strength training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests can request a slot by 18:00 the day before. A session is confirmed only after the written quote is accepted.',
     getTitle: 'What you get',
     get: [
       'A named coordinator for your villas',
@@ -63,20 +85,21 @@ const copy = {
       '30-day pilot at 1–2 villas first',
     ],
     spaceTitle: 'Have a space?',
-    space: 'If a villa has a terrace, studio or big living room, we check it and plan a shared class or a regular slot.',
+    space: 'If a villa has a terrace, studio or large living room, we can review it after a space check. Shared or group sessions are quoted on request and are not a standard published service yet.',
     formTitle: 'Talk to us',
     formLead: `No sales meeting. Send the villas, the areas and the week you want. A person replies by email at ${COMPANY_EMAIL} or on WhatsApp.`,
     consent: 'I agree that PersonalFitness.id may contact me on WhatsApp and email about the partner programme.',
     send: 'Send enquiry',
     footer: `Questions? Email ${COMPANY_EMAIL} or WhatsApp ${WHATSAPP_DISPLAY}. A real person replies.`,
+    replyHours: 'We reply between 08:00 and 20:00 Bali time.',
     terms: 'Partner terms',
     faqs: [
-      ['Who pays?', 'The guest pays us. We pay you your commission monthly.'],
+      ['Who pays?', 'The guest pays us. We pay you 10% of what the guest paid, monthly by bank transfer, with a statement.'],
       ['Do we need a contract?', 'Only our short partner terms.'],
       ['What if a coach can’t come?', 'We tell the guest straight away and offer a new time or a full refund.'],
       ['Privacy?', 'Your team gets the time and villa only. Guest health notes stay with the coach.'],
-      ['Insurance and liability?', 'The written quote covers the session. We do not issue an insurance note.'],
-      ['Which areas?', 'Canggu and Seminyak included; Ubud, Sanur, Uluwatu with a travel fee; others on request.'],
+      ['Insurance and liability?', 'We share our insurance and liability note during partner onboarding.'],
+      ['Which areas?', 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.'],
     ] as Array<[string, string]>,
     labels: {
       company: 'Company name',
@@ -94,7 +117,7 @@ const copy = {
   id: {
     eyebrow: 'Untuk pengelola villa',
     h1: 'Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.',
-    sub: `Dibangun untuk pengelola villa dan tim hospitality. Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di menu villa yang Anda kelola. Koordinator dapat mengatur minggu, tergantung ketersediaan instruktur. Instruktur yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
+    sub: `Dibangun untuk pengelola villa dan tim hospitality. Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di menu villa yang Anda kelola. Koordinator dapat mengatur minggu, tergantung ketersediaan instruktur. Instruktur yang disebutkan pada kutipan tertulis datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
     primary: 'Bicara dengan kami',
     secondary: 'Unduh menu partner (PDF)',
     switch: 'English',
@@ -104,12 +127,12 @@ const copy = {
       'Beritahu koordinator villa, area, dan hari yang ingin dicakup.',
       'Tamu meminta sesi lewat email atau WhatsApp. Pesanan membawa kode partner Anda.',
       'Instruktur yang sudah diseleksi datang ke villa. Tamu membayar ke kami.',
-      `Anda mendapat ${commissionShare('id')}, dengan laporan sederhana dari tim kami setiap bulan.`,
+      `Anda mendapat komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, dibayar setiap bulan lewat transfer bank beserta laporan.`,
     ],
     guestsTitle: 'Yang bisa dipesan tamu',
-    priceNote: 'Harga Bali, 60 menit. Private strength training Rp 1.050.000 untuk satu sesi; paket 5 sesi Rp 900.000 per sesi. Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan.',
+    priceNote: 'Harga Bali, 60 menit. Private strength training Rp 1.050.000 untuk satu sesi; paket 5 sesi Rp 900.000 per sesi. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan.',
     calendarTitle: 'Atur minggu untuk villa yang Anda kelola.',
-    calendar: 'Contoh: yoga privat Senin, private strength training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu dapat memesan paling lambat pukul 18:00 sehari sebelumnya, tergantung ketersediaan instruktur. Koordinator yang memegang jadwalnya.',
+    calendar: 'Contoh saja, tergantung ketersediaan: yoga privat Senin, private strength training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu bisa meminta slot paling lambat pukul 18:00 sehari sebelumnya. Sesi baru terkunci setelah kutipan tertulis diterima.',
     getTitle: 'Yang Anda dapat',
     get: [
       'Koordinator tetap untuk villa Anda',
@@ -120,20 +143,21 @@ const copy = {
       'Pilot 30 hari di 1–2 villa dulu',
     ],
     spaceTitle: 'Ada ruang bersama?',
-    space: 'Jika villa punya teras, studio atau ruang tamu besar, kami cek dan rencanakan kelas bersama atau slot rutin.',
+    space: 'Jika villa punya teras, studio, atau ruang tamu besar, kami bisa menilainya setelah cek ruang. Sesi bersama atau grup dikutip atas permintaan dan belum menjadi layanan standar yang kami terbitkan.',
     formTitle: 'Bicara dengan kami',
     formLead: `Tidak ada rapat penjualan. Kirim villa, area, dan minggu yang Anda inginkan. Orang sungguhan membalas lewat email ${COMPANY_EMAIL} atau WhatsApp.`,
     consent: 'Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.',
     send: 'Kirim permintaan',
     footer: `Ada pertanyaan? Email ${COMPANY_EMAIL} atau WhatsApp ${WHATSAPP_DISPLAY}. Dibalas oleh orang sungguhan.`,
+    replyHours: 'Kami membalas pukul 08:00-20:00 waktu Bali.',
     terms: 'Syarat partner',
     faqs: [
-      ['Siapa yang membayar?', 'Tamu membayar ke kami. Kami bayar komisi Anda setiap bulan.'],
+      ['Siapa yang membayar?', 'Tamu membayar ke kami. Kami bayar 10% dari yang dibayar tamu, setiap bulan lewat transfer bank, beserta laporan.'],
       ['Perlu kontrak?', 'Hanya syarat partner singkat kami.'],
       ['Kalau coach berhalangan?', 'Kami langsung kabari tamu dan tawarkan waktu baru atau pengembalian dana penuh.'],
       ['Privasi tamu?', 'Tim Anda hanya menerima jadwal dan villa. Catatan kesehatan tamu hanya untuk coach.'],
-      ['Asuransi dan tanggung jawab?', 'Kutipan tertulis mencakup sesi. Kami tidak menerbitkan catatan asuransi.'],
-      ['Area mana saja?', 'Canggu dan Seminyak termasuk; Ubud, Sanur, Uluwatu dengan biaya perjalanan; area lain bisa ditanyakan.'],
+      ['Asuransi dan tanggung jawab?', 'Kami membagikan catatan asuransi dan tanggung jawab saat onboarding partner.'],
+      ['Area mana saja?', 'Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan.'],
     ] as Array<[string, string]>,
     labels: {
       company: 'Nama perusahaan',
@@ -303,13 +327,14 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
             <p className="large-copy">{text.sub}</p>
             <div className="cluster">
               <a className="button button-primary" href="#partner-enquiry">{text.primary}<ArrowUpRight size={16} /></a>
-              <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a>
+              <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a><a className="button button-outline" href="/partners/villa-wellness-menu.png" download>{lang === 'id' ? 'Unduh gambar WhatsApp' : 'Download WhatsApp image'}</a>
             </div>
             <p className="partner-hero-note"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a> · <Link to={text.switchTo}>{text.switch}</Link> · <Link to="/partner-terms">{text.terms}</Link></p>
+            <p className="small muted">{text.replyHours}</p>
           </div>
         </div>
         <div className="shell">
-          <img className="partner-hero-photo" src="/images/editorial/villa-hotel-partners.webp" alt={lang === 'id' ? 'Sesi yoga privat di villa Bali' : 'Private yoga session at a Bali villa'} width="1100" height="619" fetchPriority="high" />
+          <img className="partner-hero-photo" src="/images/editorial/villa-hotel-partners-20261118.webp" alt={lang === 'id' ? 'Sesi yoga privat di villa Bali' : 'Private yoga session at a Bali villa'} width="1440" height="960" srcSet="/images/editorial/villa-hotel-partners-20261118-640.webp 640w, /images/editorial/villa-hotel-partners-20261118.webp 1440w" sizes="(max-width: 700px) 100vw, 55vw" fetchPriority="high" /><p className="photo-policy-caption">{lang === 'id' ? PHOTO_CAPTION_ID : PHOTO_CAPTION}</p>
         </div>
       </section>
 
@@ -329,13 +354,13 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
 
       <section className="section section-light" lang={lang}>
         <div className="shell">
-          <Sectionish title={text.guestsTitle} copy={text.priceNote} />
+          <Sectionish title={text.guestsTitle} copy={text.priceNote} /><PolicySummary lang={lang} />
           <div className="partner-service-grid">
             {guestCards.map((card) => (
               <Link to={card.to} className="partner-service-card" key={card.to}>
                 <div>
-                  <h3>{card.title}</h3>
-                  <p>{lang === 'id' ? 'Mulai' : 'From'} {formatIdr(card.bali)} · {card.note}</p>
+                  <h3>{lang === 'id' ? partnerCardId[card.title] || card.title : card.title}</h3><ServiceRequestBadge slug={card.to.slice(1)} lang={lang} />
+                  <p>{lang === 'id' ? 'Mulai' : 'From'} {formatIdr(card.bali)} · {lang === 'id' ? partnerCardId[card.note] || card.note : card.note}</p>
                   <span className="text-link">{lang === 'id' ? 'Buka sesi' : 'Open session'}</span>
                 </div>
               </Link>
@@ -364,7 +389,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
           <div className="content-shell">
             <Eyebrow>{lang === 'id' ? 'Contoh penghasilan' : 'Earnings example'}</Eyebrow>
             <h2>{lang === 'id' ? 'Contoh saja, bukan jaminan.' : 'Example only, not a guarantee.'}</h2>
-            <p>Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 900.000 sessions = about {EXAMPLE_MONTHLY_SESSIONS} sessions and {formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} a month in sessions. At {partner.COMMISSION_PCT}% you would earn about {formatIdr(commission)} a month.</p>
+            <p>{lang === 'id' ? `Contoh saja: 8 villa, tingkat hunian 70%, masa tinggal 5 malam, dan 1 dari 5 masa tinggal memesan dua sesi Rp 900.000 menghasilkan sekitar ${EXAMPLE_MONTHLY_SESSIONS} sesi dan ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} per bulan. Dengan komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, penghasilan sekitar ${formatIdr(commission)} per bulan.` : `Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 900.000 sessions = about ${EXAMPLE_MONTHLY_SESSIONS} sessions and ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} a month in sessions. At ${partner.COMMISSION_PCT}% of what the guest paid, you would earn about ${formatIdr(commission)} a month.`}</p>
           </div>
         </section>
       )}
@@ -386,6 +411,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
             <Eyebrow>{text.formTitle}</Eyebrow>
             <h2>{text.formTitle}</h2>
             <p className="large-copy">{text.formLead}</p>
+            <p className="small muted">{text.replyHours}</p>
             <p><TextLink to="/partner-terms">{text.terms}</TextLink></p>
           </div>
           <PartnerForm lang={lang} />

@@ -34,7 +34,7 @@ The [pricing page](/pricing) uses the same blocks operations uses. Jakarta priva
 
 There is no sunrise premium. There is no view premium. There is no “apartment yoga tax” beyond the published Jakarta rate plus access reality. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs) if you are mixing yoga with training costs. They are different products.
 
-Pay securely using the payment details in your written quote. Never send card numbers in WhatsApp. Cancellation: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers in WhatsApp. Cancellation: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 
 ## Pair yoga versus training for two
 
@@ -60,6 +60,6 @@ The sequence is on [how it works](/how-it-works). The city hub is [home personal
 4. Close a door if you can.
 5. Write mixed levels in one line if that is the truth.
 6. Open [Jakarta private yoga](/jakarta/private-yoga) for the rate.
-7. Send WhatsApp. Wait for the quote. Pay only on the link.
+7. Send WhatsApp. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Private yoga at home in Jakarta is useful when the room, the pair and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [private yoga](/private-yoga) and send the building.

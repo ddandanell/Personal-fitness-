@@ -2,24 +2,18 @@ import { Link } from 'react-router'
 import { PageIntro } from '@/components/Primitives'
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
-import { commissionShare, partner } from '@/config/partner'
+import { partner } from '@/config/partner'
 
 export default function PartnerTerms() {
-  const share = commissionShare('en')
-  const base = partner.COMMISSION_BASE === 'session-excluding-travel-and-extras'
-    ? ' of the session price, excluding travel and extra-person fees,'
-    : ' of the session price'
-  const payout = partner.COMMISSION_PAYOUT_DAY
-    ? `Monthly, by ${partner.COMMISSION_PAYOUT_DAY} of the next month, to the account you give us in writing.`
-    : 'Monthly, to the account you give us in writing.'
-  const liability = partner.LIABILITY_TEXT || 'Ask us and we send the current written explanation. We do not publish placeholder legal wording.'
+  const payout = 'Paid monthly by bank transfer, with a statement, to the account you give us in writing. The 10% is calculated on what the guest paid.'
+  const liability = partner.LIABILITY_TEXT || 'We share our insurance and liability note during partner onboarding.'
   return (
     <>
       <PageIntro eyebrow="Partners" title="Villa partner terms." description="Plain-English terms for villa managers, agencies and boutique hosts. Guests still pay the published website price." />
       <section className="section">
         <div className="content-shell privacy-prose">
           <h2>1. Commission</h2>
-          <p>You earn {share}{partner.COMMISSION_PCT != null ? base : ''} for every session paid by a guest who booked with your partner code.</p>
+          <p>You earn a 10% commission of what the guest paid, on every session paid by a guest who booked with your partner code.</p>
           <h2>2. Payout</h2>
           <p>{payout} Refunded sessions earn no commission.</p>
           <h2>3. Prices</h2>

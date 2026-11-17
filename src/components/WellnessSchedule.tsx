@@ -1,3 +1,4 @@
+import { isOnRequest } from '@/data/offerCopy'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarDays, Check, Download, Plus, Trash2 } from 'lucide-react'
@@ -71,11 +72,11 @@ export default function WellnessSchedule() {
       <div className="plan-visit-list">
         {visits.map((visit, index) => <fieldset className="plan-visit" key={visit.id}>
           <legend>Visit {index + 1}</legend>
-          <Field label={'Service for visit ' + (index + 1)}><select value={visit.service} onChange={(event) => update(visit.id, { service: event.target.value })}>{planServices.map((slug) => <option key={slug} value={slug}>{getService(slug)?.title}</option>)}</select></Field>
+          <Field label={'Service for visit ' + (index + 1)}><select value={visit.service} onChange={(event) => update(visit.id, { service: event.target.value, participants: event.target.value === 'boxing-fitness' ? 1 : visit.participants })}>{planServices.map((slug) => <option key={slug} value={slug}>{getService(slug)?.title}{isOnRequest(slug) ? ' · On request' : ''}</option>)}</select></Field>
           <div className="plan-visit-timing">
             <Field label={'Day for visit ' + (index + 1)}><select value={visit.day} onChange={(event) => update(visit.id, { day: event.target.value })}>{weekDays.map((day) => <option key={day}>{day}</option>)}</select></Field>
             <Field label={'Time for visit ' + (index + 1)}><input type="time" value={visit.time} onChange={(event) => update(visit.id, { time: event.target.value })} required /></Field>
-            <Field label={'People for visit ' + (index + 1)}><input type="number" min="1" max="20" step="1" value={visit.participants} onChange={(event) => update(visit.id, { participants: Number(event.target.value) })} required /></Field>
+            <Field label={'People for visit ' + (index + 1)}><input type="number" min="1" max={visit.service === 'boxing-fitness' ? 1 : 2} step="1" value={visit.participants} onChange={(event) => update(visit.id, { participants: Number(event.target.value) })} required /></Field>
           </div>
           <button type="button" className="plan-remove" disabled={visits.length === 1} onClick={() => { setVisits((items) => items.filter((item) => item.id !== visit.id)); setReview(false) }} aria-label={'Remove visit ' + (index + 1)}><Trash2 size={16} />Remove</button>
         </fieldset>)}
@@ -86,13 +87,13 @@ export default function WellnessSchedule() {
     <aside className="plan-summary" aria-label="Your plan summary">
       <Eyebrow light>Your plan, together</Eyebrow><h3>{estimate.totalVisits} visits.<br />One conversation.</h3>
       <div className="plan-week-preview">{[...visits].sort((a, b) => weekDays.indexOf(a.day as typeof weekDays[number]) - weekDays.indexOf(b.day as typeof weekDays[number]) || a.time.localeCompare(b.time)).map((visit) => <div key={visit.id}><span>{visit.day.slice(0, 3)}<small>{visit.time}</small></span><p>{getService(visit.service)?.title}<small>{visit.participants} {visit.participants === 1 ? 'person' : 'people'} · weekly</small></p></div>)}</div>
-      <dl className="plan-totals"><div><dt>Priced sessions</dt><dd>{formatIdr(estimate.sessionTotal)}</dd></div><div><dt>Travel for priced visits</dt><dd>{estimate.travelTotal ? formatIdr(estimate.travelTotal) : 'Confirmed in the quote'}</dd></div><div><dt>Package savings</dt><dd>{estimate.saving ? '- ' + formatIdr(estimate.saving) : 'No pack yet'}</dd></div></dl>
+      <dl className="plan-totals"><div><dt>Priced sessions</dt><dd>{formatIdr(estimate.sessionTotal)}</dd></div><div><dt>Travel</dt><dd>{city === 'Bali' ? 'Included in all five named Bali areas' : 'South and Central included; other areas by quote'}</dd></div><div><dt>Package savings</dt><dd>{estimate.saving ? '- ' + formatIdr(estimate.saving) : 'No pack yet'}</dd></div></dl>
       <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Starting price for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
       {estimate.requiresQuote && <p className="plan-warning" role="status">{estimate.collisions ? 'Some visits overlap. Choose different times to review your plan.' : estimate.invalid ? 'Check your area, visit time and whole participant count.' : 'A complete quote is required. Some services, group sizes or travel are not included in this subtotal.'}</p>}
       {estimate.discountRate > 0 && <p className="plan-saving"><Check size={16} />{Math.round(estimate.discountRate * 100)}% saving on eligible fitness visits</p>}
       <p className="plan-small">Session packs of 3, 5 and 10 apply the same saving share as the Rp 1.050.000 anchor. Dates are subject to instructor availability and location confirmation.</p>
       <button type="button" className="button button-light" disabled={estimate.invalid} onClick={() => setReview(true)}>Review my schedule<ArrowUpRight size={16} /></button>
-      <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
+      <p className="plan-small">A 50% deposit confirms a single-session booking. Packs are paid in full upfront after you accept the written quote. No automatic renewal.</p>
     </aside>
     {review && <section className="plan-review" aria-label="Review schedule enquiry">
       <Eyebrow>Ready for your coordinator</Eyebrow><h2 ref={reviewHeading} tabIndex={-1}>Your schedule enquiry.</h2><p>Review the details, then email them or open WhatsApp. This planner does not process payment, save a health record or confirm a booking.</p><pre>{message}</pre>

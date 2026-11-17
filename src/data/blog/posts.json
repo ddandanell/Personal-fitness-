@@ -14,7 +14,7 @@
     "faqs": [
       {
         "q": "Is Rp 1.050.000 the final price?",
-        "a": "It is the in-zone 60-minute rate for one person in Canggu–Seminyak. Extra people, 90 minutes and outer-zone travel are added on the quote."
+        "a": "It is the in-zone 60-minute rate for one person in Canggu–Seminyak. Eligible extra guests and 90 minutes can change the quote. Travel is included in all five named Bali areas."
       },
       {
         "q": "Can I pick the trainer?",
@@ -158,7 +158,7 @@
       },
       {
         "q": "Is Uluwatu the same price as Canggu?",
-        "a": "No. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.."
+        "a": "No. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.."
       },
       {
         "q": "Can I pay in WhatsApp?",
@@ -535,7 +535,7 @@
     "slug": "personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
     "briefId": "B019",
     "title": "Personal trainer in Ubud: travel, access and outer-zone rates",
-    "description": "Ubud private strength training is Rp 1.050.000 plus an outer-area travel fee confirmed in the written quote. Valley access, indoor floors and how the quote is built.",
+    "description": "Ubud private strength training is Rp 1.050.000 with travel included. Valley access, indoor floors and how the quote is built.",
     "primaryQuery": "personal trainer in ubud: travel, access and outer-zone rates",
     "service": "Private Strength Training",
     "city": "Bali",
@@ -545,7 +545,7 @@
     "faqs": [
       {
         "q": "Is Ubud in-zone?",
-        "a": "No. Ubud has an outer-area travel fee confirmed in the written quote on top of the Bali session rate."
+        "a": "Yes. Travel is included in the published Bali session price for Ubud. There is no added guest travel fee."
       },
       {
         "q": "Is the valley view the venue?",

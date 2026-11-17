@@ -57,7 +57,7 @@ export function wellnessPlanMessage(input: PlanInput) {
     ...input.visits.map((visit) => visit.day + ' at ' + visit.time + ': ' + (getService(visit.service)?.title || visit.service) + ', ' + visit.participants + (visit.participants === 1 ? ' person' : ' people')),
     estimate.requiresQuote ? 'Price: complete written quote required; any displayed subtotal covers priced items only.' : 'Starting price: ' + formatIdr(estimate.total),
     estimate.saving ? 'Package savings on eligible sessions: ' + formatIdr(estimate.saving) + ' versus the single-session rates.' : 'Single-session rates apply. A larger pack is confirmed on the written quote.',
-    'Please itemise travel, staffing, equipment and any other fees. I would like to discuss one paid first visit before committing to a prepaid plan.',
+    'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Please confirm the applicable Jakarta travel position and any agreed external costs. I would like to discuss one paid first visit before committing to a prepaid plan.',
     'Please explain the coordinator-managed wellness brief and how I can choose which non-clinical notes are shared with my coaches.',
     'This is a schedule enquiry, not a confirmed booking or payment authorisation.',
   ].join('\n')

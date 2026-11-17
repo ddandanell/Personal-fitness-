@@ -24,7 +24,7 @@ Do not send five preferred trainers from Instagram. You can name an approach, a 
 
 ## How the estimator and WhatsApp fit together
 
-Use the [contact](/contact) estimator or the [pricing](/pricing) page to see the starting price for the session, city, cluster, people and length. Extra people, 90 minutes, Ubud/Sanur travel of Rp 150.000, Uluwatu travel of Rp 200.000 and programme reductions sit on that draft. Then send the draft on WhatsApp.
+Use the [contact](/contact) estimator or [pricing](/pricing) page to see the starting price for the service, city, area, people and duration. It shows eligible participant additions, 90-minute pricing and packs. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas are on request. Then send the draft on WhatsApp for a written quote.
 
 The number on the website is the starting price. The written quote is the payable total. A screenshot of a transfer is not settlement. A “yes” in chat is not confirmation.
 
@@ -38,7 +38,7 @@ Jakarta yoga for two: “Private yoga, Jakarta, South Jakarta Kemang, apartment 
 
 Uluwatu boxing: “Boxing fitness, Bali, Uluwatu, villa, Sunday 08:00–10:00, one person, already boxing. Indoor gym room, high ceiling. Host knows you are coming.”
 
-Ubud mobility: “Mobility coaching, Bali, Ubud, house, Tuesday 09:00–11:00, one person, stiff from sitting, not injury treatment. Level indoor room. I understand travel is extra.”
+Ubud mobility: “Mobility coaching on request, Bali, Ubud, house, Tuesday 09:00–11:00, one person, gentle movement rather than injury treatment. Level indoor room. Please confirm the instructor and session quote with travel included.”
 
 Those four messages can be quoted. A message that says “need trainer tomorrow morning somewhere in Bali, cash ok, can you do physio too” cannot.
 

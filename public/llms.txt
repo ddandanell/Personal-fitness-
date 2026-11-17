@@ -1,6 +1,6 @@
 # PersonalFitness.id
 
-PersonalFitness.id sends a vetted instructor to your villa, home or hotel in published Bali and Jakarta clusters. You book a private session and pay from the written quote. It is a managed private service.
+PersonalFitness.id sends an instructor to your villa, home or hotel in published Bali and Jakarta clusters. You book a private session and pay from the written quote. It is a managed private service.
 
 Canonical host: https://www.personalfitness.id/
 Language: English (en-ID). Indonesian landing page: https://www.personalfitness.id/id
@@ -10,15 +10,18 @@ Language: English (en-ID). Indonesian landing page: https://www.personalfitness.
 - Private Strength Training: 60 minutes from Rp 1.050.000
 - Private yoga: 60 minutes for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta
 - Mat Pilates: 60 minutes from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer
-- Mobility coaching: non-clinical stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta
-- Boxing fitness: pad-only, one person, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
-- Guided meditation: a calm, guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta
+- Mobility coaching: on request, non-clinical stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta
+- Boxing fitness: on request, pad-only, one person, no sparring, from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta
+- Guided meditation: on request, a calm, guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta
 
 Availability, access and the payable total are confirmed in a written quote. The first visit uses the published rate; there is no free introduction session.
 
+- Bodywork & Recovery: on request, from Rp 1.050.000 for 60 minutes.
+- Zumba & Dance Fitness: on request, from Rp 1.050.000 for 60 minutes.
+
 ## Areas
 
-Bali in-zone: Canggu and Seminyak. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.
+Bali travel included: Canggu, Seminyak, Sanur, Ubud and Uluwatu. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.
 
 Jakarta in-zone: South Jakarta (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) and Central Jakarta (Menteng, Gondangdia, Thamrin). North (Kelapa Gading, Sunter, Pluit, PIK), West (Puri Indah, Kebon Jeruk) and East (Rawamangun, Pulomas) are quoted after a timing check. BSD is outside DKI Jakarta.
 
@@ -66,7 +69,7 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 
 ## Villa partners
 
-Built for villa managers and hospitality teams who want a wellness menu in the villas they manage. Guests still book on the public site. A vetted instructor comes to the villa, as supply allows, the guest pays from the written quote, and the partner earns a commission on every paid session.
+Built for villa managers and hospitality teams who want a wellness menu in the villas they manage. Guests still book on the public site. An instructor comes to the villa, as supply allows, the guest pays from the written quote, and the partner earns 10% of what the guest paid, paid monthly by bank transfer with a statement.
 
 - Partner programme: https://www.personalfitness.id/villa-hotel-partners
 - Bahasa: https://www.personalfitness.id/id/mitra-villa
@@ -108,3 +111,13 @@ Built for villa managers and hospitality teams who want a wellness menu in the v
 
 Swimming, nutrition consultation and physiotherapy stay held. We do not diagnose, treat injury or sell meal plans on this site.
 The 28 area pages, such as /bali/canggu and /jakarta/kemang, have detailed local planning content, self-referencing canonical URLs and sitemap inclusion. Coverage still follows each page’s stated travel and availability conditions.
+
+## Current booking and partner policies
+
+Free rescheduling up to 24 hours before your session, if supply allows. Inside 24 hours, the session is charged. A 50% deposit confirms each booking; packs are paid in full upfront.
+Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Jakarta travel rules remain South and Central included; North, West and East by request after a timing check.
+Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
+We reply between 08:00 and 20:00 Bali time.
+Villa partners earn 10% of what the guest paid, paid monthly by bank transfer with a statement. Refunded sessions earn no commission.
+Boxing fitness is pad-only for one guest, on request. Mobility, guided meditation, bodywork and recovery, and Zumba and dance fitness are also on request. Strength training, yoga and mat Pilates are standard listed sessions. Yoga and meditation include up to two people.
+[Company legal name], Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226.

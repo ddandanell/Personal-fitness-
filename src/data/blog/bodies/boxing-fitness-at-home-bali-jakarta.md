@@ -22,7 +22,7 @@ We will not run kickboxing as a secret extra. We will not put two strangers in a
 
 ## How the Bali quote is built
 
-[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.000.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
+[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.000.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a boxing studio and it is not a walk-in. You train at the villa or home you already have permission to use.
 
@@ -36,9 +36,9 @@ If the lobby blocks outside trainers, tell us before the quote. We will not pret
 
 ## Programmes, first sessions and what you actually pay
 
-There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
+There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 9.5%, 14.3% or 23.8%, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
 
-Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 
@@ -58,6 +58,6 @@ If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If the buil
 6. Name noise and neighbour limits.
 7. Pick a two-hour window, not a single minute.
 8. Open [how it works](/how-it-works) if you want the sequence in order.
-9. Send the message. Wait for the quote. Pay only on the link.
+9. Send the message. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Private boxing fitness is useful when the pads, the floor and the quote all match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or the [boxing page](/boxing-fitness) and send the area.

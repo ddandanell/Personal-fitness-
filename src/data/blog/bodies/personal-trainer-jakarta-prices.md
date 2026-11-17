@@ -22,7 +22,7 @@ Rp 950.000 is the managed in-zone unit. Extra people Rp 250.000. Ninety minutes 
 - Noise limits
 - Cancellation
 - Named professional or backup
-- Payment link, not a personal bank chat
+- Payment instructions on the written quote; never send card or bank details in WhatsApp
 
 Missing tower information is how 06:30 sessions die. We will ask for it. Other operators should too.
 
@@ -44,13 +44,13 @@ If your tower already has a gym, a house trainer can look cheaper because the ro
 
 ## Recurring versus drop-in
 
-Jakarta is a recurring city. Two or three mornings a week in the same unit is the design. Drop-in is for travel months. Price the recurring block on [programmes](/programmes). Do not buy twelve sessions for a two-week work trip.
+Jakarta is a recurring city. Two or three mornings a week in the same unit is the design. Drop-in is for travel months. Price the recurring block on [programmes](/programmes). Choose only the eligible 3, 5 or 10-session pack you can actually attend during the work trip.
 
 The same professional across the block is an operations goal, not a guarantee. A backup is named where available. Someone with no backup is a different arrangement. Ask.
 
 ## Payment and refunds
 
-Pay securely using the payment details in your written quote. Never send card numbers, account numbers or KTP photos in WhatsApp. Refunds, if due, are returned to the original payment method where applicable. Professional no-show: you are not charged. You cancel inside 36 hours: you are charged. Details on [refunds](/refunds-rescheduling).
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or KTP photos in WhatsApp. Refunds, if due, are returned to the original payment method where applicable. Professional no-show: you are not charged. You cancel inside 24 hours: you are charged. Details on [refunds](/refunds-rescheduling).
 
 ## Requesting the comparable number
 
@@ -66,7 +66,7 @@ Example B. Two people, 60 minutes, Menteng house. Rp 950.000 plus Rp 250.000 equ
 
 Example C. One person, 90 minutes, Kemang. Base Rp 950.000 plus 45 percent (Rp 427.500) equals Rp 1.377.500. Only useful if you can actually stay in the room for 90 minutes before a call.
 
-Example D. Twelve sessions, one person, South Jakarta. Rp 950.000 times 12 equals Rp 11.400.000, minus 12 percent equals Rp 10.032.000. Divide by 12 if you want the discounted per-session number: Rp 836.000. That is still not a studio class. It is still a private hour in the unit.
+Example D. Three private strength training sessions, one person, South Jakarta. The pack is Rp 2.850.000, or Rp 950.000 per session, compared with Rp 3.150.000 for three Rp 1.050.000 single visits. The saving is Rp 300.000. The quote confirms dates, access and the validity window; it remains private training at home.
 
 Example E. BSD. There is no published in-zone rate. You get a travel quote or a decline after a timing check. Anyone selling “Jakarta 950” for BSD without a travel line is using our cluster as a costume.
 

@@ -6,7 +6,7 @@ If you searched what you actually pay for a personal trainer at home, start here
 
 The quote names the session, the city, the cluster, the duration, the headcount, the session charge, extra-person fees if they apply, travel if it applies, programme reduction if it applies, exclusions, and cancellation. It names that payment details are in the written quote. It does not name a card number for you to type into WhatsApp.
 
-Starting prices live on [pricing](/pricing): private strength training from Rp 1.050.000, yoga from Rp 850.000 and Rp 900.000 with two people included, and the other four live sessions at their published lines. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Extra people are Rp 250.000 in Bali and Rp 250.000 in Jakarta when the session bills them. Ninety minutes add 45 percent of the base.
+Starting prices live on [pricing](/pricing): private strength training from Rp 1.050.000, yoga from Rp 850.000 and Rp 900.000 with two people included, and the other four live sessions at their published lines. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Extra people are Rp 250.000 in Bali and Rp 250.000 in Jakarta when the session bills them. Ninety minutes add 45 percent of the base.
 
 If a line is not on the quote, it is not assumed. Venue hire, parking and unusual equipment appear only when written.
 
@@ -26,7 +26,7 @@ It is not physiotherapy, nutrition or swimming. Those stay held. It is not two s
 4. Duration is 60 or 90.
 5. Travel is present or honestly absent.
 6. Programme percent is 5, 8 or 12 on session charges only, if you asked for a block.
-7. Cancellation: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; professional no-show is not charged. Full wording on [refunds](/refunds-rescheduling).
+7. Cancellation: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; professional no-show is not charged. Full wording on [refunds](/refunds-rescheduling).
 
 If any of those seven lines is missing, reply before you pay. Do not send a card number to “speed it up”.
 
@@ -63,7 +63,7 @@ A written quote is useful when it is complete and boring. PersonalFitness.id exi
 
 Paying a friend of a friend in cash, then messaging us to “back it up”, is not this service. Forwarding a screenshot of our pricing page to a guest as if it were their confirmation is not this service. Changing the headcount after payment without a revised quote is how hours fail.
 
-If the quote is wrong, reply. If the cluster is wrong, reply. If you need 90 minutes instead of 60, reply before payment. After payment, changes follow the 36-hour rule and supply. The written quote is not a mood. It is the contract for that visit, together with the service terms. Keep it. The confirmation will reference it.
+If the quote is wrong, reply. If the cluster is wrong, reply. If you need 90 minutes instead of 60, reply before payment. After payment, changes follow the 24-hour rule and supply. The written quote is not a mood. It is the contract for that visit, together with the service terms. Keep it. The confirmation will reference it.
 
 ## How to ask for a revision without restarting
 

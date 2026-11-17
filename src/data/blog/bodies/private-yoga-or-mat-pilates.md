@@ -28,7 +28,7 @@ If the room is shared with work or household activities, reserve it for the appo
 
 ## Match the request to the location
 
-In Bali, Canggu and Seminyak are the published in-zone cluster. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote., while Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. If you are staying in a managed property, ask the host to confirm permission for an outside instructor. The [Canggu location guide](/bali/canggu) explains villa access and the local planning details that help define a workable appointment.
+In Bali, Canggu, Seminyak, Sanur, Ubud and Uluwatu are the published Bali areas with travel included. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request., while Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. If you are staying in a managed property, ask the host to confirm permission for an outside instructor. The [Canggu location guide](/bali/canggu) explains villa access and the local planning details that help define a workable appointment.
 
 For Jakarta, the published in-zone pockets sit within South and Central Jakarta. North, West and East Jakarta are by request, with local availability and travel checked before an offer. Apartment residents should ask management about visiting-professional access and any shared-facility restriction. The [Menteng location guide](/jakarta/menteng) provides a home-planning example within the Central Jakarta cluster.
 
@@ -36,7 +36,7 @@ These examples help you prepare an enquiry. They do not establish a separate stu
 
 ## Use the same details when comparing quotes
 
-Compare the service, city, participants, duration, address and travel on the same basis. A one-person mat Pilates request and yoga for two are different products, even when the appointments are the same length. A longer visit or an extra participant can change the total. Travel may also make two separate appointments cost differently from one visit.
+Compare the service, city, participants, duration, address and travel on the same basis. A one-person mat Pilates request and yoga for two are different products, even when the appointments are the same length. A longer visit or an extra participant can change the total. Travel is included in all five named Bali areas for each accepted appointment. Jakarta travel follows its published coverage rules.
 
 The [pricing page](/pricing) explains the published starting-rate calculation. Your written quote should identify the actual service and complete payable amount, together with what is included and any separately agreed charges. Read those details before deciding. A low headline number is not a useful comparison if it leaves out the travel or people required for your appointment.
 
@@ -46,7 +46,7 @@ Do not choose a prepaid programme simply because its discount looks attractive. 
 
 A paid single session is a reasonable starting request if you are trying a private format for the first time. Explain what you would like to experience and which dates could work. After the appointment, you can discuss a regular pattern if it fits your plans and repeat professional availability can be confirmed.
 
-The published eligible programme reductions are about 9.5%, 14.3% and 23.8% on session charges for six, nine and twelve visits. Travel and separately agreed external costs are excluded from those reductions. A four-week block should name its dates, visit count and validity period. It is not an automatically renewing subscription.
+The published eligible pack reductions are about 9.5%, 14.3% and 23.8% for 3, 5 and 10 sessions. The written quote confirms which service and session charges are eligible, along with any separately agreed external costs. Bali travel is included across the five named areas. Each pack names its dates, count and validity period; it is not an automatically renewing subscription.
 
 For a mixed household routine, keep each appointment’s participants visible. Yoga for two on one day and individual Pilates on another should remain distinct lines when the coordinator checks the schedule and total. The [programme page](/programmes) helps you compare those practical arrangements.
 

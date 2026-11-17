@@ -1,15 +1,17 @@
+import { publicServices } from '@/data/publicOffer'
+import { isOnRequest, RESCHEDULE_NOTE } from '@/data/offerCopy'
 /** Villa Sora guest demonstration. Session requests remain in this tab.
  * Rates and guest limits preserve the existing demo offer.
  * New asset prompts and provenance: docs/villa-demo-image-prompts.md.
  */
 
 export const CONCIERGE_LINE = 'Subject to instructor availability and location confirmation.'
-export const POLICY_LINE = 'Free rescheduling up to 36 hours before your session. Sessions are delivered by vetted instructors.'
+export const POLICY_LINE = RESCHEDULE_NOTE
 export const SUPPLY_LINE = 'As supply allows.'
 export const BACKUP_LINE = 'A backup instructor is named only where available.'
 export const PAYMENT_LINE = 'Payment details are shared in your written quote.'
 export const PAYMENT_SENT = 'Payment details sent with confirmation.'
-export const LEAD_LINE = 'Requests are for a future Bali date, as supply allows. The preferred time is not reserved until a vetted instructor is offered.'
+export const LEAD_LINE = 'Requests are for a future Bali date, as supply allows. The preferred time is not reserved until an instructor is offered.'
 export const SINGLE_SESSION = 1_050_000
 export const SECOND_GUEST = 250_000
 export const WHATSAPP_DISPLAY = '+62 811-3803-488'
@@ -45,6 +47,9 @@ export type Service = {
   slug: string
   name: string
   featured: boolean
+  basePrice?: number
+  includedGuests?: number
+  onRequest?: boolean
   sentence: string
   duration: string
   minutes: number
@@ -74,7 +79,7 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'Your private session, a vetted instructor and mats for your group.',
+    included: 'Your private session, an instructor and mats for your group.',
     brought: 'Mats for the guests on the request.',
     guestProvides: 'A shaded, clear floor and drinking water.',
     setup: 'About ten minutes to lay out mats. A quiet corner of the garden or a living room is enough.',
@@ -95,7 +100,7 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'The session and a vetted instructor.',
+    included: 'The session and an instructor.',
     brought: 'A few bands and a mat when the villa does not have them.',
     guestProvides: 'Clear floor space. Dumbbells if the villa already keeps them.',
     setup: 'A living room, covered terrace or gym corner. No installation.',
@@ -116,7 +121,7 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'Your private session, a vetted instructor and mats for your group.',
+    included: 'Your private session, an instructor and mats for your group.',
     brought: 'Mats.',
     guestProvides: 'A clear floor. A firm surface is easier than a thick rug.',
     setup: 'Floor space for two mats side by side.',
@@ -137,7 +142,7 @@ export const services: Service[] = [
     participants: '1 guest',
     maxGuests: 1,
     priceBasis: 'Rp 1.050.000 for one guest. This session is arranged for one person.',
-    included: 'The session and a vetted instructor.',
+    included: 'The session and an instructor.',
     brought: 'Oil and linen for the hour.',
     guestProvides: 'A private room, a firm bed or a clear floor, and towels.',
     setup: 'The room stays private. Allow a few minutes before and after.',
@@ -158,7 +163,7 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'The session and a vetted instructor.',
+    included: 'The session and an instructor.',
     brought: 'A small speaker if the villa prefers not to use its own.',
     guestProvides: 'A clear terrace or living room, and a way to play music at a neighbourly volume.',
     setup: 'Shoes or bare feet. Move furniture only if the guests want a wider floor.',
@@ -179,7 +184,7 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'The session and a vetted instructor.',
+    included: 'The session and an instructor.',
     brought: 'Nothing that needs installing.',
     guestProvides: 'A quiet room or a shaded deck, and cushions if you have them.',
     setup: 'Ask the villa to hold housekeeping for the hour.',
@@ -215,6 +220,18 @@ services.push(
   },
 )
 
+const liveSlugs: Record<string, string> = { 'private-strength': 'personal-training', 'private-yoga': 'private-yoga', 'mat-pilates': 'mat-pilates', bodywork: 'bodywork-recovery', zumba: 'zumba-dance-fitness', 'quieter-hour': 'guided-meditation', mobility: 'mobility-coaching', boxing: 'boxing-fitness' }
+for (const service of services) {
+  const live = publicServices.find(item => item.slug === liveSlugs[service.slug])
+  if (!live) continue
+  service.basePrice = live.prices.Bali ?? SINGLE_SESSION
+  service.includedGuests = live.includedParticipants
+  service.onRequest = isOnRequest(live.slug)
+  service.maxGuests = service.slug === 'boxing' || service.slug === 'bodywork' ? 1 : 2
+  service.participants = service.maxGuests === 1 ? '1 guest' : '1 or 2 guests'
+  service.priceBasis = rp(service.basePrice) + (service.includedGuests === 2 ? ' for up to two guests.' : service.maxGuests === 1 ? ' for one guest.' : ' for one guest. A second guest adds Rp 250.000.')
+}
+
 export function getService(slug: string | undefined) {
   return services.find((item) => item.slug === slug)
 }
@@ -227,10 +244,13 @@ export function rp(amount: number) {
   return 'Rp ' + amount.toLocaleString('id-ID')
 }
 
-export function sessionQuote(people: number, maxGuests = 2) {
+export function sessionQuote(people: number, maxGuests = 2, serviceSlug?: string) {
+  const selected = getService(serviceSlug)
+  const base = selected?.basePrice ?? SINGLE_SESSION
+  const included = selected?.includedGuests ?? 1
   const guests = Math.min(maxGuests, Math.max(1, people))
-  const extra = guests > 1 ? SECOND_GUEST : 0
-  return { guests, session: SINGLE_SESSION, extra, travel: 0, total: SINGLE_SESSION + extra }
+  const extra = Math.max(0, guests - included) * SECOND_GUEST
+  return { guests, session: base, extra, travel: 0, total: base + extra }
 }
 
 export function baliISO(offsetDays = 0) {
@@ -284,7 +304,7 @@ export type QueueStage = 'New' | 'Matching' | 'Offered' | 'Confirmed' | 'Excepti
 export function sampleQueue(): { reference: string; villa: string; service: string; when: string; age: string; owner: string; stage: QueueStage; next: string }[] {
   const rows = sampleBookings()
   return [
-    { reference: rows[1].reference, villa: villa.name, service: rows[1].service, when: `${formatBali(rows[1].iso)} · ${rows[1].time} Bali`, age: '26 min', owner: 'Dewi', stage: 'Matching', next: 'Ask a vetted instructor in Canggu' },
+    { reference: rows[1].reference, villa: villa.name, service: rows[1].service, when: `${formatBali(rows[1].iso)} · ${rows[1].time} Bali`, age: '26 min', owner: 'Dewi', stage: 'Matching', next: 'Ask an instructor in Canggu' },
     { reference: rows[2].reference, villa: villa.name, service: rows[2].service, when: `${formatBali(rows[2].iso)} · ${rows[2].time} Bali`, age: '1 h', owner: 'Dewi', stage: 'Offered', next: 'Wait for the guest to accept the total' },
     { reference: rows[0].reference, villa: villa.name, service: rows[0].service, when: `${formatBali(rows[0].iso)} · ${rows[0].time} Bali`, age: '1 day', owner: 'Dewi', stage: 'Confirmed', next: 'Share the arrival note, as supply allows' },
     { reference: 'PF-20311', villa: villa.name, service: 'Private Yoga', when: `${formatBali(baliISO(2))} · 06:30 Bali`, age: '3 h', owner: 'Unassigned', stage: 'Exceptions', next: 'Preferred time is before the usual window. Offer 07:00.' },

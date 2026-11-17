@@ -28,9 +28,9 @@ If children, dogs or a video call will share the space, say so. A good coach can
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali private strength training starts at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Venue hire, parking and villa-staff fees stay extra if they exist.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali private strength training starts at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Venue hire, parking and villa-staff fees stay extra if they exist.
 
-A two-week block is six sessions at 5 percent off. Three weeks is nine sessions at 8 percent. Four weeks is twelve sessions at 12 percent. Those reductions are mechanical. They are not a mystery package. Unused sessions follow the validity window on the quote.
+A longer stay can use an eligible 3, 5 or 10-session pack. For one guest’s private strength training, the totals are Rp 2.850.000, Rp 4.500.000 and Rp 8.000.000 respectively, saving Rp 300.000, Rp 750.000 or Rp 2.500.000 compared with the same number of Rp 1.050.000 single sessions. The written quote states the dates and validity window; unused sessions follow those terms.
 
 If you want a named professional, say so in WhatsApp. Preference is allowed. Instant assignment is not. If that person is already booked, we offer a second match for the same service and cluster.
 
@@ -59,7 +59,7 @@ If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you alre
 7. Write beginner, returning, or already training.
 8. Decide one person or extra people, because the rate changes.
 9. Open [how it works](/how-it-works) if you want the eight steps in order.
-10. Send the message. Wait for the quote. Pay only on the link.
+10. Send the message. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 If the villa is in Canggu, continue with [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are still writing the first message, use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
 

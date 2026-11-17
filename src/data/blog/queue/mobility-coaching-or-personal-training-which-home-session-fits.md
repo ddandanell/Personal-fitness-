@@ -47,7 +47,7 @@ The [pricing page](/pricing) publishes the same calculation blocks used for both
 
 An extra person adds Rp 250.000 in Bali or Rp 250.000 in Jakarta where the shared setup is accepted. Ninety minutes add 45 percent of the relevant city base. These are estimator rules, not proof that the requested professional, address or time is available.
 
-In Bali, Canggu and Seminyak are the published in-zone cluster. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote., and Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. In Jakarta, accepted South and Central Jakarta pockets use the published in-zone starting prices. North, West and East Jakarta remain by request, with availability and travel assessed before an offer.
+In Bali, Canggu, Seminyak, Sanur, Ubud and Uluwatu are the published Bali areas with travel included. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request., and Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. In Jakarta, accepted South and Central Jakarta pockets use the published in-zone starting prices. North, West and East Jakarta remain by request, with availability and travel assessed before an offer.
 
 Use the [Bali location hub](/bali) or [Jakarta location hub](/jakarta) to attach the right area rule to the session. Moving from one property to another can change access, travel and professional availability even when the service stays the same.
 

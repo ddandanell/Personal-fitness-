@@ -1,3 +1,5 @@
+import { ServiceRequestBadge } from '@/components/PolicyLines'
+import { serviceNameId } from '@/data/offerCopy'
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link } from 'react-router'
 import { Eyebrow, SectionTitle, TextLink } from '@/components/Primitives'
@@ -11,7 +13,7 @@ import { publicServices } from '@/data/publicOffer'
 
 const faqs = [
   ['Apa itu personal trainer datang ke rumah?', 'PersonalFitness.id mengirim pelatih ke villa atau rumah Anda di klaster Bali dan Jakarta yang kami terbitkan. Sesi berlangsung di ruang Anda, bukan di studio walk-in Denpasar.'],
-  ['Berapa harganya?', 'Harga mulai private strength training Rp 1.050.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya perjalanan tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan tertulis. Total ada di kutipan tertulis.'],
+  ['Berapa harganya?', 'Harga mulai private strength training Rp 1.050.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Total ada di kutipan tertulis.'],
   ['Mengapa lebih mahal dari pelatih lepas?', 'Ini layanan terkelola: koordinator mencocokkan sesi, lokasi dan jam, lalu menamai instruktur di kutipan. Cadangan disebut jika tersedia. Tarif WhatsApp lepas tanpa kutipan adalah produk lain.'],
   ['Apakah ada sesi perkenalan gratis?', 'Tidak. Kunjungan pertama memakai tarif terbit. Kami tidak menjual intro gratis yang kemudian ditarik di chat.'],
   ['Wilayah Jakarta mana yang masuk zona?', 'Jakarta Selatan (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) dan Jakarta Pusat (Menteng, Gondangdia, Thamrin) masuk zona. Utara, Barat, Timur, dan PIK dikutip setelah cek stok dan perjalanan.'],
@@ -40,7 +42,7 @@ export default function IndonesianHome() {
         <div className="shell hero-facts">
           <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
           <div><strong>{formatIdr(900_000)}</strong><span>Paket 5 sesi, per sesi.</span></div>
-          <div><strong>Delapan sesi</strong><span>Training, yoga, Pilates, mobilitas, boxing, bodywork, dance, meditasi.</span></div>
+          <div><strong>Delapan pilihan</strong><span>Latihan kekuatan, yoga, dan Pilates. Mobilitas, boxing, bodywork, dance, dan meditasi atas permintaan.</span></div>
         </div>
       </section>
 
@@ -62,14 +64,14 @@ export default function IndonesianHome() {
 
       <section className="section section-light" lang="id">
         <div className="shell">
-          <SectionTitle eyebrow="Sesi" title="Sesi privat di villa, rumah, atau hotel Anda." copy="Training, yoga, Pilates, mobilitas, boxing, bodywork, dance fitness, dan meditasi. Yoga dan meditasi termasuk dua orang jika lantai muat. Orang kedua menambah Rp 250.000 per sesi jika tarif untuk satu orang." action={<TextLink to="/services">Semua sesi</TextLink>} />
+          <SectionTitle eyebrow="Sesi" title="Sesi privat di villa, rumah, atau hotel Anda." copy="Latihan kekuatan, yoga, dan Pilates, serta mobilitas, boxing, bodywork, dance fitness, dan meditasi atas permintaan. Yoga dan meditasi termasuk dua orang jika lantai muat. Orang kedua menambah Rp 250.000 per sesi jika tarif untuk satu orang. Boxing hanya untuk satu orang." action={<TextLink to="/services">Semua sesi</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <span className="eyebrow">{service.title}</span>
+                <span className="eyebrow">{serviceNameId(service.slug, service.title)}</span><ServiceRequestBadge slug={service.slug} lang="id" />
                 <h3>Bali {formatIdr(service.prices.Bali!)}</h3>
                 <p>Jakarta {formatIdr(service.prices.Jakarta!)} · {service.durationMin} menit</p>
-                <span className="text-link">Buka {service.title.toLowerCase()}</span>
+                <span className="text-link">Buka {serviceNameId(service.slug, service.title).toLowerCase()}</span>
               </Link>
             ))}
           </div>
@@ -81,8 +83,8 @@ export default function IndonesianHome() {
           <div>
             <Eyebrow>Lokasi</Eyebrow>
             <h2>Klaster yang kami terbitkan, bukan seluruh pulau.</h2>
-            <p className="large-copy">Bali dalam zona: Canggu dan Seminyak. Jakarta dalam zona: Jakarta Selatan dan Jakarta Pusat, termasuk Kemang, Senopati, Menteng, dan Thamrin.</p>
-            <p>Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya perjalanan tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan tertulis. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu. Kantor di Jl. Tukad Barito Timur III No.16, Panjer, adalah administrasi, bukan studio.</p>
+            <p className="large-copy">Perjalanan Bali termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Jakarta dalam zona: Jakarta Selatan dan Jakarta Pusat, termasuk Kemang, Senopati, Menteng, dan Thamrin.</p>
+            <p>Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu. Kantor di Jl. Tukad Barito Timur III No.16, Panjer, adalah administrasi, bukan studio.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>

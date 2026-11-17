@@ -1,3 +1,4 @@
+import { RESCHEDULE_NOTE, TRAVEL_DISCLAIMER, REPLY_HOURS } from '@/data/offerCopy'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, useLocation } from 'react-router'
 import { ArrowUpRight, CalendarDays, CircleHelp, Leaf, MapPin, QrCode, X } from 'lucide-react'
@@ -69,7 +70,7 @@ export function DemoShell({ children }: { children: ReactNode }) {
       </div>
     </header>
     <div className="sora-frame"><main id="villa-demo-main">{children}</main></div>
-    <footer className="guest-footer"><span className="footer-brand"><Leaf size={16} /> Villa Sora</span><span>Powered by <a href="https://www.personalfitness.id/" target="_blank" rel="noreferrer">Personal Fitness <ArrowUpRight size={12} /></a></span><span className="demo-label">GUEST EXPERIENCE DEMO</span></footer>
+    <div className="villa-policy-foot"><p>{RESCHEDULE_NOTE}</p><p>{TRAVEL_DISCLAIMER}</p><p>{REPLY_HOURS}</p></div><footer className="guest-footer"><span className="footer-brand"><Leaf size={16} /> Villa Sora</span><span>Powered by <a href="https://www.personalfitness.id/" target="_blank" rel="noreferrer">Personal Fitness <ArrowUpRight size={12} /></a></span><span className="demo-label">GUEST EXPERIENCE DEMO</span></footer>
     <nav className="sora-tabs" aria-label="Guest mobile navigation">{guestNav.map(({ to, label, icon: Icon }) => <DemoLink key={to} to={to} className={isActive(to) ? 'is-on' : ''}><Icon size={20} strokeWidth={1.5} /><span>{label}</span></DemoLink>)}</nav>
     {qr && <GuestDialog title="Your wellness menu, on your phone" onClose={() => setQr(false)}><VillaQr /><p className="qr-address">villademo.personalfitness.id</p><button type="button" className="action" onClick={() => setQr(false)}>Back to my villa</button></GuestDialog>}
   </div>

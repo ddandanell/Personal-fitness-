@@ -62,7 +62,7 @@ export default function WellnessHowItWorks() {
             </div>
           </div>
           <ul className="check-list large-list">
-            {['A named service and participant count', 'The complete session and travel charges', 'A visible programme saving on eligible visits', 'Cancellation and unused-session terms', `WhatsApp ${WHATSAPP_DISPLAY} carries the request, not the payment`].map((text) => (
+            {['A named service and participant count', 'The complete session total, with Bali travel included or the applicable Jakarta travel position', 'A visible programme saving on eligible visits', 'Cancellation and unused-session terms', `WhatsApp ${WHATSAPP_DISPLAY} carries the request, not the payment`].map((text) => (
               <li key={text}><Check size={18} />{text}</li>
             ))}
           </ul>

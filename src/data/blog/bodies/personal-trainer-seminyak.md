@@ -22,9 +22,9 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not a Semi
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Seminyak private strength training starts at Rp 1.050.000 for 60 minutes, one person. Canggu is the same in-zone cluster. Ubud and Sanur are not: they have an outer-area travel fee confirmed in the written quote. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. If your villa is in Petitenget, you are still in-zone. If your villa is in Ubud, you are not.
+The [pricing page](/pricing) uses the same blocks as the written quote. Seminyak private strength training starts at Rp 1.050.000 for 60 minutes and one person. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu, including the Petitenget addresses discussed here. Other areas are on request. Changing villas still needs the coordinator to check access and instructor timing, even when the new address has included travel.
 
-A two-week block is six sessions at 5 percent off. Three weeks is nine at 8 percent. Four weeks is twelve at 12 percent. Those reductions apply to session charges, not travel. In Seminyak, travel is already inside the rate. Unused sessions follow the validity window on the quote. Read [two, three or four weeks](/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay) if you are staying longer than a long weekend.
+A longer stay in Seminyak can use a 3, 5 or 10-session pack when that many appointments fit the calendar. Private strength training packs are Rp 2.850.000, Rp 4.500.000 and Rp 8.000.000 respectively for one guest. Travel is already included across the five named Bali areas. Unused sessions follow the validity window on the quote. Read [two, three or four weeks](/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay) to plan the count around your stay.
 
 There is no free intro hour. The first visit is the published rate, quoted in writing. Compare quotes like for like using [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like).
 
@@ -56,7 +56,7 @@ The sequence sits on [how it works](/how-it-works). Pay securely using the payme
 4. Pick a two-hour window.
 5. Decide one person or extra people.
 6. Open [Bali private strength training](/bali/personal-training) for the rate.
-7. Send WhatsApp. Wait for the quote. Pay only on the link.
+7. Send WhatsApp. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 A Seminyak personal trainer is useful when the villa, the window and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Bali private strength training](/bali/personal-training) and send the area.
 

@@ -45,7 +45,7 @@ That list is more useful than a warm-up video. The [Jakarta apartment setup note
 
 Send WhatsApp with: private strength training, Jakarta, neighbourhood, building type, a two-hour window, headcount, and beginner or returning. Name a preference if you have one. Keep medical files out. Keep card numbers out.
 
-We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 36-hour reschedule line. Payment details are shared in your written quote. You get a confirmation with the person and the access note.
+We check supply against that window. If the diary cannot hold 06:30, we offer 07:30 or an evening, not a fake yes. You get a quote with the total, extras, exclusions and the 24-hour reschedule line. Payment details are shared in your written quote. You get a confirmation with the person and the access note.
 
 If you want a month of Tuesdays, read [programmes](/programmes). A single session is the right tool for a test. A four-week block is the right tool if you already know the building will let us in three mornings a week. Pad-only [boxing fitness in Jakarta](/jakarta/boxing-fitness) and [guided meditation in Jakarta](/jakarta/guided-meditation) are separate published hours if that is the better first visit.
 
@@ -57,7 +57,7 @@ We also will not hide travel. If you are in BSD, expect a travel line or a decli
 
 ## After the first hour
 
-If the hour worked, the next decision is cadence: one drop-in, two sessions a week, or a 6/9/12 block. The [homepage](/) shows the whole map. The [how it works](/how-it-works) page shows the eight steps you already started.
+If the hour worked, the next decision is cadence: another single session, a weekly pattern, or an eligible 3, 5 or 10-session pack. The [homepage](/) shows the services. The [how it works](/how-it-works) page explains the request, written quote and confirmation process.
 
 Ask for the same professional if the match was good. Ask for a different one if it was not. That is a normal operations request, not a complaint until you make it one.
 

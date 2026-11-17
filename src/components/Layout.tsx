@@ -1,3 +1,6 @@
+import { PolicySummary, ServiceRequestBadge } from './PolicyLines'
+import { publicServices } from '@/data/publicOffer'
+import { serviceNameId, TRAVEL_DISCLAIMER, TRAVEL_DISCLAIMER_ID } from '@/data/offerCopy'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
@@ -5,7 +8,7 @@ import { hreflangFor, pageMetadata } from '@/lib/metadata'
 import { installAnalytics, trackEvent, trackPageView, trackWhatsApp } from '@/lib/analytics'
 import { partner } from '@/config/partner'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
-import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, SITE_ORIGIN } from '@/data/company'
+import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, COMPANY_LEGAL_NAME, SITE_ORIGIN } from '@/data/company'
 import { capturePartnerRef, partnerRef, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import StructuredData from './StructuredData'
 import { Breadcrumbs, RelatedLinks } from './SeoCluster'
@@ -62,6 +65,7 @@ const mobileGroups = [
 
 export default function Layout({ children }: { children?: ReactNode }) {
   const { pathname, search } = useLocation()
+  const isId = pathname === '/id' || pathname.startsWith('/id/')
   const routeKey = pathname + search
   const [openFor, setOpenFor] = useState<string | null>(null)
   const menuOpen = openFor === routeKey
@@ -133,7 +137,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
           <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {navigation.map(([to, label]) => (
-              <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}</NavLink>
+              <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}<ServiceRequestBadge slug={to.slice(1)} lang={isId ? 'id' : 'en'} /></NavLink>
             ))}
           </nav>
           <div className="header-actions">
@@ -157,7 +161,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
               <div className="mobile-nav-group" key={group.heading}>
                 <p className="footer-heading">{group.heading}</p>
                 {group.links.map(([to, label]) => (
-                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={closeMenu}>{label}</NavLink>
+                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={closeMenu}>{label}<ServiceRequestBadge slug={to.slice(1)} lang={isId ? 'id' : 'en'} /></NavLink>
                 ))}
               </div>
             ))}
@@ -178,64 +182,31 @@ export default function Layout({ children }: { children?: ReactNode }) {
         <div className="shell footer-grid footer-grid-wide">
           <div className="footer-brand">
             <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
-            <p>Private sessions at your villa, home or hotel in Bali and Jakarta. A vetted instructor is named on the written quote.</p>
-            <p className="footer-address">
-              <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
-            </p>
+            <p>{isId ? 'Sesi privat di villa, rumah, atau hotel Anda di Bali dan Jakarta. Instruktur disebutkan pada kutipan tertulis.' : 'Private sessions at your villa, home or hotel in Bali and Jakarta. Your instructor is named on the written quote.'}</p>
+            <p className="footer-address">{COMPANY_LEGAL_NAME}<br /><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
             <p className="footer-address"><a href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'footer' })}>{COMPANY_EMAIL}</a></p>
             {partner.INSTAGRAM_URL && <p className="footer-address"><a href={partner.INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a></p>}
             <p className="footer-address"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
-            <Link to="/contact" className="text-link">Check availability<ArrowUpRight size={15} /></Link>
+            <Link to="/contact" className="text-link">{isId ? 'Cek ketersediaan' : 'Check availability'}<ArrowUpRight size={15} /></Link>
           </div>
-          <div>
-            <p className="footer-heading">Sessions</p>
-            <Link to="/personal-training">Private Strength Training</Link>
-            <Link to="/bodywork-recovery">Bodywork & Recovery</Link>
-            <Link to="/zumba-dance-fitness">Zumba & Dance Fitness</Link>
-            <Link to="/private-yoga">Private yoga</Link>
-            <Link to="/mat-pilates">Mat Pilates</Link>
-            <Link to="/mobility-coaching">Mobility coaching</Link>
-            <Link to="/boxing-fitness">Boxing fitness</Link>
-            <Link to="/guided-meditation">Guided meditation</Link>
-            <Link to="/services">All sessions</Link>
-            <Link to="/programmes">Programmes</Link>
-            <Link to="/pricing">Prices</Link>
+          <div><p className="footer-heading">{isId ? 'Sesi' : 'Sessions'}</p>
+            {publicServices.map(service => <Link to={'/' + service.slug} key={service.slug}>{isId ? serviceNameId(service.slug, service.title) : service.title} <ServiceRequestBadge slug={service.slug} lang={isId ? 'id' : 'en'} /></Link>)}
+            <Link to="/services">{isId ? 'Semua sesi' : 'All sessions'}</Link><Link to="/programmes">{isId ? 'Paket' : 'Programmes'}</Link><Link to="/pricing">{isId ? 'Harga' : 'Prices'}</Link>
           </div>
-          <div>
-            <p className="footer-heading">Places</p>
-            <Link to="/bali">Private fitness in Bali</Link>
-            <Link to="/jakarta">Home training in Jakarta</Link>
-            <Link to="/jakarta/south-jakarta">South Jakarta</Link>
-            <Link to="/jakarta/kemang">Kemang</Link>
-            <Link to="/jakarta/menteng">Menteng</Link>
-            <Link to="/jakarta/kelapa-gading">Kelapa Gading</Link>
-            <Link to="/service-areas">All locations</Link>
-            <Link to="/how-it-works">How it works</Link>
-            <Link to="/contact">Check availability</Link>
+          <div><p className="footer-heading">{isId ? 'Lokasi' : 'Places'}</p>
+            <Link to="/bali">Bali</Link><Link to="/jakarta">Jakarta</Link><Link to="/jakarta/south-jakarta">{isId ? 'Jakarta Selatan' : 'South Jakarta'}</Link><Link to="/jakarta/central-jakarta">{isId ? 'Jakarta Pusat' : 'Central Jakarta'}</Link><Link to="/jakarta/kemang">Kemang</Link><Link to="/jakarta/menteng">Menteng</Link><Link to="/jakarta/kelapa-gading">Kelapa Gading</Link><Link to="/service-areas">{isId ? 'Semua lokasi' : 'All locations'}</Link><Link to="/how-it-works">{isId ? 'Cara kerja' : 'How it works'}</Link>
           </div>
-          <div>
-            <p className="footer-heading">Company</p>
-            <Link to="/about">About</Link>
-            <Link to="/professional-standards">Standards</Link>
-            <Link to="/villa-hotel-partners">Partner programme</Link>
-            <Link to="/partner-terms">Partner terms</Link>
-            <Link to="/team">Team</Link>
-            <Link to="/id/mitra-villa">Untuk villa</Link>
-            <Link to="/resources">Guides</Link>
-            <Link to="/faq">FAQ</Link>
+          <div><p className="footer-heading">{isId ? 'Perusahaan' : 'Company'}</p>
+            <Link to="/about">{isId ? 'Tentang kami' : 'About'}</Link><Link to="/professional-standards">{isId ? 'Standar profesional' : 'Standards'}</Link><Link to="/villa-hotel-partners">{isId ? 'Program mitra' : 'Partner programme'}</Link><Link to="/partner-terms">{isId ? 'Ketentuan mitra' : 'Partner terms'}</Link><Link to="/team">{isId ? 'Tim' : 'Team'}</Link><Link to="/id/mitra-villa">Untuk villa</Link><Link to="/resources">{isId ? 'Panduan' : 'Guides'}</Link><Link to="/faq">FAQ</Link>
           </div>
-          <div>
-            <p className="footer-heading">Policies</p>
-            <Link to="/privacy">Privacy</Link>
-            <Link to="/terms">Terms</Link>
-            <Link to="/refunds-rescheduling">Refunds</Link>
-            <Link to="/safety">Safety</Link>
-            <Link to="/editorial-policy">Editorial</Link>
+          <div><p className="footer-heading">{isId ? 'Kebijakan' : 'Policies'}</p>
+            <Link to="/privacy">{isId ? 'Privasi' : 'Privacy'}</Link><Link to="/terms">{isId ? 'Ketentuan' : 'Terms'}</Link><Link to="/refunds-rescheduling">{isId ? 'Pengembalian dana' : 'Refunds'}</Link><Link to="/safety">{isId ? 'Keselamatan' : 'Safety'}</Link><Link to="/editorial-policy">{isId ? 'Editorial' : 'Editorial policy'}</Link>
           </div>
         </div>
         <div className="shell footer-bottom">
-          <p>Private strength training starts at Rp 1.050.000 for 60 minutes. Session packs reduce that rate. Outer-area travel is confirmed in the written quote.</p>
-          <p>WhatsApp {WHATSAPP_DISPLAY}. Email {COMPANY_EMAIL}. Never send payment-card, bank, personal-ID or detailed health information in chat.</p>
+          <p>{isId ? TRAVEL_DISCLAIMER_ID : TRAVEL_DISCLAIMER}</p><p>{isId ? 'Mitra villa mendapat komisi 10% dari yang dibayar tamu, dibayar setiap bulan lewat transfer bank beserta laporan.' : 'Villa partners earn 10% of what the guest paid, paid monthly by bank transfer with a statement.'}</p>
+          <PolicySummary lang={isId ? 'id' : 'en'} />
+          <p>{isId ? 'WhatsApp' : 'WhatsApp'} {WHATSAPP_DISPLAY}. Email {COMPANY_EMAIL}. {isId ? 'Jangan kirim data kartu, rekening bank, identitas pribadi, atau informasi kesehatan terperinci melalui chat.' : 'Never send payment-card, bank, personal-ID or detailed health information in chat.'}</p>
         </div>
       </footer>
       <WhatsAppFloat />

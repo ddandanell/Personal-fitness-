@@ -1,3 +1,4 @@
+import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
@@ -37,7 +38,7 @@ export default function Home() {
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
             <h1>Personal trainer at your villa or home in Bali and Jakarta</h1>
-            <p className="hero-lede">A vetted instructor comes to your villa, home or hotel for private strength training, yoga, Pilates, mobility, boxing, bodywork, dance fitness or a guided sit. Sessions are subject to instructor availability and location confirmation.</p>
+            <p className="hero-lede">An instructor comes to your villa, home or hotel for private strength training, yoga, Pilates, mobility, boxing, bodywork, dance fitness or a guided sit. Sessions are subject to instructor availability and location confirmation.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>
@@ -56,13 +57,13 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Sessions" title="Private sessions at your villa, home or hotel." copy="Strength training, bodywork and recovery, dance fitness, yoga, Pilates, mobility, boxing and meditation. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Sessions" title="Private sessions at your villa, home or hotel." copy="Strength training, yoga and Pilates, plus bodywork and recovery, dance fitness, mobility, boxing and meditation on request. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair. Boxing is for one guest." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div>
+                <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div><p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p>
                 <span className="service-index">0{index + 1}</span>
-                <h3>{service.title}</h3>
+                <h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
                 <span className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></span>
               </Link>
@@ -75,12 +76,12 @@ export default function Home() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>What the hour is for</Eyebrow>
-            <h2>You train at your villa, home or hotel, with a vetted instructor.</h2>
+            <h2>You train at your villa, home or hotel, with an instructor.</h2>
             <p className="large-copy">The hour is private: strength training, yoga, Pilates, mobility, pad work, bodywork, dance fitness or a quiet sit. You leave with a completed session, not a class pack or a clinical diagnosis.</p>
             <p>The instructor is named on the written quote. A backup is named where available. Read <TextLink to="/professional-standards">how we match instructors</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
-            {['A vetted instructor named on the written quote', 'A backup named where available', 'You get the price in writing before you pay', `WhatsApp +62 811-3803-488 and ${COMPANY_EMAIL}`, 'The Denpasar office is administration, not a walk-in studio'].map((item) => (
+            {['An instructor named on the written quote', 'A backup named where available', 'You get the price in writing before you pay', `WhatsApp +62 811-3803-488 and ${COMPANY_EMAIL}`, 'The Denpasar office is administration, not a walk-in studio'].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -106,8 +107,8 @@ export default function Home() {
             <h2>Find your Bali or Jakarta location.</h2>
           </div>
           <div className="statement-copy">
-            <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>
-            <p>Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. Sessions are subject to instructor availability and location confirmation.</p>
+            <p className="large-copy">Bali travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>
+            <p>Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. Sessions are subject to instructor availability and location confirmation.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>
@@ -143,11 +144,11 @@ export default function Home() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Before you pay</Eyebrow>
-            <h2>The starting price, the extras, the cancellation line.</h2>
+            <h2>The starting price, the extras, the cancellation line.</h2><PolicySummary />
           </div>
           <div>
             <ul className="check-list large-list">
-              {['City starting price for the session and duration', 'Extra people and outer-zone travel if they apply', 'Programme count and the reduction', 'A written quote before payment'].map((item) => (
+              {['City starting price for the session and duration', 'Eligible extra guests and any separately agreed external costs', 'Programme count and the reduction', 'A written quote before payment'].map((item) => (
                 <li key={item}><Check size={19} />{item}</li>
               ))}
             </ul>

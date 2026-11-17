@@ -20,7 +20,7 @@ The Denpasar office is not a beginner studio you walk into. You practise at the 
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 850.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 900.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 850.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 900.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
 
 Programmes of 6, 9 and 12 visits take about 9.5, 14.3 and 23.8 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
 
@@ -45,7 +45,7 @@ The sequence sits on [how it works](/how-it-works). Confirmation names the teach
 3. Choose an indoor rectangle.
 4. Pick a two-hour window.
 5. Open [private yoga](/private-yoga) for the rate.
-6. Send WhatsApp. Wait for the quote. Pay only on the link.
+6. Send WhatsApp. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Beginner private yoga at home is useful when the pace, the floor and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [private yoga](/private-yoga) and send the area.
 

@@ -2,7 +2,7 @@ import { useMemo, useRef, useState, type ReactNode } from 'react'
 import { getService, sessionQuote } from './data'
 import { DemoContext, type GuestBooking, type RequestInput, type Role } from './demo-state'
 
-const KEY = 'villa-sora-guest-demo-v2'
+const KEY = 'villa-sora-guest-demo-v3-policy'
 
 type Saved = { booking: GuestBooking | null; role: Role }
 
@@ -61,7 +61,7 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
         if (current.current.booking && current.current.booking.idempotencyKey === input.idempotencyKey) {
           return { booking: current.current.booking, created: false }
         }
-        const quote = sessionQuote(input.participants, getService(input.serviceSlug)?.maxGuests ?? 2)
+        const quote = sessionQuote(input.participants, getService(input.serviceSlug)?.maxGuests ?? 2, input.serviceSlug)
         const token = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `tok-${Date.now()}`
         const booking: GuestBooking = {
           ...input,

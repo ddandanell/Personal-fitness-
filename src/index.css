@@ -984,3 +984,13 @@ body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.
   body.print-a5 { background: #fff; }
   .menu-card { margin: 0; box-shadow: none; }
 }
+
+/* Owner-approved policy notes and service availability. */
+.request-status { display: inline-block; background: #e6ecdf; color: #38513c; border: 1px solid #cdd9c3; border-radius: 3px; padding: 3px 7px; font-size: 10px; line-height: 1.4; margin: 4px 0 9px; font-weight: 500; }
+.site-footer .request-status { background: transparent; color: #d1dec6; border-color: #67785b; margin: 0 0 0 4px; font-size: 8px; padding: 1px 4px; }
+.photo-policy-caption { display: block; font-family: inherit; font-size: 11px; line-height: 1.65; color: #6e7867; margin: 9px 0 14px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.session-figure .photo-policy-caption { max-width: 100%; }
+.sales-hero .photo-policy-caption { color: #d1dbc9; }
+.public-policy-summary { margin: 16px 0; font-size: 12px; line-height: 1.8; }
+.public-policy-summary p { margin: 0 0 9px; }
+.site-footer .public-policy-summary { font-size: 11px; }

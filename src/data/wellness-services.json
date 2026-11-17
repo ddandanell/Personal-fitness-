@@ -2,7 +2,7 @@
   {
     "slug": "personal-training",
     "title": "Private Strength Training",
-    "short": "A private hour for strength, a return to exercise, or a routine kept for the length of a stay. Delivered by a vetted instructor.",
+    "short": "A private hour for strength, a return to exercise, or a routine kept for the length of a stay. Delivered by an instructor.",
     "description": "Private strength training at your villa or home. One 60-minute session is Rp 1.050.000. Packs of 3, 5 and 10 lower the rate. The instructor, the address and the total are confirmed in writing.",
     "durationMin": 60,
     "includedParticipants": 1,
@@ -630,7 +630,7 @@
     "description": "Private yoga at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
     "durationMin": 60,
     "includedParticipants": 2,
-    "maxParticipants": 6,
+    "maxParticipants": 2,
     "status": "core",
     "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
     "includes": [
@@ -931,7 +931,7 @@
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "request",
-    "statusNote": "By request. Format prices are indicative; the final quote confirms supply, inclusions and total.",
+    "statusNote": "On request. Subject to instructor availability and location confirmation.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -1241,9 +1241,9 @@
     "description": "Private boxing fitness at your home, villa or a suitable terrace or carport. Pads are brought. The space is checked for clearance and impact noise before confirmation. No sparring, no ring and no contact work.",
     "durationMin": 60,
     "includedParticipants": 1,
-    "maxParticipants": 2,
+    "maxParticipants": 1,
     "status": "core",
-    "statusNote": "Published core rate; exact dates, space check and professional confirmed by quote.",
+    "statusNote": "On request. Subject to instructor availability and location confirmation.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -2522,12 +2522,12 @@
     "slug": "guided-meditation",
     "title": "Guided meditation",
     "short": "A quiet 60-minute guided sit for one or two people at your villa or home.",
-    "description": "Private guided meditation at your home or villa. One or two people sit with a vetted instructor for sixty minutes. It is a calm, guided hour of attention and relaxation.",
+    "description": "Private guided meditation at your home or villa. One or two people sit with an instructor for sixty minutes. It is a calm, guided hour of attention and relaxation.",
     "durationMin": 60,
     "includedParticipants": 2,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
+    "statusNote": "On request. Subject to instructor availability and location confirmation.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -5195,16 +5195,16 @@
   {
     "slug": "bodywork-recovery",
     "title": "Bodywork & Recovery",
-    "short": "Assisted stretching, myofascial release and relaxation at the villa. A wellness hour, delivered by a vetted instructor.",
+    "short": "Assisted stretching, myofascial release and relaxation at the villa. A wellness hour, delivered by an instructor.",
     "description": "Bodywork and recovery at your villa or home. Assisted stretching, myofascial release and a quiet finish. One 60-minute session is Rp 1.050.000. The instructor and the total are confirmed in writing.",
     "durationMin": 60,
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "Subject to instructor availability and location confirmation. The written quote names the instructor and the total.",
+    "statusNote": "On request. Subject to instructor availability and location confirmation.",
     "includes": [
       "A 60-minute private session at the villa or home",
-      "A vetted instructor named on the written quote",
+      "An instructor named on the written quote",
       "A clear start, a guided hour, and a calm finish",
       "Ordinary portable kit when the format needs it"
     ],
@@ -5284,16 +5284,16 @@
   {
     "slug": "zumba-dance-fitness",
     "title": "Zumba & Dance Fitness",
-    "short": "High-energy, fun cardio at the villa. Simple dance steps for one or two guests, led by a vetted instructor.",
+    "short": "High-energy, fun cardio at the villa. Simple dance steps for one or two guests, led by an instructor.",
     "description": "Zumba and dance fitness at your villa or home. A high-energy hour of simple steps and music. One 60-minute session is Rp 1.050.000. The instructor and the total are confirmed in writing.",
     "durationMin": 60,
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "Subject to instructor availability and location confirmation. The written quote names the instructor and the total.",
+    "statusNote": "On request. Subject to instructor availability and location confirmation.",
     "includes": [
       "A 60-minute private session at the villa or home",
-      "A vetted instructor named on the written quote",
+      "An instructor named on the written quote",
       "A clear start, a guided hour, and a calm finish",
       "Ordinary portable kit when the format needs it"
     ],

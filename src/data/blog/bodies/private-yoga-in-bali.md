@@ -4,7 +4,7 @@ The commercial page is [private yoga in Bali](/bali/private-yoga). The [homepage
 
 ## One person, two people, or a group
 
-One person gets the whole cue stream. Two people share it. The published Bali private yoga rate is Rp 850.000 for 60 minutes, up to two people, in-zone. A third person is not “just another mat”. It is another pair of eyes, more floor, and an extra-person fee of Rp 250.000 if the space can take it.
+One person gets the whole cue stream. Two people share it. The published Bali private yoga rate is Rp 850.000 for 60 minutes, up to two people, in-zone. A third person needs a separate group request and a space check. Shared or group sessions are quoted on request and are not a standard published service yet.
 
 Villa groups above that need a space check. Mixed levels are possible. Two private classes in one hour are not. If one of you is new and the other is not, say so. The session can still run. The cues change. What we will not do is pretend a six-person terrace is a private class at a pair price.
 
@@ -28,7 +28,7 @@ Permission still applies. Hotel yoga on a public lawn needs written venue permis
 
 ## How the quote moves
 
-In-zone travel for Canggu and Seminyak is inside the Rp 850.000 rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base. Extra people beyond two add Rp 250.000 each. Jakarta private yoga starts at Rp 900.000 if you also keep a home practice there.
+In-zone travel for Canggu and Seminyak is inside the Rp 850.000 rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base. Extra people beyond two add Rp 250.000 each. Jakarta private yoga starts at Rp 900.000 if you also keep a home practice there.
 
 Price it on [pricing](/pricing). Programme discounts apply if you want 3, 5 or 10 sessions. A three-night stay usually wants one or two hours, not a four-week block.
 

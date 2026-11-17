@@ -13,8 +13,9 @@
     "publish:next": "node scripts/publish-next-guide.mjs",
     "verify:seo": "node scripts/verify-seo.mjs",
     "check:enquiry": "node scripts/check-enquiry.mjs",
-    "check:release": "npm run check:enquiry && npm run build && npm run verify && node scripts/verify-links.mjs && npm run verify:seo && node scripts/check-urls.mjs",
-    "verify:live": "node scripts/verify-live.mjs"
+    "check:release": "npm run check:enquiry && npm run build && npm run verify && node scripts/verify-links.mjs && npm run verify:seo && node scripts/check-urls.mjs && npm run check:policy",
+    "verify:live": "node scripts/verify-live.mjs",
+    "check:policy": "node scripts/check-operating-policy.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",

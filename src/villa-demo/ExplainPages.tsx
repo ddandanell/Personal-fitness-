@@ -6,7 +6,7 @@ const journey = [
   ['Scan', 'The guest opens the villa QR. The page is Villa Sora, with its photograph and menu.'],
   ['Choose', 'Four services are on the first screen. All services holds the rest of the menu.'],
   ['Request', 'One session: a future Bali date, a preferred time, the guests, and a way to reply.'],
-  ['Coordinate', 'Personal Fitness matches a vetted instructor. The preferred time is not reserved yet.'],
+  ['Coordinate', 'Personal Fitness matches an instructor. The preferred time is not reserved yet.'],
   ['Confirm', 'The guest sees the total. Payment details are shared in the written quote. A session is confirmed only as supply allows.'],
 ]
 
@@ -15,7 +15,7 @@ export function HowItWorks() {
     <div className="pad">
       <p className="eyebrow">Built for villa managers</p>
       <h1>A guest menu for your villa. We coordinate the hour.</h1>
-      <p className="lede">Guests scan a code in the room, choose a private session and send a request. Personal Fitness places a vetted instructor. You follow the booking and the commission agreed for completed sessions.</p>
+      <p className="lede">Guests scan a code in the room, choose a private session and send a request. Personal Fitness places an instructor. You follow the booking and the commission agreed for completed sessions.</p>
       <div className="split">
         <section>
           <h2>Three views</h2>
@@ -33,7 +33,7 @@ export function HowItWorks() {
         </section>
       </div>
       <h2>What you can tell the team</h2>
-      <p>Your guests can scan this code to book a private wellness session at the villa. They choose the service and a preferred time, and Personal Fitness coordinates a vetted instructor. You can follow requests in the desk and earn the commission agreed for completed bookings.</p>
+      <p>Your guests can scan this code to book a private wellness session at the villa. They choose the service and a preferred time, and Personal Fitness coordinates an instructor. You can follow requests in the desk and earn the commission agreed for completed bookings.</p>
       <h2>A sample commercial agreement</h2>
       <p>The demonstration uses a proposed {Math.round(commissionRate * 100)}% of eligible completed service revenue. Twelve sample sessions at {rp(1050000)} are {rp(eligibleRevenue)}, so the sample commission is {rp(earnedCommission)}. These figures are for the demonstration. They are not a client list, a published offer, or a profit figure. {PAYMENT_LINE}</p>
       <p className="note">{CONCIERGE_LINE} {POLICY_LINE} {SUPPLY_LINE}</p>

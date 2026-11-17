@@ -26,13 +26,13 @@ Tell us headcount in the first message. Adding four friends at 22:00 does not ke
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Start with the city session rate. Add extra people if the session bills them. Add 45 percent of the base for 90 minutes. Add Ubud or Sanur travel of Rp 150.000, or Uluwatu of Rp 200.000, when those clusters apply. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on core sessions.
+The [pricing page](/pricing) uses the same blocks as the written quote. Start with the city session rate, add a second guest only where that service allows one, and add 45 percent of the base for an accepted 90-minute session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. South and Central Jakarta retain included travel; North, West and East Jakarta remain on request after a timing check.
 
 Programme reductions of about 9.5, 14.3 and 23.8 percent apply to session charges, including extra-person fees that sit on those session charges. Travel is not reduced. Read [programmes](/programmes) before you prepay a block for two people who might not both attend every hour.
 
 There is no free extra person “because it is a couple”. There is no sunrise pair premium. There is no child-on-the-mat exception unless the quote says so, and a parent or guardian must stay for any minor.
 
-Worked examples help. Canggu yoga for two at the published Bali rate stays Rp 850.000 when both people are in the hour and the floor holds both mats. Canggu private strength training for two is Rp 1.050.000 plus Rp 250.000. Jakarta training for two is Rp 1.050.000 plus Rp 250.000. Jakarta yoga for two stays Rp 900.000. Ubud adds travel once per visit, not per person. Boxing does not get a second pad-holder on the published line; read [what pad-only means](/resources/private-boxing-fitness-at-home-what-pad-only-means) before you ask.
+Worked examples help. Canggu yoga for two at the published Bali rate stays Rp 850.000 when the floor holds both mats. Canggu private strength training for two is Rp 1.050.000 plus Rp 250.000, or Rp 1.300.000. Jakarta training for two uses the same Rp 1.300.000 total. Jakarta yoga for two stays Rp 900.000. Ubud travel is included. Boxing is for one guest only; read [what pad-only means](/resources/private-boxing-fitness-at-home-what-pad-only-means) before you ask.
 
 If you are comparing a studio couple-class to a villa pair hour, they are not like for like. The studio is a shared room. The villa hour is private, at your place, with access and cancellation written on the quote. Use [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like) when the comparison is training, not yoga.
 
@@ -57,6 +57,6 @@ The sequence sits on [how it works](/how-it-works). The homepage at [PersonalFit
 5. Training, Pilates, mobility: extra-person fee.
 6. Measure the rectangle for every mat.
 7. Send the headcount in the first WhatsApp.
-8. Wait for the written quote. Pay only on the link.
+8. Wait for the written quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Extra people are a pricing line, not a surprise. PersonalFitness.id exists to write that line before you pay. If that is what you wanted when you typed the query, start on [pricing](/pricing) or the [homepage](/) and send the headcount.

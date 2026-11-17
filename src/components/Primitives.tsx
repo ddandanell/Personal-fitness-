@@ -1,3 +1,4 @@
+import { PHOTO_CAPTION, PHOTO_CAPTION_ID } from '@/data/offerCopy'
 import { ArrowUpRight, Check, Copy, LoaderCircle } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, useLocation } from 'react-router'
@@ -80,6 +81,7 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
   eager?: boolean
   className?: string
 }) {
+  const isId = useLocation().pathname.startsWith('/id')
   const frame = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -116,7 +118,7 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
       <div className="session-image" ref={frame}>
         <img src={src} srcSet={responsiveSource(src)} alt={alt} width={responsiveSource(src) ? 1440 : 880} height={responsiveSource(src) ? 960 : 968} sizes={eager ? '(max-width: 700px) 92vw, 42vw' : '(max-width: 700px) 92vw, 50vw'} loading={eager ? 'eager' : 'lazy'} decoding={eager ? 'sync' : 'async'} fetchPriority={eager ? 'high' : 'auto'} />
       </div>
-      {caption ? <figcaption>{caption}</figcaption> : null}
+      <figcaption className="photo-policy-caption">{caption && <span>{caption}<br /></span>}{isId ? PHOTO_CAPTION_ID : PHOTO_CAPTION}</figcaption>
     </figure>
   )
 }

@@ -143,7 +143,7 @@ try {
   assert.equal(estimateQuote({ ...base, programme: 'pack-10', participants: 2 }).total, 10500000)
   assert.equal(estimateQuote({ ...base, programme: 'single' }).discount, 0)
   assert.equal(estimateQuote({ ...base, service: 'boxing-fitness' }).total, 1000000)
-  assert.equal(estimateQuote({ ...base, service: 'boxing-fitness', participants: 2 }).total, 1250000)
+  assert.equal(estimateQuote({ ...base, service: 'boxing-fitness', participants: 2 }).ok, false)
   assert.equal(estimateQuote({ ...base, service: 'guided-meditation', participants: 2 }).total, 800000)
   const swim = { ...base, service: 'swimming', durationMin: 45 }
   assert.equal(estimateQuote(swim).total, 1050000)

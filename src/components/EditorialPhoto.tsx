@@ -1,3 +1,4 @@
+import { PHOTO_CAPTION, PHOTO_CAPTION_ID } from '@/data/offerCopy'
 import images from '@/data/page-images.json'
 export type PageImage = {src: string; alt: string; width: number; height: number; origin: string}
 const registry = images as Record<string, PageImage>
@@ -8,5 +9,6 @@ export function EditorialPhoto({path, eager = false, className = ''}: {path: str
   if (!photo) return null
   return <figure className={'editorial-photo ' + className}>
     <img src={photo.src} srcSet={responsiveSource(photo.src)} sizes="(max-width: 700px) 92vw, 1200px" alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'auto'} />
+    <figcaption className="photo-policy-caption">{path.startsWith('/id') ? PHOTO_CAPTION_ID : PHOTO_CAPTION}</figcaption>
   </figure>
 }

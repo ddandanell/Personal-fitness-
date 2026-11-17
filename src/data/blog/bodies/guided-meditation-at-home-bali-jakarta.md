@@ -20,7 +20,7 @@ Two people sharing the hour should be able to sit in the same room without turni
 
 ## How the Bali quote is built
 
-[Bali guided meditation](/bali/guided-meditation) uses Rp 800.000 for 60 minutes, up to two people, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base when the session can extend. Extra people beyond the included pair follow the extra-person fee on the [pricing page](/pricing).
+[Bali guided meditation](/bali/guided-meditation) uses Rp 800.000 for 60 minutes, up to two people, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base when the session can extend. Extra people beyond the included pair follow the extra-person fee on the [pricing page](/pricing).
 
 The Denpasar office is an office, not a meditation studio and not a walk-in. You sit at the villa or home you already have permission to use.
 
@@ -34,11 +34,11 @@ If the apartment shares walls with a renovation, say so. If the building gym is 
 
 ## Programmes, yoga and what you actually pay
 
-There is no free intro sit. The first meditation visit is the published rate, quoted in writing. [Programmes](/programmes) apply 5 percent, 8 percent and 12 percent savings on six, nine and twelve session charges, not on travel. You can mix meditation with yoga or private strength training in a block only after the first paid hour proved the room works.
+There is no free intro sit. The first meditation visit is the published rate, quoted in writing. [Programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 9.5%, 14.3% or 23.8% on session charges. You can mix meditation with yoga or private strength training in a block only after the first paid hour proved the room works.
 
 Yoga and meditation are neighbours, not the same product. Yoga includes two people and movement. Meditation includes two people and a sit. Do not ask us to fold both into one 60-minute visit. That is two hours.
 
-Pay securely using the payment details in your written quote. Never send card numbers in chat. Cancellation follows the written terms on [refunds](/refunds-rescheduling): more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers in chat. Cancellation follows the written terms on [refunds](/refunds-rescheduling): more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 
@@ -58,6 +58,6 @@ If the villa is in Seminyak, start at [Seminyak sessions](/bali/seminyak). If th
 6. Keep medical files out of the chat.
 7. Pick a two-hour window, not a single minute.
 8. Open [how it works](/how-it-works) if you want the sequence in order.
-9. Send the message. Wait for the quote. Pay only on the link.
+9. Send the message. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 Guided meditation is useful when the room, the sit and the quote all match. PersonalFitness.id exists to hold that line without selling therapy. If that is what you wanted when you typed the query, start on the [homepage](/) or the [meditation page](/guided-meditation) and send the area.

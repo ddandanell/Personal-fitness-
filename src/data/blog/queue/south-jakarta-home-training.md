@@ -54,7 +54,7 @@ If the address is actually BSD, say BSD. Honesty is cheaper than a late coach.
 4. Pick a two-hour window that survives the lobby.
 5. Decide one person or extra people.
 6. Open [Jakarta private strength training](/jakarta/personal-training).
-7. Send WhatsApp. Wait for the quote. Pay only on the link.
+7. Send WhatsApp. Wait for the quote. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.
 
 A South Jakarta home trainer is useful when the lobby, the floor and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Jakarta](/jakarta) and send the building.
 
