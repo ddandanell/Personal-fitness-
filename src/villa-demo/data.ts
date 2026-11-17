@@ -13,7 +13,7 @@
 export const DEMO_TODAY = '2026-11-17'
 export const SECOND_GUEST_IDR = 250_000
 export const CONCIERGE_LINE = 'Subject to instructor availability and location confirmation.'
-export const POLICY_LINE = 'Free rescheduling up to 12 hours before your session. Sessions are delivered by vetted instructors.'
+export const POLICY_LINE = 'Free rescheduling up to 36 hours before your session. Sessions are delivered by vetted instructors.'
 
 export const packs = [
   { id: 'single', label: 'Single', sessions: 1, perSession: 1_050_000, total: 1_050_000, popular: false },
