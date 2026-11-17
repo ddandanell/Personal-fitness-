@@ -138,8 +138,8 @@ export default function Layout({ children }: { children?: ReactNode }) {
           </nav>
           <div className="header-actions">
             <Link to="/contact" className="button button-primary header-cta">
-              <span className="header-cta-full">Talk to us</span>
-              <span className="header-cta-short">Talk</span>
+              <span className="header-cta-full">Check availability</span>
+              <span className="header-cta-short">Check</span>
               <ArrowUpRight size={15} />
             </Link>
             <button className="icon-button mobile-menu-button" onClick={toggleMenu} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
@@ -162,7 +162,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
               </div>
             ))}
             <div className="mobile-nav-cta">
-              <Link to="/contact" className="button button-primary" onClick={closeMenu}>Offer this to your guests<ArrowUpRight size={16} /></Link>
+              <Link to="/contact" className="button button-primary" onClick={closeMenu}>Check availability<ArrowUpRight size={16} /></Link>
               <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('mobile_menu')}>WhatsApp {WHATSAPP_DISPLAY}</a>
               <a className="button button-outline" href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'mobile_menu' })}>{COMPANY_EMAIL}</a>
             </div>
@@ -178,14 +178,14 @@ export default function Layout({ children }: { children?: ReactNode }) {
         <div className="shell footer-grid footer-grid-wide">
           <div className="footer-brand">
             <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
-            <p>Private fitness for villa guests in Bali and Jakarta. Managers earn a commission. Guests pay us.</p>
+            <p>Private sessions at your villa, home or hotel in Bali and Jakarta. A vetted instructor is named on the written quote.</p>
             <p className="footer-address">
               <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a>
             </p>
             <p className="footer-address"><a href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'footer' })}>{COMPANY_EMAIL}</a></p>
             {partner.INSTAGRAM_URL && <p className="footer-address"><a href={partner.INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a></p>}
             <p className="footer-address"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
-            <Link to="/contact" className="text-link">Talk to us<ArrowUpRight size={15} /></Link>
+            <Link to="/contact" className="text-link">Check availability<ArrowUpRight size={15} /></Link>
           </div>
           <div>
             <p className="footer-heading">Sessions</p>
@@ -211,7 +211,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
             <Link to="/jakarta/kelapa-gading">Kelapa Gading</Link>
             <Link to="/service-areas">All locations</Link>
             <Link to="/how-it-works">How it works</Link>
-            <Link to="/contact">Talk to us</Link>
+            <Link to="/contact">Check availability</Link>
           </div>
           <div>
             <p className="footer-heading">Company</p>

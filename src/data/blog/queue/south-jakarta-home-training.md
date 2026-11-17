@@ -24,7 +24,7 @@ The Denpasar office is irrelevant to this hour. Sessions run at your Jakarta hom
 
 The [pricing page](/pricing) uses the same blocks operations uses. South Jakarta private strength training starts at Rp 1.050.000 for 60 minutes, one person. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs). A cheap group class is not a like-for-like private visit.
 
-There is no free intro. There is no Kemang premium. There is access reality. Pay only on the merchant link in the written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
+There is no free intro. There is no Kemang premium. There is access reality. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
 
 If the first hour should be yoga for two, use [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing). Training still bills extra people. Boxing is one person after a space check; pad rhythm is a neighbour issue in towers.
 

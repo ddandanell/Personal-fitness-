@@ -37,8 +37,8 @@ export default function PartnerMenu() {
         <p>Villa group yoga · up to {partner.GROUP_YOGA_MAX_PEOPLE} · from {formatIdr(partner.GROUP_YOGA_RATE_BALI)}</p>
       )}
       <p>{lang === 'id'
-        ? 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00. Pesan paling lambat pukul 18:00 sehari sebelumnya.'
-        : 'Example: private yoga Monday, private strength training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before.'}</p>
+        ? 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00. Pesan paling lambat pukul 18:00 sehari sebelumnya, tergantung ketersediaan instruktur.'
+        : 'Example: private yoga Monday, private strength training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before, as supply allows.'}</p>
       {code && <p className="menu-code">Partner {code}</p>}
       <p className="small muted">60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.</p>
       <p className="small"><a href={href}>WhatsApp {WHATSAPP_DISPLAY}</a></p>

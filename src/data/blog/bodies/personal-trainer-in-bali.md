@@ -4,7 +4,7 @@ If you searched for a personal trainer in Bali because you are staying in Canggu
 
 ## What “managed” means on the day
 
-Managed means one company owns the request. You do not ping five numbers and hope someone is free at 07:00. You send the city, area, window and a one-line goal. We check that a suitable professional can take that exact scope, then we send the total. Payment happens on the merchant link in the quote. Confirmation names the person, the arrival window and the access note.
+Managed means one company owns the request. You do not ping five numbers and hope someone is free at 07:00. You send the city, area, window and a one-line goal. We check that a suitable professional can take that exact scope, then we send the total. Payment details are shared in your written quote. Confirmation names the person, the arrival window and the access note.
 
 That sequence exists because villa training fails on boring details. A locked side gate, a wet deck, a dog, a helper who was not told, or a living room full of luggage will eat the hour. Coordination is the product. The squat is what happens after the gate opens.
 

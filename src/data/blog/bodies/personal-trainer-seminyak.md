@@ -46,7 +46,7 @@ Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five li
 
 Keep card numbers, ID photos and medical files out. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer) if you want the template.
 
-The sequence sits on [how it works](/how-it-works). Pay only on the merchant link in the written quote. Confirmation names the professional, the arrival window and the access note.
+The sequence sits on [how it works](/how-it-works). Pay securely using the payment details in your written quote. Confirmation names the professional, the arrival window and the access note.
 
 ## A checklist you can actually use
 

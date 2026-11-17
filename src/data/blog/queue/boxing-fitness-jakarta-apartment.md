@@ -22,7 +22,7 @@ The lobby is still the Jakarta product. Put the building, tower, parking and vis
 
 The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.050.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of about 9.5, 14.3 and 23.8 percent apply to session charges, not to a building fee.
 
-There is no free intro. Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
+There is no free intro. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 
 The Denpasar office is not a Jakarta boxing studio. You train in the apartment you already have permission to use.
 

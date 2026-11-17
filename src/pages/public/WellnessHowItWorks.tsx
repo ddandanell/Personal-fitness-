@@ -10,9 +10,9 @@ import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
 const steps = [
   { id: '01', name: 'Enquiry', text: 'Send the service, city, area, two-hour window, headcount and a non-sensitive goal. WhatsApp +62 811-3803-488 or the contact estimator is enough.' },
   { id: '02', name: 'Qualification', text: 'We check that the request is in scope: a published fitness session, a usable private space, a cluster we publish, and no clinical work hiding in the brief.' },
-  { id: '03', name: 'Supply check', text: 'A suitable professional accepts the exact window and cost ceiling, or we offer a second name. An enquiry does not reserve 07:00.' },
+  { id: '03', name: 'Supply check', text: 'A suitable professional accepts the window and cost ceiling where supply allows. A backup is named where available. An enquiry does not reserve 07:00.' },
   { id: '04', name: 'Written quote', text: 'You receive the total, extras, exclusions and cancellation terms. The website estimator shows the starting price for this step. The quote is what you pay.' },
-  { id: '05', name: 'Payment', text: 'You pay only on the merchant link in the quote. Nothing is booked on a screenshot, a chat “ok”, or a card number sent in WhatsApp.' },
+  { id: '05', name: 'Payment', text: 'You pay securely using the payment details in your written quote. Nothing is booked on a screenshot, a chat “ok”, or a card number sent in WhatsApp.' },
   { id: '06', name: 'Confirmation', text: 'You get the professional, arrival window, access note and preparation list. That is the booking, not the first message.' },
   { id: '07', name: 'Delivery', text: 'The session runs as confirmed at your villa or home. Deviations and incidents are recorded. Safety issues leave the normal queue.' },
   { id: '08', name: 'Aftercare', text: 'A next-session hold if you want one, and a human owner if something failed. Programmes start after the first paid visit unless the quote says otherwise.' },

@@ -34,7 +34,7 @@ The [pricing page](/pricing) uses the same blocks operations uses. Jakarta priva
 
 There is no sunrise premium. There is no view premium. There is no “apartment yoga tax” beyond the published Jakarta rate plus access reality. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs) if you are mixing yoga with training costs. They are different products.
 
-Pay only on the merchant link in the quote. Never send card numbers in WhatsApp. Cancellation: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers in WhatsApp. Cancellation: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## Pair yoga versus training for two
 

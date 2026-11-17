@@ -6,7 +6,7 @@ If you searched for boxing at home because a gym class felt public, start with t
 
 Pad-only means the professional holds pads and you hit them with an agreed pattern. It is fitness. It is not a bout. It is not sparring with another guest. It is not a promise that you will learn to fight. Beginners are welcome if you say so in the first message. People who already box are welcome if they accept that this hour still follows house rules: one person, no sparring, no clinical treatment.
 
-The published rate is for 60 minutes and one participant. Extra people are not a casual add-on on this session. If two of you want to train, that is two quotes or a different session such as [private strength training](/personal-training) where an extra person can be billed. Do not assume a villa group can share pads in one hour. The floor and the insurance line will not stretch that far.
+The published rate is for 60 minutes and one participant. Extra people are not a casual add-on on this session. If two of you want to train, that is two quotes or a different session such as [private strength training](/personal-training) where an extra person can be billed. Do not assume a villa group can share pads in one hour. The floor and the session scope will not stretch that far.
 
 A photo of gloves is not a space check. A WhatsApp “yes” from a coach you found elsewhere is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation.
 
@@ -38,7 +38,7 @@ If the lobby blocks outside trainers, tell us before the quote. We will not pret
 
 There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
 
-Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 

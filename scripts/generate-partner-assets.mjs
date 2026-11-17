@@ -66,7 +66,7 @@ const pdf = buildPdf([
   ],
   [
     'How the partner programme works',
-    '1. A coordinator agrees the villas and the week.',
+    '1. A coordinator plans the villas and the week, as supply allows.',
     '2. Guests book on WhatsApp with your partner code.',
     '3. A vetted instructor comes to the villa. The guest pays us.',
     '4. You earn a commission on every paid session.',
