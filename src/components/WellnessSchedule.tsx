@@ -5,6 +5,7 @@ import { getService, quoteAreas, type City } from '@/data/catalog'
 import { EnquiryNote, HoneypotField } from './EnquiryFields'
 import { CopyButton, Eyebrow, Field } from './Primitives'
 import { defaultVisits, estimateWellnessPlan, planServices, weekDays, wellnessPlanMessage, type PlanVisit } from '@/lib/wellnessPlan'
+import { RESCHEDULE_NOTE } from '@/data/offerCopy'
 import { formatIdr } from '@/lib/money'
 import { trackEvent, trackWhatsApp } from '@/lib/analytics'
 import { submitEnquiry } from '@/lib/submitEnquiry'
@@ -85,11 +86,11 @@ export default function WellnessSchedule() {
     <aside className="plan-summary" aria-label="Your plan summary">
       <Eyebrow light>Your plan, together</Eyebrow><h3>{estimate.totalVisits} visits.<br />One conversation.</h3>
       <div className="plan-week-preview">{[...visits].sort((a, b) => weekDays.indexOf(a.day as typeof weekDays[number]) - weekDays.indexOf(b.day as typeof weekDays[number]) || a.time.localeCompare(b.time)).map((visit) => <div key={visit.id}><span>{visit.day.slice(0, 3)}<small>{visit.time}</small></span><p>{getService(visit.service)?.title}<small>{visit.participants} {visit.participants === 1 ? 'person' : 'people'} · weekly</small></p></div>)}</div>
-      <dl className="plan-totals"><div><dt>Priced sessions</dt><dd>{formatIdr(estimate.sessionTotal)}</dd></div><div><dt>Travel for priced visits</dt><dd>{formatIdr(estimate.travelTotal)}</dd></div><div><dt>Eligible programme saving</dt><dd>{estimate.saving ? '- ' + formatIdr(estimate.saving) : 'No tier yet'}</dd></div></dl>
+      <dl className="plan-totals"><div><dt>Priced sessions</dt><dd>{formatIdr(estimate.sessionTotal)}</dd></div><div><dt>Travel for priced visits</dt><dd>{estimate.travelTotal ? formatIdr(estimate.travelTotal) : 'Confirmed in the quote'}</dd></div><div><dt>Package savings</dt><dd>{estimate.saving ? '- ' + formatIdr(estimate.saving) : 'No pack yet'}</dd></div></dl>
       <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Starting price for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
       {estimate.requiresQuote && <p className="plan-warning" role="status">{estimate.collisions ? 'Some visits overlap. Choose different times to review your plan.' : estimate.invalid ? 'Check your area, visit time and whole participant count.' : 'A complete quote is required. Some services, group sizes or travel are not included in this subtotal.'}</p>}
       {estimate.discountRate > 0 && <p className="plan-saving"><Check size={16} />{Math.round(estimate.discountRate * 100)}% saving on eligible fitness visits</p>}
-      <p className="plan-small">The 6, 9 and 12 visit tiers apply to personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation. Travel is quoted separately and does not receive this saving. All dates depend on availability.</p>
+      <p className="plan-small">Session packs of 3, 5 and 10 apply the same saving share as the Rp 1.050.000 anchor. Dates are subject to instructor availability and location confirmation.</p>
       <button type="button" className="button button-light" disabled={estimate.invalid} onClick={() => setReview(true)}>Review my schedule<ArrowUpRight size={16} /></button>
       <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
     </aside>
@@ -100,7 +101,7 @@ export default function WellnessSchedule() {
         <Field label="Your email" hint="We reply to this address."><input type="email" value={senderEmail} onChange={(event) => setSenderEmail(event.target.value)} maxLength={180} autoComplete="email" /></Field>
       </div>
       <HoneypotField inputRef={honeypot} />
-      <div className="cluster"><button type="button" className="button button-primary" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this schedule'}</button><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-outline" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
+      <div className="cluster"><button type="button" className="button button-primary" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this schedule'}</button><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-outline" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><p className="plan-small">{RESCHEDULE_NOTE}</p><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
       <EnquiryNote text={notice} tone={noticeTone} />
     </section>}
   </div>

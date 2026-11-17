@@ -54,7 +54,7 @@ export default function IntroPage() {
               </article>
             ))}
           </div>
-          <p className="quiet" style={{ marginTop: 18 }}>Jakarta is a little higher: personal training {formatIdr(950000)}, mat Pilates {formatIdr(1000000)}, private yoga {formatIdr(900000)}. Mobility and guided meditation use the published Bali rates in this preview. A written quote still names the person and the total before anything is confirmed.</p>
+          <p className="quiet" style={{ marginTop: 18 }}>Private strength training is {formatIdr(1050000)} in Jakarta as well. Mat Pilates is {formatIdr(1000000)} and private yoga is {formatIdr(900000)}. Mobility and guided meditation use the published Bali rates in this preview. A written quote still names the person and the total before anything is confirmed.</p>
         </div>
       </section>
       <section className="section" style={{ paddingTop: 0 }}>

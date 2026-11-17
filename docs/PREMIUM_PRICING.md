@@ -4,7 +4,7 @@ Research checked 11 November 2026. These are planning recommendations for Bali, 
 
 | Service | Recommended premium starting format | Suggested higher service format |
 |---|---|---|
-| Personal training | IDR 900,000 / 60 min / one adult | Test IDR 1,250,000 / 75 min with a relevant specialist and a written plan |
+| Private Strength Training | IDR 900,000 / 60 min / one adult | Test IDR 1,250,000 / 75 min with a relevant specialist and a written plan |
 | Private yoga | IDR 850,000 / 60 min / up to two adults | Test IDR 1,250,000 / 75 min with extra props and a specific teaching brief |
 | Mat Pilates | IDR 950,000 / 60 min / one adult | Test IDR 1,350,000 / 75 min with a more detailed individual plan |
 | Mobility and assisted stretching | IDR 850,000 / 60 min / one adult | Quote a longer specialist session after scope review |

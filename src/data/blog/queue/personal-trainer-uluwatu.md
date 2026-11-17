@@ -1,12 +1,12 @@
-A personal trainer in Uluwatu is a Bukit visit with travel, not an in-zone Canggu rate and not a clifftop photo product. PersonalFitness.id coordinates 60-minute personal training from Rp 900.000 plus Rp 200.000 travel per visit when the address sits in Uluwatu, Pecatu, Bingin or nearby Bukit clusters we can time. The commercial destination is [Bali personal training](/bali/personal-training). This article is the investigation layer: traffic windows, indoor floors and how the quote is built.
+A personal trainer in Uluwatu is a Bukit visit with travel, not an in-zone Canggu rate and not a clifftop photo product. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 plus an outer-area travel fee confirmed in the written quote when the address sits in Uluwatu, Pecatu, Bingin or nearby Bukit clusters we can time. The commercial destination is [Bali private strength training](/bali/personal-training). This article is the investigation layer: traffic windows, indoor floors and how the quote is built.
 
 If you searched for a personal trainer in Uluwatu because the villa hangs over the water, start with the road and a dry indoor rectangle. A cliff caption is not a venue. We only confirm when the professional can arrive, set up and leave inside a realistic block.
 
 ## What Bukit travel means
 
-Uluwatu adds Rp 200.000 travel per visit, once, not per person. Canggu and Seminyak do not. Ubud and Sanur add Rp 150.000, not Rp 200.000. If your stay is actually Ungasan or Pecatu, say so. If it is Canggu, you wanted [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates).
+Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote., once, not per person. Canggu and Seminyak do not. Ubud and Sanur add Rp 150.000, not Rp 200.000. If your stay is actually Ungasan or Pecatu, say so. If it is Canggu, you wanted [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates).
 
-The hour is one person at Rp 900.000 plus travel. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. Programme discounts do not reduce travel. Read [programmes](/programmes) before you prepay twelve Bukit visits.
+The hour is one person at Rp 1.050.000 plus travel. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. Programme discounts do not reduce travel. Read [programmes](/programmes) before you prepay twelve Bukit visits.
 
 A sunset reel is not supply. PersonalFitness.id matches, quotes and confirms.
 
@@ -22,7 +22,7 @@ Traffic is the second product. A 07:00 request may need the professional on the 
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Uluwatu personal training starts at Rp 900.000 plus Rp 200.000 travel. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A Canggu quote without travel is not an Uluwatu quote.
+The [pricing page](/pricing) uses the same blocks operations uses. Uluwatu private strength training starts at Rp 1.050.000 plus an outer-area travel fee confirmed in the quote. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A Canggu quote without travel is not an Uluwatu quote.
 
 There is no cliff premium beyond travel. There is no sunrise tax. There is no free intro. Pay only on the merchant link in the written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
 
@@ -36,7 +36,7 @@ Mix them on a programme only after the first paid visit fitted the indoor floor.
 
 ## How to send the first Uluwatu message
 
-Five lines: personal training, Uluwatu or Pecatu or Bingin, villa, a two-hour window, and headcount. Add whether the floor is indoor. Add gate notes. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep medical files out.
+Five lines: private strength training, Uluwatu or Pecatu or Bingin, villa, a two-hour window, and headcount. Add whether the floor is indoor. Add gate notes. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep medical files out.
 
 The sequence sits on [how it works](/how-it-works). Email hello@personalfitness.id if that is easier. Confirmation names the professional, the arrival window and the access note.
 
@@ -48,10 +48,10 @@ We will not sell a clifftop photograph as a session. We will not pretend Bukit t
 
 1. Confirm Uluwatu, Pecatu or Bingin, not “Bali”.
 2. Choose an indoor floor.
-3. Accept Rp 200.000 travel per visit.
+3. Accept an outer-area travel fee confirmed in the written quote.
 4. Pick a two-hour window that survives the road.
 5. Tell the host a professional is coming.
-6. Open [Bali personal training](/bali/personal-training).
+6. Open [Bali private strength training](/bali/personal-training).
 7. Send WhatsApp. Wait for the quote. Pay only on the link.
 
 An Uluwatu personal trainer is useful when the road, the floor and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Bali](/bali) and send the Bukit area.
@@ -66,9 +66,9 @@ Evening sessions on the Bukit compete with traffic the other way. A 16:00–18:0
 
 We will not run a circuit on a cliff edge. We will not sell a sunrise photoshoot. We will not treat a villa Instagram as a booking. We will not add swimming because the infinity pool is in the brief. Swimming stays held. The live hours are training, yoga, Pilates, mobility, boxing fitness and meditation. Pick one. Send the floor. Send the window.
 
-If the stay is two nights, buy one visit. If the stay is two weeks in Pecatu, a six-session training block can make sense, still with Rp 200.000 travel on each visit. WhatsApp +62 811-3803-488. The [Uluwatu area page](/bali/uluwatu) stays noindex. This article is the indexable record.
+If the stay is two nights, buy one visit. If the stay is two weeks in Pecatu, a six-session training block can make sense, still with outer-area travel confirmed in the written quote on each visit. WhatsApp +62 811-3803-488. The [Uluwatu area page](/bali/uluwatu) stays noindex. This article is the indexable record.
 
 
 ## Confirm the session format
 
-Read the [personal training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.
+Read the [private strength training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.

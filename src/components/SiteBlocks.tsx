@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { type ReactNode } from 'react'
-import { areaPockets, areas, extraPersonFee, programmes, quoteAreas, services, type City } from '@/data/catalog'
+import { areaPockets, areas, extraPersonFee, programmes, quoteAreas, services, SESSION_ANCHOR, type City } from '@/data/catalog'
 import { professionals, type Professional } from '@/data/professionals'
 import { formatIdr } from '@/lib/money'
 import { Eyebrow } from './Primitives'
@@ -82,7 +82,7 @@ export function ProfessionalGrid({ people = professionals, limit }: { people?: P
 }
 
 function travelLabel(area: (typeof areas)[number]) {
-  return area.travelQuote ? 'Travel quoted after a timing check' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included'
+  return area.travelQuote ? 'Travel confirmed after a timing check' : area.outerTravel ? 'Outer travel fee confirmed in the quote' : 'Travel included in central areas'
 }
 
 export function AreaCard({ area }: { area: (typeof areas)[number] }) {
@@ -131,9 +131,9 @@ export function ProgrammeGrid() {
     <div className="programme-grid">
       {programmes.map((item) => (
         <article className="programme-card" key={item.slug}>
-          <p className="eyebrow">{item.weeks} weeks · {item.sessions} sessions</p>
+          <p className="eyebrow">{item.sessions} {item.sessions === 1 ? 'session' : 'sessions'}</p>
           <h3>{item.title}</h3>
-          <p className="programme-save">{Math.round(item.discount * 100)}% off session rates</p>
+          <p className="programme-save">{item.sessions === 1 ? 'Anchor rate' : `Save ${formatIdr((SESSION_ANCHOR - item.perSession) * item.sessions)}`}</p>
           <p>{item.blurb}</p>
           <ul className="check-mini">{item.includes.map((line) => <li key={line}>{line}</li>)}</ul>
           <Link to="/programmes#schedule-builder" className="text-link">Plan my sessions<ArrowUpRight size={15} /></Link>
@@ -146,10 +146,9 @@ export function ProgrammeGrid() {
 export function ExtraFees() {
   return (
     <div className="meta-table">
-      <div><span>Extra person, Bali</span><strong>{formatIdr(extraPersonFee.Bali)}</strong></div>
-      <div><span>Extra person, Jakarta</span><strong>{formatIdr(extraPersonFee.Jakarta)}</strong></div>
-      <div><span>90-minute session</span><strong>+45% of base rate</strong></div>
-      <div><span>Private yoga pair</span><strong>Second person included</strong></div>
+      <div><span>Second guest</span><strong>{formatIdr(extraPersonFee.Bali)} per session</strong></div>
+      <div><span>90-minute session</span><strong>+45% of the session rate</strong></div>
+      <div><span>Private yoga pair</span><strong>Second guest included</strong></div>
     </div>
   )
 }

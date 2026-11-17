@@ -1,12 +1,12 @@
-A personal trainer in Ubud is an outer-zone Bali visit, not an in-zone Canggu rate and not yoga in the jungle as a product. PersonalFitness.id coordinates 60-minute personal training from Rp 900.000 plus Rp 150.000 travel per visit when the address sits in Ubud. The commercial destination is [Bali personal training](/bali/personal-training). This article is the investigation layer: access from the road, a level indoor floor, and how the quote is built.
+A personal trainer in Ubud is an outer-zone Bali visit, not an in-zone Canggu rate and not yoga in the jungle as a product. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 plus an outer-area travel fee confirmed in the written quote when the address sits in Ubud. The commercial destination is [Bali private strength training](/bali/personal-training). This article is the investigation layer: access from the road, a level indoor floor, and how the quote is built.
 
 If you searched for a personal trainer in Ubud because the villa has a valley view, start with the walk from the vehicle. Steps, paths and a carry of kit matter more than the caption. The hour still runs in your space after a travel and timing check.
 
 ## What outer-zone means in Ubud
 
-Outer-zone means the published Bali personal training rate does not already include travel. Ubud and Sanur add Rp 150.000 per visit, once, not per person. Canggu and Seminyak do not add that line. If your stay is actually Pererenan, you wanted [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates), not this page.
+Outer-zone means the published Bali private strength training rate does not already include travel. Ubud and Sanur add Rp 150.000 per visit, once, not per person. Canggu and Seminyak do not add that line. If your stay is actually Pererenan, you wanted [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates), not this page.
 
-The hour is one person at Rp 900.000 plus travel. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is not discounted on [programmes](/programmes). Session charges can be.
+The hour is one person at Rp 1.050.000 plus travel. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is not discounted on [programmes](/programmes). Session charges can be.
 
 A jungle path is not a studio. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
@@ -22,7 +22,7 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not an Ubu
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Ubud personal training starts at Rp 900.000 for 60 minutes, one person, plus Rp 150.000 travel. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A Canggu quote without travel is not an Ubud quote.
+The [pricing page](/pricing) uses the same blocks operations uses. Ubud private strength training starts at Rp 1.050.000 for 60 minutes, one person, plus an outer-area travel fee confirmed in the quote. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A Canggu quote without travel is not an Ubud quote.
 
 A two-week block is six sessions at 5 percent off session charges. Travel still adds Rp 150.000 six times. That is why a month in Canggu and a month in Ubud are different commercial objects. Unused sessions follow the validity window on the quote.
 
@@ -36,7 +36,7 @@ If two of you want yoga, the pair rule is in [extra people and pair pricing](/re
 
 ## How to send the first Ubud message
 
-Message WhatsApp +62 811-3803-488 or hello@personalfitness.id with five lines: personal training, Ubud plus the village or road if you know it, house or villa, a two-hour window, and headcount. Add whether the floor is indoor. Add steps or a long path if they exist.
+Message WhatsApp +62 811-3803-488 or hello@personalfitness.id with five lines: private strength training, Ubud plus the village or road if you know it, house or villa, a two-hour window, and headcount. Add whether the floor is indoor. Add steps or a long path if they exist.
 
 Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep card numbers and medical files out. The sequence sits on [how it works](/how-it-works). Pay only on the merchant link in the written quote.
 
@@ -53,9 +53,9 @@ If the stay is Sanur, say Sanur: same Rp 150.000 travel, different shoreline. If
 1. Confirm Ubud, not “Bali”.
 2. Name the village or road if you know it.
 3. Describe steps, path and indoor floor.
-4. Accept Rp 150.000 travel per visit.
+4. Accept an outer-area travel fee confirmed in the written quote.
 5. Pick a two-hour window that survives the approach.
-6. Open [Bali personal training](/bali/personal-training).
+6. Open [Bali private strength training](/bali/personal-training).
 7. Send WhatsApp. Wait for the quote. Pay only on the link.
 
 An Ubud personal trainer is useful when the path, the floor and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Bali](/bali) and send the area.
@@ -70,11 +70,11 @@ If you only have three nights in Ubud, buy one 60-minute visit, not a twelve-ses
 
 Ubud, valley or ridge, indoor teak or outdoor deck, one or two people, training or yoga, 08:00–10:00 or 16:00–18:00, number of nights, whether a manager opens the gate. That is enough. Do not send a clinic letter. Do not send a meal plan. Do not send “we are flexible, surprise us”. Flexibility without a window is not a diary object.
 
-If the professional cannot reach you on the day, the hour is at risk. Keep the same number on the quote. If you change villas after payment, send the new pocket before the 24-hour line. Travel to Ubud is still Rp 150.000 each visit. Moving to Canggu mid-stay is a new cluster, not a free transfer.
+If the professional cannot reach you on the day, the hour is at risk. Keep the same number on the quote. If you change villas after payment, send the new pocket before the 36-hour line. Travel to Ubud is still Rp 150.000 each visit. Moving to Canggu mid-stay is a new cluster, not a free transfer.
 
 The [Ubud area page](/bali/ubud) is an indexable local planning page with the current travel rule and enquiry route. This article answers the narrower question of training access and quote preparation. The [Bali hub](/bali) compares the wider service area. WhatsApp +62 811-3803-488.
 
 
 ## Confirm the session format
 
-Read the [personal training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.
+Read the [private strength training service details](/personal-training) before requesting this appointment. Match the format, participants and proposed setting to the written quote, then ask the coordinator to check your actual dates.

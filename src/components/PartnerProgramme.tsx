@@ -24,10 +24,12 @@ const AREAS = ['Canggu', 'Seminyak', 'Ubud', 'Sanur', 'Uluwatu', 'Jakarta', 'Oth
 
 const guestCards = [
   { to: '/private-yoga', title: 'Private yoga', note: 'up to 2', bali: 850_000 },
-  { to: '/personal-training', title: 'Personal training', note: '1 person', bali: 900_000 },
+  { to: '/personal-training', title: 'Private Strength Training', note: 'Rp 1.050.000 single', bali: 1_050_000 },
+  { to: '/bodywork-recovery', title: 'Bodywork & Recovery', note: 'wellness hour', bali: 1_050_000 },
+  { to: '/zumba-dance-fitness', title: 'Zumba & Dance Fitness', note: 'fun cardio', bali: 1_050_000 },
   { to: '/mat-pilates', title: 'Mat Pilates', note: 'no reformer', bali: 950_000 },
-  { to: '/mobility-coaching', title: 'Mobility & stretching', note: 'non-clinical', bali: 850_000 },
-  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only, 1 person', bali: 1_000_000 },
+  { to: '/mobility-coaching', title: 'Mobility & stretching', note: 'guided movement', bali: 850_000 },
+  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only', bali: 1_000_000 },
   { to: '/guided-meditation', title: 'Guided meditation', note: 'up to 2', bali: 800_000 },
 ]
 
@@ -35,7 +37,7 @@ const copy = {
   en: {
     eyebrow: 'For villa managers',
     h1: 'Wellness for every villa you manage. You earn on every session.',
-    sub: `Put yoga, personal training, Pilates, stretching, boxing and meditation on the menu in every villa you manage. A coordinator sets the week, a vetted coach comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
+    sub: `Put yoga, private strength training, Pilates, stretching, boxing and meditation on the menu in every villa you manage. A coordinator sets the week, a vetted instructor comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
     primary: 'Talk to us',
     secondary: 'Download the partner menu (PDF)',
     switch: 'Bahasa Indonesia',
@@ -44,13 +46,13 @@ const copy = {
     steps: [
       'Tell your coordinator which villas, areas and days you want covered.',
       'Guests request the session by email or WhatsApp. The request carries your partner code.',
-      'A vetted coach comes to the villa. The guest pays us.',
+      'A vetted instructor comes to the villa. The guest pays us.',
       `You earn ${commissionShare('en')}, with a simple statement from our team each month.`,
     ],
     guestsTitle: 'What your guests can book',
-    priceNote: 'Bali prices, 60 minutes. Canggu and Seminyak included. Ubud and Sanur +Rp 150.000, Uluwatu +Rp 200.000 travel per visit.',
+    priceNote: 'Bali prices, 60 minutes. Private strength training is Rp 1.050.000 for one session; a 5-session pack is Rp 900.000 per session. Standard travel included in central areas; outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
     calendarTitle: 'Set a week across the villas you manage.',
-    calendar: 'Example: private yoga Monday, personal training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests reserve by 18:00 the day before. Your coordinator keeps the diary.',
+    calendar: 'Example: private yoga Monday, private strength training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests reserve by 18:00 the day before. Your coordinator keeps the diary.',
     getTitle: 'What you get',
     get: [
       'A named coordinator for your villas',
@@ -92,7 +94,7 @@ const copy = {
   id: {
     eyebrow: 'Untuk pengelola villa',
     h1: 'Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.',
-    sub: `Letakkan yoga, personal training, Pilates, stretching, boxing dan meditasi di setiap villa yang Anda kelola. Koordinator mengatur mingguannya, coach yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
+    sub: `Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di setiap villa yang Anda kelola. Koordinator mengatur mingguannya, coach yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
     primary: 'Bicara dengan kami',
     secondary: 'Unduh menu partner (PDF)',
     switch: 'English',
@@ -101,13 +103,13 @@ const copy = {
     steps: [
       'Beritahu koordinator villa, area, dan hari yang ingin dicakup.',
       'Tamu meminta sesi lewat email atau WhatsApp. Pesanan membawa kode partner Anda.',
-      'Coach yang sudah diseleksi datang ke villa. Tamu membayar ke kami.',
+      'Instruktur yang sudah diseleksi datang ke villa. Tamu membayar ke kami.',
       `Anda mendapat ${commissionShare('id')}, dengan laporan sederhana dari tim kami setiap bulan.`,
     ],
     guestsTitle: 'Yang bisa dipesan tamu',
-    priceNote: 'Harga Bali, 60 menit. Canggu dan Seminyak sudah termasuk. Ubud dan Sanur +Rp 150.000, Uluwatu +Rp 200.000 biaya perjalanan per kunjungan.',
+    priceNote: 'Harga Bali, 60 menit. Private strength training Rp 1.050.000 untuk satu sesi; paket 5 sesi Rp 900.000 per sesi. Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan.',
     calendarTitle: 'Atur minggu untuk villa yang Anda kelola.',
-    calendar: 'Contoh: yoga privat Senin, personal training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya. Koordinator yang memegang jadwalnya.',
+    calendar: 'Contoh: yoga privat Senin, private strength training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya. Koordinator yang memegang jadwalnya.',
     getTitle: 'Yang Anda dapat',
     get: [
       'Koordinator tetap untuk villa Anda',

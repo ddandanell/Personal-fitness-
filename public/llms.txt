@@ -1,13 +1,13 @@
 # PersonalFitness.id
 
-PersonalFitness.id works with villa managers, rental agencies and hotels. Guests can book private fitness at the villa in published Bali and Jakarta clusters. Coaches come to the property, the guest pays us, and the partner earns a commission. It is not a public trainer marketplace.
+PersonalFitness.id works with villa managers, rental agencies and hotels. Guests can book private fitness at the villa in published Bali and Jakarta clusters. Coaches come to the property, the guest pays us, and the partner earns a commission. It is a managed private service.
 
 Canonical host: https://www.personalfitness.id/
 Language: English (en-ID). Indonesian landing page: https://www.personalfitness.id/id
 
 ## What we book
 
-- Personal training: 60 minutes from Rp 900.000 in Bali and Rp 950.000 in Jakarta
+- Private Strength Training: 60 minutes from Rp 1.050.000
 - Private yoga: 60 minutes for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta
 - Mat Pilates: 60 minutes from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer
 - Mobility coaching: non-clinical stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta
@@ -18,7 +18,7 @@ Availability, access and the payable total are confirmed in a written quote. The
 
 ## Areas
 
-Bali in-zone: Canggu and Seminyak. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000.
+Bali in-zone: Canggu and Seminyak. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.
 
 Jakarta in-zone: South Jakarta (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) and Central Jakarta (Menteng, Gondangdia, Thamrin). North (Kelapa Gading, Sunter, Pluit, PIK), West (Puri Indah, Kebon Jeruk) and East (Rawamangun, Pulomas) are quoted after a timing check. BSD is outside DKI Jakarta.
 
@@ -66,7 +66,7 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 
 ## Villa partners
 
-Villa managers, agencies and boutique hosts can offer a wellness menu in every villa they manage. A coordinator can set a weekly rhythm across the portfolio. Guests book by email at hello@personalfitness.id or WhatsApp, our coach comes to the villa, the guest pays us, and the partner earns a commission on every paid session.
+Villa managers, agencies and boutique hosts can offer a wellness menu in every villa they manage. A coordinator can set a weekly rhythm across the portfolio. Guests book by email at hello@personalfitness.id or WhatsApp, a vetted instructor comes to the villa, the guest pays us, and the partner earns a commission on every paid session.
 
 - Partner programme: https://www.personalfitness.id/villa-hotel-partners
 - Bahasa: https://www.personalfitness.id/id/mitra-villa

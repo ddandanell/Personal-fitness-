@@ -138,14 +138,14 @@ export const villas: Villa[] = [
 export const services: Service[] = [
   {
     slug: 'personal-training',
-    name: 'Personal training',
-    price: 900_000,
-    jakartaPrice: 950_000,
+    name: 'Private Strength Training',
+    price: 1_050_000,
+    jakartaPrice: 1_050_000,
     duration: 60,
     included: 1,
     max: 2,
     line: 'Strength, a return to training, or a routine kept for the length of the stay.',
-    note: 'One person is included. A second person is Rp 250.000. The coach brings ordinary portable kit.',
+    note: 'One guest is included. A second guest is Rp 250.000. The instructor brings ordinary portable kit.',
     image: img('/images/villademo/training.webp', 'A coach guiding an adult through a floor strength exercise', 1600, 1100),
   },
   {
@@ -217,7 +217,7 @@ export const trainers: Trainer[] = [
     name: 'Julian Hart',
     role: 'Strength',
     languages: ['English', 'German'],
-    specialties: ['Personal training', 'Return to training', 'Hotel-to-villa routines'],
+    specialties: ['Private Strength Training', 'Return to training', 'Hotel-to-villa routines'],
     rating: 4.8,
     sampleSessions: 96,
     bio: 'Julian runs practical strength hours with bands, a mat and whatever the house gym already has. He is the usual trainer for Garden House on Monday, Wednesday and Friday.',
@@ -371,7 +371,7 @@ export function villaDemoPage(pathname: string) {
   if (rest[0] === 'stay') {
     const villa = getVilla(rest[1]) ?? villas[0]
     title = `${villa.name} in-villa wellness`
-    description = `${villa.name} in ${villa.area}. Private yoga, mat Pilates and personal training requested from the room and charged to the stay.`
+    description = `${villa.name} in ${villa.area}. Private yoga, mat Pilates and private strength training requested from the room and charged to the stay.`
     image = villa.image
   } else if (rest[0] === 'trainers') {
     const trainer = getTrainer(rest[1]) ?? trainers[0]

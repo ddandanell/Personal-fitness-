@@ -1,6 +1,6 @@
 A managed in-villa personal trainer in Bali is not a gym drop-in and it is not a public list of coaches. It is a 60-minute private session at a villa or home you already have permission to use, with the professional, travel, price and cancellation terms confirmed before you pay. PersonalFitness.id coordinates that sequence from the [homepage](/) through a written quote.
 
-If you searched for a personal trainer in Bali because you are staying in Canggu, Seminyak or another published cluster, start with the practical facts: duration, headcount, floor, heat, access and the window you can actually keep. The session page at [Bali personal training](/bali/personal-training) is the commercial destination. This article is the investigation layer: what is included, what is not, and how to avoid paying for a photograph of a workout that never had a confirmation.
+If you searched for a personal trainer in Bali because you are staying in Canggu, Seminyak or another published cluster, start with the practical facts: duration, headcount, floor, heat, access and the window you can actually keep. The session page at [Bali private strength training](/bali/personal-training) is the commercial destination. This article is the investigation layer: what is included, what is not, and how to avoid paying for a photograph of a workout that never had a confirmation.
 
 ## What “managed” means on the day
 
@@ -12,7 +12,7 @@ A click on a website is not a booking. Tentative trainer interest is not supply.
 
 ## What the 60 minutes actually include
 
-The published Bali personal training rate is Rp 900.000 for 60 minutes, one person, in-zone. In-zone here means the Canggu–Seminyak cluster, including Berawa, Pererenan and Petitenget. The hour covers a session matched to the goal you approved, a professional approved for personal training in that cluster, and travel that is already inside the rate when you are in-zone.
+The published Bali private strength training rate is Rp 1.050.000 for 60 minutes, one person, in-zone. In-zone here means the Canggu–Seminyak cluster, including Berawa, Pererenan and Petitenget. The hour covers a session matched to the goal you approved, a professional approved for private strength training in that cluster, and travel that is already inside the rate when you are in-zone.
 
 Simple kit on site can be used: a mat, a band, a pair of dumbbells if they exist. We do not assume a villa gym. We also do not pretend a glossy pool deck at 13:00 is a studio. Indoor tile or wood with a mat is the default. Outdoor work is possible when shade, heat and neighbours allow it. Say so in the first message.
 
@@ -28,7 +28,7 @@ If children, dogs or a video call will share the space, say so. A good coach can
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali personal training starts at Rp 900.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Venue hire, parking and villa-staff fees stay extra if they exist.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali private strength training starts at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Venue hire, parking and villa-staff fees stay extra if they exist.
 
 A two-week block is six sessions at 5 percent off. Three weeks is nine sessions at 8 percent. Four weeks is twelve sessions at 12 percent. Those reductions are mechanical. They are not a mystery package. Unused sessions follow the validity window on the quote.
 
@@ -42,11 +42,11 @@ Public sand, temples and busy bars need written venue permission and a usable pr
 
 ## How to send the first message
 
-Open the [homepage](/) if you still need the whole offer. Then message WhatsApp with four lines: personal training, Bali, the area and venue type, and a two-hour window. Add headcount. Add a one-line goal such as beginner strength or keep my routine. Keep health files, ID photos and card numbers out.
+Open the [homepage](/) if you still need the whole offer. Then message WhatsApp with four lines: private strength training, Bali, the area and venue type, and a two-hour window. Add headcount. Add a one-line goal such as beginner strength or keep my routine. Keep health files, ID photos and card numbers out.
 
 We reply with a starting price or a request for one missing fact. The written quote is the document you accept. The confirmation is the document that names who is coming.
 
-If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you already know you want a programme, read [two, three and four-week blocks](/programmes) before you prepay a count you cannot use. Pad-only [boxing fitness](/bali/boxing-fitness) and a quiet [guided meditation](/bali/guided-meditation) sit are separate published hours, not add-ons hidden inside personal training.
+If the villa is in Canggu, start at [Canggu sessions](/bali/canggu). If you already know you want a programme, read [two, three and four-week blocks](/programmes) before you prepay a count you cannot use. Pad-only [boxing fitness](/bali/boxing-fitness) and a quiet [guided meditation](/bali/guided-meditation) sit are separate published hours, not add-ons hidden inside private strength training.
 
 ## A checklist you can actually use
 

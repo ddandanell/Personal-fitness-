@@ -1,8 +1,9 @@
 import { MessageCircle } from 'lucide-react'
 import { Suspense, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router'
-import { areaPockets, programmes, quoteAreas, type City } from '@/data/catalog'
+import { areaPockets, extraPersonFee, programmes, quoteAreas, type City } from '@/data/catalog'
 import { COMPANY_EMAIL } from '@/data/company'
+import { AVAILABILITY_NOTE, RESCHEDULE_NOTE, TRAVEL_DISCLAIMER } from '@/data/offerCopy'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
@@ -34,8 +35,8 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
   const [city, setCity] = useState<City>(initialCity || (params.get('city') === 'Jakarta' ? 'Jakarta' : 'Bali'))
   const [area, setArea] = useState(params.get('area') || '')
   const [durationMin, setDurationMin] = useState(Number(params.get('duration')) || first.durationMin)
-  const [participants, setParticipants] = useState(params.get('participants') || '1')
-  const [programme, setProgramme] = useState(params.get('programme') || '')
+  const [participants, setParticipants] = useState(params.get('participants') === '2' ? '2' : '1')
+  const [programme, setProgramme] = useState(programmes.some((item) => item.slug === params.get('programme')) ? params.get('programme') || 'single' : 'single')
   const [timing, setTiming] = useState('')
   const [goals, setGoals] = useState('')
   const [senderName, setSenderName] = useState('')
@@ -87,9 +88,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
     const keepProgramme = Boolean(programme)
     setService(slug)
     if (!keepNinety) setDurationMin(next.durationMin)
-    if (!keepProgramme) setProgramme('')
-    const max = next.maxParticipants
-    if (Number(participants) > max) setParticipants(String(max))
+    if (!keepProgramme) setProgramme('single')
   }
 
   return (
@@ -112,7 +111,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
               <option value="">Confirm later</option>
               {cityHubs.map((hub) => {
                 const pockets = areaPockets(hub.slug)
-                const label = (item: typeof hub) => item.name + (item.travelQuote ? ' (travel by quote)' : item.travelFee ? ' (+ travel)' : '')
+                const label = (item: typeof hub) => item.name + (item.travelQuote ? ' (by request)' : item.outerTravel ? ' (outer travel fee)' : '')
                 if (!pockets.length) return <option value={hub.slug} key={hub.slug}>{label(hub)}</option>
                 return (
                   <optgroup label={hub.name} key={hub.slug}>
@@ -123,19 +122,23 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
               })}
             </select>
           </Field>
-          <Field label="Visit length">
+          <Field label="Session Duration">
             <select value={durationMin} onChange={(event) => setDurationMin(Number(event.target.value))}>
               <option value={selected.durationMin}>{selected.durationMin} minutes</option>
-              {canExtend && <option value={90}>90 minutes (+45% of base)</option>}
+              {canExtend && <option value={90}>90 minutes (+45% of the session rate)</option>}
             </select>
           </Field>
-          <Field label="Participants">
-            <input type="number" min="1" max={selected.maxParticipants} step="1" value={participants} onChange={(event) => setParticipants(event.target.value)} />
-          </Field>
-          <Field label="Programme">
+          <fieldset className="guest-toggle-field">
+            <legend>Guests</legend>
+            <div className="guest-toggle" role="radiogroup" aria-label="Guests">
+              <button type="button" aria-pressed={participants === '1'} onClick={() => setParticipants('1')}>1 Guest</button>
+              <button type="button" aria-pressed={participants === '2'} onClick={() => setParticipants('2')}>2 Guests</button>
+            </div>
+            <p className="small muted">2 Guests adds {formatIdr(extraPersonFee.Bali)} per session when the session rate is for one guest.</p>
+          </fieldset>
+          <Field label="Package">
             <select value={programme} onChange={(event) => setProgramme(event.target.value)}>
-              <option value="">Single visit</option>
-              {programmes.map((item) => <option value={item.slug} key={item.slug}>{item.title} · {item.sessions} visits</option>)}
+              {programmes.map((item) => <option value={item.slug} key={item.slug}>{item.title}</option>)}
             </select>
           </Field>
           {!compact && (
@@ -143,8 +146,8 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
               <Field label="Preferred window">
                 <input value={timing} onChange={(event) => setTiming(event.target.value)} placeholder="e.g. 18 Nov, 07:00-09:00" maxLength={120} />
               </Field>
-              <Field label="General preference" hint="Practical goals only. Detailed health information needs a private intake.">
-                <input value={goals} onChange={(event) => setGoals(event.target.value)} placeholder="e.g. beginner strength, a quiet pair session" maxLength={200} />
+              <Field label="General preference" hint="Practical goals only. Keep health details out of this form.">
+                <input value={goals} onChange={(event) => setGoals(event.target.value)} placeholder="e.g. beginner strength, a calm recovery hour" maxLength={200} />
               </Field>
             </>
           )}
@@ -159,15 +162,15 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           <>
             <p className="eyebrow eyebrow-light">Starting price</p>
             <p className="estimate-total">{formatIdr(quote.total)}</p>
-            <p className="estimate-sub">{quote.sessions > 1 ? quote.sessions + ' visits · ' + formatIdr(quote.perSession) + ' each' : quote.formatLabel + ' · ' + quote.participants + (quote.participants === 1 ? ' person' : ' people')}</p>
+            <p className="estimate-sub">{quote.sessions > 1 ? quote.sessions + ' sessions · ' + formatIdr(quote.perSession) + ' each' : quote.formatLabel + ' · ' + quote.participants + (quote.participants === 1 ? ' guest' : ' guests')}</p>
             <ul className="estimate-lines">
               <li><span>Session rate</span><strong>{formatIdr(quote.base)}</strong></li>
               {quote.durationFee > 0 && <li><span>90-minute uplift</span><strong>{formatIdr(quote.durationFee)}</strong></li>}
-              {quote.extraPeopleFee > 0 && <li><span>Additional people</span><strong>{formatIdr(quote.extraPeopleFee)}</strong></li>}
-              {quote.travel > 0 && <li><span>Travel per visit</span><strong>{formatIdr(quote.travel)}</strong></li>}
-              {quote.discount > 0 && <li><span>Programme reduction</span><strong>-{formatIdr(quote.discount)}</strong></li>}
+              {quote.extraPeopleFee > 0 && <li><span>Second guest</span><strong>{formatIdr(quote.extraPeopleFee)}</strong></li>}
+              {quote.discount > 0 && <li><span>Package savings</span><strong>-{formatIdr(quote.discount)}</strong></li>}
             </ul>
-            <p className="small muted">Starting estimate. {area ? 'Selected-area travel is included above.' : 'Area and travel remain to be confirmed.'} The written quote confirms all inclusions and the payable total.</p>
+            <p className="small muted">{AVAILABILITY_NOTE}</p>
+            <p className="small muted">{TRAVEL_DISCLAIMER}</p>
           </>
         ) : (
           <>
@@ -179,6 +182,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
         <div className="cluster">
           <button type="button" className="button button-outline-light" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this request'}</button>
           <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => { trackWhatsApp('estimator', { service, city }); trackEvent('estimator_used', { service, city }) }}><MessageCircle size={16} />Continue in WhatsApp</a>
+          <p className="small wa-handoff">{RESCHEDULE_NOTE}</p>
           <CopyButton value={message} label="Copy request" />
           <button type="button" className="button button-outline-light" onClick={() => downloadText('PersonalFitness-request.txt', message)}>Download</button>
         </div>

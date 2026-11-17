@@ -50,7 +50,7 @@ Tell the coordinator whether one or two adults will join and whether chairs or f
 
 Guided meditation is not a hidden therapy appointment. The instructor guides attention, breathing and a structured period of stillness within the agreed hour. PersonalFitness.id does not promise sleep improvement, anxiety treatment, pain relief or a medical result. If you need treatment or help with a diagnosed condition, speak to an appropriate clinician.
 
-It is also not private yoga. If you want standing movement, postures and a physical sequence, review [private yoga at home](/private-yoga). If you want strength work, review [personal training at home](/personal-training). Choosing one format before the enquiry gives the coordinator a clear request and protects the hour from becoming an improvised combination of services.
+It is also not private yoga. If you want standing movement, postures and a physical sequence, review [private yoga at home](/private-yoga). If you want strength work, review [private strength training at home](/personal-training). Choosing one format before the enquiry gives the coordinator a clear request and protects the hour from becoming an improvised combination of services.
 
 Two adults are included in the published meditation format when the room works for both. Adding more people changes the brief and requires a quote. Do not assume that a quiet room automatically turns a private session into a group class.
 
@@ -58,7 +58,7 @@ Two adults are included in the published meditation format when the room works f
 
 Imagine two adults staying in Canggu. The open pavilion faces the pool, breakfast staff cross it regularly and construction can be heard from the road. A smaller air-conditioned media room has a door, three chairs and curtains. The media room is the better option even though it is less photogenic.
 
-The guests can move one table, place two chairs with clear space, silence their phones and tell the villa host that the room is reserved. Canggu is within the published Bali in-zone cluster for an accepted visit. Ubud and Sanur add Rp 150.000 travel per visit, while Uluwatu adds Rp 200.000. Those travel rules belong on the written quote and are not changed by the type of room.
+The guests can move one table, place two chairs with clear space, silence their phones and tell the villa host that the room is reserved. Canggu is within the published Bali in-zone cluster for an accepted visit. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote., while Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Those travel rules belong on the written quote and are not changed by the type of room.
 
 The [Bali service area guide](/bali) explains the current location rules. Give the exact villa address and two realistic time windows. Do not assume that an image of a meditation instructor confirms a particular person or time.
 

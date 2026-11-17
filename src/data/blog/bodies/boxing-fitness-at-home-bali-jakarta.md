@@ -6,7 +6,7 @@ If you searched for boxing at home because a gym class felt public, start with t
 
 Pad-only means the professional holds pads and you hit them with an agreed pattern. It is fitness. It is not a bout. It is not sparring with another guest. It is not a promise that you will learn to fight. Beginners are welcome if you say so in the first message. People who already box are welcome if they accept that this hour still follows house rules: one person, no sparring, no clinical treatment.
 
-The published rate is for 60 minutes and one participant. Extra people are not a casual add-on on this session. If two of you want to train, that is two quotes or a different session such as [personal training](/personal-training) where an extra person can be billed. Do not assume a villa group can share pads in one hour. The floor and the insurance line will not stretch that far.
+The published rate is for 60 minutes and one participant. Extra people are not a casual add-on on this session. If two of you want to train, that is two quotes or a different session such as [private strength training](/personal-training) where an extra person can be billed. Do not assume a villa group can share pads in one hour. The floor and the insurance line will not stretch that far.
 
 A photo of gloves is not a space check. A WhatsApp “yes” from a coach you found elsewhere is not this service. PersonalFitness.id owns the request, the match, the quote and the confirmation.
 
@@ -22,7 +22,7 @@ We will not run kickboxing as a secret extra. We will not put two strangers in a
 
 ## How the Bali quote is built
 
-[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.000.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
+[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.000.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a boxing studio and it is not a walk-in. You train at the villa or home you already have permission to use.
 
@@ -32,13 +32,13 @@ Heat changes the work. Midday sun on a west-facing deck is a reason to move insi
 
 [Jakarta boxing fitness](/jakarta/boxing-fitness) starts at Rp 1.050.000 for 60 minutes, one person, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check, with travel or a decline. Building access is the product. Lifts, visitor passes, parking and a usable indoor rectangle go on the quote before anyone travels.
 
-If the lobby blocks outside trainers, tell us before the quote. We will not pretend a refusal is a session. If the apartment is too small for pad work, we will say so and offer [personal training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching) instead of forcing punches into a corridor.
+If the lobby blocks outside trainers, tell us before the quote. We will not pretend a refusal is a session. If the apartment is too small for pad work, we will say so and offer [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching) instead of forcing punches into a corridor.
 
 ## Programmes, first sessions and what you actually pay
 
 There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
 
-Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
+Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 

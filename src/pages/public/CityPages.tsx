@@ -64,10 +64,10 @@ export function CityPage({ city }: { city: City }) {
       <StructuredData data={cityHubJsonLd(city, seo?.title || data.headline, seo?.description || data.lede)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={city} title={data.headline} description={data.lede}>
-        <p className="price-highlight">{city === 'Bali' ? `Starting price · personal training ${formatIdr(900_000)} · 60 minutes · in-zone Canggu and Seminyak` : `Starting price · personal training ${formatIdr(950_000)} · 60 minutes · in-zone South and Central Jakarta`}</p>
+        <p className="price-highlight">{`Starting price · private strength training ${formatIdr(1_050_000)} · 60 minutes · one guest`}</p>
         <div className="cluster">
           <Link to={`/contact?city=${city}`} className="button button-primary">Check {city} availability<ArrowUpRight size={16} /></Link>
-          <Link to={`/${cityPath}/personal-training`} className="button button-outline">{city} personal training</Link>
+          <Link to={`/${cityPath}/personal-training`} className="button button-outline">{city} private strength training</Link>
           <Link to="/pricing" className="button button-outline">See session prices</Link>
         </div>
       </PageIntro>
@@ -232,7 +232,7 @@ export function CityServicePage() {
   const cityPath = city.toLowerCase()
   const seo = getSeo('/' + cityPath + '/' + service.slug)
   const access = city === 'Bali'
-    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. The Denpasar office is an office, not a walk-in studio.'
+    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. The Denpasar office is an office, not a walk-in studio.'
     : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
   const articles = blogPosts.filter((post) =>

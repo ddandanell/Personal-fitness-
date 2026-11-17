@@ -20,7 +20,7 @@ You do not need a home gym. You do not need reformer springs. You do not need to
 
 You do not need to book physiotherapy under a Pilates label. If you have back pain that is new, sharp, radiating, or post-surgical, stop and speak to a clinician. Mat Pilates can be a later fitness session. It is not the clinical appointment.
 
-You do not need a group. One person is the published rate. Extra people add Rp 250.000 in Bali and Rp 275.000 in Jakarta, and they need floor. Small-group mat work fails when four people share a rug meant for one sofa.
+You do not need a group. One person is the published rate. Extra people add Rp 250.000 in Bali and Rp 250.000 in Jakarta, and they need floor. Small-group mat work fails when four people share a rug meant for one sofa.
 
 ## Mat versus reformer, said plainly
 
@@ -32,7 +32,7 @@ Mat Pilates uses the body, the floor and simple props. It travels. It fits a vil
 
 Arrive window, floor check, a short settle, then coached work. Cues are the product. If you wanted to follow a muted Instagram video, you would not be paying for a person in the room. Expect form stops. Expect fewer moves than a class. Expect to finish with the room usable again.
 
-The session is 60 minutes unless you buy 90 at plus 45 percent of the base. Travel is included in Canggu–Seminyak and South/Central Jakarta. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000.
+The session is 60 minutes unless you buy 90 at plus 45 percent of the base. Travel is included in Canggu–Seminyak and South/Central Jakarta. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.
 
 Name a coach preference in WhatsApp if you have one. Confirmation waits on the diary and a written quote.
 

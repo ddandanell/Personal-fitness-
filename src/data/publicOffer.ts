@@ -1,6 +1,6 @@
 import { services } from './catalog'
 
-export const CORE_SERVICE_SLUGS = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'] as const
+export const CORE_SERVICE_SLUGS = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'] as const
 export const HELD_SERVICE_SLUGS = ['swimming', 'nutrition-consultation', 'physiotherapy'] as const
 export const CITY_SERVICE_RELEASED = ['personal-training', 'private-yoga', 'mat-pilates', 'boxing-fitness', 'guided-meditation'] as const
 
@@ -16,6 +16,8 @@ export const SESSION_PHOTOS: Record<string, string> = {
   'mobility-coaching': '/images/locations/mobility-coaching.webp',
   'boxing-fitness': '/images/editorial/core-boxing-fitness.webp',
   'guided-meditation': '/images/editorial/core-guided-meditation.webp',
+  'bodywork-recovery': '/images/editorial/core-bodywork-recovery.webp',
+  'zumba-dance-fitness': '/images/editorial/core-zumba-dance-fitness.webp',
 }
 
 export function sessionPhoto(slug: string, fallback?: string) {
@@ -75,6 +77,8 @@ export const indexableStaticPaths = [
   '/mobility-coaching',
   '/boxing-fitness',
   '/guided-meditation',
+  '/bodywork-recovery',
+  '/zumba-dance-fitness',
   '/programmes',
   '/pricing',
   '/how-it-works',

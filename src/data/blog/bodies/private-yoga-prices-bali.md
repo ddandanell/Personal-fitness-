@@ -59,7 +59,7 @@ If you still might want training or Pilates, open the [homepage](/) before you l
 
 Example A. Two people, 60 minutes, Seminyak indoor. Planning estimate: Rp 850.000. No travel line. No extra-person line. Ninety minutes would add 45 percent of 850.000, which is Rp 382.500, for a session total of Rp 1.232.500 before any villa fee.
 
-Example B. Two people, 60 minutes, Ubud. Base Rp 850.000 plus Rp 150.000 travel equals Rp 1.000.000 for that visit. If you want four mornings in Ubud, travel is four times Rp 150.000 unless you move the villa into an in-zone cluster. Geography is a cost.
+Example B. Two people, 60 minutes, Ubud. Base Rp 850.000 plus an outer-area travel fee confirmed in the quote equals Rp 1.000.000 for that visit. If you want four mornings in Ubud, travel is four times Rp 150.000 unless you move the villa into an in-zone cluster. Geography is a cost.
 
 Example C. Four people, 60 minutes, Canggu. Two included, two extra at Rp 250.000 equals Rp 500.000, plus Rp 850.000 base, equals Rp 1.350.000 if the floor is approved. If the deck only fits two mats, the quote is not the problem. The deck is.
 

@@ -7,10 +7,12 @@ import { partner } from '@/config/partner'
 
 const lines = [
   ['Private yoga', 850_000, 'up to 2 people'],
-  ['Personal training', 900_000, '1 person'],
+  ['Private Strength Training', 1_050_000, '1 guest'],
+  ['Bodywork & Recovery', 1_050_000, 'wellness hour'],
+  ['Zumba & Dance Fitness', 1_050_000, 'fun cardio'],
   ['Mat Pilates', 950_000, 'no reformer'],
-  ['Mobility & stretching', 850_000, 'non-clinical'],
-  ['Boxing fitness', 1_000_000, 'pads only, 1 person'],
+  ['Mobility & stretching', 850_000, 'guided movement'],
+  ['Boxing fitness', 1_000_000, 'pads only'],
   ['Guided meditation', 800_000, 'up to 2 people'],
 ]
 
@@ -25,7 +27,7 @@ export default function PartnerMenu() {
     <div className="menu-card" lang={lang}>
       <p className="eyebrow">PersonalFitness.id</p>
       <h1>{heading}</h1>
-      <p className="large-copy">{lang === 'id' ? 'Coach kami datang ke villa Anda.' : 'Our coaches come to your villa.'}</p>
+      <p className="large-copy">{lang === 'id' ? 'Instruktur yang sudah diseleksi datang ke villa Anda.' : 'Vetted instructors come to your villa.'}</p>
       <ul className="menu-rates">
         {lines.map(([title, price, note]) => (
           <li key={String(title)}><strong>{title}</strong><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(Number(price))} · {note}</span></li>
@@ -36,7 +38,7 @@ export default function PartnerMenu() {
       )}
       <p>{lang === 'id'
         ? 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00. Pesan paling lambat pukul 18:00 sehari sebelumnya.'
-        : 'Example: private yoga Monday, personal training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before.'}</p>
+        : 'Example: private yoga Monday, private strength training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before.'}</p>
       {code && <p className="menu-code">Partner {code}</p>}
       <p className="small muted">60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.</p>
       <p className="small"><a href={href}>WhatsApp {WHATSAPP_DISPLAY}</a></p>

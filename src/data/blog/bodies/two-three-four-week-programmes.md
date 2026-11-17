@@ -4,9 +4,9 @@ Choose the block with your calendar, not with the discount. A three-night villa 
 
 ## What you are actually buying
 
-You are buying a named number of private sessions in a validity window, usually the block length plus a short tail written on the quote. You are buying the same professional where supply allows, with a backup named if not. You are buying the 24-hour reschedule rule inside the block. You are not buying an open gym, unlimited WhatsApp programming, or a meal plan.
+You are buying a named number of private sessions in a validity window, usually the block length plus a short tail written on the quote. You are buying the same professional where supply allows, with a backup named if not. You are buying the 36-hour reschedule rule inside the block. You are not buying an open gym, unlimited WhatsApp programming, or a meal plan.
 
-The session rate underneath the discount is still the city rate for the service. Bali personal training is Rp 900.000. Jakarta personal training is Rp 950.000. Yoga and Pilates have their own bases. Travel and extra people still add. The percentage comes off after those lines. Run it on [pricing](/pricing) so you see the total, not a slogan.
+The session rate underneath the discount is still the city rate for the service. Bali private strength training is Rp 1.050.000. Jakarta private strength training is Rp 950.000. Yoga and Pilates have their own bases. Travel and extra people still add. The percentage comes off after those lines. Run it on [pricing](/pricing) so you see the total, not a slogan.
 
 Unused sessions follow the quote. They do not become cash in the villa safe. They do not roll forever.
 
@@ -24,7 +24,7 @@ Nine sessions in 21 days is the remote-worker shape: three sessions a week for p
 
 Ask for a written outline after session two, not a 12-page programme PDF before we have seen you move. The outline is a working note. It is not a clinical file.
 
-If work calls explode in week two, use the reschedule rule. More than 24 hours, we try. Inside 24 hours, the session is charged. That rule protects the professional’s diary and your remaining count.
+If work calls explode in week two, use the reschedule rule. More than 36 hours, we try. Inside 36 hours, the session is charged. That rule protects the professional’s diary and your remaining count.
 
 ## Four weeks, twelve sessions
 
@@ -63,7 +63,7 @@ Write: service, city, area, preferred count (6, 9 or 12), typical window, headco
 
 ## A simple arithmetic check before you pay
 
-Write the number of mornings you can keep. Multiply by the city session rate. Apply 5, 8 or 12 percent only if the count is 6, 9 or 12. If your honest morning count is four, you do not have a two-week programme. You have four drop-ins. Buy four, or buy six knowing two may be charged if you cancel late.
+Write the number of mornings you can keep. Multiply by the city session rate. Apply about 9.5, 14.3 or 23.8 percent only if the count is 6, 9 or 12. If your honest morning count is four, you do not have a two-week programme. You have four drop-ins. Buy four, or buy six knowing two may be charged if you cancel late.
 
 If your honest count is ten, you can buy nine and one drop-in, or buy twelve and risk two unused. Ten is the awkward number. Do not let a percentage pick it for you.
 

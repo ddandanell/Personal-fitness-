@@ -628,5 +628,19 @@
     "width": 1440,
     "height": 960,
     "origin": "generated-illustration"
+  },
+  "/bodywork-recovery": {
+    "src": "/images/editorial/core-bodywork-recovery.webp",
+    "alt": "Indonesian instructor guiding an adult guest through a seated stretch on a mat in a villa living room",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
+  },
+  "/zumba-dance-fitness": {
+    "src": "/images/editorial/core-zumba-dance-fitness.webp",
+    "alt": "Indonesian instructor leading an adult guest through a dance-fitness step in a villa living room",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
   }
 }

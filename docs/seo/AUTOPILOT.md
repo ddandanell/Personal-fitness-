@@ -23,7 +23,7 @@ The daily maintenance task performs actual implementation and publication. It ch
 
 The live commercial goal is B2B villa partners first, then guest conversion. Read docs/seo/WEBSITE_CHANGES_PROMPT.md and src/config/partner.ts before each daily run.
 
-Pitch: put the wellness menu in every villa they manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, the partner earns a commission on every session. No sales meetings and no calendar booking.
+Pitch: put the wellness menu in every villa they manage. Guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, the partner earns a commission on every session. No sales meetings and no calendar booking.
 
 Daily runs must keep this true without inventing founder values:
 

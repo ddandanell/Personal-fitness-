@@ -25,7 +25,7 @@ function cityServiceDescription(slug: string, city: City, price: number | null |
   if (slug === 'personal-training') return `Personal trainer at your ${place} in ${city}${start} for 60 minutes in published clusters. Written quote before payment.`
   if (slug === 'private-yoga') return `Private yoga at your ${place} in ${city}${start}, for one or two people. Written quote before payment.`
   if (slug === 'mat-pilates') return `Private mat Pilates at your ${place} in ${city}${start}. No reformer. Written quote before payment.`
-  if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. Pad work and conditioning, one-to-one. Space check first, then a written quote.`
+  if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. Pad work, one or two guests. Space check first, then a written quote.`
   if (slug === 'guided-meditation') return `Private guided meditation at your ${place} in ${city}${start} for one or two people. A calm, guided hour.`
   return `Private ${slug.replace(/-/g, ' ')} at your ${place} in ${city}${start}. Written quote before payment.`
 }
@@ -43,14 +43,14 @@ const hubs: SeoRecord[] = [
     description: 'Villa managers can offer a personal trainer at home in Bali and Jakarta. Guests book the session and pay us. You earn a commission.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/personal-training', label: 'Personal training at home' },
+      { to: '/personal-training', label: 'Private Strength Training at home' },
       { to: '/private-yoga', label: 'Private yoga at your villa' },
       { to: '/mat-pilates', label: 'Mat Pilates at home' },
       { to: '/mobility-coaching', label: 'Mobility coaching at home' },
       { to: '/boxing-fitness', label: 'Boxing fitness at home' },
       { to: '/guided-meditation', label: 'Guided meditation at home' },
       { to: '/bali', label: 'Private fitness in Bali' },
-      { to: '/jakarta', label: 'Home personal training in Jakarta' },
+      { to: '/jakarta', label: 'Home private strength training in Jakarta' },
       { to: '/resources', label: 'Private fitness guides' },
       { to: '/id', label: 'Personal trainer datang ke rumah' },
     ],
@@ -75,10 +75,10 @@ const hubs: SeoRecord[] = [
     path: '/services',
     primaryKeyword: 'private wellness services at home',
     title: 'Private Fitness Sessions at Home',
-    description: 'Personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at your villa or home in Bali and Jakarta, quoted before you pay.',
+    description: 'Private Strength Training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at your villa or home in Bali and Jakarta, quoted before you pay.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/personal-training', label: 'Personal training' },
+      { to: '/personal-training', label: 'Private Strength Training' },
       { to: '/private-yoga', label: 'Private yoga' },
       { to: '/mat-pilates', label: 'Mat Pilates' },
       { to: '/mobility-coaching', label: 'Mobility coaching' },
@@ -92,10 +92,10 @@ const hubs: SeoRecord[] = [
     path: '/bali',
     primaryKeyword: 'personal trainer Bali',
     title: 'Personal Trainer Bali: Villa & Home Sessions',
-    description: 'In-villa personal training from Rp 900.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel published for Ubud, Sanur and Uluwatu.',
+    description: 'In-villa private strength training from Rp 1.050.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel published for Ubud, Sanur and Uluwatu.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/bali/personal-training', label: 'Personal training in Bali' },
+      { to: '/bali/personal-training', label: 'Private Strength Training in Bali' },
       { to: '/bali/private-yoga', label: 'Private yoga in Bali' },
       { to: '/bali/mat-pilates', label: 'Mat Pilates in Bali' },
       { to: '/bali/boxing-fitness', label: 'Boxing fitness in Bali' },
@@ -110,10 +110,10 @@ const hubs: SeoRecord[] = [
     path: '/jakarta',
     primaryKeyword: 'home personal training Jakarta',
     title: 'Home Personal Trainer Jakarta | PersonalFitness.id',
-    description: 'Home personal training from Rp 950.000 in South and Central Jakarta. Yoga, Pilates, boxing and meditation at your apartment, with access on the quote.',
+    description: 'Home private strength training from Rp 1.050.000 in South and Central Jakarta. Yoga, Pilates, boxing and meditation at your apartment, with access on the quote.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/jakarta/personal-training', label: 'Personal training in Jakarta' },
+      { to: '/jakarta/personal-training', label: 'Private Strength Training in Jakarta' },
       { to: '/jakarta/private-yoga', label: 'Private yoga in Jakarta' },
       { to: '/jakarta/mat-pilates', label: 'Mat Pilates in Jakarta' },
       { to: '/jakarta/boxing-fitness', label: 'Boxing fitness in Jakarta' },
@@ -133,8 +133,8 @@ const hubs: SeoRecord[] = [
     related: [
       { to: '/bali', label: 'Bali private fitness' },
       { to: '/jakarta', label: 'Jakarta home training' },
-      { to: '/bali/personal-training', label: 'Personal training in Bali' },
-      { to: '/jakarta/personal-training', label: 'Personal training in Jakarta' },
+      { to: '/bali/personal-training', label: 'Private Strength Training in Bali' },
+      { to: '/jakarta/personal-training', label: 'Private Strength Training in Jakarta' },
       { to: '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', label: 'Personal trainer in Seminyak' },
       { to: '/pricing', label: 'Session prices' },
       { to: '/contact', label: 'Check availability' },
@@ -145,15 +145,15 @@ const hubs: SeoRecord[] = [
     path: '/pricing',
     primaryKeyword: 'personal trainer Bali prices',
     title: 'Personal Trainer Prices Bali & Jakarta',
-    description: 'Published 60-minute starting prices: personal training Bali Rp 900.000, Jakarta Rp 950.000, plus yoga, Pilates, boxing and meditation.',
+    description: 'Published 60-minute starting prices: private strength training Rp 1.050.000, plus yoga, Pilates, boxing and meditation.',
     group: 'page', lastmod: TODAY,
     related: [
-      { to: '/personal-training', label: 'Personal training rates' },
+      { to: '/personal-training', label: 'Private Strength Training rates' },
       { to: '/boxing-fitness', label: 'Boxing fitness rates' },
       { to: '/guided-meditation', label: 'Guided meditation rates' },
       { to: '/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like', label: 'Compare Bali trainer quotes' },
       { to: '/resources/extra-people-and-pair-pricing-yoga-training-and-boxing', label: 'Extra people and pair pricing' },
-      { to: '/programmes', label: '6, 9 and 12 session programmes' },
+      { to: '/programmes', label: '3, 5 and 10 session programmes' },
     ],
     crumbs: [HOME, { to: '/pricing', label: 'Pricing' }],
   },
@@ -161,7 +161,7 @@ const hubs: SeoRecord[] = [
     path: '/programmes',
     primaryKeyword: 'two three four week fitness programme',
     title: '2, 3 and 4 Week Fitness Programmes',
-    description: 'Prepaid 6, 9 and 12 session blocks for Bali stays and Jakarta residents, with published 5, 8 and 12 percent reductions.',
+    description: 'Prepaid 3, 5 and 10 session blocks for Bali stays and Jakarta residents, with published about 9.5, 14.3 and 23.8 percent reductions.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'Estimate my price' },
@@ -216,7 +216,7 @@ const hubs: SeoRecord[] = [
     path: '/resources',
     primaryKeyword: 'personal trainer Bali guide',
     title: 'Bali & Jakarta Fitness Guides | PersonalFitness.id',
-    description: 'Guides to in-villa personal training, Canggu access, Jakarta home yoga, mobility coaching, boxing, meditation, prices and programmes.',
+    description: 'Guides to in-villa private strength training, Canggu access, Jakarta home yoga, mobility coaching, boxing, meditation, prices and programmes.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates', label: 'Personal trainer in Seminyak' },
@@ -247,7 +247,7 @@ const hubs: SeoRecord[] = [
     path: '/about',
     primaryKeyword: 'PersonalFitness.id private fitness company',
     title: 'About PersonalFitness.id',
-    description: 'A company-managed mobile fitness and wellness service for homes and villas in Bali and Jakarta, not a public coach marketplace.',
+    description: 'A company-managed mobile fitness and wellness service for homes and villas in Bali and Jakarta, a managed private service.',
     group: 'page', lastmod: TODAY,
     related: [{ to: '/professional-standards', label: 'Standards' }, { to: '/contact', label: 'Contact' }, { to: '/villa-hotel-partners', label: 'Villa partners' }],
     crumbs: [HOME, { to: '/about', label: 'About' }],
@@ -274,9 +274,9 @@ const hubs: SeoRecord[] = [
     path: '/villa-hotel-partners',
     primaryKeyword: 'villa wellness partner Bali',
     title: 'Villa Wellness Partner Programme Bali',
-    description: 'Add yoga, personal training and Pilates across the villas you manage. A coordinator sets the week. Guests book by email or WhatsApp. You earn a commission.',
+    description: 'Add yoga, private strength training and Pilates across the villas you manage. A coordinator sets the week. Guests book by email or WhatsApp. You earn a commission.',
     group: 'page', lastmod: '2026-11-16',
-    related: [{ to: '/partner-terms', label: 'Partner terms' }, { to: '/id/mitra-villa', label: 'Program mitra villa' }, { to: '/private-yoga', label: 'Private yoga' }, { to: '/personal-training', label: 'Personal training' }, { to: '/contact', label: 'Guest booking' }],
+    related: [{ to: '/partner-terms', label: 'Partner terms' }, { to: '/id/mitra-villa', label: 'Program mitra villa' }, { to: '/private-yoga', label: 'Private yoga' }, { to: '/personal-training', label: 'Private Strength Training' }, { to: '/contact', label: 'Guest booking' }],
     crumbs: [HOME, { to: '/villa-hotel-partners', label: 'Partners' }],
   },
   {
@@ -301,7 +301,7 @@ const hubs: SeoRecord[] = [
     path: '/id/mitra-villa',
     primaryKeyword: 'program mitra wellness villa bali',
     title: 'Program Mitra Wellness Villa di Bali',
-    description: 'Tambahkan yoga, personal training dan Pilates di setiap villa Anda. Kami kirim coach, tamu pesan lewat WhatsApp, Anda dapat komisi dari setiap sesi.',
+    description: 'Tambahkan yoga, private strength training dan Pilates di setiap villa Anda. Kami kirim coach, tamu pesan lewat WhatsApp, Anda dapat komisi dari setiap sesi.',
     group: 'page', lastmod: '2026-11-16',
     related: [{ to: '/villa-hotel-partners', label: 'English partner page' }, { to: '/partner-terms', label: 'Syarat partner' }, { to: '/id', label: 'Beranda Indonesia' }],
     crumbs: [{ to: '/id', label: 'Bahasa Indonesia' }, { to: '/id/mitra-villa', label: 'Mitra villa' }],
@@ -335,7 +335,7 @@ const hubs: SeoRecord[] = [
     path: '/refunds-rescheduling',
     primaryKeyword: 'personal training cancellation policy',
     title: 'Refunds and Rescheduling',
-    description: '24-hour rule, professional no-show, unused programme sessions and payment routes.',
+    description: '36-hour rule, professional no-show, unused programme sessions and payment routes.',
     group: 'page', lastmod: TODAY, related: [{ to: '/faq', label: 'FAQ' }, { to: '/pricing', label: 'Pricing' }],
     crumbs: [HOME, { to: '/refunds-rescheduling', label: 'Refunds' }],
   },
@@ -360,8 +360,8 @@ const hubs: SeoRecord[] = [
 const serviceKeyword: Record<string, { keyword: string; title: string; description: string }> = {
   'personal-training': {
     keyword: 'personal trainer at home',
-    title: 'Personal Trainer at Home | PersonalFitness.id',
-    description: 'Private 60-minute personal training at your villa or home. From Rp 900.000 in Bali and Rp 950.000 in Jakarta in published clusters. Written quote, then payment.',
+    title: 'Private Strength Training at Home',
+    description: 'Private 60-minute strength training at your villa or home. From Rp 1.050.000 for one session. Packs of 3, 5 and 10 reduce the rate. Written quote, then payment.',
   },
   'private-yoga': {
     keyword: 'private yoga at home',
@@ -396,7 +396,17 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   'guided-meditation': {
     keyword: 'private guided meditation at home',
     title: 'Private Guided Meditation at Home',
-    description: 'A quiet 60-minute guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. Not therapy.',
+    description: 'A quiet 60-minute guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. A calm, guided hour.',
+  },
+  'bodywork-recovery': {
+    keyword: 'bodywork and recovery at the villa',
+    title: 'Bodywork and Recovery at Your Villa',
+    description: 'Assisted stretching, myofascial release and relaxation at your villa or home. Wellness only, from Rp 1.050.000 for 60 minutes.',
+  },
+  'zumba-dance-fitness': {
+    keyword: 'zumba and dance fitness at the villa',
+    title: 'Zumba and Dance Fitness at Your Villa',
+    description: 'High-energy dance fitness at your villa or home, from Rp 1.050.000 for 60 minutes. A fun cardio hour, confirmed in writing.',
   },
 }
 
@@ -404,17 +414,17 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   canggu: {
     keyword: 'personal trainer Canggu',
     title: 'Personal Trainer in Canggu',
-    description: 'In-villa personal training, private yoga, boxing fitness and mat Pilates in Canggu, Berawa, Pererenan and Echo Beach. In-zone travel included.',
+    description: 'In-villa private strength training, private yoga, boxing fitness and mat Pilates in Canggu, Berawa, Pererenan and Echo Beach. In-zone travel included.',
   },
   seminyak: {
     keyword: 'private yoga Seminyak',
     title: 'Private Yoga and Training in Seminyak',
-    description: 'Private yoga, personal training, boxing fitness and mat Pilates at Seminyak and Petitenget villas. In-zone for core sessions.',
+    description: 'Private yoga, private strength training, boxing fitness and mat Pilates at Seminyak and Petitenget villas. In-zone for core sessions.',
   },
   ubud: {
     keyword: 'private yoga Ubud',
     title: 'Private Yoga and Training in Ubud',
-    description: 'Private yoga, mobility and personal training at Ubud villas and houses, with Rp 150.000 travel per visit.',
+    description: 'Private yoga, mobility and private strength training at Ubud villas and houses, with an outer-area travel fee confirmed in the written quote.',
   },
   sanur: {
     keyword: 'personal trainer Sanur',
@@ -424,12 +434,12 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   uluwatu: {
     keyword: 'personal trainer Uluwatu',
     title: 'Personal Trainer in Uluwatu',
-    description: 'In-villa personal training, private yoga, boxing fitness and mat Pilates in Uluwatu, Pecatu and Bingin, with Rp 200.000 Bukit travel.',
+    description: 'In-villa private strength training, private yoga, boxing fitness and mat Pilates in Uluwatu, Pecatu and Bingin, with an outer-area travel fee confirmed in the written quote.',
   },
   'south-jakarta': {
     keyword: 'personal trainer South Jakarta',
     title: 'Personal Trainer in South Jakarta',
-    description: 'Home personal training, yoga, boxing fitness and mat Pilates in Kebayoran, Senopati, Kemang and Cilandak. In-zone for core sessions.',
+    description: 'Home private strength training, yoga, boxing fitness and mat Pilates in Kebayoran, Senopati, Kemang and Cilandak. In-zone for core sessions.',
   },
   'central-jakarta': {
     keyword: 'personal trainer Central Jakarta',
@@ -454,12 +464,12 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   kemang: {
     keyword: 'personal trainer Kemang',
     title: 'Personal Trainer in Kemang',
-    description: 'Home personal training and private yoga in Kemang, South Jakarta. In-zone for core sessions when we can time the visit.',
+    description: 'Home private strength training and private yoga in Kemang, South Jakarta. In-zone for core sessions when we can time the visit.',
   },
   senopati: {
     keyword: 'personal trainer Senopati',
     title: 'Personal Trainer in Senopati',
-    description: 'Home personal training in Senopati apartments, with lobby access on the quote. In-zone South Jakarta.',
+    description: 'Home private strength training in Senopati apartments, with lobby access on the quote. In-zone South Jakarta.',
   },
   scbd: {
     keyword: 'personal trainer SCBD',
@@ -469,7 +479,7 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   kebayoran: {
     keyword: 'personal trainer Kebayoran',
     title: 'Personal Trainer in Kebayoran',
-    description: 'Home personal training in Kebayoran Baru and nearby South Jakarta streets. In-zone when we can time the visit.',
+    description: 'Home private strength training in Kebayoran Baru and nearby South Jakarta streets. In-zone when we can time the visit.',
   },
   cilandak: {
     keyword: 'personal trainer Cilandak',
@@ -479,17 +489,17 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   'pondok-indah': {
     keyword: 'personal trainer Pondok Indah',
     title: 'Personal Trainer in Pondok Indah',
-    description: 'In-home personal training in Pondok Indah, South Jakarta. Estate access on the quote. In-zone when we can time the visit.',
+    description: 'In-home private strength training in Pondok Indah, South Jakarta. Estate access on the quote. In-zone when we can time the visit.',
   },
   kuningan: {
     keyword: 'personal trainer Kuningan Jakarta',
     title: 'Personal Trainer in Kuningan',
-    description: 'Home personal training at Kuningan residences. In-zone South Jakarta with SCBD and Setiabudi streets we can time.',
+    description: 'Home private strength training at Kuningan residences. In-zone South Jakarta with SCBD and Setiabudi streets we can time.',
   },
   menteng: {
     keyword: 'personal trainer Menteng',
     title: 'Personal Trainer in Menteng',
-    description: 'Home personal training and private yoga in Menteng, Central Jakarta. In-zone for core sessions.',
+    description: 'Home private strength training and private yoga in Menteng, Central Jakarta. In-zone for core sessions.',
   },
   gondangdia: {
     keyword: 'personal trainer Gondangdia',
@@ -499,7 +509,7 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   thamrin: {
     keyword: 'personal trainer Thamrin',
     title: 'Personal Trainer in Thamrin',
-    description: 'Home personal training at Thamrin residences and serviced apartments. In-zone Central Jakarta after lobby access is confirmed.',
+    description: 'Home private strength training at Thamrin residences and serviced apartments. In-zone Central Jakarta after lobby access is confirmed.',
   },
   'kelapa-gading': {
     keyword: 'personal trainer Kelapa Gading',
@@ -662,7 +672,7 @@ const GUIDE_TITLES: Record<string, string> = {
   '/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ': 'Mat Pilates Prices: Mat, Reformer, Home',
   '/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained': 'Private Yoga in Bali: Solo, Couples, Groups',
   '/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay': '2, 3 or 4 Week Fitness Programme for Your Stay',
-  '/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session': 'Home Personal Training Jakarta: First Session',
+  '/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session': 'Home Private Strength Training Jakarta: First Session',
   '/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing': 'Private Yoga in a Jakarta Apartment',
   '/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes': 'Personal Trainer in Bali: In-Villa Sessions',
   '/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like': 'Personal Trainer Bali Prices Compared',

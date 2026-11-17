@@ -28,9 +28,9 @@ Permission still applies. Hotel yoga on a public lawn needs written venue permis
 
 ## How the quote moves
 
-In-zone travel for Canggu and Seminyak is inside the Rp 850.000 rate. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000. Ninety minutes add 45 percent of the base. Extra people beyond two add Rp 250.000 each. Jakarta private yoga starts at Rp 900.000 if you also keep a home practice there.
+In-zone travel for Canggu and Seminyak is inside the Rp 850.000 rate. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base. Extra people beyond two add Rp 250.000 each. Jakarta private yoga starts at Rp 900.000 if you also keep a home practice there.
 
-Price it on [pricing](/pricing). Programme discounts apply if you want 6, 9 or 12 sessions. A three-night stay usually wants one or two hours, not a four-week block.
+Price it on [pricing](/pricing). Programme discounts apply if you want 3, 5 or 10 sessions. A three-night stay usually wants one or two hours, not a four-week block.
 
 You can name a teacher preference in WhatsApp. Preference is a preference. The diary still has to be free.
 
@@ -42,7 +42,7 @@ If pain, injury or a recent procedure is in play, get clinical advice first. Do 
 
 ## How to ask for the hour
 
-Message four facts: private yoga, Bali, area, window. Add one or two people. Add beginner or experienced. Add indoor or outdoor with a fallback. Open the [homepage](/) if you still need personal training or Pilates in the same stay.
+Message four facts: private yoga, Bali, area, window. Add one or two people. Add beginner or experienced. Add indoor or outdoor with a fallback. Open the [homepage](/) if you still need private strength training or Pilates in the same stay.
 
 Read [how it works](/how-it-works) if you want the eight steps. The enquiry is not a reservation. The quote is not a confirmation. The confirmation is the only document that should name the teacher and the start time.
 

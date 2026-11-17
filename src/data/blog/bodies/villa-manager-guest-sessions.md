@@ -1,4 +1,4 @@
-Villa managers and hotel hosts can book private fitness for guests without turning the reception desk into a clinic or a marketplace. PersonalFitness.id coordinates personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at properties in published Bali and Jakarta clusters. The commercial pages are [villa and hotel partnerships](/villa-hotel-partners) and [contact](/contact). This article is the investigation layer: what the host sends, what the guest never puts on a public timetable, and how the quote is built.
+Villa managers and hotel hosts can book private fitness for guests without turning the reception desk into a clinic or a marketplace. PersonalFitness.id coordinates private strength training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at properties in published Bali and Jakarta clusters. The commercial pages are [villa and hotel partnerships](/villa-hotel-partners) and [contact](/contact). This article is the investigation layer: what the host sends, what the guest never puts on a public timetable, and how the quote is built.
 
 If you searched how to arrange a personal trainer for villa guests, start with permission and a named session. “Wellness on request” is not a booking. A guest Instagram story is not a briefing.
 
@@ -28,7 +28,7 @@ Photographs are off by default. Many guests and many properties do not want a co
 
 A property can enquire about a repeating guest menu: sunrise yoga two mornings a week, training for one person, meditation once. That still needs supply. Prepaying a [programme](/programmes) is 6, 9 or 12 named visits with a validity window, not an open membership for whoever checks in.
 
-In-zone Canggu and Seminyak include travel on core sessions. Ubud and Sanur add Rp 150.000. Uluwatu adds Rp 200.000. Jakarta buildings need lobby rules on the quote. We do not claim island-wide or city-wide coverage.
+In-zone Canggu and Seminyak include travel on core sessions. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Jakarta buildings need lobby rules on the quote. We do not claim island-wide or city-wide coverage.
 
 The first guest visit is still a paid hour. There is no free intro for a “VIP arrival”. The host can pay the published rate. We will not hide a complimentary hour.
 
@@ -42,7 +42,7 @@ Swimming stays held even if the villa has a pool. Clinical requests stay held.
 
 The quote names the session, people, travel, extras and cancellation. After payment verification, confirmation names the professional, arrival window, access note and preparation list. That is the booking. Put that confirmation with the person who opens the gate.
 
-If the guest checks out early, unused prepaid visits follow the validity window. Inside 24 hours the session is charged unless the quote says otherwise. Professional no-show is not charged. Details sit on [refunds and rescheduling](/refunds-rescheduling).
+If the guest checks out early, unused prepaid visits follow the validity window. Inside 36 hours the session is charged unless the quote says otherwise. Professional no-show is not charged. Details sit on [refunds and rescheduling](/refunds-rescheduling).
 
 ## A checklist a host can actually use
 

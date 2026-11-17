@@ -23,7 +23,9 @@ const mobileGroups = [
   {
     heading: 'Sessions',
     links: [
-      ['/personal-training', 'Personal training'],
+      ['/personal-training', 'Private Strength Training'],
+      ['/bodywork-recovery', 'Bodywork & Recovery'],
+      ['/zumba-dance-fitness', 'Zumba & Dance Fitness'],
       ['/private-yoga', 'Private yoga'],
       ['/mat-pilates', 'Mat Pilates'],
       ['/mobility-coaching', 'Mobility coaching'],
@@ -187,7 +189,9 @@ export default function Layout({ children }: { children?: ReactNode }) {
           </div>
           <div>
             <p className="footer-heading">Sessions</p>
-            <Link to="/personal-training">Personal training</Link>
+            <Link to="/personal-training">Private Strength Training</Link>
+            <Link to="/bodywork-recovery">Bodywork & Recovery</Link>
+            <Link to="/zumba-dance-fitness">Zumba & Dance Fitness</Link>
             <Link to="/private-yoga">Private yoga</Link>
             <Link to="/mat-pilates">Mat Pilates</Link>
             <Link to="/mobility-coaching">Mobility coaching</Link>
@@ -230,7 +234,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
           </div>
         </div>
         <div className="shell footer-bottom">
-          <p>Starting prices: Bali personal training Rp 900.000 · Jakarta Rp 950.000. Outer-zone travel and extra people are quoted on top.</p>
+          <p>Private strength training starts at Rp 1.050.000 for 60 minutes. Session packs reduce that rate. Outer-area travel is confirmed in the written quote.</p>
           <p>WhatsApp {WHATSAPP_DISPLAY}. Email {COMPANY_EMAIL}. Never send payment-card, bank, personal-ID or detailed health information in chat.</p>
         </div>
       </footer>

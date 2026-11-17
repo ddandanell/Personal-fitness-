@@ -4,7 +4,7 @@ If you searched how to book a personal trainer at home, start with city, area, s
 
 ## The five lines that actually help
 
-1. The session: personal training, private yoga, mat Pilates, mobility coaching, boxing fitness or guided meditation. Name one. Do not send “wellness, maybe yoga or boxing”.
+1. The session: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness or guided meditation. Name one. Do not send “wellness, maybe yoga or boxing”.
 2. The city: Bali or Jakarta.
 3. The area: Canggu, Seminyak, Ubud, Sanur, Uluwatu, South Jakarta, Central Jakarta, or another cluster we publish. “Bali” is not an area.
 4. A two-hour window, not a single minute. 07:00–09:00 is usable. 07:00 sharp is a hope.
@@ -28,11 +28,11 @@ Use the [contact](/contact) estimator or the [pricing](/pricing) page to see the
 
 The number on the website is the starting price. The written quote is the payable total. A screenshot of a transfer is not settlement. A “yes” in chat is not confirmation.
 
-In-zone Bali is Canggu and Seminyak. In-zone Jakarta is South and Central Jakarta. If you are in Canggu, the longer access note is [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are in Seminyak or Petitenget, use [personal trainer in Seminyak](/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates). If two of you want to share the hour, read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing) before you promise a second mat. If you are in an apartment, use [home personal training in Jakarta](/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session) or [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing).
+In-zone Bali is Canggu and Seminyak. In-zone Jakarta is South and Central Jakarta. If you are in Canggu, the longer access note is [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates). If you are in Seminyak or Petitenget, use [personal trainer in Seminyak](/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates). If two of you want to share the hour, read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing) before you promise a second mat. If you are in an apartment, use [home private strength training in Jakarta](/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session) or [private yoga in a Jakarta apartment](/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing).
 
 ## Worked examples you can copy
 
-Canggu training: “Personal training, Bali, Canggu Berawa, villa, Saturday 07:00–09:00, one person, beginner returning after a long gap. Indoor living room. Staff can open the side gate.”
+Canggu training: “Private Strength Training, Bali, Canggu Berawa, villa, Saturday 07:00–09:00, one person, beginner returning after a long gap. Indoor living room. Staff can open the side gate.”
 
 Jakarta yoga for two: “Private yoga, Jakarta, South Jakarta Kemang, apartment tower B, weekday 18:00–20:00, two people, mixed levels. Visitor pass at the lobby. Quiet bedroom we can clear.”
 
@@ -52,7 +52,7 @@ If we cannot honour the window, we say so. That is cheaper than a professional s
 
 ## Programmes and first visits
 
-Do not ask for a free intro in the first message. We do not run one. The first session is the published rate. Discounts live on 6, 9 and 12 session [programmes](/programmes) after you know the hour fitted. Mixing six different session types in week one is a bad first message. Pick one hour. Add a block later.
+Do not ask for a free intro in the first message. We do not run one. The first session is the published rate. Discounts live on 3, 5 and 10 session [programmes](/programmes) after you know the hour fitted. Mixing six different session types in week one is a bad first message. Pick one hour. Add a block later.
 
 If you are a villa manager booking for a guest, say so. Include the guest-facing contact, the entrance instruction and whether the guest will be present. Do not put personal session notes on a public reception timetable. Partner enquiries can start on [villa and hotel partnerships](/villa-hotel-partners) and still use the same five-line WhatsApp once the session is named.
 

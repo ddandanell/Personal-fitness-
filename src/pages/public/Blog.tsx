@@ -23,7 +23,7 @@ export function BlogIndex() {
       <StructuredData data={collectionJsonLd(
         'Personal trainer Bali and Jakarta guides',
         '/resources',
-        'Guides to in-villa personal training, Jakarta home sessions, private yoga, boxing fitness, guided meditation, prices and programmes.',
+        'Guides to in-villa private strength training, Jakarta home sessions, private yoga, boxing fitness, guided meditation, prices and programmes.',
         [...blogPosts.map((post) => ({ name: post.title, url: '/resources/' + post.slug })), ...resources.map((item) => ({ name: item.title, url: '/resources/' + item.slug }))],
       )} />
       <PageIntro

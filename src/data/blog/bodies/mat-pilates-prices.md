@@ -12,7 +12,7 @@ A studio private: you travel, you might get a reformer, you pay for exclusive co
 
 A home private mat session: the coach travels, you stay, the floor is yours, there is no machine unless you already own one, which we still will not treat as a reformer service.
 
-Our rate is the last one. Extra people Rp 250.000 in Bali, Rp 275.000 in Jakarta. Travel extra outside in-zone clusters. Ninety minutes plus 45 percent of base.
+Our rate is the last one. Extra people Rp 250.000 in Bali, Rp 250.000 in Jakarta. Travel extra outside in-zone clusters. Ninety minutes plus 45 percent of base.
 
 ## Why reformer and mat should never share a “from” price
 
@@ -41,7 +41,7 @@ If the studio has a machine you love, stay. If the studio is a 40-minute disappo
 
 Demand: mat or reformer, group or private, duration, people, travel, cancellation, named coach, payment path. If the quote says “Pilates” only, it is unfinished.
 
-Our 24-hour cancel rule still applies. Reformer studios often sell packs that expire. Home programmes expire too, but the window is on the quote. Read [refunds](/refunds-rescheduling).
+Our 36-hour cancel rule still applies. Reformer studios often sell packs that expire. Home programmes expire too, but the window is on the quote. Read [refunds](/refunds-rescheduling).
 
 ## First-session price
 
@@ -55,7 +55,7 @@ Estimator: mat Pilates, city, area, people, duration. WhatsApp the result. Open 
 
 Example A. One person, 60 minutes, Canggu living room. Planning estimate: Rp 950.000. No travel. No extra person.
 
-Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.000.000 plus extra person Rp 275.000 equals Rp 1.275.000, plus building access still has to work.
+Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.000.000 plus extra person Rp 250.000 equals Rp 1.275.000, plus building access still has to work.
 
 Example C. One person, 60 minutes, Uluwatu. Bali base Rp 950.000 plus travel Rp 200.000 equals Rp 1.150.000. If you also want 90 minutes, add 45 percent of 950.000 (Rp 427.500) before travel, because travel is per visit, not per minute.
 

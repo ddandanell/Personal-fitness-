@@ -53,7 +53,7 @@ Examples:
 | `/private-yoga` | private yoga at home |
 | `/mat-pilates` | mat pilates at home |
 | `/bali` | personal trainer Bali |
-| `/jakarta` | home personal training Jakarta |
+| `/jakarta` | home private strength training Jakarta |
 | `/bali/canggu` | personal trainer Canggu |
 | `/jakarta/south-jakarta` | personal trainer South Jakarta |
 | `/pricing` | personal trainer Bali prices |

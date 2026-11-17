@@ -34,11 +34,11 @@ The [pricing page](/pricing) uses the same blocks operations uses. Jakarta priva
 
 There is no sunrise premium. There is no view premium. There is no “apartment yoga tax” beyond the published Jakarta rate plus access reality. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs) if you are mixing yoga with training costs. They are different products.
 
-Pay only on the merchant link in the quote. Never send card numbers in WhatsApp. Cancellation: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
+Pay only on the merchant link in the quote. Never send card numbers in WhatsApp. Cancellation: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## Pair yoga versus training for two
 
-Yoga includes the second person. [Personal training](/jakarta/personal-training) does not: Jakarta extra-person fee is Rp 275.000. [Mat Pilates](/jakarta/mat-pilates) bills extra people. [Mobility coaching](/mobility-coaching) bills extra people. If you wanted two people stretching, yoga is usually the cleaner quote. If you wanted two people lifting, training is the cleaner quote. Say which hour you want.
+Yoga includes the second person. [Private Strength Training](/jakarta/personal-training) does not: Jakarta extra-person fee is Rp 250.000. [Mat Pilates](/jakarta/mat-pilates) bills extra people. [Mobility coaching](/mobility-coaching) bills extra people. If you wanted two people stretching, yoga is usually the cleaner quote. If you wanted two people lifting, training is the cleaner quote. Say which hour you want.
 
 Photographs are off by default. Many buildings and many guests do not want a content shoot. Ask early if you do.
 

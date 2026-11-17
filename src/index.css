@@ -517,6 +517,14 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .estimate-lines li { display: flex; justify-content: space-between; gap: 12px; color: #d0d0c9; font-size: .85rem; border-bottom: 1px solid var(--light-line); padding-bottom: 8px; }
 .estimator-result .button-outline { color: var(--paper-light); border-color: var(--light-line); }
 .estimator-result .cluster { margin-top: 18px; }
+.guest-toggle-field { border: 0; margin: 0; padding: 0; min-width: 0; }
+.guest-toggle-field legend { font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+.guest-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.guest-toggle button { min-height: 48px; border: 1px solid var(--line, #c8c4ba); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.guest-toggle button[aria-pressed="true"] { background: var(--ink, #1c1b17); color: var(--paper, #f6f3ec); }
+.wa-handoff { margin: 8px 0 0; }
+.wa-float-stack { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; max-width: min(320px, calc(100vw - 28px)); }
+.wa-float-note { margin: 0; padding: 10px 12px; background: #fff; color: #1c1b17; border-radius: 12px; font-size: .75rem; line-height: 1.35; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
 .estimator-result .muted,
 .estimator-result .small { color: #cecec7; }
 
@@ -554,7 +562,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .contact-warning { margin-bottom: 28px; }
 .hub-image { width: 100%; aspect-ratio: 4 / 4.1; object-fit: cover; background: #d8d7d1; }
 
-.wa-float { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 18px 0 16px; border: 1px solid #128c3e; border-radius: 999px; background: #25d366; color: #fff; box-shadow: 0 10px 28px rgba(18, 140, 62, .28); transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.wa-float { position: static; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 18px 0 16px; border: 1px solid #128c3e; border-radius: 999px; background: #25d366; color: #fff; box-shadow: 0 10px 28px rgba(18, 140, 62, .28); transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
 .wa-float:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 14px 32px rgba(18, 140, 62, .34); }
 .wa-float:active { transform: translateY(0); }
 .wa-float-label { font-size: .82rem; font-weight: 650; letter-spacing: .01em; }
@@ -708,7 +716,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
   .footer-grid > div:not(.footer-brand) a { min-height: 44px; display: flex; align-items: center; font-size: .92rem; }
   .footer-bottom { flex-direction: column; padding-right: 0; padding-bottom: 72px; gap: 12px; }
   .site-footer { padding: 52px 0 calc(28px + env(safe-area-inset-bottom)); }
-  .wa-float { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
+  .wa-float-stack { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
+  .wa-float-note { display: none; }
   input, select, textarea { min-height: 48px; padding: 14px 12px; }
   .office-phone { font-size: 1.45rem; }
   .office-lines { padding-right: 72px; max-width: none; }
@@ -873,7 +882,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .area-article-aside > div { background: var(--paper-light); padding: 28px; margin-top: 25px; border: 1px solid var(--line); }
 .area-article-aside h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; }
 .area-article-aside p { font-size: .86rem; color: var(--muted); }
-.app-shell.is-menu-open .wa-float { visibility: hidden; pointer-events: none; }
+.app-shell.is-menu-open .wa-float-stack { visibility: hidden; pointer-events: none; }
 @media (max-width: 1050px) {
   .partner-calendar { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; border: 0; }
   .partner-calendar > article { border: 1px solid var(--line); }

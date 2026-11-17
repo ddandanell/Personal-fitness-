@@ -19,7 +19,7 @@ You are the implementation agent for PersonalFitness.id. Expand the existing web
 13. Return the staging URL, service/page change manifest, exact list of drafted versus publish-ready offers, price proposal list, unresolved facts, test results and rollback procedure. A complete draft is a valid deliverable when supply or clinical permissions remain unknown; inventing readiness is not. Do not publish until the owner instructs publication and the relevant factual gates pass.
 
 
-## A. Personal training and strength
+## A. Private Strength Training and strength
 
 Qualified trainer; portable equipment or a verified home gym. No clinical treatment claims.
 
@@ -27,16 +27,16 @@ Comparators: S01. All numeric prices below are planning recommendations.
 
 | ID | Offer | Format | Proposed premium price | Wave |
 |---|---|---|---|---|
-| PF-001 | Personal training | 60 min; 1 participant(s) | IDR 900,000 | 1 |
+| PF-001 | Private Strength Training | 60 min; 1 participant(s) | IDR 900,000 | 1 |
 | PF-002 | Beginner strength training | 60 min; 1 participant(s) | IDR 900,000 | 1 |
 | PF-003 | Strength and muscle training | 60 min; 1 participant(s) | IDR 1,000,000 | 2 |
 | PF-004 | Weight management fitness | 60 min; 1 participant(s) | IDR 950,000 | 2 |
-| PF-005 | Low impact personal training | 60 min; 1 participant(s) | IDR 850,000 | 2 |
+| PF-005 | Low impact private strength training | 60 min; 1 participant(s) | IDR 850,000 | 2 |
 | PF-006 | Functional fitness | 60 min; 1 participant(s) | IDR 950,000 | 2 |
 | PF-007 | HIIT and conditioning | 60 min; 1 participant(s) | IDR 950,000 | 2 |
 | PF-008 | Bodyweight and calisthenics | 60 min; 1 participant(s) | IDR 950,000 | 2 |
 | PF-009 | Kettlebell coaching | 60 min; 1 participant(s) | IDR 1,000,000 | 2 |
-| PF-010 | Couples personal training | 60 min; 2 participant(s) | IDR 1,150,000 | 1 |
+| PF-010 | Couples private strength training | 60 min; 2 participant(s) | IDR 1,150,000 | 1 |
 | PF-011 | Small group villa training | 60 min; 6 participant(s) | IDR 2,100,000 | 1 |
 | PF-012 | Exercise assessment and written plan | 90 min; 1 participant(s) | IDR 1,350,000 | 2 |
 
@@ -209,7 +209,7 @@ Comparators: S14, S21. All numeric prices below are planning recommendations.
 
 | ID | Offer | Format | Proposed premium price | Wave |
 |---|---|---|---|---|
-| PF-093 | Prenatal personal training | 60 min; 1 participant(s) | IDR 1,100,000 | 2 |
+| PF-093 | Prenatal private strength training | 60 min; 1 participant(s) | IDR 1,100,000 | 2 |
 | PF-094 | Prenatal yoga | 60 min; 1 participant(s) | IDR 1,000,000 | 2 |
 | PF-095 | Postnatal return to fitness | 60 min; 1 participant(s) | IDR 1,100,000 | 2 |
 | PF-096 | Postnatal mat Pilates | 60 min; 1 participant(s) | IDR 1,100,000 | 2 |
