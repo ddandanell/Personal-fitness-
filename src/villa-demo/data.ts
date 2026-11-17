@@ -1,7 +1,7 @@
 /**
  * Fictional Arunika Houses preview.
  * Photography is Unsplash (licence: https://unsplash.com/license). Trainer names are invented.
- * Session rates are the published Bali prices. Nothing here is a live booking.
+ * Demo prices follow the villa-preview brief. Nothing here is a live booking.
  *
  * Photos: hero-pool 1540541338287, house-lima 1613490493576, cliff-seseh 1571003123894,
  * atelier-uluwatu 1539367628448, garden-berawa 1613977257363, pavilion-echo 1520250497591,
@@ -11,7 +11,30 @@
  */
 
 export const DEMO_TODAY = '2026-11-17'
-export const EXTRA_PERSON_IDR = 250_000
+export const SECOND_GUEST_IDR = 250_000
+export const CONCIERGE_LINE = 'Subject to instructor availability and location confirmation.'
+export const POLICY_LINE = 'Free rescheduling up to 12 hours before your session. Sessions are delivered by vetted instructors.'
+
+export const packs = [
+  { id: 'single', label: 'Single', sessions: 1, perSession: 1_050_000, total: 1_050_000, popular: false },
+  { id: 'pack-3', label: '3-Session Pack', sessions: 3, perSession: 950_000, total: 2_850_000, popular: false },
+  { id: 'pack-5', label: '5-Session Pack', sessions: 5, perSession: 900_000, total: 4_500_000, popular: true },
+  { id: 'pack-10', label: '10-Session Pack', sessions: 10, perSession: 800_000, total: 8_000_000, popular: false },
+] as const
+
+export type PackId = (typeof packs)[number]['id']
+
+export function travelFee(villaSlug: string) {
+  return villaSlug === 'atelier-uluwatu' ? 100_000 : 0
+}
+
+export function quoteTotal(packId: PackId, people: number, villaSlug: string) {
+  const pack = packs.find((item) => item.id === packId) ?? packs[0]
+  const guests = Math.min(2, Math.max(1, people))
+  const perSession = pack.perSession + (guests > 1 ? SECOND_GUEST_IDR : 0)
+  const travel = travelFee(villaSlug)
+  return { pack, guests, perSession, travel, total: perSession * pack.sessions + travel }
+}
 
 export type DemoImage = { src: string; alt: string; width: number; height: number }
 
@@ -30,7 +53,6 @@ export type Service = {
   slug: string
   name: string
   price: number
-  jakartaPrice: number
   duration: number
   included: number
   max: number
@@ -67,6 +89,7 @@ export type Booking = {
   total: number
   status: BookingStatus
   chargeToStay: boolean
+  packId: PackId
   note: string
 }
 
@@ -121,7 +144,7 @@ export const villas: Villa[] = [
     line: 'Six bedrooms and a lawn. The usual house for families who train before the beach.',
     stay: 'Marcus Hale',
     image: img('/images/villademo/garden-berawa.webp', 'A modern white house with a lawn, lounge and swimming pool', 1800, 1200),
-    detail: img('/images/villademo/training.webp', 'A coach guiding an adult through a floor strength exercise', 1600, 1100),
+    detail: img('/images/villademo/training.webp', 'A vetted instructor guiding an adult through a floor strength exercise', 1600, 1100),
   },
   {
     slug: 'pavilion-echo',
@@ -135,66 +158,74 @@ export const villas: Villa[] = [
   },
 ]
 
+const sharedNote = '60 minutes. A second guest is Rp 250.000 a session. ' + CONCIERGE_LINE
+
 export const services: Service[] = [
   {
-    slug: 'personal-training',
-    name: 'Personal training',
-    price: 900_000,
-    jakartaPrice: 950_000,
+    slug: 'private-strength-training',
+    name: 'Private Strength Training',
+    price: 1_050_000,
     duration: 60,
     included: 1,
     max: 2,
-    line: 'Strength, a return to training, or a routine kept for the length of the stay.',
-    note: 'One person is included. A second person is Rp 250.000. The coach brings ordinary portable kit.',
-    image: img('/images/villademo/training.webp', 'A coach guiding an adult through a floor strength exercise', 1600, 1100),
-  },
-  {
-    slug: 'mat-pilates',
-    name: 'Mat Pilates',
-    price: 950_000,
-    jakartaPrice: 1_000_000,
-    duration: 60,
-    included: 1,
-    max: 4,
-    line: 'Mat work for control and strength. No reformer, so a clear floor is enough.',
-    note: 'One person is included. Each extra person, up to four, is Rp 250.000.',
-    image: img('/images/villademo/pilates.webp', 'Two adults practising mat Pilates on the floor of a quiet room', 1600, 1100),
+    line: 'Keep a strength routine at the house, on the guest’s terms.',
+    note: sharedNote,
+    image: img('/images/villademo/training.webp', 'A vetted instructor guiding an adult through a floor strength exercise', 1600, 1100),
   },
   {
     slug: 'private-yoga',
     name: 'Private yoga',
-    price: 850_000,
-    jakartaPrice: 900_000,
+    price: 1_050_000,
     duration: 60,
-    included: 2,
-    max: 6,
-    line: 'A private practice for one or two people, set to the energy of the morning.',
-    note: 'Two people are included. Each further person, up to six, is Rp 250.000 when the floor allows.',
+    included: 1,
+    max: 2,
+    line: 'Your space. Your pace. Your practice.',
+    note: sharedNote,
     image: img('/images/villademo/yoga.webp', 'A person holding a low lunge on a mat at sunset by the sea', 1600, 1100),
   },
   {
-    slug: 'mobility-coaching',
-    name: 'Mobility and recovery',
-    price: 850_000,
-    jakartaPrice: 900_000,
+    slug: 'pilates-mobility',
+    name: 'Pilates & mobility',
+    price: 1_050_000,
     duration: 60,
     included: 1,
-    max: 1,
-    line: 'Assisted stretching and non-clinical mobility after travel or a long swim.',
-    note: 'One person. This is not physiotherapy and it is not a massage treatment.',
+    max: 2,
+    line: 'Move with focus and control. A clear floor is enough.',
+    note: sharedNote,
+    image: img('/images/villademo/pilates.webp', 'Two adults practising mat work on the floor of a quiet room', 1600, 1100),
+  },
+  {
+    slug: 'bodywork-recovery',
+    name: 'Bodywork & Recovery',
+    price: 1_050_000,
+    duration: 60,
+    included: 1,
+    max: 2,
+    line: 'An unhurried hour to settle after travel or a long swim.',
+    note: sharedNote,
     image: img('/images/villademo/mobility.webp', 'An adult folding forward on a mat in a quiet studio', 1600, 1100),
   },
   {
-    slug: 'guided-meditation',
-    name: 'Guided meditation',
-    price: 800_000,
-    jakartaPrice: 850_000,
+    slug: 'zumba-dance-fitness',
+    name: 'Zumba & Dance Fitness',
+    price: 1_050_000,
     duration: 60,
-    included: 2,
+    included: 1,
     max: 2,
-    line: 'A quiet hour on the terrace. It is a sit, not therapy.',
-    note: 'One or two people are included. It is not a clinical session.',
-    image: img('/images/villademo/meditation.webp', 'A person seated in meditation on a wooden deck in warm light', 1400, 962),
+    line: 'An easy, social hour. The music stays inside the house.',
+    note: sharedNote,
+    image: img('/images/villademo/zumba.webp', 'Adults moving together in a bright dance-fitness class', 1400, 1000),
+  },
+  {
+    slug: 'guided-meditation',
+    name: 'A quieter hour',
+    price: 1_050_000,
+    duration: 60,
+    included: 1,
+    max: 2,
+    line: 'A calm sit on the terrace, paced to the guest.',
+    note: sharedNote,
+    image: img('/images/villademo/meditation.webp', 'A person seated quietly on a wooden deck in warm light', 1400, 962),
   },
 ]
 
@@ -202,77 +233,77 @@ export const trainers: Trainer[] = [
   {
     slug: 'amara-cole',
     name: 'Amara Cole',
-    role: 'Yoga and meditation',
+    role: 'Yoga and quiet hours',
     languages: ['English', 'Indonesian'],
-    specialties: ['Sunrise yoga', 'Restorative evenings', 'Two-person practice'],
+    specialties: ['Private yoga', 'A quieter hour', 'Sunrise practice'],
     rating: 4.9,
     sampleSessions: 128,
-    bio: 'Amara keeps the hour quiet and specific: a short check of the terrace, then a practice that matches the heat and how the guest slept. She is usually the 7:00 across the rice houses and the cliff.',
+    bio: 'Amara keeps the hour quiet and specific: a short look at the terrace, then a practice that matches the heat and the pace the guest wants. She is often the 7:00 across the rice houses and the cliff.',
     slots: ['06:30', '07:00', '08:00', '17:30'],
-    photo: img('/images/villademo/portrait-ayu.webp', 'Portrait of Amara Cole, a sample yoga teacher in this preview', 900, 1120),
+    photo: img('/images/villademo/portrait-ayu.webp', 'Portrait of Amara Cole, a sample instructor in this preview', 900, 1120),
     services: ['private-yoga', 'guided-meditation'],
   },
   {
     slug: 'julian-hart',
     name: 'Julian Hart',
-    role: 'Strength',
+    role: 'Private Strength Training',
     languages: ['English', 'German'],
-    specialties: ['Personal training', 'Return to training', 'Hotel-to-villa routines'],
+    specialties: ['Private Strength Training', 'Return to a routine', 'Pairs'],
     rating: 4.8,
     sampleSessions: 96,
-    bio: 'Julian runs practical strength hours with bands, a mat and whatever the house gym already has. He is the usual trainer for Garden House on Monday, Wednesday and Friday.',
+    bio: 'Julian runs practical strength hours with bands, a mat and whatever the house already has. He is the usual instructor for Garden House on Monday, Wednesday and Friday.',
     slots: ['06:30', '08:00', '08:30', '16:00'],
-    photo: img('/images/villademo/portrait-made.webp', 'Portrait of Julian Hart, a sample strength coach in this preview', 900, 1120),
-    services: ['personal-training', 'mobility-coaching'],
+    photo: img('/images/villademo/portrait-made.webp', 'Portrait of Julian Hart, a sample instructor in this preview', 900, 1120),
+    services: ['private-strength-training', 'zumba-dance-fitness'],
   },
   {
     slug: 'clara-voss',
     name: 'Clara Voss',
-    role: 'Mat Pilates',
+    role: 'Pilates and dance fitness',
     languages: ['English', 'French'],
-    specialties: ['Mat Pilates', 'Post-travel stiffness', 'Pairs'],
+    specialties: ['Pilates & mobility', 'Zumba & Dance Fitness', 'Pairs'],
     rating: 5,
     sampleSessions: 74,
-    bio: 'Clara teaches mat Pilates in living rooms and on covered decks. She asks for a clear rectangle of floor and prefers the hour before the house wakes fully.',
+    bio: 'Clara teaches Pilates and dance fitness in living rooms and on covered decks. She asks for a clear rectangle of floor and prefers the hour before the house wakes fully.',
     slots: ['07:30', '09:00', '09:30', '16:30'],
-    photo: img('/images/villademo/portrait-sari.webp', 'Portrait of Clara Voss, a sample Pilates teacher in this preview', 900, 1120),
-    services: ['mat-pilates', 'mobility-coaching'],
+    photo: img('/images/villademo/portrait-sari.webp', 'Portrait of Clara Voss, a sample instructor in this preview', 900, 1120),
+    services: ['pilates-mobility', 'zumba-dance-fitness'],
   },
   {
     slug: 'michael-tan',
     name: 'Michael Tan',
-    role: 'Mobility and quiet hours',
+    role: 'Bodywork & Recovery',
     languages: ['English', 'Indonesian'],
-    specialties: ['Mobility', 'Guided meditation', 'Single-guest recovery'],
+    specialties: ['Bodywork & Recovery', 'A quieter hour', 'After-travel hours'],
     rating: 4.7,
     sampleSessions: 81,
-    bio: 'Michael takes the slower hours: hips after a flight, a short mobility block, or a guided sit when the house wants the evening to land. One guest at a time for mobility.',
+    bio: 'Michael takes the slower hours: an unhurried recovery block after a flight, or a quiet sit when the house wants the evening to land.',
     slots: ['08:00', '10:00', '17:00', '18:00'],
-    photo: img('/images/villademo/portrait-johan.webp', 'Portrait of Michael Tan, a sample mobility coach in this preview', 900, 1120),
-    services: ['mobility-coaching', 'guided-meditation'],
+    photo: img('/images/villademo/portrait-johan.webp', 'Portrait of Michael Tan, a sample instructor in this preview', 900, 1120),
+    services: ['bodywork-recovery', 'guided-meditation'],
   },
 ]
 
 const completed: Booking[] = [
-  booking('ARK-1802', 'garden-berawa', 'Noah Berg', 'personal-training', 'julian-hart', '2026-11-02', '08:00', 1, 'completed'),
+  booking('ARK-1802', 'garden-berawa', 'Noah Berg', 'private-strength-training', 'julian-hart', '2026-11-02', '08:00', 1, 'completed'),
   booking('ARK-1808', 'house-lima', 'The Patel stay', 'private-yoga', 'amara-cole', '2026-11-03', '07:00', 2, 'completed'),
-  booking('ARK-1814', 'pavilion-echo', 'Mina Cho', 'mat-pilates', 'clara-voss', '2026-11-04', '09:00', 1, 'completed'),
+  booking('ARK-1814', 'pavilion-echo', 'Mina Cho', 'pilates-mobility', 'clara-voss', '2026-11-04', '09:00', 1, 'completed'),
   booking('ARK-1819', 'cliff-seseh', 'Helen Ortiz', 'guided-meditation', 'amara-cole', '2026-11-05', '17:30', 2, 'completed'),
-  booking('ARK-1826', 'house-lima', 'Chris and Anna', 'personal-training', 'julian-hart', '2026-11-06', '08:00', 2, 'completed'),
+  booking('ARK-1826', 'house-lima', 'Chris and Anna', 'private-strength-training', 'julian-hart', '2026-11-06', '08:00', 2, 'completed'),
   booking('ARK-1831', 'atelier-uluwatu', 'The Laurent stay', 'private-yoga', 'amara-cole', '2026-11-08', '07:00', 2, 'completed'),
-  booking('ARK-1838', 'garden-berawa', 'Omar Haddad', 'mobility-coaching', 'michael-tan', '2026-11-09', '10:00', 1, 'completed'),
-  booking('ARK-1844', 'pavilion-echo', 'Sophie Klein', 'private-yoga', 'amara-cole', '2026-11-11', '07:00', 2, 'completed'),
-  booking('ARK-1850', 'cliff-seseh', 'The Okonkwo stay', 'mat-pilates', 'clara-voss', '2026-11-12', '09:00', 2, 'completed'),
+  booking('ARK-1838', 'garden-berawa', 'Omar Haddad', 'bodywork-recovery', 'michael-tan', '2026-11-09', '10:00', 1, 'completed'),
+  booking('ARK-1844', 'pavilion-echo', 'Sophie Klein', 'zumba-dance-fitness', 'clara-voss', '2026-11-11', '07:00', 2, 'completed'),
+  booking('ARK-1850', 'cliff-seseh', 'The Okonkwo stay', 'pilates-mobility', 'clara-voss', '2026-11-12', '09:00', 2, 'completed'),
   booking('ARK-1856', 'house-lima', 'Elena Voss', 'guided-meditation', 'michael-tan', '2026-11-14', '17:00', 2, 'completed'),
-  booking('ARK-1862', 'garden-berawa', 'Marcus Hale', 'personal-training', 'julian-hart', '2026-11-15', '08:30', 1, 'completed'),
-  booking('ARK-1868', 'atelier-uluwatu', 'Priya Shah', 'mobility-coaching', 'michael-tan', '2026-11-16', '08:00', 1, 'completed'),
+  booking('ARK-1862', 'garden-berawa', 'Marcus Hale', 'private-strength-training', 'julian-hart', '2026-11-15', '08:30', 1, 'completed'),
+  booking('ARK-1868', 'atelier-uluwatu', 'Priya Shah', 'bodywork-recovery', 'michael-tan', '2026-11-16', '08:00', 1, 'completed'),
 ]
 
 export const seedBookings: Booking[] = [
   ...completed,
   booking('ARK-1904', 'house-lima', 'Elena Voss', 'private-yoga', 'amara-cole', '2026-11-18', '07:00', 2, 'requested', 'First morning. Terrace if the light is soft.'),
-  booking('ARK-1905', 'garden-berawa', 'Marcus Hale', 'personal-training', 'julian-hart', '2026-11-18', '08:30', 1, 'confirmed'),
-  booking('ARK-1911', 'cliff-seseh', 'The Okonkwo stay', 'mat-pilates', 'clara-voss', '2026-11-19', '09:00', 2, 'requested'),
+  booking('ARK-1905', 'garden-berawa', 'Marcus Hale', 'private-strength-training', 'julian-hart', '2026-11-18', '08:30', 1, 'confirmed'),
+  booking('ARK-1911', 'cliff-seseh', 'The Okonkwo stay', 'pilates-mobility', 'clara-voss', '2026-11-19', '09:00', 2, 'requested'),
   booking('ARK-1918', 'atelier-uluwatu', 'The Laurent stay', 'private-yoga', 'amara-cole', '2026-11-20', '07:00', 2, 'confirmed'),
 ]
 
@@ -289,7 +320,7 @@ export const seedSchedules: Schedule[] = [
   {
     id: 'SCH-08',
     name: 'Strength block',
-    service: 'personal-training',
+    service: 'private-strength-training',
     trainer: 'julian-hart',
     time: '08:00',
     days: ['Mon', 'Wed', 'Fri'],
@@ -313,15 +344,7 @@ function booking(
   status: BookingStatus,
   note = '',
 ): Booking {
-  return { id, villa, guest, service, trainer, date, time, people, total: sessionTotal(service, people), status, chargeToStay: true, note }
-}
-
-export function sessionTotal(serviceSlug: string, people: number) {
-  const service = getService(serviceSlug)
-  if (!service) return 0
-  const count = Math.min(service.max, Math.max(1, people))
-  const extra = Math.max(0, count - service.included)
-  return service.price + extra * EXTRA_PERSON_IDR
+  return { id, villa, guest, service, trainer, date, time, people, total: quoteTotal('single', people, villa).total, status, chargeToStay: true, packId: 'single', note }
 }
 
 export function getVilla(slug: string | undefined) {
@@ -371,11 +394,11 @@ export function villaDemoPage(pathname: string) {
   if (rest[0] === 'stay') {
     const villa = getVilla(rest[1]) ?? villas[0]
     title = `${villa.name} in-villa wellness`
-    description = `${villa.name} in ${villa.area}. Private yoga, mat Pilates and personal training requested from the room and charged to the stay.`
+    description = `${villa.name} in ${villa.area}. Private strength training, yoga, Pilates, bodywork and dance fitness, requested from the room.`
     image = villa.image
   } else if (rest[0] === 'trainers') {
     const trainer = getTrainer(rest[1]) ?? trainers[0]
-    title = `${trainer.name}, sample trainer`
+    title = `${trainer.name}, sample instructor`
     description = `${trainer.name} is a fictional trainer in the Arunika preview. ${trainer.role}. ${trainer.languages.join(' and ')}.`
     image = trainer.photo
   } else if (rest[0] === 'book') {
