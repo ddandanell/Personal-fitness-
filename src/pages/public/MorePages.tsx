@@ -572,7 +572,7 @@ export function ContactPage() {
           <div className="enquiry-warning contact-warning">
             <div>
               <strong>Keep card numbers, ID photos and medical files out of this message.</strong>
-              <p>Area, window, headcount and a one-line goal are enough. Screening and payment use separate channels.</p>
+              <p>Area, window, headcount and a one-line goal are enough. Payment details are shared in your written quote.</p>
             </div>
           </div>
           <QuoteEstimator />
@@ -612,9 +612,9 @@ export function AboutPage() {
           <h2>Where we work</h2>
           <p>Bali in-zone is Canggu and Seminyak. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
           <h2>What we focus on</h2>
-          <p>Six live sessions: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
+          <p>Eight live sessions: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness, guided meditation, bodywork and recovery, and Zumba and dance fitness. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
           <h2>Villa managers</h2>
-          <p>The main growth channel is now villas: put a wellness menu in every property you manage, guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, you earn a commission on every session. There are no sales meetings and no calendar booking. Read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
+          <p>These pages are for the person booking a session. Villa managers who want a menu for the properties they look after can read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -683,7 +683,7 @@ const legalCopy = {
     cta: 'Ask about a booking',
     blocks: [
       ...cancellationRules.map(([k, v]) => [k, v] as [string, string]),
-      ['Payment route', 'Refunds, if due, are returned to the original payment method where applicable. We will not ask you to message a card number to “speed it up”.'],
+      ['Refunds', 'Refunds, if due, are returned to the original payment method where applicable. We will not ask you to message a card number to “speed it up”.'],
     ],
   },
   safety: {

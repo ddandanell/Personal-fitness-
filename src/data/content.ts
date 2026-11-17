@@ -132,7 +132,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/blog': ['Blog', 'Personal trainer Bali and Jakarta guides, private yoga, mat Pilates, prices and programmes.'],
   '/privacy': ['Privacy Notice', 'What this website stores, what WhatsApp is for, and what never belongs in chat.'],
   '/terms': ['Service Terms', 'Scope, quotes, payment, liability and the line between fitness and healthcare.'],
-  '/refunds-rescheduling': ['Refunds and Rescheduling', '36-hour rule, professional no-show, programmes and payment routes.'],
+  '/refunds-rescheduling': ['Refunds and Rescheduling', '36-hour rule, professional no-show, unused programme sessions and refunds to the original payment method.'],
   '/safety': ['Session Safety', 'Screening limits, emergencies, children and when we stop a session.'],
   '/editorial-policy': ['Editorial Policy', 'How pages are written, reviewed and corrected.'],
   '/nutrition-consultation': ['Nutrition Consultation', 'Held service. Information only until a qualified scope exists.'],

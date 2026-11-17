@@ -30,7 +30,6 @@ export default function IndonesianHome() {
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">Lihat harga</Link>
-              <Link to="/id/mitra-villa" className="button button-outline-light">Untuk pengelola villa</Link>
             </div>
             <p className="hero-micro">Kutipan tertulis sebelum Anda bayar. WhatsApp {WHATSAPP_DISPLAY}.</p>
           </div>
@@ -41,19 +40,20 @@ export default function IndonesianHome() {
         <div className="shell hero-facts">
           <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
           <div><strong>{formatIdr(900_000)}</strong><span>Paket 5 sesi, per sesi.</span></div>
-          <div><strong>Enam sesi</strong><span>Training, yoga, Pilates, mobilitas, boxing, meditasi.</span></div>
+          <div><strong>Delapan sesi</strong><span>Training, yoga, Pilates, mobilitas, boxing, bodywork, dance, meditasi.</span></div>
         </div>
       </section>
 
       <section className="section" lang="id">
         <div className="shell split-feature">
           <div>
-            <Eyebrow>Untuk portofolio</Eyebrow>
-            <h2>Ritme mingguan di banyak villa, diurus koordinator.</h2>
-            <p className="large-copy">Atur sesi berbeda di hari berbeda: yoga Senin, private strength training Rabu, Pilates Jumat, masing-masing di villa tamu. Tim Anda tidak memegang jadwal. Koordinator mencocokkan profesional, mengecek akses, dan mengirim harga tertulis.</p>
+            <Eyebrow>Untuk jam Anda</Eyebrow>
+            <h2>Anda berlatih di villa, rumah, atau hotel, dengan instruktur yang sudah diseleksi.</h2>
+            <p className="large-copy">Jamnya privat: strength training, yoga, Pilates, mobilitas, boxing, bodywork, dance fitness, atau meditasi. Anda mendapat sesi yang selesai, bukan paket kelas atau diagnosis klinis.</p>
+            <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia.</p>
           </div>
           <ul className="check-list large-list">
-            {['Koordinator tetap untuk villa Anda', 'Profesional yang sudah diseleksi, namanya di kutipan', 'Tamu memesan lewat email atau WhatsApp', `Email ${COMPANY_EMAIL}`, 'Anda mendapat komisi dari sesi yang dibayar'].map((item) => (
+            {['Instruktur yang sudah diseleksi, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`, 'Kantor Denpasar adalah administrasi, bukan studio'].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -62,7 +62,7 @@ export default function IndonesianHome() {
 
       <section className="section section-light" lang="id">
         <div className="shell">
-          <SectionTitle eyebrow="Menu tamu" title="Enam sesi yang bisa Anda tawarkan." copy="Training, yoga, Pilates, mobilitas, boxing, dan meditasi di villa. Yoga dan meditasi termasuk dua orang jika lantai muat. Boxing satu orang. Orang tambahan, 90 menit, dan perjalanan luar zona ditambahkan pada harga mulai." action={<TextLink to="/services">Semua sesi</TextLink>} />
+          <SectionTitle eyebrow="Sesi" title="Sesi privat di villa, rumah, atau hotel Anda." copy="Training, yoga, Pilates, mobilitas, boxing, bodywork, dance fitness, dan meditasi. Yoga dan meditasi termasuk dua orang jika lantai muat. Orang kedua menambah Rp 250.000 per sesi jika tarif untuk satu orang." action={<TextLink to="/services">Semua sesi</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
@@ -113,6 +113,19 @@ export default function IndonesianHome() {
             </details>
           ))}
           <TextLink to="/faq">Pertanyaan dalam bahasa Inggris</TextLink>
+        </div>
+      </section>
+
+      <section className="section-compact" lang="id">
+        <div className="shell split-feature">
+          <div>
+            <Eyebrow>Pengelola villa</Eyebrow>
+            <h2>Mengelola villa? Ada halaman partner terpisah.</h2>
+            <p>Sesi di situs ini untuk orang yang berlatih. Pengelola villa dapat membaca syarat partner di halaman mereka sendiri.</p>
+          </div>
+          <div>
+            <Link to="/id/mitra-villa" className="button button-outline">Untuk pengelola villa<ArrowUpRight size={16} /></Link>
+          </div>
         </div>
       </section>
 

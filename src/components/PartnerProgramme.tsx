@@ -94,7 +94,7 @@ const copy = {
   id: {
     eyebrow: 'Untuk pengelola villa',
     h1: 'Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.',
-    sub: `Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di setiap villa yang Anda kelola. Koordinator mengatur mingguannya, coach yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
+    sub: `Dibangun untuk pengelola villa dan tim hospitality. Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di menu villa yang Anda kelola. Koordinator dapat mengatur minggu, tergantung ketersediaan instruktur. Instruktur yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
     primary: 'Bicara dengan kami',
     secondary: 'Unduh menu partner (PDF)',
     switch: 'English',
@@ -115,7 +115,7 @@ const copy = {
       'Koordinator tetap untuk villa Anda',
       'Kartu menu cetak untuk setiap villa',
       'Pemesanan lewat email atau WhatsApp, dengan kode partner Anda',
-      'Ritme mingguan di seluruh portofolio',
+      'Ritme mingguan yang bisa Anda tawarkan ke tamu',
       'Laporan bulanan sederhana dari tim kami',
       'Pilot 30 hari di 1–2 villa dulu',
     ],
@@ -132,7 +132,7 @@ const copy = {
       ['Perlu kontrak?', 'Hanya syarat partner singkat kami.'],
       ['Kalau coach berhalangan?', 'Kami langsung kabari tamu dan tawarkan waktu baru atau pengembalian dana penuh.'],
       ['Privasi tamu?', 'Tim Anda hanya menerima jadwal dan villa. Catatan kesehatan tamu hanya untuk coach.'],
-      ['Asuransi dan tanggung jawab?', 'Tanyakan kepada kami, kami kirim penjelasan tertulis.'],
+      ['Asuransi dan tanggung jawab?', 'Kutipan tertulis mencakup sesi. Kami tidak menerbitkan catatan asuransi.'],
       ['Area mana saja?', 'Canggu dan Seminyak termasuk; Ubud, Sanur, Uluwatu dengan biaya perjalanan; area lain bisa ditanyakan.'],
     ] as Array<[string, string]>,
     labels: {

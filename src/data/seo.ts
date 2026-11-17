@@ -335,7 +335,7 @@ const hubs: SeoRecord[] = [
     path: '/refunds-rescheduling',
     primaryKeyword: 'personal training cancellation policy',
     title: 'Refunds and Rescheduling',
-    description: '36-hour rule, professional no-show, unused programme sessions and payment routes.',
+    description: '36-hour rule, professional no-show, unused programme sessions and refunds to the original payment method.',
     group: 'page', lastmod: TODAY, related: [{ to: '/faq', label: 'FAQ' }, { to: '/pricing', label: 'Pricing' }],
     crumbs: [HOME, { to: '/refunds-rescheduling', label: 'Refunds' }],
   },
