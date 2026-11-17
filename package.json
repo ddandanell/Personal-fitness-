@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-partner-assets.mjs && node scripts/generate-villa-cards.mjs && tsc -b && vite build && node scripts/prerender.mjs",
+    "build": "node scripts/generate-partner-assets.mjs && tsc -b && vite build && node scripts/prerender.mjs",
     "check:urls": "node scripts/check-urls.mjs",
     "lint": "eslint .",
     "preview": "node scripts/serve-static.mjs",
