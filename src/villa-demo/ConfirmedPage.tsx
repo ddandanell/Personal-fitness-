@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router'
 import { formatIdr } from '@/lib/money'
-import { formatDay, getService, getTrainer, getVilla, seedBookings, type Booking } from './data'
+import { POLICY_LINE, formatDay, getService, getTrainer, getVilla, packs, seedBookings, type Booking } from './data'
 import { DemoLink } from './shell'
 
 export default function ConfirmedPage() {
@@ -23,9 +23,11 @@ export default function ConfirmedPage() {
         <div><span>Session</span><b>{service?.name} · {service?.duration} min</b></div>
         <div><span>When</span><b>{formatDay(booking.date)} · {booking.time}</b></div>
         <div><span>People</span><b>{booking.people}</b></div>
-        <div><span>Trainer</span><b>{trainer?.name}</b></div>
-        <div><span>Stay charge</span><b>{booking.chargeToStay ? formatIdr(booking.total) : 'To be quoted'}</b></div>
+        <div><span>Instructor</span><b>{trainer?.name}</b></div>
+        <div><span>Rate</span><b>{packs.find((item) => item.id === booking.packId)?.label ?? 'Single'}</b></div>
+        <div><span>Stay charge</span><b>{booking.chargeToStay ? formatIdr(booking.total) : 'To be confirmed'}</b></div>
       </div>
+      <p className="quiet">{POLICY_LINE}</p>
       {booking.note && <p className="quiet">Note: {booking.note}</p>}
       <div className="cluster" style={{ marginTop: 22 }}>
         <DemoLink to={`/stay/${villa?.slug ?? 'house-lima'}`} className="btn">Back to the house</DemoLink>

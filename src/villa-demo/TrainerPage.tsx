@@ -10,7 +10,7 @@ export default function TrainerPage() {
   if (!trainer) {
     return (
       <section className="section wrap">
-        <h1>This trainer is not in the preview.</h1>
+        <h1>This instructor is not in the preview.</h1>
         <DemoLink to={`/stay/${villa.slug}`} className="text-link">Back to the house</DemoLink>
       </section>
     )
@@ -32,7 +32,7 @@ export default function TrainerPage() {
           <div><span>Sample score</span><b>{trainer.rating.toFixed(1)} from {trainer.sampleSessions} preview hours</b></div>
           <div><span>Specialties</span><b>{trainer.specialties.join(' · ')}</b></div>
         </div>
-        <p className="quiet">Sample availability this week. A held hour is confirmed only after the written quote.</p>
+        <p className="quiet">Sample availability this week. Subject to instructor availability and location confirmation.</p>
         <div className="slot-row" style={{ margin: '12px 0 22px' }}>
           {trainer.slots.map((slot) => <span className="chip" key={slot}>{slot}</span>)}
         </div>

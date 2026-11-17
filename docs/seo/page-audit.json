@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T14:48:02.694Z",
+  "generatedAt": "2026-11-17T14:52:13.458Z",
   "pages": [
     {
       "path": "/",
@@ -811,7 +811,7 @@
     },
     {
       "path": "/villademo",
-      "mainWords": 286,
+      "mainWords": 326,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo",
       "localMinimum": false,
@@ -819,7 +819,7 @@
     },
     {
       "path": "/villademo/book",
-      "mainWords": 139,
+      "mainWords": 171,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/book",
       "localMinimum": false,
@@ -827,7 +827,7 @@
     },
     {
       "path": "/villademo/card",
-      "mainWords": 70,
+      "mainWords": 323,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card",
       "localMinimum": false,
@@ -835,7 +835,7 @@
     },
     {
       "path": "/villademo/card/atelier-uluwatu",
-      "mainWords": 70,
+      "mainWords": 334,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card/atelier-uluwatu",
       "localMinimum": false,
@@ -843,7 +843,7 @@
     },
     {
       "path": "/villademo/card/cliff-seseh",
-      "mainWords": 70,
+      "mainWords": 323,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card/cliff-seseh",
       "localMinimum": false,
@@ -851,7 +851,7 @@
     },
     {
       "path": "/villademo/card/garden-berawa",
-      "mainWords": 70,
+      "mainWords": 323,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card/garden-berawa",
       "localMinimum": false,
@@ -859,7 +859,7 @@
     },
     {
       "path": "/villademo/card/house-lima",
-      "mainWords": 70,
+      "mainWords": 323,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card/house-lima",
       "localMinimum": false,
@@ -867,7 +867,7 @@
     },
     {
       "path": "/villademo/card/pavilion-echo",
-      "mainWords": 69,
+      "mainWords": 322,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/card/pavilion-echo",
       "localMinimum": false,
@@ -875,7 +875,7 @@
     },
     {
       "path": "/villademo/confirmed",
-      "mainWords": 67,
+      "mainWords": 84,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/confirmed",
       "localMinimum": false,
@@ -891,7 +891,7 @@
     },
     {
       "path": "/villademo/desk/book",
-      "mainWords": 74,
+      "mainWords": 128,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/desk/book",
       "localMinimum": false,
@@ -899,7 +899,7 @@
     },
     {
       "path": "/villademo/desk/roster",
-      "mainWords": 83,
+      "mainWords": 86,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/desk/roster",
       "localMinimum": false,
@@ -907,7 +907,7 @@
     },
     {
       "path": "/villademo/desk/schedules",
-      "mainWords": 85,
+      "mainWords": 88,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/desk/schedules",
       "localMinimum": false,
@@ -915,7 +915,7 @@
     },
     {
       "path": "/villademo/stay/atelier-uluwatu",
-      "mainWords": 308,
+      "mainWords": 380,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/stay/atelier-uluwatu",
       "localMinimum": false,
@@ -923,7 +923,7 @@
     },
     {
       "path": "/villademo/stay/cliff-seseh",
-      "mainWords": 305,
+      "mainWords": 363,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/stay/cliff-seseh",
       "localMinimum": false,
@@ -931,7 +931,7 @@
     },
     {
       "path": "/villademo/stay/garden-berawa",
-      "mainWords": 307,
+      "mainWords": 365,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/stay/garden-berawa",
       "localMinimum": false,
@@ -939,7 +939,7 @@
     },
     {
       "path": "/villademo/stay/house-lima",
-      "mainWords": 308,
+      "mainWords": 366,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/stay/house-lima",
       "localMinimum": false,
@@ -947,7 +947,7 @@
     },
     {
       "path": "/villademo/stay/pavilion-echo",
-      "mainWords": 305,
+      "mainWords": 363,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/stay/pavilion-echo",
       "localMinimum": false,
@@ -955,7 +955,7 @@
     },
     {
       "path": "/villademo/trainers/amara-cole",
-      "mainWords": 91,
+      "mainWords": 92,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/trainers/amara-cole",
       "localMinimum": false,
@@ -963,7 +963,7 @@
     },
     {
       "path": "/villademo/trainers/clara-voss",
-      "mainWords": 80,
+      "mainWords": 82,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/trainers/clara-voss",
       "localMinimum": false,
@@ -971,7 +971,7 @@
     },
     {
       "path": "/villademo/trainers/julian-hart",
-      "mainWords": 84,
+      "mainWords": 82,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/trainers/julian-hart",
       "localMinimum": false,
@@ -979,7 +979,7 @@
     },
     {
       "path": "/villademo/trainers/michael-tan",
-      "mainWords": 86,
+      "mainWords": 75,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/villademo/trainers/michael-tan",
       "localMinimum": false,

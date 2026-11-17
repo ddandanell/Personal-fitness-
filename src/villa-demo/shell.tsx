@@ -68,8 +68,8 @@ export function DemoShell({ children }: { children: ReactNode }) {
       )}
       <main id="villa-demo-main" className="arunika-main">{children}</main>
       <footer className="arunika-foot wrap">
-        <p>Arunika Houses is fictional. Trainer names, ratings and bookings are sample material for this preview.</p>
-        <p className="quiet">PersonalFitness.id coordinates the hour. Published Bali rates are shown. Nothing here sends email or takes payment. Photographs from Unsplash.</p>
+        <p>Arunika Houses is fictional. Instructor names, ratings and bookings are sample material for this preview.</p>
+        <p className="quiet">PersonalFitness.id coordinates the hour. A single 60-minute session in this preview is Rp 1.050.000. Nothing here sends email or takes payment. Photographs from Unsplash.</p>
         <p><a className="text-link" href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
       </footer>
     </div>

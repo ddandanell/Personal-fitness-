@@ -1,11 +1,59 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
-  "proxy": {
-    "entrypoint": "proxy.js",
-    "matcher": ["/((?!assets/|images/|icons/|brand/|api/).*)"]
-  },
   "outputDirectory": "dist",
+  "routes": [
+    {
+      "src": "^/$",
+      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "dest": "/villademo",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/$",
+      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "dest": "/villademo",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/(?!assets(?:/|$)|images(?:/|$)|icons(?:/|$)|brand(?:/|$)|api(?:/|$)|villademo(?:/|$)|[^/]+\\.[^/]+$)(.+)$",
+      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "dest": "/villademo/$1",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/(?!assets(?:/|$)|images(?:/|$)|icons(?:/|$)|brand(?:/|$)|api(?:/|$)|villademo(?:/|$)|[^/]+\\.[^/]+$)(.+)$",
+      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "dest": "/villademo/$1",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "destination": "/villademo"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "destination": "/villademo"
+    },
+    {
+      "source": "/:path((?!assets|images|icons|brand|api|villademo|favicon.ico|robots.txt|sitemap|build-info|llms.txt).*)",
+      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "destination": "/villademo/:path"
+    },
+    {
+      "source": "/:path((?!assets|images|icons|brand|api|villademo|favicon.ico|robots.txt|sitemap|build-info|llms.txt).*)",
+      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "destination": "/villademo/:path"
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
