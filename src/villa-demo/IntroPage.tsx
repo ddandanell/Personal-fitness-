@@ -1,17 +1,16 @@
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { formatIdr } from '@/lib/money'
-import { services } from './data'
+import { CONCIERGE_LINE, POLICY_LINE, packs } from './data'
 import { DemoLink } from './shell'
 
 const steps = [
   ['01', 'A card in the room', 'Each house has a small card. The guest scans it and lands on that house’s own wellness page, not a generic listing.'],
   ['02', 'They request the hour', 'They choose the session, a time and how many people. The request is marked against the villa stay.'],
-  ['03', 'You see the whole book', 'Every house, the coming hours, the trainers and the mornings that repeat sit on one desk.'],
+  ['03', 'You see the whole book', 'Every house, the coming hours, the instructors and the mornings that repeat sit on one desk.'],
   ['04', 'The month has a number', 'Stay charges collect into a simple November total, so the extra income is visible without a spreadsheet.'],
 ]
 
 export default function IntroPage() {
-  const shown = services.slice(0, 3)
   return (
     <>
       <section className="hero">
@@ -34,7 +33,7 @@ export default function IntroPage() {
               <p className="kicker">How it works</p>
               <h2>Four steps, from the bedside card to the month.</h2>
             </div>
-            <p className="lede">PersonalFitness.id sends the trainer. The guest never has to leave the property, and the house keeps the relationship.</p>
+            <p className="lede">A vetted instructor comes to the house. {CONCIERGE_LINE} The guest never has to leave the property.</p>
           </div>
           <div className="steps">
             {steps.map(([index, title, copy]) => (
@@ -45,16 +44,18 @@ export default function IntroPage() {
               </article>
             ))}
           </div>
-          <div className="rate-row">
-            {shown.map((service) => (
-              <article className="rate" key={service.slug}>
-                <span className="quiet">Bali · 60 min</span>
-                <strong>{formatIdr(service.price)}</strong>
-                <p>{service.name}</p>
+          <div className="pack-row">
+            {packs.map((pack) => (
+              <article className="rate" key={pack.id}>
+                <span className="quiet">{pack.popular ? 'Most popular · 60 min' : '60 min'}</span>
+                <strong>{formatIdr(pack.perSession)}</strong>
+                <p>{pack.label}</p>
+                <p className="quiet">{pack.sessions === 1 ? 'One session' : `${formatIdr(pack.total)} for ${pack.sessions} sessions`}</p>
               </article>
             ))}
           </div>
-          <p className="quiet" style={{ marginTop: 18 }}>Jakarta is a little higher: personal training {formatIdr(950000)}, mat Pilates {formatIdr(1000000)}, private yoga {formatIdr(900000)}. Mobility and guided meditation use the published Bali rates in this preview. A written quote still names the person and the total before anything is confirmed.</p>
+          <p className="quiet" style={{ marginTop: 18 }}>The same 60-minute rates apply to Private Strength Training, private yoga, Pilates & mobility, Bodywork & Recovery, and Zumba & Dance Fitness. A second guest is {formatIdr(250000)} a session. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000–100.000. {CONCIERGE_LINE}</p>
+          <p className="quiet">{POLICY_LINE}</p>
         </div>
       </section>
       <section className="section" style={{ paddingTop: 0 }}>
