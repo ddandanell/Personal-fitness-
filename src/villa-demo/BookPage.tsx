@@ -28,6 +28,8 @@ export default function BookPage() {
   const [error, setError] = useState('')
   const villa = getVilla(villaSlug) ?? villas[0]
   const taken = useMemo(() => new Set(state.bookings.filter((item) => item.status !== 'completed').map((item) => `${item.trainer}|${item.date}|${item.time}`)), [state.bookings])
+  const openTimes = (trainer?.slots ?? []).filter((slot) => !taken.has(`${trainer?.slug}|${date}|${slot}`))
+  const activeTime = openTimes.includes(time) ? time : (openTimes[0] ?? '')
   const quote = quoteTotal(packId, people, villa.slug)
 
   function chooseService(slug: string) {
@@ -42,6 +44,10 @@ export default function BookPage() {
     event.preventDefault()
     if (!guest.trim()) { setError('Add the guest name as it should appear on the stay.'); return }
     if (!trainer) { setError('Choose an instructor from the sample roster.'); return }
+    if (!activeTime || taken.has(`${trainer.slug}|${date}|${activeTime}`)) {
+      setError('That time is already held. Choose another open time.')
+      return
+    }
     const booking: Booking = {
       id: state.nextBookingId(),
       villa: villa.slug,
@@ -49,7 +55,7 @@ export default function BookPage() {
       service: service.slug,
       trainer: trainer.slug,
       date,
-      time,
+      time: activeTime,
       people,
       total: quote.total,
       packId,
@@ -111,7 +117,7 @@ export default function BookPage() {
             <div className="slot-row">
               {(trainer?.slots ?? []).map((slot) => {
                 const busy = taken.has(`${trainer?.slug}|${date}|${slot}`)
-                return <button key={slot} type="button" className={slot === time ? 'chip is-on' : 'chip'} disabled={busy} onClick={() => setTime(slot)}>{busy ? `${slot} held` : slot}</button>
+                return <button key={slot} type="button" className={!busy && slot === activeTime ? 'chip is-on' : 'chip'} disabled={busy} onClick={() => setTime(slot)}>{busy ? `${slot} held` : slot}</button>
               })}
             </div>
           </div>
@@ -152,7 +158,7 @@ export default function BookPage() {
             <span>{quote.pack.sessions === 1 ? 'Single session' : `${quote.pack.label} · ${formatIdr(quote.perSession)} a session`}</span>
             <strong>{formatIdr(quote.total)}</strong>
           </div>
-          <button className="btn" type="submit" style={{ width: '100%' }}>Send the request</button>
+          <button className="btn" type="submit" style={{ width: '100%' }} disabled={!activeTime}>Send the request</button>
         </form>
       </div>
     </section>
