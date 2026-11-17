@@ -4,8 +4,6 @@ import { isVillaDemoHost, isVillasHost } from '@/villa-demo/host'
 import { DemoStateProvider } from '@/villa-demo/store'
 import { DemoShell } from '@/villa-demo/shell'
 import { BookingLookup, BookingPage, GuestHome, HelpPage, QrCard, RequestPage, ServiceDetail, ServicesIndex } from '@/villa-demo/GuestPages'
-import { OpsDesk, PartnerDesk } from '@/villa-demo/DeskPages'
-import { HowItWorks, PortalEntry, SetupPage, Walkthrough } from '@/villa-demo/ExplainPages'
 import Home from '@/pages/public/Home'
 import IndonesianHome from '@/pages/public/IndonesianHome'
 import ServiceGate from '@/pages/public/ServiceGate'
@@ -31,24 +29,17 @@ function DemoRoot() {
   )
 }
 
-function portalChildren(home: 'guest' | 'portal') {
+function portalChildren() {
   return (
     <>
-      <Route index element={home === 'guest' ? <GuestHome /> : <PortalEntry />} />
+      <Route index element={<GuestHome />} />
       <Route path="services" element={<ServicesIndex />} />
       <Route path="services/:slug" element={<ServiceDetail />} />
       <Route path="request/:slug" element={<RequestPage />} />
       <Route path="booking" element={<BookingLookup />} />
       <Route path="booking/:token" element={<BookingPage />} />
       <Route path="help" element={<HelpPage />} />
-      <Route path="how-it-works" element={<HowItWorks />} />
-      <Route path="partner" element={<PartnerDesk />} />
-      <Route path="partner/qr" element={<QrCard />} />
-      <Route path="ops" element={<OpsDesk />} />
-      <Route path="walkthrough" element={<Walkthrough />} />
       <Route path="card" element={<QrCard />} />
-      <Route path="setup" element={<SetupPage />} />
-      <Route path="portal" element={<PortalEntry />} />
       <Route path="q/:code" element={<GuestHome />} />
       <Route path="*" element={<GuestHome />} />
     </>
@@ -61,10 +52,10 @@ export default function App() {
   return (
     <Routes>
       {(onDemoHost || onVillasHost) && (
-        <Route path="/" element={<DemoRoot />}>{portalChildren(onVillasHost ? 'portal' : 'guest')}</Route>
+        <Route path="/" element={<DemoRoot />}>{portalChildren()}</Route>
       )}
-      {onVillasHost && <Route path="/v/:slug" element={<DemoRoot />}>{portalChildren('guest')}</Route>}
-      <Route path="/villademo" element={<DemoRoot />}>{portalChildren('guest')}</Route>
+      {onVillasHost && <Route path="/v/:slug" element={<DemoRoot />}>{portalChildren()}</Route>}
+      <Route path="/villademo" element={<DemoRoot />}>{portalChildren()}</Route>
       {!onDemoHost && !onVillasHost && (
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

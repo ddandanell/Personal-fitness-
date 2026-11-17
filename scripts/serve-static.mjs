@@ -35,9 +35,10 @@ function demoPath(request, pathname) {
   const villas = villasHosts.has(host)
   if (!demo && !villas) return { pathname, demo: false }
   if (pathname === '/villademo' || pathname.startsWith('/villademo/') || /\.[a-z0-9]+$/i.test(pathname)) return { pathname, demo: true }
+  if (/^\/(?:villademo\/)?(?:partner|ops|how-it-works|walkthrough|setup|portal)(?:\/|$)/.test(pathname)) return { pathname: '/villademo', demo: true }
   if (pathname === '/booking' || pathname.startsWith('/booking/')) return { pathname: '/villademo/booking', demo: true }
   if (pathname.startsWith('/q/')) return { pathname: '/villademo', demo: true }
-  if (villas && pathname === '/') return { pathname: '/villademo/portal', demo: true }
+  if (villas && pathname === '/') return { pathname: '/villademo', demo: true }
   if (villas && pathname === '/v/villa-sora') return { pathname: '/villademo', demo: true }
   if (villas && pathname.startsWith('/v/villa-sora/')) return { pathname: '/villademo' + pathname.slice('/v/villa-sora'.length), demo: true }
   if (pathname === '/') return { pathname: '/villademo', demo: true }

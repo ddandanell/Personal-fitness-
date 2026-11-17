@@ -1,11 +1,6 @@
-/**
- * Villa Sora booking demo. The house is fictional.
- * Photography is Unsplash (licence: https://unsplash.com/license).
- * Session rates follow the live villa brief. This preview does not send email.
- *
- * Photos: garden-berawa 1613977257363, yoga 1544367567, training 1571019614242,
- * pilates 1599447421416, mobility 1599901860904, zumba, meditation 1506126613408,
- * portrait-ayu 1531123897727, interior 1582719478250.
+/** Villa Sora guest demonstration. Session requests remain in this tab.
+ * Rates and guest limits preserve the existing demo offer.
+ * New asset prompts and provenance: docs/villa-demo-image-prompts.md.
  */
 
 export const CONCIERGE_LINE = 'Subject to instructor availability and location confirmation.'
@@ -40,9 +35,9 @@ export const villa = {
   slug: 'villa-sora',
   name: 'Villa Sora',
   area: 'Canggu, Bali',
-  welcome: 'Private wellness, at your villa.',
-  photo: img('/images/villademo/garden-berawa.webp', 'A modern white house with a lawn, lounge and swimming pool, used as the sample photograph for fictional Villa Sora', 1800, 1200),
-  interior: img('/images/villademo/interior.webp', 'A timber bedroom with garden doors and morning light', 1600, 1100),
+  welcome: 'Private wellness, brought to you.',
+  photo: img('/images/villademo/guest-villa.webp', 'A sunlit tropical villa with curved cream walls, a garden terrace and a turquoise swimming pool', 1600, 1067),
+  interior: img('/images/villademo/guest-villa.webp', 'A peaceful tropical villa beside a swimming pool', 1600, 1067),
   publicCodes: ['sora-table', 'sora-bedroom', 'sora-welcome'],
 }
 
@@ -79,20 +74,20 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'The session, a vetted instructor, and mats in this sample offer.',
+    included: 'Your private session, a vetted instructor and mats for your group.',
     brought: 'Mats for the guests on the request.',
     guestProvides: 'A shaded, clear floor and drinking water.',
     setup: 'About ten minutes to lay out mats. A quiet corner of the garden or a living room is enough.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'Private yoga for guests who want a calm or a stronger hour. The instructor adapts the pace. A named preference is a note, not a promise.',
-    image: img('/images/villademo/yoga.webp', 'A person holding a low lunge on a mat at sunset by the sea', 1600, 1100),
+    image: img('/images/villademo/guest-yoga.webp', 'An Indonesian woman guiding an international adult guest through a yoga lunge on a tropical villa terrace', 1600, 1067),
   },
   {
     slug: 'private-strength',
-    name: 'Private Strength Training',
+    name: 'Personal Training',
     featured: true,
     sentence: 'A private strength hour using the space the villa already has.',
     duration: '60 minutes',
@@ -104,16 +99,16 @@ export const services: Service[] = [
     brought: 'A few bands and a mat when the villa does not have them.',
     guestProvides: 'Clear floor space. Dumbbells if the villa already keeps them.',
     setup: 'A living room, covered terrace or gym corner. No installation.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'Strength work matched to the space and the guests’ experience. This is general fitness, not a clinical programme.',
-    image: img('/images/villademo/training.webp', 'A vetted instructor guiding an adult through a floor strength exercise', 1600, 1100),
+    image: img('/images/villademo/guest-training.webp', 'An Indonesian male trainer coaching an international guest with a dumbbell on an open villa terrace', 1600, 1067),
   },
   {
     slug: 'mat-pilates',
-    name: 'Mat Pilates & Mobility',
+    name: 'Mat Pilates',
     featured: true,
     sentence: 'Mat work and mobility for a private hour, without a reformer.',
     duration: '60 minutes',
@@ -121,16 +116,16 @@ export const services: Service[] = [
     participants: '1 or 2 guests',
     maxGuests: 2,
     priceBasis: 'Rp 1.050.000 for one guest. A second guest adds Rp 250.000.',
-    included: 'The session, a vetted instructor, and mats in this sample offer.',
+    included: 'Your private session, a vetted instructor and mats for your group.',
     brought: 'Mats.',
     guestProvides: 'A clear floor. A firm surface is easier than a thick rug.',
     setup: 'Floor space for two mats side by side.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'Mat Pilates and mobility for guests who want a precise, quieter hour. General wellness only.',
-    image: img('/images/villademo/pilates.webp', 'Two adults practising mat work on the floor of a quiet room', 1600, 1100),
+    image: img('/images/villademo/guest-pilates.webp', 'An Indonesian Pilates instructor guiding an international guest through a side-lying mat exercise at a villa', 1600, 1067),
   },
   {
     slug: 'bodywork',
@@ -146,12 +141,12 @@ export const services: Service[] = [
     brought: 'Oil and linen for the hour.',
     guestProvides: 'A private room, a firm bed or a clear floor, and towels.',
     setup: 'The room stays private. Allow a few minutes before and after.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'Unhurried bodywork for guests who want to recover from the journey. It is not a medical treatment.',
-    image: img('/images/villademo/mobility.webp', 'An adult folding forward on a mat in a quiet studio', 1600, 1100),
+    image: img('/images/villademo/guest-bodywork.webp', 'An Indonesian practitioner providing a draped shoulder and back bodywork session on a peaceful villa terrace', 1600, 1067),
   },
   {
     slug: 'zumba',
@@ -167,16 +162,16 @@ export const services: Service[] = [
     brought: 'A small speaker if the villa prefers not to use its own.',
     guestProvides: 'A clear terrace or living room, and a way to play music at a neighbourly volume.',
     setup: 'Shoes or bare feet. Move furniture only if the guests want a wider floor.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'Dance fitness for guests who want an upbeat private hour. The pace follows the group.',
-    image: img('/images/villademo/zumba.webp', 'Adults moving together in a bright dance-fitness class', 1400, 1000),
+    image: img('/images/villademo/guest-dance.webp', 'An Indonesian dance fitness instructor leading international adult guests on a shaded villa terrace', 1600, 1067),
   },
   {
     slug: 'quieter-hour',
-    name: 'A quieter hour',
+    name: 'Guided Meditation',
     featured: false,
     sentence: 'A guided meditation hour in a quiet part of the villa.',
     duration: '60 minutes',
@@ -188,14 +183,37 @@ export const services: Service[] = [
     brought: 'Nothing that needs installing.',
     guestProvides: 'A quiet room or a shaded deck, and cushions if you have them.',
     setup: 'Ask the villa to hold housekeeping for the hour.',
-    area: 'Canggu. This sample has no travel fee. Outer areas such as Uluwatu add a flat travel fee of Rp 50.000 to Rp 100.000.',
+    area: 'At Villa Sora in Canggu. Travel is included for this villa.',
     lead: LEAD_LINE,
     cancel: POLICY_LINE,
     languages: 'English. Indonesian when the confirmed instructor speaks it.',
     capability: 'A guided quiet hour. General wellness, with no outcome promised.',
-    image: img('/images/villademo/meditation.webp', 'A person seated quietly on a wooden deck in warm light', 1400, 962),
+    image: img('/images/villademo/guest-meditation.webp', 'An Indonesian meditation instructor seated with international adult guests in a quiet tropical garden', 1600, 1067),
   },
 ]
+
+// Additional core services use the same established villa rate and participant rule.
+const base = services[1]
+services.push(
+  {
+    ...base, slug: 'mobility', name: 'Mobility & Stretching', featured: false,
+    sentence: 'Gentle movement and guided stretching to make space for an easier day.',
+    brought: 'Mats and light resistance bands as needed.',
+    guestProvides: 'A little clear floor space and drinking water.',
+    setup: 'A shaded terrace or a quiet room with room to stretch.',
+    capability: 'General mobility coaching, adapted to your comfort and experience.',
+    image: img('/images/villademo/guest-mobility.webp', 'An Indonesian mobility coach guiding an international adult guest through a gentle stretch on a villa terrace', 1600, 1067),
+  },
+  {
+    ...base, slug: 'boxing', name: 'Boxing Fitness', featured: false,
+    sentence: 'An energising hour of pad work, footwork and conditioning, right at the villa.',
+    brought: 'Focus mitts and training equipment, confirmed with your session.',
+    guestProvides: 'A clear terrace, comfortable trainers and drinking water.',
+    setup: 'Enough open space to move safely and comfortably. Pad work only, without sparring.',
+    capability: 'Private boxing fitness and conditioning. The pace follows your experience.',
+    image: img('/images/villademo/guest-boxing.webp', 'An Indonesian boxing coach holding focus mitts for an international adult guest on a tropical villa terrace', 1600, 1067),
+  },
+)
 
 export function getService(slug: string | undefined) {
   return services.find((item) => item.slug === slug)
@@ -279,23 +297,8 @@ export function knownPlacement(code: string | undefined) {
 }
 
 export function villaDemoPaths() {
-  const paths = [
-    '/villademo',
-    '/villademo/services',
-    '/villademo/help',
-    '/villademo/booking',
-    '/villademo/how-it-works',
-    '/villademo/partner',
-    '/villademo/partner/qr',
-    '/villademo/ops',
-    '/villademo/walkthrough',
-    '/villademo/card',
-    '/villademo/setup',
-    '/villademo/portal',
-  ]
-  for (const service of services) {
-    paths.push(`/villademo/services/${service.slug}`, `/villademo/request/${service.slug}`)
-  }
+  const paths = ['/villademo', '/villademo/services', '/villademo/help', '/villademo/booking', '/villademo/card']
+  for (const service of services) paths.push(`/villademo/services/${service.slug}`, `/villademo/request/${service.slug}`)
   return paths
 }
 
@@ -306,7 +309,7 @@ export function villaDemoPage(pathname: string) {
   if (parts[0] !== 'villademo') return null
   const rest = parts.slice(1)
   let title = 'Villa Sora wellness'
-  let description = 'A noindex demo built for villa managers. Guests of fictional Villa Sora request one private session. No email is sent.'
+  let description = 'Private wellness at Villa Sora in Canggu. Explore personal training, yoga, Pilates and more, brought to your villa.'
   let image = photo
   const service = rest[0] === 'services' || rest[0] === 'request' ? getService(rest[1]) : undefined
   if (rest.length === 0) {
@@ -318,7 +321,7 @@ export function villaDemoPage(pathname: string) {
     image = service.image
   } else if (rest[0] === 'services') {
     title = 'All services'
-    description = 'The Villa Sora menu. Private strength training, yoga, mat Pilates, bodywork, dance fitness and a quieter hour.'
+    description = 'Your villa wellness menu. Personal training, yoga, Pilates, mobility, boxing, meditation, bodywork and dance fitness.'
   } else if (rest[0] === 'request' && service) {
     title = `Request ${service.name}`
     description = 'One session request for Villa Sora. The preferred time is not reserved yet.'
@@ -329,29 +332,9 @@ export function villaDemoPage(pathname: string) {
   } else if (rest[0] === 'help') {
     title = 'Help'
     description = 'Help for a Villa Sora guest. WhatsApp or hello@personalfitness.id.'
-  } else if (rest[0] === 'how-it-works') {
-    title = 'How villa booking works'
-    description = 'How a villa offers a guest wellness menu, and how Personal Fitness coordinates the vetted instructor.'
-  } else if (rest[0] === 'partner') {
-    title = rest[1] === 'qr' ? 'Villa Sora QR card' : 'Villa partner desk'
-    description = 'Sample bookings, the guest page and a proposed commission for fictional Villa Sora.'
-    image = rest[1] === 'qr' ? villa.interior : photo
-  } else if (rest[0] === 'ops') {
-    title = 'Coordination queue'
-    description = 'A sample operations queue for requests, matching, written quotes and the Villa Sora payout.'
-  } else if (rest[0] === 'walkthrough') {
-    title = 'Demo walkthrough'
-    description = 'A guided pass through the Villa Sora guest request, the partner desk and the coordination queue.'
   } else if (rest[0] === 'card') {
-    title = 'Villa Sora QR card'
-    description = 'A printable card. The QR opens the Villa Sora menu and no guest booking.'
-    image = villa.interior
-  } else if (rest[0] === 'setup') {
-    title = 'Request a villa setup'
-    description = 'A real-inquiry form shape for villa managers. This demo does not send email.'
-  } else if (rest[0] === 'portal') {
-    title = 'For villa managers'
-    description = 'The demonstration entry for the Villa Sora guest page and the sample desk.'
+    title = 'Villa Sora wellness card'
+    description = 'Scan to explore private wellness at Villa Sora in Canggu. Personal training, yoga, Pilates and more, brought to you.'
   }
   return { title, description, image }
 }

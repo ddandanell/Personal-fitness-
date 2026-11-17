@@ -38,7 +38,7 @@ export function pageMetadata(pathname: string) {
       htmlLang: 'en',
       locale: 'en_ID',
       description: demo?.description || 'A noindex preview of in-villa wellness for a fictional Bali house collection.',
-      canonical: SITE_ORIGIN + pathname,
+      canonical: 'https://villademo.personalfitness.id' + pathname.replace(/^\/villademo/, ''),
       noindex: true,
       image: image?.src || '/images/villademo/hero-pool.webp',
       imageAlt: image?.alt || 'An infinity pool above the ocean, lined with palms',

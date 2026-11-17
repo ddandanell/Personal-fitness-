@@ -1,123 +1,76 @@
-import { useEffect, useId, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, useLocation } from 'react-router'
+import { ArrowUpRight, CalendarDays, CircleHelp, Leaf, MapPin, QrCode, X } from 'lucide-react'
 import StructuredData from '@/components/StructuredData'
 import { pageMetadata } from '@/lib/metadata'
-import { HELP_EMAIL } from './data'
-import { useDemoState } from './demo-state'
-import { canonicalDemoPath, demoHref } from './host'
+import { canonicalDemoPath, demoHref, QR_LANDING } from './host'
+import { QrMark } from './qr'
 import './demo.css'
 
-function applyDocumentMeta(title: string, description: string) {
-  document.title = title
-  document.querySelector('meta[name="description"]')?.setAttribute('content', description)
-  document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex, follow')
+export function DemoLink({ to, className, children, onClick }: { to: string; className?: string; children: ReactNode; onClick?: () => void }) {
+  const [path, query] = to.split('?')
+  return <Link to={demoHref(path) + (query ? `?${query}` : '')} className={className} onClick={onClick}>{children}</Link>
 }
 
-export function DemoLink({ to, className, children, onClick }: { to: string; className?: string; children: ReactNode; onClick?: () => void }) {
-  const href = to.includes('?') ? demoHref(to.slice(0, to.indexOf('?'))) + to.slice(to.indexOf('?')) : demoHref(to)
-  return <Link to={href} className={className} onClick={onClick}>{children}</Link>
+export function GuestDialog({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
+  const ref = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    const dialog = ref.current
+    dialog?.showModal()
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { dialog?.close(); document.body.style.overflow = previousOverflow }
+  }, [])
+  return <dialog ref={ref} className="sora-dialog" aria-label={title} onCancel={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose() }}>
+    <div className="dialog-heading"><h2>{title}</h2><button className="icon-button" type="button" onClick={onClose} aria-label="Close dialog"><X size={20} /></button></div>
+    {children}
+  </dialog>
+}
+
+export function VillaQr({ compact = false }: { compact?: boolean }) {
+  return <div className={compact ? 'villa-qr compact' : 'villa-qr'}>
+    <QrMark value={QR_LANDING} label="Scan to open the Villa Sora wellness menu on your phone" />
+    <div><span className="eyebrow">YOUR VILLA WELLNESS MENU</span><strong>Take a little Bali with you.</strong><p>Scan to open this menu on your phone.</p></div>
+  </div>
 }
 
 const guestNav = [
-  ['/', 'Services'],
-  ['/booking', 'My booking'],
-  ['/help', 'Help'],
-] as const
-
-function isGuestSurface(path: string) {
-  return path === '/villademo'
-    || path === '/v/villa-sora'
-    || path.startsWith('/v/villa-sora/')
-    || path.startsWith('/q/')
-    || /^\/villademo\/(services|request|help|booking)/.test(path)
-    || /^\/(services|request|help|booking)/.test(path)
-}
+  { to: '/', label: 'Services', icon: Leaf },
+  { to: '/booking', label: 'My booking', icon: CalendarDays },
+  { to: '/help', label: 'Help', icon: CircleHelp },
+]
 
 export function DemoShell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const canonical = canonicalDemoPath(pathname)
   const meta = pageMetadata(canonical)
-  const guest = isGuestSurface(canonical) || isGuestSurface(pathname)
-  const [menuPath, setMenuPath] = useState<string | null>(null)
-  const menu = menuPath === pathname
-  const titleId = useId()
-
+  const [qr, setQr] = useState(false)
   useEffect(() => {
-    applyDocumentMeta(meta.title, meta.description)
+    document.title = meta.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description)
+    document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex, nofollow')
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [pathname, meta.title, meta.description])
 
-  return (
-    <div className={guest ? 'sora is-guest' : 'sora is-desk'}>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" />
-      <StructuredData data={{
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        name: meta.title,
-        description: meta.description,
-        url: meta.canonical,
-        isPartOf: { '@type': 'WebSite', name: 'PersonalFitness.id', url: 'https://www.personalfitness.id/' },
-      }} />
-      <a className="skip-link" href="#villa-demo-main">Skip to content</a>
-      {guest && (
-        <aside className="sora-stage">
-          <p className="eyebrow">Sales demonstration</p>
-          <h2>The guest sees only Villa Sora.</h2>
-          <p>Built for villa managers. The shared QR opens this menu. It does not list anyone’s booking. The written quote and the sample commission stay on the other side of the demo.</p>
-          <DemoLink to="/how-it-works" className="stage-link">How it works for a villa</DemoLink>
-        </aside>
-      )}
-      <div className="sora-frame">
-        <header className="sora-top">
-          <DemoLink to={guest ? '/' : '/portal'} className="sora-mark">
-            <strong>{guest ? 'Villa Sora' : 'Personal Fitness'}</strong>
-            <span>{guest ? 'Canggu' : 'For managers'}</span>
-          </DemoLink>
-          <button type="button" className="demo-badge" aria-expanded={menu} aria-controls={titleId} onClick={() => setMenuPath(pathname)}>Demo</button>
-        </header>
-        <main id="villa-demo-main">{children}</main>
-        {guest ? (
-          <nav className="sora-tabs" aria-label="Guest">
-            {guestNav.map(([to, label]) => {
-              const active = canonical === canonicalDemoPath(demoHref(to)) || (to === '/' && (canonical === '/villademo' || canonical.startsWith('/villademo/services') || canonical.startsWith('/villademo/request')))
-              return <DemoLink key={to} to={to} className={active ? 'is-on' : undefined}>{label}</DemoLink>
-            })}
-          </nav>
-        ) : (
-          <footer className="sora-foot">
-            <p>Villa Sora is fictional. Bookings, instructors and the 10% commission are sample figures for this demonstration.</p>
-            <p><a href={`mailto:${HELP_EMAIL}`}>{HELP_EMAIL}</a></p>
-          </footer>
-        )}
-      </div>
-      {menu && <DemoMenu titleId={titleId} onClose={() => setMenuPath(null)} />}
-    </div>
-  )
-}
+  function isActive(to: string) {
+    if (to === '/') return canonical === '/villademo' || /\/services(?:\/|$)|\/request\//.test(canonical)
+    return canonical.startsWith(`/villademo${to}`)
+  }
 
-function DemoMenu({ titleId, onClose }: { titleId: string; onClose: () => void }) {
-  const { reset } = useDemoState()
-  const items = [
-    ['/', 'Guest menu'],
-    ['/walkthrough', 'Guided walkthrough'],
-    ['/how-it-works', 'How it works'],
-    ['/partner', 'Villa partner desk'],
-    ['/ops', 'Operations'],
-    ['/card', 'QR card'],
-    ['/setup', 'Request a villa setup'],
-  ] as const
-  return (
-    <div className="demo-layer" role="presentation" onClick={onClose}>
-      <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="demo-sheet" onClick={(event) => event.stopPropagation()}>
-        <p id={titleId} className="eyebrow">Demonstration</p>
-        <h2>Switch view</h2>
-        <p>These views share this browser only. The villa QR never opens another guest’s booking.</p>
-        <nav aria-label="Demo views">
-          {items.map(([to, label]) => <DemoLink key={to} to={to} onClick={onClose}>{label}</DemoLink>)}
-        </nav>
-        <button type="button" className="texty" onClick={() => { reset(); onClose() }}>Reset this browser’s request</button>
-        <button type="button" className="texty" onClick={onClose}>Close</button>
+  return <div className="sora is-guest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" />
+    <StructuredData data={{ '@context': 'https://schema.org', '@type': 'WebPage', name: meta.title, description: meta.description, url: meta.canonical }} />
+    <a className="skip-link" href="#villa-demo-main">Skip to content</a>
+    <header className="sora-header">
+      <div className="header-inner">
+        <DemoLink to="/" className="sora-mark"><span className="brand-symbol"><Leaf size={25} strokeWidth={1.2} /></span><span><strong>Villa Sora</strong><small>WELLNESS AT YOUR VILLA</small></span></DemoLink>
+        <nav className="desktop-nav" aria-label="Guest navigation">{guestNav.map(({ to, label }) => <DemoLink key={to} to={to} className={isActive(to) ? 'is-active' : ''}>{label}</DemoLink>)}</nav>
+        <div className="header-actions"><span className="location-label"><MapPin size={14} /> Canggu, Bali</span><button className="icon-button" type="button" aria-label="Open villa QR code" onClick={() => setQr(true)}><QrCode size={21} strokeWidth={1.4} /></button></div>
       </div>
-    </div>
-  )
+    </header>
+    <div className="sora-frame"><main id="villa-demo-main">{children}</main></div>
+    <footer className="guest-footer"><span className="footer-brand"><Leaf size={16} /> Villa Sora</span><span>Powered by <a href="https://www.personalfitness.id/" target="_blank" rel="noreferrer">Personal Fitness <ArrowUpRight size={12} /></a></span><span className="demo-label">GUEST EXPERIENCE DEMO</span></footer>
+    <nav className="sora-tabs" aria-label="Guest mobile navigation">{guestNav.map(({ to, label, icon: Icon }) => <DemoLink key={to} to={to} className={isActive(to) ? 'is-on' : ''}><Icon size={20} strokeWidth={1.5} /><span>{label}</span></DemoLink>)}</nav>
+    {qr && <GuestDialog title="Your wellness menu, on your phone" onClose={() => setQr(false)}><VillaQr /><p className="qr-address">villademo.personalfitness.id</p><button type="button" className="action" onClick={() => setQr(false)}>Back to my villa</button></GuestDialog>}
+  </div>
 }

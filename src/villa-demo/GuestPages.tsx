@@ -1,107 +1,85 @@
-import { useMemo, useRef, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router'
+import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Check, CheckCircle2, ChevronDown, Clock3, Leaf, MapPin, MessageCircle, ShieldCheck, Sparkles, Users } from 'lucide-react'
 import { QrMark } from './qr'
-import { BACKUP_LINE, CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, PAYMENT_SENT, POLICY_LINE, SUPPLY_LINE, WHATSAPP_DISPLAY, WHATSAPP_URL, baliISO, featuredServices, formatBali, getService, knownPlacement, packs, rp, services, sessionQuote, sessionTimes, villa } from './data'
+import { CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, POLICY_LINE, SINGLE_SESSION, baliISO, formatBali, getService, knownPlacement, packs, rp, services, sessionQuote, sessionTimes, villa, type DemoImage, type Service } from './data'
 import { useDemoState } from './demo-state'
 import { QR_LANDING, demoHref } from './host'
-import { DemoLink } from './shell'
+import { DemoLink, GuestDialog, VillaQr } from './shell'
+
+export function GuestPhoto({ image, className, priority = false, sizes = '(max-width: 600px) 50vw, (max-width: 1000px) 50vw, 25vw' }: { image: DemoImage; className?: string; priority?: boolean; sizes?: string }) {
+  return <img className={className} src={image.src} srcSet={`${image.src.replace('.webp', '-640.webp')} 640w, ${image.src} 1600w`} sizes={sizes} alt={image.alt} width={image.width} height={image.height} loading={priority ? 'eager' : 'lazy'} decoding="async" fetchPriority={priority ? 'high' : 'auto'} />
+}
+
+const serviceMood: Record<string, { category: 'move' | 'restore'; tag: string; short: string }> = {
+  'private-yoga': { category: 'restore', tag: 'BREATHE & BALANCE', short: 'A slower morning, or a stronger flow. Your practice, your pace.' },
+  'private-strength': { category: 'move', tag: 'STRENGTH & ENERGY', short: 'Keep your rhythm with a workout made around you.' },
+  'mat-pilates': { category: 'move', tag: 'CONTROL & CONNECTION', short: 'Mindful movement to feel a little more centred.' },
+  bodywork: { category: 'restore', tag: 'REST & RECOVERY', short: 'Switch off and settle into an unhurried recovery hour.' },
+  zumba: { category: 'move', tag: 'MOVEMENT & JOY', short: 'Good music, easy energy and a private dance-fitness hour.' },
+  'quieter-hour': { category: 'restore', tag: 'STILLNESS & SPACE', short: 'A quiet pause in your day, with gentle guidance.' },
+  mobility: { category: 'move', tag: 'STRETCH & RESET', short: 'Make a little room to stretch, move and feel at ease.' },
+  boxing: { category: 'move', tag: 'FOCUS & FITNESS', short: 'Find your energy with private pad work and conditioning.' },
+}
 
 export function GuestHome() {
   const { code, slug } = useParams()
-  if (slug && slug !== villa.slug) return <UnknownVilla slug={slug} />
-  if (code && !knownPlacement(code)) return <PausedCode code={code} />
-  const featured = featuredServices()
-  return (
-    <>
-      <figure className="sora-hero">
-        <img src={villa.photo.src} alt={villa.photo.alt} width={villa.photo.width} height={villa.photo.height} />
-        <figcaption>
-          <h1>Welcome to {villa.name}</h1>
-          <p>{villa.welcome}</p>
-          <small>{villa.area} · Powered by Personal Fitness</small>
-        </figcaption>
-      </figure>
-      <div className="pad">
-        {code && <p className="note">Opened from placement code {code}. This card shows the villa menu only.</p>}
-        <div>
-          {featured.map((service) => <ServiceRow key={service.slug} slug={service.slug} />)}
-        </div>
-        <DemoLink to="/services" className="all-link">All services <span>{services.length}</span></DemoLink>
-        <p className="note">{CONCIERGE_LINE}</p>
-        <DemoLink to="/help" className="text-link">Need help? Message the coordinator</DemoLink>
-      </div>
-    </>
-  )
+  if (slug && slug !== villa.slug) return <Unavailable title="Let's get you to your villa." text="This villa link is not active. Open the Villa Sora menu or ask the concierge for help." />
+  if (code && !knownPlacement(code)) return <Unavailable title="Let's find your wellness menu." text="This QR code is no longer active. Your concierge can help you find the right villa menu." />
+  return <>
+    <section className="guest-hero" aria-labelledby="welcome-title">
+      <GuestPhoto image={villa.photo} priority sizes="(max-width: 1280px) 100vw, 1240px" />
+      <div className="hero-shade" />
+      <div className="hero-copy"><span className="hero-eyebrow"><span /> WELCOME TO VILLA SORA</span><h1 id="welcome-title">Your villa.<br /><em>Your pace.</em></h1><p>Move, unwind and feel good.<br />Private wellness, brought to you.</p><a className="hero-action" href="#sessions">Find your session <ArrowUpRight size={18} /></a></div>
+      <div className="hero-location"><MapPin size={13} /> Canggu, Bali</div>
+      <div className="hero-detail"><Leaf size={18} strokeWidth={1.3} /><span>A little time<br /><strong>just for you.</strong></span></div>
+    </section>
+    <div className="guest-reassurance"><span><MapPin size={16} /> At your villa</span><span><Users size={16} /> Private, personal sessions</span><span><MessageCircle size={16} /> English-speaking instructors</span><span><Sparkles size={16} /> Everything coordinated</span></div>
+    <ServiceCollection />
+    <section className="guest-bottom-grid" aria-label="Your villa concierge">
+      <div className="concierge-banner"><span className="round-symbol"><MessageCircle size={25} strokeWidth={1.3} /></span><div><span className="eyebrow">A LITTLE GUIDANCE</span><h2>Let us help you choose.</h2><p>A slower start, a workout for two, or a moment of calm. Your concierge is here to help.</p><DemoLink to="/help" className="text-link">Ask your concierge <ArrowUpRight size={16} /></DemoLink></div></div>
+      <div className="qr-banner"><VillaQr compact /></div>
+    </section>
+  </>
 }
 
 export function ServicesIndex() {
-  return (
-    <div className="pad">
-      <p className="eyebrow">{villa.name}</p>
-      <h1>All services</h1>
-      <p className="lede">One hour, at the villa. A pack can be suggested after the first request, as supply allows.</p>
-      {services.map((service) => <ServiceRow key={service.slug} slug={service.slug} />)}
-      <p className="note">Massage is not on this villa’s menu. {CONCIERGE_LINE}</p>
-    </div>
-  )
+  return <><div className="page-intro"><span className="eyebrow">THE VILLA SORA WELLNESS MENU</span><h1>Make time for yourself.</h1><p>Private sessions, in the comfort of your villa. Choose the hour that feels right for you.</p></div><ServiceCollection standalone /><section className="quiet-help"><p>Not sure where to start?</p><DemoLink to="/help" className="text-link">Your concierge can help <ArrowUpRight size={16} /></DemoLink></section></>
 }
 
-function ServiceRow({ slug }: { slug: string }) {
-  const service = getService(slug)!
-  return (
-    <DemoLink to={`/services/${service.slug}`} className="svc">
-      <img src={service.image.src} alt="" width={72} height={72} />
-      <span>
-        <strong>{service.name}</strong>
-        <small>{service.duration} · {service.participants}</small>
-      </span>
-      <em>{rp(1050000)}</em>
-    </DemoLink>
-  )
+function ServiceCollection({ standalone = false }: { standalone?: boolean }) {
+  const [filter, setFilter] = useState('all')
+  const visible = services.filter((service) => filter === 'all' || serviceMood[service.slug]?.category === filter)
+  return <section className="guest-services" id="sessions" aria-labelledby="sessions-title">
+    <div className="section-heading"><div><span className="eyebrow">WELLNESS, YOUR WAY</span><h2 id="sessions-title">{standalone ? 'Find your kind of feel-good.' : 'How would you like to feel?'}</h2><p>Thoughtful sessions. Expert guidance. All at your villa.</p></div><span className="session-count">{services.length} ways to make time for you</span></div>
+    <div className="service-filters" role="group" aria-label="Filter wellness sessions">{[['all', 'All sessions'], ['move', 'Move & energise'], ['restore', 'Unwind & restore']].map(([id, label]) => <button type="button" key={id} aria-pressed={filter === id} className={filter === id ? 'selected' : ''} onClick={() => setFilter(id)}>{label}</button>)}</div>
+    <div className="guest-service-grid" aria-live="polite">{visible.map((service) => <ServiceCard key={service.slug} service={service} />)}</div>
+    <p className="menu-note"><ShieldCheck size={14} /><span>60-minute private sessions. Your instructor and full quote are confirmed before you pay.</span></p>
+  </section>
+}
+
+function ServiceCard({ service }: { service: Service }) {
+  const mood = serviceMood[service.slug]
+  return <DemoLink to={`/services/${service.slug}`} className="guest-service-card">
+    <div className="service-card-photo"><GuestPhoto image={service.image} /><span className="duration-badge"><Clock3 size={12} /> 60 min</span><span className="card-arrow" aria-hidden="true"><ArrowUpRight size={20} strokeWidth={1.5} /></span></div>
+    <div className="service-card-copy"><span className="eyebrow">{mood?.tag}</span><h3>{service.name}</h3><p>{mood?.short || service.sentence}</p><div className="card-price"><span><strong>{service.maxGuests > 1 ? 'From ' : ''}{rp(SINGLE_SESSION)}</strong><small> / session</small></span><span>{service.maxGuests === 1 ? '1 guest' : '1–2 guests'}</span></div></div>
+  </DemoLink>
 }
 
 export function ServiceDetail() {
   const { slug } = useParams()
   const service = getService(slug)
-  if (!service) return <div className="pad"><h1>Service unavailable</h1><DemoLink to="/services">Back to the menu</DemoLink></div>
-  const quote = sessionQuote(1, service.maxGuests)
-  return (
-    <article>
-      <img className="detail-photo" src={service.image.src} alt={service.image.alt} width={service.image.width} height={service.image.height} />
-      <div className="pad">
-        <p className="eyebrow">{villa.name} · Demo</p>
-        <h1>{service.name}</h1>
-        <p className="lede">{service.sentence}</p>
-        <dl className="spec">
-          <div><dt>Duration</dt><dd>{service.duration}</dd></div>
-          <div><dt>Participants</dt><dd>{service.participants}</dd></div>
-          <div><dt>Price basis</dt><dd>{service.priceBasis}</dd></div>
-          <div><dt>Included</dt><dd>{service.included}</dd></div>
-          <div><dt>Brought to the villa</dt><dd>{service.brought}</dd></div>
-          <div><dt>The villa provides</dt><dd>{service.guestProvides}</dd></div>
-          <div><dt>Setup</dt><dd>{service.setup}</dd></div>
-          <div><dt>Service area</dt><dd>{service.area}</dd></div>
-          <div><dt>Earliest request</dt><dd>{service.lead}</dd></div>
-          <div><dt>Rescheduling</dt><dd>{service.cancel}</dd></div>
-          <div><dt>Languages</dt><dd>{service.languages}</dd></div>
-          <div><dt>Before a name is confirmed</dt><dd>{service.capability}</dd></div>
-        </dl>
-        <div className="rates" aria-label="Session packs">
-          {packs.map((pack) => (
-            <article key={pack.id} className={pack.popular ? 'is-pop' : undefined}>
-              <span><strong>{pack.label}</strong>{pack.popular && <em> Most popular</em>}<small style={{ display: 'block', color: 'var(--muted)' }}>{rp(pack.perSession)} / session</small></span>
-              <strong>{rp(pack.total)}</strong>
-            </article>
-          ))}
-        </div>
-        <p className="quiet">This request is for one session. {CONCIERGE_LINE}</p>
-        <div className="sticky-cta">
-          <span>One guest<strong>{rp(quote.total)}</strong></span>
-          <DemoLink to={`/request/${service.slug}`} className="action">Request this session</DemoLink>
-        </div>
+  if (!service) return <Unavailable title="Let's find your next session." text="This session is not on the villa menu. Explore the available services or ask your concierge." />
+  return <article className="service-detail-page">
+    <DemoLink to="/" className="back-link"><ArrowLeft size={15} /> Back to your villa menu</DemoLink>
+    <div className="service-detail-grid"><div className="service-detail-image"><GuestPhoto image={service.image} priority sizes="(max-width: 800px) 100vw, 55vw" /><div className="photo-caption"><Leaf size={15} /> A private hour, at Villa Sora.</div></div>
+      <div className="service-detail-copy"><span className="eyebrow">{serviceMood[service.slug]?.tag} · VILLA SORA</span><h1>{service.name}</h1><p className="detail-lede">{service.sentence}</p><div className="detail-pills"><span><Clock3 size={15} /> 60 minutes</span><span><Users size={15} /> {service.participants}</span><span><MapPin size={15} /> At your villa</span></div>
+        <div className="detail-book-box"><span className="eyebrow">YOUR PRIVATE SESSION</span><p className="detail-price">{rp(SINGLE_SESSION)}<small> / one guest</small></p>{service.maxGuests > 1 && <p className="second-guest">Bring a friend for an additional {rp(250_000)}.</p>}<DemoLink to={`/request/${service.slug}`} className="action">Choose date & time <ArrowRight size={17} /></DemoLink><p className="price-reassurance"><Check size={14} /> Travel included at Villa Sora</p></div>
+        <div className="service-accordions"><details open><summary>What's included <ChevronDown size={16} /></summary><p>{service.included}</p><p><b>We bring:</b> {service.brought}</p></details><details><summary>Your villa setup <ChevronDown size={16} /></summary><p>{service.guestProvides}</p><p>{service.setup}</p></details><details><summary>Booking & rescheduling <ChevronDown size={16} /></summary><p>{CONCIERGE_LINE}</p><p>{POLICY_LINE} {PAYMENT_LINE}</p><p>Your professional is named in your written confirmation.</p></details></div>
       </div>
-    </article>
-  )
+    </div>
+    <section className="stay-longer"><div><span className="eyebrow">SETTLE INTO A RHYTHM</span><h2>Staying a little longer?</h2><p>Ask your concierge about a session pack. The schedule is arranged around your stay and instructor availability.</p></div><div className="pack-grid">{packs.filter((pack) => pack.sessions > 1).map((pack) => <div key={pack.id} className={pack.popular ? 'pack popular' : 'pack'}>{pack.popular && <span className="pack-label">5-SESSION OPTION</span>}<strong>{pack.sessions} sessions</strong><span>{rp(pack.perSession)} / session</span><small>{rp(pack.total)} total · one guest</small></div>)}</div></section>
+  </article>
 }
 
 export function RequestPage() {
@@ -110,219 +88,89 @@ export function RequestPage() {
   const [params] = useSearchParams()
   const navigate = useNavigate()
   const { submit } = useDemoState()
-  const key = useRef(typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `key-${slug}`)
+  const key = useRef(typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `key-${slug}-${Date.now()}`)
+  const errorRef = useRef<HTMLDivElement>(null)
   const [date, setDate] = useState(baliISO(1))
-  const [time, setTime] = useState(params.get('time') || '08:00')
-  const [people, setPeople] = useState(1)
-  const [name, setName] = useState(params.get('name') || '')
-  const [whatsapp, setWhatsapp] = useState(params.get('whatsapp') || '')
-  const [email, setEmail] = useState(params.get('email') || '')
+  const [time, setTime] = useState('08:00')
+  const [people, setPeople] = useState(params.get('people') === '2' && service?.maxGuests === 2 ? 2 : 1)
+  const [name, setName] = useState('')
+  const [contactMethod, setContactMethod] = useState<'whatsapp' | 'email'>('whatsapp')
+  const [contact, setContact] = useState('')
   const [note, setNote] = useState('')
-  const [preference, setPreference] = useState('')
   const [errors, setErrors] = useState<string[]>([])
-  const [savedNote, setSavedNote] = useState('')
-  if (!service) return <div className="pad"><h1>Service unavailable</h1></div>
+  const [busy, setBusy] = useState(false)
+  useEffect(() => { if (errors.length) errorRef.current?.focus() }, [errors])
+  if (!service) return <Unavailable title="Choose your session first." text="Explore the villa wellness menu to find the right hour for you." />
   const selected = service
   const quote = sessionQuote(people, selected.maxGuests)
   const minDate = baliISO(1)
 
   function onSubmit(event: FormEvent) {
     event.preventDefault()
+    if (busy) return
     const next: string[] = []
-    if (!date || date < minDate) next.push('Choose a future Bali date. Same-day requests are reviewed by a coordinator and are not reserved.')
-    if (!sessionTimes.includes(time as typeof sessionTimes[number])) next.push('Choose a preferred start time.')
-    if (name.trim().length < 2) next.push('Add the lead guest’s name.')
-    const digits = whatsapp.replace(/\D/g, '')
-    if (digits.length < 8 && !email.includes('@')) next.push('Add a WhatsApp number with the country code, or an email address.')
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || date < minDate) next.push('Please choose a future date in Bali.')
+    if (!sessionTimes.includes(time as typeof sessionTimes[number])) next.push('Please choose your preferred start time.')
+    if (name.trim().length < 2) next.push('Please add your name.')
+    const valid = contactMethod === 'whatsapp' ? /^\+[\d\s()-]{8,24}$/.test(contact.trim()) && contact.replace(/\D/g, '').length >= 8 && contact.replace(/\D/g, '').length <= 15 : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.trim())
+    if (!valid) next.push(contactMethod === 'whatsapp' ? 'Please add your WhatsApp number, starting with + and your country code.' : 'Please add a valid email address.')
     setErrors(next)
     if (next.length) return
-    const result = submit({
-      idempotencyKey: key.current,
-      serviceSlug: selected.slug,
-      serviceName: selected.name,
-      date,
-      time,
-      participants: quote.guests,
-      name: name.trim(),
-      whatsapp: whatsapp.trim(),
-      email: email.trim(),
-      note,
-      preference,
-      total: quote.total,
-    })
-    if (!result.created) setSavedNote(`This request was already saved as ${result.booking.reference}.`)
+    setBusy(true)
+    const result = submit({ idempotencyKey: key.current, serviceSlug: selected.slug, serviceName: selected.name, date, time, participants: quote.guests, name: name.trim(), whatsapp: contactMethod === 'whatsapp' ? contact.trim() : '', email: contactMethod === 'email' ? contact.trim() : '', note: note.trim(), preference: '', total: quote.total })
     navigate(demoHref(`/booking/${result.booking.token}`))
   }
 
-  return (
-    <div className="pad">
-      <p className="eyebrow">Session details · {villa.name}</p>
-      <h1>{service.name}</h1>
-      <p className="lede">The villa is already on this request. A preferred time is not a reservation.</p>
-      <form onSubmit={onSubmit} noValidate>
-        {errors.length > 0 && <div className="note" role="alert">{errors.map((item) => <p key={item}>{item}</p>)}</div>}
-        {savedNote && <p className="note">{savedNote}</p>}
-        <label className="field"><span>Preferred date</span><input type="date" value={date} min={minDate} required onChange={(event) => setDate(event.target.value)} /></label>
-        <label className="field"><span>Preferred time, Bali</span>
-          <select value={time} onChange={(event) => setTime(event.target.value)}>
-            {sessionTimes.map((item) => <option key={item} value={item}>{item}</option>)}
-          </select>
-        </label>
-        <div className="field"><span>Participants</span>
-          <div className="choice-row" role="group" aria-label="Participants">
-            {[1, service.maxGuests].filter((value, index, list) => list.indexOf(value) === index).map((count) => (
-              <button type="button" key={count} className={people === count ? 'is-on' : undefined} onClick={() => setPeople(count)}>{count === 1 ? '1 guest' : `${count} guests`}</button>
-            ))}
-          </div>
-        </div>
-        <label className="field"><span>Your name</span><input value={name} autoComplete="name" onChange={(event) => setName(event.target.value)} required /></label>
-        <label className="field"><span>WhatsApp, with country code</span><input value={whatsapp} inputMode="tel" autoComplete="tel" placeholder="+62…" onChange={(event) => setWhatsapp(event.target.value)} /></label>
-        <label className="field"><span>Email, if you do not use WhatsApp</span><input type="email" value={email} autoComplete="email" onChange={(event) => setEmail(event.target.value)} /></label>
-        <details className="more">
-          <summary>Optional requests</summary>
-          <label className="field"><span>Experience, access, or a note for the villa</span><textarea value={note} onChange={(event) => setNote(event.target.value)} /></label>
-          <label className="field"><span>Instructor preference, if you have one</span><input value={preference} onChange={(event) => setPreference(event.target.value)} /><small className="quiet">A preference is passed on. It is not a confirmed assignment.</small></label>
-        </details>
-        <div className="total-box"><span>Demo total, one session<br /><small>Second guest {people > 1 ? rp(250000) : 'Rp 0'} · Travel Rp 0</small></span><strong>{rp(quote.total)}</strong></div>
-        <p className="quiet">{POLICY_LINE} {SUPPLY_LINE} {CONCIERGE_LINE} {PAYMENT_LINE} This demonstration stores the request in this browser and does not send email.</p>
-        <button className="action" type="submit">Request this session</button>
-      </form>
-    </div>
-  )
+  return <section className="request-page"><DemoLink to={`/services/${service.slug}`} className="back-link"><ArrowLeft size={15} /> Back to {service.name.toLowerCase()}</DemoLink><div className="request-heading"><span className="eyebrow">A LITTLE TIME FOR YOU</span><h1>Make it your hour.</h1><p>Choose your preferred time. We will take care of the details.</p></div><div className="request-grid"><form className="guest-request-form" onSubmit={onSubmit} noValidate>
+    {errors.length > 0 && <div className="form-errors" role="alert" ref={errorRef} tabIndex={-1}><strong>A few details to check</strong>{errors.map((error) => <p key={error}>{error}</p>)}</div>}
+    <fieldset><legend><span>01</span> Your session</legend><label className="field"><span>Preferred date</span><input type="date" value={date} min={minDate} maxLength={10} required onChange={(event) => setDate(event.target.value)} /></label><div className="field"><span id="preferred-time-label">Preferred time <small>Bali time · UTC+8</small></span><div className="time-choices" role="group" aria-labelledby="preferred-time-label">{sessionTimes.map((item) => <button key={item} type="button" aria-pressed={time === item} className={time === item ? 'is-on' : ''} onClick={() => setTime(item)}>{item}</button>)}</div></div><div className="field"><span id="guest-count-label">Who's joining?</span><div className="choice-row" role="group" aria-labelledby="guest-count-label">{Array.from({ length: service.maxGuests }, (_, i) => i + 1).map((count) => <button type="button" key={count} aria-pressed={people === count} className={people === count ? 'is-on' : ''} onClick={() => setPeople(count)}><Users size={16} /> {count === 1 ? 'Just me' : 'Two of us'} {people === count && <Check size={14} />}</button>)}</div></div></fieldset>
+    <fieldset><legend><span>02</span> A way to reach you</legend><label className="field"><span>Your name</span><input value={name} maxLength={100} autoComplete="name" placeholder="Your first and last name" onChange={(event) => setName(event.target.value)} required /></label><div className="contact-label"><span>{contactMethod === 'whatsapp' ? 'WhatsApp number' : 'Email address'}</span><button type="button" onClick={() => { setContactMethod(contactMethod === 'whatsapp' ? 'email' : 'whatsapp'); setContact('') }}>Use {contactMethod === 'whatsapp' ? 'email' : 'WhatsApp'} instead</button></div><label className="field"><span className="sr-only">{contactMethod === 'whatsapp' ? 'WhatsApp number with country code' : 'Email address'}</span><input type={contactMethod === 'email' ? 'email' : 'tel'} value={contact} maxLength={200} autoComplete={contactMethod === 'email' ? 'email' : 'tel'} placeholder={contactMethod === 'whatsapp' ? '+61 4XX XXX XXX' : 'Your email address'} onChange={(event) => setContact(event.target.value)} required /><small>For your quote and session confirmation.</small></label><details className="optional-notes"><summary>Anything you would like us to know? <span>Optional</span></summary><label className="field"><span className="sr-only">Optional requests</span><textarea value={note} maxLength={1000} placeholder="Your experience, preferred pace or an access request…" onChange={(event) => setNote(event.target.value)} /></label></details></fieldset>
+    <div className="form-submit"><p><ShieldCheck size={15} /> A clear quote before you pay.</p><button className="action" type="submit" disabled={busy}>{busy ? 'Saving your request…' : 'Request my session'} <ArrowRight size={17} /></button><small>Demo request only. Details stay in this tab; no message or payment is sent.</small></div>
+  </form><aside className="request-summary"><GuestPhoto image={service.image} sizes="(max-width: 800px) 100vw, 36vw" /><div className="summary-copy"><span className="eyebrow">YOUR HOUR AT VILLA SORA</span><h2>{service.name}</h2><ul><li><CalendarDays size={16} /> {formatBali(date || minDate)}</li><li><Clock3 size={16} /> {time} · 60 minutes · Bali time</li><li><Users size={16} /> {quote.guests} {quote.guests === 1 ? 'guest' : 'guests'}</li><li><MapPin size={16} /> Villa Sora, Canggu</li></ul><dl><div><dt>Private session</dt><dd>{rp(quote.session)}</dd></div>{people > 1 && <div><dt>Second guest</dt><dd>{rp(quote.extra)}</dd></div>}<div><dt>Travel to your villa</dt><dd>Included</dd></div><div className="summary-total"><dt>Session total</dt><dd>{rp(quote.total)}</dd></div></dl><p className="summary-policy">Free rescheduling up to 36 hours before your session. Your preferred time is confirmed with your instructor.</p></div></aside></div></section>
 }
 
-const statusCopy = {
-  received: 'Request received. The time is not reserved yet.',
-  checking: 'Checking availability. A coordinator is matching the session, the area and your preferred time.',
-  offer: 'Offer ready. A vetted instructor can take this hour. The total below is the amount due.',
-  confirmed: 'Confirmation preview, as supply allows. Payment details sent with confirmation.',
-} as const
-
-export function BookingLookup() {
-  return <BookingPage />
-}
+export function BookingLookup() { return <BookingPage /> }
 
 export function BookingPage() {
   const { token } = useParams()
-  const { booking, findByContact, advance, payDemo } = useDemoState()
-  const [reference, setReference] = useState('')
-  const [whatsapp, setWhatsapp] = useState('')
-  const [miss, setMiss] = useState(false)
-  const navigate = useNavigate()
+  const { booking } = useDemoState()
   const match = booking && (!token || booking.token === token) ? booking : null
   const service = getService(match?.serviceSlug)
-
-  function lookup(event: FormEvent) {
-    event.preventDefault()
-    const found = findByContact(reference, whatsapp)
-    if (!found) {
-      setMiss(true)
-      return
-    }
-    navigate(demoHref(`/booking/${found.token}`))
-  }
-
-  if (!match) {
-    return (
-      <div className="pad">
-        <p className="eyebrow">Private to this request</p>
-        <h1>My booking</h1>
-        <p className="lede">The villa QR does not open a booking list. Enter the reference and WhatsApp from your own request.</p>
-        <form onSubmit={lookup}>
-          {miss && <p className="note" role="alert">No request in this browser matches that reference and number.</p>}
-          <label className="field"><span>Reference</span><input value={reference} onChange={(event) => setReference(event.target.value)} autoComplete="off" /></label>
-          <label className="field"><span>WhatsApp</span><input value={whatsapp} inputMode="tel" onChange={(event) => setWhatsapp(event.target.value)} /></label>
-          <button className="action" type="submit">Show my request</button>
-        </form>
-      </div>
-    )
-  }
-
-  const steps = ['received', 'checking', 'offer', 'confirmed'] as const
-  return (
-    <div className="pad">
-      <p className="eyebrow">{match.reference}</p>
-      <h1>{statusCopy[match.status].split('.')[0]}</h1>
-      <p className="lede">{statusCopy[match.status]} {CONCIERGE_LINE}</p>
-      <ol className="status-list">
-        {steps.map((step) => <li key={step} className={step === match.status ? 'is-on' : undefined}><span>{statusCopy[step].split('.')[0]}</span></li>)}
-      </ol>
-      <dl className="spec">
-        <div><dt>Service</dt><dd>{match.serviceName}</dd></div>
-        <div><dt>Villa</dt><dd>{villa.name}, {villa.area}</dd></div>
-        <div><dt>Preferred time</dt><dd>{formatBali(match.date)} · {match.time} Bali</dd></div>
-        <div><dt>Guests</dt><dd>{match.participants}</dd></div>
-        <div><dt>Total</dt><dd>{rp(match.total)}. {match.payment === 'details-sent' ? PAYMENT_SENT : PAYMENT_LINE}</dd></div>
-        <div><dt>Rescheduling</dt><dd>{POLICY_LINE} {SUPPLY_LINE}</dd></div>
-        {match.status === 'confirmed' && <div><dt>Sample assignment</dt><dd>Ayu Prameswari is a sample name in this preview. In a live booking the instructor is named on the written quote. {BACKUP_LINE} {service?.languages}</dd></div>}
-      </dl>
-      {match.preference && <p className="note">Preference noted: {match.preference}. It is not a confirmed assignment.</p>}
-      <div className="demo-panel">
-        <p className="eyebrow">Demonstration only</p>
-        <p>Preview the next status. Nothing here sends a quote or an email.</p>
-        <div className="row">
-          {match.status === 'received' && <button type="button" className="ghost" onClick={advance}>Preview availability check</button>}
-          {match.status === 'checking' && <button type="button" className="ghost" onClick={advance}>Preview the offer</button>}
-          {match.status === 'offer' && <button type="button" className="action" onClick={payDemo}>Payment details sent with confirmation</button>}
-        </div>
-        {match.offerExpiresAt && match.status === 'offer' && <p className="quiet">The sample offer stays open as supply allows. {PAYMENT_LINE}</p>}
-      </div>
-    </div>
-  )
+  if (!match || !service) return <section className="booking-empty"><div className="empty-symbol"><CalendarDays size={36} strokeWidth={1} /></div><span className="eyebrow">YOUR TIME AT VILLA SORA</span><h1>A little time for you.</h1><p>{token ? 'This request is not available in this tab. You can start a new session request below.' : 'Your session request will appear here. Start with an hour that feels right for you.'}</p><DemoLink to="/services" className="action">Explore your sessions <ArrowRight size={17} /></DemoLink><DemoLink to="/help" className="text-link">Ask your concierge</DemoLink></section>
+  const confirmed = match.status === 'confirmed'
+  return <section className="booking-page"><div className="booking-heading"><span className="success-symbol"><CheckCircle2 size={35} strokeWidth={1.3} /></span><span className="eyebrow">THANK YOU, {match.name.split(' ')[0].toUpperCase()}</span><h1>{confirmed ? 'Your session details.' : 'Your request is in.'}</h1><p>{confirmed ? 'Your selected session, all in one place.' : 'A little time for you, one step closer. Here is what you have requested.'}</p></div><div className="booking-grid"><div className="booking-session"><GuestPhoto image={service.image} sizes="(max-width: 800px) 100vw, 50vw" /><div><span className="eyebrow">VILLA SORA · {match.reference}</span><h2>{match.serviceName}</h2><div className="booking-facts"><span><CalendarDays size={17} /> {formatBali(match.date)}</span><span><Clock3 size={17} /> {match.time} Bali time · 60 minutes</span><span><Users size={17} /> {match.participants} {match.participants === 1 ? 'guest' : 'guests'}</span><span><MapPin size={17} /> Villa Sora, Canggu</span></div><p className="booking-total">Session total <strong>{rp(match.total)}</strong></p></div></div><aside className="booking-next"><span className="eyebrow">WHAT HAPPENS NEXT</span><h2>We've got the details.</h2><ol><li className="done"><span><Check size={15} /></span><div><strong>Request received</strong><p>Your preferred session and time are saved.</p></div></li><li><span>2</span><div><strong>Instructor matching</strong><p>Your concierge checks the right professional for your session.</p></div></li><li><span>3</span><div><strong>Your written confirmation</strong><p>You receive your instructor, final quote and payment details.</p></div></li></ol><p className="demo-booking-note">This is a demo request. No instructor has been booked and no payment is due.</p><DemoLink to="/help" className="action secondary"><MessageCircle size={16} /> Ask your concierge</DemoLink></aside></div><DemoLink to="/" className="back-link"><ArrowLeft size={15} /> Back to your villa menu</DemoLink></section>
 }
+
+const faq = [
+  ['Where does my session take place?', 'Right here at Villa Sora. Depending on your session, a shaded terrace, the garden or a clear area indoors is ideal. We coordinate the setup with you.'],
+  ['Can two of us join a session?', 'Most sessions welcome one or two guests. A second guest adds Rp 250.000 per session. Bodywork & Recovery is arranged for one guest at a time.'],
+  ['Do I need to bring equipment?', 'The service page tells you what your instructor brings and what to prepare. Wear comfortable clothes and keep drinking water nearby.'],
+  ['How do I confirm my session?', 'Choose your preferred date and time. Your concierge checks instructor availability and sends a written quote before payment. Your professional is named in the confirmation.'],
+  ['Can I reschedule?', 'Free rescheduling is available up to 36 hours before your session. Contact the concierge so the new time can be checked with your instructor.'],
+]
 
 export function HelpPage() {
-  const message = `Villa Sora, Canggu. I need help with a wellness request.`
-  return (
-    <div className="pad">
-      <p className="eyebrow">{villa.name}</p>
-      <h1>Help</h1>
-      <p className="lede">The message includes the villa. A coordinator replies as supply allows. {CONCIERGE_LINE}</p>
-      <dl className="spec">
-        <div><dt>WhatsApp</dt><dd><a className="text-link" href={`${WHATSAPP_URL}?text=${encodeURIComponent(message)}`}>{WHATSAPP_DISPLAY}</a></dd></div>
-        <div><dt>Email</dt><dd><a className="text-link" href={`mailto:${HELP_EMAIL}?subject=Villa%20Sora`}>{HELP_EMAIL}</a></dd></div>
-        <div><dt>Changing villa</dt><dd>Ask here. The location and the total are checked before a request moves.</dd></div>
-      </dl>
-      <p className="quiet">{POLICY_LINE}</p>
-    </div>
-  )
+  const [chat, setChat] = useState(false)
+  return <section className="help-page"><div className="page-intro"><span className="eyebrow">YOUR VILLA CONCIERGE</span><h1>A little help, anytime you need it.</h1><p>Choosing your hour should feel easy. Let us help you find the right session for your stay.</p></div><div className="help-grid"><div className="help-contact-card"><span className="round-symbol"><MessageCircle size={30} strokeWidth={1.2} /></span><h2>Let's find your kind of feel-good.</h2><p>Ask about a session, tell us what you enjoy, or get help with your request.</p><button type="button" className="action" onClick={() => setChat(true)}>Chat with your concierge <ArrowUpRight size={17} /></button><span className="help-villa"><MapPin size={14} /> Villa Sora, Canggu</span><span className="quiet">Prefer email? <a href={`mailto:${HELP_EMAIL}`}>{HELP_EMAIL}</a></span></div><div className="help-faq"><span className="eyebrow">A FEW HELPFUL DETAILS</span><h2>Good to know.</h2>{faq.map(([question, answer]) => <details key={question}><summary>{question}<ChevronDown size={16} /></summary><p>{answer}</p></details>)}</div></div>{chat && <ConciergeChat onClose={() => setChat(false)} />}</section>
 }
 
-function UnknownVilla({ slug }: { slug: string }) {
-  return (
-    <div className="pad">
-      <h1>This villa link is not active</h1>
-      <p className="lede">{slug} is not on this demonstration. Existing sessions would keep their private links.</p>
-      <DemoLink to="/help" className="text-link">Contact the coordinator</DemoLink>
-    </div>
-  )
+function ConciergeChat({ onClose }: { onClose: () => void }) {
+  const [message, setMessage] = useState('')
+  const [messages, setMessages] = useState<{ text: string; guest: boolean }[]>([])
+  function send(text: string) {
+    const input = text.trim()
+    if (!input) return
+    const answer = /two|friend|couple/i.test(input) ? 'Yoga, Pilates and personal training can all be arranged for two guests. The second guest adds Rp 250.000. Choose a session and the time that suits you.' : /relax|calm|slow/i.test(input) ? 'Private yoga, guided meditation or a quiet bodywork hour could be a lovely fit. You can explore each session in your villa menu.' : /book|request|time|reschedule/i.test(input) ? 'Your latest request is in My booking. The concierge confirms your preferred time and instructor before payment.' : 'Thank you. Explore the sessions in your villa menu and include your preferences in the request. Your concierge coordinates the details.'
+    setMessages((prev) => [...prev, { text: input, guest: true }, { text: answer, guest: false }])
+    setMessage('')
+  }
+  return <GuestDialog title="Villa Sora concierge" onClose={onClose}><p className="chat-demo-label">Demo chat · messages stay in this tab</p><div className="chat-messages" role="log" aria-live="polite"><p className="chat-reply">Hello! A little movement or a slower morning? Let's find the right hour for you.</p>{messages.map((item, i) => <p key={i} className={item.guest ? 'chat-guest' : 'chat-reply'}>{item.text}</p>)}</div>{messages.length === 0 && <div className="chat-suggestions">{['Something relaxing', 'A workout for two', 'Help with my booking'].map((q) => <button type="button" key={q} onClick={() => send(q)}>{q} <ArrowUpRight size={13} /></button>)}</div>}<form className="chat-form" onSubmit={(e) => { e.preventDefault(); send(message) }}><label className="sr-only" htmlFor="concierge-message">Your message</label><input id="concierge-message" value={message} maxLength={500} placeholder="Ask your concierge…" onChange={(e) => setMessage(e.target.value)} /><button type="submit" aria-label="Send demo message" disabled={!message.trim()}><ArrowRight size={20} /></button></form></GuestDialog>
 }
 
-function PausedCode({ code }: { code: string }) {
-  return (
-    <div className="pad">
-      <h1>This card is paused</h1>
-      <p className="lede">Code {code} does not open a guest list. Ask the villa for the current card, or message the coordinator.</p>
-      <DemoLink to="/help" className="action solid">Help for Villa Sora</DemoLink>
-    </div>
-  )
+function Unavailable({ title, text }: { title: string; text: string }) {
+  return <section className="booking-empty"><div className="empty-symbol"><Leaf size={35} strokeWidth={1} /></div><h1>{title}</h1><p>{text}</p><DemoLink to="/" className="action">Open your villa menu <ArrowRight size={17} /></DemoLink><DemoLink to="/help" className="text-link">Ask the concierge</DemoLink></section>
 }
 
 export function QrCard() {
-  const value = useMemo(() => QR_LANDING, [])
-  return (
-    <div className="pad">
-      <p className="eyebrow no-print">Printable A6 card</p>
-      <article className="card-sheet">
-        <p className="eyebrow">Villa Sora</p>
-        <h1>Scan to book private wellness at your villa.</h1>
-        <QrMark value={value} label="QR code opening the Villa Sora menu" />
-        <p>demo.personalfitness.id/q/sora-table</p>
-        <p>{WHATSAPP_DISPLAY}<br />{HELP_EMAIL}</p>
-        <p className="quiet">Powered by Personal Fitness. {POLICY_LINE}</p>
-      </article>
-      <p className="no-print quiet">The printed code is /q/sora-table. The villa page can change without reprinting that code. The QR does not contain a booking.</p>
-      <button type="button" className="ghost no-print" onClick={() => window.print()}>Print or save as PDF</button>
-    </div>
-  )
+  return <section className="qr-print-page"><article className="print-villa-card"><Leaf size={28} strokeWidth={1} /><span className="eyebrow">VILLA SORA · CANGGU, BALI</span><h1>Your villa.<br /><em>Your pace.</em></h1><p>Private training, yoga, Pilates and more.<br />Scan to find your hour.</p><QrMark value={QR_LANDING} label="QR code opening the Villa Sora guest wellness menu" /><p className="qr-address">villademo.personalfitness.id</p><small>Powered by Personal Fitness</small></article><button type="button" className="action no-print" onClick={() => window.print()}>Print your villa card <ArrowUpRight size={17} /></button></section>
 }

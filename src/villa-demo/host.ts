@@ -59,5 +59,5 @@ export function canonicalDemoPath(pathname: string) {
   return `/villademo${path}`
 }
 
-export const QR_LANDING = 'https://demo.personalfitness.id/q/sora-table'
-export const DEMO_ORIGIN = 'https://demo.personalfitness.id'
+export const QR_LANDING = 'https://villademo.personalfitness.id/q/sora-table'
+export const DEMO_ORIGIN = 'https://villademo.personalfitness.id'

@@ -642,5 +642,68 @@
     "width": 1440,
     "height": 960,
     "origin": "generated-illustration"
+  },
+  "/villademo": {
+    "src": "/images/villademo/guest-villa.webp",
+    "alt": "A sunlit tropical villa with curved cream walls, a garden terrace and a turquoise swimming pool",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/private-yoga": {
+    "src": "/images/villademo/guest-yoga.webp",
+    "alt": "An Indonesian yoga instructor guiding international adult guests on a villa terrace",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/private-strength": {
+    "src": "/images/villademo/guest-training.webp",
+    "alt": "An Indonesian trainer coaching an international guest with a dumbbell at a villa",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/mat-pilates": {
+    "src": "/images/villademo/guest-pilates.webp",
+    "alt": "An Indonesian Pilates instructor guiding an international guest through mat exercise",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/bodywork": {
+    "src": "/images/villademo/guest-bodywork.webp",
+    "alt": "An Indonesian practitioner providing a draped bodywork session at a villa",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/zumba": {
+    "src": "/images/villademo/guest-dance.webp",
+    "alt": "An Indonesian dance fitness instructor leading international guests at a villa",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/quieter-hour": {
+    "src": "/images/villademo/guest-meditation.webp",
+    "alt": "An Indonesian meditation instructor seated with international guests in a tropical garden",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/mobility": {
+    "src": "/images/villademo/guest-mobility.webp",
+    "alt": "An Indonesian mobility coach guiding an international guest through a gentle stretch",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
+  },
+  "/villademo/services/boxing": {
+    "src": "/images/villademo/guest-boxing.webp",
+    "alt": "An Indonesian boxing coach holding focus mitts for an international guest",
+    "width": 1600,
+    "height": 1067,
+    "origin": "generated-editorial"
   }
 }

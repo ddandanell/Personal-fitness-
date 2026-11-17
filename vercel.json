@@ -4,6 +4,13 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/(?:villademo/)?(?:partner|ops|how-it-works|walkthrough|setup|portal)(?:/.*)?$",
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
+      "dest": "/villademo",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
       "src": "^/$",
       "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo)\\.personalfitness\\.id$" }],
       "dest": "/villademo",
@@ -13,7 +20,7 @@
     {
       "src": "^/$",
       "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
-      "dest": "/villademo/portal",
+      "dest": "/villademo",
       "headers": { "X-Robots-Tag": "noindex, nofollow" },
       "continue": true
     },
@@ -73,7 +80,7 @@
     {
       "source": "/",
       "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
-      "destination": "/villademo/portal"
+      "destination": "/villademo"
     },
     {
       "source": "/booking/:token*",

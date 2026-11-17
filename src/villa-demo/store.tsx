@@ -1,8 +1,8 @@
-import { useMemo, useState, type ReactNode } from 'react'
+import { useMemo, useRef, useState, type ReactNode } from 'react'
 import { getService, sessionQuote } from './data'
 import { DemoContext, type GuestBooking, type RequestInput, type Role } from './demo-state'
 
-const KEY = 'villa-sora-demo-v1'
+const KEY = 'villa-sora-guest-demo-v2'
 
 type Saved = { booking: GuestBooking | null; role: Role }
 
@@ -30,9 +30,11 @@ function referenceFor(token: string) {
 
 export function DemoStateProvider({ children }: { children: ReactNode }) {
   const [saved, setSaved] = useState<Saved>(load)
+  const current = useRef(saved)
 
   const api = useMemo(() => {
     const persist = (next: Saved) => {
+      current.current = next
       setSaved(next)
       try { sessionStorage.setItem(KEY, JSON.stringify(next)) } catch { /* private mode */ }
     }
@@ -43,7 +45,8 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
       setRole: (role: Role) => persist({ ...saved, role }),
       reset: () => {
         try { sessionStorage.removeItem(KEY) } catch { /* ignore */ }
-        setSaved({ booking: null, role: 'manager' })
+        current.current = { booking: null, role: 'manager' }
+        setSaved(current.current)
       },
       findByContact: (reference: string, whatsapp: string) => {
         const booking = saved.booking
@@ -55,8 +58,8 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
         return booking
       },
       submit: (input: RequestInput) => {
-        if (saved.booking && saved.booking.idempotencyKey === input.idempotencyKey) {
-          return { booking: saved.booking, created: false }
+        if (current.current.booking && current.current.booking.idempotencyKey === input.idempotencyKey) {
+          return { booking: current.current.booking, created: false }
         }
         const quote = sessionQuote(input.participants, getService(input.serviceSlug)?.maxGuests ?? 2)
         const token = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `tok-${Date.now()}`

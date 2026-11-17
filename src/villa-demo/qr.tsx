@@ -1,7 +1,7 @@
 import { encode } from 'uqr'
 
 export function QrMark({ value, label }: { value: string; label: string }) {
-  const qr = encode(value, { ecc: 'M', border: 2 })
+  const qr = encode(value, { ecc: 'M', border: 4 })
   const cells: string[] = []
   qr.data.forEach((row, y) => {
     row.forEach((on, x) => {
