@@ -1,15 +1,11 @@
 import { Navigate, Outlet, Route, Routes } from 'react-router'
 import Layout from '@/components/Layout'
-import { isVillaDemoHost } from '@/villa-demo/host'
+import { isVillaDemoHost, isVillasHost } from '@/villa-demo/host'
 import { DemoStateProvider } from '@/villa-demo/store'
 import { DemoShell } from '@/villa-demo/shell'
-import IntroPage from '@/villa-demo/IntroPage'
-import StayPage from '@/villa-demo/StayPage'
-import TrainerPage from '@/villa-demo/TrainerPage'
-import BookPage from '@/villa-demo/BookPage'
-import ConfirmedPage from '@/villa-demo/ConfirmedPage'
-import CardPage from '@/villa-demo/CardPage'
-import DeskPage from '@/villa-demo/DeskPage'
+import { BookingLookup, BookingPage, GuestHome, HelpPage, QrCard, RequestPage, ServiceDetail, ServicesIndex } from '@/villa-demo/GuestPages'
+import { OpsDesk, PartnerDesk } from '@/villa-demo/DeskPages'
+import { HowItWorks, PortalEntry, SetupPage, Walkthrough } from '@/villa-demo/ExplainPages'
 import Home from '@/pages/public/Home'
 import IndonesianHome from '@/pages/public/IndonesianHome'
 import ServiceGate from '@/pages/public/ServiceGate'
@@ -35,30 +31,41 @@ function DemoRoot() {
   )
 }
 
-function demoChildren() {
-  return [
-    <Route key="index" index element={<IntroPage />} />,
-    <Route key="stay" path="stay/:slug" element={<StayPage />} />,
-    <Route key="trainer" path="trainers/:slug" element={<TrainerPage />} />,
-    <Route key="book" path="book" element={<BookPage />} />,
-    <Route key="confirmed" path="confirmed" element={<ConfirmedPage />} />,
-    <Route key="card" path="card" element={<CardPage />} />,
-    <Route key="card-villa" path="card/:slug" element={<CardPage />} />,
-    <Route key="desk" path="desk" element={<DeskPage view="today" />} />,
-    <Route key="desk-book" path="desk/book" element={<DeskPage view="book" />} />,
-    <Route key="desk-schedules" path="desk/schedules" element={<DeskPage view="schedules" />} />,
-    <Route key="desk-roster" path="desk/roster" element={<DeskPage view="roster" />} />,
-    <Route key="missing" path="*" element={<IntroPage />} />,
-  ]
+function portalChildren(home: 'guest' | 'portal') {
+  return (
+    <>
+      <Route index element={home === 'guest' ? <GuestHome /> : <PortalEntry />} />
+      <Route path="services" element={<ServicesIndex />} />
+      <Route path="services/:slug" element={<ServiceDetail />} />
+      <Route path="request/:slug" element={<RequestPage />} />
+      <Route path="booking" element={<BookingLookup />} />
+      <Route path="booking/:token" element={<BookingPage />} />
+      <Route path="help" element={<HelpPage />} />
+      <Route path="how-it-works" element={<HowItWorks />} />
+      <Route path="partner" element={<PartnerDesk />} />
+      <Route path="partner/qr" element={<QrCard />} />
+      <Route path="ops" element={<OpsDesk />} />
+      <Route path="walkthrough" element={<Walkthrough />} />
+      <Route path="card" element={<QrCard />} />
+      <Route path="setup" element={<SetupPage />} />
+      <Route path="portal" element={<PortalEntry />} />
+      <Route path="q/:code" element={<GuestHome />} />
+      <Route path="*" element={<GuestHome />} />
+    </>
+  )
 }
 
 export default function App() {
   const onDemoHost = isVillaDemoHost()
+  const onVillasHost = isVillasHost()
   return (
     <Routes>
-      {onDemoHost && <Route path="/" element={<DemoRoot />}>{demoChildren()}</Route>}
-      <Route path="/villademo" element={<DemoRoot />}>{demoChildren()}</Route>
-      {!onDemoHost && (
+      {(onDemoHost || onVillasHost) && (
+        <Route path="/" element={<DemoRoot />}>{portalChildren(onVillasHost ? 'portal' : 'guest')}</Route>
+      )}
+      {onVillasHost && <Route path="/v/:slug" element={<DemoRoot />}>{portalChildren('guest')}</Route>}
+      <Route path="/villademo" element={<DemoRoot />}>{portalChildren('guest')}</Route>
+      {!onDemoHost && !onVillasHost && (
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/id" element={<IndonesianHome />} />
@@ -72,8 +79,8 @@ export default function App() {
           <Route path="/mobility-coaching" element={<ServiceGate slug="mobility-coaching" />} />
           <Route path="/boxing-fitness" element={<ServiceGate slug="boxing-fitness" />} />
           <Route path="/guided-meditation" element={<ServiceGate slug="guided-meditation" />} />
-        <Route path="/bodywork-recovery" element={<ServiceGate slug="bodywork-recovery" />} />
-        <Route path="/zumba-dance-fitness" element={<ServiceGate slug="zumba-dance-fitness" />} />
+          <Route path="/bodywork-recovery" element={<ServiceGate slug="bodywork-recovery" />} />
+          <Route path="/zumba-dance-fitness" element={<ServiceGate slug="zumba-dance-fitness" />} />
           <Route path="/swimming" element={<ServiceGate slug="swimming" />} />
           <Route path="/nutrition-consultation" element={<ServiceGate slug="nutrition-consultation" />} />
           <Route path="/physiotherapy" element={<ServiceGate slug="physiotherapy" />} />
