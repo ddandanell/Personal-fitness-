@@ -24,7 +24,7 @@ The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga sta
 
 Programmes of 6, 9 and 12 visits take about 9.5, 14.3 and 23.8 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
 
-Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
+Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 
 ## What beginners should write
 

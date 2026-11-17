@@ -40,7 +40,7 @@ Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five li
 
 Keep card numbers, ID photos and medical files out. If you want a template, use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
 
-We reply with a starting price or a request for one missing fact. The written quote is what you pay. Confirmation names the professional, the arrival window and the access note. Pay only on the merchant link.
+We reply with a starting price or a request for one missing fact. The written quote is what you pay. Confirmation names the professional, the arrival window and the access note. Pay securely using the payment details in your written quote.
 
 The sequence sits on [how it works](/how-it-works). The city hub sits on [personal trainer in Bali](/bali). The managed-session investigation sits on [what a Bali villa session includes](/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes).
 

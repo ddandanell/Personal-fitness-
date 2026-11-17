@@ -14,7 +14,7 @@ A WhatsApp “we have a guest who wants yoga tomorrow” without an area, window
 
 Send WhatsApp +62 811-3803-488 or hello@personalfitness.id with: the session, Bali or Jakarta, the cluster (Canggu, Seminyak, Ubud, Sanur, Uluwatu, South Jakarta, Central Jakarta), villa or hotel, a two-hour window, and headcount. Add the person who can open the gate. Add whether the guest will be present. Add if the host is paying or the guest is paying.
 
-Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep guest medical files, passport photos and card numbers out of the group chat. Payment happens on the merchant link in the written quote.
+Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep guest medical files, passport photos and card numbers out of the group chat. Payment details are shared in your written quote.
 
 If the guest wants yoga for two, that pair rule is published. If they want training for two, extra people are billed. Boxing is one person. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing) before you promise a complimentary second mat.
 
@@ -59,7 +59,7 @@ A guest hour is useful when the property, the guest and the quote match. Persona
 
 ## Who speaks to WhatsApp
 
-One property contact is better than five guest phones. The coordinator needs a person who can answer access questions the same day. Guests can still receive the confirmation. They should not be asked to forward clinic letters or card numbers. If the guest is paying, the merchant link goes to the guest. If the villa is paying, the merchant link goes to the villa. Do not mix those in one chat thread.
+One property contact is better than five guest phones. The coordinator needs a person who can answer access questions the same day. Guests can still receive the confirmation. They should not be asked to forward clinic letters or card numbers. If the guest is paying, the payment details in the written quote go to the guest. If the villa is paying, the payment details in the written quote go to the villa. Do not mix those in one chat thread.
 
 A repeating Monday yoga slot is still subject to supply. A wedding week is not an automatic surcharge; it is a diary problem. Send the dates. We will say yes, offer a second window, or decline. That answer belongs in writing, next to the rate, before anyone promises the bride a 06:30 private class on the lawn.
 

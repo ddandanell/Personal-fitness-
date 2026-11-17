@@ -16,7 +16,7 @@ That message lets us check whether we can honour the visit in a published cluste
 
 ## What never belongs in the first chat
 
-Do not send card numbers, bank details, ID photos or medical files. WhatsApp is for qualification, not settlement and not clinical records. Payment happens on the merchant link in the quote. Screening, if it is ever required, uses a separate route.
+Do not send card numbers, bank details, ID photos or medical files. WhatsApp is for qualification, not settlement and not clinical records. Payment details are shared in your written quote. Screening, if it is ever required, uses a separate route.
 
 Do not paste a clinic letter and ask us to build rehab. We do not diagnose, treat injury or book physiotherapy on this site. [Mobility coaching](/mobility-coaching) is stretching, not treatment. If pain is new, sharp or swollen, speak to a clinician first.
 
@@ -44,11 +44,11 @@ Those four messages can be quoted. A message that says “need trainer tomorrow 
 
 ## What happens after you send it
 
-We check scope: a published fitness session, a usable private space, a cluster we publish, no clinical work hiding in the brief. Then we check supply: a suitable professional for that window and cost ceiling, or a second name. Then you receive the quote: total, extras, exclusions, cancellation. You pay on the link. You get confirmation: who is coming, arrival window, access note, preparation.
+We check scope: a published fitness session, a usable private space, a cluster we publish, no clinical work hiding in the brief. Then we check supply: a suitable professional for that window and cost ceiling, or a backup instructor where available. Then you receive the quote: total, extras, exclusions, cancellation. Payment details are shared in your written quote. You get confirmation: who is coming, arrival window, access note, preparation.
 
 Nothing in that chain is automatic. [FAQ](/faq) repeats the same rules: an enquiry does not reserve the time; we do not cover the whole of Bali or Jakarta; nutrition and physiotherapy are not live services.
 
-If we cannot honour the window, we say so. That is cheaper than a professional stuck in traffic or downstairs of a lobby that said no.
+If the window is not available, we say so. That is cheaper than a professional stuck in traffic or downstairs of a lobby that said no.
 
 ## Programmes and first visits
 
@@ -66,7 +66,7 @@ If two households want two hours, send two windows. Do not hide a second address
 4. Delete anything that looks like a card, ID or clinic letter.
 5. Send WhatsApp +62 811-3803-488 or email hello@personalfitness.id.
 6. Wait for the written quote.
-7. Pay only on the merchant link.
+7. Pay securely using the payment details in your written quote.
 8. Treat confirmation, not the first tick, as the booking.
 
 A useful enquiry is short, geographic and non-clinical. PersonalFitness.id exists to turn that message into a quote you can accept. If that is what you wanted when you typed the query, start on [contact](/contact) or the [homepage](/) and send the area.

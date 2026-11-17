@@ -139,7 +139,7 @@ export function siteGraph() {
         email: COMPANY_EMAIL,
         priceRange: 'IDR 650000-1600000',
         currenciesAccepted: 'IDR',
-        paymentAccepted: 'Invoice, online payment link',
+        paymentAccepted: 'Payment details in the written quote',
         availableLanguage: ['English', 'Indonesian'],
         ...(partner.OFFICE_GEO ? { geo: { '@type': 'GeoCoordinates', latitude: partner.OFFICE_GEO.lat, longitude: partner.OFFICE_GEO.lng } } : {}),
         ...(partner.COORDINATION_HOURS ? { openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: partner.COORDINATION_HOURS.split('-')[0], closes: partner.COORDINATION_HOURS.split('-')[1] } } : {}),

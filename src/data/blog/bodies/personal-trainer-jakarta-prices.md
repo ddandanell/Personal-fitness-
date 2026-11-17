@@ -46,11 +46,11 @@ If your tower already has a gym, a house trainer can look cheaper because the ro
 
 Jakarta is a recurring city. Two or three mornings a week in the same unit is the design. Drop-in is for travel months. Price the recurring block on [programmes](/programmes). Do not buy twelve sessions for a two-week work trip.
 
-The same professional across the block is an operations goal, not a guarantee. Backup is part of the product. A solo solo operator with dengue and no backup is a different risk profile. Ask.
+The same professional across the block is an operations goal, not a guarantee. A backup is named where available. Someone with no backup is a different arrangement. Ask.
 
 ## Payment and refunds
 
-Pay on the merchant link. Never send card numbers, account numbers or KTP photos in WhatsApp. Refunds, if due, reverse on the same path. Professional no-show: you are not charged. You cancel inside 36 hours: you are charged. Details on [refunds](/refunds-rescheduling).
+Pay securely using the payment details in your written quote. Never send card numbers, account numbers or KTP photos in WhatsApp. Refunds, if due, are returned to the original payment method where applicable. Professional no-show: you are not charged. You cancel inside 36 hours: you are charged. Details on [refunds](/refunds-rescheduling).
 
 ## Requesting the comparable number
 

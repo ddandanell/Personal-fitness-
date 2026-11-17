@@ -40,7 +40,7 @@ const hubs: SeoRecord[] = [
     path: '/',
     primaryKeyword: 'personal trainer at home Bali Jakarta',
     title: 'Personal Trainer at Home in Bali & Jakarta',
-    description: 'Villa managers can offer a personal trainer at home in Bali and Jakarta. Guests book the session and pay us. You earn a commission.',
+    description: 'A vetted instructor at your villa or home in Bali and Jakarta. Private strength training from Rp 1.050.000. Written quote before you pay.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Private Strength Training at home' },
@@ -60,7 +60,7 @@ const hubs: SeoRecord[] = [
     path: '/id',
     primaryKeyword: 'personal trainer datang ke rumah',
     title: 'Personal Trainer Datang ke Rumah di Bali dan Jakarta',
-    description: 'Pengelola villa menawarkan personal trainer datang ke rumah di Bali dan Jakarta. Tamu membayar ke kami. Anda mendapat komisi.',
+    description: 'Personal trainer datang ke villa atau rumah di Bali dan Jakarta dari Rp 1.050.000. Kutipan tertulis sebelum bayar.',
     group: 'page', lastmod: '2026-11-16',
     related: [
       { to: '/', label: 'English homepage' },
@@ -232,7 +232,7 @@ const hubs: SeoRecord[] = [
     path: '/contact',
     primaryKeyword: 'book personal trainer Bali WhatsApp',
     title: 'Contact & Book on WhatsApp | PersonalFitness.id',
-    description: 'Villa managers: send your villas and the week you want. Guests can book a personal trainer in Bali on WhatsApp +62 811-3803-488.',
+    description: 'Book a private session at your villa or home in Bali or Jakarta. WhatsApp +62 811-3803-488 or hello@personalfitness.id.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'See prices first' },

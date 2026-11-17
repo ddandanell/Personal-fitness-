@@ -12,7 +12,7 @@ import { publicServices } from '@/data/publicOffer'
 const faqs = [
   ['Apa itu personal trainer datang ke rumah?', 'PersonalFitness.id mengirim pelatih ke villa atau rumah Anda di klaster Bali dan Jakarta yang kami terbitkan. Sesi berlangsung di ruang Anda, bukan di studio walk-in Denpasar.'],
   ['Berapa harganya?', 'Harga mulai private strength training Rp 1.050.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya perjalanan tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan tertulis. Total ada di kutipan tertulis.'],
-  ['Mengapa lebih mahal dari pelatih lepas?', 'Ini layanan terkelola: koordinator mencocokkan sesi, lokasi dan jam, lalu menamai profesional di kutipan. Cek akses, cadangan, dan total tertulis masuk ke harga. Tarif WhatsApp lepas tanpa kutipan adalah produk lain.'],
+  ['Mengapa lebih mahal dari pelatih lepas?', 'Ini layanan terkelola: koordinator mencocokkan sesi, lokasi dan jam, lalu menamai instruktur di kutipan. Cadangan disebut jika tersedia. Tarif WhatsApp lepas tanpa kutipan adalah produk lain.'],
   ['Apakah ada sesi perkenalan gratis?', 'Tidak. Kunjungan pertama memakai tarif terbit. Kami tidak menjual intro gratis yang kemudian ditarik di chat.'],
   ['Wilayah Jakarta mana yang masuk zona?', 'Jakarta Selatan (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) dan Jakarta Pusat (Menteng, Gondangdia, Thamrin) masuk zona. Utara, Barat, Timur, dan PIK dikutip setelah cek stok dan perjalanan.'],
 ] as const
@@ -24,15 +24,15 @@ export default function IndonesianHome() {
       <section className="sales-hero" lang="id">
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
-            <Eyebrow light>Untuk pengelola villa · Bali · Jakarta</Eyebrow>
-            <h1>Tawarkan personal trainer datang ke rumah di Bali dan Jakarta untuk tamu villa</h1>
-            <p className="hero-lede">PersonalFitness.id untuk pengelola villa, agen sewa, dan hotel. Tamu dapat memesan training, yoga, Pilates, mobilitas, boxing, atau meditasi di villa. Koordinator mengatur mingguannya, profesional yang sudah diseleksi datang, dan tamu membayar ke kami. Anda mendapat komisi.</p>
+            <Eyebrow light>Bali · Jakarta</Eyebrow>
+            <h1>Personal trainer datang ke rumah di Bali dan Jakarta</h1>
+            <p className="hero-lede">Instruktur yang sudah diseleksi datang ke villa, rumah, atau hotel Anda untuk private strength training, yoga, Pilates, mobilitas, boxing, bodywork, atau meditasi. Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
             <div className="cluster">
-              <Link to="/contact" className="button button-primary">Tawarkan ini ke tamu<ArrowUpRight size={17} /></Link>
-              <Link to="/id/mitra-villa" className="button button-outline-light">Jadi mitra villa</Link>
-              <a href={COMPANY_EMAIL_HREF} className="button button-outline-light">Bicara dengan kami</a>
+              <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
+              <Link to="/pricing" className="button button-outline-light">Lihat harga</Link>
+              <Link to="/id/mitra-villa" className="button button-outline-light">Untuk pengelola villa</Link>
             </div>
-            <p className="hero-micro">Harga tamu jelas. Kutipan tertulis sebelum ada yang membayar. WhatsApp {WHATSAPP_DISPLAY}.</p>
+            <p className="hero-micro">Kutipan tertulis sebelum Anda bayar. WhatsApp {WHATSAPP_DISPLAY}.</p>
           </div>
           <div className="hero-session-image">
             <img src="/images/editorial/home.webp" srcSet="/images/editorial/home-640.webp 640w, /images/editorial/home.webp 1440w" sizes="(max-width: 700px) 92vw, 1200px" width="1440" height="960" alt="Pelatih privat mendampingi klien dewasa di villa" decoding="async" />
@@ -89,7 +89,7 @@ export default function IndonesianHome() {
             </div>
           </div>
           <ul className="check-list large-list">
-            {['Kirim kota, area, sesi, dan jendela dua jam', 'Kutipan tertulis sebelum bayar', 'Bayar hanya di tautan merchant', 'Tidak ada sesi perkenalan gratis'].map((item) => (
+            {['Kirim kota, area, sesi, dan jendela dua jam', 'Kutipan tertulis sebelum bayar', 'Bayar sesuai detail pembayaran di kutipan tertulis', 'Tidak ada sesi perkenalan gratis'].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -118,12 +118,12 @@ export default function IndonesianHome() {
 
       <section className="section final-cta" lang="id">
         <div className="shell final-cta-inner">
-          <Eyebrow light>Untuk pengelola villa</Eyebrow>
-          <h2>Tawarkan kebugaran privat<br />di setiap villa tamu.</h2>
-          <p>Kirim jumlah villa, area, dan minggu yang Anda inginkan. Koordinator membalas.</p>
+          <Eyebrow light>Pesan sesi</Eyebrow>
+          <h2>Cek ketersediaan<br />untuk jam Anda.</h2>
+          <p>Kirim kota, area, dan jendela dua jam. Koordinator membalas, tergantung ketersediaan.</p>
           <div className="cluster">
-            <Link to="/contact" className="button button-primary">Tawarkan ini ke tamu<ArrowUpRight size={17} /></Link>
-            <a href={COMPANY_EMAIL_HREF} className="button button-outline-light">Bicara dengan kami</a>
+            <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
+            <a href={COMPANY_EMAIL_HREF} className="button button-outline-light">Email kami</a>
           </div>
         </div>
       </section>
