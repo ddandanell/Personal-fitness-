@@ -27,11 +27,19 @@ const headers = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Cache-Control': 'no-store',
 }
-const demoHosts = new Set(['villademo.personalfitness.id', 'www.villademo.personalfitness.id', 'villademo.localhost'])
+const demoHosts = new Set(['villademo.personalfitness.id', 'www.villademo.personalfitness.id', 'villademo.localhost', 'demo.personalfitness.id', 'www.demo.personalfitness.id', 'demo.localhost'])
+const villasHosts = new Set(['villas.personalfitness.id', 'www.villas.personalfitness.id', 'villas.localhost'])
 function demoPath(request, pathname) {
   const host = String(request.headers.host || '').split(':')[0].toLowerCase()
-  if (!demoHosts.has(host)) return { pathname, demo: false }
+  const demo = demoHosts.has(host)
+  const villas = villasHosts.has(host)
+  if (!demo && !villas) return { pathname, demo: false }
   if (pathname === '/villademo' || pathname.startsWith('/villademo/') || /\.[a-z0-9]+$/i.test(pathname)) return { pathname, demo: true }
+  if (pathname === '/booking' || pathname.startsWith('/booking/')) return { pathname: '/villademo/booking', demo: true }
+  if (pathname.startsWith('/q/')) return { pathname: '/villademo', demo: true }
+  if (villas && pathname === '/') return { pathname: '/villademo/portal', demo: true }
+  if (villas && pathname === '/v/villa-sora') return { pathname: '/villademo', demo: true }
+  if (villas && pathname.startsWith('/v/villa-sora/')) return { pathname: '/villademo' + pathname.slice('/v/villa-sora'.length), demo: true }
   if (pathname === '/') return { pathname: '/villademo', demo: true }
   return { pathname: '/villademo' + pathname, demo: true }
 }

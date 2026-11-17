@@ -5,28 +5,56 @@
   "routes": [
     {
       "src": "^/$",
-      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo)\\.personalfitness\\.id$" }],
       "dest": "/villademo",
       "headers": { "X-Robots-Tag": "noindex, nofollow" },
       "continue": true
     },
     {
       "src": "^/$",
-      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
+      "dest": "/villademo/portal",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/v/villa-sora$",
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
       "dest": "/villademo",
       "headers": { "X-Robots-Tag": "noindex, nofollow" },
       "continue": true
     },
     {
-      "src": "^/(?!assets(?:/|$)|images(?:/|$)|icons(?:/|$)|brand(?:/|$)|api(?:/|$)|villademo(?:/|$)|[^/]+\\.[^/]+$)(.+)$",
-      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "src": "^/v/villa-sora/(.+)$",
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
       "dest": "/villademo/$1",
       "headers": { "X-Robots-Tag": "noindex, nofollow" },
       "continue": true
     },
     {
+      "src": "^/q/[^/]+$",
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
+      "dest": "/villademo",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/booking(?:/[^/]+)?$",
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
+      "dest": "/villademo/booking",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
+      "src": "^/(partner|ops|how-it-works|walkthrough|card|setup|portal)(/.*)?$",
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
+      "dest": "/villademo/$1$2",
+      "headers": { "X-Robots-Tag": "noindex, nofollow" },
+      "continue": true
+    },
+    {
       "src": "^/(?!assets(?:/|$)|images(?:/|$)|icons(?:/|$)|brand(?:/|$)|api(?:/|$)|villademo(?:/|$)|[^/]+\\.[^/]+$)(.+)$",
-      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo)\\.personalfitness\\.id$" }],
       "dest": "/villademo/$1",
       "headers": { "X-Robots-Tag": "noindex, nofollow" },
       "continue": true
@@ -34,23 +62,42 @@
   ],
   "rewrites": [
     {
+      "source": "/villademo/booking/:token",
+      "destination": "/villademo/booking"
+    },
+    {
       "source": "/",
-      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo)\\.personalfitness\\.id$" }],
       "destination": "/villademo"
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
+      "destination": "/villademo/portal"
+    },
+    {
+      "source": "/booking/:token*",
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
+      "destination": "/villademo/booking"
+    },
+    {
+      "source": "/q/:code",
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
       "destination": "/villademo"
     },
     {
-      "source": "/:path((?!assets|images|icons|brand|api|villademo|favicon.ico|robots.txt|sitemap|build-info|llms.txt).*)",
-      "has": [{ "type": "host", "value": "villademo.personalfitness.id" }],
-      "destination": "/villademo/:path"
+      "source": "/v/villa-sora",
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
+      "destination": "/villademo"
+    },
+    {
+      "source": "/v/villa-sora/:path*",
+      "has": [{ "type": "host", "value": "^(www\\.)?villas\\.personalfitness\\.id$" }],
+      "destination": "/villademo/:path*"
     },
     {
       "source": "/:path((?!assets|images|icons|brand|api|villademo|favicon.ico|robots.txt|sitemap|build-info|llms.txt).*)",
-      "has": [{ "type": "host", "value": "www.villademo.personalfitness.id" }],
+      "has": [{ "type": "host", "value": "^(www\\.)?(villademo|demo|villas)\\.personalfitness\\.id$" }],
       "destination": "/villademo/:path"
     }
   ],

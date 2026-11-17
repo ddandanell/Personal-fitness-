@@ -1,57 +1,94 @@
 import { useMemo, useState, type ReactNode } from 'react'
-import { seedBookings, seedSchedules, type Booking, type Schedule } from './data'
-import { DemoContext, type DemoStateValue } from './demo-state'
+import { getService, sessionQuote } from './data'
+import { DemoContext, type GuestBooking, type RequestInput, type Role } from './demo-state'
 
-const KEY = 'arunika-villa-demo-v1'
+const KEY = 'villa-sora-demo-v1'
 
-type State = { bookings: Booking[]; schedules: Schedule[] }
+type Saved = { booking: GuestBooking | null; role: Role }
 
-function mergeById<T extends { id: string }>(seed: T[], extra: T[]) {
-  const seen = new Set(seed.map((item) => item.id))
-  return [...seed, ...extra.filter((item) => item.id && !seen.has(item.id))]
-}
-
-function loadState(): State {
-  const seed = { bookings: seedBookings, schedules: seedSchedules }
-  if (typeof window === 'undefined') return seed
+function load(): Saved {
+  const empty = { booking: null, role: 'manager' as Role }
+  if (typeof window === 'undefined') return empty
   try {
     const raw = sessionStorage.getItem(KEY)
-    if (!raw) return seed
-    const parsed = JSON.parse(raw) as Partial<State>
-    if (!Array.isArray(parsed.bookings) || !Array.isArray(parsed.schedules)) return seed
+    if (!raw) return empty
+    const parsed = JSON.parse(raw) as Partial<Saved>
     return {
-      bookings: mergeById(seedBookings, parsed.bookings),
-      schedules: mergeById(seedSchedules, parsed.schedules),
+      booking: parsed.booking && parsed.booking.token ? parsed.booking : null,
+      role: parsed.role === 'reception' ? 'reception' : 'manager',
     }
   } catch {
-    return seed
+    return empty
   }
 }
 
+function referenceFor(token: string) {
+  let hash = 0
+  for (const char of token) hash = (hash * 33 + char.charCodeAt(0)) % 90000
+  return 'PF-' + String(10000 + hash)
+}
+
 export function DemoStateProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<State>(loadState)
+  const [saved, setSaved] = useState<Saved>(load)
 
-  const value = useMemo<DemoStateValue>(() => ({
-    ...state,
-    addBooking: (booking) => setState((current) => {
-      const next = { ...current, bookings: [...current.bookings, booking] }
-      try { sessionStorage.setItem(KEY, JSON.stringify(next)) } catch { /* The hour still shows in this view. */ }
-      return next
-    }),
-    addSchedule: (schedule) => setState((current) => {
-      const next = { ...current, schedules: [...current.schedules, schedule] }
-      try { sessionStorage.setItem(KEY, JSON.stringify(next)) } catch { /* The rhythm still shows in this view. */ }
-      return next
-    }),
-    nextBookingId: () => {
-      const numbers = state.bookings.map((item) => Number(item.id.replace(/\D/g, ''))).filter((value) => !Number.isNaN(value))
-      return `ARK-${Math.max(2000, ...numbers) + 1}`
-    },
-    nextScheduleId: () => {
-      const numbers = state.schedules.map((item) => Number(item.id.replace(/\D/g, ''))).filter((value) => !Number.isNaN(value))
-      return `SCH-${Math.max(20, ...numbers) + 1}`
-    },
-  }), [state])
+  const api = useMemo(() => {
+    const persist = (next: Saved) => {
+      setSaved(next)
+      try { sessionStorage.setItem(KEY, JSON.stringify(next)) } catch { /* private mode */ }
+    }
+    return {
+      booking: saved.booking,
+      role: saved.role,
+      serviceFor: getService,
+      setRole: (role: Role) => persist({ ...saved, role }),
+      reset: () => {
+        try { sessionStorage.removeItem(KEY) } catch { /* ignore */ }
+        setSaved({ booking: null, role: 'manager' })
+      },
+      findByContact: (reference: string, whatsapp: string) => {
+        const booking = saved.booking
+        if (!booking) return null
+        const digits = (value: string) => value.replace(/\D/g, '')
+        const ref = reference.trim().toUpperCase()
+        if (ref !== booking.reference.toUpperCase()) return null
+        if (digits(whatsapp) !== digits(booking.whatsapp)) return null
+        return booking
+      },
+      submit: (input: RequestInput) => {
+        if (saved.booking && saved.booking.idempotencyKey === input.idempotencyKey) {
+          return { booking: saved.booking, created: false }
+        }
+        const quote = sessionQuote(input.participants, getService(input.serviceSlug)?.maxGuests ?? 2)
+        const token = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `tok-${Date.now()}`
+        const booking: GuestBooking = {
+          ...input,
+          token,
+          reference: referenceFor(token),
+          participants: quote.guests,
+          total: quote.total,
+          status: 'received',
+          payment: 'quote',
+          createdAt: new Date().toISOString(),
+          offerExpiresAt: null,
+        }
+        persist({ ...saved, booking })
+        return { booking, created: true }
+      },
+      advance: () => {
+        const booking = saved.booking
+        if (!booking) return
+        if (booking.status === 'received') persist({ ...saved, booking: { ...booking, status: 'checking' } })
+        else if (booking.status === 'checking') {
+          persist({ ...saved, booking: { ...booking, status: 'offer', offerExpiresAt: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString() } })
+        }
+      },
+      payDemo: () => {
+        const booking = saved.booking
+        if (!booking || booking.status !== 'offer') return
+        persist({ ...saved, booking: { ...booking, status: 'confirmed', payment: 'details-sent' } })
+      },
+    }
+  }, [saved])
 
-  return <DemoContext.Provider value={value}>{children}</DemoContext.Provider>
+  return <DemoContext.Provider value={api}>{children}</DemoContext.Provider>
 }
