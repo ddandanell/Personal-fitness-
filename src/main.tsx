@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router'
 import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 import App from './App.tsx'
+import { isVillaDemoHost } from '@/villa-demo/host'
 
 async function removePreviousSiteCaches() {
   const marker = 'personalfitness-public-site-2026-11-wellness-v4'
@@ -26,5 +27,7 @@ void removePreviousSiteCaches().finally(() => {
 
 const root = document.getElementById('root')!
 const app = <StrictMode><BrowserRouter><App /></BrowserRouter></StrictMode>
-if (root.dataset.prerendered && root.dataset.prerenderPath === window.location.pathname && !window.location.search) hydrateRoot(root, app)
+const path = window.location.pathname
+const demoSurface = isVillaDemoHost() || path === '/villademo' || path.startsWith('/villademo/')
+if (root.dataset.prerendered && root.dataset.prerenderPath === path && !window.location.search && !demoSurface) hydrateRoot(root, app)
 else createRoot(root).render(app)

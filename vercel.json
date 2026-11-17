@@ -1,6 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
+  "proxy": {
+    "entrypoint": "proxy.js",
+    "matcher": ["/((?!assets/|images/|icons/|brand/|api/).*)"]
+  },
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
@@ -1109,6 +1113,14 @@
     }
   ],
   "headers": [
+    {
+      "source": "/villademo",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/villademo/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [

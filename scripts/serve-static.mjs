@@ -27,15 +27,25 @@ const headers = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Cache-Control': 'no-store',
 }
+const demoHosts = new Set(['villademo.personalfitness.id', 'www.villademo.personalfitness.id', 'villademo.localhost'])
+function demoPath(request, pathname) {
+  const host = String(request.headers.host || '').split(':')[0].toLowerCase()
+  if (!demoHosts.has(host)) return { pathname, demo: false }
+  if (pathname === '/villademo' || pathname.startsWith('/villademo/') || /\.[a-z0-9]+$/i.test(pathname)) return { pathname, demo: true }
+  if (pathname === '/') return { pathname: '/villademo', demo: true }
+  return { pathname: '/villademo' + pathname, demo: true }
+}
 let gone = new Set()
 try { gone = new Set(JSON.parse(await fs.readFile(path.join(root, 'gone-paths.json'), 'utf8'))) } catch { /* Built after prerender. */ }
 
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url || '/', 'http://localhost')
-    const pathname = decodeURIComponent(url.pathname)
-    if (redirects[pathname]) { response.writeHead(308, { Location: redirects[pathname] + url.search, ...headers }); response.end(); return }
-    if (pathname.endsWith('/') && pathname !== '/') { response.writeHead(308, { Location: pathname.slice(0, -1) + url.search, ...headers }); response.end(); return }
+    const mapped = demoPath(request, decodeURIComponent(url.pathname))
+    const pathname = mapped.pathname
+    const responseHeaders = mapped.demo ? { ...headers, 'X-Robots-Tag': 'noindex, nofollow' } : headers
+    if (redirects[pathname]) { response.writeHead(308, { Location: redirects[pathname] + url.search, ...responseHeaders }); response.end(); return }
+    if (pathname.endsWith('/') && pathname !== '/') { response.writeHead(308, { Location: pathname.slice(0, -1) + url.search, ...responseHeaders }); response.end(); return }
     const goneHit = gone.has(pathname) || pathname.startsWith('/professionals/')
     const relative = pathname === '/' ? 'index.html' : pathname.slice(1)
     const candidates = goneHit ? ['410.html'] : [relative, relative + '.html']
@@ -48,7 +58,7 @@ http.createServer(async (request, response) => {
     const status = goneHit ? 410 : file ? 200 : 404
     file ||= path.join(root, goneHit ? '410.html' : '404.html')
     const content = await fs.readFile(file)
-    response.writeHead(status, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', ...headers })
+    response.writeHead(status, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', ...responseHeaders })
     response.end(request.method === 'HEAD' ? undefined : content)
   } catch { response.writeHead(500); response.end('Preview could not serve this page.') }
 }).listen(port, host, () => console.log('Static production preview at http://' + host + ':' + port + '/'))

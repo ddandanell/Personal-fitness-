@@ -1,6 +1,6 @@
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
-import { Link, NavLink, useLocation } from 'react-router'
+import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import { hreflangFor, pageMetadata } from '@/lib/metadata'
 import { installAnalytics, trackEvent, trackPageView, trackWhatsApp } from '@/lib/analytics'
 import { partner } from '@/config/partner'
@@ -58,13 +58,16 @@ const mobileGroups = [
   },
 ]
 
-export default function Layout({ children }: { children: ReactNode }) {
-  const [menuOpen, setMenuOpen] = useState(false)
+export default function Layout({ children }: { children?: ReactNode }) {
   const { pathname, search } = useLocation()
+  const routeKey = pathname + search
+  const [openFor, setOpenFor] = useState<string | null>(null)
+  const menuOpen = openFor === routeKey
+  const closeMenu = () => setOpenFor(null)
+  const toggleMenu = () => setOpenFor((current) => current === routeKey ? null : routeKey)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
-    setMenuOpen(false)
     capturePartnerRef(search)
     const { title, description, canonical, noindex, image, imageAlt, imageWidth, imageHeight, region, placename, htmlLang, locale } = pageMetadata(pathname)
     const hideIndex = noindex || (pathname === '/contact' && Boolean(search))
@@ -105,7 +108,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [pathname, search])
 
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuOpen(false) }
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpenFor(null) }
     window.addEventListener('keydown', close)
     return () => window.removeEventListener('keydown', close)
   }, [])
@@ -137,13 +140,13 @@ export default function Layout({ children }: { children: ReactNode }) {
               <span className="header-cta-short">Talk</span>
               <ArrowUpRight size={15} />
             </Link>
-            <button className="icon-button mobile-menu-button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
+            <button className="icon-button mobile-menu-button" onClick={toggleMenu} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
           </div>
         </div>
       </header>
       {menuOpen && (
         <div className="mobile-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-navigation-title">
-          <button className="mobile-sheet-backdrop" type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)} />
+          <button className="mobile-sheet-backdrop" type="button" aria-label="Close menu" onClick={closeMenu} />
           <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
             <div className="mobile-nav-head">
               <p className="eyebrow" id="mobile-navigation-title">Menu</p>
@@ -152,12 +155,12 @@ export default function Layout({ children }: { children: ReactNode }) {
               <div className="mobile-nav-group" key={group.heading}>
                 <p className="footer-heading">{group.heading}</p>
                 {group.links.map(([to, label]) => (
-                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={() => setMenuOpen(false)}>{label}</NavLink>
+                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={closeMenu}>{label}</NavLink>
                 ))}
               </div>
             ))}
             <div className="mobile-nav-cta">
-              <Link to="/contact" className="button button-primary" onClick={() => setMenuOpen(false)}>Offer this to your guests<ArrowUpRight size={16} /></Link>
+              <Link to="/contact" className="button button-primary" onClick={closeMenu}>Offer this to your guests<ArrowUpRight size={16} /></Link>
               <a className="button button-outline" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('mobile_menu')}>WhatsApp {WHATSAPP_DISPLAY}</a>
               <a className="button button-outline" href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'mobile_menu' })}>{COMPANY_EMAIL}</a>
             </div>
@@ -166,7 +169,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       )}
       <main id="main-content" tabIndex={-1}>
         <Breadcrumbs path={pathname} />
-        {children}
+        {children ?? <Outlet />}
         <RelatedLinks path={pathname} />
       </main>
       <footer className="site-footer">
