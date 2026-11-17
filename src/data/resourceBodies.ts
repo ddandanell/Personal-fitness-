@@ -1,3 +1,5 @@
+import { COMPANY_EMAIL } from './company'
+
 export const resourceBodies: Record<string, string[]> = {
   'train-in-a-bali-villa': [
     'A villa session fails for ordinary reasons: a wet deck, a locked side gate, a dog, or a living room full of luggage. The useful first message is not “I am in Canggu”. It is the pocket, the floor you want to use, whether staff will be present, and a two-hour window. PersonalFitness.id sends a coach to that room after a written quote. The hour does not start at the public beach or at the Denpasar office.',
@@ -37,14 +39,14 @@ export const resourceBodies: Record<string, string[]> = {
     'Kelapa Gading, PIK, Puri Indah and Rawamangun are real Jakarta places. They are not the South Jakarta in-zone rate. We quote travel after a supply check, or we decline. BSD is outside DKI and follows the same honest rule. Ask before you assume a zero-travel price.',
     'A first Jakarta visit is often 60 minutes, not 90. The 90-minute uplift is 45 percent of the session rate and is useful once the lobby, the floor and the professional are known. Beginners and three-night hotel stays should start at sixty.',
     'House rules about shoes, incense, and music belong in the access note. We will follow a reasonable house rule. We will not run a session that ignores a building ban on outside coaches. If management says no, we stop before payment rather than argue at the desk.',
-    'When you want a weekly hour, send the standing window and the access note once, then keep the same tower. Changing apartments mid-programme is a new travel check. Pay each confirmed visit on the merchant link. Email hallo@personalfitness.id if WhatsApp is blocked on the office network.',
+    `When you want a weekly hour, send the standing window and the access note once, then keep the same tower. Changing apartments mid-programme is a new travel check. Pay each confirmed visit on the merchant link. Email ${COMPANY_EMAIL} if WhatsApp is blocked on the office network.`,
   ],
   'what-your-quote-contains': [
     'The website estimator uses the same building blocks as operations: city rate, extra people, travel cluster, duration and programme count. It cannot see a broken lift or a pool with no steps. That is why the written quote can still change, and why the quote is what you pay.',
     'A quote that is ready to accept names the service, duration, participants, address type, professional or backup, total, what is excluded, and the cancellation window. If any of those are missing, it is not ready. Chat “ok” is not settlement.',
     'Published 60-minute in-zone starting prices are personal training Rp 900.000 in Bali and Rp 950.000 in Jakarta; private yoga Rp 850.000 / Rp 900.000 with two people included; mat Pilates Rp 950.000 / Rp 1.000.000; mobility Rp 850.000 / Rp 900.000; boxing fitness Rp 1.000.000 / Rp 1.050.000 for one person; guided meditation Rp 800.000 / Rp 850.000 with two people included.',
     'Ninety minutes add 45 percent of the session rate. Extra people add Rp 250.000 in Bali or Rp 275.000 in Jakarta where the format allows it. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Programme reductions of 5, 8 and 12 percent apply to eligible session charges, not to travel.',
-    'Payment stays on a merchant link in the quote. Card numbers in WhatsApp are a reason to stop the conversation and start again on a safe channel. Email hallo@personalfitness.id if that is easier.',
+    `Payment stays on a merchant link in the quote. Card numbers in WhatsApp are a reason to stop the conversation and start again on a safe channel. Email ${COMPANY_EMAIL} if that is easier.`,
     'The professional named on the quote is the person who should arrive, with backup if supply changes before confirmation. Photographs on the site do not identify that person. There is no public trainer directory to book from.',
     'Cancellation follows the refunds page: more than 24 hours can be rescheduled if supply allows; inside 24 hours the session is charged; a professional no-show is not charged. Programme unused sessions follow the validity window written on the quote.',
     'Villa managers should not treat a guest quote as a partnership agreement. Partnership commission, menu cards and partner codes live on the partner programme and partner terms. Guests still pay the published website price.',
@@ -112,7 +114,7 @@ export const resourceBodies: Record<string, string[]> = {
     'Cancellation still follows the refunds page per visit. Inside 24 hours the session is charged. Unused prepaid sessions are not an open gift card for any future year. The validity window is written on the quote because that is the only number that matters.',
     'Villa managers should not buy guest programmes on behalf of unknown arrivals and then hope the dates fit. Guests book their own hours on WhatsApp with the partner code. The partner programme pays commission on paid sessions. It is not a prepaid class pack for the house.',
     'If you want the lower unit rate, count the mornings you will actually be in the room. Six is the smallest published block. Nine and twelve exist for people who already know the pattern. The estimator shows the maths. The quote is what you pay.',
-    'Send the city, cluster, preferred days, who attends, and whether you have already done a first paid hour. WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. A coordinator will answer with a schedule you can accept or refuse, not a subscription you cannot see.',
+    `Send the city, cluster, preferred days, who attends, and whether you have already done a first paid hour. WhatsApp +62 811-3803-488 or email ${COMPANY_EMAIL}. A coordinator will answer with a schedule you can accept or refuse, not a subscription you cannot see.`,
   ],
 }
 

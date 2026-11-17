@@ -32,7 +32,7 @@ If any of those seven lines is missing, reply before you pay. Do not send a card
 
 ## Payment and confirmation
 
-Pay only on the merchant link in the quote. WhatsApp +62 811-3803-488 and hallo@personalfitness.id are for the request. After payment status is verified, confirmation names the professional, arrival window, access note and preparation list. That is the booking.
+Pay only on the merchant link in the quote. WhatsApp +62 811-3803-488 and hello@personalfitness.id are for the request. After payment status is verified, confirmation names the professional, arrival window, access note and preparation list. That is the booking.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is the coordination address, not a place you pay in cash at a desk for a drop-in class.
 

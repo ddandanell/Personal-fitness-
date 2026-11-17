@@ -36,7 +36,7 @@ We will not take a card number in WhatsApp +62 811-3803-488 to “lock 90 minute
 
 Write 60 or 90 next to the session, city, area, window and headcount. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). If you do not know, send 60. You can ask about 90 after the first paid visit when the floor is proven.
 
-The sequence sits on [how it works](/how-it-works). Email hallo@personalfitness.id if WhatsApp is not convenient. The Denpasar office is not a studio where you can drop in for a longer class.
+The sequence sits on [how it works](/how-it-works). Email hello@personalfitness.id if WhatsApp is not convenient. The Denpasar office is not a studio where you can drop in for a longer class.
 
 ## A checklist you can actually use
 

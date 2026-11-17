@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T23:41:55.776Z",
+  "generatedAt": "2026-11-17T10:36:19.420Z",
   "pages": [
     {
       "path": "/",
@@ -123,7 +123,7 @@
     },
     {
       "path": "/contact",
-      "mainWords": 247,
+      "mainWords": 244,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/contact",
       "localMinimum": false,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id/mitra-villa",
-      "mainWords": 508,
+      "mainWords": 521,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id/mitra-villa",
       "localMinimum": false,
@@ -467,7 +467,7 @@
     },
     {
       "path": "/pricing",
-      "mainWords": 1753,
+      "mainWords": 1765,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/pricing",
       "localMinimum": false,
@@ -475,7 +475,7 @@
     },
     {
       "path": "/privacy",
-      "mainWords": 300,
+      "mainWords": 320,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/privacy",
       "localMinimum": false,
@@ -795,7 +795,7 @@
     },
     {
       "path": "/villa-hotel-partners",
-      "mainWords": 537,
+      "mainWords": 548,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/villa-hotel-partners",
       "localMinimum": false,

@@ -38,7 +38,7 @@ Central Jakarta is also in-zone but is a different lobby culture. Menteng and Th
 
 Five lines: personal training, South Jakarta plus the neighbourhood, apartment or house, a two-hour window, and headcount. Add the building name. Add beginner or already training. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep medical files out.
 
-The sequence sits on [how it works](/how-it-works). Email hallo@personalfitness.id if that is easier. Confirmation names the professional, the arrival window and the access note.
+The sequence sits on [how it works](/how-it-works). Email hello@personalfitness.id if that is easier. Confirmation names the professional, the arrival window and the access note.
 
 ## What we will not sell you in South Jakarta
 

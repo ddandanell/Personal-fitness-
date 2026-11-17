@@ -1,11 +1,13 @@
-import { useState, type FormEvent } from 'react'
+import { useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, Check } from 'lucide-react'
+import { EnquiryNote, HoneypotField } from '@/components/EnquiryFields'
 import { Eyebrow, Field, TextLink } from '@/components/Primitives'
 import StructuredData from '@/components/StructuredData'
 import { publicServices } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
-import { SITE_ORIGIN } from '@/data/company'
+import { COMPANY_EMAIL, SITE_ORIGIN } from '@/data/company'
+import { submitEnquiry } from '@/lib/submitEnquiry'
 import { trackEvent, trackWhatsApp } from '@/lib/analytics'
 import { PARTNER_ENQUIRY_MESSAGE, PARTNER_ENQUIRY_MESSAGE_ID, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import {
@@ -61,7 +63,7 @@ const copy = {
     spaceTitle: 'Have a space?',
     space: 'If a villa has a terrace, studio or big living room, we check it and plan a shared class or a regular slot.',
     formTitle: 'Join on WhatsApp',
-    formLead: 'No call and no calendar booking. Send the details and a person replies.',
+    formLead: `No call and no calendar booking. Send the details and a person replies by email at ${COMPANY_EMAIL} or on WhatsApp.`,
     consent: 'I agree that PersonalFitness.id may contact me on WhatsApp and email about the partner programme.',
     send: 'Send on WhatsApp',
     footer: `Questions? WhatsApp ${WHATSAPP_DISPLAY}. A real person replies.`,
@@ -118,7 +120,7 @@ const copy = {
     spaceTitle: 'Ada ruang bersama?',
     space: 'Jika villa punya teras, studio atau ruang tamu besar, kami cek dan rencanakan kelas bersama atau slot rutin.',
     formTitle: 'Gabung lewat WhatsApp',
-    formLead: 'Tidak ada rapat dan tidak ada kalender booking. Kirim detailnya, orang sungguhan membalas.',
+    formLead: `Tidak ada rapat dan tidak ada kalender booking. Kirim detailnya. Kami membalas ke email Anda atau WhatsApp. Salinan juga masuk ke ${COMPANY_EMAIL}.`,
     consent: 'Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.',
     send: 'Kirim lewat WhatsApp',
     footer: `Ada pertanyaan? WhatsApp ${WHATSAPP_DISPLAY}. Dibalas oleh orang sungguhan.`,
@@ -159,18 +161,55 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
   const [mats, setMats] = useState('not sure')
   const [menuLang, setMenuLang] = useState(lang === 'id' ? 'Bahasa' : 'English')
   const [consent, setConsent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [notice, setNotice] = useState('')
+  const [noticeTone, setNoticeTone] = useState<'error' | 'success' | ''>('')
+  const honeypot = useRef<HTMLInputElement>(null)
   const toggleArea = (area: string) => {
     setAreas((current) => current.includes(area) ? current.filter((item) => item !== area) : [...current, area])
   }
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    if (!consent || !areas.length) return
+    if (!areas.length) {
+      setNoticeTone('error')
+      setNotice(lang === 'id' ? 'Pilih minimal satu lokasi.' : 'Choose at least one area.')
+      return
+    }
+    if (!consent) {
+      setNoticeTone('error')
+      setNotice(lang === 'id' ? 'Centang persetujuan untuk mengirim.' : 'Tick the consent box to send this.')
+      return
+    }
     const lines = lang === 'id'
       ? ['Halo PersonalFitness.id, saya mengelola villa dan ingin menu partner.', 'Perusahaan: ' + company.trim(), 'Nama: ' + name.trim(), role.trim() ? 'Jabatan: ' + role.trim() : '', 'WhatsApp: ' + phone.trim(), email.trim() ? 'Email: ' + email.trim() : '', 'Jumlah villa: ' + villas, 'Lokasi: ' + (areas.join(', ') || '—'), start.trim() ? 'Villa mulai: ' + start.trim() : '', 'Ruang 2 matras: ' + mats, 'Bahasa menu: ' + menuLang]
       : ['Hi PersonalFitness.id, I manage villas and want the partner menu.', 'Company: ' + company.trim(), 'Name: ' + name.trim(), role.trim() ? 'Role: ' + role.trim() : '', 'WhatsApp: ' + phone.trim(), email.trim() ? 'Email: ' + email.trim() : '', 'Villas: ' + villas, 'Areas: ' + (areas.join(', ') || '—'), start.trim() ? 'Start with: ' + start.trim() : '', 'Space for 2 yoga mats: ' + mats, 'Guest menu language: ' + menuLang]
     const message = lines.filter(Boolean).join('\n')
+    setSending(true)
+    setNotice('')
+    setNoticeTone('')
+    const result = await submitEnquiry({
+      kind: 'partner',
+      name,
+      email,
+      phone,
+      company,
+      message,
+      page: window.location.pathname,
+      website: honeypot.current?.value || '',
+    }, lang)
+    setSending(false)
     trackEvent('partner_form_submit', { portfolio_size: villas, areas: areas.join(',') || 'unspecified' })
-    window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
+    if (result.ok) {
+      setNoticeTone('success')
+      setNotice(lang === 'id' ? `Terkirim. Kami membalas ke ${email.trim()}. Draft WhatsApp juga terbuka.` : `Sent. We will reply to ${email.trim()}. A WhatsApp draft is open as well.`)
+      window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
+      return
+    }
+    setNoticeTone('error')
+    setNotice(result.message)
+    if (result.code === 'unavailable' || result.code === 'send_failed' || result.code === 'rate' || result.code === 'forbidden') {
+      window.open(whatsappDraftUrl(message), '_blank', 'noopener,noreferrer')
+    }
   }
   return (
     <form className="partner-form" onSubmit={submit}>
@@ -181,7 +220,7 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
       </div>
       <div className="partner-field-pair">
         <Field label={text.labels.whatsapp}><input value={phone} onChange={(event) => setPhone(event.target.value)} required maxLength={30} inputMode="tel" autoComplete="tel" /></Field>
-        <Field label={text.labels.email}><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} maxLength={180} autoComplete="email" /></Field>
+        <Field label={text.labels.email}><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} maxLength={180} autoComplete="email" required /></Field>
       </div>
       <Field label={text.labels.villas}>
         <select value={villas} onChange={(event) => setVillas(event.target.value)}>
@@ -219,7 +258,9 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
         <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} required />
         {text.consent}
       </label>
-      <button type="submit" className="button button-primary">{text.send}<ArrowUpRight size={16} /></button>
+      <HoneypotField inputRef={honeypot} />
+      <button type="submit" className="button button-primary" disabled={sending}>{sending ? (lang === 'id' ? 'Mengirim…' : 'Sending…') : text.send}<ArrowUpRight size={16} /></button>
+      <EnquiryNote text={notice} tone={noticeTone} />
     </form>
   )
 }

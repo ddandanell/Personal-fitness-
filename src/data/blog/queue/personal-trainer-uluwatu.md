@@ -38,7 +38,7 @@ Mix them on a programme only after the first paid visit fitted the indoor floor.
 
 Five lines: personal training, Uluwatu or Pecatu or Bingin, villa, a two-hour window, and headcount. Add whether the floor is indoor. Add gate notes. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep medical files out.
 
-The sequence sits on [how it works](/how-it-works). Email hallo@personalfitness.id if that is easier. Confirmation names the professional, the arrival window and the access note.
+The sequence sits on [how it works](/how-it-works). Email hello@personalfitness.id if that is easier. Confirmation names the professional, the arrival window and the access note.
 
 ## What we will not sell you in Uluwatu
 

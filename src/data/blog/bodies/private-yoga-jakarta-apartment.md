@@ -46,7 +46,7 @@ Rain and AC leak are indoor problems in Jakarta more often than a deck problem. 
 
 ## How to send the first Jakarta yoga message
 
-Message WhatsApp +62 811-3803-488 or hallo@personalfitness.id with five lines: private yoga, South or Central Jakarta plus the building if you know it, apartment or house, a two-hour window, and one or two people. Add beginner or mixed levels in one line. Add lobby rules if they exist.
+Message WhatsApp +62 811-3803-488 or hello@personalfitness.id with five lines: private yoga, South or Central Jakarta plus the building if you know it, apartment or house, a two-hour window, and one or two people. Add beginner or mixed levels in one line. Add lobby rules if they exist.
 
 Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer) if you want the template. Keep medical files out. If pain is the reason you want yoga, speak to a clinician first. We will not treat injury under a yoga label.
 

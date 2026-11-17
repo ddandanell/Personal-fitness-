@@ -95,4 +95,4 @@ Read [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-en
 
 Choose mobility coaching if the hour should centre on active range and stretching. Choose personal training if it should centre on a workout. If the real request is diagnosis or treatment, pause the fitness enquiry and use an appropriate clinician.
 
-When you are ready, open the relevant service page and use the [contact page](/contact). WhatsApp +62 811-3803-488 or email hallo@personalfitness.id with the service, area, participants and window. An enquiry does not reserve a slot. The written quote confirms what can actually be delivered and the total you pay.
+When you are ready, open the relevant service page and use the [contact page](/contact). WhatsApp +62 811-3803-488 or email hello@personalfitness.id with the service, area, participants and window. An enquiry does not reserve a slot. The written quote confirms what can actually be delivered and the total you pay.

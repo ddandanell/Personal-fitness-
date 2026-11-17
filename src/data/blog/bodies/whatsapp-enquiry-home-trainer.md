@@ -1,4 +1,4 @@
-A WhatsApp enquiry for a home trainer should be five practical lines, not a life story and not a card number. PersonalFitness.id books private sessions at villas and homes in published Bali and Jakarta clusters through WhatsApp +62 811-3803-488 or hallo@personalfitness.id. The commercial pages are [contact](/contact), [how it works](/how-it-works) and [pricing](/pricing). This article is the investigation layer: what to send, what to keep out, and why an enquiry is not a reservation.
+A WhatsApp enquiry for a home trainer should be five practical lines, not a life story and not a card number. PersonalFitness.id books private sessions at villas and homes in published Bali and Jakarta clusters through WhatsApp +62 811-3803-488 or hello@personalfitness.id. The commercial pages are [contact](/contact), [how it works](/how-it-works) and [pricing](/pricing). This article is the investigation layer: what to send, what to keep out, and why an enquiry is not a reservation.
 
 If you searched how to book a personal trainer at home, start with city, area, session, window and headcount. That is enough to check supply. Everything else can wait for the written quote.
 
@@ -64,7 +64,7 @@ If two households want two hours, send two windows. Do not hide a second address
 2. Write the five lines: session, city, area, window, headcount.
 3. Add venue type and access notes.
 4. Delete anything that looks like a card, ID or clinic letter.
-5. Send WhatsApp +62 811-3803-488 or email hallo@personalfitness.id.
+5. Send WhatsApp +62 811-3803-488 or email hello@personalfitness.id.
 6. Wait for the written quote.
 7. Pay only on the merchant link.
 8. Treat confirmation, not the first tick, as the booking.

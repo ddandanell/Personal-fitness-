@@ -1,11 +1,62 @@
 import path from 'path'
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin, type ViteDevServer } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+
+function enquiryDevApi(): Plugin {
+  return {
+    name: 'enquiry-dev-api',
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use(async (req, res, next) => {
+        const url = req.url || ''
+        if (!url.startsWith('/api/enquiry')) { next(); return }
+        if (req.method !== 'POST') {
+          res.statusCode = 405
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify({ ok: false, code: 'invalid', error: 'Method not allowed' }))
+          return
+        }
+        try {
+          const raw = await readRequest(req)
+          const loaded = await server.ssrLoadModule('/src/server/enquiry.ts') as {
+            handleEnquiry: (body: unknown, options: { ip?: string; origin?: string; referer?: string }) => Promise<{ status: number; body: unknown }>
+          }
+          const result = await loaded.handleEnquiry(raw.length > 20000 ? null : safeJson(raw), {
+            ip: req.socket.remoteAddress || '',
+            origin: req.headers.origin,
+            referer: typeof req.headers.referer === 'string' ? req.headers.referer : undefined,
+          })
+          res.statusCode = result.status
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify(result.body))
+        } catch {
+          res.statusCode = 500
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify({ ok: false, code: 'send_failed' }))
+        }
+      })
+    },
+  }
+}
+
+function readRequest(req: NodeJS.ReadableStream) {
+  return new Promise<string>((resolve, reject) => {
+    const chunks: Buffer[] = []
+    req.on('data', (chunk: Buffer | string) => chunks.push(Buffer.from(chunk)))
+    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
+    req.on('error', reject)
+  })
+}
+
+function safeJson(raw: string): unknown {
+  if (!raw) return {}
+  try { return JSON.parse(raw) } catch { return null }
+}
 
 export default defineConfig({
   base: '/',
   plugins: [
+    enquiryDevApi(),
     react(),
     VitePWA({
       selfDestroying: true,

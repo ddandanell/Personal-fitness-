@@ -107,4 +107,4 @@ The useful measure is whether the request reaches the coordinator with enough in
 
 When the property is ready, open the [villa wellness partner programme](/villa-hotel-partners). The page includes the guest menu, partner terms and a WhatsApp form. Send the company name, number of villas, areas, villas to start with, space for two mats and preferred guest-menu language.
 
-There is no sales meeting and no calendar booking. A person reviews the details and replies. WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. The next step is a clear operating brief for the first villa, not an unsupported promise across the whole portfolio.
+There is no sales meeting and no calendar booking. A person reviews the details and replies. WhatsApp +62 811-3803-488 or email hello@personalfitness.id. The next step is a clear operating brief for the first villa, not an unsupported promise across the whole portfolio.

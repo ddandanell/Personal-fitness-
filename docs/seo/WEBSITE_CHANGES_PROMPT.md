@@ -14,7 +14,7 @@ PersonalFitness.id is a company-managed private fitness service. A vetted coach 
 | Mobility & stretching | Rp 850.000 | Rp 900.000 | non-clinical; extra person as PT |
 | Boxing fitness | Rp 1.000.000 | Rp 1.050.000 | pads only, 1 person |
 | Guided meditation | Rp 800.000 | Rp 850.000 | up to 2 people |
-90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +Rp 200.000 travel per visit. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hallo@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
+90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +Rp 200.000 travel per visit. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
 
 ## Growth strategy these changes serve
 The main growth channel is now B2B: villa management companies, villa rental agencies, boutique resorts, retreat hosts and concierge companies (Bali first, Jakarta where relevant). Pitch: "Put our wellness menu in every villa you manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, you earn [COMMISSION_PCT]% of every session." Outreach is email first, then WhatsApp. There are NO sales meetings and NO calendar booking: villa managers must be able to understand the offer, download the menu, read the terms and join over WhatsApp/the form without a call. Indonesian villa managers prefer WhatsApp and simple, plain language; many prefer Bahasa Indonesia. The site must therefore: (1) explain the partner programme in plain words with the commission stated, (2) give a downloadable partner menu/deck, (3) give a one-tap WhatsApp + simple join form, (4) show real people (trust), (5) track every WhatsApp click and partner action, (6) fix the SEO issues found in the audit.
@@ -98,7 +98,7 @@ Title: `Villa Partner Terms | PersonalFitness.id`. Plain-English terms (founder 
 6. Pilot and ending: `30-day pilot at 1–2 villas. Either side can stop with 14 days' notice by email or WhatsApp. Earned commission is still paid.`
 7. Guests and privacy: `We share only time and villa with your team. Guest health information stays with the coach.`
 8. Safety and liability: `[LIABILITY_TEXT — founder/legal to supply]`
-9. Contact: hallo@personalfitness.id · WhatsApp +62 811-3803-488.
+9. Contact: hello@personalfitness.id · WhatsApp +62 811-3803-488.
 Acceptance: linked from partner page, footer and PDF; no placeholder text live.
 
 ## P3. Partner menu & deck

@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WhyTheRate from '@/components/WhyTheRate'
+import { COMPANY_EMAIL } from '@/data/company'
 import { publicServices, sessionPhoto } from '@/data/publicOffer'
 import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
@@ -79,7 +80,7 @@ export default function Home() {
             <p>The professional is named on the quote after a match for the session, cluster and window. There is no public trainer directory and no stock of invented reviews on this site. Read <TextLink to="/professional-standards">matching standards</TextLink>, <TextLink to="/villa-hotel-partners">the villa partner programme</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
-            {['Company-managed matching, not a freelance marketplace', 'Named professional on the written quote', 'Backup cover if supply changes before confirmation', 'WhatsApp +62 811-3803-488 and hallo@personalfitness.id', 'Denpasar office is administration, not a walk-in studio'].map((item) => (
+            {['Company-managed matching, not a freelance marketplace', 'Named professional on the written quote', 'Backup cover if supply changes before confirmation', `WhatsApp +62 811-3803-488 and ${COMPANY_EMAIL}`, 'Denpasar office is administration, not a walk-in studio'].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>

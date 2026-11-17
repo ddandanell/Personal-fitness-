@@ -1,12 +1,15 @@
 import { MessageCircle } from 'lucide-react'
-import { Suspense, useMemo, useState } from 'react'
+import { Suspense, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import { areaPockets, programmes, quoteAreas, type City } from '@/data/catalog'
+import { COMPANY_EMAIL } from '@/data/company'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
 import { trackEvent, trackWhatsApp } from '@/lib/analytics'
+import { submitEnquiry } from '@/lib/submitEnquiry'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
+import { EnquiryNote, HoneypotField } from './EnquiryFields'
 import { CopyButton, Field } from './Primitives'
 import { downloadText } from '@/lib/downloadText'
 
@@ -35,6 +38,12 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
   const [programme, setProgramme] = useState(params.get('programme') || '')
   const [timing, setTiming] = useState('')
   const [goals, setGoals] = useState('')
+  const [senderName, setSenderName] = useState('')
+  const [senderEmail, setSenderEmail] = useState('')
+  const [sending, setSending] = useState(false)
+  const [notice, setNotice] = useState('')
+  const [noticeTone, setNoticeTone] = useState<'error' | 'success' | ''>('')
+  const honeypot = useRef<HTMLInputElement>(null)
   const selected = publicServices.find((item) => item.slug === service) || publicServices[0]
   const canExtend = selected.durationMin === 60
   const cityHubs = useMemo(() => quoteAreas(city), [city])
@@ -47,6 +56,29 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
     programme: programme || undefined,
   }), [service, city, area, durationMin, participants, programme])
   const message = quoteMessage(quote, { timing, goals })
+
+  async function sendEmail() {
+    setSending(true)
+    setNotice('')
+    setNoticeTone('')
+    const result = await submitEnquiry({
+      kind: 'quote',
+      name: senderName,
+      email: senderEmail,
+      message,
+      page: window.location.pathname,
+      website: honeypot.current?.value || '',
+    })
+    setSending(false)
+    if (result.ok) {
+      trackEvent('enquiry_email', { kind: 'quote', service, city })
+      setNoticeTone('success')
+      setNotice(`Sent. We will reply to ${senderEmail.trim()}. Nothing is booked until you accept the written quote.`)
+      return
+    }
+    setNoticeTone('error')
+    setNotice(result.message)
+  }
 
   function chooseService(slug: string) {
     const next = publicServices.find((item) => item.slug === slug)
@@ -62,7 +94,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
 
   return (
     <div className={'estimator ' + (compact ? 'estimator-compact' : '')}>
-      <form className="estimator-form" onSubmit={(event) => event.preventDefault()}>
+      <form className="estimator-form" onSubmit={(event) => { event.preventDefault(); void sendEmail() }}>
         <div className="form-grid">
           <Field label="Service">
             <select value={service} onChange={(event) => chooseService(event.target.value)}>
@@ -116,8 +148,11 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
               </Field>
             </>
           )}
+          <Field label="Your name"><input value={senderName} onChange={(event) => setSenderName(event.target.value)} maxLength={100} autoComplete="name" /></Field>
+          <Field label="Your email" hint="We reply to this address."><input type="email" value={senderEmail} onChange={(event) => setSenderEmail(event.target.value)} maxLength={180} autoComplete="email" /></Field>
         </div>
-        <p className="small muted">Opening WhatsApp creates a draft. Your message is sent only when you choose to send it in WhatsApp.</p>
+        <HoneypotField inputRef={honeypot} />
+        <p className="small muted">Email this request to {COMPANY_EMAIL}, or open WhatsApp when you want to send the draft yourself. Nothing is booked until you accept the written quote.</p>
       </form>
       <aside className="estimator-result">
         {quote.ok ? (
@@ -142,10 +177,12 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           </>
         )}
         <div className="cluster">
+          <button type="button" className="button button-outline-light" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this request'}</button>
           <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => { trackWhatsApp('estimator', { service, city }); trackEvent('estimator_used', { service, city }) }}><MessageCircle size={16} />Continue in WhatsApp</a>
           <CopyButton value={message} label="Copy request" />
           <button type="button" className="button button-outline-light" onClick={() => downloadText('PersonalFitness-request.txt', message)}>Download</button>
         </div>
+        <EnquiryNote text={notice} tone={noticeTone} />
       </aside>
     </div>
   )

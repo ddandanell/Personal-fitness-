@@ -259,7 +259,7 @@ export function FaqPage() {
           ))}
         </div>
       </section>
-      <CtaBand dark title="If it is not in this list, send the practical details." copy="Send service, city, area, window and headcount to Contact, WhatsApp +62 811-3803-488, or hallo@personalfitness.id. Keep health, ID and card numbers out." />
+      <CtaBand dark title="If it is not in this list, send the practical details." copy={`Send service, city, area, window and headcount to Contact, WhatsApp +62 811-3803-488, or ${COMPANY_EMAIL}. Keep health, ID and card numbers out.`} />
     </>
   )
 }
@@ -298,7 +298,7 @@ export function ServicesHub() {
             <h2>Pick the format that matches the room and the people.</h2>
             <p className="large-copy">Personal training is the individual coached hour. Private yoga suits one or two people who want a mat practice. Mat Pilates needs a dry even floor, not a reformer. Mobility is stretching and range, not treatment. Boxing fitness is pad work and conditioning for one person. Guided meditation is a calm sit for one or two people; for clinical support, see a licensed professional.</p>
             <p>Booking is the same for every format. Send city, area, session and a two-hour window. A coordinator matches a professional, you receive a written quote, then the hour runs at your villa or home. Open <Link to="/bali">Bali</Link> or <Link to="/jakarta">Jakarta</Link> for clusters, then <Link to="/pricing">pricing</Link> for extras, travel and programmes.</p>
-            <p>Villa managers who want a guest menu can start on the <Link to="/villa-hotel-partners">partner programme</Link>. Guests still pay the published website price. WhatsApp +62 811-3803-488 or email hallo@personalfitness.id after the estimator.</p>
+            <p>Villa managers who want a guest menu can start on the <Link to="/villa-hotel-partners">partner programme</Link>. Guests still pay the published website price. WhatsApp +62 811-3803-488 or email {COMPANY_EMAIL} after the estimator.</p>
           </div>
           <ul className="check-list large-list">
             {['Open the Bali or Jakarta page for that city’s clusters', 'Use pricing for extras, travel and programmes', 'Send WhatsApp +62 811-3803-488 after the estimator', 'Yoga and meditation include up to two people', 'Boxing stays one person, pad work only', 'The coach who arrives is named on the quote'].map((item) => (
@@ -496,7 +496,7 @@ export function PricingPage() {
 
       <section className="section" id="estimator">
         <div className="shell">
-          <SectionTitle eyebrow="Estimator" title="Estimate my price, then continue in WhatsApp." copy="Choose the session, city, cluster, people and length. The draft carries the numbers. Nothing is sent until you send it." />
+          <SectionTitle eyebrow="Estimator" title="Estimate my price, then continue in WhatsApp." copy={`Choose the session, city, cluster, people and length. The draft carries the numbers. Email it to ${COMPANY_EMAIL} or send it in WhatsApp. Nothing is booked until you accept the written quote.`} />
           <QuoteEstimator />
         </div>
       </section>
@@ -538,7 +538,7 @@ export function ContactPage() {
   return (
     <>
       <StructuredData data={contactPageJsonLd()} />
-      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description="Use the estimator for starting prices, then send the draft on WhatsApp +62 811-3803-488. Five lines are enough: session, city, area, window and headcount. Nothing is booked until you accept the written quote. Email hallo@personalfitness.id if that is easier.">
+      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description={`Use the estimator for starting prices, then email ${COMPANY_EMAIL} or send the draft on WhatsApp +62 811-3803-488. Five lines are enough: session, city, area, window and headcount. Nothing is booked until you accept the written quote.`}>
         <div className="cluster">
           <Link to="/pricing" className="button button-outline">See session prices</Link>
           <Link to="/faq" className="button button-outline">Read the FAQ</Link>
@@ -652,7 +652,7 @@ const legalCopy = {
     lede: 'The estimator runs in your browser. We do not store card numbers, identity documents or medical files in this form.',
     cta: 'Prepare a non-sensitive enquiry',
     blocks: [
-      ['On this website', 'The estimator, wellness planner and partnership form keep the details you enter in the current page until you copy, download or open a WhatsApp draft. Reloading the page clears them. These forms do not create an account, save a health record or send your details automatically.'],
+      ['On this website', 'The estimator, wellness planner and partnership form keep what you type in the current page until you send it. If you choose email, that message goes to ' + COMPANY_EMAIL + ' and we reply to the address you entered. Reloading the page clears the form. These forms do not create an account or save a health record. WhatsApp drafts are sent only when you send them in WhatsApp.'],
       ['Analytics cookies', 'If a measurement ID is configured, this site may load Google Analytics after you interact, to understand page views and WhatsApp clicks. You can refuse analytics cookies in your browser. We do not use them to invent reviews or to store health details.'],
       ['Managed wellness brief', 'For an agreed programme, your coordinator can maintain practical goals, preferences and session feedback. You choose which relevant non-clinical notes can be shared with assigned professionals. Ask your coordinator about access, correction or ending this sharing. Clinical records stay with the responsible provider and are separate from the general wellness brief.'],
       ['WhatsApp', 'If you send the draft to PersonalFitness.id, it is used to qualify and coordinate the request. WhatsApp has its own terms. Keep payment-card, bank, ID and detailed health data out of that chat.'],

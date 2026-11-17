@@ -46,7 +46,7 @@ If someone in the pair has pain, swelling or a recent procedure, that person nee
 
 Name the session, the city, the area, a two-hour window, and the exact headcount. Write “two people, yoga, mixed levels” or “training, one extra person” in one line. If a child will be in the room but not in the session, say that too.
 
-The sequence sits on [how it works](/how-it-works). The homepage at [PersonalFitness.id](/) holds the six live sessions. Email hallo@personalfitness.id if WhatsApp is not convenient.
+The sequence sits on [how it works](/how-it-works). The homepage at [PersonalFitness.id](/) holds the six live sessions. Email hello@personalfitness.id if WhatsApp is not convenient.
 
 ## A checklist you can actually use
 

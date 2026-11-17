@@ -88,4 +88,4 @@ Send the service, city, exact area, number of adults and two possible windows. A
 
 An enquiry does not reserve the time. The coordinator checks the request and actual professional availability. The quote confirms the appointment and payment route. Pay only through the merchant link in the written quote, not by sending card details in chat.
 
-To request the session, use the [contact page](/contact), WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. A useful quiet room is simple: controlled access, comfortable seating and fewer interruptions. Once those details are clear, the coordinator can assess the real appointment instead of guessing from a property photo.
+To request the session, use the [contact page](/contact), WhatsApp +62 811-3803-488 or email hello@personalfitness.id. A useful quiet room is simple: controlled access, comfortable seating and fewer interruptions. Once those details are clear, the coordinator can assess the real appointment instead of guessing from a property photo.
