@@ -1,12 +1,12 @@
-A personal trainer in Seminyak is an in-villa hour in the same in-zone Bali cluster as Canggu, not a beach-club class and not a walk-in studio. PersonalFitness.id coordinates 60-minute personal training from Rp 900.000 when the address sits in Seminyak or nearby Petitenget. Travel for that cluster is already inside the published Bali rate. The commercial destination is [Bali personal training](/bali/personal-training). This article is the investigation layer: compact villas, one-way streets and how the quote is built.
+A personal trainer in Seminyak is an in-villa hour in the same in-zone Bali cluster as Canggu, not a beach-club class and not a walk-in studio. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 when the address sits in Seminyak or nearby Petitenget. Travel for that cluster is already inside the published Bali rate. The commercial destination is [Bali private strength training](/bali/personal-training). This article is the investigation layer: compact villas, one-way streets and how the quote is built.
 
 If you searched for a personal trainer in Seminyak because you are staying near Petitenget, start with the usable indoor space, not the listing size. Many villas here look large from the pool and still have a small living-room rectangle. The [Seminyak cluster page](/bali/seminyak) explains visitor access. Indexable booking still runs through [Bali](/bali) and the session pages.
 
 ## What in-zone means in Seminyak
 
-In-zone means the published 60-minute personal training rate already includes travel for this cluster. It does not mean every lane is easy. One-way streets, villa-staff rules and parking restrictions can delay a professional even when the fee is already inside the rate. Name Seminyak or Petitenget, not only “Bali”.
+In-zone means the published 60-minute private strength training rate already includes travel for this cluster. It does not mean every lane is easy. One-way streets, villa-staff rules and parking restrictions can delay a professional even when the fee is already inside the rate. Name Seminyak or Petitenget, not only “Bali”.
 
-The hour is one person at Rp 900.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Yoga in the same villa is a different product: [private yoga in Bali](/private-yoga) includes two people in the published rate. Do not mix those rules in one WhatsApp sentence.
+The hour is one person at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Yoga in the same villa is a different product: [private yoga in Bali](/private-yoga) includes two people in the published rate. Do not mix those rules in one WhatsApp sentence.
 
 A villa Instagram that says “we can arrange a trainer” is not this service. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
@@ -22,7 +22,7 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not a Semi
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Seminyak personal training starts at Rp 900.000 for 60 minutes, one person. Canggu is the same in-zone cluster. Ubud and Sanur are not: they add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. If your villa is in Petitenget, you are still in-zone. If your villa is in Ubud, you are not.
+The [pricing page](/pricing) uses the same blocks operations uses. Seminyak private strength training starts at Rp 1.050.000 for 60 minutes, one person. Canggu is the same in-zone cluster. Ubud and Sanur are not: they have an outer-area travel fee confirmed in the written quote. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. If your villa is in Petitenget, you are still in-zone. If your villa is in Ubud, you are not.
 
 A two-week block is six sessions at 5 percent off. Three weeks is nine at 8 percent. Four weeks is twelve at 12 percent. Those reductions apply to session charges, not travel. In Seminyak, travel is already inside the rate. Unused sessions follow the validity window on the quote. Read [two, three or four weeks](/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay) if you are staying longer than a long weekend.
 
@@ -42,7 +42,7 @@ Boxing needs ceiling clearance. Meditation needs a room that can be quiet. Mobil
 
 ## How to send the first Seminyak message
 
-Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five lines: personal training, Seminyak or Petitenget, villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
+Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five lines: private strength training, Seminyak or Petitenget, villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
 
 Keep card numbers, ID photos and medical files out. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer) if you want the template.
 
@@ -55,10 +55,10 @@ The sequence sits on [how it works](/how-it-works). Pay only on the merchant lin
 3. Tell the host a professional is coming.
 4. Pick a two-hour window.
 5. Decide one person or extra people.
-6. Open [Bali personal training](/bali/personal-training) for the rate.
+6. Open [Bali private strength training](/bali/personal-training) for the rate.
 7. Send WhatsApp. Wait for the quote. Pay only on the link.
 
-A Seminyak personal trainer is useful when the villa, the window and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Bali personal training](/bali/personal-training) and send the area.
+A Seminyak personal trainer is useful when the villa, the window and the quote match. PersonalFitness.id exists to hold that line. If that is what you wanted when you typed the query, start on the [homepage](/) or [Bali private strength training](/bali/personal-training) and send the area.
 
 ## Seminyak versus Canggu on the same rate
 

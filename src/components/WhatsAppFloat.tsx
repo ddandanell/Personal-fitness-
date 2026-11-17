@@ -1,3 +1,4 @@
+import { RESCHEDULE_NOTE } from '@/data/offerCopy'
 import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 
@@ -14,6 +15,8 @@ function WhatsAppMark() {
 
 export default function WhatsAppFloat() {
   return (
+    <div className="wa-float-stack">
+      <p className="wa-float-note">{RESCHEDULE_NOTE}</p>
     <a
       className="wa-float"
       href={whatsappDraftUrl()}
@@ -25,5 +28,6 @@ export default function WhatsAppFloat() {
       <WhatsAppMark />
       <span className="wa-float-label">WhatsApp</span>
     </a>
+    </div>
   )
 }

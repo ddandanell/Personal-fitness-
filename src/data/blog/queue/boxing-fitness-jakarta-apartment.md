@@ -6,7 +6,7 @@ If you searched for boxing at home in Jakarta because a gym class felt public, s
 
 Pad-only means the professional holds pads and you hit them with an agreed pattern. It is fitness. It is not a bout. Beginners are welcome if you say so. People who already box are welcome if they accept house rules: one person, no sparring, no clinical treatment.
 
-The published Jakarta rate is Rp 1.050.000 for 60 minutes, one participant, in-zone. Extra people are not a casual add-on. If two of you want to train, that is two quotes or [personal training](/jakarta/personal-training) where an extra person can be billed. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
+The published Jakarta rate is Rp 1.050.000 for 60 minutes, one participant, in-zone. Extra people are not a casual add-on. If two of you want to train, that is two quotes or [private strength training](/jakarta/personal-training) where an extra person can be billed. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 
 A photo of gloves is not a space check.
 
@@ -20,7 +20,7 @@ The lobby is still the Jakarta product. Put the building, tower, parking and vis
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.050.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of 5, 8 and 12 percent apply to session charges, not to a building fee.
+The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.050.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of about 9.5, 14.3 and 23.8 percent apply to session charges, not to a building fee.
 
 There is no free intro. Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 
@@ -36,7 +36,7 @@ We will not use a shared building gym as a ring. Written permission and a privat
 
 Five lines: boxing fitness, South or Central Jakarta plus the building, apartment, a two-hour window, and one person. Add beginner or already boxing. Add ceiling height if the room is tight. Add noise rules. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
 
-The sequence sits on [how it works](/how-it-works). If the space fails, we say so and can quote [personal training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching) instead of forcing punches into a corridor.
+The sequence sits on [how it works](/how-it-works). If the space fails, we say so and can quote [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching) instead of forcing punches into a corridor.
 
 ## A checklist you can actually use
 
@@ -53,7 +53,7 @@ Jakarta apartment boxing is useful when the pads, the walls and the quote match.
 
 “Boxing fitness, Jakarta, South Jakarta Kemang, apartment tower B, Saturday 08:00–10:00, one person, beginner, 3x3m indoor room, 2.7m ceiling, no evening pad work allowed by management, visitor pass at the lobby.” That message can be quoted. “Can we box on the rooftop gym tonight with my friend” cannot.
 
-If the ceiling is 2.4 metres, say so. If the floor is vinyl over a neighbour’s bedroom, say so. We would rather move you to [personal training](/jakarta/personal-training) than collect a complaint. Pads still make noise. Honesty about noise is part of the product, not an optional vibe.
+If the ceiling is 2.4 metres, say so. If the floor is vinyl over a neighbour’s bedroom, say so. We would rather move you to [private strength training](/jakarta/personal-training) than collect a complaint. Pads still make noise. Honesty about noise is part of the product, not an optional vibe.
 
 ## Gloves, wraps and what you already own
 
@@ -63,6 +63,6 @@ A second person is billed as an extra person, not as a pair gift. Yoga is the pa
 
 ## After the first hour
 
-If the first pad hour fitted, a six-session Jakarta block can make sense. The 5 percent reduction applies to session charges, not to a building fee. If the first hour was too loud, do not buy a programme to “get used to it”. Switch to [personal training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching).
+If the first pad hour fitted, a six-session Jakarta block can make sense. The 5 percent reduction applies to session charges, not to a building fee. If the first hour was too loud, do not buy a programme to “get used to it”. Switch to [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching).
 
 Keep the same building note on the record so the professional is not renegotiating the lobby every Tuesday. WhatsApp +62 811-3803-488. The [Jakarta hub](/jakarta) stays the city page. This article stays the apartment investigation.

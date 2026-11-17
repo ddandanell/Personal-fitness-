@@ -8,16 +8,16 @@ You are a senior React + SEO engineer working on the personalfitness.id codebase
 PersonalFitness.id is a company-managed private fitness service. A vetted coach comes to the client's villa or home in Bali and Jakarta. Six 60-minute sessions with published starting prices (do NOT change them):
 | Session | Bali | Jakarta | Notes |
 |---|---|---|---|
-| Personal training | Rp 900.000 | Rp 950.000 | 1 person; extra person +Rp 250.000 / +Rp 275.000 |
+| Private Strength Training | Rp 900.000 | Rp 950.000 | 1 person; extra person +Rp 250.000 / +Rp 250.000 |
 | Private yoga | Rp 850.000 | Rp 900.000 | up to 2 people |
 | Mat Pilates | Rp 950.000 | Rp 1.000.000 | no reformer; extra person as PT |
 | Mobility & stretching | Rp 850.000 | Rp 900.000 | non-clinical; extra person as PT |
 | Boxing fitness | Rp 1.000.000 | Rp 1.050.000 | pads only, 1 person |
 | Guided meditation | Rp 800.000 | Rp 850.000 | up to 2 people |
-90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +Rp 200.000 travel per visit. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
+90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +an outer-area travel fee confirmed in the written quote. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
 
 ## Growth strategy these changes serve
-The main growth channel is now B2B: villa management companies, villa rental agencies, boutique resorts, retreat hosts and concierge companies (Bali first, Jakarta where relevant). Pitch: "Put our wellness menu in every villa you manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, you earn [COMMISSION_PCT]% of every session." Outreach is email first, then WhatsApp. There are NO sales meetings and NO calendar booking: villa managers must be able to understand the offer, download the menu, read the terms and join over WhatsApp/the form without a call. Indonesian villa managers prefer WhatsApp and simple, plain language; many prefer Bahasa Indonesia. The site must therefore: (1) explain the partner programme in plain words with the commission stated, (2) give a downloadable partner menu/deck, (3) give a one-tap WhatsApp + simple join form, (4) show real people (trust), (5) track every WhatsApp click and partner action, (6) fix the SEO issues found in the audit.
+The main growth channel is now B2B: villa management companies, villa rental agencies, boutique resorts, retreat hosts and concierge companies (Bali first, Jakarta where relevant). Pitch: "Put our wellness menu in every villa you manage. Guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, you earn [COMMISSION_PCT]% of every session." Outreach is email first, then WhatsApp. There are NO sales meetings and NO calendar booking: villa managers must be able to understand the offer, download the menu, read the terms and join over WhatsApp/the form without a call. Indonesian villa managers prefer WhatsApp and simple, plain language; many prefer Bahasa Indonesia. The site must therefore: (1) explain the partner programme in plain words with the commission stated, (2) give a downloadable partner menu/deck, (3) give a one-tap WhatsApp + simple join form, (4) show real people (trust), (5) track every WhatsApp click and partner action, (6) fix the SEO issues found in the audit.
 
 ## Hard rules
 1. Do NOT break existing URLs. All 90 URLs currently in sitemap-pages.xml and sitemap-posts.xml must still return 200 with the same canonical (list them from the sitemap files in the repo and write a small script `scripts/check-urls.mjs` that requests each one against a preview URL). Only add URLs. If you merge a page, add a 308 redirect in vercel.json, remove it from the sitemap and update internal links.
@@ -30,12 +30,12 @@ The main growth channel is now B2B: villa management companies, villa rental age
 
 ## Bahasa Indonesia copy for P7 (/id/mitra-villa) — use as final copy
 - Title: `Program Mitra Wellness Villa di Bali | PersonalFitness.id`
-- Meta: `Tambahkan yoga, personal training dan Pilates di setiap villa Anda. Kami kirim coach, tamu pesan lewat WhatsApp, Anda dapat komisi [COMMISSION_PCT]% per sesi.`
+- Meta: `Tambahkan yoga, private strength training dan Pilates di setiap villa Anda. Kami kirim coach, tamu pesan lewat WhatsApp, Anda dapat komisi [COMMISSION_PCT]% per sesi.`
 - H1: `Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.`
-- Sub: `Yoga, personal training, Pilates, stretching, boxing dan meditasi, langsung di villa tamu Anda oleh coach kami. Tim Anda tidak perlu kerja tambahan. Anda dapat [COMMISSION_PCT]% dari setiap sesi yang dibayar.`
+- Sub: `Yoga, private strength training, Pilates, stretching, boxing dan meditasi, langsung di villa tamu Anda oleh instruktur yang sudah diseleksi. Tim Anda tidak perlu kerja tambahan. Anda dapat [COMMISSION_PCT]% dari setiap sesi yang dibayar.`
 - Buttons: `WhatsApp kami tentang villa Anda` (pre-fill: `Halo PersonalFitness.id, saya mengelola villa dan ingin menu partner. Perusahaan: ___ · Jumlah villa: ___ · Lokasi: ___`) · `Unduh menu partner (PDF)`
-- Cara kerja: 1. `Koordinator menyepakati villa dan minggu bersama Anda.` 2. `Tamu pesan lewat email atau WhatsApp. Pesanan membawa kode partner Anda.` 3. `Coach kami datang ke villa. Tamu membayar ke kami.` 4. `Anda dapat komisi dari setiap sesi yang dibayar, setiap bulan, dengan laporan sederhana.`
-- Yang bisa dipesan tamu: Yoga privat mulai Rp 850.000 (maks. 2 orang) · Personal training mulai Rp 900.000 · Mat Pilates mulai Rp 950.000 · Mobility & stretching mulai Rp 850.000 · Boxing fitness mulai Rp 1.000.000 · Meditasi terpandu mulai Rp 800.000. Catatan: `Harga Bali, 60 menit. Canggu dan Seminyak sudah termasuk. Ubud dan Sanur +Rp 150.000, Uluwatu +Rp 200.000 biaya perjalanan per kunjungan.`
+- Cara kerja: 1. `Koordinator menyepakati villa dan minggu bersama Anda.` 2. `Tamu pesan lewat email atau WhatsApp. Pesanan membawa kode partner Anda.` 3. `Instruktur yang sudah diseleksi datang ke villa. Tamu membayar ke kami.` 4. `Anda dapat komisi dari setiap sesi yang dibayar, setiap bulan, dengan laporan sederhana.`
+- Yang bisa dipesan tamu: Yoga privat mulai Rp 850.000 (maks. 2 orang) · Private Strength Training mulai Rp 900.000 · Mat Pilates mulai Rp 950.000 · Mobility & stretching mulai Rp 850.000 · Boxing fitness mulai Rp 1.000.000 · Meditasi terpandu mulai Rp 800.000. Catatan: `Harga Bali, 60 menit. Canggu dan Seminyak sudah termasuk. Ubud dan Sanur +Rp 150.000, Uluwatu +Rp 200.000 biaya perjalanan per kunjungan.`
 - Jadwal yoga mingguan: `Beri tamu sesuatu yang dinanti. Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00 di villa masing-masing tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya.`
 - Yang Anda dapat: `Kartu menu cetak untuk setiap villa` · `Pemesanan lewat email atau WhatsApp dengan kode partner Anda` · `Koordinator yang jelas` · `Ritme mingguan di seluruh portofolio` · `Laporan bulanan dari tim kami` · `Pilot 30 hari di 1–2 villa dulu`.
 - Form labels: Nama perusahaan* · Nama Anda* · Jabatan · Nomor WhatsApp* · Email · Jumlah villa* · Lokasi* · Villa untuk mulai · Ada tempat untuk 2 matras yoga? · Bahasa menu tamu. Persetujuan*: `Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.` Tombol: `Kirim lewat WhatsApp`.
@@ -64,20 +64,20 @@ The main growth channel is now B2B: villa management companies, villa rental age
 ---
 ## P1. Partner page rewrite — `/villa-hotel-partners` (keep URL)
 Title (≤60): `Villa Wellness Partner Programme Bali | PersonalFitness.id` (57)
-Meta (≤155): `Add yoga, personal training and Pilates to every villa you manage. We send the coach, guests book on WhatsApp, you earn [COMMISSION_PCT]% per session.`
+Meta (≤155): `Add yoga, private strength training and Pilates to every villa you manage. We send the coach, guests book on WhatsApp, you earn [COMMISSION_PCT]% per session.`
 H1: `Wellness for every villa you manage. You earn on every session.`
 
 Sections and final copy (replace the current page body):
 1. Hero
-   - Sub: `Yoga, personal training, Pilates, stretching, boxing and meditation, delivered in your guests' villa by our coaches. Your team does nothing extra. You earn [COMMISSION_PCT]% of every paid session.`
+   - Sub: `Yoga, private strength training, Pilates, stretching, boxing and meditation, delivered in your guests' villa by vetted instructors. Your team does nothing extra. You earn [COMMISSION_PCT]% of every paid session.`
    - Primary button: `WhatsApp us about your villas` → `https://wa.me/628113803488?text=` + encoded `Hi PersonalFitness.id, I manage villas and want the partner menu. Company: ___ · Villas: ___ · Areas: ___` (event `partner_whatsapp_click`, location `partner_hero`)
    - Secondary button: `Download the partner menu (PDF)` → `/partners/villa-wellness-menu.pdf` (event `partner_deck_download`)
 2. How it works (4 steps)
    1. `A coordinator agrees the villas, the days and your partner code.`
    2. `Guests request the session by email or WhatsApp. The request carries your partner code.`
-   3. `Our coach comes to the villa. The guest pays us.`
+   3. `A vetted instructor comes to the villa. The guest pays us.`
    4. `You get [COMMISSION_PCT]% of every paid session, every month, with a simple statement.`
-3. What your guests can book (6 cards, keep existing prices and links): Private yoga from Rp 850.000 (up to 2) · Personal training from Rp 900.000 · Mat Pilates from Rp 950.000 · Mobility & stretching from Rp 850.000 · Boxing fitness from Rp 1.000.000 · Guided meditation from Rp 800.000. Note line: `Bali prices, 60 minutes. Canggu and Seminyak included. Ubud and Sanur +Rp 150.000, Uluwatu +Rp 200.000 travel per visit.`
+3. What your guests can book (6 cards, keep existing prices and links): Private yoga from Rp 850.000 (up to 2) · Private Strength Training from Rp 1.050.000 · Mat Pilates from Rp 950.000 · Mobility & stretching from Rp 850.000 · Boxing fitness from Rp 1.000.000 · Guided meditation from Rp 800.000. Note line: `Bali prices, 60 minutes. Canggu and Seminyak included. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.`
 4. Weekly yoga calendar (keep example, change copy): `Give guests something to look forward to. Example: sunrise private yoga Mon, Wed, Fri at 08:00 in each guest's villa. Guests reserve by 18:00 the day before.` If [GROUP_YOGA_RATE_BALI] is set, add: `Have a big terrace or studio? Run a shared villa class for up to [GROUP_YOGA_MAX_PEOPLE] guests from Rp [GROUP_YOGA_RATE_BALI].`
 5. What you get (bullets): `Printed menu card for every villa` · `Booking by email or WhatsApp with your partner code` · `A named coordinator` · `A weekly rhythm across the portfolio` · `Monthly statement from our team` · `30-day pilot at 1–2 villas first`.
 6. Earnings example (label clearly): `Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 900.000 sessions = about 13 sessions and Rp 12.096.000 a month in sessions. At [COMMISSION_PCT]% you would earn about Rp [computed] a month.` Compute in code from COMMISSION_PCT.
@@ -102,7 +102,7 @@ Title: `Villa Partner Terms | PersonalFitness.id`. Plain-English terms (founder 
 Acceptance: linked from partner page, footer and PDF; no placeholder text live.
 
 ## P3. Partner menu & deck
-- Route `/partners/menu?partner=CODE&villa=NAME&lang=en|id` (noindex): print-ready A5 (148×210 mm) card. Content: `Wellness at [VILLA NAME]` · `Our coaches come to your villa` · 6 sessions with "from" prices · weekly example · WhatsApp number and hello@personalfitness.id · partner code when present · small print `60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.` CSS `@media print`.
+- Route `/partners/menu?partner=CODE&villa=NAME&lang=en|id` (noindex): print-ready A5 (148×210 mm) card. Content: `Wellness at [VILLA NAME]` · `Vetted instructors come to your villa` · 6 sessions with "from" prices · weekly example · WhatsApp number and hello@personalfitness.id · partner code when present · small print `60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.` CSS `@media print`.
 - Static `/partners/villa-wellness-menu.pdf` (generic sample card + 1-page "How the partner programme works" + terms summary). Generate from the same component at build time or export manually.
 - Acceptance: printing the route gives one clean A5 page; the card shows WhatsApp and email; PDF < 2 MB.
 
@@ -119,7 +119,7 @@ Acceptance: linked from partner page, footer and PDF; no placeholder text live.
 ## P6. Trust
 - `/team` (new): founder card ([FOUNDER_PHOTO], [FOUNDER_NAME], role, 80–120-word [FOUNDER_BIO], WhatsApp), coordinator card, coach cards (photo, first name, disciplines, real certifications e.g. "[CERT] — [ISSUER], [YEAR]", languages, areas). Render a card only if photo + certification exist.
 - `/about`: rewrite to ≥400 words: why the founder started it, how coaches are chosen (link /professional-standards), where we work, partner programme link. Replace "What we do not sell" with "What we focus on".
-- Images: replace AI illustrations with real photos as they arrive (start with home hero, partner hero, 6 service pages). Remove the caption "Illustrative session image. Your professional is confirmed with your booking." where a real photo is used; elsewhere change it to `Example session. Your coach is confirmed when you book.`
+- Images: replace AI illustrations with real photos as they arrive (start with home hero, partner hero, 6 service pages). Remove the caption "Illustrative session image. Your professional is confirmed with your booking." where a real photo is used; elsewhere change it to `Example session. Your instructor is confirmed when you book.`
 - Add Instagram link (when [INSTAGRAM_URL] exists) to footer and schema `sameAs`.
 - Acceptance: /team live with at least founder card; no "generated illustration" disclaimer on the home and partner hero.
 
@@ -143,7 +143,7 @@ Acceptance: linked from partner page, footer and PDF; no placeholder text live.
 | /how-it-works H1 | A click is not a booking. | From your first message to a coach at your door. |
 | Home hero microcopy | A click is not a booking. Confirmation follows a written quote. | You get a clear written quote before you pay. |
 | /pricing banner | A number on this page is not a booking. | These are starting prices for 60 minutes. Your written quote shows the final total. |
-| Home/areas | We do not claim island-wide or city-wide coverage. | We work in these areas so your coach arrives on time. |
+| Home/areas | We do not claim island-wide or city-wide coverage. | We work in these areas so your instructor arrives on time. |
 | /about | What we do not sell | What we focus on |
 | Meditation | Not therapy / not counselling | A calm, guided hour. For clinical support, please see a licensed professional. |
 | Boxing | No sparring, no ring, no kickboxing. | Pad work and conditioning, one-to-one. No sparring. |
@@ -168,7 +168,7 @@ Titles (≤60 chars). Rule for guides: drop "| PersonalFitness.id" when over 60.
 | /resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ | Mat Pilates Prices: Mat, Reformer, Home |
 | /resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained | Private Yoga in Bali: Solo, Couples, Groups |
 | /resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay | 2, 3 or 4 Week Fitness Programme for Your Stay |
-| /resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session | Home Personal Training Jakarta: First Session |
+| /resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session | Home Private Strength Training Jakarta: First Session |
 | /resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing | Private Yoga in a Jakarta Apartment |
 | /resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes | Personal Trainer in Bali: In-Villa Sessions |
 | /resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like | Personal Trainer Bali Prices Compared |

@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { PageIntro } from '@/components/Primitives'
 
 const factors = [
-  ['Service & format', 'Personal training, private yoga and mat Pilates have different professional and equipment needs.'],
+  ['Service & format', 'Private Strength Training, private yoga and mat Pilates have different professional and equipment needs.'],
   ['Duration & participants', 'The session length and whether you train alone, as a pair or in a small group shape the quote.'],
   ['Location & travel', 'Your area, access requirements and realistic travel time are considered for the exact setting.'],
   ['Venue & equipment', 'Mats, simple props, venue charges or special access requirements are clarified rather than assumed.'],

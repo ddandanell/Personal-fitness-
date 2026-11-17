@@ -1,4 +1,4 @@
-Private mobility coaching at a villa or home is a 60-minute fitness hour for stiffness, range and controlled stretching. It is not physiotherapy. PersonalFitness.id publishes the session at Rp 850.000 in Bali clusters and Rp 900.000 in Jakarta clusters. The commercial pages are [mobility coaching](/mobility-coaching), [personal training](/personal-training) and [mat Pilates](/mat-pilates). This article is the investigation layer: what the hour is, what it is not, and how the quote is built.
+Private mobility coaching at a villa or home is a 60-minute fitness hour for stiffness, range and controlled stretching. It is not physiotherapy. PersonalFitness.id publishes the session at Rp 850.000 in Bali clusters and Rp 900.000 in Jakarta clusters. The commercial pages are [mobility coaching](/mobility-coaching), [private strength training](/personal-training) and [mat Pilates](/mat-pilates). This article is the investigation layer: what the hour is, what it is not, and how the quote is built.
 
 If you searched for mobility at home because your hips feel tight after sitting, start with the floor and the honesty of the request. A dry indoor rectangle is enough. A clinic letter is not. We will not relabel rehab as stretching to take the payment.
 
@@ -6,7 +6,7 @@ If you searched for mobility at home because your hips feel tight after sitting,
 
 Mobility coaching is assisted stretching and movement practice. The professional works with the range you already have, plus a pace you can keep without treating pain. Beginners are welcome if you say so in the first message. People who already train are welcome if they accept that this is still a fitness session, not a diagnosis.
 
-The published rate is for 60 minutes. Extra people are billed. Unlike [private yoga](/private-yoga), a second person is not included. If two of you want to stretch, the extra-person line is Rp 250.000 in Bali and Rp 275.000 in Jakarta, and the floor still has to hold both of you without a walkway fight.
+The published rate is for 60 minutes. Extra people are billed. Unlike [private yoga](/private-yoga), a second person is not included. If two of you want to stretch, the extra-person line is Rp 250.000 in Bali and Rp 250.000 in Jakarta, and the floor still has to hold both of you without a walkway fight.
 
 A video of someone folding in half is not a session plan. A WhatsApp “can you fix my back” is a reason to stop and send you to a clinician. PersonalFitness.id owns the request, the match, the quote and the confirmation.
 
@@ -28,11 +28,11 @@ Heat changes the work. Midday sun on a west-facing deck is a reason to move insi
 
 ## How the Bali quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali mobility starts at Rp 850.000 for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Ninety minutes add 45 percent of the base rate when the session can extend.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali mobility starts at Rp 850.000 for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Ninety minutes add 45 percent of the base rate when the session can extend.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a stretch studio and it is not a walk-in. You train at the villa or home you already have permission to use.
 
-If the villa is in Canggu, the commercial destination is still [Bali personal training](/bali/personal-training) or [mobility coaching](/mobility-coaching), not an island-wide promise. Read [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates) if the access question is the villa, not the session type.
+If the villa is in Canggu, the commercial destination is still [Bali private strength training](/bali/personal-training) or [mobility coaching](/mobility-coaching), not an island-wide promise. Read [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates) if the access question is the villa, not the session type.
 
 ## How the Jakarta quote is built
 
@@ -46,7 +46,7 @@ A Jakarta yoga hour is a different product. If you wanted a pair session, open [
 
 There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) apply 5 percent off six sessions, 8 percent off nine and 12 percent off twelve, on session charges, not travel. Mix mobility with training or yoga only after you know the first hour fitted the room.
 
-Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
+Pay only on the merchant link in the quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 36 hours can reschedule once if supply allows; inside 36 hours the session is charged; a professional no-show is not charged.
 
 ## How to send the first message
 

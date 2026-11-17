@@ -1,4 +1,4 @@
-PersonalFitness.id does not sell a free introduction hour. The first session is a paid, quoted, confirmed hour at the published rate. If you want to test the service, buy 60 minutes. If you want a discount, buy a 6, 9 or 12 session block. There is no secret complimentary class behind a WhatsApp “hi”. Villa partners: guest first sessions are still paid. A one-off team demo is used only when that policy is published in the partner terms.
+PersonalFitness.id does not sell a free introduction hour. The first session is a paid, quoted, confirmed hour at the published rate. If you want to test the service, buy 60 minutes. If you want a discount, buy a 3, 5 or 10 session block. There is no secret complimentary class behind a WhatsApp “hi”. Villa partners: guest first sessions are still paid. A one-off team demo is used only when that policy is published in the partner terms.
 
 That is the whole policy. The rest of this article is why, how it compares to common Bali and Jakarta teaser models, and how to use a paid first session without feeling played. The [homepage](/) still holds the offer. [Pricing](/pricing) holds the numbers.
 
@@ -10,7 +10,7 @@ A 20-minute sales consult on a mat, not a session. You leave unsweaty and enroll
 
 A first class in a group that was going to run anyway. Your cost is subsidised by the room.
 
-A loss-leader from a freelancer who needs reviews. The second hour jumps. You were not told.
+A loss-leader from a solo operator who needs reviews. The second hour jumps. You were not told.
 
 A hotel amenity for in-house guests, billed into the room.
 
@@ -18,9 +18,9 @@ None of those are a 60-minute private session with a named professional, travel,
 
 ## What you get when you pay first
 
-You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 24-hour line. You get a professional who is being paid for the diary slot, which is how you get a backup when someone is sick. You get a quote you can compare to the second quote, because the number did not change after the handshake.
+You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 36-hour line. You get a professional who is being paid for the diary slot, which is how you get a backup when someone is sick. You get a quote you can compare to the second quote, because the number did not change after the handshake.
 
-Bali personal training Rp 900.000. Jakarta Rp 950.000. Yoga Rp 850.000 Bali with two people included. Mat Pilates Rp 950.000 Bali. Those are first-session prices and tenth-session prices, before programme percentages.
+Bali private strength training Rp 1.050.000. Jakarta Rp 950.000. Yoga Rp 850.000 Bali with two people included. Mat Pilates Rp 950.000 Bali. Those are first-session prices and tenth-session prices, before programme percentages.
 
 If the hour is wrong, you stop. You are not trapped in a pack you bought because the intro was free.
 
@@ -53,7 +53,7 @@ If they cannot answer, you already have the answer.
 
 Estimator on [pricing](/pricing). Same lines as every other hour. WhatsApp with city, area, window, people. Written quote. Merchant link. Confirmation with the name. Office address for the company, not for walk-in intros: listed on [contact](/contact).
 
-If you arrived from a search that promised free personal training in Bali, you will not find it here. You will find a number that still exists on Friday.
+If you arrived from a search that promised free private strength training in Bali, you will not find it here. You will find a number that still exists on Friday.
 
 ## When a paid first session is the wrong buy
 
@@ -73,7 +73,7 @@ If you are the guest, ask whether the session is already paid and what is includ
 
 ## How to budget the test without a teaser
 
-Pick the cheapest honest test: one person, 60 minutes, in-zone, standard service. Bali training Rp 900.000. Bali yoga Rp 850.000 for two. Bali mat Rp 950.000. Jakarta training Rp 950.000. That is the test budget. Not zero. Not a mystery pack.
+Pick the cheapest honest test: one person, 60 minutes, in-zone, standard service. Bali training Rp 1.050.000. Bali yoga Rp 850.000 for two. Bali mat Rp 950.000. Jakarta training Rp 1.050.000. That is the test budget. Not zero. Not a mystery pack.
 
 If Rp 900.000 is too much to learn whether you like private work in a villa, you will not like the tenth hour either. The free intro would only have delayed that fact.
 

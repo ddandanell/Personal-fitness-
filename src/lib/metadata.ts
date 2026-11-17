@@ -8,7 +8,7 @@ import { pageImage } from '@/components/EditorialPhoto'
 import { villaDemoPage } from '@/villa-demo/data'
 
 const OG_BY_PATH: Record<string, { src: string; alt: string; width: string; height: string }> = {
-  '/services': { src: '/images/editorial/core-personal-training.webp', alt: 'Private personal training at home', width: '1440', height: '960' },
+  '/services': { src: '/images/editorial/core-personal-training.webp', alt: 'Private private strength training at home', width: '1440', height: '960' },
   '/resources': { src: '/images/editorial/how-it-works.webp', alt: 'Planning a private home session', width: '1440', height: '960' },
   '/contact': { src: '/images/editorial/pricing.webp', alt: 'Discussing a private session quote', width: '1440', height: '960' },
   '/faq': { src: '/images/editorial/about.webp', alt: 'Coordinator discussing a private session', width: '1440', height: '960' },
@@ -74,7 +74,7 @@ export function pageMetadata(pathname: string) {
   const assignedImage = pageImage(pathname)
   const og = OG_BY_PATH[pathname]
   const image = assignedImage?.src || (service ? sessionPhoto(service.slug, service.image) : post?.image || og?.src || '/images/wellness/villa-yoga-partners.webp')
-  const imageAlt = assignedImage?.alt || service?.imageAlt || post?.title || og?.alt || (city === 'Jakarta' ? 'Home personal training in Jakarta' : city === 'Bali' ? 'Private fitness at a Bali villa' : 'Private yoga in a Bali villa')
+  const imageAlt = assignedImage?.alt || service?.imageAlt || post?.title || og?.alt || (city === 'Jakarta' ? 'Home private strength training in Jakarta' : city === 'Bali' ? 'Private fitness at a Bali villa' : 'Private yoga in a Bali villa')
   const sessionShot = image.includes('/sessions/') || image.includes('kenji-nakamura')
   const imageWidth = assignedImage ? String(assignedImage.width) : og?.width || (sessionShot ? '800' : image.includes('villa-yoga') ? '1100' : '1200')
   const imageHeight = assignedImage ? String(assignedImage.height) : og?.height || (sessionShot ? '870' : image.includes('villa-yoga') ? '619' : '800')

@@ -1,10 +1,10 @@
 [
   {
     "id": "A",
-    "title": "Personal training and strength",
-    "description": "Qualified trainer; portable equipment or a verified home gym. No clinical treatment claims.",
+    "title": "Private strength training",
+    "description": "Strength sessions with portable equipment or the kit already in the villa. Wellness and fitness only.",
     "image": "/images/professionals/maya-suryani.webp",
-    "offerCount": 12
+    "offerCount": 14
   },
   {
     "id": "B",
@@ -25,7 +25,7 @@
     "title": "Mobility, stretching and ergonomics",
     "description": "General movement and workstation coaching. Treatment of pain or injury belongs with the clinical pathway.",
     "image": "/images/professionals/kenji-nakamura.webp",
-    "offerCount": 8
+    "offerCount": 10
   },
   {
     "id": "E",

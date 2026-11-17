@@ -1,9 +1,9 @@
 [
   {
     "slug": "personal-training",
-    "title": "Personal training",
-    "short": "A private visit to build general strength, return to exercise or keep a routine during a stay, coordinated around your own space.",
-    "description": "Personal training at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
+    "title": "Private Strength Training",
+    "short": "A private hour for strength, a return to exercise, or a routine kept for the length of a stay. Delivered by a vetted instructor.",
+    "description": "Private strength training at your villa or home. One 60-minute session is Rp 1.050.000. Packs of 3, 5 and 10 lower the rate. The instructor, the address and the total are confirmed in writing.",
     "durationMin": 60,
     "includedParticipants": 1,
     "maxParticipants": 2,
@@ -17,7 +17,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -33,21 +33,21 @@
     ],
     "expect": [
       "An introduction and a check of the agreed space",
-      "An appropriate format involving squats, hinges, controlled pushing and pulling, carries and manageable conditioning",
+      "An appropriate format involving squats, hinges, controlled pushing and pulling, carries and manageable fitness work",
       "A clear finish and any practical next steps within professional scope"
     ],
     "image": "/images/professionals/maya-suryani.webp",
-    "imageAlt": "Indonesian professional in a private personal training setting",
+    "imageAlt": "Indonesian instructor coaching an adult guest through a strength exercise in a villa",
     "cities": [
       "Bali",
       "Jakarta"
     ],
     "prices": {
-      "Bali": 900000,
-      "Jakarta": 950000
+      "Bali": 1050000,
+      "Jakarta": 1050000
     },
     "categoryId": "A",
-    "category": "Personal training and strength",
+    "category": "Private strength training",
     "categoryIds": [
       "A"
     ],
@@ -59,12 +59,12 @@
       {
         "id": "PF-001",
         "slug": "personal-training",
-        "name": "Personal training",
+        "name": "Private Strength Training",
         "description": "Individual exercise coaching around goals and available equipment.",
         "requirement": "General fitness only; ordinary portable kit.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 900000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -79,7 +79,7 @@
         "requirement": "Adapt load and pace to experience.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 900000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -94,7 +94,7 @@
         "requirement": "Confirm adequate resistance equipment before quoting.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 1000000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -106,10 +106,10 @@
         "slug": "weight-management-fitness",
         "name": "Weight management fitness",
         "description": "Exercise coaching and activity habits that support weight goals.",
-        "requirement": "No promised weight loss or clinical diet prescription.",
+        "requirement": "No promised body change.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 950000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -119,12 +119,12 @@
       {
         "id": "PF-005",
         "slug": "low-impact-personal-training",
-        "name": "Low impact personal training",
+        "name": "Low impact private strength training",
         "description": "A lower impact workout matched to current fitness.",
-        "requirement": "Pain or medical concerns go to an appropriate professional.",
+        "requirement": "Stop if something feels wrong and tell the instructor.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 850000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -135,11 +135,11 @@
         "id": "PF-006",
         "slug": "functional-fitness",
         "name": "Functional fitness",
-        "description": "Practice useful strength, movement control and general conditioning.",
+        "description": "Practice useful strength, movement control and general fitness work.",
         "requirement": "Confirm safe floor space and equipment.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 950000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -148,13 +148,13 @@
       },
       {
         "id": "PF-007",
-        "slug": "hiit-and-conditioning",
-        "name": "HIIT and conditioning",
+        "slug": "hiit-intervals",
+        "name": "HIIT intervals",
         "description": "A coached interval workout adapted to experience and readiness.",
         "requirement": "Not a default recommendation for every customer.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 950000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -169,7 +169,7 @@
         "requirement": "Check any bars or anchor points before use.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 950000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -184,7 +184,7 @@
         "requirement": "Agree bell weights, transport and floor protection.",
         "durationMin": 60,
         "participants": 1,
-        "guidePrice": 1000000,
+        "guidePrice": 1050000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -194,12 +194,12 @@
       {
         "id": "PF-010",
         "slug": "couples-personal-training",
-        "name": "Couples personal training",
+        "name": "Couples private strength training",
         "description": "A shared workout with suitable individual exercise adjustments.",
         "requirement": "Two compatible adults; no automatic addition beyond two.",
         "durationMin": 60,
         "participants": 2,
-        "guidePrice": 1150000,
+        "guidePrice": 1300000,
         "quoteOnly": false,
         "deliveryMode": "home",
         "priceUnit": "per_booking",
@@ -241,7 +241,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -270,7 +270,7 @@
       "Jakarta": null
     },
     "categoryId": "A",
-    "category": "Personal training and strength",
+    "category": "Private Strength Training and strength",
     "categoryIds": [
       "A",
       "O"
@@ -330,7 +330,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -495,7 +495,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -568,7 +568,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -641,7 +641,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -867,7 +867,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -929,7 +929,7 @@
     "description": "Mobility and assisted stretching at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
     "durationMin": 60,
     "includedParticipants": 1,
-    "maxParticipants": 1,
+    "maxParticipants": 2,
     "status": "request",
     "statusNote": "By request. Format prices are indicative; the final quote confirms supply, inclusions and total.",
     "includes": [
@@ -940,7 +940,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -999,7 +999,7 @@
         "slug": "mobility-coaching",
         "name": "Mobility coaching",
         "description": "Practice joint movement and a usable daily mobility routine.",
-        "requirement": "General movement coaching, separate from injury treatment.",
+        "requirement": "General movement coaching, kept to guided movement.",
         "durationMin": 60,
         "participants": 1,
         "guidePrice": 850000,
@@ -1059,7 +1059,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1179,7 +1179,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1237,11 +1237,11 @@
   {
     "slug": "boxing-fitness",
     "title": "Boxing fitness",
-    "short": "Pad-only boxing fitness in a checked private space. Technique, combinations and conditioning — no sparring.",
+    "short": "Pad-only boxing fitness in a checked private space. Technique, combinations and fitness work — no sparring.",
     "description": "Private boxing fitness at your home, villa or a suitable terrace or carport. Pads are brought. The space is checked for clearance and impact noise before confirmation. No sparring, no ring and no contact work.",
     "durationMin": 60,
     "includedParticipants": 1,
-    "maxParticipants": 1,
+    "maxParticipants": 2,
     "status": "core",
     "statusNote": "Published core rate; exact dates, space check and professional confirmed by quote.",
     "includes": [
@@ -1252,7 +1252,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1268,7 +1268,7 @@
     ],
     "expect": [
       "An introduction and a check of the agreed space",
-      "An appropriate format involving non-contact pad rounds, footwork, straightforward combinations and fitness conditioning",
+      "An appropriate format involving non-contact pad rounds, footwork, straightforward combinations and fitness work",
       "A clear finish and any practical next steps within professional scope"
     ],
     "image": "/images/sessions/boxing-fitness.webp",
@@ -1356,7 +1356,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1429,7 +1429,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1547,7 +1547,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1665,7 +1665,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1738,7 +1738,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -1811,7 +1811,7 @@
   {
     "slug": "sports-conditioning",
     "title": "Private sport conditioning",
-    "short": "A private visit to add general conditioning that complements a sport you enjoy, coordinated around your own space.",
+    "short": "A private visit to add general fitness work that complements a sport you enjoy, coordinated around your own space.",
     "description": "Private sport conditioning at your home, villa or suitable private setting. Explore the formats, preparation and guide prices below, then confirm the professional, venue and complete quote for your dates.",
     "durationMin": 60,
     "includedParticipants": 1,
@@ -1826,11 +1826,11 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
-      "People who want to add general conditioning that complements a sport you enjoy",
+      "People who want to add general fitness work that complements a sport you enjoy",
       "Households and visitors who value privacy and a clear practical plan",
       "Customers who prefer to agree the full scope before choosing a visit"
     ],
@@ -1883,7 +1883,7 @@
       {
         "id": "PF-055",
         "slug": "golf-fitness-conditioning",
-        "name": "Golf fitness conditioning",
+        "name": "Golf fitness work",
         "description": "Work on strength and movement relevant to golf.",
         "requirement": "No technical golf instruction, ball striking or simulator included.",
         "durationMin": 60,
@@ -1932,7 +1932,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2126,7 +2126,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2199,7 +2199,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2272,7 +2272,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2375,7 +2375,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2448,7 +2448,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2521,8 +2521,8 @@
   {
     "slug": "guided-meditation",
     "title": "Guided meditation",
-    "short": "A quiet 60-minute guided sit for one or two people at your villa or home. Not therapy.",
-    "description": "Private guided meditation at your home, villa or a quiet indoor room. One or two people sit with a guide for sixty minutes. This is a practical attention and relaxation session, not psychotherapy, clinical treatment or a sleep-disorder service.",
+    "short": "A quiet 60-minute guided sit for one or two people at your villa or home.",
+    "description": "Private guided meditation at your home or villa. One or two people sit with a vetted instructor for sixty minutes. It is a calm, guided hour of attention and relaxation.",
     "durationMin": 60,
     "includedParticipants": 2,
     "maxParticipants": 2,
@@ -2536,7 +2536,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2640,7 +2640,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2713,7 +2713,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2802,7 +2802,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2890,7 +2890,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -2978,7 +2978,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3051,7 +3051,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3169,7 +3169,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3273,7 +3273,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3346,7 +3346,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3434,7 +3434,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3475,7 +3475,7 @@
       {
         "id": "PF-093",
         "slug": "prenatal-personal-training",
-        "name": "Prenatal personal training",
+        "name": "Prenatal private strength training",
         "description": "Exercise coaching adapted by a prenatal specialist.",
         "requirement": "Individual readiness review and clinician guidance where indicated.",
         "durationMin": 60,
@@ -3552,7 +3552,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3625,7 +3625,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3713,7 +3713,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3816,7 +3816,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -3920,7 +3920,7 @@
         "slug": "guided-walking-and-movement-companion",
         "name": "Guided walking and movement companion",
         "description": "An agreed local walk and gentle activity session.",
-        "requirement": "Non-medical service; no personal care or independent mobility guarantee.",
+        "requirement": "Non-medical service; no personal care and no promise about unaided walking.",
         "durationMin": 60,
         "participants": 1,
         "guidePrice": 750000,
@@ -3950,7 +3950,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4038,7 +4038,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4126,7 +4126,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4199,7 +4199,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4317,7 +4317,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4390,7 +4390,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4538,7 +4538,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4611,7 +4611,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4684,7 +4684,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4757,7 +4757,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4830,7 +4830,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4918,7 +4918,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -4991,7 +4991,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -5064,7 +5064,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -5106,7 +5106,7 @@
         "id": "PF-139",
         "slug": "four-week-fitness-routine",
         "name": "Four week fitness routine",
-        "description": "Twelve 60 minute personal training sessions over four weeks.",
+        "description": "Twelve 60 minute private strength training sessions over four weeks.",
         "requirement": "Use the established two, three or four week programme and its agreed session count; no second discount is stacked.",
         "durationMin": 720,
         "participants": 1,
@@ -5137,7 +5137,7 @@
     ],
     "excludes": [
       "Unquoted participants, equipment rental, venue hire or travel outside the agreed scope",
-      "Clinical treatment unless explicitly provided by an appropriately authorised clinical partner",
+      "Diagnosis, rehabilitation and medical treatment",
       "An instant reservation before availability is confirmed"
     ],
     "goodFor": [
@@ -5189,6 +5189,184 @@
         "priceUnit": "per_7_days_coordination_only",
         "wave": 2,
         "categoryId": "O"
+      }
+    ]
+  },
+  {
+    "slug": "bodywork-recovery",
+    "title": "Bodywork & Recovery",
+    "short": "Assisted stretching, myofascial release and relaxation at the villa. A wellness hour, delivered by a vetted instructor.",
+    "description": "Bodywork and recovery at your villa or home. Assisted stretching, myofascial release and a quiet finish. One 60-minute session is Rp 1.050.000. The instructor and the total are confirmed in writing.",
+    "durationMin": 60,
+    "includedParticipants": 1,
+    "maxParticipants": 2,
+    "status": "core",
+    "statusNote": "Subject to instructor availability and location confirmation. The written quote names the instructor and the total.",
+    "includes": [
+      "A 60-minute private session at the villa or home",
+      "A vetted instructor named on the written quote",
+      "A clear start, a guided hour, and a calm finish",
+      "Ordinary portable kit when the format needs it"
+    ],
+    "excludes": [
+      "Unquoted guests, venue hire or travel outside the written quote",
+      "Diagnosis, rehabilitation and medical treatment",
+      "A reservation before availability and the address are confirmed"
+    ],
+    "goodFor": [
+      "Villa guests who want the hour in their own space",
+      "Couples and friends when the second guest is added on the quote",
+      "Villa managers arranging a session for a stay"
+    ],
+    "prepare": [
+      "Clear a living-room floor or a shaded terrace",
+      "Share the city, area, date window and guest count",
+      "Tell us about gates, stairs and any house rules",
+      "Keep health and payment details out of the first message"
+    ],
+    "expect": [
+      "A short check of the space",
+      "Assisted stretching, light myofascial release and time to relax.",
+      "Time to finish without rushing, and a note of what to repeat if you want another session"
+    ],
+    "image": "/images/editorial/core-bodywork-recovery.webp",
+    "imageAlt": "Indonesian instructor guiding an adult guest through a seated stretch on a mat in a villa living room",
+    "cities": [
+      "Bali",
+      "Jakarta"
+    ],
+    "prices": {
+      "Bali": 1050000,
+      "Jakarta": 1050000
+    },
+    "categoryId": "D",
+    "category": "Bodywork and recovery",
+    "categoryIds": [
+      "D"
+    ],
+    "deliveryModes": [
+      "home"
+    ],
+    "quoteOnly": false,
+    "offers": [
+      {
+        "id": "PF-141",
+        "slug": "bodywork-recovery",
+        "name": "Bodywork and recovery",
+        "description": "Assisted stretching, light myofascial release and time to relax.",
+        "requirement": "Wellness only. One guest is included. A second guest is Rp 250.000.",
+        "durationMin": 60,
+        "participants": 1,
+        "guidePrice": 1050000,
+        "quoteOnly": false,
+        "deliveryMode": "home",
+        "priceUnit": "per_booking",
+        "wave": 1,
+        "categoryId": "D"
+      },
+      {
+        "id": "PF-142",
+        "slug": "bodywork-recovery-pair",
+        "name": "Bodywork and recovery for two",
+        "description": "The same hour with a second guest in the room.",
+        "requirement": "Two adults. The second guest adds Rp 250.000 to the session rate.",
+        "durationMin": 60,
+        "participants": 2,
+        "guidePrice": 1300000,
+        "quoteOnly": false,
+        "deliveryMode": "home",
+        "priceUnit": "per_booking",
+        "wave": 1,
+        "categoryId": "D"
+      }
+    ]
+  },
+  {
+    "slug": "zumba-dance-fitness",
+    "title": "Zumba & Dance Fitness",
+    "short": "High-energy, fun cardio at the villa. Simple dance steps for one or two guests, led by a vetted instructor.",
+    "description": "Zumba and dance fitness at your villa or home. A high-energy hour of simple steps and music. One 60-minute session is Rp 1.050.000. The instructor and the total are confirmed in writing.",
+    "durationMin": 60,
+    "includedParticipants": 1,
+    "maxParticipants": 2,
+    "status": "core",
+    "statusNote": "Subject to instructor availability and location confirmation. The written quote names the instructor and the total.",
+    "includes": [
+      "A 60-minute private session at the villa or home",
+      "A vetted instructor named on the written quote",
+      "A clear start, a guided hour, and a calm finish",
+      "Ordinary portable kit when the format needs it"
+    ],
+    "excludes": [
+      "Unquoted guests, venue hire or travel outside the written quote",
+      "Diagnosis, rehabilitation and medical treatment",
+      "A reservation before availability and the address are confirmed"
+    ],
+    "goodFor": [
+      "Villa guests who want the hour in their own space",
+      "Couples and friends when the second guest is added on the quote",
+      "Villa managers arranging a session for a stay"
+    ],
+    "prepare": [
+      "Clear a living-room floor or a shaded terrace",
+      "Share the city, area, date window and guest count",
+      "Tell us about gates, stairs and any house rules",
+      "Keep health and payment details out of the first message"
+    ],
+    "expect": [
+      "A short check of the space",
+      "Simple dance steps, a steady rhythm and a fun cardio hour.",
+      "Time to finish without rushing, and a note of what to repeat if you want another session"
+    ],
+    "image": "/images/editorial/core-zumba-dance-fitness.webp",
+    "imageAlt": "Indonesian instructor leading an adult guest through a dance-fitness step in a villa living room",
+    "cities": [
+      "Bali",
+      "Jakarta"
+    ],
+    "prices": {
+      "Bali": 1050000,
+      "Jakarta": 1050000
+    },
+    "categoryId": "A",
+    "category": "Zumba & Dance Fitness",
+    "categoryIds": [
+      "A"
+    ],
+    "deliveryModes": [
+      "home"
+    ],
+    "quoteOnly": false,
+    "offers": [
+      {
+        "id": "PF-143",
+        "slug": "zumba-dance-fitness",
+        "name": "Zumba and dance fitness",
+        "description": "Simple dance steps, a steady rhythm and a fun cardio hour.",
+        "requirement": "Wellness only. One guest is included. A second guest is Rp 250.000.",
+        "durationMin": 60,
+        "participants": 1,
+        "guidePrice": 1050000,
+        "quoteOnly": false,
+        "deliveryMode": "home",
+        "priceUnit": "per_booking",
+        "wave": 1,
+        "categoryId": "A"
+      },
+      {
+        "id": "PF-144",
+        "slug": "zumba-dance-fitness-pair",
+        "name": "Zumba and dance fitness for two",
+        "description": "The same hour with a second guest in the room.",
+        "requirement": "Two adults. The second guest adds Rp 250.000 to the session rate.",
+        "durationMin": 60,
+        "participants": 2,
+        "guidePrice": 1300000,
+        "quoteOnly": false,
+        "deliveryMode": "home",
+        "priceUnit": "per_booking",
+        "wave": 1,
+        "categoryId": "A"
       }
     ]
   }

@@ -11,7 +11,7 @@ import { publicServices } from '@/data/publicOffer'
 
 const faqs = [
   ['Apa itu personal trainer datang ke rumah?', 'PersonalFitness.id mengirim pelatih ke villa atau rumah Anda di klaster Bali dan Jakarta yang kami terbitkan. Sesi berlangsung di ruang Anda, bukan di studio walk-in Denpasar.'],
-  ['Berapa harganya?', 'Harga mulai personal training Bali Rp 900.000 dan Jakarta Rp 950.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan ke Ubud atau Sanur Rp 150.000 per kunjungan, Uluwatu Rp 200.000. Total ada di kutipan tertulis.'],
+  ['Berapa harganya?', 'Harga mulai private strength training Rp 1.050.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya perjalanan tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan tertulis. Total ada di kutipan tertulis.'],
   ['Mengapa lebih mahal dari pelatih lepas?', 'Ini layanan terkelola: koordinator mencocokkan sesi, lokasi dan jam, lalu menamai profesional di kutipan. Cek akses, cadangan, dan total tertulis masuk ke harga. Tarif WhatsApp lepas tanpa kutipan adalah produk lain.'],
   ['Apakah ada sesi perkenalan gratis?', 'Tidak. Kunjungan pertama memakai tarif terbit. Kami tidak menjual intro gratis yang kemudian ditarik di chat.'],
   ['Wilayah Jakarta mana yang masuk zona?', 'Jakarta Selatan (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) dan Jakarta Pusat (Menteng, Gondangdia, Thamrin) masuk zona. Utara, Barat, Timur, dan PIK dikutip setelah cek stok dan perjalanan.'],
@@ -39,8 +39,8 @@ export default function IndonesianHome() {
           </div>
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(900_000)}</strong><span>Mulai · personal training Bali, 60 menit, dalam zona.</span></div>
-          <div><strong>{formatIdr(950_000)}</strong><span>Mulai · personal training Jakarta, 60 menit, dalam zona.</span></div>
+          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
+          <div><strong>{formatIdr(900_000)}</strong><span>Paket 5 sesi, per sesi.</span></div>
           <div><strong>Enam sesi</strong><span>Training, yoga, Pilates, mobilitas, boxing, meditasi.</span></div>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function IndonesianHome() {
           <div>
             <Eyebrow>Untuk portofolio</Eyebrow>
             <h2>Ritme mingguan di banyak villa, diurus koordinator.</h2>
-            <p className="large-copy">Atur sesi berbeda di hari berbeda: yoga Senin, personal training Rabu, Pilates Jumat, masing-masing di villa tamu. Tim Anda tidak memegang jadwal. Koordinator mencocokkan profesional, mengecek akses, dan mengirim harga tertulis.</p>
+            <p className="large-copy">Atur sesi berbeda di hari berbeda: yoga Senin, private strength training Rabu, Pilates Jumat, masing-masing di villa tamu. Tim Anda tidak memegang jadwal. Koordinator mencocokkan profesional, mengecek akses, dan mengirim harga tertulis.</p>
           </div>
           <ul className="check-list large-list">
             {['Koordinator tetap untuk villa Anda', 'Profesional yang sudah diseleksi, namanya di kutipan', 'Tamu memesan lewat email atau WhatsApp', `Email ${COMPANY_EMAIL}`, 'Anda mendapat komisi dari sesi yang dibayar'].map((item) => (
@@ -82,7 +82,7 @@ export default function IndonesianHome() {
             <Eyebrow>Lokasi</Eyebrow>
             <h2>Klaster yang kami terbitkan, bukan seluruh pulau.</h2>
             <p className="large-copy">Bali dalam zona: Canggu dan Seminyak. Jakarta dalam zona: Jakarta Selatan dan Jakarta Pusat, termasuk Kemang, Senopati, Menteng, dan Thamrin.</p>
-            <p>Ubud dan Sanur menambah {formatIdr(150_000)} per kunjungan. Uluwatu {formatIdr(200_000)}. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu. Kantor di Jl. Tukad Barito Timur III No.16, Panjer, adalah administrasi, bukan studio.</p>
+            <p>Perjalanan zona pusat termasuk. Area luar (seperti Uluwatu) kena biaya perjalanan tetap Rp 50.000 sampai Rp 100.000 maksimal, dikonfirmasi di kutipan tertulis. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu. Kantor di Jl. Tukad Barito Timur III No.16, Panjer, adalah administrasi, bukan studio.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>

@@ -42,7 +42,7 @@ try {
     kind: 'quote',
     name: 'Ada',
     email: 'ada@example.com',
-    message: 'Personal training in Canggu tomorrow morning for one person.',
+    message: 'Private Strength Training in Canggu tomorrow morning for one person.',
     page: '/contact',
   }
 
@@ -197,7 +197,7 @@ try {
       to: email,
       replyTo: 'ada@example.com',
       subject: 'Quote enquiry',
-      text: 'Personal training in Canggu.',
+      text: 'Private Strength Training in Canggu.',
     },
   })
   assert.equal(captured.length, 1)

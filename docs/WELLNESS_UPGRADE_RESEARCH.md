@@ -13,7 +13,7 @@ The proposal offers fixed calendars, on-demand visits and retreat coordination. 
 
 The wording supports managers with portfolios of 25 or more properties. It does not invent an existing count of 25 partner companies, customer logos or testimonials.
 
-The first visit is a paid single session. Subsequent plans are fixed prepaid blocks, with a month defined as four weeks and no automatic renewal. Published fitness rates and 5%, 8% and 12% reductions remain the pricing baseline. Travel is itemised per visit. Mixed plans apply savings only to eligible fitness visits.
+The first visit is a paid single session. Subsequent plans are fixed prepaid blocks, with a month defined as four weeks and no automatic renewal. Published fitness rates and about 9.5%, 14.3% and 23.8% reductions remain the pricing baseline. Travel is itemised per visit. Mixed plans apply savings only to eligible fitness visits.
 
 The public wellness brief section explains a consent-based human coordination workflow. It is not an authenticated customer or coach records application. Clinical records remain separate from general wellness preferences. The planner and partner enquiry do not persist the information entered or send it automatically.
 

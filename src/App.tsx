@@ -72,6 +72,8 @@ export default function App() {
           <Route path="/mobility-coaching" element={<ServiceGate slug="mobility-coaching" />} />
           <Route path="/boxing-fitness" element={<ServiceGate slug="boxing-fitness" />} />
           <Route path="/guided-meditation" element={<ServiceGate slug="guided-meditation" />} />
+        <Route path="/bodywork-recovery" element={<ServiceGate slug="bodywork-recovery" />} />
+        <Route path="/zumba-dance-fitness" element={<ServiceGate slug="zumba-dance-fitness" />} />
           <Route path="/swimming" element={<ServiceGate slug="swimming" />} />
           <Route path="/nutrition-consultation" element={<ServiceGate slug="nutrition-consultation" />} />
           <Route path="/physiotherapy" element={<ServiceGate slug="physiotherapy" />} />

@@ -55,6 +55,8 @@ export type Area = {
   cluster: string
   travelFee: number
   travelQuote?: boolean
+  /** Outer Bali clusters: travel is a confirmed flat fee, not added as a fixed estimator line. */
+  outerTravel?: boolean
   driveNote: string
   copy: string
   venues: string[]
@@ -66,16 +68,17 @@ export type Area = {
 export type Programme = {
   slug: string
   title: string
-  weeks: number
   sessions: number
-  discount: number
+  /** 60-minute rate for a session priced from the Rp 1.050.000 anchor. */
+  perSession: number
   blurb: string
   includes: string[]
 }
 
+/** Second guest on a one-person session rate. The same amount in Bali and Jakarta. */
 export const extraPersonFee: Record<City, number> = {
   Bali: 250_000,
-  Jakarta: 275_000,
+  Jakarta: 250_000,
 }
 
 export const durationUplift = {
@@ -88,37 +91,45 @@ export const services = wellnessServiceData as Service[]
 export const coreServices = services.filter((item) => item.status === 'core')
 export const listedServices = services.filter((item) => item.status !== 'held')
 
+/** 60-minute anchor used for package savings. Other disciplines keep their own published rates. */
+export const SESSION_ANCHOR = 1_050_000
+
 export const programmes: Programme[] = [
   {
-    slug: 'two-week',
-    title: 'Two-week stay',
-    weeks: 2,
-    sessions: 6,
-    discount: 0.05,
-    blurb: 'Six private sessions across a fortnight. Built for villa stays and short Jakarta sprints.',
-    includes: ['Six confirmed sessions in a 14-day window', 'Same professional where supply allows', 'One free reschedule if notice meets the quote terms'],
+    slug: 'single',
+    title: 'Single Session',
+    sessions: 1,
+    perSession: 1_050_000,
+    blurb: 'One 60-minute session at Rp 1.050.000. This is the anchor rate, with no pack saving.',
+    includes: ['1 session at Rp 1.050.000', 'No pack saving', 'Subject to instructor availability and location confirmation'],
   },
   {
-    slug: 'three-week',
-    title: 'Three-week rhythm',
-    weeks: 3,
-    sessions: 9,
-    discount: 0.08,
-    blurb: 'Nine sessions for longer stays and people who want a visible three-week block.',
-    includes: ['Nine sessions in 21 days', 'Written session outline after session two', 'Hold on a preferred morning or evening window'],
+    slug: 'pack-3',
+    title: '3-Session Pack (Short Stay)',
+    sessions: 3,
+    perSession: 950_000,
+    blurb: 'Three sessions at Rp 950.000 each. Rp 2.850.000 in total. Save Rp 300.000 against the single-session rate.',
+    includes: ['3 sessions', 'Rp 950.000 per session on the anchor rate', 'Save Rp 300.000 (about 9.5%)'],
   },
   {
-    slug: 'four-week',
-    title: 'Four-week programme',
-    weeks: 4,
-    sessions: 12,
-    discount: 0.12,
-    blurb: 'Twelve sessions over a month. The usual choice for Jakarta residents and month-long Bali stays.',
-    includes: ['Twelve sessions in 28 days', 'Mid-point check with the coordinator', 'Unused sessions follow the refund terms on your quote'],
+    slug: 'pack-5',
+    title: '5-Session Pack (Most Popular)',
+    sessions: 5,
+    perSession: 900_000,
+    blurb: 'Five sessions at Rp 900.000 each. Rp 4.500.000 in total. Save Rp 750.000 against the single-session rate.',
+    includes: ['5 sessions', 'Rp 900.000 per session on the anchor rate', 'Save Rp 750.000 (about 14.3%)'],
+  },
+  {
+    slug: 'pack-10',
+    title: '10-Session Pack (Extended Stay)',
+    sessions: 10,
+    perSession: 800_000,
+    blurb: 'Ten sessions at Rp 800.000 each. Rp 8.000.000 in total. Save Rp 2.500.000 against the single-session rate.',
+    includes: ['10 sessions', 'Rp 800.000 per session on the anchor rate', 'Save Rp 2.500.000 (about 23.8%)'],
   },
 ]
 
-const JAKARTA_LIVE = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation']
+const JAKARTA_LIVE = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness']
 
 const jakartaPockets: Area[] = [
   {
@@ -131,7 +142,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta. Travel is inside the published Jakarta session price.',
     copy: 'Kemang houses and low-rise compounds are a common South Jakarta setup: parking, a dog, and a living-room rectangle. Name the street, not “Kemang-ish”. The hour runs at your home after access is on the quote.',
     venues: ['Landed houses with a clear indoor floor', 'Townhouse living rooms', 'Private courtyards that can take a mat'],
-    bestFor: ['Weekend personal training', 'Private yoga for two', 'A four-week resident block'],
+    bestFor: ['Weekend private strength training', 'Private yoga for two', 'A four-week resident block'],
     services: JAKARTA_LIVE,
   },
   {
@@ -144,7 +155,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta. Building access still goes on the quote.',
     copy: 'Senopati towers often lose the hour in the lobby: a visitor pass, lift waits, and a front desk that has not been told a coach is coming. Put the building and tower on the first message. The published Jakarta rate applies when we can time the visit.',
     venues: ['Apartment living rooms', 'Serviced residences with written visitor access', 'Private rooms with a door that can close'],
-    bestFor: ['Before-office personal training', 'Lunch-hour mobility', 'Private yoga after work'],
+    bestFor: ['Before-office private strength training', 'Lunch-hour mobility', 'Private yoga after work'],
     services: JAKARTA_LIVE,
   },
   {
@@ -157,7 +168,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta. Weekday morning crush still needs a two-hour window.',
     copy: 'SCBD residences sit inside the published Jakarta rate when we can time the visit. A 06:30 weekday is a lift and a security script, not a studio class. Name the tower. A rooftop gym is only useful if it is private and permitted.',
     venues: ['Residential towers with visitor process', 'Serviced apartments', 'Private indoor rectangles, not lobby gyms'],
-    bestFor: ['Weekday personal training', 'Pad-only boxing after a neighbour check', 'A standing resident programme'],
+    bestFor: ['Weekday private strength training', 'Pad-only boxing after a neighbour check', 'A standing resident programme'],
     services: JAKARTA_LIVE,
   },
   {
@@ -170,7 +181,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta for Kebayoran Baru and nearby streets we can time.',
     copy: 'Kebayoran houses and apartments are in-zone South Jakarta. Family homes with a living-room rectangle are easier than a shared building gym. Say Kebayoran Baru or Kebayoran Lama. “South Jakarta somewhere” is not an area.',
     venues: ['Family houses', 'Apartment living rooms', 'Private garden shade only if neighbours allow'],
-    bestFor: ['Morning personal training', 'Mat Pilates at home', 'Guided meditation in a quiet room'],
+    bestFor: ['Morning private strength training', 'Mat Pilates at home', 'Guided meditation in a quiet room'],
     services: JAKARTA_LIVE,
   },
   {
@@ -183,7 +194,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta. Traffic windows still belong on the quote.',
     copy: 'Cilandak landed houses and compounds sit inside the published Jakarta rate when we can time the visit. A helper in the kitchen is fine if you say so. A child watching still needs a parent in the room. The hour is one session, not a family circuit class.',
     venues: ['Landed-house living rooms', 'Compound gym rooms with permission', 'Clear indoor tile or wood'],
-    bestFor: ['Resident personal training', 'Private yoga for two', 'A three- or four-week block'],
+    bestFor: ['Resident private strength training', 'Private yoga for two', 'A three- or four-week block'],
     services: JAKARTA_LIVE,
   },
   {
@@ -196,7 +207,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone South Jakarta, next to the Cilandak cluster we already time.',
     copy: 'Pondok Indah houses and apartments are quoted as in-zone South Jakarta when the address sits in this pocket. Estate security, a side gate and a usable indoor floor go on the first message. A tennis court or club gym is not the default venue.',
     venues: ['Estate houses with a clear indoor room', 'Apartment living rooms', 'Private gym rooms already in the house'],
-    bestFor: ['Morning personal training', 'Private yoga', 'Weekly resident programmes'],
+    bestFor: ['Morning private strength training', 'Private yoga', 'Weekly resident programmes'],
     services: JAKARTA_LIVE,
   },
   {
@@ -222,7 +233,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone Central Jakarta. Access still goes on the quote.',
     copy: 'Menteng houses and apartments are in-zone Central Jakarta. One-way streets, a parked car and a house helper at the gate matter more than a pin. The published Jakarta rate applies when we can time the visit. The Denpasar office is not a Jakarta studio.',
     venues: ['Family houses', 'Apartment living rooms', 'Serviced residences with written access'],
-    bestFor: ['Early personal training', 'Private yoga at home', 'A four-week resident block'],
+    bestFor: ['Early private strength training', 'Private yoga at home', 'A four-week resident block'],
     services: JAKARTA_LIVE,
   },
   {
@@ -235,7 +246,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone Central Jakarta, next to Menteng streets we already time.',
     copy: 'Gondangdia sits inside Central Jakarta in-zone. Compact houses and older apartments need a named entrance. Tell us if parking is on-street. The hour still needs a clear indoor rectangle, not a corridor.',
     venues: ['Compact family houses', 'Older apartment living rooms', 'Private indoor floors with permission'],
-    bestFor: ['Personal training at home', 'Mat Pilates', 'Guided meditation in a quiet room'],
+    bestFor: ['Private Strength Training at home', 'Mat Pilates', 'Guided meditation in a quiet room'],
     services: JAKARTA_LIVE,
   },
   {
@@ -248,7 +259,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'In-zone Central Jakarta. Lobby names still belong on the quote.',
     copy: 'Thamrin residences and serviced apartments are a building-access product. Put the tower, parking and visitor process in the first WhatsApp. A 06:30 weekday window is a different object from a Sunday house visit in Menteng.',
     venues: ['Serviced apartments', 'Residential towers', 'Office-adjacent homes with written access'],
-    bestFor: ['Weekday personal training', 'Lunch-hour mobility', 'Private yoga after work'],
+    bestFor: ['Weekday private strength training', 'Lunch-hour mobility', 'Private yoga after work'],
     services: JAKARTA_LIVE,
   },
   {
@@ -375,8 +386,8 @@ export const areas: Area[] = [
     driveNote: 'In-zone. Travel is inside the published session price for core services.',
     copy: 'Canggu is the first Bali cluster we coordinate: villas, compounds and rented homes around Berawa, Batu Bolong, Pererenan and Echo Beach. Sessions run in private spaces with permission, not on packed beach clubs.',
     venues: ['Private villas', 'Rented homes with a clear indoor floor', 'Compound gym rooms', 'Shaded decks with neighbour-aware noise'],
-    bestFor: ['Sunrise personal training', 'Couple yoga before the heat', 'Mat Pilates in a living room'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'swimming'],
+    bestFor: ['Sunrise private strength training', 'Couple yoga before the heat', 'Mat Pilates in a living room'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness', 'swimming'],
   },
   {
     slug: 'seminyak',
@@ -387,44 +398,47 @@ export const areas: Area[] = [
     driveNote: 'In-zone. Travel is inside the published session price for core services.',
     copy: 'Seminyak and nearby Petitenget work for guests who want a private session without leaving the villa. Access, one-way streets and villa-staff rules are checked before we send a professional.',
     venues: ['Villa living rooms', 'Upper-floor suites with lift access', 'Private gardens with shade'],
-    bestFor: ['Private yoga for two', 'Short-stay personal training', 'Evening mobility after dinner plans'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    bestFor: ['Private yoga for two', 'Short-stay private strength training', 'Evening mobility after dinner plans'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'ubud',
     name: 'Ubud',
     city: 'Bali',
     cluster: 'Outer Bali',
-    travelFee: 150_000,
-    driveNote: 'Outer-zone travel of Rp 150.000 is added once per visit, not per person.',
+    travelFee: 0,
+    outerTravel: true,
+    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
     copy: 'Ubud sessions are coordinated for villas and houses with a usable floor and realistic access. We do not sell “yoga in the jungle” as a product. The session happens in your space after a travel and timing check.',
     venues: ['Valley villas with a clear indoor room', 'Family compounds', 'Quiet guesthouse suites with owner permission'],
-    bestFor: ['Private yoga', 'Mobility after long walks', 'Personal training for longer stays'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    bestFor: ['Private yoga', 'Mobility after long walks', 'Private Strength Training for longer stays'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'sanur',
     name: 'Sanur',
     city: 'Bali',
     cluster: 'Outer Bali',
-    travelFee: 150_000,
-    driveNote: 'Outer-zone travel of Rp 150.000 is added once per visit.',
+    travelFee: 0,
+    outerTravel: true,
+    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
     copy: 'Sanur works for families and longer-stay guests who want a calmer shoreline base. Travel is quoted because it sits outside the Canggu to Seminyak cluster.',
     venues: ['Family villas', 'Apartment living rooms', 'Hotel suites only with written venue permission'],
     bestFor: ['Morning training before the heat', 'Mat Pilates with a partner'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'uluwatu',
     name: 'Uluwatu',
     city: 'Bali',
     cluster: 'Bukit',
-    travelFee: 200_000,
-    driveNote: 'Bukit travel of Rp 200.000 is added once per visit. Traffic windows are checked before confirmation.',
+    travelFee: 0,
+    outerTravel: true,
+    driveNote: 'Outer-area travel is a flat fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote.',
     copy: 'Uluwatu, Pecatu, Bingin and nearby Bukit addresses need a longer travel window. We only confirm when the professional can arrive, set up and leave inside a realistic block; not a clifftop photo promise.',
     venues: ['Clifftop villas with indoor floors', 'Private gym rooms', 'Pools with owner permission for swim enquiries'],
     bestFor: ['Stay-put villa training', 'Private yoga for two', 'Pad-only boxing after a space check'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'swimming'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness', 'swimming'],
   },
   {
     slug: 'south-jakarta',
@@ -435,8 +449,8 @@ export const areas: Area[] = [
     driveNote: 'In-zone for Kebayoran, Senopati, SCBD, Kemang, Cilandak and nearby streets we can time.',
     copy: 'South Jakarta is the first Jakarta cluster: apartments, townhouses and houses where a professional can reach you inside a planned window. Building access, parking and lift rules go on the quote.',
     venues: ['Apartments with a clear living-room floor', 'Landed-house gyms', 'Townhouse courtyards that can take a mat'],
-    bestFor: ['Before-office personal training', 'Lunch-hour Pilates', 'Weekly resident programmes'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    bestFor: ['Before-office private strength training', 'Lunch-hour Pilates', 'Weekly resident programmes'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'central-jakarta',
@@ -447,8 +461,8 @@ export const areas: Area[] = [
     driveNote: 'In-zone for Menteng, Gondangdia, Thamrin and nearby buildings we can time.',
     copy: 'Central Jakarta sessions are built around building access. Lobby, parking and security names are collected before confirmation so the professional is not left downstairs.',
     venues: ['Serviced apartments', 'Family houses', 'Office-adjacent residences with written access'],
-    bestFor: ['Early personal training', 'Private yoga at home', 'Three- and four-week resident blocks'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    bestFor: ['Early private strength training', 'Private yoga at home', 'Three- and four-week resident blocks'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'north-jakarta', name: 'North Jakarta', city: 'Jakarta', cluster: 'North Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -456,7 +470,7 @@ export const areas: Area[] = [
     copy: 'Request private wellness at homes and apartments around Kelapa Gading, Sunter, Pluit and other North Jakarta addresses. Your coordinator checks local professional availability, building permission and travel before confirming any visit.',
     venues: ['Apartments with visiting-professional permission', 'Private houses with a clear practice space', 'Hotel rooms and gyms with management approval'],
     bestFor: ['At-home yoga by request', 'A recurring household fitness enquiry', 'A private wellness schedule with realistic travel windows'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'west-jakarta', name: 'West Jakarta', city: 'Jakarta', cluster: 'West Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -464,7 +478,7 @@ export const areas: Area[] = [
     copy: 'Plan a private training, yoga or Pilates enquiry for a home, apartment or approved hotel in West Jakarta. Puri Indah, Kebon Jeruk and nearby addresses are reviewed individually so your schedule is based on a professional who can reach the property.',
     venues: ['Landed homes with suitable indoor floors', 'Apartments with security and lift access agreed', 'Private gyms approved for an outside professional'],
     bestFor: ['A before-work fitness enquiry', 'Private yoga at home', 'A multi-week plan for residents'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
     slug: 'east-jakarta', name: 'East Jakarta', city: 'Jakarta', cluster: 'East Jakarta · by request', travelFee: 0, travelQuote: true,
@@ -472,7 +486,7 @@ export const areas: Area[] = [
     copy: 'Ask about a private wellness routine for your East Jakarta home or apartment. Rawamangun, Pulomas and surrounding addresses are considered after a local supply and access check. An enquiry does not imply guaranteed coverage across the municipality.',
     venues: ['Private family homes', 'Apartment living rooms with clear floor space', 'Approved residential fitness rooms'],
     bestFor: ['A resident yoga or training enquiry', 'A family wellness schedule', 'A regular time window near home'],
-    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'],
+    services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   ...jakartaPockets,
 ]
@@ -488,9 +502,9 @@ export const cities: Record<City, {
   Bali: {
     slug: 'bali',
     headline: 'Personal trainer in Bali, at your villa or home.',
-    lede: 'Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
+    lede: 'Private Strength Training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation in Canggu and Seminyak first. Ubud, Sanur and Uluwatu are available with a travel fee and a realistic arrival window.',
     audience: ['Villa guests keeping a routine', 'Month-long residents', 'Couples and small groups', 'Hosts arranging sessions for guests'],
-    clusters: ['Canggu to Seminyak in-zone', 'Ubud and Sanur + Rp 150.000', 'Uluwatu / Bukit + Rp 200.000'],
+    clusters: ['Canggu to Seminyak, travel included', 'Ubud, Sanur and Uluwatu: flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in the quote'],
     notes: [
       'We do not claim island-wide coverage.',
       'Beach clubs, temples and public sand are not default venues.',
@@ -500,7 +514,7 @@ export const cities: Record<City, {
   Jakarta: {
     slug: 'jakarta',
     headline: 'Home personal trainer in Jakarta.',
-    lede: 'Private personal training, yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation at your apartment or house. South Jakarta pockets such as Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah and Kuningan, plus Central Jakarta pockets such as Menteng, Gondangdia and Thamrin, sit inside the published rate. North, West and East neighbourhoods are quoted with travel.',
+    lede: 'Private private strength training, yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation at your apartment or house. South Jakarta pockets such as Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah and Kuningan, plus Central Jakarta pockets such as Menteng, Gondangdia and Thamrin, sit inside the published rate. North, West and East neighbourhoods are quoted with travel.',
     audience: ['Professionals training before or after work', 'Beginners starting at home', 'Households sharing one coach', 'People who want a four-week block, not a one-off class'],
     clusters: ['South Jakarta in-zone, including Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah and Kuningan', 'Central Jakarta in-zone, including Menteng, Gondangdia and Thamrin', 'North, West, East and BSD quoted with travel'],
     notes: [
@@ -541,9 +555,9 @@ export function servicePrice(slug: string, city: City) {
 }
 
 export const cancellationRules = [
-  ['More than 24 hours', 'Reschedule once at no extra session fee, subject to supply.'],
-  ['Inside 24 hours', 'The session is charged. We try to fill the window; we do not promise a replacement.'],
-  ['Professional late or no-show', 'The session is not charged. A replacement window is offered.'],
+  ['More than 36 hours', 'Free rescheduling up to 36 hours before your session. Sessions are delivered by vetted instructors.'],
+  ['Inside 36 hours', 'The session is charged. Another time depends on instructor availability.'],
+  ['Instructor late or unable to attend', 'The session is not charged. Another window is offered when an instructor is available.'],
   ['Unsafe space, weather or access failure', 'We stop the session, record the reason and re-quote or refund per the written terms.'],
-  ['Programme unused sessions', 'Unused prepaid sessions follow the validity window on your quote, usually 14 days beyond the last booked week.'],
+  ['Unused pack sessions', 'Unused prepaid sessions follow the validity window on your quote.'],
 ]

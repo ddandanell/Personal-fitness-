@@ -29,18 +29,20 @@ const ratePhotos: Record<string, string> = {
   'boxing-fitness': '/images/editorial/core-boxing-fitness.webp',
   'guided-meditation': '/images/editorial/core-guided-meditation.webp',
   'mobility-coaching': '/images/locations/mobility-coaching.webp',
+  'bodywork-recovery': '/images/editorial/core-bodywork-recovery.webp',
+  'zumba-dance-fitness': '/images/editorial/core-zumba-dance-fitness.webp',
 }
 
 const priceExamples = [
   {
     place: 'Canggu',
-    title: 'Personal training',
+    title: 'Private Strength Training',
     note: '60 minutes · 1 person · in-zone travel included',
     quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'canggu', durationMin: 60, participants: 1 }),
   },
   {
     place: 'Ubud',
-    title: 'Personal training',
+    title: 'Private Strength Training',
     note: '60 minutes · 1 person · outer-zone travel added',
     quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'ubud', durationMin: 60, participants: 1 }),
   },
@@ -52,7 +54,7 @@ const priceExamples = [
   },
   {
     place: 'Canggu',
-    title: 'Personal training for two',
+    title: 'Private Strength Training for two',
     note: '60 minutes · 2 people · extra-person fee added',
     quote: estimateQuote({ service: 'personal-training', city: 'Bali', area: 'canggu', durationMin: 60, participants: 2 }),
   },
@@ -72,8 +74,7 @@ const priceExamples = [
 
 const travelZones = [
   ['Bali in-zone', 'Included', 'Canggu and Seminyak. Travel is already inside the published session price.'],
-  ['Ubud and Sanur', formatIdr(150_000), 'Added once per visit, not per person. Timing is checked before we confirm.'],
-  ['Uluwatu / Bukit', formatIdr(200_000), 'Added once per visit. Traffic windows are part of the quote, not an afterthought.'],
+  ['Outer areas', 'Rp 50.000–100.000', 'A flat travel fee, confirmed in the written quote. Uluwatu is an example. It is not added as a fixed line in the estimator.'],
   ['Jakarta in-zone', 'Included', 'South and Central Jakarta. Building access is collected before confirmation.'],
   ['North, West, East Jakarta', 'By quote', 'No in-zone or zero-travel price is assumed. We confirm supply and travel in writing.'],
 ]
@@ -82,7 +83,7 @@ const quoteSteps = [
   ['Starting price', 'The published 60-minute in-zone rate for the session and city.'],
   ['People and length', 'Extra people and a 90-minute visit sit on top of that rate.'],
   ['Travel', 'Outer-zone clusters add a per-visit line. In-zone travel is included.'],
-  ['Programme', '6, 9 and 12 visits take 5%, 8% and 12% off session charges, not travel.'],
+  ['Package', '3, 5 and 10 session packs price private strength training at Rp 950.000, Rp 900.000 and Rp 800.000. Savings are shown against Rp 1.050.000.'],
 ]
 
 const priceFaqKeys = [
@@ -103,7 +104,7 @@ const priceFaqKeys = [
 export function Programmes() {
   return (
     <>
-      <PageIntro eyebrow="Programmes" title="Plan my sessions as a prepaid block." description="Start with one paid session. Then mix training, yoga, Pilates, mobility, boxing and meditation into a prepaid two, three or four-week plan. Six, nine and twelve visits receive 5%, 8% and 12% savings on session charges.">
+      <PageIntro eyebrow="Packages" title="Session packs for a villa stay." description="A single session of private strength training is Rp 1.050.000. A 3-session pack is Rp 950.000 each. A 5-session pack is Rp 900.000 each. A 10-session pack is Rp 800.000 each. Savings are the exact difference from Rp 1.050.000 per session.">
         <a href="#schedule-builder" className="button button-primary">Plan my sessions<ArrowUpRight size={16} /></a>
       </PageIntro>
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
@@ -114,7 +115,7 @@ export function Programmes() {
             <p style={{ marginTop: 18 }}><Link to="/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay" className="text-link">How to choose a 2, 3 or 4 week block<ArrowUpRight size={15} /></Link></p>
           </div>
           <ul className="check-list large-list">
-            {['A named session count, not an open membership', 'The same professional where supply allows, with a backup named if not', 'A validity window for unused sessions, written on the quote', 'The 24-hour reschedule rule still applies inside the block'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
+            {['A named session count, not an open membership', 'The instructor is named on the written quote', 'A validity window for unused sessions, written on the quote', 'Free rescheduling up to 36 hours before your session. Sessions are delivered by vetted instructors.'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
         </div>
       </section>
@@ -124,7 +125,7 @@ export function Programmes() {
           <WellnessSchedule />
         </div>
       </section>
-      <CtaBand dark title="Price a 6, 9 or 12 session block." copy="Pick the city and service first. The estimator applies the programme reduction on top." to="/pricing" label="Estimate my price" />
+      <CtaBand dark title="Price a 3, 5 or 10 session block." copy="Pick the city and service first. The estimator applies the programme reduction on top." to="/pricing" label="Estimate my price" />
     </>
   )
 }
@@ -143,7 +144,7 @@ export function ServiceAreas() {
         <div className="shell split-feature">
           <div><h2>How travel is charged.</h2></div>
           <ul className="check-list large-list">
-            {['In-zone: Canggu–Seminyak, South Jakarta, Central Jakarta', 'Ubud and Sanur: Rp 150.000 per visit', 'Uluwatu / Bukit: Rp 200.000 per visit', 'Other Jakarta municipalities: quoted after a timing check', 'Parking, building fees and pool entry stay extra if they exist'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
+            {['Central areas: Canggu, Seminyak, South Jakarta and Central Jakarta, travel included', 'Outer areas such as Uluwatu: a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in the written quote', 'North, West and East Jakarta: by request', 'Parking, building fees and pool entry stay extra if they exist'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
         </div>
       </section>
@@ -160,7 +161,7 @@ export function ServiceAreas() {
             ))}
           </div>
           <div className="cluster" style={{ marginTop: 28 }}>
-            <Link to="/bali/personal-training" className="text-link">Personal training in Bali<ArrowUpRight size={15} /></Link>
+            <Link to="/bali/personal-training" className="text-link">Private Strength Training in Bali<ArrowUpRight size={15} /></Link>
             <Link to="/bali/private-yoga" className="text-link">Private yoga in Bali<ArrowUpRight size={15} /></Link>
             <Link to="/pricing" className="text-link">All starting prices<ArrowUpRight size={15} /></Link>
           </div>
@@ -171,7 +172,7 @@ export function ServiceAreas() {
           <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate, including named neighbourhood pages. Other municipalities wait on supply and a travel line.</p></div></div>
           <LocationClusters city="Jakarta" />
           <div className="cluster" style={{ marginTop: 28 }}>
-            <Link to="/jakarta/personal-training" className="text-link">Personal training in Jakarta<ArrowUpRight size={15} /></Link>
+            <Link to="/jakarta/personal-training" className="text-link">Private Strength Training in Jakarta<ArrowUpRight size={15} /></Link>
             <Link to="/jakarta/private-yoga" className="text-link">Private yoga in Jakarta<ArrowUpRight size={15} /></Link>
             <Link to="/contact" className="text-link">Check a building<ArrowUpRight size={15} /></Link>
           </div>
@@ -191,7 +192,7 @@ export function Standards() {
         <div className="content-shell process-list">
           {[
             ['01', 'Identity and work eligibility', 'We confirm who is arriving at your door and that they can lawfully do the work.'],
-            ['02', 'Discipline competence', 'Personal training, yoga, mat Pilates, mobility, boxing and meditation are separate approvals.'],
+            ['02', 'Discipline competence', 'Private Strength Training, yoga, mat Pilates, mobility, boxing and meditation are separate approvals.'],
             ['03', 'Practical delivery', 'A session in a real villa or apartment, not only a studio CV.'],
             ['04', 'Safety and conduct', 'Safeguarding, insurance, data conduct and a way to suspend someone quickly.'],
             ['05', 'Backup', 'A launched cluster needs two suitable people or an owner-approved safe equivalent.'],
@@ -270,10 +271,10 @@ export function ServicesHub() {
       <StructuredData data={collectionJsonLd(
         'Private fitness sessions at home',
         '/services',
-        'Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation at your villa or home in Bali and Jakarta.',
+        'Private Strength Training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation at your villa or home in Bali and Jakarta.',
         publicServices.map((service) => ({ name: service.title, url: '/' + service.slug })),
       )} />
-      <PageIntro eyebrow="Services" title="Six private sessions at your villa or home." description="Personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Published starting prices, then a written quote before payment.">
+      <PageIntro eyebrow="Services" title="Private sessions at your villa or home." description="Private strength training, bodywork and recovery, Zumba and dance fitness, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Published starting prices, then a written quote before payment.">
         <Link to="/pricing" className="button button-primary">See session prices<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section">
@@ -296,7 +297,7 @@ export function ServicesHub() {
           <div>
             <Eyebrow>Who each hour suits</Eyebrow>
             <h2>Pick the format that matches the room and the people.</h2>
-            <p className="large-copy">Personal training is the individual coached hour. Private yoga suits one or two people who want a mat practice. Mat Pilates needs a dry even floor, not a reformer. Mobility is stretching and range, not treatment. Boxing fitness is pad work and conditioning for one person. Guided meditation is a calm sit for one or two people; for clinical support, see a licensed professional.</p>
+            <p className="large-copy">Private strength training is the individual coached hour. Bodywork and recovery is assisted stretching, myofascial release and relaxation. Zumba and dance fitness is high-energy cardio at the villa. Private yoga suits one or two people who want a mat practice. Mat Pilates needs a dry even floor, not a reformer. Mobility is stretching and guided movement. Boxing fitness is pad work for one or two guests. Guided meditation is a calm sit for one or two people.</p>
             <p>Booking is the same for every format. Send city, area, session and a two-hour window. A coordinator matches a professional, you receive a written quote, then the hour runs at your villa or home. Open <Link to="/bali">Bali</Link> or <Link to="/jakarta">Jakarta</Link> for clusters, then <Link to="/pricing">pricing</Link> for extras, travel and programmes.</p>
             <p>Villa managers who want a guest menu can start on the <Link to="/villa-hotel-partners">partner programme</Link>. Guests still pay the published website price. WhatsApp +62 811-3803-488 or email {COMPANY_EMAIL} after the estimator.</p>
           </div>
@@ -320,7 +321,7 @@ export function PricingPage() {
           <div className="sales-hero-copy">
             <Eyebrow light>Published rates · Bali and Jakarta</Eyebrow>
             <h1>Personal trainer Bali and Jakarta prices</h1>
-            <p className="hero-lede">Six private sessions, two cities, starting rates you can read before WhatsApp. Extra people, outer-zone travel, 90 minutes and programmes change the total. The written quote is what you pay.</p>
+            <p className="hero-lede">Private sessions in Bali and Jakarta, with starting rates you can read before WhatsApp. A second guest, session packs, 90 minutes and outer-area travel change the total. The written quote is what you pay.</p>
             <div className="cluster">
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
@@ -330,9 +331,9 @@ export function PricingPage() {
           <ParallaxImage src="/images/editorial/pricing.webp" alt="Instructor discussing the appointment details with adult clients" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(900_000)}</strong><span>Bali personal training, 60 minutes, in-zone.</span></div>
-          <div><strong>{formatIdr(950_000)}</strong><span>Jakarta personal training, 60 minutes, in-zone.</span></div>
-          <div><strong>Two people</strong><span>Yoga and meditation include a pair. Boxing stays one person.</span></div>
+          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
+          <div><strong>{formatIdr(900_000)}</strong><span>5-session pack, per session.</span></div>
+          <div><strong>2 Guests</strong><span>Adds Rp 250.000 per session when the rate is for one guest. Yoga and meditation already include a pair.</span></div>
         </div>
       </section>
 
@@ -340,8 +341,8 @@ export function PricingPage() {
         <div className="shell">
           <SectionTitle
             eyebrow="Session rates"
-            title="Six private hours, priced in both cities."
-            copy="These are 60-minute in-zone starting prices. Open a session page for the format, then use the estimator for people, travel and programmes."
+            title="Private hours, priced before you ask."
+            copy="These are 60-minute starting prices. Open a session page for the format, then use the estimator for guests, duration and packages."
             action={<Link to="/services" className="text-link">All sessions<ArrowUpRight size={15} /></Link>}
           />
           <div className="pricing-rate-grid">
@@ -431,7 +432,7 @@ export function PricingPage() {
 
       <section className="section section-dark">
         <div className="shell">
-          <SectionTitle eyebrow="Travel" title="In-zone is included. Outer clusters add a per-visit line." copy="We work in these areas so your coach arrives on time. If we cannot honour the window, we say so before you pay." />
+          <SectionTitle eyebrow="Travel" title="Central areas include travel. Outer areas are confirmed in the quote." copy="Standard travel included in central areas; outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Sessions are subject to instructor availability and location confirmation." />
           <div className="pricing-zone-grid">
             {travelZones.map(([title, price, copy]) => (
               <article key={title}>
@@ -486,8 +487,8 @@ export function PricingPage() {
         <div className="shell">
           <SectionTitle
             eyebrow="Programmes"
-            title="6, 9 and 12 visits take a published reduction."
-            copy="The discount applies to session charges. Travel is still charged per visit. Unused prepaid sessions follow the validity window on your quote."
+            title="3, 5 and 10 session packs lower the anchor rate."
+            copy="Savings are the exact difference from Rp 1.050.000 per session on private strength training. Other disciplines keep their own rates. Unused prepaid sessions follow the validity window on your quote."
             action={<Link to="/programmes" className="text-link">Plan a block<ArrowUpRight size={15} /></Link>}
           />
           <ProgrammeGrid />
@@ -600,7 +601,7 @@ export function ContactPage() {
 export function AboutPage() {
   return (
     <>
-      <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
+      <PageIntro eyebrow="About" title="Private fitness sessions at your villa or home." description="PersonalFitness.id coordinates private strength training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in published Bali and Jakarta clusters. Choose a session, agree the practical details and receive a written quote." />
       <section className="section-compact"><div className="shell"><ParallaxImage src="/images/editorial/about.webp" alt="Instructors discussing a private home session with adult clients" eager /></div></section>
       <section className="section">
         <div className="content-shell privacy-prose">
@@ -609,11 +610,11 @@ export function AboutPage() {
           <h2>How coaches are chosen</h2>
           <p>Matching follows the <Link to="/professional-standards">professional standards</Link>: a published fitness format, a usable private space, and a professional who can honour the window. Backup cover exists if supply changes before confirmation. Photographs on this site show the type of hour we coordinate. They do not identify the person who will walk through your gate. That name sits on the quote. Read the <Link to="/team">team page</Link> for how we publish people only when a real photograph and certification exist.</p>
           <h2>Where we work</h2>
-          <p>Bali in-zone is Canggu and Seminyak. Ubud and Sanur add Rp 150.000 travel per visit. Uluwatu adds Rp 200.000. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
+          <p>Bali in-zone is Canggu and Seminyak. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
           <h2>What we focus on</h2>
-          <p>Six live sessions: personal training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
+          <p>Six live sessions: private strength training, private yoga, mat Pilates, mobility coaching, boxing fitness and guided meditation. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
           <h2>Villa managers</h2>
-          <p>The main growth channel is now villas: put a wellness menu in every property you manage, guests book on WhatsApp, our coach comes to the villa, the guest pays us, you earn a commission on every session. There are no sales meetings and no calendar booking. Read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
+          <p>The main growth channel is now villas: put a wellness menu in every property you manage, guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, you earn a commission on every session. There are no sales meetings and no calendar booking. Read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
           <h2>Office</h2>
           <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters.</p>
           <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
@@ -678,7 +679,7 @@ const legalCopy = {
   refunds: {
     eyebrow: 'Refunds',
     title: 'Reschedule, charge, replace or stop.',
-    lede: 'The 24-hour line is the working rule. Programme unused sessions follow the validity window on the quote.',
+    lede: 'The 36-hour line is the working rule. Programme unused sessions follow the validity window on the quote.',
     cta: 'Ask about a booking',
     blocks: [
       ...cancellationRules.map(([k, v]) => [k, v] as [string, string]),
@@ -716,7 +717,7 @@ const legalCopy = {
     cta: 'Ask a fitness question instead',
     blocks: [
       ['Why it is held', 'Nutrition advice that looks clinical needs a qualified professional, a defined scope, a fee and a records rule. Those gates are not open.'],
-      ['What we can do', 'We can still quote personal training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation.'],
+      ['What we can do', 'We can still quote private strength training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation.'],
     ],
   },
   physio: {

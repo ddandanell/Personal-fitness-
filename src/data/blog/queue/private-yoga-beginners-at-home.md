@@ -20,9 +20,9 @@ The Denpasar office is not a beginner studio you walk into. You practise at the 
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 850.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 900.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Ubud and Sanur add Rp 150.000 travel. Uluwatu adds Rp 200.000. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 850.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 900.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
 
-Programmes of 6, 9 and 12 visits take 5, 8 and 12 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
+Programmes of 6, 9 and 12 visits take about 9.5, 14.3 and 23.8 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
 
 Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 

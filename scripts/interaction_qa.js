@@ -54,9 +54,9 @@ async page => {
 
   await test('Service and city links prefill the enquiry', async () => {
     await page.goto(`${origin}/`, { waitUntil: 'networkidle' })
-    await page.locator('.service-card').filter({ hasText: 'Personal training' }).click()
+    await page.locator('.service-card').filter({ hasText: 'Private Strength Training' }).click()
     await page.waitForURL('**/services/personal-training')
-    await page.getByRole('link', { name: 'Check personal training availability' }).click()
+    await page.getByRole('link', { name: 'Check private strength training availability' }).click()
     await page.waitForURL('**/contact?service=personal-training')
     if (await page.getByLabel('Service *').inputValue() !== 'personal-training') throw new Error('Service was not prefilled')
     await page.goto(`${origin}/locations`, { waitUntil: 'networkidle' })

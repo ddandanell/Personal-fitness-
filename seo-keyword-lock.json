@@ -517,6 +517,16 @@
       "primaryKeyword": "how to plan a weekly villa wellness schedule for guests",
       "role": "queued-supporting-guide",
       "commercialOwner": "/villa-hotel-partners"
+    },
+    "/bodywork-recovery": {
+      "primaryKeyword": "bodywork and recovery at the villa",
+      "role": "hub-or-service",
+      "commercialOwner": "/bodywork-recovery"
+    },
+    "/zumba-dance-fitness": {
+      "primaryKeyword": "zumba and dance fitness at the villa",
+      "role": "hub-or-service",
+      "commercialOwner": "/zumba-dance-fitness"
     }
   }
 }

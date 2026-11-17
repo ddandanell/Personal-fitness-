@@ -3,9 +3,9 @@
     "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
     "briefId": "B022",
     "title": "Personal trainer in South Jakarta: Kemang, Senopati and lobby access",
-    "description": "South Jakarta personal training from Rp 950.000. Kemang houses, Senopati towers and the lobby rules that decide the hour.",
+    "description": "South Jakarta private strength training from Rp 1.050.000. Kemang houses, Senopati towers and the lobby rules that decide the hour.",
     "primaryQuery": "personal trainer in south jakarta: kemang, senopati and lobby access",
-    "service": "Personal training",
+    "service": "Private Strength Training",
     "city": "Jakarta",
     "landingPage": "/personal-training",
     "image": "/images/editorial/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access.webp",
@@ -30,9 +30,9 @@
     "slug": "personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
     "briefId": "B023",
     "title": "Personal trainer in Uluwatu: Bukit travel and indoor floors",
-    "description": "Uluwatu personal training is Rp 900.000 plus Rp 200.000 travel per visit. Bingin, Pecatu, indoor floors and what we will not sell on a cliff.",
+    "description": "Uluwatu private strength training is Rp 1.050.000 plus an outer-area travel fee confirmed in the written quote. Bingin, Pecatu, indoor floors and what we will not sell on a cliff.",
     "primaryQuery": "personal trainer in uluwatu: bukit travel and indoor floors",
-    "service": "Personal training",
+    "service": "Private Strength Training",
     "city": "Bali",
     "landingPage": "/personal-training",
     "image": "/images/editorial/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors.webp",
@@ -40,7 +40,7 @@
     "faqs": [
       {
         "q": "Is Uluwatu in-zone?",
-        "a": "No. Uluwatu, Pecatu and Bingin add Rp 200.000 travel per visit."
+        "a": "No. Uluwatu, Pecatu and Bingin add an outer-area travel fee confirmed in the written quote."
       },
       {
         "q": "Can we train on the cliff?",
@@ -57,7 +57,7 @@
     "slug": "what-a-written-quote-includes-before-you-pay",
     "briefId": "B024",
     "title": "What a written quote includes before you pay",
-    "description": "The written quote is the contract for the visit: service, people, cluster, total, exclusions and the 24-hour rule. A website number is only a start.",
+    "description": "The written quote is the contract for the visit: service, people, cluster, total, exclusions and the 36-hour rule. A website number is only a start.",
     "primaryQuery": "what a written quote includes before you pay",
     "service": "Booking",
     "city": "Bali & Jakarta",
@@ -164,8 +164,8 @@
   {
     "slug": "mobility-coaching-or-personal-training-which-home-session-fits",
     "briefId": "B029",
-    "title": "Mobility coaching or personal training: which home session fits?",
-    "description": "Compare mobility coaching and personal training at home: session focus, room setup, Bali and Jakarta prices, clinical boundaries and what to request.",
+    "title": "Mobility coaching or private strength training: which home session fits?",
+    "description": "Compare mobility coaching and private strength training at home: session focus, room setup, Bali and Jakarta prices, clinical boundaries and what to request.",
     "primaryQuery": "mobility coaching or personal training at home",
     "service": "Session planning",
     "city": "Bali & Jakarta",
@@ -174,8 +174,8 @@
     "bodyFile": "mobility-coaching-or-personal-training-which-home-session-fits.md",
     "faqs": [
       {
-        "q": "What is the main difference between mobility coaching and personal training?",
-        "a": "Mobility coaching centres on controlled range and non-clinical stretching. Personal training centres on a coached strength and fitness workout."
+        "q": "What is the main difference between mobility coaching and private strength training?",
+        "a": "Mobility coaching centres on controlled range and non-clinical stretching. Private Strength Training centres on a coached strength and fitness workout."
       },
       {
         "q": "Can either service treat an injury?",

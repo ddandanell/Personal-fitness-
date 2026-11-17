@@ -1,16 +1,21 @@
-import { estimateQuote } from './quote'
-import { getArea, getService, type City } from '@/data/catalog'
+import { estimateQuote, PACK_SERVICES } from './quote'
+import { getArea, getService, SESSION_ANCHOR, programmes, type City } from '@/data/catalog'
 import { formatIdr } from './money'
 
 export const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const
 export type PlanVisit = { id: string; service: string; day: string; time: string; participants: number }
 export type PlanInput = { city: City; area: string; weeks: number; startDate: string; visits: PlanVisit[] }
-export const planServices = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation']
+export const planServices = [...PACK_SERVICES]
 export const defaultVisits: PlanVisit[] = [
   { id: 'yoga', service: 'private-yoga', day: 'Tuesday', time: '08:00', participants: 2 },
   { id: 'training', service: 'personal-training', day: 'Friday', time: '08:00', participants: 1 },
 ]
-const eligible = new Set(['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation'])
+const eligible = new Set(PACK_SERVICES)
+
+function packForCount(count: number) {
+  const ranked = [...programmes].sort((a, b) => b.sessions - a.sessions)
+  return ranked.find((item) => count >= item.sessions) || programmes[0]
+}
 
 export function estimateWellnessPlan(input: PlanInput) {
   const validWeeks = [1, 2, 3, 4].includes(input.weeks)
@@ -23,7 +28,8 @@ export function estimateWellnessPlan(input: PlanInput) {
   })
   const totalVisits = input.visits.length * input.weeks
   const eligibleVisits = lines.filter((line) => line.valid && eligible.has(line.visit.service) && line.quote.ok).length * input.weeks
-  const discountRate = eligibleVisits >= 12 ? .12 : eligibleVisits >= 9 ? .08 : eligibleVisits >= 6 ? .05 : 0
+  const pack = packForCount(eligibleVisits)
+  const discountRate = (SESSION_ANCHOR - pack.perSession) / SESSION_ANCHOR
   const priced = lines.filter((line) => line.valid && line.quote.ok)
   const sessionTotal = priced.reduce((sum, line) => sum + line.quote.base + line.quote.extraPeopleFee + line.quote.durationFee, 0) * input.weeks
   const travelTotal = priced.reduce((sum, line) => sum + line.quote.travel, 0) * input.weeks
@@ -50,7 +56,7 @@ export function wellnessPlanMessage(input: PlanInput) {
     'Duration: ' + input.weeks + (input.weeks === 1 ? ' week' : ' weeks') + '; ' + estimate.totalVisits + ' requested visits',
     ...input.visits.map((visit) => visit.day + ' at ' + visit.time + ': ' + (getService(visit.service)?.title || visit.service) + ', ' + visit.participants + (visit.participants === 1 ? ' person' : ' people')),
     estimate.requiresQuote ? 'Price: complete written quote required; any displayed subtotal covers priced items only.' : 'Starting price: ' + formatIdr(estimate.total),
-    estimate.saving ? 'Programme saving on eligible fitness sessions: ' + formatIdr(estimate.saving) + ' (' + Math.round(estimate.discountRate * 100) + '%).' : 'Please confirm any eligible programme saving.',
+    estimate.saving ? 'Package savings on eligible sessions: ' + formatIdr(estimate.saving) + ' versus the single-session rates.' : 'Single-session rates apply. A larger pack is confirmed on the written quote.',
     'Please itemise travel, staffing, equipment and any other fees. I would like to discuss one paid first visit before committing to a prepaid plan.',
     'Please explain the coordinator-managed wellness brief and how I can choose which non-clinical notes are shared with my coaches.',
     'This is a schedule enquiry, not a confirmed booking or payment authorisation.',

@@ -48,15 +48,15 @@ export default function Home() {
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(900_000)}</strong><span>Starting price · Bali personal training, 60 minutes, in-zone.</span></div>
-          <div><strong>{formatIdr(950_000)}</strong><span>Starting price · Jakarta personal training, 60 minutes, in-zone.</span></div>
+          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
+          <div><strong>{formatIdr(900_000)}</strong><span>5-session pack, per session. Save {formatIdr(750_000)}.</span></div>
           <div><strong>Six sessions</strong><span>Training, yoga, Pilates, mobility, boxing and meditation.</span></div>
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Guest menu" title="Six private sessions you can offer guests." copy="Training, yoga, Pilates, mobility, boxing and meditation, at the villa. Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Guest menu" title="Private sessions you can offer guests." copy="Strength training, bodywork and recovery, dance fitness, yoga, Pilates, mobility, boxing and meditation, at the villa. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
@@ -76,7 +76,7 @@ export default function Home() {
           <div>
             <Eyebrow>For the portfolio</Eyebrow>
             <h2>A weekly rhythm across many villas, handled by a coordinator.</h2>
-            <p className="large-copy">Set different sessions on different days: yoga on Monday, personal training on Wednesday, Pilates on Friday, each in that guest’s villa. Your team does not run the diary. A coordinator matches a vetted professional, confirms access, and sends the written price.</p>
+            <p className="large-copy">Set different sessions on different days: yoga on Monday, private strength training on Wednesday, Pilates on Friday, each in that guest’s villa. Your team does not run the diary. A coordinator matches a vetted professional, confirms access, and sends the written price.</p>
             <p>Guests pay the published rate. You earn a commission on paid sessions, and our team sends a simple statement. Read <TextLink to="/villa-hotel-partners">the villa partner programme</TextLink>, <TextLink to="/professional-standards">how professionals are matched</TextLink> or <TextLink to="/id/mitra-villa">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
@@ -107,7 +107,7 @@ export default function Home() {
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>
-            <p>Ubud and Sanur add {formatIdr(150_000)} per visit. Uluwatu adds {formatIdr(200_000)}. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. We work in these areas so your coach arrives on time.</p>
+            <p>Standard travel is included in central areas. Outer areas (such as Uluwatu) incur a flat travel fee of Rp 50.000 to Rp 100.000 max, confirmed in your written quote. North, West and East Jakarta neighbourhoods are quoted after a timing check. See <TextLink to="/service-areas">travel and clusters</TextLink>, <TextLink to="/jakarta">Jakarta locations</TextLink>, <TextLink to="/jakarta/kemang">Kemang</TextLink>, <TextLink to="/jakarta/menteng">Menteng</TextLink>, <TextLink to="/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates">personal trainer in Canggu</TextLink> or <TextLink to="/bali/seminyak">Seminyak</TextLink>, and <TextLink to="/pricing">every starting rate</TextLink>. Sessions are subject to instructor availability and location confirmation.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>
