@@ -538,7 +538,7 @@ export function ContactPage() {
   return (
     <>
       <StructuredData data={contactPageJsonLd()} />
-      <PageIntro eyebrow="Quote" title="Check availability on WhatsApp." description={`Use the estimator for starting prices, then email ${COMPANY_EMAIL} or send the draft on WhatsApp +62 811-3803-488. Five lines are enough: session, city, area, window and headcount. Nothing is booked until you accept the written quote.`}>
+      <PageIntro eyebrow="Villa partners" title="Talk to us about your villas." description={`Tell us the areas, how many villas, and the week you want covered. Email ${COMPANY_EMAIL} or use the form. Guests can still check a starting price here, including a personal trainer in Bali on WhatsApp +62 811-3803-488. Nothing is booked until the written quote is accepted.`}>
         <div className="cluster">
           <Link to="/pricing" className="button button-outline">See session prices</Link>
           <Link to="/faq" className="button button-outline">Read the FAQ</Link>

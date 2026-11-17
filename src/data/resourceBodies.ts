@@ -22,7 +22,7 @@ export const resourceBodies: Record<string, string[]> = {
     'When the quote arrives, read the name, the total, the travel line and the cancellation window. Chat “ok” is not settlement. Pay on the merchant link. Then move the coffee table before the arrival window so the sixty minutes can actually start.',
   ],
   'jakarta-apartment-session': [
-    'In Jakarta the session is often won or lost in the lobby. Put the building name, tower, parking instruction and security process in the enquiry. If a guest QR or ID is required, say that before confirmation. A coach waiting twenty minutes at a desk is not a sixty-minute hour.',
+    'In Jakarta the session is often won or lost in the lobby. Put the building name, tower, parking instruction and security process in the enquiry. If a visitor pass or ID is required, say that before confirmation. A coach waiting twenty minutes at a desk is not a sixty-minute hour.',
     'Clear a rectangle big enough for a mat plus two steps in every direction. Move the coffee table. Warn anyone on a video call in the next room. South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin, sit inside the published Jakarta rate. North, West and East are quoted after a timing check.',
     'A building gym is only an option when management permits the professional and the agreed private format. Other residents walking through is not a private hour. A living room with a door that closes is usually the better plan. Tell us what equipment is already there. Mats, bands and light dumbbells can be used if present.',
     'Personal training from Rp 950.000 is the individual coached hour. Private yoga from Rp 900.000 includes up to two people. Mat Pilates from Rp 1.000.000 needs floor space, not a reformer. Boxing fitness from Rp 1.050.000 is one person after a neighbour-aware noise check. Guided meditation from Rp 850.000 is a calm sit, not therapy.',
@@ -128,7 +128,7 @@ export const resourceFaqs: Record<string, Array<[string, string]>> = {
   'jakarta-apartment-session': [
     ['Do I need a building gym?', 'No. A living room with a door that can close is often better.'],
     ['Is Kemang in-zone?', 'Yes, when we can time the visit. It sits inside the South Jakarta rate.'],
-    ['What should security be told?', 'That a professional is arriving for a private session. Put tower, parking and any QR rule in the first message.'],
+    ['What should security be told?', 'That a professional is arriving for a private session. Put tower, parking and any visitor-pass rule in the first message.'],
     ['Is Kelapa Gading in-zone?', 'No. North Jakarta is quoted after a timing check, or declined.'],
   ],
   'what-your-quote-contains': [

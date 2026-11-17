@@ -4,7 +4,7 @@ If you searched for a personal trainer in Kemang or Senopati, start with the bui
 
 ## What in-zone means in South Jakarta
 
-In-zone means the published 60-minute personal training rate already includes travel for this cluster when we can time the visit. It does not mean every tower is easy. Visitor QR, parking and a security desk that has never seen an outside coach will eat the hour if they are not on the quote.
+In-zone means the published 60-minute personal training rate already includes travel for this cluster when we can time the visit. It does not mean every tower is easy. A visitor pass, parking and a security desk that has never seen an outside coach will eat the hour if they are not on the quote.
 
 The hour is one person at Rp 950.000. Extra people add Rp 275.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are quoted after a timing check, with travel or a decline.
 
@@ -12,7 +12,7 @@ A building gym with other residents walking through is not a private hour unless
 
 ## Lobby, floor and permission
 
-Put the building, tower, parking and visitor process in the first message. If a guest QR or ID is required, say that before the quote. If the front desk blocks outside trainers, tell us. We will not pretend a lobby refusal is a completed hour.
+Put the building, tower, parking and visitor process in the first message. If a visitor pass or ID is required, say that before the quote. If the front desk blocks outside trainers, tell us. We will not pretend a lobby refusal is a completed hour.
 
 A living-room rectangle is enough. A building gym is optional and only useful if it is private. Move the coffee table. Warn anyone on a video call in the next room. Indoor tile or wood beats a balcony over a main road.
 
@@ -60,7 +60,7 @@ A South Jakarta home trainer is useful when the lobby, the floor and the quote m
 
 ## Kemang, Senopati and SCBD are not the same lobby
 
-Kemang houses can have parking and a dog. Senopati towers can have a guest QR and a 15-minute lift wait. SCBD residences can have a weekday morning crush. All three can be in-zone. None of them should be written as “Kemang-ish”. Name the building. Name weekday or weekend. A 06:30 weekday request in SCBD is a different supply object from a 09:00 Sunday in a landed house.
+Kemang houses can have parking and a dog. Senopati towers can have a visitor pass and a 15-minute lift wait. SCBD residences can have a weekday morning crush. All three can be in-zone. None of them should be written as “Kemang-ish”. Name the building. Name weekday or weekend. A 06:30 weekday request in SCBD is a different supply object from a 09:00 Sunday in a landed house.
 
 If your helper will be in the kitchen, say so. If a child will watch from the sofa, a parent stays. If you wanted Pilates instead of training, say Pilates. The Rp 950.000 training line will not quietly become a mat hour because the coffee table looked small.
 

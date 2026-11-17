@@ -51,7 +51,7 @@ Jakarta apartment boxing is useful when the pads, the walls and the quote match.
 
 ## A worked South Jakarta boxing enquiry
 
-“Boxing fitness, Jakarta, South Jakarta Kemang, apartment tower B, Saturday 08:00–10:00, one person, beginner, 3x3m indoor room, 2.7m ceiling, no evening pad work allowed by management, visitor QR at lobby.” That message can be quoted. “Can we box on the rooftop gym tonight with my friend” cannot.
+“Boxing fitness, Jakarta, South Jakarta Kemang, apartment tower B, Saturday 08:00–10:00, one person, beginner, 3x3m indoor room, 2.7m ceiling, no evening pad work allowed by management, visitor pass at the lobby.” That message can be quoted. “Can we box on the rooftop gym tonight with my friend” cannot.
 
 If the ceiling is 2.4 metres, say so. If the floor is vinyl over a neighbour’s bedroom, say so. We would rather move you to [personal training](/jakarta/personal-training) than collect a complaint. Pads still make noise. Honesty about noise is part of the product, not an optional vibe.
 

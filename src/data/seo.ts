@@ -40,7 +40,7 @@ const hubs: SeoRecord[] = [
     path: '/',
     primaryKeyword: 'personal trainer at home Bali Jakarta',
     title: 'Personal Trainer at Home in Bali & Jakarta',
-    description: 'Personal trainer at your villa or home in Bali from Rp 900.000 and Jakarta from Rp 950.000. Written quote before you pay.',
+    description: 'Villa managers can offer a personal trainer at home in Bali and Jakarta. Guests book the session and pay us. You earn a commission.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Personal training at home' },
@@ -60,7 +60,7 @@ const hubs: SeoRecord[] = [
     path: '/id',
     primaryKeyword: 'personal trainer datang ke rumah',
     title: 'Personal Trainer Datang ke Rumah di Bali dan Jakarta',
-    description: 'Personal trainer datang ke villa atau rumah di Bali dari Rp 900.000 dan Jakarta dari Rp 950.000. Yoga, Pilates, boxing, dan meditasi privat. Kutipan tertulis sebelum bayar.',
+    description: 'Pengelola villa menawarkan personal trainer datang ke rumah di Bali dan Jakarta. Tamu membayar ke kami. Anda mendapat komisi.',
     group: 'page', lastmod: '2026-11-16',
     related: [
       { to: '/', label: 'English homepage' },
@@ -232,7 +232,7 @@ const hubs: SeoRecord[] = [
     path: '/contact',
     primaryKeyword: 'book personal trainer Bali WhatsApp',
     title: 'Contact & Book on WhatsApp | PersonalFitness.id',
-    description: 'Message WhatsApp +62 811-3803-488 with city, area, session and a two-hour window. Written quote before you pay.',
+    description: 'Villa managers: send your villas and the week you want. Guests can book a personal trainer in Bali on WhatsApp +62 811-3803-488.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'See prices first' },
@@ -274,7 +274,7 @@ const hubs: SeoRecord[] = [
     path: '/villa-hotel-partners',
     primaryKeyword: 'villa wellness partner Bali',
     title: 'Villa Wellness Partner Programme Bali',
-    description: 'Add yoga, personal training and Pilates to every villa you manage. We send the coach, guests book on WhatsApp, you earn a commission on every session.',
+    description: 'Add yoga, personal training and Pilates across the villas you manage. A coordinator sets the week. Guests book by email or WhatsApp. You earn a commission.',
     group: 'page', lastmod: '2026-11-16',
     related: [{ to: '/partner-terms', label: 'Partner terms' }, { to: '/id/mitra-villa', label: 'Program mitra villa' }, { to: '/private-yoga', label: 'Private yoga' }, { to: '/personal-training', label: 'Personal training' }, { to: '/contact', label: 'Guest booking' }],
     crumbs: [HOME, { to: '/villa-hotel-partners', label: 'Partners' }],

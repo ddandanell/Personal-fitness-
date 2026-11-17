@@ -968,7 +968,6 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .menu-card { max-width: 148mm; margin: 24px auto; padding: 18mm 14mm; background: #fff; color: #1b1b1b; }
 .menu-rates { list-style: none; padding: 0; margin: 18px 0; display: grid; gap: 10px; }
 .menu-rates li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
-.menu-qr { width: 180px; height: 180px; display: block; margin: 18px auto; }
 .menu-code { text-align: center; letter-spacing: .12em; text-transform: uppercase; }
 body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.print-a5 nav, body.print-a5 .skip-link, body.print-a5 .breadcrumbs, body.print-a5 .related-links { display: none !important; }
 @media print {

@@ -6,7 +6,7 @@ import { Eyebrow, Field, TextLink } from '@/components/Primitives'
 import StructuredData from '@/components/StructuredData'
 import { publicServices } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
-import { COMPANY_EMAIL, SITE_ORIGIN } from '@/data/company'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { submitEnquiry } from '@/lib/submitEnquiry'
 import { trackEvent, trackWhatsApp } from '@/lib/analytics'
 import { PARTNER_ENQUIRY_MESSAGE, PARTNER_ENQUIRY_MESSAGE_ID, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
@@ -35,38 +35,38 @@ const copy = {
   en: {
     eyebrow: 'For villa managers',
     h1: 'Wellness for every villa you manage. You earn on every session.',
-    sub: `Yoga, personal training, Pilates, stretching, boxing and meditation, delivered in your guests' villa by our coaches. Your team does nothing extra. ${commissionSentence('en')}`,
-    primary: 'WhatsApp us about your villas',
+    sub: `Put yoga, personal training, Pilates, stretching, boxing and meditation on the menu in every villa you manage. A coordinator sets the week, a vetted coach comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
+    primary: 'Talk to us',
     secondary: 'Download the partner menu (PDF)',
     switch: 'Bahasa Indonesia',
     switchTo: '/id/mitra-villa',
     howTitle: 'How it works',
     steps: [
-      'We send you a menu card and QR code for each villa, with your name on it.',
-      'Guests scan and book on WhatsApp. The booking carries your partner code.',
-      'Our coach comes to the villa. The guest pays us.',
-      `You get ${commissionShare('en')}, every month, with a simple statement.`,
+      'Tell your coordinator which villas, areas and days you want covered.',
+      'Guests request the session by email or WhatsApp. The request carries your partner code.',
+      'A vetted coach comes to the villa. The guest pays us.',
+      `You earn ${commissionShare('en')}, with a simple statement from our team each month.`,
     ],
     guestsTitle: 'What your guests can book',
     priceNote: 'Bali prices, 60 minutes. Canggu and Seminyak included. Ubud and Sanur +Rp 150.000, Uluwatu +Rp 200.000 travel per visit.',
-    calendarTitle: 'Give guests something to look forward to.',
-    calendar: 'Example: sunrise private yoga Mon, Wed, Fri at 08:00 in each guest’s villa. Guests reserve by 18:00 the day before.',
+    calendarTitle: 'Set a week across the villas you manage.',
+    calendar: 'Example: private yoga Monday, personal training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests reserve by 18:00 the day before. Your coordinator keeps the diary.',
     getTitle: 'What you get',
     get: [
-      'Menu card + QR for every villa',
-      'Guest page for your welcome pack or app',
-      'Booking on WhatsApp with your partner code',
-      'A named coordinator',
-      'Monthly statement and payout',
+      'A named coordinator for your villas',
+      'A printed menu card for each villa',
+      'Booking by email or WhatsApp, with your partner code',
+      'A weekly rhythm across the portfolio',
+      'A simple monthly statement from our team',
       '30-day pilot at 1–2 villas first',
     ],
     spaceTitle: 'Have a space?',
     space: 'If a villa has a terrace, studio or big living room, we check it and plan a shared class or a regular slot.',
-    formTitle: 'Join on WhatsApp',
-    formLead: `No call and no calendar booking. Send the details and a person replies by email at ${COMPANY_EMAIL} or on WhatsApp.`,
+    formTitle: 'Talk to us',
+    formLead: `No sales meeting. Send the villas, the areas and the week you want. A person replies by email at ${COMPANY_EMAIL} or on WhatsApp.`,
     consent: 'I agree that PersonalFitness.id may contact me on WhatsApp and email about the partner programme.',
-    send: 'Send on WhatsApp',
-    footer: `Questions? WhatsApp ${WHATSAPP_DISPLAY}. A real person replies.`,
+    send: 'Send enquiry',
+    footer: `Questions? Email ${COMPANY_EMAIL} or WhatsApp ${WHATSAPP_DISPLAY}. A real person replies.`,
     terms: 'Partner terms',
     faqs: [
       ['Who pays?', 'The guest pays us. We pay you your commission monthly.'],
@@ -92,38 +92,38 @@ const copy = {
   id: {
     eyebrow: 'Untuk pengelola villa',
     h1: 'Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.',
-    sub: `Yoga, personal training, Pilates, stretching, boxing dan meditasi, langsung di villa tamu Anda oleh coach kami. Tim Anda tidak perlu kerja tambahan. ${commissionSentence('id')}`,
-    primary: 'WhatsApp kami tentang villa Anda',
+    sub: `Letakkan yoga, personal training, Pilates, stretching, boxing dan meditasi di setiap villa yang Anda kelola. Koordinator mengatur mingguannya, coach yang sudah diseleksi datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
+    primary: 'Bicara dengan kami',
     secondary: 'Unduh menu partner (PDF)',
     switch: 'English',
     switchTo: '/villa-hotel-partners',
     howTitle: 'Cara kerja',
     steps: [
-      'Kami kirim kartu menu dan kode QR untuk setiap villa, dengan nama Anda.',
-      'Tamu scan dan pesan lewat WhatsApp. Pesanan membawa kode partner Anda.',
-      'Coach kami datang ke villa. Tamu membayar ke kami.',
-      `Anda dapat ${commissionShare('id')}, setiap bulan, dengan laporan sederhana.`,
+      'Beritahu koordinator villa, area, dan hari yang ingin dicakup.',
+      'Tamu meminta sesi lewat email atau WhatsApp. Pesanan membawa kode partner Anda.',
+      'Coach yang sudah diseleksi datang ke villa. Tamu membayar ke kami.',
+      `Anda mendapat ${commissionShare('id')}, dengan laporan sederhana dari tim kami setiap bulan.`,
     ],
     guestsTitle: 'Yang bisa dipesan tamu',
     priceNote: 'Harga Bali, 60 menit. Canggu dan Seminyak sudah termasuk. Ubud dan Sanur +Rp 150.000, Uluwatu +Rp 200.000 biaya perjalanan per kunjungan.',
-    calendarTitle: 'Beri tamu sesuatu yang dinanti.',
-    calendar: 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00 di villa masing-masing tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya.',
+    calendarTitle: 'Atur minggu untuk villa yang Anda kelola.',
+    calendar: 'Contoh: yoga privat Senin, personal training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya. Koordinator yang memegang jadwalnya.',
     getTitle: 'Yang Anda dapat',
     get: [
-      'Kartu menu + QR untuk setiap villa',
-      'Halaman tamu untuk welcome pack atau aplikasi',
-      'Pemesanan lewat WhatsApp dengan kode partner Anda',
-      'Koordinator yang jelas',
-      'Laporan dan pembayaran komisi bulanan',
+      'Koordinator tetap untuk villa Anda',
+      'Kartu menu cetak untuk setiap villa',
+      'Pemesanan lewat email atau WhatsApp, dengan kode partner Anda',
+      'Ritme mingguan di seluruh portofolio',
+      'Laporan bulanan sederhana dari tim kami',
       'Pilot 30 hari di 1–2 villa dulu',
     ],
     spaceTitle: 'Ada ruang bersama?',
     space: 'Jika villa punya teras, studio atau ruang tamu besar, kami cek dan rencanakan kelas bersama atau slot rutin.',
-    formTitle: 'Gabung lewat WhatsApp',
-    formLead: `Tidak ada rapat dan tidak ada kalender booking. Kirim detailnya. Kami membalas ke email Anda atau WhatsApp. Salinan juga masuk ke ${COMPANY_EMAIL}.`,
+    formTitle: 'Bicara dengan kami',
+    formLead: `Tidak ada rapat penjualan. Kirim villa, area, dan minggu yang Anda inginkan. Orang sungguhan membalas lewat email ${COMPANY_EMAIL} atau WhatsApp.`,
     consent: 'Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.',
-    send: 'Kirim lewat WhatsApp',
-    footer: `Ada pertanyaan? WhatsApp ${WHATSAPP_DISPLAY}. Dibalas oleh orang sungguhan.`,
+    send: 'Kirim permintaan',
+    footer: `Ada pertanyaan? Email ${COMPANY_EMAIL} atau WhatsApp ${WHATSAPP_DISPLAY}. Dibalas oleh orang sungguhan.`,
     terms: 'Syarat partner',
     faqs: [
       ['Siapa yang membayar?', 'Tamu membayar ke kami. Kami bayar komisi Anda setiap bulan.'],
@@ -303,10 +303,10 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
           <div>
             <p className="large-copy">{text.sub}</p>
             <div className="cluster">
-              <a className="button button-primary" href={whatsappDraftUrl(heroMessage)} target="_blank" rel="noopener noreferrer" onClick={() => { trackWhatsApp('partner_hero', { service: 'partner' }); trackEvent('partner_whatsapp_click', { location: 'partner_hero' }) }}>{text.primary}<ArrowUpRight size={16} /></a>
+              <a className="button button-primary" href="#partner-enquiry">{text.primary}<ArrowUpRight size={16} /></a>
               <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a>
             </div>
-            <p className="partner-hero-note"><Link to={text.switchTo}>{text.switch}</Link> · <Link to="/partner-terms">{text.terms}</Link></p>
+            <p className="partner-hero-note"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a> · <Link to={text.switchTo}>{text.switch}</Link> · <Link to="/partner-terms">{text.terms}</Link></p>
           </div>
         </div>
         <div className="shell">
@@ -411,7 +411,10 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
       <section className="section final-cta" lang={lang}>
         <div className="shell final-cta-inner">
           <h2>{text.footer}</h2>
-          <a className="button button-primary" href={whatsappDraftUrl(heroMessage)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('partner_footer')}>{text.primary}</a>
+          <div className="cluster">
+            <a className="button button-primary" href="#partner-enquiry">{text.primary}<ArrowUpRight size={16} /></a>
+            <a className="button button-outline-light" href={whatsappDraftUrl(heroMessage)} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('partner_footer')}>WhatsApp</a>
+          </div>
         </div>
       </section>
     </>

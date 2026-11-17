@@ -27,7 +27,7 @@ export default function PartnerTerms() {
           <h2>4. Attribution</h2>
           <p>A booking counts for you if the guest’s first WhatsApp message carries your partner code, or your team sends the request.</p>
           <h2>5. Materials</h2>
-          <p>We provide menu cards and QR codes. You place them. Either side can remove them at any time.</p>
+          <p>We provide a printed menu card for the villa. You place it. Either side can remove it at any time.</p>
           <h2>6. Pilot and ending</h2>
           <p>30-day pilot at 1–2 villas. Either side can stop with 14 days’ notice by email or WhatsApp. Earned commission is still paid.</p>
           <h2>7. Guests and privacy</h2>

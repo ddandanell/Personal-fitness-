@@ -1,13 +1,9 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import QRCode from 'qrcode'
 
 const root = process.cwd()
 const outDir = path.join(root, 'public', 'partners')
 await fs.mkdir(outDir, { recursive: true })
-const message = "Hi PersonalFitness.id, I'd like to book: ___ · Day/time: ___ · People: ___"
-const url = 'https://wa.me/628113803488?text=' + encodeURIComponent(message)
-await fs.writeFile(path.join(outDir, 'default-qr.svg'), await QRCode.toString(url, { type: 'svg', margin: 1, width: 360 }))
 
 function pdfEscape(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)')
@@ -68,7 +64,7 @@ const pdf = buildPdf([
   ],
   [
     'How the partner programme works',
-    '1. We send a menu card and QR for each villa.',
+    '1. A coordinator agrees the villas and the week.',
     '2. Guests book on WhatsApp with your partner code.',
     '3. Our coach comes to the villa. The guest pays us.',
     '4. You earn a commission on every paid session.',
@@ -79,4 +75,4 @@ const pdf = buildPdf([
   ],
 ])
 await fs.writeFile(path.join(outDir, 'villa-wellness-menu.pdf'), pdf)
-console.log(JSON.stringify({ passed: true, qr: '/partners/default-qr.svg', pdf: '/partners/villa-wellness-menu.pdf' }))
+console.log(JSON.stringify({ passed: true, pdf: '/partners/villa-wellness-menu.pdf' }))

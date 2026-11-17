@@ -6,7 +6,7 @@ The [homepage](/) is the right tab if you still need the whole offer across Bali
 
 ## Why the lobby decides the hour
 
-In Jakarta the session is often won or lost downstairs. A professional who cannot get a guest QR, a parking slot or a tower name will burn 20 minutes of a 60-minute booking. Put the building, tower, parking instruction and security process in the enquiry. If a KTP photo or a resident WhatsApp group approval is required, say that before confirmation. Do not leave it as a surprise for 06:25.
+In Jakarta the session is often won or lost downstairs. A professional who cannot get a visitor pass, a parking slot or a tower name will burn 20 minutes of a 60-minute booking. Put the building, tower, parking instruction and security process in the enquiry. If a KTP photo or a resident WhatsApp group approval is required, say that before confirmation. Do not leave it as a surprise for 06:25.
 
 Clear a rectangle big enough for a mat plus two steps in every direction. Move the coffee table. Warn anyone on a video call in the next room. Sixty minutes means 60 minutes of work, not a tour of the unit.
 
@@ -33,7 +33,7 @@ If you live in a serviced apartment, ask whether outside trainers are allowed. S
 1. Pick the room with the most continuous floor, not the room with the nicest view.
 2. Remove the coffee table or slide it to a wall.
 3. Put a mat down even if the coach brings another. It marks the workplace.
-4. Charge the phone you will use for the access QR.
+4. Charge the phone you will use for the building access pass.
 5. Write the tower, floor and unit on a note by the door.
 6. Tell security the name PersonalFitness.id and the arrival window.
 7. Put water in the room. Put dogs in another room if they guard strangers.

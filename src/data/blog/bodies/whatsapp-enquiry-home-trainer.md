@@ -34,7 +34,7 @@ In-zone Bali is Canggu and Seminyak. In-zone Jakarta is South and Central Jakart
 
 Canggu training: “Personal training, Bali, Canggu Berawa, villa, Saturday 07:00–09:00, one person, beginner returning after a long gap. Indoor living room. Staff can open the side gate.”
 
-Jakarta yoga for two: “Private yoga, Jakarta, South Jakarta Kemang, apartment tower B, weekday 18:00–20:00, two people, mixed levels. Visitor QR at lobby. Quiet bedroom we can clear.”
+Jakarta yoga for two: “Private yoga, Jakarta, South Jakarta Kemang, apartment tower B, weekday 18:00–20:00, two people, mixed levels. Visitor pass at the lobby. Quiet bedroom we can clear.”
 
 Uluwatu boxing: “Boxing fitness, Bali, Uluwatu, villa, Sunday 08:00–10:00, one person, already boxing. Indoor gym room, high ceiling. Host knows you are coming.”
 

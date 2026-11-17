@@ -57,7 +57,7 @@ Do not reuse one villa's quote for another property. A nearby address can have a
 
 ## Keep the guest booking message short
 
-The villa can place the partner menu or QR information in a welcome book, digital guest guide or private arrival message. The guest should be able to send one short WhatsApp enquiry containing:
+The villa can place the session menu in a welcome book, guest folder or private arrival message. The guest should be able to send one short WhatsApp enquiry containing:
 
 1. The session they want.
 2. The villa name and area.
