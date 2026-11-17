@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WhyTheRate from '@/components/WhyTheRate'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { publicServices, sessionPhoto } from '@/data/publicOffer'
 import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
@@ -12,9 +13,9 @@ import { faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
 
 const steps = [
-  ['01', 'Check availability', 'Send the city, area, session and a two-hour window. We confirm whether we can honour that visit.'],
-  ['02', 'See the starting price', 'Published rates, extra people, travel and programme savings sit on the estimator. The written quote is the payable total.'],
-  ['03', 'Continue in WhatsApp', 'The draft carries the numbers. Nothing is booked until you accept the quote and payment is verified.'],
+  ['01', 'Tell us the villas', 'Send the areas, how many villas, and the week you want covered. A coordinator takes it from there.'],
+  ['02', 'See the guest price', 'Published rates, extra people, travel and programme savings sit on the estimator. The written quote is what the guest pays.'],
+  ['03', 'Guests book simply', `They email ${COMPANY_EMAIL} or message WhatsApp. You earn a commission. Nothing is booked until the quote is accepted.`],
 ]
 
 const homeFaqs = [
@@ -34,15 +35,15 @@ export default function Home() {
       <section className="sales-hero">
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
-            <Eyebrow light>Bali · Jakarta</Eyebrow>
-            <h1>Personal trainer at your villa or home in Bali and Jakarta</h1>
-            <p className="hero-lede">PersonalFitness.id sends a private coach to your villa or home. Personal training from Rp 900.000 in Bali, plus yoga, mat Pilates, mobility, boxing fitness and guided meditation in published clusters.</p>
+            <Eyebrow light>For villa managers · Bali · Jakarta</Eyebrow>
+            <h1>Offer a personal trainer at home in Bali and Jakarta to your villa guests</h1>
+            <p className="hero-lede">PersonalFitness.id works with villa managers, rental agencies and hotels. Guests can book private training, yoga, mat Pilates, mobility, boxing or meditation in the villa. A coordinator sets the week, a vetted professional arrives, and the guest pays us. You earn a commission.</p>
             <div className="cluster">
-              <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
-              <Link to="/pricing" className="button button-outline-light">See session prices</Link>
-              <Link to="/bali/personal-training" className="button button-outline-light">Bali personal training</Link>
+              <Link to="/contact" className="button button-primary">Offer this to your guests<ArrowUpRight size={17} /></Link>
+              <Link to="/villa-hotel-partners" className="button button-outline-light">Become a villa partner</Link>
+              <a href={COMPANY_EMAIL_HREF} className="button button-outline-light">Talk to us</a>
             </div>
-            <p className="hero-micro"><ShieldCheck size={16} />You get a clear written quote before you pay.</p>
+            <p className="hero-micro"><ShieldCheck size={16} />Clear guest prices. A written quote before anyone pays.</p>
           </div>
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
@@ -55,7 +56,7 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Sessions" title="Six private fitness sessions at your place." copy="Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Guest menu" title="Six private sessions you can offer guests." copy="Training, yoga, Pilates, mobility, boxing and meditation, at the villa. Yoga and meditation include up to two people. Boxing is one person. Extra people, 90 minutes and outer-zone travel sit on top of the starting price." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
@@ -73,13 +74,13 @@ export default function Home() {
       <section className="section section-light">
         <div className="shell split-feature">
           <div>
-            <Eyebrow>What the hour is for</Eyebrow>
-            <h2>You train in your villa or home, with one professional in the room.</h2>
-            <p className="large-copy">The result is a private 60-minute session at the address you already have: coached training, yoga, Pilates, mobility, pad-only boxing or a quiet sit. You leave with a completed hour, not a class pack, a meal plan or a clinical diagnosis.</p>
-            <p>The professional is named on the quote after a match for the session, cluster and window. There is no public trainer directory and no stock of invented reviews on this site. Read <TextLink to="/professional-standards">matching standards</TextLink>, <TextLink to="/villa-hotel-partners">the villa partner programme</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
+            <Eyebrow>For the portfolio</Eyebrow>
+            <h2>A weekly rhythm across many villas, handled by a coordinator.</h2>
+            <p className="large-copy">Set different sessions on different days: yoga on Monday, personal training on Wednesday, Pilates on Friday, each in that guest’s villa. Your team does not run the diary. A coordinator matches a vetted professional, confirms access, and sends the written price.</p>
+            <p>Guests pay the published rate. You earn a commission on paid sessions, and our team sends a simple statement. Read <TextLink to="/villa-hotel-partners">the villa partner programme</TextLink>, <TextLink to="/professional-standards">how professionals are matched</TextLink> or <TextLink to="/id/mitra-villa">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
-            {['Company-managed matching, not a freelance marketplace', 'Named professional on the written quote', 'Backup cover if supply changes before confirmation', 'WhatsApp +62 811-3803-488 and hallo@personalfitness.id', 'Denpasar office is administration, not a walk-in studio'].map((item) => (
+            {['A named coordinator for your villas', 'Vetted professional named on the written quote', 'Guests book by email or WhatsApp', 'Recurring weeks across the properties you manage', `Email ${COMPANY_EMAIL} or WhatsApp +62 811-3803-488`].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -88,7 +89,7 @@ export default function Home() {
 
       <section className="section section-dark home-journey">
         <div className="shell">
-          <SectionTitle eyebrow="How it works" title="From the first message to a confirmed hour." />
+          <SectionTitle eyebrow="How it works" title="From your villas to a confirmed guest hour." />
           <div className="journey-grid">
             {steps.map(([number, title, copy]) => (
               <div className="journey-step" key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></div>
@@ -102,7 +103,7 @@ export default function Home() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Areas</Eyebrow>
-            <h2>Find your Bali or Jakarta location.</h2>
+            <h2>Cover the Bali and Jakarta clusters your villas use.</h2>
           </div>
           <div className="statement-copy">
             <p className="large-copy">Bali in-zone is Canggu and Seminyak. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin.</p>
@@ -117,7 +118,7 @@ export default function Home() {
 
       <section className="section section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Estimator</Eyebrow><h2>Estimate my price, then continue in WhatsApp.</h2></div></div>
+          <div className="section-title"><div><Eyebrow>Guest prices</Eyebrow><h2>See a starting price, then talk to us.</h2><p>The estimator is for the guest rate. Email the week you want, or continue on WhatsApp. Nothing is booked until the written quote is accepted.</p></div></div>
           <QuoteEstimator />
         </div>
       </section>
@@ -173,12 +174,12 @@ export default function Home() {
 
       <section className="section final-cta">
         <div className="shell final-cta-inner">
-          <Eyebrow light>Start with availability</Eyebrow>
-          <h2>Private fitness sessions<br />at your villa or home.</h2>
-          <p>Tell us the city, the area and the window. We confirm whether we can run the hour, then send the quote.</p>
+          <Eyebrow light>For villa managers</Eyebrow>
+          <h2>Offer private fitness<br />to every guest villa.</h2>
+          <p>Tell us how many villas, the areas and the week you have in mind. A coordinator replies.</p>
           <div className="cluster">
-            <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
-            <Link to="/pricing" className="button button-outline-light">See session prices</Link>
+            <Link to="/contact" className="button button-primary">Offer this to your guests<ArrowUpRight size={17} /></Link>
+            <a href={COMPANY_EMAIL_HREF} className="button button-outline-light">Talk to us</a>
           </div>
         </div>
       </section>

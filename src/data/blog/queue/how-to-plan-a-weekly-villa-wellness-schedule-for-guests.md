@@ -57,7 +57,7 @@ Do not reuse one villa's quote for another property. A nearby address can have a
 
 ## Keep the guest booking message short
 
-The villa can place the partner menu or QR information in a welcome book, digital guest guide or private arrival message. The guest should be able to send one short WhatsApp enquiry containing:
+The villa can place the session menu in a welcome book, guest folder or private arrival message. The guest should be able to send one short WhatsApp enquiry containing:
 
 1. The session they want.
 2. The villa name and area.
@@ -107,4 +107,4 @@ The useful measure is whether the request reaches the coordinator with enough in
 
 When the property is ready, open the [villa wellness partner programme](/villa-hotel-partners). The page includes the guest menu, partner terms and a WhatsApp form. Send the company name, number of villas, areas, villas to start with, space for two mats and preferred guest-menu language.
 
-There is no sales meeting and no calendar booking. A person reviews the details and replies. WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. The next step is a clear operating brief for the first villa, not an unsupported promise across the whole portfolio.
+There is no sales meeting and no calendar booking. A person reviews the details and replies. WhatsApp +62 811-3803-488 or email hello@personalfitness.id. The next step is a clear operating brief for the first villa, not an unsupported promise across the whole portfolio.

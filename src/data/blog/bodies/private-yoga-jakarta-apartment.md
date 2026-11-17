@@ -22,7 +22,7 @@ You do not need a shala, a reformer or a full-length mirror. You do need permiss
 
 South Jakarta in-zone includes Kebayoran, Senopati, SCBD, Kemang and Cilandak streets we can time. Central Jakarta in-zone includes Menteng, Gondangdia, Thamrin and nearby buildings we can time. North, West, East and BSD are quoted after a timing check, with travel or a decline. We do not claim Greater Jakarta coverage.
 
-Put the building name, tower, parking instruction and security process in the first message. If a guest QR or ID is required, say that before the quote. If the front desk blocks outside teachers, tell us. We will not pretend a lobby refusal is a completed hour.
+Put the building name, tower, parking instruction and security process in the first message. If a visitor pass or ID is required, say that before the quote. If the front desk blocks outside teachers, tell us. We will not pretend a lobby refusal is a completed hour.
 
 Recurring programmes need a standing access note so the professional is not renegotiating the desk every Tuesday. Read [programmes](/programmes) only after one paid visit has proved the building.
 
@@ -46,7 +46,7 @@ Rain and AC leak are indoor problems in Jakarta more often than a deck problem. 
 
 ## How to send the first Jakarta yoga message
 
-Message WhatsApp +62 811-3803-488 or hallo@personalfitness.id with five lines: private yoga, South or Central Jakarta plus the building if you know it, apartment or house, a two-hour window, and one or two people. Add beginner or mixed levels in one line. Add lobby rules if they exist.
+Message WhatsApp +62 811-3803-488 or hello@personalfitness.id with five lines: private yoga, South or Central Jakarta plus the building if you know it, apartment or house, a two-hour window, and one or two people. Add beginner or mixed levels in one line. Add lobby rules if they exist.
 
 Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer) if you want the template. Keep medical files out. If pain is the reason you want yoga, speak to a clinician first. We will not treat injury under a yoga label.
 

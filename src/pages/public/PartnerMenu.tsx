@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { useSearchParams } from 'react-router'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { formatIdr } from '@/lib/money'
-import { guestMenuMessage, whatsappDraftUrl } from '@/lib/whatsapp'
+import { guestMenuMessage, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import { partner } from '@/config/partner'
 
 const lines = [
@@ -18,20 +19,7 @@ export default function PartnerMenu() {
   const code = (params.get('partner') || '').toUpperCase()
   const villa = params.get('villa') || 'your villa'
   const lang = params.get('lang') === 'id' ? 'id' : 'en'
-  const message = guestMenuMessage(villa, code)
-  const href = whatsappDraftUrl(message)
-  const [qr, setQr] = useState('/partners/default-qr.svg')
-  useEffect(() => {
-    let cancelled = false
-    import('qrcode').then((mod: { default?: { toDataURL: (text: string, options: object) => Promise<string> }; toDataURL?: (text: string, options: object) => Promise<string> }) => {
-      const toDataURL = mod.default?.toDataURL || mod.toDataURL
-      if (!toDataURL) return Promise.reject(new Error('qrcode unavailable'))
-      return toDataURL(href, { margin: 1, width: 360 })
-    }).then((url) => {
-      if (!cancelled) setQr(url)
-    }).catch(() => undefined)
-    return () => { cancelled = true }
-  }, [href])
+  const href = whatsappDraftUrl(guestMenuMessage(villa, code))
   const heading = useMemo(() => lang === 'id' ? `Wellness di ${villa}` : `Wellness at ${villa}`, [lang, villa])
   return (
     <div className="menu-card" lang={lang}>
@@ -48,11 +36,11 @@ export default function PartnerMenu() {
       )}
       <p>{lang === 'id'
         ? 'Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00. Pesan paling lambat pukul 18:00 sehari sebelumnya.'
-        : 'Example: sunrise private yoga Mon, Wed, Fri at 08:00. Reserve by 18:00 the day before.'}</p>
-      <img className="menu-qr" src={qr} width="180" height="180" alt="WhatsApp booking QR" />
+        : 'Example: private yoga Monday, personal training Wednesday, mat Pilates Friday at 08:00. Reserve by 18:00 the day before.'}</p>
       {code && <p className="menu-code">Partner {code}</p>}
       <p className="small muted">60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.</p>
-      <p className="small muted">Scan or WhatsApp +62 811-3803-488.</p>
+      <p className="small"><a href={href}>WhatsApp {WHATSAPP_DISPLAY}</a></p>
+      <p className="small"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p>
     </div>
   )
 }

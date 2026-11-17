@@ -14,7 +14,7 @@ PersonalFitness.id is a company-managed private fitness service. A vetted coach 
 | Mobility & stretching | Rp 850.000 | Rp 900.000 | non-clinical; extra person as PT |
 | Boxing fitness | Rp 1.000.000 | Rp 1.050.000 | pads only, 1 person |
 | Guided meditation | Rp 800.000 | Rp 850.000 | up to 2 people |
-90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +Rp 200.000 travel per visit. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hallo@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
+90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +Rp 200.000 travel per visit. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
 
 ## Growth strategy these changes serve
 The main growth channel is now B2B: villa management companies, villa rental agencies, boutique resorts, retreat hosts and concierge companies (Bali first, Jakarta where relevant). Pitch: "Put our wellness menu in every villa you manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, you earn [COMMISSION_PCT]% of every session." Outreach is email first, then WhatsApp. There are NO sales meetings and NO calendar booking: villa managers must be able to understand the offer, download the menu, read the terms and join over WhatsApp/the form without a call. Indonesian villa managers prefer WhatsApp and simple, plain language; many prefer Bahasa Indonesia. The site must therefore: (1) explain the partner programme in plain words with the commission stated, (2) give a downloadable partner menu/deck, (3) give a one-tap WhatsApp + simple join form, (4) show real people (trust), (5) track every WhatsApp click and partner action, (6) fix the SEO issues found in the audit.
@@ -34,10 +34,10 @@ The main growth channel is now B2B: villa management companies, villa rental age
 - H1: `Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.`
 - Sub: `Yoga, personal training, Pilates, stretching, boxing dan meditasi, langsung di villa tamu Anda oleh coach kami. Tim Anda tidak perlu kerja tambahan. Anda dapat [COMMISSION_PCT]% dari setiap sesi yang dibayar.`
 - Buttons: `WhatsApp kami tentang villa Anda` (pre-fill: `Halo PersonalFitness.id, saya mengelola villa dan ingin menu partner. Perusahaan: ___ · Jumlah villa: ___ · Lokasi: ___`) · `Unduh menu partner (PDF)`
-- Cara kerja: 1. `Kami kirim kartu menu dan kode QR untuk setiap villa, dengan nama Anda.` 2. `Tamu scan dan pesan lewat WhatsApp. Pesanan membawa kode partner Anda.` 3. `Coach kami datang ke villa. Tamu membayar ke kami.` 4. `Anda dapat [COMMISSION_PCT]% dari setiap sesi yang dibayar, setiap bulan, dengan laporan sederhana.`
+- Cara kerja: 1. `Koordinator menyepakati villa dan minggu bersama Anda.` 2. `Tamu pesan lewat email atau WhatsApp. Pesanan membawa kode partner Anda.` 3. `Coach kami datang ke villa. Tamu membayar ke kami.` 4. `Anda dapat komisi dari setiap sesi yang dibayar, setiap bulan, dengan laporan sederhana.`
 - Yang bisa dipesan tamu: Yoga privat mulai Rp 850.000 (maks. 2 orang) · Personal training mulai Rp 900.000 · Mat Pilates mulai Rp 950.000 · Mobility & stretching mulai Rp 850.000 · Boxing fitness mulai Rp 1.000.000 · Meditasi terpandu mulai Rp 800.000. Catatan: `Harga Bali, 60 menit. Canggu dan Seminyak sudah termasuk. Ubud dan Sanur +Rp 150.000, Uluwatu +Rp 200.000 biaya perjalanan per kunjungan.`
 - Jadwal yoga mingguan: `Beri tamu sesuatu yang dinanti. Contoh: yoga pagi privat Senin, Rabu, Jumat pukul 08:00 di villa masing-masing tamu. Tamu memesan paling lambat pukul 18:00 sehari sebelumnya.`
-- Yang Anda dapat: `Kartu menu + QR untuk setiap villa` · `Halaman tamu untuk welcome pack atau aplikasi` · `Pemesanan lewat WhatsApp dengan kode partner Anda` · `Koordinator yang jelas` · `Laporan dan pembayaran komisi bulanan` · `Pilot 30 hari di 1–2 villa dulu`.
+- Yang Anda dapat: `Kartu menu cetak untuk setiap villa` · `Pemesanan lewat email atau WhatsApp dengan kode partner Anda` · `Koordinator yang jelas` · `Ritme mingguan di seluruh portofolio` · `Laporan bulanan dari tim kami` · `Pilot 30 hari di 1–2 villa dulu`.
 - Form labels: Nama perusahaan* · Nama Anda* · Jabatan · Nomor WhatsApp* · Email · Jumlah villa* · Lokasi* · Villa untuk mulai · Ada tempat untuk 2 matras yoga? · Bahasa menu tamu. Persetujuan*: `Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.` Tombol: `Kirim lewat WhatsApp`.
 - FAQ: Siapa yang membayar? `Tamu membayar ke kami. Kami bayar komisi Anda setiap bulan.` · Perlu kontrak? `Hanya syarat partner singkat kami.` · Kalau coach berhalangan? `Kami langsung kabari tamu dan tawarkan waktu baru atau pengembalian dana penuh.` · Privasi tamu? `Tim Anda hanya menerima jadwal dan villa. Catatan kesehatan tamu hanya untuk coach.` · Asuransi dan tanggung jawab? `Tanyakan kepada kami, kami kirim penjelasan tertulis.` · Area mana saja? `Canggu dan Seminyak termasuk; Ubud, Sanur, Uluwatu dengan biaya perjalanan; area lain bisa ditanyakan.`
 - Footer CTA: `Ada pertanyaan? WhatsApp +62 811-3803-488. Dibalas oleh orang sungguhan.`
@@ -48,7 +48,7 @@ The main growth channel is now B2B: villa management companies, villa rental age
 |---|---|---|---|
 | P1 | Partner page rewrite `/villa-hotel-partners` with commission terms + villa-manager WhatsApp CTA + form | P0 | M |
 | P2 | Partner terms page `/partner-terms` | P0 | S |
-| P3 | Partner deck/menu: printable `/partners/menu` (A5 card with QR + partner code) and PDF download `/partners/villa-wellness-menu.pdf` | P0 | M |
+| P3 | Partner deck/menu: printable `/partners/menu` (A5 card with partner code, WhatsApp and email) and PDF download `/partners/villa-wellness-menu.pdf` | P0 | M |
 | P4 | Partner WhatsApp pre-fills with partner code `?ref=` attribution | P0 | S |
 | P5 | Analytics (GA4) + WhatsApp click tracking + partner events | P0 | S |
 | P6 | Trust: founder/team page `/team`, About rewrite, real photos replacing "illustrative" images | P0 (content blocked on founder) | M |
@@ -73,13 +73,13 @@ Sections and final copy (replace the current page body):
    - Primary button: `WhatsApp us about your villas` → `https://wa.me/628113803488?text=` + encoded `Hi PersonalFitness.id, I manage villas and want the partner menu. Company: ___ · Villas: ___ · Areas: ___` (event `partner_whatsapp_click`, location `partner_hero`)
    - Secondary button: `Download the partner menu (PDF)` → `/partners/villa-wellness-menu.pdf` (event `partner_deck_download`)
 2. How it works (4 steps)
-   1. `We send you a menu card and QR code for each villa, with your name on it.`
-   2. `Guests scan and book on WhatsApp. The booking carries your partner code.`
+   1. `A coordinator agrees the villas, the days and your partner code.`
+   2. `Guests request the session by email or WhatsApp. The request carries your partner code.`
    3. `Our coach comes to the villa. The guest pays us.`
    4. `You get [COMMISSION_PCT]% of every paid session, every month, with a simple statement.`
 3. What your guests can book (6 cards, keep existing prices and links): Private yoga from Rp 850.000 (up to 2) · Personal training from Rp 900.000 · Mat Pilates from Rp 950.000 · Mobility & stretching from Rp 850.000 · Boxing fitness from Rp 1.000.000 · Guided meditation from Rp 800.000. Note line: `Bali prices, 60 minutes. Canggu and Seminyak included. Ubud and Sanur +Rp 150.000, Uluwatu +Rp 200.000 travel per visit.`
 4. Weekly yoga calendar (keep example, change copy): `Give guests something to look forward to. Example: sunrise private yoga Mon, Wed, Fri at 08:00 in each guest's villa. Guests reserve by 18:00 the day before.` If [GROUP_YOGA_RATE_BALI] is set, add: `Have a big terrace or studio? Run a shared villa class for up to [GROUP_YOGA_MAX_PEOPLE] guests from Rp [GROUP_YOGA_RATE_BALI].`
-5. What you get (bullets): `Menu card + QR for every villa` · `Guest page for your welcome pack or app` · `Booking on WhatsApp with your partner code` · `A named coordinator` · `Monthly statement and payout` · `30-day pilot at 1–2 villas first`.
+5. What you get (bullets): `Printed menu card for every villa` · `Booking by email or WhatsApp with your partner code` · `A named coordinator` · `A weekly rhythm across the portfolio` · `Monthly statement from our team` · `30-day pilot at 1–2 villas first`.
 6. Earnings example (label clearly): `Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 900.000 sessions = about 13 sessions and Rp 12.096.000 a month in sessions. At [COMMISSION_PCT]% you would earn about Rp [computed] a month.` Compute in code from COMMISSION_PCT.
 7. Have a space? `If a villa has a terrace, studio or big living room, we check it and plan a shared class or a regular slot.`
 8. Join form (no backend needed; builds a WhatsApp message). Fields: Company name* · Your name* · Role · WhatsApp number* · Email · Number of villas* (1–5 / 6–24 / 25+) · Areas* (multi: Canggu, Seminyak, Ubud, Sanur, Uluwatu, Jakarta, Other) · Villas to start with · Space for 2 yoga mats? (yes/no/not sure) · Guest menu language (English/Bahasa). Consent checkbox*: `I agree that PersonalFitness.id may contact me on WhatsApp and email about the partner programme.` Button `Send on WhatsApp` → wa.me with all fields formatted; event `partner_form_submit`. Store nothing server-side unless a backend is added later.
@@ -94,17 +94,17 @@ Title: `Villa Partner Terms | PersonalFitness.id`. Plain-English terms (founder 
 2. Payout: `Monthly, by [COMMISSION_PAYOUT_DAY] of the next month, to the account you give us in writing. Refunded sessions earn no commission.`
 3. Prices: `Guests pay the published website price. Partners do not resell above it unless agreed in writing.`
 4. Attribution: `A booking counts for you if the guest's first WhatsApp message carries your partner code, or your team sends the request.`
-5. Materials: `We provide menu cards and QR codes. You place them. Either side can remove them at any time.`
+5. Materials: `We provide a printed menu card for the villa. You place it. Either side can remove it at any time.`
 6. Pilot and ending: `30-day pilot at 1–2 villas. Either side can stop with 14 days' notice by email or WhatsApp. Earned commission is still paid.`
 7. Guests and privacy: `We share only time and villa with your team. Guest health information stays with the coach.`
 8. Safety and liability: `[LIABILITY_TEXT — founder/legal to supply]`
-9. Contact: hallo@personalfitness.id · WhatsApp +62 811-3803-488.
+9. Contact: hello@personalfitness.id · WhatsApp +62 811-3803-488.
 Acceptance: linked from partner page, footer and PDF; no placeholder text live.
 
 ## P3. Partner menu & deck
-- Route `/partners/menu?partner=CODE&villa=NAME&lang=en|id` (noindex): print-ready A5 (148×210 mm) card. Content: `Wellness at [VILLA NAME]` · `Our coaches come to your villa` · 6 sessions with "from" prices · weekly yoga line · QR code (wa.me link with pre-fill `Hi, I'm staying at [VILLA NAME] ([PARTNER CODE]). I'd like to book: ___ · Day/time: ___ · People: ___`) · small print `60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.` Use a client-side QR library (e.g. `qrcode`), CSS `@media print`.
+- Route `/partners/menu?partner=CODE&villa=NAME&lang=en|id` (noindex): print-ready A5 (148×210 mm) card. Content: `Wellness at [VILLA NAME]` · `Our coaches come to your villa` · 6 sessions with "from" prices · weekly example · WhatsApp number and hello@personalfitness.id · partner code when present · small print `60 minutes. Prices from. Travel added outside Canggu/Seminyak. Confirmed in writing before you pay.` CSS `@media print`.
 - Static `/partners/villa-wellness-menu.pdf` (generic sample card + 1-page "How the partner programme works" + terms summary). Generate from the same component at build time or export manually.
-- Acceptance: printing the route gives one clean A5 page; QR opens WhatsApp with villa + code; PDF < 2 MB.
+- Acceptance: printing the route gives one clean A5 page; the card shows WhatsApp and email; PDF < 2 MB.
 
 ## P4. Attribution
 - Support `?ref=CODE` on any page: save to `sessionStorage` and append `Ref: CODE` to every WhatsApp pre-fill on the site. Send `partner_code` as a GA4 event param.

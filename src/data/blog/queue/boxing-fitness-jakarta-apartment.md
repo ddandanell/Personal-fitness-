@@ -22,7 +22,7 @@ The lobby is still the Jakarta product. Put the building, tower, parking and vis
 
 The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.050.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of 5, 8 and 12 percent apply to session charges, not to a building fee.
 
-There is no free intro. Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hallo@personalfitness.id if that is easier.
+There is no free intro. Pay only on the merchant link. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 
 The Denpasar office is not a Jakarta boxing studio. You train in the apartment you already have permission to use.
 
@@ -51,7 +51,7 @@ Jakarta apartment boxing is useful when the pads, the walls and the quote match.
 
 ## A worked South Jakarta boxing enquiry
 
-“Boxing fitness, Jakarta, South Jakarta Kemang, apartment tower B, Saturday 08:00–10:00, one person, beginner, 3x3m indoor room, 2.7m ceiling, no evening pad work allowed by management, visitor QR at lobby.” That message can be quoted. “Can we box on the rooftop gym tonight with my friend” cannot.
+“Boxing fitness, Jakarta, South Jakarta Kemang, apartment tower B, Saturday 08:00–10:00, one person, beginner, 3x3m indoor room, 2.7m ceiling, no evening pad work allowed by management, visitor pass at the lobby.” That message can be quoted. “Can we box on the rooftop gym tonight with my friend” cannot.
 
 If the ceiling is 2.4 metres, say so. If the floor is vinyl over a neighbour’s bedroom, say so. We would rather move you to [personal training](/jakarta/personal-training) than collect a complaint. Pads still make noise. Honesty about noise is part of the product, not an optional vibe.
 

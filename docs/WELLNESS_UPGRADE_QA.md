@@ -26,4 +26,4 @@
 
 Preview browser checks used the GitHub-connected Vercel deployment of commit 92d659d. Final polish adds keyboard focus and scrolling to the schedule review, restores two-column mobile navigation and reduces the partner heading size for narrow screens. These changes do not alter pricing or submitted draft content.
 
-The shared wellness brief is a coordinator-managed service workflow. An authenticated multi-coach records portal is not represented as implemented. Sensitive clinical records remain outside this public planner.
+The shared wellness brief is a coordinator-managed service workflow. Sensitive clinical records remain outside this public planner.

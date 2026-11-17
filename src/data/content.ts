@@ -1,8 +1,9 @@
+import { COMPANY_EMAIL } from './company'
 import { resourceBodies, resourceFaqs } from './resourceBodies'
 
 export const faqs = [
-  ['How do I book a personal trainer in Bali on WhatsApp?', 'Open Contact or the estimator, add city, area, service and a two-hour window, then send on WhatsApp +62 811-3803-488 or email hallo@personalfitness.id. We confirm supply and access, then send a written quote. Pay only on the link in that quote.'],
-  ['Can I book a personal trainer in South Jakarta?', 'Yes. South Jakarta and Central Jakarta are in-zone for the published Jakarta rates. Put the building, tower and a two-hour window on WhatsApp +62 811-3803-488 or hallo@personalfitness.id. Access rules go on the written quote.'],
+  ['How do I book a personal trainer in Bali on WhatsApp?', `Open Contact or the estimator, add city, area, service and a two-hour window, then send on WhatsApp +62 811-3803-488 or email ${COMPANY_EMAIL}. We confirm supply and access, then send a written quote. Pay only on the link in that quote.`],
+  ['Can I book a personal trainer in South Jakarta?', `Yes. South Jakarta and Central Jakarta are in-zone for the published Jakarta rates. Put the building, tower and a two-hour window on WhatsApp +62 811-3803-488 or ${COMPANY_EMAIL}. Access rules go on the written quote.`],
   ['How much does a session cost?', 'Published 60-minute in-zone starting prices are on the pricing page. Bali: personal training Rp 900.000; private yoga Rp 850.000 (two people included); mat Pilates Rp 950.000; mobility coaching Rp 850.000; boxing fitness Rp 1.000.000 (one person); guided meditation Rp 800.000 (two people included). Jakarta: personal training Rp 950.000; private yoga Rp 900.000; mat Pilates Rp 1.000.000; mobility coaching Rp 900.000; boxing fitness Rp 1.050.000; guided meditation Rp 850.000. Travel, extra people, 90 minutes and programmes change the total. You get a written quote before payment.'],
   ['Is the number on the website the final price?', 'It is the starting price for a standard in-zone session. Outer-zone travel, extra people, longer duration, venue fees and programmes are added or reduced in the estimator and then confirmed in writing.'],
   ['Does an enquiry reserve the time?', 'No. An enquiry starts the supply and access check. The session is confirmed only after you accept the quote and payment status is verified.'],

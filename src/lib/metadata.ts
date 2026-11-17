@@ -5,6 +5,7 @@ import { canonicalPath as seoCanonical, getSeo } from '@/data/seo'
 import { isHeldPath, offerState, sessionPhoto } from '@/data/publicOffer'
 import { SITE_ORIGIN } from '@/data/company'
 import { pageImage } from '@/components/EditorialPhoto'
+import { villaDemoPage } from '@/villa-demo/data'
 
 const OG_BY_PATH: Record<string, { src: string; alt: string; width: string; height: string }> = {
   '/services': { src: '/images/editorial/core-personal-training.webp', alt: 'Private personal training at home', width: '1440', height: '960' },
@@ -29,6 +30,24 @@ export function brandedTitle(title: string) {
 }
 
 export function pageMetadata(pathname: string) {
+  if (pathname === '/villademo' || pathname.startsWith('/villademo/')) {
+    const demo = villaDemoPage(pathname)
+    const image = demo?.image
+    return {
+      title: demo?.title || 'Villa wellness preview',
+      htmlLang: 'en',
+      locale: 'en_ID',
+      description: demo?.description || 'A noindex preview of in-villa wellness for a fictional Bali house collection.',
+      canonical: SITE_ORIGIN + pathname,
+      noindex: true,
+      image: image?.src || '/images/villademo/hero-pool.webp',
+      imageAlt: image?.alt || 'An infinity pool above the ocean, lined with palms',
+      imageWidth: String(image?.width || 1600),
+      imageHeight: String(image?.height || 1066),
+      region: 'ID-BA',
+      placename: 'Bali',
+    }
+  }
   const parts = pathname.split('/').filter(Boolean)
   const slug = parts.at(-1) || ''
   const city = parts[0] === 'bali' ? 'Bali' : parts[0] === 'jakarta' ? 'Jakarta' : undefined

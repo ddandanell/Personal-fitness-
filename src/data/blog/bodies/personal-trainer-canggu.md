@@ -36,7 +36,7 @@ Boxing needs ceiling clearance and neighbour-aware noise. Meditation needs a roo
 
 ## How to send the first Canggu message
 
-Message WhatsApp +62 811-3803-488 or email hallo@personalfitness.id with five lines: personal training, Canggu plus the pocket if you know it (Berawa, Pererenan, Echo Beach), villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
+Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five lines: personal training, Canggu plus the pocket if you know it (Berawa, Pererenan, Echo Beach), villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
 
 Keep card numbers, ID photos and medical files out. If you want a template, use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer).
 

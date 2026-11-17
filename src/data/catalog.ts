@@ -142,7 +142,7 @@ const jakartaPockets: Area[] = [
     parent: 'south-jakarta',
     travelFee: 0,
     driveNote: 'In-zone South Jakarta. Building access still goes on the quote.',
-    copy: 'Senopati towers often lose the hour in the lobby: guest QR, lift waits, and a front desk that has not been told a coach is coming. Put the building and tower on the first message. The published Jakarta rate applies when we can time the visit.',
+    copy: 'Senopati towers often lose the hour in the lobby: a visitor pass, lift waits, and a front desk that has not been told a coach is coming. Put the building and tower on the first message. The published Jakarta rate applies when we can time the visit.',
     venues: ['Apartment living rooms', 'Serviced residences with written visitor access', 'Private rooms with a door that can close'],
     bestFor: ['Before-office personal training', 'Lunch-hour mobility', 'Private yoga after work'],
     services: JAKARTA_LIVE,

@@ -1,8 +1,9 @@
 export const SITE_HOST = 'www.personalfitness.id'
 export const SITE_ORIGIN = 'https://www.personalfitness.id'
 
-export const COMPANY_EMAIL = 'hallo@personalfitness.id'
-export const COMPANY_EMAIL_HREF = 'mailto:hallo@personalfitness.id'
+/** The only public email address. Visible text, mailto links and form delivery use this value. */
+export const COMPANY_EMAIL = 'hello@personalfitness.id'
+export const COMPANY_EMAIL_HREF = `mailto:${COMPANY_EMAIL}`
 
 export const COMPANY_ADDRESS = 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226'
 

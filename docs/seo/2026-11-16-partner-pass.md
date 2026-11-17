@@ -24,5 +24,5 @@ COMMISSION_PCT, COMMISSION_BASE, COMMISSION_PAYOUT_DAY, GROUP_YOGA_RATE_BALI, GR
 
 - Vercel → Project → Domains: set apex `personalfitness.id` → `www.personalfitness.id` as **308 Permanent** if the dashboard still uses 307.
 - Create/claim Google Business Profile as a service-area business, not a walk-in studio.
-- DNS/host for hallo@personalfitness.id.
+- DNS/host for hello@personalfitness.id.
 - Search Console property for www.personalfitness.id.

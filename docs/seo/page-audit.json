@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-16T23:41:55.776Z",
+  "generatedAt": "2026-11-17T13:54:00.127Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1372,
+      "mainWords": 1424,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -123,7 +123,7 @@
     },
     {
       "path": "/contact",
-      "mainWords": 247,
+      "mainWords": 257,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/contact",
       "localMinimum": false,
@@ -163,7 +163,7 @@
     },
     {
       "path": "/id",
-      "mainWords": 607,
+      "mainWords": 612,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id",
       "localMinimum": false,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id/mitra-villa",
-      "mainWords": 508,
+      "mainWords": 547,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id/mitra-villa",
       "localMinimum": false,
@@ -371,7 +371,7 @@
     },
     {
       "path": "/jakarta/senopati",
-      "mainWords": 1557,
+      "mainWords": 1559,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/senopati",
       "localMinimum": true,
@@ -435,7 +435,7 @@
     },
     {
       "path": "/partner-terms",
-      "mainWords": 206,
+      "mainWords": 208,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/partner-terms",
       "localMinimum": false,
@@ -443,7 +443,7 @@
     },
     {
       "path": "/partners/menu",
-      "mainWords": 95,
+      "mainWords": 98,
       "indexable": false,
       "canonical": "https://www.personalfitness.id/partners/menu",
       "localMinimum": false,
@@ -467,7 +467,7 @@
     },
     {
       "path": "/pricing",
-      "mainWords": 1753,
+      "mainWords": 1765,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/pricing",
       "localMinimum": false,
@@ -475,7 +475,7 @@
     },
     {
       "path": "/privacy",
-      "mainWords": 300,
+      "mainWords": 320,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/privacy",
       "localMinimum": false,
@@ -563,7 +563,7 @@
     },
     {
       "path": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
-      "mainWords": 1533,
+      "mainWords": 1534,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
       "localMinimum": false,
@@ -731,7 +731,7 @@
     },
     {
       "path": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
-      "mainWords": 1474,
+      "mainWords": 1475,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
       "localMinimum": false,
@@ -795,11 +795,187 @@
     },
     {
       "path": "/villa-hotel-partners",
-      "mainWords": 537,
+      "mainWords": 591,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/villa-hotel-partners",
       "localMinimum": false,
       "primaryImage": "/images/editorial/villa-hotel-partners.webp"
+    },
+    {
+      "path": "/villademo",
+      "mainWords": 281,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/book",
+      "mainWords": 138,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/book",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card",
+      "mainWords": 70,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card/atelier-uluwatu",
+      "mainWords": 70,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card/atelier-uluwatu",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card/cliff-seseh",
+      "mainWords": 70,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card/cliff-seseh",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card/garden-berawa",
+      "mainWords": 70,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card/garden-berawa",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card/house-lima",
+      "mainWords": 70,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card/house-lima",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/card/pavilion-echo",
+      "mainWords": 69,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/card/pavilion-echo",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/confirmed",
+      "mainWords": 67,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/confirmed",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/desk",
+      "mainWords": 138,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/desk",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/desk/book",
+      "mainWords": 73,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/desk/book",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/desk/roster",
+      "mainWords": 83,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/desk/roster",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/desk/schedules",
+      "mainWords": 83,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/desk/schedules",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/stay/atelier-uluwatu",
+      "mainWords": 307,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/stay/atelier-uluwatu",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/stay/cliff-seseh",
+      "mainWords": 304,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/stay/cliff-seseh",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/stay/garden-berawa",
+      "mainWords": 306,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/stay/garden-berawa",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/stay/house-lima",
+      "mainWords": 307,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/stay/house-lima",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/stay/pavilion-echo",
+      "mainWords": 304,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/stay/pavilion-echo",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/trainers/amara-cole",
+      "mainWords": 91,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/trainers/amara-cole",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/trainers/clara-voss",
+      "mainWords": 80,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/trainers/clara-voss",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/trainers/julian-hart",
+      "mainWords": 82,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/trainers/julian-hart",
+      "localMinimum": false,
+      "primaryImage": null
+    },
+    {
+      "path": "/villademo/trainers/michael-tan",
+      "mainWords": 86,
+      "indexable": false,
+      "canonical": "https://www.personalfitness.id/villademo/trainers/michael-tan",
+      "localMinimum": false,
+      "primaryImage": null
     }
   ],
   "locationPages": 41,

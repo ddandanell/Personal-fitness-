@@ -42,7 +42,7 @@ Boxing needs ceiling clearance. Meditation needs a room that can be quiet. Mobil
 
 ## How to send the first Seminyak message
 
-Message WhatsApp +62 811-3803-488 or email hallo@personalfitness.id with five lines: personal training, Seminyak or Petitenget, villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
+Message WhatsApp +62 811-3803-488 or email hello@personalfitness.id with five lines: personal training, Seminyak or Petitenget, villa or rented home, a two-hour window, and headcount. Add beginner or already training in one line. Add gate or staff notes if they exist.
 
 Keep card numbers, ID photos and medical files out. Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer) if you want the template.
 

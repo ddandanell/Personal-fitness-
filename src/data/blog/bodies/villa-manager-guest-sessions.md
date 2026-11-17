@@ -12,7 +12,7 @@ A WhatsApp “we have a guest who wants yoga tomorrow” without an area, window
 
 ## What the first host message must include
 
-Send WhatsApp +62 811-3803-488 or hallo@personalfitness.id with: the session, Bali or Jakarta, the cluster (Canggu, Seminyak, Ubud, Sanur, Uluwatu, South Jakarta, Central Jakarta), villa or hotel, a two-hour window, and headcount. Add the person who can open the gate. Add whether the guest will be present. Add if the host is paying or the guest is paying.
+Send WhatsApp +62 811-3803-488 or hello@personalfitness.id with: the session, Bali or Jakarta, the cluster (Canggu, Seminyak, Ubud, Sanur, Uluwatu, South Jakarta, Central Jakarta), villa or hotel, a two-hour window, and headcount. Add the person who can open the gate. Add whether the guest will be present. Add if the host is paying or the guest is paying.
 
 Use [what to put in a WhatsApp enquiry](/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer). Keep guest medical files, passport photos and card numbers out of the group chat. Payment happens on the merchant link in the written quote.
 

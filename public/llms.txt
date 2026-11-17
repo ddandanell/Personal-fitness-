@@ -1,6 +1,6 @@
 # PersonalFitness.id
 
-PersonalFitness.id is a company-managed private fitness service. Coaches come to your villa or home in published Bali and Jakarta clusters. It is not a public trainer marketplace.
+PersonalFitness.id works with villa managers, rental agencies and hotels. Guests can book private fitness at the villa in published Bali and Jakarta clusters. Coaches come to the property, the guest pays us, and the partner earns a commission. It is not a public trainer marketplace.
 
 Canonical host: https://www.personalfitness.id/
 Language: English (en-ID). Indonesian landing page: https://www.personalfitness.id/id
@@ -28,7 +28,7 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16, Panjer is an office, no
 
 Website: https://www.personalfitness.id/
 WhatsApp: +62 811-3803-488
-Email: hallo@personalfitness.id
+Email: hello@personalfitness.id
 Sitemap: https://www.personalfitness.id/sitemap.xml
 
 ## Indexable money pages
@@ -66,7 +66,7 @@ Sitemap: https://www.personalfitness.id/sitemap.xml
 
 ## Villa partners
 
-Villa managers, agencies and boutique hosts can put a wellness menu in every villa they manage. Guests book on WhatsApp, our coach comes to the villa, the guest pays us, and the partner earns a commission on every session. There are no sales meetings and no calendar booking.
+Villa managers, agencies and boutique hosts can offer a wellness menu in every villa they manage. A coordinator can set a weekly rhythm across the portfolio. Guests book by email at hello@personalfitness.id or WhatsApp, our coach comes to the villa, the guest pays us, and the partner earns a commission on every paid session.
 
 - Partner programme: https://www.personalfitness.id/villa-hotel-partners
 - Bahasa: https://www.personalfitness.id/id/mitra-villa

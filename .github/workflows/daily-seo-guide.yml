@@ -41,7 +41,7 @@ jobs:
           git fetch origin main
           test "$expected" = "$(git rev-parse origin/main)"
           git add src/data/blog public/llms.txt public/sitemap*.xml docs/seo/page-audit.json
-          git -c user.name="PersonalFitness.id publisher" -c user.email="hallo@personalfitness.id" commit -m "Publish a validated daily fitness guide"
+          git -c user.name="PersonalFitness.id publisher" -c user.email="hello@personalfitness.id" commit -m "Publish a validated daily fitness guide"
           git push origin HEAD:main
           echo "### Daily content release" >> "$GITHUB_STEP_SUMMARY"
           echo "https://www.personalfitness.id/resources/${{ steps.release.outputs.slug }}" >> "$GITHUB_STEP_SUMMARY"

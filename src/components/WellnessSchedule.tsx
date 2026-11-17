@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarDays, Check, Download, Plus, Trash2 } from 'lucide-react'
 import { getService, quoteAreas, type City } from '@/data/catalog'
+import { EnquiryNote, HoneypotField } from './EnquiryFields'
 import { CopyButton, Eyebrow, Field } from './Primitives'
 import { defaultVisits, estimateWellnessPlan, planServices, weekDays, wellnessPlanMessage, type PlanVisit } from '@/lib/wellnessPlan'
 import { formatIdr } from '@/lib/money'
-import { trackWhatsApp } from '@/lib/analytics'
+import { trackEvent, trackWhatsApp } from '@/lib/analytics'
+import { submitEnquiry } from '@/lib/submitEnquiry'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { downloadText } from '@/lib/downloadText'
 
@@ -16,7 +18,13 @@ export default function WellnessSchedule() {
   const [startDate, setStartDate] = useState('')
   const [visits, setVisits] = useState<PlanVisit[]>(defaultVisits)
   const [review, setReview] = useState(false)
+  const [senderName, setSenderName] = useState('')
+  const [senderEmail, setSenderEmail] = useState('')
+  const [sending, setSending] = useState(false)
+  const [notice, setNotice] = useState('')
+  const [noticeTone, setNoticeTone] = useState<'error' | 'success' | ''>('')
   const reviewHeading = useRef<HTMLHeadingElement>(null)
+  const honeypot = useRef<HTMLInputElement>(null)
   useEffect(() => {
     if (!review) return
     reviewHeading.current?.focus({ preventScroll: true })
@@ -27,6 +35,28 @@ export default function WellnessSchedule() {
   const message = wellnessPlanMessage(input)
   const update = (id: string, change: Partial<PlanVisit>) => { setVisits((items) => items.map((item) => item.id === id ? { ...item, ...change } : item)); setReview(false) }
   const add = () => { setVisits((items) => [...items, { id: 'visit-' + Date.now(), service: 'mat-pilates', day: 'Wednesday', time: '09:00', participants: 1 }]); setReview(false) }
+  async function sendEmail() {
+    setSending(true)
+    setNotice('')
+    setNoticeTone('')
+    const result = await submitEnquiry({
+      kind: 'schedule',
+      name: senderName,
+      email: senderEmail,
+      message,
+      page: window.location.pathname,
+      website: honeypot.current?.value || '',
+    })
+    setSending(false)
+    if (result.ok) {
+      trackEvent('enquiry_email', { kind: 'schedule', city })
+      setNoticeTone('success')
+      setNotice(`Sent. We will reply to ${senderEmail.trim()}. Nothing is booked until you accept the written quote.`)
+      return
+    }
+    setNoticeTone('error')
+    setNotice(result.message)
+  }
   return <div className="schedule-builder" id="schedule-builder">
     <div className="schedule-controls">
       <div className="schedule-heading"><CalendarDays size={23} /><div><Eyebrow>Your weekly rhythm</Eyebrow><h2>Make room for feeling good.</h2></div></div>
@@ -64,7 +94,14 @@ export default function WellnessSchedule() {
       <p className="plan-small">Try one paid visit first. Your monthly plan is prepaid after you accept the full written quote. No automatic renewal.</p>
     </aside>
     {review && <section className="plan-review" aria-label="Review schedule enquiry">
-      <Eyebrow>Ready for your coordinator</Eyebrow><h2 ref={reviewHeading} tabIndex={-1}>Your schedule enquiry.</h2><p>Review the details, then open WhatsApp to send your request. This planner does not process payment, save a health record or confirm a booking.</p><pre>{message}</pre><div className="cluster"><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-primary" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
+      <Eyebrow>Ready for your coordinator</Eyebrow><h2 ref={reviewHeading} tabIndex={-1}>Your schedule enquiry.</h2><p>Review the details, then email them or open WhatsApp. This planner does not process payment, save a health record or confirm a booking.</p><pre>{message}</pre>
+      <div className="form-grid">
+        <Field label="Your name"><input value={senderName} onChange={(event) => setSenderName(event.target.value)} maxLength={100} autoComplete="name" /></Field>
+        <Field label="Your email" hint="We reply to this address."><input type="email" value={senderEmail} onChange={(event) => setSenderEmail(event.target.value)} maxLength={180} autoComplete="email" /></Field>
+      </div>
+      <HoneypotField inputRef={honeypot} />
+      <div className="cluster"><button type="button" className="button button-primary" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this schedule'}</button><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-outline" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
+      <EnquiryNote text={notice} tone={noticeTone} />
     </section>}
   </div>
 }
