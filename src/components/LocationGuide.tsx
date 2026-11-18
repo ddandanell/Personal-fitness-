@@ -19,7 +19,9 @@ export function locationBlocks(area: Area): Block[] {
   const serviceUrl = (slug: string) => CITY_SERVICE_RELEASED.includes(slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${city}/${slug}` : `/${slug}`
   const travel = area.travelQuote
     ? `${area.name} is a by-request location. Instructor availability and travel are confirmed for the exact address. The central-area rate is not a complete local offer. A local enquiry may be accepted or declined after the coordinator checks the practical details.`
-    : `${TRAVEL_DISCLAIMER} Private strength training starts at ${formatIdr(1_050_000)} for 60 minutes and one guest. A second guest, a longer session or a pack changes the total. Timing still needs confirmation.`
+    : area.city === 'Bali'
+      ? `${TRAVEL_DISCLAIMER} Private strength training starts at ${formatIdr(1_050_000)} for 60 minutes and one guest. A second guest, a longer session or a pack changes the total. Timing still needs confirmation.`
+      : `${area.name} uses the published Jakarta in-zone starting prices for an accepted address, with standard travel included. Private strength training starts at ${formatIdr(1_050_000)} for 60 minutes and one guest. A second guest, a longer session or a pack changes the total. Timing still needs confirmation.`
   const relatedLocalGuide = area.slug === 'ubud'
     ? ' For a detailed preparation checklist, read [personal trainer in Ubud: included travel and villa access](/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates).'
     : area.slug === 'south-jakarta'
