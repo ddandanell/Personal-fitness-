@@ -578,14 +578,11 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .footer-grid > div:not(.footer-brand) a { font-size: .8rem; width: fit-content; min-height: 30px; }
 .footer-grid > div:not(.footer-brand) a:hover { color: var(--orange-light); }
 .footer-brand p { max-width: 330px; font-size: .86rem; margin: 20px 0; color: #bdbdb5; }
-.footer-address { max-width: 360px; }
-.footer-address a { color: #cecec7; }
-.footer-address a:hover { color: var(--orange-light); }
-.office-card { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(200px, .7fr)); gap: clamp(28px, 4vw, 56px); border-top: 2px solid var(--ink); padding: 28px 0 36px; margin-bottom: 12px; }
-.office-card h2 { font-size: clamp(2rem, 3.4vw, 3.2rem); }
-.office-lines { font-style: normal; font-size: 1.05rem; line-height: 1.5; max-width: 36ch; margin: 12px 0 0; }
-.office-lines a { border-bottom: 1px solid currentColor; }
-.office-phone { font-family: var(--serif); font-size: 1.8rem; letter-spacing: -.03em; margin-bottom: 18px; }
+.footer-detail { max-width: 360px; }
+.footer-detail a { color: #cecec7; }
+.footer-detail a:hover { color: var(--orange-light); }
+.contact-channels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); border-top: 2px solid var(--ink); padding: 28px 0 36px; margin-bottom: 12px; }
+.contact-channel-value { font-family: var(--serif); font-size: 1.8rem; letter-spacing: -.03em; margin-bottom: 18px; }
 .brand-light { color: var(--paper-light); }
 .footer-heading { font-family: var(--mono); color: var(--orange-light); text-transform: uppercase; letter-spacing: .1em; font-size: .63rem; margin-bottom: 12px; }
 .footer-bottom { border-top: 1px solid var(--light-line); margin-top: 54px; padding-top: 21px; display: flex; justify-content: space-between; gap: 28px; }
@@ -636,7 +633,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 }
 
 @media (max-width: 900px) {
-  .page-intro-grid, .split-statement, .split-feature, .service-editorial, .service-detail-grid, .city-feature, .about-feature, .enquiry-layout, .estimator, .pro-grid, .review-grid, .office-card, .article-layout, .pricing-rate-grid { grid-template-columns: 1fr; }
+  .page-intro-grid, .split-statement, .split-feature, .service-editorial, .service-detail-grid, .city-feature, .about-feature, .enquiry-layout, .estimator, .pro-grid, .review-grid, .contact-channels, .article-layout, .pricing-rate-grid { grid-template-columns: 1fr; }
   .quote-build { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pricing-zone-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .article-aside { position: static; }
@@ -719,8 +716,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
   .wa-float-stack { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
   .wa-float-note { display: none; }
   input, select, textarea { min-height: 48px; padding: 14px 12px; }
-  .office-phone { font-size: 1.45rem; }
-  .office-lines { padding-right: 72px; max-width: none; }
+  .contact-channel-value { font-size: 1.45rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -986,8 +982,6 @@ body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.
 }
 
 /* Owner-approved policy notes and service availability. */
-.request-status { display: inline-block; background: #e6ecdf; color: #38513c; border: 1px solid #cdd9c3; border-radius: 3px; padding: 3px 7px; font-size: 10px; line-height: 1.4; margin: 4px 0 9px; font-weight: 500; }
-.site-footer .request-status { background: transparent; color: #d1dec6; border-color: #67785b; margin: 0 0 0 4px; font-size: 8px; padding: 1px 4px; }
 .photo-policy-caption { display: block; font-family: inherit; font-size: 11px; line-height: 1.65; color: #6e7867; margin: 9px 0 14px; font-weight: 400; letter-spacing: 0; text-transform: none; }
 .session-figure .photo-policy-caption { max-width: 100%; }
 .sales-hero .photo-policy-caption { color: #d1dbc9; }
@@ -1001,4 +995,3 @@ body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.
 .pack-rate-scroll table { border-collapse: collapse; width: 100%; }
 .pack-rate-scroll th, .pack-rate-scroll td { padding: .75rem; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; border-bottom: 1px solid #cbcec8; }
 .pack-rate-scroll th:first-child { text-align: left; }
-.pack-rate-scroll .request-status { margin-left: .5rem; }

@@ -1,5 +1,3 @@
-import { isOnRequest } from '@/data/offerCopy'
-import { ServiceRequestBadge } from './PolicyLines'
 import { ArrowUpRight, Search, SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router'
@@ -29,7 +27,7 @@ export default function WellnessDirectory() {
     return (!category || service.categoryIds.includes(category)) && (!setting || service.deliveryModes.includes(setting)) && (!search || text.includes(search.trim().toLowerCase()))
   }), [category, search, setting])
   return <>
-    <PageIntro eyebrow="Private sessions" title="Fitness at your villa or home." description="Private Strength Training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation in Bali and Jakarta. Choose a session, see the starting price and check availability."><Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link></PageIntro>
+    <PageIntro eyebrow="Private sessions" title="Fitness at your villa or home." description="Private Strength Training, private yoga, mat Pilates, mobility, boxing fitness, guided meditation, bodywork and dance fitness in Bali and Jakarta. Choose a session, see the starting price and check availability."><Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={16} /></Link></PageIntro>
     <section className="section-compact wellness-directory-section"><div className="shell">
       <div className="directory-toolbar">
         <label className="directory-search"><Search size={19} aria-hidden="true" /><span className="sr-only">Search services</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Try boxing, yoga, meditation..." type="search" /></label>
@@ -41,8 +39,8 @@ export default function WellnessDirectory() {
         const prices = service.offers.map((offer) => offer.guidePrice).filter((price): price is number => price !== null)
         const base = service.prices.Bali
         return <article className="wellness-service-card" key={service.slug}>
-          <Link to={`/${service.slug}`} className="wellness-card-photo" tabIndex={-1} aria-hidden="true"><img src={service.image} alt="" loading="lazy" width="1200" height="800" /><span>{isOnRequest(service.slug) ? 'On request' : service.status === 'core' ? 'Core session' : service.status === 'partner' ? 'Specialist request' : 'By request'}</span></Link>
-          <div className="wellness-card-copy"><ServiceRequestBadge slug={service.slug} /><p className="eyebrow">{service.category}</p><h2><Link to={`/${service.slug}`}>{service.title}</Link></h2><p>{service.short}</p><div className="service-format-tags">{service.offers.slice(0, 3).map((offer) => <span key={offer.id}>{offer.name}</span>)}{service.offers.length > 3 && <span>+{service.offers.length - 3} formats</span>}</div><p className="wellness-card-price">{base ? <><strong>{formatIdr(base)}</strong><span> published Bali starting rate</span></> : service.status === 'partner' ? <strong>Personal quote</strong> : prices.length ? <><strong>{formatIdr(Math.min(...prices))}</strong><span> indicative format price</span></> : <strong>Personal quote</strong>}</p><Link to={`/${service.slug}`} className="text-link">Explore the service<ArrowUpRight size={16} /></Link></div>
+          <Link to={`/${service.slug}`} className="wellness-card-photo" tabIndex={-1} aria-hidden="true"><img src={service.image} alt="" loading="lazy" width="1200" height="800" />{service.status !== 'core' && <span>{service.status === 'partner' ? 'Specialist request' : 'By request'}</span>}</Link>
+          <div className="wellness-card-copy"><p className="eyebrow">{service.category}</p><h2><Link to={`/${service.slug}`}>{service.title}</Link></h2><p>{service.short}</p><div className="service-format-tags">{service.offers.slice(0, 3).map((offer) => <span key={offer.id}>{offer.name}</span>)}{service.offers.length > 3 && <span>+{service.offers.length - 3} formats</span>}</div><p className="wellness-card-price">{base ? <><strong>{formatIdr(base)}</strong><span> published Bali starting rate</span></> : service.status === 'partner' ? <strong>Personal quote</strong> : prices.length ? <><strong>{formatIdr(Math.min(...prices))}</strong><span> indicative format price</span></> : <strong>Personal quote</strong>}</p><Link to={`/${service.slug}`} className="text-link">Explore the service<ArrowUpRight size={16} /></Link></div>
         </article>
       })}</div> : <div className="directory-empty"><Eyebrow>A different combination</Eyebrow><h2>Tell us what you have in mind.</h2><p>No service matches these filters. Try a broader category or let the coordinator help you choose.</p><button className="button button-outline" onClick={() => { setSearch(''); setSetting(''); setParams({}) }}>Clear filters</button><Link to="/contact" className="text-link">Ask about a service<ArrowUpRight size={16} /></Link></div>}
     </div></section>

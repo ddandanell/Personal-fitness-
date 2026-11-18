@@ -29,7 +29,6 @@ export type PartnerConfig = {
   COACHES: CoachCard[]
   INSTAGRAM_URL: string | null
   GBP_URL: string | null
-  OFFICE_GEO: { lat: number; lng: number } | null
   COORDINATION_HOURS: string | null
   GA4_ID: string | null
 }
@@ -46,7 +45,6 @@ export const partner: PartnerConfig = {
   COACHES: [],
   INSTAGRAM_URL: null,
   GBP_URL: null,
-  OFFICE_GEO: null,
   COORDINATION_HOURS: '08:00-20:00',
   GA4_ID: null,
 }

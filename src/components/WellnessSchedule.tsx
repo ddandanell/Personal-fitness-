@@ -1,4 +1,3 @@
-import { isOnRequest } from '@/data/offerCopy'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, CalendarDays, Check, Download, Plus, Trash2 } from 'lucide-react'
@@ -72,7 +71,7 @@ export default function WellnessSchedule() {
       <div className="plan-visit-list">
         {visits.map((visit, index) => <fieldset className="plan-visit" key={visit.id}>
           <legend>Visit {index + 1}</legend>
-          <Field label={'Service for visit ' + (index + 1)}><select value={visit.service} onChange={(event) => update(visit.id, { service: event.target.value, participants: event.target.value === 'boxing-fitness' ? 1 : visit.participants })}>{planServices.map((slug) => <option key={slug} value={slug}>{getService(slug)?.title}{isOnRequest(slug) ? ' · On request' : ''}</option>)}</select></Field>
+          <Field label={'Service for visit ' + (index + 1)}><select value={visit.service} onChange={(event) => update(visit.id, { service: event.target.value, participants: event.target.value === 'boxing-fitness' ? 1 : visit.participants })}>{planServices.map((slug) => <option key={slug} value={slug}>{getService(slug)?.title}</option>)}</select></Field>
           <div className="plan-visit-timing">
             <Field label={'Day for visit ' + (index + 1)}><select value={visit.day} onChange={(event) => update(visit.id, { day: event.target.value })}>{weekDays.map((day) => <option key={day}>{day}</option>)}</select></Field>
             <Field label={'Time for visit ' + (index + 1)}><input type="time" value={visit.time} onChange={(event) => update(visit.id, { time: event.target.value })} required /></Field>

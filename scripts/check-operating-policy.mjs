@@ -14,18 +14,13 @@ for (const page of manifest) {
     const paragraph = textOf(match[1])
     assert.ok(!/travel (?:is|of|charge(?: is)?|fee(?: is)?) Rp (?:50|100|150|200)\.000/i.test(paragraph), page.path + ': old guest travel amount')
   }
+  assert.doesNotMatch(html, /\[company legal name\]|Tukad Barito|Denpasar office|Kantor Denpasar|request-status/i, page.path + ': retired public copy')
   if (!page.path.startsWith('/villademo')) {
-    assert.ok(text.includes('[Company legal name]'), page.path + ': requested legal-name placeholder absent')
     assert.ok(/24 (?:hours|jam)/.test(text), page.path + ': 24-hour policy absent')
     assert.ok(text.includes('50%'), page.path + ': deposit absent')
     assert.ok(/10%/.test(text), page.path + ': partner commission absent')
   }
   checked++
-}
-for (const slug of ['boxing-fitness','guided-meditation','mobility-coaching','bodywork-recovery','zumba-dance-fitness']) {
-  const html = await fs.readFile('dist/' + slug + '.html', 'utf8')
-  const main = html.match(/<main\b[\s\S]*?<\/main>/)?.[0] || ''
-  assert.ok(main.includes('request-status'), slug + ': on-request label absent')
 }
 const team = await fs.readFile('dist/team.html','utf8')
 const teamMain = team.match(/<main\b[\s\S]*?<\/main>/)?.[0] || ''
@@ -52,6 +47,11 @@ try {
   assert.equal(sessionQuote(2,yoga.maxGuests,yoga.slug).total,1050000)
   const { publicServices } = await server.ssrLoadModule('/src/data/publicOffer.ts')
   const { programmes } = await server.ssrLoadModule('/src/data/catalog.ts')
+  assert.equal(publicServices.length, 8)
+  for (const service of publicServices) {
+    assert.equal(service.status, 'core', service.slug + ': published service availability')
+    assert.doesNotMatch(service.statusNote, /(?:on|by) request/i)
+  }
   for (const city of ['Bali', 'Jakarta']) {
     for (const service of publicServices) {
       let previous = Infinity

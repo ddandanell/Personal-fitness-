@@ -6,7 +6,7 @@ import StructuredData from '@/components/StructuredData'
 import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
 import { getResource, resources } from '@/data/content'
 import { ArticleBody } from '@/lib/articleMarkup'
-import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { EditorialPhoto, pageImage, responsiveSource } from '@/components/EditorialPhoto'
 import { collectionJsonLd } from '@/lib/schema'
 import { trackWhatsApp } from '@/lib/analytics'
@@ -164,7 +164,7 @@ export function BlogArticle() {
               <li>Price it on <Link to="/pricing">pricing</Link>.</li>
               <li>Message {WHATSAPP_DISPLAY} with city, area and window.</li>
             </ol>
-            <p className="small muted">Office: {COMPANY_ADDRESS}. Email {COMPANY_EMAIL}. Sessions still run at your location.</p>
+            <p className="small muted">Sessions take place at your villa or home. Email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a> to arrange a visit.</p>
           </aside>
         </div>
       </section>
@@ -223,7 +223,6 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
             '@type': 'Organization',
             name: 'PersonalFitness.id',
             logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/brand/personalfitness-mark.png' },
-            address: COMPANY_ADDRESS,
           },
           isPartOf: { '@id': SITE_ORIGIN + '/#website' },
           about: { '@id': SITE_ORIGIN + '/#business' },

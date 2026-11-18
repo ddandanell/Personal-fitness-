@@ -1,4 +1,4 @@
-import { PolicySummary, ServiceRequestBadge } from './PolicyLines'
+import { PolicySummary } from './PolicyLines'
 import { PHOTO_CAPTION, PHOTO_CAPTION_ID } from '@/data/offerCopy'
 import { useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
@@ -85,7 +85,7 @@ const copy = {
       '30-day pilot at 1–2 villas first',
     ],
     spaceTitle: 'Have a space?',
-    space: 'If a villa has a terrace, studio or large living room, we can review it after a space check. Shared or group sessions are quoted on request and are not a standard published service yet.',
+    space: 'If a villa has a terrace, studio or large living room, we can review it after a space check. For a group quote, tell us how many guests will join and how much clear floor space you have.',
     formTitle: 'Talk to us',
     formLead: `No sales meeting. Send the villas, the areas and the week you want. A person replies by email at ${COMPANY_EMAIL} or on WhatsApp.`,
     consent: 'I agree that PersonalFitness.id may contact me on WhatsApp and email about the partner programme.',
@@ -143,7 +143,7 @@ const copy = {
       'Pilot 30 hari di 1–2 villa dulu',
     ],
     spaceTitle: 'Ada ruang bersama?',
-    space: 'Jika villa punya teras, studio, atau ruang tamu besar, kami bisa menilainya setelah cek ruang. Sesi bersama atau grup dikutip atas permintaan dan belum menjadi layanan standar yang kami terbitkan.',
+    space: 'Jika villa punya teras, studio, atau ruang tamu besar, kami bisa menilainya setelah cek ruang. Untuk penawaran harga grup, beri tahu kami jumlah peserta dan luas ruang yang bisa digunakan.',
     formTitle: 'Bicara dengan kami',
     formLead: `Tidak ada rapat penjualan. Kirim villa, area, dan minggu yang Anda inginkan. Orang sungguhan membalas lewat email ${COMPANY_EMAIL} atau WhatsApp.`,
     consent: 'Saya setuju PersonalFitness.id menghubungi saya lewat WhatsApp dan email tentang program partner.',
@@ -359,7 +359,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
             {guestCards.map((card) => (
               <Link to={card.to} className="partner-service-card" key={card.to}>
                 <div>
-                  <h3>{lang === 'id' ? partnerCardId[card.title] || card.title : card.title}</h3><ServiceRequestBadge slug={card.to.slice(1)} lang={lang} />
+                  <h3>{lang === 'id' ? partnerCardId[card.title] || card.title : card.title}</h3>
                   <p>{lang === 'id' ? 'Mulai' : 'From'} {formatIdr(publicServices.find(service => service.slug === card.to.slice(1))!.prices.Bali!)} · {lang === 'id' ? partnerCardId[card.note] || card.note : card.note}</p>
                   <span className="text-link">{lang === 'id' ? 'Buka sesi' : 'Open session'}</span>
                 </div>

@@ -1,12 +1,12 @@
 Villa managers and hotel hosts can book private fitness for guests without turning the reception desk into a clinic or a marketplace. PersonalFitness.id coordinates private strength training, private yoga, mat Pilates, mobility, boxing fitness and guided meditation at properties in published Bali and Jakarta clusters. The commercial pages are [villa and hotel partnerships](/villa-hotel-partners) and [contact](/contact). This article is the investigation layer: what the host sends, what the guest never puts on a public timetable, and how the quote is built.
 
-If you searched how to arrange a personal trainer for villa guests, start with permission and a named session. “Wellness on request” is not a booking. A guest Instagram story is not a briefing.
+If you searched how to arrange a personal trainer for villa guests, start with permission and a named session. Give your guest a choice of sessions, then confirm the service, number of guests and preferred time with the coordinator.
 
 ## What the property is buying
 
 The property is buying a coordinated private hour at a villa, home or other suitable lawful space the guest already has permission to use. Starting prices sit on [pricing](/pricing). City clusters sit on [Bali](/bali) and [Jakarta](/jakarta). The eight steps sit on [how it works](/how-it-works).
 
-The product is the sequence: enquiry, match, quote, payment, confirmation, delivery, aftercare. It is not a public trainer directory in your lobby. It is not a walk-in class at the Denpasar office.
+The product is the sequence: enquiry, match, quote, payment, confirmation, delivery, aftercare. It is not a public trainer directory in your lobby. Agree on the meeting point with your guest before the instructor arrives.
 
 A WhatsApp “we have a guest who wants yoga tomorrow” without an area, window and headcount is not supply.
 

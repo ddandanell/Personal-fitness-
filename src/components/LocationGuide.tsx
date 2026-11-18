@@ -1,4 +1,3 @@
-import { ServiceRequestBadge } from './PolicyLines'
 import { Link } from 'react-router'
 import { SESSION_ANCHOR, type Area, type City, getArea, getService } from '@/data/catalog'
 import editorial from '@/data/location-editorial.json'
@@ -59,7 +58,7 @@ export function LocationGuide({ area }: { area: Area }) {
     <p className="eyebrow">Your local session guide</p>
     <nav className="location-toc" aria-label={`${area.name} guide contents`}><strong>Plan your visit</strong><ul>{blocks.filter((_, i) => [0, 4, 8, 9, 10].includes(i)).map(block => <li key={block.title}><a href={'#location-' + blocks.indexOf(block)}>{block.title}</a></li>)}</ul></nav>
     {blocks.map((block, i) => <section id={'location-' + i} key={block.title}><h2>{block.title}</h2><ArticleBody markdown={block.body} /></section>)}
-    <div className="location-rate-table"><h2>Core session starting prices</h2><p>Published {area.city} 60-minute starting rates. {area.travelQuote ? 'Your local travel and availability require a separate written quote.' : area.travelFee ? `Add ${formatIdr(area.travelFee)} travel per visit.` : 'In-zone travel is included for an accepted address.'}</p><table><thead><tr><th scope="col">Session</th><th scope="col">Starting rate</th><th scope="col">Included people</th></tr></thead><tbody>{publicServices.map(service => <tr key={service.slug}><th scope="row"><Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${area.city.toLowerCase()}/${service.slug}` : `/${service.slug}`}>{service.title}</Link> <ServiceRequestBadge slug={service.slug} /></th><td>{formatIdr(service.prices[area.city]!)}</td><td>{getService(service.slug)?.includedParticipants}</td></tr>)}</tbody></table></div>
+    <div className="location-rate-table"><h2>Core session starting prices</h2><p>Published {area.city} 60-minute starting rates. {area.travelQuote ? 'Your local travel and availability require a separate written quote.' : area.travelFee ? `Add ${formatIdr(area.travelFee)} travel per visit.` : 'In-zone travel is included for an accepted address.'}</p><table><thead><tr><th scope="col">Session</th><th scope="col">Starting rate</th><th scope="col">Included people</th></tr></thead><tbody>{publicServices.map(service => <tr key={service.slug}><th scope="row"><Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${area.city.toLowerCase()}/${service.slug}` : `/${service.slug}`}>{service.title}</Link></th><td>{formatIdr(service.prices[area.city]!)}</td><td>{getService(service.slug)?.includedParticipants}</td></tr>)}</tbody></table></div>
   </article></section>
 }
 

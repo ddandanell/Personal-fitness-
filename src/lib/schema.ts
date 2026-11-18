@@ -126,7 +126,6 @@ export function siteGraph() {
         '@type': 'LocalBusiness',
         '@id': BUSINESS_ID,
         name: 'PersonalFitness.id',
-        legalName: 'PersonalFitness.id',
         url: SITE_ORIGIN,
         logo: LOGO,
         image: {
@@ -141,20 +140,11 @@ export function siteGraph() {
         currenciesAccepted: 'IDR',
         paymentAccepted: 'Payment details in the written quote',
         availableLanguage: ['English', 'Indonesian'],
-        ...(partner.OFFICE_GEO ? { geo: { '@type': 'GeoCoordinates', latitude: partner.OFFICE_GEO.lat, longitude: partner.OFFICE_GEO.lng } } : {}),
         ...(partner.COORDINATION_HOURS ? { openingHoursSpecification: { '@type': 'OpeningHoursSpecification', opens: partner.COORDINATION_HOURS.split('-')[0], closes: partner.COORDINATION_HOURS.split('-')[1] } } : {}),
         ...(([partner.INSTAGRAM_URL, partner.GBP_URL].filter((value): value is string => Boolean(value))).length
           ? { sameAs: [partner.INSTAGRAM_URL, partner.GBP_URL].filter((value): value is string => Boolean(value)) }
           : {}),
         ...(founderReady && partner.FOUNDER ? { founder: { '@type': 'Person', name: partner.FOUNDER.name } } : {}),
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
-          addressLocality: 'Denpasar Selatan',
-          addressRegion: 'Bali',
-          postalCode: '80226',
-          addressCountry: 'ID',
-        },
         contactPoint: [
           {
             '@type': 'ContactPoint',

@@ -22,7 +22,7 @@ Two people sharing the hour should be able to sit in the same room without turni
 
 [Bali guided meditation](/bali/guided-meditation) uses Rp 1.050.000 for 60 minutes, up to two people, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base when the session can extend. Extra people beyond the included pair follow the extra-person fee on the [pricing page](/pricing).
 
-The Denpasar office is an office, not a meditation studio and not a walk-in. You sit at the villa or home you already have permission to use.
+You sit at the villa or home you already have permission to use.
 
 Sunrise captions do not change the rate. We charge duration and travel, not a photograph. Rain needs an indoor fallback. Outdoor-only decks get moved or rescheduled.
 

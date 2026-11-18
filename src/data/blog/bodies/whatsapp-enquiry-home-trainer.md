@@ -38,7 +38,7 @@ Jakarta yoga for two: “Private yoga, Jakarta, South Jakarta Kemang, apartment 
 
 Uluwatu boxing: “Boxing fitness, Bali, Uluwatu, villa, Sunday 08:00–10:00, one person, already boxing. Indoor gym room, high ceiling. Host knows you are coming.”
 
-Ubud mobility: “Mobility coaching on request, Bali, Ubud, house, Tuesday 09:00–11:00, one person, gentle movement rather than injury treatment. Level indoor room. Please confirm the instructor and session quote with travel included.”
+Ubud mobility: “Mobility coaching, Bali, Ubud, house, Tuesday 09:00–11:00, one person, gentle movement rather than injury treatment. Level indoor room. Please confirm the instructor and session quote with travel included.”
 
 Those four messages can be quoted. A message that says “need trainer tomorrow morning somewhere in Bali, cash ok, can you do physio too” cannot.
 

@@ -24,7 +24,7 @@ We will not run kickboxing as a secret extra. We will not put two strangers in a
 
 [Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.250.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
 
-The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a boxing studio and it is not a walk-in. You train at the villa or home you already have permission to use.
+You train at the villa or home you already have permission to use.
 
 Heat changes the work. Midday sun on a west-facing deck is a reason to move inside, not a reason to perform. Water should already be in the room. Training clothes you can squat and punch in are enough.
 

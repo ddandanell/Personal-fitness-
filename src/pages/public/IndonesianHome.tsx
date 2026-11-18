@@ -1,5 +1,4 @@
 import { SESSION_ANCHOR, programmes } from '@/data/catalog'
-import { ServiceRequestBadge } from '@/components/PolicyLines'
 import { serviceNameId } from '@/data/offerCopy'
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link } from 'react-router'
@@ -43,7 +42,7 @@ export default function IndonesianHome() {
         <div className="shell hero-facts">
           <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
           <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>Paket 5 sesi, per sesi.</span></div>
-          <div><strong>Delapan pilihan</strong><span>Latihan kekuatan, yoga, dan Pilates. Mobilitas, boxing, bodywork, dance, dan meditasi atas permintaan.</span></div>
+          <div><strong>Delapan pilihan</strong><span>Latihan kekuatan, yoga, mat Pilates, mobilitas, tinju kebugaran, bodywork, tari kebugaran, dan meditasi terpandu.</span></div>
         </div>
       </section>
 
@@ -56,7 +55,7 @@ export default function IndonesianHome() {
             <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia.</p>
           </div>
           <ul className="check-list large-list">
-            {['Instruktur yang sudah diseleksi, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`, 'Kantor Denpasar adalah administrasi, bukan studio'].map((item) => (
+            {['Instruktur yang sudah diseleksi, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>
@@ -65,11 +64,11 @@ export default function IndonesianHome() {
 
       <section className="section section-light" lang="id">
         <div className="shell">
-          <SectionTitle eyebrow="Sesi" title="Sesi privat di villa, rumah, atau hotel Anda." copy="Latihan kekuatan, yoga, dan Pilates, serta mobilitas, boxing, bodywork, dance fitness, dan meditasi atas permintaan. Yoga dan meditasi termasuk dua orang jika lantai muat. Orang kedua menambah Rp 250.000 per sesi jika tarif untuk satu orang. Boxing hanya untuk satu orang." action={<TextLink to="/services">Semua sesi</TextLink>} />
+          <SectionTitle eyebrow="Sesi" title="Sesi privat di villa, rumah, atau hotel Anda." copy="Pilih latihan kekuatan, yoga, mat Pilates, mobilitas, tinju kebugaran, bodywork, tari kebugaran, atau meditasi terpandu. Yoga dan meditasi termasuk dua orang jika lantai muat. Orang kedua menambah Rp 250.000 per sesi jika tarif untuk satu orang. Boxing hanya untuk satu orang." action={<TextLink to="/services">Semua sesi</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
-                <span className="eyebrow">{serviceNameId(service.slug, service.title)}</span><ServiceRequestBadge slug={service.slug} lang="id" />
+                <span className="eyebrow">{serviceNameId(service.slug, service.title)}</span>
                 <h3>Bali {formatIdr(service.prices.Bali!)}</h3>
                 <p>Jakarta {formatIdr(service.prices.Jakarta!)} · {service.durationMin} menit</p>
                 <span className="text-link">Buka {serviceNameId(service.slug, service.title).toLowerCase()}</span>
@@ -85,7 +84,7 @@ export default function IndonesianHome() {
             <Eyebrow>Lokasi</Eyebrow>
             <h2>Klaster yang kami terbitkan, bukan seluruh pulau.</h2>
             <p className="large-copy">Perjalanan Bali termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Jakarta dalam zona: Jakarta Selatan dan Jakarta Pusat, termasuk Kemang, Senopati, Menteng, dan Thamrin.</p>
-            <p>Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu. Kantor di Jl. Tukad Barito Timur III No.16, Panjer, adalah administrasi, bukan studio.</p>
+            <p>Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Utara, Barat, Timur Jakarta, dan PIK dikutip setelah cek waktu.</p>
             <div className="cluster">
               <Link to="/bali" className="button button-dark">Bali<MapPin size={16} /></Link>
               <Link to="/jakarta" className="button button-outline">Jakarta<MapPin size={16} /></Link>

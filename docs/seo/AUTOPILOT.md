@@ -36,13 +36,13 @@ Daily runs must keep this true without inventing founder values:
 - Titles stay ≤60 characters using the branded-title rule. Do not invent Google Business Profile, Instagram, geo coordinates or NIB.
 - Keep every original sitemap URL returning 200. Run `npm run check:urls` against the preview after publication.
 
-Founder still to fill in `src/config/partner.ts`: COMMISSION_PCT, COMMISSION_BASE, COMMISSION_PAYOUT_DAY, GROUP_YOGA_RATE_BALI, GROUP_YOGA_MAX_PEOPLE, DEMO_POLICY, LIABILITY_TEXT, FOUNDER, COACHES, INSTAGRAM_URL, GBP_URL, OFFICE_GEO, COORDINATION_HOURS, GA4_ID (or Vercel `VITE_GA_MEASUREMENT_ID`). Apex 308 is a Vercel Domains setting if the dashboard still uses 307.
+Founder still to fill in `src/config/partner.ts`: COMMISSION_PCT, COMMISSION_BASE, COMMISSION_PAYOUT_DAY, GROUP_YOGA_RATE_BALI, GROUP_YOGA_MAX_PEOPLE, DEMO_POLICY, LIABILITY_TEXT, FOUNDER, COACHES, INSTAGRAM_URL, GBP_URL, COORDINATION_HOURS, GA4_ID (or Vercel `VITE_GA_MEASUREMENT_ID`). Apex 308 is a Vercel Domains setting if the dashboard still uses 307.
 
 ## Standing conversion and trust work
 
 Each daily run should also take one lock-safe item from this list, in order, without inventing reviews, credentials, Instagram, NIB, clinical results or a Google Business Profile that does not exist:
 
-1. Trust that is true: company-managed matching, named professional on the quote, coordinator, backup, WhatsApp, email, Denpasar office-as-office. No fake reviews or AggregateRating.
+1. Trust that is true: company-managed matching, named professional on the quote, coordinator, backup, WhatsApp and email. No fake reviews or AggregateRating.
 2. Explain the published rate versus cheaper freelance Bali hours. Keep the no-free-intro fact.
 3. Reduce defensive repetition. Keep one confirmation line and one meditation-is-not-therapy line on the service page.
 4. WhatsApp click events (`whatsapp_click`) plus GA4 when `VITE_GA_MEASUREMENT_ID` is set in Vercel. Missing GA4 is unavailable evidence, not zero traffic.
@@ -67,4 +67,4 @@ A word count is the owner's content requirement, not a Google ranking threshold.
 
 ## Current owner policy override 18 November 2026
 
-Use src/data/offerCopy.ts for all current booking, travel, reply and photo-caption rules. The explicit owner brief requires the illustrative photo caption and a [Company legal name] placeholder beside the registered address. Published standard sessions are strength training, yoga and mat Pilates. The other five public services remain live and labelled On request. Boxing is one person, with no second-guest option. Bali travel is included in all five published areas. Never restore old fees, 36-hour rules, or unverified vetting claims from older notes. Configured partner commission is 10% of what the guest paid, with monthly bank-transfer settlement and a statement. Refresh the designed partner PDF and matching PNG together after changes.
+Use src/data/offerCopy.ts for all current booking, travel, reply and photo-caption rules. Include the illustrative photo caption. Publish WhatsApp and email as contact details and omit office locations and legal-name placeholders. All eight listed services are available to book. The quote confirms the instructor, time and location. Boxing is one person, with no second-guest option. Bali travel is included in all five published areas. Never restore old fees, 36-hour rules, or unverified vetting claims from older notes. Configured partner commission is 10% of what the guest paid, with monthly bank-transfer settlement and a statement. Refresh the designed partner PDF and matching PNG together after changes.

@@ -18,7 +18,7 @@ Indoor tile or wood with a mat beats a damp outdoor deck after rain. Heat still 
 
 Permission matters. If you are a guest, the host or villa manager should know a professional is coming. Family compounds and guesthouse suites need owner permission. Public temples, rice-field paths and hotel decks without written permission are not default venues.
 
-The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not an Ubud studio. You train at the house you already have permission to use.
+You train at the house you already have permission to use.
 
 ## How the quote is built
 

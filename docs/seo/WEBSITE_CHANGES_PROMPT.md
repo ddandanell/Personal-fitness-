@@ -14,14 +14,14 @@ PersonalFitness.id is a company-managed private fitness service. A vetted coach 
 | Mobility & stretching | Rp 850.000 | Rp 900.000 | non-clinical; extra person as PT |
 | Boxing fitness | Rp 1.000.000 | Rp 1.050.000 | pads only, 1 person |
 | Guided meditation | Rp 800.000 | Rp 850.000 | up to 2 people |
-90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +an outer-area travel fee confirmed in the written quote. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id, office Jl. Tukad Barito Timur III No.16, Panjer, Denpasar (office, not a studio).
+90 minutes = +45%. Packs of 6/9/12 sessions = 5/8/12% off session charges. Bali: Canggu + Seminyak included; Ubud, Sanur +Rp 150.000; Uluwatu +an outer-area travel fee confirmed in the written quote. Jakarta: South + Central included; North/West/East by quote. Contact: WhatsApp +62 811-3803-488 (wa.me/628113803488), hello@personalfitness.id.
 
 ## Growth strategy these changes serve
 The main growth channel is now B2B: villa management companies, villa rental agencies, boutique resorts, retreat hosts and concierge companies (Bali first, Jakarta where relevant). Pitch: "Put our wellness menu in every villa you manage. Guests book on WhatsApp, a vetted instructor comes to the villa, the guest pays us, you earn [COMMISSION_PCT]% of every session." Outreach is email first, then WhatsApp. There are NO sales meetings and NO calendar booking: villa managers must be able to understand the offer, download the menu, read the terms and join over WhatsApp/the form without a call. Indonesian villa managers prefer WhatsApp and simple, plain language; many prefer Bahasa Indonesia. The site must therefore: (1) explain the partner programme in plain words with the commission stated, (2) give a downloadable partner menu/deck, (3) give a one-tap WhatsApp + simple join form, (4) show real people (trust), (5) track every WhatsApp click and partner action, (6) fix the SEO issues found in the audit.
 
 ## Hard rules
 1. Do NOT break existing URLs. All 90 URLs currently in sitemap-pages.xml and sitemap-posts.xml must still return 200 with the same canonical (list them from the sitemap files in the repo and write a small script `scripts/check-urls.mjs` that requests each one against a preview URL). Only add URLs. If you merge a page, add a 308 redirect in vercel.json, remove it from the sitemap and update internal links.
-2. Never render placeholder values. Put founder-supplied values in one config file `src/config/partner.ts` (or the repo's equivalent): COMMISSION_PCT, COMMISSION_BASE, COMMISSION_PAYOUT_DAY, GROUP_YOGA_RATE_BALI, GROUP_YOGA_MAX_PEOPLE, DEMO_POLICY, LIABILITY_TEXT, FOUNDER {name, photo, bio, whatsapp}, COACHES[], INSTAGRAM_URL, OFFICE_GEO, COORDINATION_HOURS, GA4_ID. If a value is null, the dependent block does not render (and the commission sentence falls back to "a commission on every session").
+2. Never render placeholder values. Put founder-supplied values in one config file `src/config/partner.ts` (or the repo's equivalent): COMMISSION_PCT, COMMISSION_BASE, COMMISSION_PAYOUT_DAY, GROUP_YOGA_RATE_BALI, GROUP_YOGA_MAX_PEOPLE, DEMO_POLICY, LIABILITY_TEXT, FOUNDER {name, photo, bio, whatsapp}, COACHES[], INSTAGRAM_URL, COORDINATION_HOURS, GA4_ID. If a value is null, the dependent block does not render (and the commission sentence falls back to "a commission on every session").
 3. Never invent reviews, ratings, clients, logos, certifications, statistics or photos. No `aggregateRating` in JSON-LD.
 4. Keep prices identical everywhere (pricing, service pages, estimator, partner page, PDF, llms.txt, JSON-LD). Add a unit test or script that greps built HTML for the six Bali prices.
 5. Plain, warm English. No defensive/legal tone in marketing copy (see P10). Legal detail lives in /terms, /refunds-rescheduling and /partner-terms.
@@ -203,7 +203,7 @@ Contact variants `/contact?city=…`: keep canonical to /contact; add `<meta nam
 - Images: add `srcset` sizes (480/800/1200) and AVIF/WebP; current images 100–237 KB each.
 
 ## P13. Schema & OG
-- LocalBusiness (`#business`): add `geo` ([OFFICE_LAT,LNG]), `openingHoursSpecification` ([COORDINATION_HOURS]), `sameAs` ([INSTAGRAM_URL], Google Business Profile URL when it exists), `founder` (Person: [FOUNDER_NAME]), `areaServed` unchanged. No `aggregateRating` until real reviews.
+- LocalBusiness (`#business`): add `openingHoursSpecification` ([COORDINATION_HOURS]), `sameAs` ([INSTAGRAM_URL], Google Business Profile URL when it exists), `founder` (Person: [FOUNDER_NAME]), `areaServed` unchanged. No `aggregateRating` until real reviews.
 - Partner page: add `Service` with `serviceType: "Villa wellness partner programme"`, `provider` → #business, `areaServed` Bali.
 - OG images: give unique `og:image` to /services, /resources, /contact, /faq, /privacy, /terms, /refunds-rescheduling, /safety, /editorial-policy (all currently `villa-yoga-partners.webp`), and a dedicated one for the partner page. 1200×630.
 

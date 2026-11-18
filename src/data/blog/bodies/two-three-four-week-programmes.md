@@ -51,7 +51,7 @@ If you cannot finish that list, buy one session from the [homepage](/) path and 
 
 A block is usually one service. Yoga on Tuesday and training on Thursday is two supplies. We can quote it. We will not hide the fact that two professionals and two rates are in play. A “wellness week” bundle that mixes chef, stretch, and undefined healing is not a PersonalFitness.id SKU.
 
-Swimming, boxing and meditation are by request. They can sit beside a training block. They are not automatically inside it.
+You can book boxing fitness or guided meditation alongside a strength programme. Ask the coordinator to list each session and its price on the quote.
 
 ## What a programme will not fix
 

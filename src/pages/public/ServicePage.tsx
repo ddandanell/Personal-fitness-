@@ -1,4 +1,4 @@
-import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
+import { PolicySummary } from '@/components/PolicyLines'
 import { ArrowUpRight, Check } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { Eyebrow, PageIntro, ParallaxImage, TextLink } from '@/components/Primitives'
@@ -34,7 +34,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
       <StructuredData data={serviceJsonLd(service, seo?.title, seo?.description)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow="Private session" title={seo?.title || service.title} description={seo?.description || service.description}>
-        <ServiceRequestBadge slug={service.slug} /><PricePills slug={service.slug} />
+        <PricePills slug={service.slug} />
         <div className="cluster" style={{ marginTop: 22 }}>
           <Link to={request} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
           <Link to="/pricing" className="button button-outline">See session prices</Link>

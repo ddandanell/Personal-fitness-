@@ -16,7 +16,7 @@ Clifftop decks are windy, bright and often stone. Indoor tile or wood is the def
 
 Permission matters. If you are a guest, the host or villa manager should know a professional is coming. Hotel suites need written venue permission. Public clifftop paths and beach clubs are not default venues. Swimming stays held even if the villa has a pool.
 
-The Denpasar office is an office, not a Bukit studio. You train at the villa you already have permission to use.
+You train at the villa you already have permission to use.
 
 Traffic is the second product. A 07:00 request may need the professional on the road much earlier. That is why we ask for a two-hour window, not a single minute. We will not confirm a window we cannot honour.
 

@@ -18,7 +18,7 @@ A living-room rectangle is enough. A building gym is optional and only useful if
 
 Recurring programmes need a standing access note so the professional is not renegotiating the desk every Tuesday. Read [programmes](/programmes) after one paid visit has proved the building.
 
-The Denpasar office is irrelevant to this hour. Sessions run at your Jakarta home.
+Sessions run at your Jakarta home.
 
 ## How the quote is built
 

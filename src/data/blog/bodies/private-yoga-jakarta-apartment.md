@@ -26,7 +26,7 @@ Put the building name, tower, parking instruction and security process in the fi
 
 Recurring programmes need a standing access note so the professional is not renegotiating the desk every Tuesday. Read [programmes](/programmes) only after one paid visit has proved the building.
 
-The Denpasar office is irrelevant to this hour. Sessions run at your Jakarta home, not as walk-in classes in Bali.
+Your instructor brings the session to your Jakarta home.
 
 ## How the quote is built
 

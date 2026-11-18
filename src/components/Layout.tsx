@@ -1,4 +1,4 @@
-import { PolicySummary, ServiceRequestBadge } from './PolicyLines'
+import { PolicySummary } from './PolicyLines'
 import { publicServices } from '@/data/publicOffer'
 import { serviceNameId, TRAVEL_DISCLAIMER, TRAVEL_DISCLAIMER_ID } from '@/data/offerCopy'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
@@ -8,7 +8,7 @@ import { hreflangFor, pageMetadata } from '@/lib/metadata'
 import { installAnalytics, trackEvent, trackPageView, trackWhatsApp } from '@/lib/analytics'
 import { partner } from '@/config/partner'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
-import { COMPANY_ADDRESS, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL, COMPANY_LEGAL_NAME, SITE_ORIGIN } from '@/data/company'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF, SITE_ORIGIN } from '@/data/company'
 import { capturePartnerRef, partnerRef, WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import StructuredData from './StructuredData'
 import { Breadcrumbs, RelatedLinks } from './SeoCluster'
@@ -137,7 +137,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
           <Link to="/" className="brand" aria-label="PersonalFitness.id home"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {navigation.map(([to, label]) => (
-              <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}<ServiceRequestBadge slug={to.slice(1)} lang={isId ? 'id' : 'en'} /></NavLink>
+              <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-link nav-active' : 'nav-link'}>{label}</NavLink>
             ))}
           </nav>
           <div className="header-actions">
@@ -161,7 +161,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
               <div className="mobile-nav-group" key={group.heading}>
                 <p className="footer-heading">{group.heading}</p>
                 {group.links.map(([to, label]) => (
-                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={closeMenu}>{label}<ServiceRequestBadge slug={to.slice(1)} lang={isId ? 'id' : 'en'} /></NavLink>
+                  <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'nav-active' : undefined} onClick={closeMenu}>{label}</NavLink>
                 ))}
               </div>
             ))}
@@ -183,14 +183,13 @@ export default function Layout({ children }: { children?: ReactNode }) {
           <div className="footer-brand">
             <Link to="/" className="brand brand-light"><img src="/brand/personalfitness-mark.png" width="38" height="38" decoding="async" alt="" /><span>PersonalFitness<b>.id</b><small>YOUR WELLNESS. YOUR PLACE.</small></span></Link>
             <p>{isId ? 'Sesi privat di villa, rumah, atau hotel Anda di Bali dan Jakarta. Instruktur disebutkan pada kutipan tertulis.' : 'Private sessions at your villa, home or hotel in Bali and Jakarta. Your instructor is named on the written quote.'}</p>
-            <p className="footer-address">{COMPANY_LEGAL_NAME}<br /><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_ADDRESS}</a></p>
-            <p className="footer-address"><a href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'footer' })}>{COMPANY_EMAIL}</a></p>
-            {partner.INSTAGRAM_URL && <p className="footer-address"><a href={partner.INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a></p>}
-            <p className="footer-address"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
+            <p className="footer-detail"><a href={COMPANY_EMAIL_HREF} onClick={() => trackEvent('email_click', { location: 'footer' })}>{COMPANY_EMAIL}</a></p>
+            {partner.INSTAGRAM_URL && <p className="footer-detail"><a href={partner.INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a></p>}
+            <p className="footer-detail"><Link to="/id">Bahasa Indonesia</Link> · <Link to="/">English</Link></p>
             <Link to="/contact" className="text-link">{isId ? 'Cek ketersediaan' : 'Check availability'}<ArrowUpRight size={15} /></Link>
           </div>
           <div><p className="footer-heading">{isId ? 'Sesi' : 'Sessions'}</p>
-            {publicServices.map(service => <Link to={'/' + service.slug} key={service.slug}>{isId ? serviceNameId(service.slug, service.title) : service.title} <ServiceRequestBadge slug={service.slug} lang={isId ? 'id' : 'en'} /></Link>)}
+            {publicServices.map(service => <Link to={'/' + service.slug} key={service.slug}>{isId ? serviceNameId(service.slug, service.title) : service.title}</Link>)}
             <Link to="/services">{isId ? 'Semua sesi' : 'All sessions'}</Link><Link to="/programmes">{isId ? 'Paket' : 'Programmes'}</Link><Link to="/pricing">{isId ? 'Harga' : 'Prices'}</Link>
           </div>
           <div><p className="footer-heading">{isId ? 'Lokasi' : 'Places'}</p>

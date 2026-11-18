@@ -1,5 +1,5 @@
 import { SESSION_ANCHOR, programmes } from '@/data/catalog'
-import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
+import { PolicySummary } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
@@ -58,13 +58,13 @@ export default function Home() {
 
       <section className="section">
         <div className="shell">
-          <SectionTitle eyebrow="Sessions" title="Private sessions at your villa, home or hotel." copy="Strength training, yoga and Pilates, plus bodywork and recovery, dance fitness, mobility, boxing and meditation on request. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair. Boxing is for one guest." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <SectionTitle eyebrow="Sessions" title="Private sessions at your villa, home or hotel." copy="Choose strength training, yoga, mat Pilates, bodywork and recovery, dance fitness, mobility coaching, boxing fitness or guided meditation. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair. Boxing is for one guest." action={<TextLink to="/pricing">See session prices</TextLink>} />
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
                 <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div><p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p>
                 <span className="service-index">0{index + 1}</span>
-                <h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
+                <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
                 <span className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></span>
               </Link>
@@ -82,7 +82,7 @@ export default function Home() {
             <p>The instructor is named on the written quote. A backup is named where available. Read <TextLink to="/professional-standards">how we match instructors</TextLink> or <TextLink to="/id">Bahasa Indonesia</TextLink>.</p>
           </div>
           <ul className="check-list large-list">
-            {['An instructor named on the written quote', 'A backup named where available', 'You get the price in writing before you pay', `WhatsApp +62 811-3803-488 and ${COMPANY_EMAIL}`, 'The Denpasar office is administration, not a walk-in studio'].map((item) => (
+            {['An instructor named on the written quote', 'A backup named where available', 'You get the price in writing before you pay', `WhatsApp +62 811-3803-488 and ${COMPANY_EMAIL}`].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>

@@ -30,7 +30,7 @@ Heat changes the work. Midday sun on a west-facing deck is a reason to move insi
 
 The [pricing page](/pricing) uses the same blocks operations uses. Bali mobility starts at Rp 1.050.000 for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend.
 
-The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a stretch studio and it is not a walk-in. You train at the villa or home you already have permission to use.
+You train at the villa or home you already have permission to use.
 
 If the villa is in Canggu, the commercial destination is still [Bali private strength training](/bali/personal-training) or [mobility coaching](/mobility-coaching), not an island-wide promise. Read [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates) if the access question is the villa, not the session type.
 

@@ -1,4 +1,4 @@
-import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
+import { PolicySummary } from '@/components/PolicyLines'
 import { TRAVEL_DISCLAIMER, TRAVEL_DISCLAIMER_ID } from '@/data/offerCopy'
 import { publicServices } from '@/data/publicOffer'
 import { useMemo } from 'react'
@@ -55,7 +55,7 @@ export default function PartnerMenu() {
       <p className="large-copy">{lang === 'id' ? 'Instruktur untuk sesi Anda disebutkan pada kutipan tertulis.' : 'Instructors come to your villa.'}</p>
       <ul className="menu-rates">
         {lines.map(([title, note]) => (
-          <li key={String(title)}><strong>{lang === 'id' ? partnerCardId[String(title)] || title : title}</strong><ServiceRequestBadge slug={menuSlugs[String(title)]} lang={lang} /><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(publicServices.find(service => service.slug === menuSlugs[title])!.prices.Bali!)} · {lang === 'id' ? partnerCardId[String(note)] || note : note}</span></li>
+          <li key={String(title)}><strong>{lang === 'id' ? partnerCardId[String(title)] || title : title}</strong><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(publicServices.find(service => service.slug === menuSlugs[title])!.prices.Bali!)} · {lang === 'id' ? partnerCardId[String(note)] || note : note}</span></li>
         ))}
       </ul>
       {partner.GROUP_YOGA_RATE_BALI && partner.GROUP_YOGA_MAX_PEOPLE && (

@@ -180,20 +180,19 @@ text(first, 'SERVICE', M + 11, 370, 7.3, bold, C.forest)
 text(first, 'STARTING RATE', 273, 370, 7.3, bold, C.forest)
 text(first, 'GUESTS', 385, 370, 7.3, bold, C.forest)
 const rows = [
-  ['Private strength training', menuPrices['personal-training'], '1 guest; +Rp 250.000 for 2', false],
-  ['Private yoga', menuPrices['private-yoga'], 'Up to 2 guests', false],
-  ['Mat Pilates', menuPrices['mat-pilates'], '1 guest; +Rp 250.000 for 2', false],
-  ['Mobility coaching', menuPrices['mobility-coaching'], 'Individual quote', true],
-  ['Boxing fitness', menuPrices['boxing-fitness'], '1 guest only', true],
-  ['Guided meditation', menuPrices['guided-meditation'], 'Up to 2 guests', true],
-  ['Bodywork & recovery', menuPrices['bodywork-recovery'], 'Individual quote', true],
-  ['Zumba & dance fitness', menuPrices['zumba-dance-fitness'], '1 guest; +Rp 250.000 for 2', true],
+  ['Private strength training', menuPrices['personal-training'], '1 guest; +Rp 250.000 for 2'],
+  ['Private yoga', menuPrices['private-yoga'], 'Up to 2 guests'],
+  ['Mat Pilates', menuPrices['mat-pilates'], '1 guest; +Rp 250.000 for 2'],
+  ['Mobility coaching', menuPrices['mobility-coaching'], '1 guest; +Rp 250.000 for 2'],
+  ['Boxing fitness', menuPrices['boxing-fitness'], '1 guest only'],
+  ['Guided meditation', menuPrices['guided-meditation'], 'Up to 2 guests'],
+  ['Bodywork & recovery', menuPrices['bodywork-recovery'], '1 guest; +Rp 250.000 for 2'],
+  ['Zumba & dance fitness', menuPrices['zumba-dance-fitness'], '1 guest; +Rp 250.000 for 2'],
 ]
-rows.forEach(([name, rate, guests, onRequest], index) => {
+rows.forEach(([name, rate, guests], index) => {
   const y = 334 - index * 28
   if (index % 2 === 0) rect(first, M, y - 5, W, 28, C.white)
-  text(first, name, M + 11, onRequest ? y + 9 : y + 4, 9.1, bold)
-  if (onRequest) text(first, 'ON REQUEST', M + 11, y - 1, 6.5, bold, C.muted)
+  text(first, name, M + 11, y + 4, 9.1, bold)
   text(first, rate, 273, y + 4, 9.1, bold, C.forest)
   text(first, guests, 385, y + 4, 7.5)
   line(first, M, y - 5, PW - M)
@@ -256,8 +255,6 @@ link(second, 'WhatsApp +62 811-3803-488', 'https://wa.me/628113803488', M + 13, 
 link(second, 'hello@personalfitness.id', 'mailto:hello@personalfitness.id', 334, 113, 9)
 text(second, 'Replies 08:00-20:00 Bali time', M + 13, 100, 8.1)
 link(second, 'personalfitness.id/partner-terms', 'https://www.personalfitness.id/partner-terms', 334, 100, 7.7)
-text(second, '[Company legal name] | Denpasar coordination office', M, 69, 7.3, bold, C.muted)
-wrap(second, 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226', M, 57, W, 7.1, 10, regular, C.muted)
 await fs.writeFile(pdfPath, await doc.save())
 
 function pngText(buffer, key) {

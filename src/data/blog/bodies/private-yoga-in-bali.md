@@ -4,7 +4,7 @@ The commercial page is [private yoga in Bali](/bali/private-yoga). The [homepage
 
 ## One person, two people, or a group
 
-One person gets the whole cue stream. Two people share it. The published Bali private yoga rate is Rp 1.050.000 for 60 minutes, up to two people, in-zone. A third person needs a separate group request and a space check. Shared or group sessions are quoted on request and are not a standard published service yet.
+One person gets the whole cue stream. Two people share it. The published Bali private yoga rate is Rp 1.050.000 for 60 minutes, up to two people, in-zone. A third person needs a separate group request and a space check. Tell the coordinator how many people will join and whether everyone has room to practise side by side.
 
 Villa groups above that need a space check. Mixed levels are possible. Two private classes in one hour are not. If one of you is new and the other is not, say so. The session can still run. The cues change. What we will not do is pretend a six-person terrace is a private class at a pair price.
 

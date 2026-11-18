@@ -1,4 +1,3 @@
-import { ServiceRequestBadge } from './PolicyLines'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router'
 import { type ReactNode } from 'react'
@@ -44,7 +43,7 @@ export function PricePills({ slug }: { slug: string }) {
   const service = services.find((item) => item.slug === slug)
   if (!service) return null
   return (
-    <div className="price-pills"><ServiceRequestBadge slug={slug} />
+    <div className="price-pills">
       {(['Bali', 'Jakarta'] as City[]).map((city) => {
         const price = service.prices[city]
         return (

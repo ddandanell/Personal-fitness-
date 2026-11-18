@@ -16,7 +16,7 @@ You need a rectangle for one or two mats plus a walkway. Indoor tile or wood is 
 
 If you are a guest, the host should know a teacher is coming. Building desks in Jakarta need a visitor process on the quote. Public sand is not a default beginner venue.
 
-The Denpasar office is not a beginner studio you walk into. You practise at the home you already have permission to use.
+You practise at the home you already have permission to use.
 
 ## How the quote is built
 

@@ -1,6 +1,6 @@
 import { programmes, packSessionRate, SESSION_ANCHOR } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
-import { isOnRequest, RESCHEDULE_NOTE } from '@/data/offerCopy'
+import { RESCHEDULE_NOTE } from '@/data/offerCopy'
 /** Villa Sora guest demonstration. Session requests remain in this tab.
  * Rates and guest limits preserve the existing demo offer.
  * New asset prompts and provenance: docs/villa-demo-image-prompts.md.
@@ -50,7 +50,6 @@ export type Service = {
   featured: boolean
   basePrice?: number
   includedGuests?: number
-  onRequest?: boolean
   sentence: string
   duration: string
   minutes: number
@@ -227,7 +226,6 @@ for (const service of services) {
   if (!live) continue
   service.basePrice = live.prices.Bali ?? SINGLE_SESSION
   service.includedGuests = live.includedParticipants
-  service.onRequest = isOnRequest(live.slug)
   service.maxGuests = service.slug === 'boxing' || service.slug === 'bodywork' ? 1 : 2
   service.participants = service.maxGuests === 1 ? '1 guest' : '1 or 2 guests'
   service.priceBasis = rp(service.basePrice) + (service.includedGuests === 2 ? ' for up to two guests.' : service.maxGuests === 1 ? ' for one guest.' : ' for one guest. A second guest adds Rp 250.000.')

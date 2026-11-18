@@ -61,7 +61,7 @@ Example A. Two people, 60 minutes, Seminyak indoor. Planning estimate: Rp 1.050.
 
 Example B. Two people, 60 minutes, Ubud. The published yoga base is Rp 1.050.000, including both guests and travel. Four accepted single visits at that rate total Rp 4.200.000, with no Ubud travel charge. If a suitable pack is proposed, the quote states its eligible session price and dates.
 
-Example C. Four people, 60 minutes, Canggu. This is a group request rather than the published private pair offer. Ask for a space check and a written group quote. Shared or group sessions are quoted on request and are not a standard published service yet.
+Example C. Four people, 60 minutes, Canggu. This is a group request rather than the published private pair offer. Ask for a space check and a written group quote. Tell the coordinator how many people will join and whether everyone has room to practise side by side.
 
 These examples are the estimator’s logic. They are not a live diary. Supply, rain fallback and permission can still change the written quote. That is the point of the written quote.
 

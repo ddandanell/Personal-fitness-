@@ -4,10 +4,3 @@ export const SITE_ORIGIN = 'https://www.personalfitness.id'
 /** The only public email address. Visible text, mailto links and form delivery use this value. */
 export const COMPANY_EMAIL = 'hello@personalfitness.id'
 export const COMPANY_EMAIL_HREF = `mailto:${COMPANY_EMAIL}`
-
-export const COMPANY_ADDRESS = 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226'
-
-export const COMPANY_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY_ADDRESS)}`
-
-/** Legal company name is pending owner confirmation; the placeholder is requested explicitly. */
-export const COMPANY_LEGAL_NAME = '[Company legal name]'

@@ -8,7 +8,7 @@
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -321,7 +321,7 @@
     "includedParticipants": 1,
     "maxParticipants": 4,
     "status": "core",
-    "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -632,7 +632,7 @@
     "includedParticipants": 2,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "Published core rate; exact dates and professional confirmed by quote.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -930,8 +930,8 @@
     "durationMin": 60,
     "includedParticipants": 1,
     "maxParticipants": 2,
-    "status": "request",
-    "statusNote": "On request. Subject to instructor availability and location confirmation.",
+    "status": "core",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -1243,7 +1243,7 @@
     "includedParticipants": 1,
     "maxParticipants": 1,
     "status": "core",
-    "statusNote": "On request. Subject to instructor availability and location confirmation.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -2527,7 +2527,7 @@
     "includedParticipants": 2,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "On request. Subject to instructor availability and location confirmation.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "An agreed service format and practical preparation notes",
       "Professional and venue suitability checked before confirmation",
@@ -5201,7 +5201,7 @@
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "On request. Subject to instructor availability and location confirmation.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "A 60-minute private session at the villa or home",
       "An instructor named on the written quote",
@@ -5290,7 +5290,7 @@
     "includedParticipants": 1,
     "maxParticipants": 2,
     "status": "core",
-    "statusNote": "On request. Subject to instructor availability and location confirmation.",
+    "statusNote": "The written quote confirms your instructor, time and location.",
     "includes": [
       "A 60-minute private session at the villa or home",
       "An instructor named on the written quote",

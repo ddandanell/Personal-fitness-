@@ -1,4 +1,4 @@
-import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
+import { PolicySummary } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, Plus, ShieldCheck } from 'lucide-react'
 import { Link, useParams } from 'react-router'
@@ -12,7 +12,7 @@ import { SESSION_ANCHOR, programmes, packSessionRate, areas, cancellationRules, 
 import { CORE_SERVICE_SLUGS, publicServices, sessionPhoto } from '@/data/publicOffer'
 
 const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
-import { COMPANY_ADDRESS, COMPANY_LEGAL_NAME, COMPANY_EMAIL, COMPANY_EMAIL_HREF, COMPANY_MAPS_URL } from '@/data/company'
+import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { faqs, getResource, resources } from '@/data/content'
 import StructuredData from '@/components/StructuredData'
 import { collectionJsonLd, contactPageJsonLd, faqJsonLd } from '@/lib/schema'
@@ -285,7 +285,7 @@ export function ServicesHub() {
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>
                 <div className="service-card-image"><img src={sessionPhoto(service.slug, service.image)} srcSet={responsiveSource(sessionPhoto(service.slug, service.image))} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="870" loading="lazy" decoding="async" /></div><p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p>
                 <span className="service-index">0{index + 1}</span>
-                <h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
+                <h3>{service.title}</h3>
                 <p>Starting price · Bali {formatIdr(service.prices.Bali!)} · Jakarta {formatIdr(service.prices.Jakarta!)}</p>
                 <span className="text-link">Open {service.title.toLowerCase()}<ArrowUpRight size={15} /></span>
               </Link>
@@ -353,7 +353,7 @@ export function PricingPage() {
                   <img src={ratePhotos[service.slug] || service.image} srcSet={responsiveSource(ratePhotos[service.slug] || service.image)} sizes="(max-width: 700px) 90vw, 30vw" alt={service.imageAlt} width="800" height="1000" loading="lazy" decoding="async" />
                 </div>
                 <div className="pricing-rate-copy">
-                  <p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p><h3>{service.title}</h3><ServiceRequestBadge slug={service.slug} />
+                  <p className="photo-policy-caption">Photos are illustrative. The professional for your hour is named on the quote.</p><h3>{service.title}</h3>
                   <p>{service.durationMin} minutes · up to {service.includedParticipants === 1 ? '1 person included' : `${service.includedParticipants} people included`}</p>
                   <div className="pricing-rate-cities">
                     <div>
@@ -499,7 +499,7 @@ export function PricingPage() {
                 <table>
                   <thead><tr><th scope="col">Service</th>{programmes.map(pack => <th key={pack.slug} scope="col">{pack.sessions === 1 ? 'Single' : pack.sessions + '-pack'}</th>)}</tr></thead>
                   <tbody>{orderedServices.map(service => <tr key={service.slug}>
-                    <th scope="row">{service.title}<ServiceRequestBadge slug={service.slug} /></th>
+                    <th scope="row">{service.title}</th>
                     {programmes.map(pack => <td key={pack.slug}>{service.prices[city] == null ? 'By quote' : formatIdr(packSessionRate(service.prices[city], pack.pricePercent))}</td>)}
                   </tr>)}</tbody>
                 </table>
@@ -563,23 +563,15 @@ export function ContactPage() {
       </PageIntro>
       <section className="section-compact">
         <div className="shell">
-          <div className="office-card">
-            <div>
-              <p className="eyebrow">Office</p>
-              <h2>Denpasar office, not a walk-in studio.</h2>
-              <p>This is our registered office and coordination address. Sessions run at your villa or home in the published Bali and Jakarta clusters, not as drop-in classes at this address.</p>
-              <address className="office-lines">
-                <a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_LEGAL_NAME}<br />{COMPANY_ADDRESS}</a>
-              </address>
-            </div>
+          <div className="contact-channels">
             <div>
               <p className="eyebrow">WhatsApp</p>
-              <p className="office-phone">{WHATSAPP_DISPLAY}</p>
+              <p className="contact-channel-value">{WHATSAPP_DISPLAY}</p>
               <a className="button button-primary" href={whatsappDraftUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsApp('contact')}>Open WhatsApp<ArrowUpRight size={16} /></a>
             </div>
             <div>
               <p className="eyebrow">Email</p>
-              <p className="office-phone"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p><p>We reply between 08:00 and 20:00 Bali time.</p><p>A 50% deposit confirms each booking. Packs are paid in full upfront.</p>
+              <p className="contact-channel-value"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a></p><p>We reply between 08:00 and 20:00 Bali time.</p><p>A 50% deposit confirms each booking. Packs are paid in full upfront.</p>
               <a className="button button-outline" href={COMPANY_EMAIL_HREF}>Write to us<ArrowUpRight size={16} /></a>
             </div>
           </div>
@@ -624,14 +616,12 @@ export function AboutPage() {
           <h2>How coaches are chosen</h2>
           <p>Matching follows the <Link to="/professional-standards">professional standards</Link>: a published fitness format, a usable private space, and a professional who can take the window, as supply allows. A backup instructor is named where available if supply changes before confirmation. Photographs on this site show the type of hour we coordinate. They do not identify the person who will walk through your gate. That name sits on the quote. Read the <Link to="/team">team page</Link> for how we publish people only when a real photograph and certification exist.</p>
           <h2>Where we work</h2>
-          <p>Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Sessions run at your villa or home, not as walk-in classes at the Denpasar office.</p>
+          <p>Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. Jakarta in-zone is South and Central Jakarta, including Kemang, Senopati, Menteng and Thamrin. North, West and East Jakarta are quoted after a timing check. Your instructor comes to your villa or home.</p>
           <h2>What we focus on</h2>
-          <p>Live sessions: private strength training, private yoga and mat Pilates, plus mobility coaching, boxing fitness, guided meditation, bodywork and recovery, and Zumba and dance fitness on request. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
+          <p>We offer eight private sessions, from strength training, yoga and mat Pilates to mobility coaching, boxing fitness, guided meditation, bodywork and dance fitness. Starting prices sit on the <Link to="/pricing">pricing page</Link>. The sequence is on <Link to="/how-it-works">how it works</Link>: enquiry, match, quote, payment, confirmation, delivery, aftercare. We focus on private fitness hours that can be confirmed. Nutrition, physiotherapy, reformer machines and swimming stay held until a qualified scope exists.</p>
           <h2>Villa managers</h2>
           <p>These pages are for the person booking a session. Villa managers who want a menu for the properties they look after can read the <Link to="/villa-hotel-partners">partner programme</Link> and the <Link to="/partner-terms">partner terms</Link>.</p>
-          <h2>Office</h2>
-          <p>PersonalFitness.id is based in Denpasar. Private sessions are still delivered at your location in the published clusters.</p>
-          <p><a href={COMPANY_MAPS_URL} target="_blank" rel="noopener noreferrer">{COMPANY_LEGAL_NAME}<br />{COMPANY_ADDRESS}</a></p>
+          <h2>Contact</h2>
           <p>WhatsApp {WHATSAPP_DISPLAY}. Email <a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a>.</p>
           <Link to="/professional-standards" className="button button-primary">Read the vetting standard<ArrowUpRight size={16} /></Link>
         </div>
@@ -673,7 +663,7 @@ const legalCopy = {
       ['WhatsApp', 'If you send the draft to PersonalFitness.id, it is used to qualify and coordinate the request. WhatsApp has its own terms. Keep payment-card, bank, ID and detailed health data out of that chat.'],
       ['Booking records', 'Confirmed sessions need a customer record on our side: name, contact, address type, session IDs, payment status. Health details, if ever required, use a restricted screening route, not the public site.'],
       ['Your choices', 'Ask a human, request a correction, or opt out of further messages. Complaints and safety issues go to a person, not an auto-reply.'],
-      ['Company address', COMPANY_ADDRESS + '. WhatsApp ' + WHATSAPP_DISPLAY + '. Email ' + COMPANY_EMAIL + '.'],
+      ['Contact', 'WhatsApp ' + WHATSAPP_DISPLAY + '. Email ' + COMPANY_EMAIL + '.'],
     ],
   },
   terms: {

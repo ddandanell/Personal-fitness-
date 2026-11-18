@@ -51,7 +51,7 @@ If they cannot answer, you already have the answer.
 
 ## How our first paid hour is quoted
 
-Estimator on [pricing](/pricing). Same lines as every other hour. WhatsApp with city, area, window and people. Written quote. Payment instructions on that quote. Confirmation with the name. Office address for the company, not for walk-in intros: listed on [contact](/contact).
+Estimator on [pricing](/pricing). Same lines as every other hour. WhatsApp with city, area, window and people. Written quote. Payment instructions on that quote. Confirmation with the name. Use the [contact page](/contact) to reach the coordinator about your first session.
 
 If you arrived from a search that promised free private strength training in Bali, you will not find it here. You will find a number that still exists on Friday.
 
@@ -81,6 +81,6 @@ If Rp 1.050.000 is too much to learn whether you like private work in a villa, y
 
 We will still answer whether the cluster is in-zone. We will still tell you the published rate. We will still tell you that physiotherapy is held. We will still send this blog cluster. None of that is a session. None of that should be billed as one.
 
-Open [contact](/contact) for the office address and WhatsApp. Open the [homepage](/) for the offer. Pay for the hour you want, at the number we already printed.
+Open [contact](/contact) for WhatsApp and email. Open the [homepage](/) for the offer. Pay for the hour you want, at the number we already printed.
 
 The [homepage](/) is useful when you are still choosing the service. This article is useful when you are choosing whether to pay. The answer is yes, at the published rate, or not at all. That is the cleaner market. We will stay there.

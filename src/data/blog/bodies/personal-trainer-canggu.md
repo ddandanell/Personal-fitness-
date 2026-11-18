@@ -18,7 +18,7 @@ Permission matters. If you are a guest, the host or villa manager should know a 
 
 Public sand and packed beach clubs are not default venues. Written venue permission, a usable private space and any venue fee would sit on the quote. We do not sell “training on Batu Bolong beach” as a product.
 
-The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not a Canggu studio and not a walk-in. You train at the villa you already have permission to use.
+You train at the villa you already have permission to use.
 
 ## How the quote is built
 

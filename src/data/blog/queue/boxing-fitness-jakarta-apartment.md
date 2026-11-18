@@ -24,7 +24,7 @@ The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxin
 
 There is no free intro. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 
-The Denpasar office is not a Jakarta boxing studio. You train in the apartment you already have permission to use.
+You train in the apartment you already have permission to use.
 
 ## What we will refuse
 

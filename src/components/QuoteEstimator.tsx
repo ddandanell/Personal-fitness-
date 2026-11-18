@@ -3,7 +3,7 @@ import { Suspense, useMemo, useRef, useState } from 'react'
 import { useLocation, useSearchParams } from 'react-router'
 import { areaPockets, extraPersonFee, programmes, quoteAreas, type City } from '@/data/catalog'
 import { COMPANY_EMAIL } from '@/data/company'
-import { AVAILABILITY_NOTE, RESCHEDULE_NOTE, TRAVEL_DISCLAIMER, AVAILABILITY_NOTE_ID, RESCHEDULE_NOTE_ID, TRAVEL_DISCLAIMER_ID, isOnRequest, serviceNameId } from '@/data/offerCopy'
+import { AVAILABILITY_NOTE, RESCHEDULE_NOTE, TRAVEL_DISCLAIMER, AVAILABILITY_NOTE_ID, RESCHEDULE_NOTE_ID, TRAVEL_DISCLAIMER_ID, serviceNameId } from '@/data/offerCopy'
 import { publicServices } from '@/data/publicOffer'
 import { estimateQuote, quoteMessage } from '@/lib/quote'
 import { formatIdr } from '@/lib/money'
@@ -100,7 +100,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
         <div className="form-grid">
           <Field label="Service">
             <select value={service} onChange={(event) => chooseService(event.target.value)}>
-              {publicServices.map((item) => <option value={item.slug} key={item.slug}>{item.title}{isOnRequest(item.slug) ? ' · On request' : ''}</option>)}
+              {publicServices.map((item) => <option value={item.slug} key={item.slug}>{item.title}</option>)}
             </select>
           </Field>
           <Field label="City">
@@ -163,7 +163,7 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
       <aside className="estimator-result">
         {quote.ok ? (
           <>
-            <p className="eyebrow eyebrow-light">Starting price{isOnRequest(service) ? ' · On request' : ''}</p>
+            <p className="eyebrow eyebrow-light">Starting price</p>
             <p className="estimate-total">{formatIdr(quote.total)}</p>
             <p className="estimate-sub">{quote.sessions > 1 ? quote.sessions + ' sessions · ' + formatIdr(quote.perSession) + ' each' : quote.formatLabel + ' · ' + quote.participants + (quote.participants === 1 ? ' guest' : ' guests')}</p>
             <ul className="estimate-lines">
@@ -206,14 +206,14 @@ function IndonesianEstimator({ initialService, initialCity }: EstimatorProps) {
   const quote = estimateQuote({ service, city, area: area || undefined, durationMin: duration, participants, programme })
   const message = ['Halo PersonalFitness.id, saya ingin sesi ' + serviceNameId(service) + ' di ' + (area || city) + '.', 'Tamu: ' + participants, 'Durasi: ' + duration + ' menit', 'Paket: ' + programme, quote.ok ? 'Harga mulai: ' + formatIdr(quote.total) : 'Mohon kutipan tertulis lengkap.', 'Mohon konfirmasi jadwal, instruktur dan total sebelum pemesanan.'].join('\n')
   return <div className="estimator"><div className="estimator-form"><div className="form-grid">
-    <Field label="Layanan"><select value={service} onChange={e => { setService(e.target.value); if (e.target.value === 'boxing-fitness') setParticipants(1) }}>{publicServices.map(s => <option key={s.slug} value={s.slug}>{serviceNameId(s.slug, s.title)}{isOnRequest(s.slug) ? ' · Atas permintaan' : ''}</option>)}</select></Field>
+    <Field label="Layanan"><select value={service} onChange={e => { setService(e.target.value); if (e.target.value === 'boxing-fitness') setParticipants(1) }}>{publicServices.map(s => <option key={s.slug} value={s.slug}>{serviceNameId(s.slug, s.title)}</option>)}</select></Field>
     <Field label="Kota"><select value={city} onChange={e => { setCity(e.target.value as City); setArea('') }}><option>Bali</option><option>Jakarta</option></select></Field>
     <Field label="Area"><select value={area} onChange={e => setArea(e.target.value)}><option value="">Konfirmasi nanti</option>{quoteAreas(city).map(a => <option key={a.slug} value={a.slug}>{a.name}{a.travelQuote ? ' · atas permintaan' : ''}</option>)}</select></Field>
     <Field label="Durasi sesi"><select value={duration} onChange={e => setDuration(Number(e.target.value))}><option value={60}>60 menit</option><option value={90}>90 menit (+45% tarif sesi)</option></select></Field>
     <Field label="Jumlah tamu"><select value={participants} onChange={e => setParticipants(Number(e.target.value))}><option value={1}>1 orang</option>{service !== 'boxing-fitness' && <option value={2}>2 orang</option>}</select></Field>
     <Field label="Paket"><select value={programme} onChange={e => setProgramme(e.target.value)}>{programmes.map(p => <option key={p.slug} value={p.slug}>{p.sessions === 1 ? 'Sesi tunggal' : 'Paket ' + p.sessions + ' sesi'}</option>)}</select></Field>
   </div><p className="small muted">Yoga dan meditasi termasuk dua orang. Orang kedua pada tarif satu orang menambah Rp 250.000 per sesi bila diperbolehkan. Boxing hanya untuk satu orang.</p></div><aside className="estimator-result">
-    <p className="eyebrow eyebrow-light">{quote.ok ? 'Harga mulai' : 'Perlu kutipan tertulis'}{isOnRequest(service) ? ' · Atas permintaan' : ''}</p><p className="estimate-total">{quote.ok ? formatIdr(quote.total) : 'Konfirmasi dengan kami'}</p>
+    <p className="eyebrow eyebrow-light">{quote.ok ? 'Harga mulai' : 'Perlu kutipan tertulis'}</p><p className="estimate-total">{quote.ok ? formatIdr(quote.total) : 'Konfirmasi dengan kami'}</p>
     <p>{serviceNameId(service)} · {participants} orang · {duration} menit</p><p className="small muted">{city === 'Bali' ? TRAVEL_DISCLAIMER_ID : 'Perjalanan termasuk di Jakarta Selatan dan Pusat. Jakarta Utara, Barat, dan Timur dikutip setelah cek waktu.'}</p><p className="small muted">{AVAILABILITY_NOTE_ID}</p><p className="small muted">{RESCHEDULE_NOTE_ID}</p>
     <div className="cluster"><a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => { trackWhatsApp('estimator', { service, city }); trackEvent('estimator_used', { service, city }) }}><MessageCircle size={16} />Lanjutkan di WhatsApp</a></div><p className="small muted">Draf dikirim hanya saat Anda mengirimkannya di WhatsApp. Sesi dikonfirmasi setelah kutipan tertulis diterima dan deposit dibayar. Instruksi pembayaran tercantum pada kutipan tertulis.</p>
   </aside></div>

@@ -219,7 +219,7 @@ const jakartaPockets: Area[] = [
     parent: 'central-jakarta',
     travelFee: 0,
     driveNote: 'In-zone Central Jakarta. Access still goes on the quote.',
-    copy: 'Menteng houses and apartments are in-zone Central Jakarta. One-way streets, a parked car and a house helper at the gate matter more than a pin. The published Jakarta rate applies when we can time the visit. The Denpasar office is not a Jakarta studio.',
+    copy: 'Menteng houses and apartments are in-zone Central Jakarta. One-way streets, a parked car and a house helper at the gate matter more than a pin. The published Jakarta rate applies when we can time the visit.',
     venues: ['Family houses', 'Apartment living rooms', 'Serviced residences with written access'],
     bestFor: ['Early private strength training', 'Private yoga at home', 'A four-week resident block'],
     services: JAKARTA_LIVE,
@@ -261,7 +261,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'North Jakarta by request. Availability and travel are quoted for the exact address.',
     copy: 'Kelapa Gading apartments and houses are a North Jakarta timing check, not an in-zone rate. We either add travel, find a professional who can reach you, or decline. An enquiry does not mean we cover the whole neighbourhood.',
     venues: ['Apartments with visiting-professional permission', 'Landed houses with a clear floor', 'Hotel rooms only with management approval'],
-    bestFor: ['A resident training enquiry', 'Private yoga by request', 'A recurring household window if supply exists'],
+    bestFor: ['A resident training enquiry', 'Private yoga', 'A recurring household window if supply exists'],
     services: JAKARTA_LIVE,
   },
   {
@@ -359,7 +359,7 @@ const jakartaPockets: Area[] = [
     driveNote: 'East Jakarta by request. An enquiry is not guaranteed coverage.',
     copy: 'Pulomas and surrounding East Jakarta addresses follow the same timing check as Rawamangun. Send two windows. We add travel, confirm, or decline. The South Jakarta starting price is not this page’s rate.',
     venues: ['Family houses', 'Apartment living rooms', 'Approved residential fitness rooms'],
-    bestFor: ['A home training enquiry', 'Private yoga by request', 'A written quote before a programme'],
+    bestFor: ['A home training enquiry', 'Private yoga', 'A written quote before a programme'],
     services: JAKARTA_LIVE,
   },
 ]
@@ -457,7 +457,7 @@ export const areas: Area[] = [
     driveNote: 'Professional availability and travel are quoted for your exact address.',
     copy: 'Request private wellness at homes and apartments around Kelapa Gading, Sunter, Pluit and other North Jakarta addresses. Your coordinator checks local professional availability, building permission and travel before confirming any visit.',
     venues: ['Apartments with visiting-professional permission', 'Private houses with a clear practice space', 'Hotel rooms and gyms with management approval'],
-    bestFor: ['At-home yoga by request', 'A recurring household fitness enquiry', 'A private wellness schedule with realistic travel windows'],
+    bestFor: ['At-home yoga', 'A recurring household fitness enquiry', 'A private wellness schedule with realistic travel windows'],
     services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],
   },
   {
@@ -490,7 +490,7 @@ export const cities: Record<City, {
   Bali: {
     slug: 'bali',
     headline: 'Personal trainer in Bali, at your villa or home.',
-    lede: 'Private strength training, private yoga and mat Pilates across Canggu, Seminyak, Sanur, Ubud and Uluwatu, with travel included. Mobility, boxing, guided meditation, bodywork and dance fitness are on request.',
+    lede: 'Book strength training, yoga, mat Pilates, mobility coaching, boxing fitness, guided meditation, bodywork or dance fitness. Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu.',
     audience: ['Villa guests keeping a routine', 'Month-long residents', 'Couples and small groups', 'Hosts arranging sessions for guests'],
     clusters: ['Canggu to Seminyak, travel included', 'Sanur, Ubud and Uluwatu, travel included; other Bali areas on request'],
     notes: [
