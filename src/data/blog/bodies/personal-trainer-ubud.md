@@ -1,4 +1,4 @@
-A personal trainer in Ubud is a private session at the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 for one guest, with Ubud travel included in the published Bali price. The commercial destination is [Bali private strength training](/bali/personal-training). This article explains the practical planning: access from the road, a level indoor floor, and how the written quote is built.
+A personal trainer in Ubud is a private session at the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 for one guest, with Ubud travel included in the published Bali price. The commercial destination is [Bali private strength training](/bali/personal-training). This article explains the practical planning: access from the road, a level indoor floor, and how the written quote is built.
 
 If you searched for a personal trainer in Ubud because the villa has a valley view, start with the walk from the vehicle. Steps, paths and a carry of kit matter more than the caption. The hour still runs in your space after a travel and timing check.
 
@@ -6,7 +6,7 @@ If you searched for a personal trainer in Ubud because the villa has a valley vi
 
 Travel is included in Ubud and Sanur, just as it is in Canggu, Seminyak and Uluwatu. There is no per-visit guest travel charge in these five named areas. The coordinator still checks the exact address, access and instructor timing. If your stay is actually Pererenan, see [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates) for that area’s access planning.
 
-The hour is one person at Rp 1.050.000, with travel included. A second guest adds Rp 250.000 to a training session. Ninety minutes adds 45 percent of the base rate when the longer appointment is accepted. Eligible [packs](/programmes) reduce the session price as published; Ubud does not carry a separate travel line.
+The hour is one person at Rp 1.300.000, with travel included. A second guest adds Rp 250.000 to a training session. Ninety minutes adds 45 percent of the base rate when the longer appointment is accepted. Eligible [packs](/programmes) reduce the session price as published; Ubud does not carry a separate travel line.
 
 A jungle path is not a studio. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
@@ -22,9 +22,9 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not an Ubu
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks as the written quote. Ubud private strength training starts at Rp 1.050.000 for 60 minutes and one person, with travel included. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like): the same service, duration and participant count have the same published Bali base across the five included areas.
+The [pricing page](/pricing) uses the same blocks as the written quote. Ubud private strength training starts at Rp 1.300.000 for 60 minutes and one person, with travel included. Compare like for like with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like): the same service, duration and participant count have the same published Bali base across the five included areas.
 
-A two-week stay can use a 3, 5 or 10-session pack if the actual appointment count and validity window fit. There is no separate Ubud travel fee on each visit. For private strength training, the published packs are Rp 2.850.000 for three sessions, Rp 4.500.000 for five and Rp 8.000.000 for ten, for one guest. Unused sessions follow the validity window on the quote.
+A two-week stay can use a 3, 5 or 10-session pack if the actual appointment count and validity window fit. There is no separate Ubud travel fee on each visit. For private strength training, the published packs are Rp 3.675.000 for three sessions, Rp 5.875.000 for five and Rp 10.500.000 for ten, for one guest. Unused sessions follow the validity window on the quote.
 
 There is no free intro hour. There is no jungle premium. There is no sunrise tax. There is travel, duration and headcount.
 

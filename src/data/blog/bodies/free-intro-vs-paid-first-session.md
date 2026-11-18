@@ -20,7 +20,7 @@ None of those are a 60-minute private session with a named professional, travel,
 
 You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 24-hour line. You get a professional who is being paid for the diary slot. A backup instructor can be named where available if someone is unwell. You get a quote you can compare to the second quote, because the number did not change after the handshake.
 
-Bali and Jakarta private strength training starts at Rp 1.050.000. Yoga starts at Rp 850.000 in Bali with two people included. Mat Pilates starts at Rp 950.000 in Bali. Those are published single-session prices before any eligible pack reduction.
+Bali and Jakarta private strength training starts at Rp 1.300.000. Yoga starts at Rp 1.050.000 in Bali with two people included. Mat Pilates starts at Rp 1.200.000 in Bali. Those are published single-session prices before any eligible pack reduction.
 
 If the hour is wrong, you stop. You are not trapped in a pack you bought because the intro was free.
 
@@ -73,9 +73,9 @@ If you are the guest, ask whether the session is already paid and what is includ
 
 ## How to budget the test without a teaser
 
-Pick the cheapest honest test: one person, 60 minutes, in-zone, standard service. Bali training Rp 1.050.000. Bali yoga Rp 850.000 for two. Bali mat Rp 950.000. Jakarta training Rp 1.050.000. That is the test budget. Not zero. Not a mystery pack.
+Pick the cheapest honest test: one person, 60 minutes, in-zone, standard service. Bali training Rp 1.300.000. Bali yoga Rp 1.050.000 for two. Bali mat Rp 1.200.000. Jakarta training Rp 1.300.000. That is the test budget. Not zero. Not a mystery pack.
 
-If Rp 900.000 is too much to learn whether you like private work in a villa, you will not like the tenth hour either. The free intro would only have delayed that fact.
+If Rp 1.050.000 is too much to learn whether you like private work in a villa, you will not like the tenth hour either. The free intro would only have delayed that fact.
 
 ## What we will still give you without charging
 

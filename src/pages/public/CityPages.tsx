@@ -4,7 +4,7 @@ import { Link, Navigate, useLocation, useParams } from 'react-router'
 import { Eyebrow, PageIntro, TextLink } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
-import { areaPockets, cities, getArea, getService, quoteAreas, type City } from '@/data/catalog'
+import { SESSION_ANCHOR, areaPockets, cities, getArea, getService, quoteAreas, type City } from '@/data/catalog'
 import { LocationClusters } from '@/components/SiteBlocks'
 import { blogPosts } from '@/data/blog'
 import { faqs } from '@/data/content'
@@ -65,7 +65,7 @@ export function CityPage({ city }: { city: City }) {
       <StructuredData data={cityHubJsonLd(city, seo?.title || data.headline, seo?.description || data.lede)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={city} title={data.headline} description={data.lede}>
-        <p className="price-highlight">{`Starting price · private strength training ${formatIdr(1_050_000)} · 60 minutes · one guest`}</p>
+        <p className="price-highlight">{`Starting price · private strength training ${formatIdr(SESSION_ANCHOR)} · 60 minutes · one guest`}</p>
         <div className="cluster">
           <Link to={`/contact?city=${city}`} className="button button-primary">Check {city} availability<ArrowUpRight size={16} /></Link>
           <Link to={`/${cityPath}/personal-training`} className="button button-outline">{city} private strength training</Link>

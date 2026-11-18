@@ -24,14 +24,14 @@ import {
 const AREAS = ['Canggu', 'Seminyak', 'Ubud', 'Sanur', 'Uluwatu', 'Jakarta', 'Other'] as const
 
 const guestCards = [
-  { to: '/private-yoga', title: 'Private yoga', note: 'up to 2', bali: 850_000 },
-  { to: '/personal-training', title: 'Private Strength Training', note: 'Rp 1.050.000 single', bali: 1_050_000 },
-  { to: '/bodywork-recovery', title: 'Bodywork & Recovery', note: 'wellness hour', bali: 1_050_000 },
-  { to: '/zumba-dance-fitness', title: 'Zumba & Dance Fitness', note: 'fun cardio', bali: 1_050_000 },
-  { to: '/mat-pilates', title: 'Mat Pilates', note: 'no reformer', bali: 950_000 },
-  { to: '/mobility-coaching', title: 'Mobility & stretching', note: 'guided movement', bali: 850_000 },
-  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only · 1 guest', bali: 1_000_000 },
-  { to: '/guided-meditation', title: 'Guided meditation', note: 'up to 2', bali: 800_000 },
+  { to: '/private-yoga', title: 'Private yoga', note: 'up to 2' },
+  { to: '/personal-training', title: 'Private Strength Training', note: 'Rp 1.300.000 single' },
+  { to: '/bodywork-recovery', title: 'Bodywork & Recovery', note: 'wellness hour' },
+  { to: '/zumba-dance-fitness', title: 'Zumba & Dance Fitness', note: 'fun cardio' },
+  { to: '/mat-pilates', title: 'Mat Pilates', note: 'no reformer' },
+  { to: '/mobility-coaching', title: 'Mobility & stretching', note: 'guided movement' },
+  { to: '/boxing-fitness', title: 'Boxing fitness', note: 'pads only · 1 guest' },
+  { to: '/guided-meditation', title: 'Guided meditation', note: 'up to 2' },
 ]
 
 const partnerCardId: Record<string, string> = {
@@ -44,7 +44,7 @@ const partnerCardId: Record<string, string> = {
   "Boxing fitness": "Kebugaran tinju",
   "Guided meditation": "Meditasi terpandu",
   "up to 2": "maks. 2 orang",
-  "Rp 1.050.000 single": "Rp 1.050.000 satu orang",
+  "Rp 1.300.000 single": "Rp 1.300.000 satu orang",
   "wellness hour": "jam pemulihan",
   "fun cardio": "kardio santai",
   "no reformer": "tanpa reformer",
@@ -72,7 +72,7 @@ const copy = {
       `You earn a ${partner.COMMISSION_PCT}% commission of what the guest paid, paid monthly by bank transfer with a statement.`,
     ],
     guestsTitle: 'What your guests can book',
-    priceNote: 'Bali prices, 60 minutes. Private strength training is Rp 1.050.000 for one session; a 5-session pack is Rp 900.000 per session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
+    priceNote: 'Bali prices, 60 minutes. Private strength training is Rp 1.300.000 for one session; a 5-session pack is Rp 1.175.000 per session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
     calendarTitle: 'Set a week across the villas you manage.',
     calendar: 'Example only, as supply allows: private yoga Monday, private strength training Wednesday and mat Pilates Friday at 08:00, each in that guest’s villa. Guests can request a slot by 18:00 the day before. A session is confirmed only after the written quote is accepted.',
     getTitle: 'What you get',
@@ -130,7 +130,7 @@ const copy = {
       `Anda mendapat komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, dibayar setiap bulan lewat transfer bank beserta laporan.`,
     ],
     guestsTitle: 'Yang bisa dipesan tamu',
-    priceNote: 'Harga Bali, 60 menit. Private strength training Rp 1.050.000 untuk satu sesi; paket 5 sesi Rp 900.000 per sesi. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan.',
+    priceNote: 'Harga Bali, 60 menit. Private strength training Rp 1.300.000 untuk satu sesi; paket 5 sesi Rp 1.175.000 per sesi. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan.',
     calendarTitle: 'Atur minggu untuk villa yang Anda kelola.',
     calendar: 'Contoh saja, tergantung ketersediaan: yoga privat Senin, private strength training Rabu, dan mat Pilates Jumat pukul 08:00, masing-masing di villa tamu. Tamu bisa meminta slot paling lambat pukul 18:00 sehari sebelumnya. Sesi baru terkunci setelah kutipan tertulis diterima.',
     getTitle: 'Yang Anda dapat',
@@ -360,7 +360,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
               <Link to={card.to} className="partner-service-card" key={card.to}>
                 <div>
                   <h3>{lang === 'id' ? partnerCardId[card.title] || card.title : card.title}</h3><ServiceRequestBadge slug={card.to.slice(1)} lang={lang} />
-                  <p>{lang === 'id' ? 'Mulai' : 'From'} {formatIdr(card.bali)} · {lang === 'id' ? partnerCardId[card.note] || card.note : card.note}</p>
+                  <p>{lang === 'id' ? 'Mulai' : 'From'} {formatIdr(publicServices.find(service => service.slug === card.to.slice(1))!.prices.Bali!)} · {lang === 'id' ? partnerCardId[card.note] || card.note : card.note}</p>
                   <span className="text-link">{lang === 'id' ? 'Buka sesi' : 'Open session'}</span>
                 </div>
               </Link>
@@ -389,7 +389,7 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
           <div className="content-shell">
             <Eyebrow>{lang === 'id' ? 'Contoh penghasilan' : 'Earnings example'}</Eyebrow>
             <h2>{lang === 'id' ? 'Contoh saja, bukan jaminan.' : 'Example only, not a guarantee.'}</h2>
-            <p>{lang === 'id' ? `Contoh saja: 8 villa, tingkat hunian 70%, masa tinggal 5 malam, dan 1 dari 5 masa tinggal memesan dua sesi Rp 900.000 menghasilkan sekitar ${EXAMPLE_MONTHLY_SESSIONS} sesi dan ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} per bulan. Dengan komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, penghasilan sekitar ${formatIdr(commission)} per bulan.` : `Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 900.000 sessions = about ${EXAMPLE_MONTHLY_SESSIONS} sessions and ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} a month in sessions. At ${partner.COMMISSION_PCT}% of what the guest paid, you would earn about ${formatIdr(commission)} a month.`}</p>
+            <p>{lang === 'id' ? `Contoh saja: 8 villa, tingkat hunian 70%, masa tinggal 5 malam, dan 1 dari 5 masa tinggal memesan dua sesi Rp 1.050.000 menghasilkan sekitar ${EXAMPLE_MONTHLY_SESSIONS} sesi dan ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} per bulan. Dengan komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, penghasilan sekitar ${formatIdr(commission)} per bulan.` : `Example only: 8 villas, 70% occupancy, 5-night stays, 1 in 5 stays booking two Rp 1.050.000 sessions = about ${EXAMPLE_MONTHLY_SESSIONS} sessions and ${formatIdr(EXAMPLE_MONTHLY_SESSION_VALUE)} a month in sessions. At ${partner.COMMISSION_PCT}% of what the guest paid, you would earn about ${formatIdr(commission)} a month.`}</p>
           </div>
         </section>
       )}

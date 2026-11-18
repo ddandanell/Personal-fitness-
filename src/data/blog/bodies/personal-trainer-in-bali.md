@@ -12,7 +12,7 @@ A click on a website is not a booking. Tentative trainer interest is not supply.
 
 ## What the 60 minutes actually include
 
-The published Bali private strength training rate is Rp 1.050.000 for 60 minutes, one person, in-zone. In-zone here means the Canggu–Seminyak cluster, including Berawa, Pererenan and Petitenget. The hour covers a session matched to the goal you approved, a professional approved for private strength training in that cluster, and travel that is already inside the rate when you are in-zone.
+The published Bali private strength training rate is Rp 1.300.000 for 60 minutes, one person, in-zone. In-zone here means the Canggu–Seminyak cluster, including Berawa, Pererenan and Petitenget. The hour covers a session matched to the goal you approved, a professional approved for private strength training in that cluster, and travel that is already inside the rate when you are in-zone.
 
 Simple kit on site can be used: a mat, a band, a pair of dumbbells if they exist. We do not assume a villa gym. We also do not pretend a glossy pool deck at 13:00 is a studio. Indoor tile or wood with a mat is the default. Outdoor work is possible when shade, heat and neighbours allow it. Say so in the first message.
 
@@ -28,9 +28,9 @@ If children, dogs or a video call will share the space, say so. A good coach can
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali private strength training starts at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Venue hire, parking and villa-staff fees stay extra if they exist.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali private strength training starts at Rp 1.300.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Venue hire, parking and villa-staff fees stay extra if they exist.
 
-A longer stay can use an eligible 3, 5 or 10-session pack. For one guest’s private strength training, the totals are Rp 2.850.000, Rp 4.500.000 and Rp 8.000.000 respectively, saving Rp 300.000, Rp 750.000 or Rp 2.500.000 compared with the same number of Rp 1.050.000 single sessions. The written quote states the dates and validity window; unused sessions follow those terms.
+A longer stay can use an eligible 3, 5 or 10-session pack. For one guest’s private strength training, the totals are Rp 3.675.000, Rp 5.875.000 and Rp 10.500.000 respectively, saving Rp 225.000, Rp 625.000 or Rp 2.500.000 compared with the same number of Rp 1.300.000 single sessions. The written quote states the dates and validity window; unused sessions follow those terms.
 
 If you want a named professional, say so in WhatsApp. Preference is allowed. Instant assignment is not. If that person is already booked, we offer a second match for the same service and cluster.
 

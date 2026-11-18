@@ -14,7 +14,7 @@ Once the quote is accurate, follow the payment instructions on that document. Pe
 
 For one accepted session, the deposit is half of the complete quoted session total. That deposit confirms the appointment described on the quote. The remaining payment follows the timing stated on the same written quote.
 
-For example, a 60-minute private strength training single session starts at Rp 1.050.000 for one guest in a published area. If the complete written total remains Rp 1.050.000, the 50% deposit is Rp 525.000. The remaining Rp 525.000 follows the quote's payment timing. If an accepted second guest, a longer duration or another separately agreed cost changes the complete total, calculate the deposit from that quoted total rather than from the starting price.
+For example, a 60-minute private strength training single session starts at Rp 1.300.000 for one guest in a published area. If the complete written total remains Rp 1.300.000, the 50% deposit is Rp 650.000. The remaining Rp 650.000 follows the quote's payment timing. If an accepted second guest, a longer duration or another separately agreed cost changes the complete total, calculate the deposit from that quoted total rather than from the starting price.
 
 Do not send 50% of a number you found in an old message. The current quote is the reference because it connects the payment to the professional, address, participant count and time being offered.
 
@@ -22,11 +22,11 @@ Do not send 50% of a number you found in an old message. The current quote is th
 
 The published [programmes](/programmes) use a counted number of eligible sessions. The current anchor packs are:
 
-1. Three sessions at Rp 950.000 each, Rp 2.850.000 in total.
-2. Five sessions at Rp 900.000 each, Rp 4.500.000 in total.
-3. Ten sessions at Rp 800.000 each, Rp 8.000.000 in total.
+1. Three sessions at Rp 1.225.000 each, Rp 3.675.000 in total.
+2. Five sessions at Rp 1.175.000 each, Rp 5.875.000 in total.
+3. Ten sessions at Rp 1.050.000 each, Rp 10.500.000 in total.
 
-Those pack totals compare with the Rp 1.050.000 single-session anchor. The reductions are about 9.5%, 14.3% and 23.8% respectively. A pack is paid in full upfront because the reduced per-session calculation applies to the complete counted pack, not to a series of unrelated deposits.
+Those pack totals compare with the Rp 1.300.000 single-session anchor. The reductions are about 5%, 10% and 20% respectively. A pack is paid in full upfront because the reduced per-session calculation applies to the complete counted pack, not to a series of unrelated deposits.
 
 The quote should still make the useful operating details clear. Check the number of visits, eligible session format, participants, location, dates or scheduling process, and validity window. A ten-session payment does not create an open-ended membership or guarantee any time you ask for. It confirms the agreed pack under the written scheduling rules.
 
@@ -64,11 +64,11 @@ When a change is necessary, keep it in the same booking thread. State the sessio
 
 ## A practical comparison
 
-Suppose one adult wants private strength training at an accepted Seminyak villa. The written quote for one standard 60-minute visit is Rp 1.050.000. A Rp 525.000 deposit confirms that single booking, with the remaining payment handled according to the written quote.
+Suppose one adult wants private strength training at an accepted Seminyak villa. The written quote for one standard 60-minute visit is Rp 1.300.000. A Rp 650.000 deposit confirms that single booking, with the remaining payment handled according to the written quote.
 
-Now suppose the same guest has five confirmed dates and wants the eligible five-session anchor pack. The published pack is Rp 4.500.000 in total, or Rp 900.000 per session. The complete Rp 4.500.000 is paid upfront. Travel is included for each accepted Seminyak visit, and the quote should show the dates or scheduling scope and validity.
+Now suppose the same guest has five confirmed dates and wants the eligible five-session anchor pack. The published pack is Rp 5.875.000 in total, or Rp 1.175.000 per session. The complete Rp 5.875.000 is paid upfront. Travel is included for each accepted Seminyak visit, and the quote should show the dates or scheduling scope and validity.
 
-These are two different purchases. The pack is not five separate Rp 525.000 deposits, and the single visit is not automatically converted into a pack after the session. Ask the coordinator to issue the correct written quote for the option you want.
+These are two different purchases. The pack is not five separate Rp 650.000 deposits, and the single visit is not automatically converted into a pack after the session. Ask the coordinator to issue the correct written quote for the option you want.
 
 ## Check these details before paying
 

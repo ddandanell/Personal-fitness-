@@ -1,4 +1,4 @@
-Private boxing fitness at a villa or home is pad work, not a fight. PersonalFitness.id sells a 60-minute one-person hour after a space check: Rp 1.000.000 in published Bali clusters and Rp 1.050.000 in published Jakarta clusters. There is no sparring, no ring, no kickboxing, and no second person hidden in the rate. The commercial pages are [boxing fitness](/boxing-fitness), [boxing in Bali](/bali/boxing-fitness) and [boxing in Jakarta](/jakarta/boxing-fitness). This article is the investigation layer: what the hour is, what it is not, and how the quote is built.
+Private boxing fitness at a villa or home is pad work, not a fight. PersonalFitness.id sells a 60-minute one-person hour after a space check: Rp 1.250.000 in published Bali clusters and Rp 1.300.000 in published Jakarta clusters. There is no sparring, no ring, no kickboxing, and no second person hidden in the rate. The commercial pages are [boxing fitness](/boxing-fitness), [boxing in Bali](/bali/boxing-fitness) and [boxing in Jakarta](/jakarta/boxing-fitness). This article is the investigation layer: what the hour is, what it is not, and how the quote is built.
 
 If you searched for boxing at home because a gym class felt public, start with the floor, not the gloves. A usable indoor rectangle, a ceiling that will not eat an uppercut, and neighbours who can live with a pad rhythm matter more than a branded kit wall. We bring pads when the session is approved. You do not need a heavy bag. You do need permission to use the space.
 
@@ -22,7 +22,7 @@ We will not run kickboxing as a secret extra. We will not put two strangers in a
 
 ## How the Bali quote is built
 
-[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.000.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
+[Bali boxing fitness](/bali/boxing-fitness) uses the published Rp 1.250.000 starting price for 60 minutes, one person, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base rate when the session can extend. The [pricing page](/pricing) uses the same blocks operations uses.
 
 The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office. It is not a boxing studio and it is not a walk-in. You train at the villa or home you already have permission to use.
 
@@ -30,13 +30,13 @@ Heat changes the work. Midday sun on a west-facing deck is a reason to move insi
 
 ## How the Jakarta quote is built
 
-[Jakarta boxing fitness](/jakarta/boxing-fitness) starts at Rp 1.050.000 for 60 minutes, one person, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check, with travel or a decline. Building access is the product. Lifts, visitor passes, parking and a usable indoor rectangle go on the quote before anyone travels.
+[Jakarta boxing fitness](/jakarta/boxing-fitness) starts at Rp 1.300.000 for 60 minutes, one person, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check, with travel or a decline. Building access is the product. Lifts, visitor passes, parking and a usable indoor rectangle go on the quote before anyone travels.
 
 If the lobby blocks outside trainers, tell us before the quote. We will not pretend a refusal is a session. If the apartment is too small for pad work, we will say so and offer [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching) instead of forcing punches into a corridor.
 
 ## Programmes, first sessions and what you actually pay
 
-There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 9.5%, 14.3% or 23.8%, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
+There is no free intro hour. The first boxing visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 5%, 10% or 20%, on session charges, not travel. Mix boxing with yoga or meditation only after you know the first hour fitted the room.
 
 Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 

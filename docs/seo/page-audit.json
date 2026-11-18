@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-18T00:09:29.090Z",
+  "generatedAt": "2026-11-18T07:22:16.039Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1672,
+      "mainWords": 1680,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -147,7 +147,7 @@
     },
     {
       "path": "/faq",
-      "mainWords": 1390,
+      "mainWords": 1394,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/faq",
       "localMinimum": false,
@@ -475,7 +475,7 @@
     },
     {
       "path": "/pricing",
-      "mainWords": 2202,
+      "mainWords": 2230,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/pricing",
       "localMinimum": false,
@@ -507,7 +507,7 @@
     },
     {
       "path": "/programmes",
-      "mainWords": 651,
+      "mainWords": 596,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/programmes",
       "localMinimum": false,
@@ -547,7 +547,7 @@
     },
     {
       "path": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
-      "mainWords": 1455,
+      "mainWords": 1451,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
       "localMinimum": false,
@@ -707,7 +707,7 @@
     },
     {
       "path": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
-      "mainWords": 1431,
+      "mainWords": 1440,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
       "localMinimum": false,
@@ -739,7 +739,7 @@
     },
     {
       "path": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
-      "mainWords": 1610,
+      "mainWords": 1617,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
       "localMinimum": false,
@@ -963,7 +963,7 @@
     },
     {
       "path": "/villademo/services/private-yoga",
-      "mainWords": 245,
+      "mainWords": 251,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/private-yoga",
       "localMinimum": false,
@@ -971,7 +971,7 @@
     },
     {
       "path": "/villademo/services/quieter-hour",
-      "mainWords": 232,
+      "mainWords": 238,
       "indexable": false,
       "canonical": "https://villademo.personalfitness.id/services/quieter-hour",
       "localMinimum": false,

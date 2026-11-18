@@ -91,7 +91,7 @@ export default function WellnessSchedule() {
       <p className="plan-total-label">{estimate.requiresQuote ? 'Priced items subtotal' : 'Starting price for your block'}</p><p className="plan-total">{estimate.pricedVisits ? formatIdr(estimate.total) : 'Written quote'}</p>
       {estimate.requiresQuote && <p className="plan-warning" role="status">{estimate.collisions ? 'Some visits overlap. Choose different times to review your plan.' : estimate.invalid ? 'Check your area, visit time and whole participant count.' : 'A complete quote is required. Some services, group sizes or travel are not included in this subtotal.'}</p>}
       {estimate.discountRate > 0 && <p className="plan-saving"><Check size={16} />{Math.round(estimate.discountRate * 100)}% saving on eligible fitness visits</p>}
-      <p className="plan-small">Session packs of 3, 5 and 10 apply the same saving share as the Rp 1.050.000 anchor. Dates are subject to instructor availability and location confirmation.</p>
+      <p className="plan-small">Each visit uses its service and city pack rate. Any second-guest charge is added per visit. Dates are subject to instructor availability and location confirmation.</p>
       <button type="button" className="button button-light" disabled={estimate.invalid} onClick={() => setReview(true)}>Review my schedule<ArrowUpRight size={16} /></button>
       <p className="plan-small">A 50% deposit confirms a single-session booking. Packs are paid in full upfront after you accept the written quote. No automatic renewal.</p>
     </aside>

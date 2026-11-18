@@ -1,4 +1,4 @@
-import { extraPersonFee, getArea, getProgramme, getService, programmes, SESSION_ANCHOR, type City } from '@/data/catalog'
+import { extraPersonFee, getArea, getProgramme, getService, programmes, packSessionRate, type City } from '@/data/catalog'
 import { AVAILABILITY_NOTE, TRAVEL_DISCLAIMER } from '@/data/offerCopy'
 import { formatIdr } from '@/lib/money'
 
@@ -20,11 +20,6 @@ export type QuoteResult = {
   durationFee: number; subtotal: number; discountRate: number; discount: number
   total: number; perSession: number; notes: string[]
   singleRate: number; packTitle: string
-}
-
-/** Pack rate scaled from a discipline's own 60-minute price against the Rp 1.050.000 anchor. */
-export function packSessionRate(serviceBase: number, packPerSession: number) {
-  return Math.round((serviceBase * packPerSession) / SESSION_ANCHOR)
 }
 
 export function estimateQuote(input: QuoteInput): QuoteResult {
@@ -66,7 +61,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
   const included = isDefault ? service.includedParticipants : offer.participants || 1
   const extraPeople = Math.max(0, input.participants - included)
   const extraPeopleFee = extraPeople * extraPersonFee[input.city]
-  const rate = pairReady ? packSessionRate(singleRate, programme.perSession) : singleRate
+  const rate = pairReady ? packSessionRate(singleRate, programme.pricePercent) : singleRate
   const durationFee = input.durationMin === 90 ? Math.round(rate * 0.45) : 0
   const sessions = pairReady ? programme.sessions : 1
   const sessionCharge = rate + extraPeopleFee + durationFee
@@ -92,9 +87,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
     notes: [
       AVAILABILITY_NOTE,
       TRAVEL_DISCLAIMER,
-      singleRate === SESSION_ANCHOR
-        ? 'Package savings are the exact difference from Rp 1.050.000 per session.'
-        : 'This discipline keeps its own 60-minute rate. Package savings are the same share of that rate as the anchor packs.',
+      'Package savings are measured against the single-session rate for this service and city.',
       area ? 'Selected area: ' + area.name + (input.city === 'Bali' ? '. Travel is included.' : '.') : 'Area not selected; location is confirmed in the written quote.',
     ],
   }

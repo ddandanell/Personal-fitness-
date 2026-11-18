@@ -1,3 +1,4 @@
+import { SESSION_ANCHOR, programmes } from '@/data/catalog'
 import { ServiceRequestBadge } from '@/components/PolicyLines'
 import { serviceNameId } from '@/data/offerCopy'
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
@@ -13,7 +14,7 @@ import { publicServices } from '@/data/publicOffer'
 
 const faqs = [
   ['Apa itu personal trainer datang ke rumah?', 'PersonalFitness.id mengirim pelatih ke villa atau rumah Anda di klaster Bali dan Jakarta yang kami terbitkan. Sesi berlangsung di ruang Anda, bukan di studio walk-in Denpasar.'],
-  ['Berapa harganya?', 'Harga mulai private strength training Rp 1.050.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Total ada di kutipan tertulis.'],
+  ['Berapa harganya?', 'Harga mulai private strength training Rp 1.300.000 untuk 60 menit di zona. Yoga dan meditasi termasuk dua orang. Boxing satu orang. Perjalanan sudah termasuk di Canggu, Seminyak, Sanur, Ubud, dan Uluwatu. Area lain atas permintaan. Total ada di kutipan tertulis.'],
   ['Mengapa lebih mahal dari pelatih lepas?', 'Ini layanan terkelola: koordinator mencocokkan sesi, lokasi dan jam, lalu menamai instruktur di kutipan. Cadangan disebut jika tersedia. Tarif WhatsApp lepas tanpa kutipan adalah produk lain.'],
   ['Apakah ada sesi perkenalan gratis?', 'Tidak. Kunjungan pertama memakai tarif terbit. Kami tidak menjual intro gratis yang kemudian ditarik di chat.'],
   ['Wilayah Jakarta mana yang masuk zona?', 'Jakarta Selatan (Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan) dan Jakarta Pusat (Menteng, Gondangdia, Thamrin) masuk zona. Utara, Barat, Timur, dan PIK dikutip setelah cek stok dan perjalanan.'],
@@ -40,8 +41,8 @@ export default function IndonesianHome() {
           </div>
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
-          <div><strong>{formatIdr(900_000)}</strong><span>Paket 5 sesi, per sesi.</span></div>
+          <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
+          <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>Paket 5 sesi, per sesi.</span></div>
           <div><strong>Delapan pilihan</strong><span>Latihan kekuatan, yoga, dan Pilates. Mobilitas, boxing, bodywork, dance, dan meditasi atas permintaan.</span></div>
         </div>
       </section>

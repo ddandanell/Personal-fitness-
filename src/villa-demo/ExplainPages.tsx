@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, POLICY_LINE, SUPPLY_LINE, commissionRate, earnedCommission, eligibleRevenue, rp, villa } from './data'
+import { CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, POLICY_LINE, SUPPLY_LINE, SINGLE_SESSION, commissionRate, earnedCommission, eligibleRevenue, rp, villa } from './data'
 import { DemoLink } from './shell'
 
 const journey = [
@@ -35,7 +35,7 @@ export function HowItWorks() {
       <h2>What you can tell the team</h2>
       <p>Your guests can scan this code to book a private wellness session at the villa. They choose the service and a preferred time, and Personal Fitness coordinates an instructor. You can follow requests in the desk and earn the commission agreed for completed bookings.</p>
       <h2>A sample commercial agreement</h2>
-      <p>The demonstration uses a proposed {Math.round(commissionRate * 100)}% of eligible completed service revenue. Twelve sample sessions at {rp(1050000)} are {rp(eligibleRevenue)}, so the sample commission is {rp(earnedCommission)}. These figures are for the demonstration. They are not a client list, a published offer, or a profit figure. {PAYMENT_LINE}</p>
+      <p>The demonstration uses a proposed {Math.round(commissionRate * 100)}% of eligible completed service revenue. Twelve sample sessions at {rp(SINGLE_SESSION)} are {rp(eligibleRevenue)}, so the sample commission is {rp(earnedCommission)}. These figures are for the demonstration. They are not a client list, a published offer, or a profit figure. {PAYMENT_LINE}</p>
       <p className="note">{CONCIERGE_LINE} {POLICY_LINE} {SUPPLY_LINE}</p>
       <div className="actions">
         <DemoLink to="/">Open Villa Sora</DemoLink>

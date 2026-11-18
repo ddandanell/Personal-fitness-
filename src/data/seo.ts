@@ -40,7 +40,7 @@ const hubs: SeoRecord[] = [
     path: '/',
     primaryKeyword: 'personal trainer at home Bali Jakarta',
     title: 'Personal Trainer at Home in Bali & Jakarta',
-    description: 'An instructor at your villa or home in Bali and Jakarta. Private strength training from Rp 1.050.000. Written quote before you pay.',
+    description: 'An instructor at your villa or home in Bali and Jakarta. Private strength training from Rp 1.300.000. Written quote before you pay.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Private Strength Training at home' },
@@ -60,7 +60,7 @@ const hubs: SeoRecord[] = [
     path: '/id',
     primaryKeyword: 'personal trainer datang ke rumah',
     title: 'Personal Trainer Datang ke Rumah di Bali dan Jakarta',
-    description: 'Personal trainer datang ke villa atau rumah di Bali dan Jakarta dari Rp 1.050.000. Kutipan tertulis sebelum bayar.',
+    description: 'Personal trainer datang ke villa atau rumah di Bali dan Jakarta dari Rp 1.300.000. Kutipan tertulis sebelum bayar.',
     group: 'page', lastmod: '2026-11-16',
     related: [
       { to: '/', label: 'English homepage' },
@@ -92,7 +92,7 @@ const hubs: SeoRecord[] = [
     path: '/bali',
     primaryKeyword: 'personal trainer Bali',
     title: 'Personal Trainer Bali: Villa & Home Sessions',
-    description: 'In-villa private strength training from Rp 1.050.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel published for Ubud, Sanur and Uluwatu.',
+    description: 'In-villa private strength training from Rp 1.300.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel published for Ubud, Sanur and Uluwatu.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali/personal-training', label: 'Private Strength Training in Bali' },
@@ -110,7 +110,7 @@ const hubs: SeoRecord[] = [
     path: '/jakarta',
     primaryKeyword: 'home personal training Jakarta',
     title: 'Home Personal Trainer Jakarta | PersonalFitness.id',
-    description: 'Home private strength training from Rp 1.050.000 in South and Central Jakarta. Yoga, Pilates, boxing and meditation at your apartment, with access on the quote.',
+    description: 'Home private strength training from Rp 1.300.000 in South and Central Jakarta. Yoga, Pilates, boxing and meditation at your apartment, with access on the quote.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/jakarta/personal-training', label: 'Private Strength Training in Jakarta' },
@@ -145,7 +145,7 @@ const hubs: SeoRecord[] = [
     path: '/pricing',
     primaryKeyword: 'personal trainer Bali prices',
     title: 'Personal Trainer Prices Bali & Jakarta',
-    description: 'Published 60-minute starting prices: private strength training Rp 1.050.000, plus yoga, Pilates, boxing and meditation.',
+    description: 'Published 60-minute starting prices: private strength training Rp 1.300.000, plus yoga, Pilates, boxing and meditation.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/personal-training', label: 'Private Strength Training rates' },
@@ -161,7 +161,7 @@ const hubs: SeoRecord[] = [
     path: '/programmes',
     primaryKeyword: 'two three four week fitness programme',
     title: '2, 3 and 4 Week Fitness Programmes',
-    description: 'Prepaid 3, 5 and 10 session blocks for Bali stays and Jakarta residents, with published about 9.5, 14.3 and 23.8 percent reductions.',
+    description: 'Prepaid 3, 5 and 10 session blocks for Bali stays and Jakarta residents, with savings of about 5, 10 and 20 percent.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/pricing', label: 'Estimate my price' },
@@ -361,22 +361,22 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   'personal-training': {
     keyword: 'personal trainer at home',
     title: 'Private Strength Training at Home',
-    description: 'Private 60-minute strength training at your villa or home. From Rp 1.050.000 for one session. Packs of 3, 5 and 10 reduce the rate. Written quote, then payment.',
+    description: 'Private 60-minute strength training at your villa or home. From Rp 1.300.000 for one session. Packs of 3, 5 and 10 reduce the rate. Written quote, then payment.',
   },
   'private-yoga': {
     keyword: 'private yoga at home',
     title: 'Private Yoga at Your Villa or Home',
-    description: 'Private yoga for one or two people from Rp 850.000 in Bali and Rp 900.000 in Jakarta, in your own space.',
+    description: 'Private yoga for one or two people from Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta, in your own space.',
   },
   'mat-pilates': {
     keyword: 'mat pilates at home',
     title: 'Private Mat Pilates at Home',
-    description: 'Mat-based Pilates from Rp 950.000 in Bali and Rp 1.000.000 in Jakarta. No reformer. Private living-room sessions.',
+    description: 'Mat-based Pilates from Rp 1.200.000 in Bali and Rp 1.250.000 in Jakarta. No reformer. Private living-room sessions.',
   },
   'mobility-coaching': {
     keyword: 'mobility coaching at home',
     title: 'Private Mobility Coaching at Home',
-    description: 'Non-clinical mobility and assisted stretching from Rp 850.000 in Bali and Rp 900.000 in Jakarta, at your home or villa.',
+    description: 'Non-clinical mobility and assisted stretching from Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta, at your home or villa.',
   },
   'massage-and-bodywork': {
     keyword: 'private massage at home Bali',
@@ -386,7 +386,7 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   'boxing-fitness': {
     keyword: 'private boxing fitness at home',
     title: 'Pad-Only Boxing Fitness at Home',
-    description: 'Pad-only boxing fitness from Rp 1.000.000 in Bali and Rp 1.050.000 in Jakarta, after a space check. No sparring.',
+    description: 'Pad-only boxing fitness from Rp 1.250.000 in Bali and Rp 1.300.000 in Jakarta, after a space check. No sparring.',
   },
   swimming: {
     keyword: 'private swimming lessons Bali',
@@ -396,17 +396,17 @@ const serviceKeyword: Record<string, { keyword: string; title: string; descripti
   'guided-meditation': {
     keyword: 'private guided meditation at home',
     title: 'Private Guided Meditation at Home',
-    description: 'A quiet 60-minute guided sit for one or two people from Rp 800.000 in Bali and Rp 850.000 in Jakarta. A calm, guided hour.',
+    description: 'A quiet 60-minute guided sit for one or two people from Rp 1.050.000 in Bali and Rp 1.050.000 in Jakarta. A calm, guided hour.',
   },
   'bodywork-recovery': {
     keyword: 'bodywork and recovery at the villa',
     title: 'Bodywork and Recovery at Your Villa',
-    description: 'Assisted stretching, myofascial release and relaxation at your villa or home. Wellness only, from Rp 1.050.000 for 60 minutes.',
+    description: 'Assisted stretching, myofascial release and relaxation at your villa or home. Wellness only, from Rp 1.300.000 for 60 minutes.',
   },
   'zumba-dance-fitness': {
     keyword: 'zumba and dance fitness at the villa',
     title: 'Zumba and Dance Fitness at Your Villa',
-    description: 'High-energy dance fitness at your villa or home, from Rp 1.050.000 for 60 minutes. A fun cardio hour, confirmed in writing.',
+    description: 'High-energy dance fitness at your villa or home, from Rp 1.300.000 for 60 minutes. A fun cardio hour, confirmed in writing.',
   },
 }
 

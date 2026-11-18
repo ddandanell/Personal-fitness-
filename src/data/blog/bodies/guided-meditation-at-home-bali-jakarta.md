@@ -1,4 +1,4 @@
-Private guided meditation at a villa or home is a quiet 60-minute sit, not a therapy session. PersonalFitness.id publishes the hour for one or two people: Rp 800.000 in Bali clusters and Rp 850.000 in Jakarta clusters. It is not counselling, not clinical treatment, and not a breathwork show. The commercial pages are [guided meditation](/guided-meditation), [meditation in Bali](/bali/guided-meditation) and [meditation in Jakarta](/jakarta/guided-meditation). This article explains what you are buying, what you are not, and how the quote is built.
+Private guided meditation at a villa or home is a quiet 60-minute sit, not a therapy session. PersonalFitness.id publishes the hour for one or two people: Rp 1.050.000 in Bali clusters and Rp 1.050.000 in Jakarta clusters. It is not counselling, not clinical treatment, and not a breathwork show. The commercial pages are [guided meditation](/guided-meditation), [meditation in Bali](/bali/guided-meditation) and [meditation in Jakarta](/jakarta/guided-meditation). This article explains what you are buying, what you are not, and how the quote is built.
 
 If you searched for meditation at home because a group class felt public, start with the room. A chair or a mat, a door that can close, and a household that can stay quiet for an hour matter more than incense. We do not need a shrine. We do need permission to use the space and a window you can actually keep.
 
@@ -20,7 +20,7 @@ Two people sharing the hour should be able to sit in the same room without turni
 
 ## How the Bali quote is built
 
-[Bali guided meditation](/bali/guided-meditation) uses Rp 800.000 for 60 minutes, up to two people, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base when the session can extend. Extra people beyond the included pair follow the extra-person fee on the [pricing page](/pricing).
+[Bali guided meditation](/bali/guided-meditation) uses Rp 1.050.000 for 60 minutes, up to two people, in-zone. In-zone is Canggu and Seminyak, including Berawa, Pererenan and Petitenget. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Ninety minutes add 45 percent of the base when the session can extend. Extra people beyond the included pair follow the extra-person fee on the [pricing page](/pricing).
 
 The Denpasar office is an office, not a meditation studio and not a walk-in. You sit at the villa or home you already have permission to use.
 
@@ -28,13 +28,13 @@ Sunrise captions do not change the rate. We charge duration and travel, not a ph
 
 ## How the Jakarta quote is built
 
-[Jakarta guided meditation](/jakarta/guided-meditation) starts at Rp 850.000 for 60 minutes, up to two people, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check. Building access is the product. Lifts, visitor passes and a room that can actually be quiet go on the quote.
+[Jakarta guided meditation](/jakarta/guided-meditation) starts at Rp 1.050.000 for 60 minutes, up to two people, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check. Building access is the product. Lifts, visitor passes and a room that can actually be quiet go on the quote.
 
 If the apartment shares walls with a renovation, say so. If the building gym is the only space and it cannot be private, we will decline or move the hour, not perform stillness next to treadmills.
 
 ## Programmes, yoga and what you actually pay
 
-There is no free intro sit. The first meditation visit is the published rate, quoted in writing. [Programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 9.5%, 14.3% or 23.8% on session charges. You can mix meditation with yoga or private strength training in a block only after the first paid hour proved the room works.
+There is no free intro sit. The first meditation visit is the published rate, quoted in writing. [Programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 5%, 10% or 20% on session charges. You can mix meditation with yoga or private strength training in a block only after the first paid hour proved the room works.
 
 Yoga and meditation are neighbours, not the same product. Yoga includes two people and movement. Meditation includes two people and a sit. Do not ask us to fold both into one 60-minute visit. That is two hours.
 

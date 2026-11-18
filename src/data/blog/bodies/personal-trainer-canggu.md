@@ -1,4 +1,4 @@
-A personal trainer in Canggu is an in-villa hour in a published in-zone cluster, not a beach-club class and not island-wide coverage. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 when the address sits in Canggu, including Berawa, Batu Bolong, Pererenan and Echo Beach. Travel for that cluster is already inside the published Bali rate. The commercial destination is [Bali private strength training](/bali/personal-training). This article is the investigation layer: access, heat, permission and how the quote is built.
+A personal trainer in Canggu is an in-villa hour in a published in-zone cluster, not a beach-club class and not island-wide coverage. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 when the address sits in Canggu, including Berawa, Batu Bolong, Pererenan and Echo Beach. Travel for that cluster is already inside the published Bali rate. The commercial destination is [Bali private strength training](/bali/personal-training). This article is the investigation layer: access, heat, permission and how the quote is built.
 
 If you searched for a personal trainer in Canggu because you are staying near Batu Bolong, start with the lane, the gate and a dry indoor floor. A pin on a map is not a briefing. The [Canggu cluster page](/bali/canggu) explains visitor access. Indexable booking still runs through [Bali](/bali) and the session pages.
 
@@ -6,7 +6,7 @@ If you searched for a personal trainer in Canggu because you are staying near Ba
 
 In-zone means the published 60-minute private strength training rate already includes travel for this cluster. It does not mean every villa is easy. Berawa compounds, Pererenan lanes and Echo Beach addresses can have very different unloading, staff rules and indoor rectangles. Name the area inside Canggu, not only “Bali”.
 
-The hour is one person at Rp 1.050.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Yoga in the same villa is a different product: [private yoga in Bali](/private-yoga) includes two people in the published rate. Boxing is one person after a space check. Do not mix those rules in one WhatsApp sentence.
+The hour is one person at Rp 1.300.000. Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base rate. Yoga in the same villa is a different product: [private yoga in Bali](/private-yoga) includes two people in the published rate. Boxing is one person after a space check. Do not mix those rules in one WhatsApp sentence.
 
 A villa host saying “we have a trainer” is not this service. PersonalFitness.id matches, quotes and confirms. There is no public trainer directory.
 
@@ -22,9 +22,9 @@ The Denpasar office at Jl. Tukad Barito Timur III No.16 is an office, not a Cang
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks as the written quote. Canggu private strength training starts at Rp 1.050.000 for 60 minutes and one person. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu, including the Pererenan addresses discussed here. Other areas are on request. Changing villas still needs the coordinator to check access and instructor timing, even when the new address has included travel.
+The [pricing page](/pricing) uses the same blocks as the written quote. Canggu private strength training starts at Rp 1.300.000 for 60 minutes and one person. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu, including the Pererenan addresses discussed here. Other areas are on request. Changing villas still needs the coordinator to check access and instructor timing, even when the new address has included travel.
 
-A longer stay in Canggu can use a 3, 5 or 10-session pack when that many appointments fit the calendar. Private strength training packs are Rp 2.850.000, Rp 4.500.000 and Rp 8.000.000 respectively for one guest. Travel is already included across the five named Bali areas. Unused sessions follow the validity window on the quote. Read [two, three or four weeks](/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay) to plan the count around your stay.
+A longer stay in Canggu can use a 3, 5 or 10-session pack when that many appointments fit the calendar. Private strength training packs are Rp 3.675.000, Rp 5.875.000 and Rp 10.500.000 respectively for one guest. Travel is already included across the five named Bali areas. Unused sessions follow the validity window on the quote. Read [two, three or four weeks](/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay) to plan the count around your stay.
 
 There is no free intro hour. The first visit is the published rate, quoted in writing. Compare quotes like for like using [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). A group class in a Canggu studio is cheaper because it is not private and not in your villa.
 

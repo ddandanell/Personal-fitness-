@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router'
 import { ArrowLeft, ArrowRight, ArrowUpRight, CalendarDays, Check, CheckCircle2, ChevronDown, Clock3, Leaf, MapPin, MessageCircle, ShieldCheck, Sparkles, Users } from 'lucide-react'
 import { QrMark } from './qr'
-import { CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, POLICY_LINE, SINGLE_SESSION, baliISO, formatBali, getService, knownPlacement, packs, rp, services, sessionQuote, sessionTimes, villa, type DemoImage, type Service } from './data'
+import { CONCIERGE_LINE, HELP_EMAIL, PAYMENT_LINE, POLICY_LINE, SINGLE_SESSION, baliISO, formatBali, getService, knownPlacement, packsForService, rp, services, sessionQuote, sessionTimes, villa, type DemoImage, type Service } from './data'
 import { useDemoState } from './demo-state'
 import { QR_LANDING, demoHref } from './host'
 import { DemoLink, GuestDialog, VillaQr } from './shell'
@@ -79,7 +79,7 @@ export function ServiceDetail() {
         <div className="service-accordions"><details open><summary>What's included <ChevronDown size={16} /></summary><p>{service.included}</p><p><b>We bring:</b> {service.brought}</p></details><details><summary>Your villa setup <ChevronDown size={16} /></summary><p>{service.guestProvides}</p><p>{service.setup}</p></details><details><summary>Booking & rescheduling <ChevronDown size={16} /></summary><p>{CONCIERGE_LINE}</p><p>{POLICY_LINE} {PAYMENT_LINE}</p><p>Your professional is named in your written confirmation. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp.</p></details></div>
       </div>
     </div>
-    <section className="stay-longer"><div><span className="eyebrow">SETTLE INTO A RHYTHM</span><h2>Staying a little longer?</h2><p>Ask your concierge about a session pack. The schedule is arranged around your stay and instructor availability.</p></div><div className="pack-grid">{packs.filter((pack) => pack.sessions > 1).map((pack) => <div key={pack.id} className={pack.popular ? 'pack popular' : 'pack'}>{pack.popular && <span className="pack-label">5-SESSION OPTION</span>}<strong>{pack.sessions} sessions</strong><span>{rp(Math.round(pack.perSession * (service.basePrice ?? SINGLE_SESSION) / SINGLE_SESSION))} / session</span><small>{rp(Math.round(pack.perSession * (service.basePrice ?? SINGLE_SESSION) / SINGLE_SESSION) * pack.sessions)} total · one guest</small></div>)}</div></section>
+    <section className="stay-longer"><div><span className="eyebrow">SETTLE INTO A RHYTHM</span><h2>Staying a little longer?</h2><p>Ask your concierge about a session pack. The schedule is arranged around your stay and instructor availability.</p></div><div className="pack-grid">{packsForService(service.basePrice ?? SINGLE_SESSION).map((pack) => <div key={pack.id} className={pack.popular ? 'pack popular' : 'pack'}>{pack.popular && <span className="pack-label">5-SESSION OPTION</span>}<strong>{pack.sessions} sessions</strong><span>{rp(pack.perSession)} / session</span><small>{rp(pack.total)} total · {service.includedGuests === 2 ? 'up to two guests' : 'one guest'}</small></div>)}</div></section>
   </article>
 }
 

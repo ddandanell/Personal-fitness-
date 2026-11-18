@@ -1,10 +1,10 @@
-Private yoga in a Jakarta apartment is a 60-minute session at home for one or two people, not a studio class and not a rooftop photoshoot. PersonalFitness.id publishes the hour from Rp 900.000 in South and Central Jakarta. Two people are included in that rate when the floor holds both mats. The commercial pages are [private yoga](/private-yoga) and [private yoga in Jakarta](/jakarta/private-yoga). This article is the investigation layer: space, building access, pair pricing and how the quote is built.
+Private yoga in a Jakarta apartment is a 60-minute session at home for one or two people, not a studio class and not a rooftop photoshoot. PersonalFitness.id publishes the hour from Rp 1.125.000 in South and Central Jakarta. Two people are included in that rate when the floor holds both mats. The commercial pages are [private yoga](/private-yoga) and [private yoga in Jakarta](/jakarta/private-yoga). This article is the investigation layer: space, building access, pair pricing and how the quote is built.
 
 If you searched for private yoga at home in Jakarta because a studio commute ate the morning, start with the lobby. Lifts, visitor passes and a room that can close matter more than a view. The [Jakarta home training setup](/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session) covers the building. This page covers the yoga hour.
 
 ## What the hour includes
 
-The published Jakarta yoga rate is Rp 900.000 for 60 minutes, one or two people, in-zone. In-zone is South Jakarta and Central Jakarta. The teaching load is one professional, not two private classes glued together. If one of you is new and the other is not, say so. The cues change. The rate does not split into two products.
+The published Jakarta yoga rate is Rp 1.125.000 for 60 minutes, one or two people, in-zone. In-zone is South Jakarta and Central Jakarta. The teaching load is one professional, not two private classes glued together. If one of you is new and the other is not, say so. The cues change. The rate does not split into two products.
 
 A third person is not “just another mat”. Extra people are quoted if the floor allows. Larger groups need space approval. We will not run a living-room class of six at the pair price.
 
@@ -30,7 +30,7 @@ The Denpasar office is irrelevant to this hour. Sessions run at your Jakarta hom
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Jakarta private yoga starts at Rp 900.000 for 60 minutes, up to two people, in-zone. Extra people are billed. Ninety minutes add 45 percent of the base rate. Bali yoga is a different city rate: Rp 850.000, covered in [private yoga prices in Bali](/resources/private-yoga-prices-in-bali-duration-travel-and-group-size). Do not mix the two quotes.
+The [pricing page](/pricing) uses the same blocks operations uses. Jakarta private yoga starts at Rp 1.125.000 for 60 minutes, up to two people, in-zone. Extra people are billed. Ninety minutes add 45 percent of the base rate. Bali yoga is a different city rate: Rp 1.050.000, covered in [private yoga prices in Bali](/resources/private-yoga-prices-in-bali-duration-travel-and-group-size). Do not mix the two quotes.
 
 There is no sunrise premium. There is no view premium. There is no “apartment yoga tax” beyond the published Jakarta rate plus access reality. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs) if you are mixing yoga with training costs. They are different products.
 

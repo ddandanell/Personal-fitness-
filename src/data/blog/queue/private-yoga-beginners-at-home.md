@@ -1,4 +1,4 @@
-Private yoga for beginners at home is a 60-minute teaching hour at your villa or apartment, not a crowded studio and not a flexibility promise in one week. PersonalFitness.id publishes private yoga from Rp 850.000 in Bali and Rp 900.000 in Jakarta, with up to two people included when the floor holds both mats. The commercial pages are [private yoga](/private-yoga), [Bali yoga](/bali/private-yoga) and [Jakarta yoga](/jakarta/private-yoga). This article is the investigation layer: how to say beginner, what the hour includes, and how the quote is built.
+Private yoga for beginners at home is a 60-minute teaching hour at your villa or apartment, not a crowded studio and not a flexibility promise in one week. PersonalFitness.id publishes private yoga from Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta, with up to two people included when the floor holds both mats. The commercial pages are [private yoga](/private-yoga), [Bali yoga](/bali/private-yoga) and [Jakarta yoga](/jakarta/private-yoga). This article is the investigation layer: how to say beginner, what the hour includes, and how the quote is built.
 
 If you searched for beginner private yoga at home because a group class felt too fast, write that in one line. We will not guess. We will not run two private classes in one hour because one person is new and the other is not, unless you say so and we slow the shared pace.
 
@@ -20,9 +20,9 @@ The Denpasar office is not a beginner studio you walk into. You practise at the 
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 850.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 900.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
+The [pricing page](/pricing) uses the same blocks operations uses. Bali yoga starts at Rp 1.050.000 for 60 minutes, one or two people, in-zone. Jakarta starts at Rp 1.125.000. Extra people beyond two are billed if the floor allows. Ninety minutes add 45 percent of the base. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Canggu, Seminyak, South Jakarta and Central Jakarta do not add travel on this session.
 
-Programmes of 6, 9 and 12 visits take about 9.5, 14.3 and 23.8 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
+Programmes of 3, 5 and 10 visits take about 5, 10 and 20 percent off session charges. A beginner on a four-week block still needs the first paid hour to prove the floor. Read [programmes](/programmes).
 
 Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 

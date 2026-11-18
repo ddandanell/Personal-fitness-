@@ -38,18 +38,36 @@ try {
   const base={service:'personal-training',city:'Bali',durationMin:60,participants:1}
   for(const area of ['canggu','seminyak','sanur','ubud','uluwatu']) {
     const quote=estimateQuote({...base,area})
-    assert.equal(quote.total,1050000,area+': published rate must include travel')
+    assert.equal(quote.total,1300000,area+': published rate must include travel')
     assert.equal(quote.travel,0)
     assert.ok(!/travel fee|not inside this total/.test(quote.notes.join(' ')))
   }
   for(const city of ['Bali','Jakarta']) assert.equal(estimateQuote({...base,city,service:'boxing-fitness',participants:2}).ok,false)
-  assert.equal(estimateQuote({...base,service:'private-yoga',participants:2}).total,850000)
+  assert.equal(estimateQuote({...base,service:'private-yoga',participants:2}).total,1050000)
   assert.equal(estimateQuote({...base,service:'private-yoga',participants:3}).ok,false)
   assert.equal(estimateQuote({...base,city:'Jakarta',area:'north-jakarta'}).ok,false)
   assert.equal(partner.COMMISSION_PCT,10)
   assert.equal(partner.COMMISSION_BASE,'guest-payment')
   const yoga=getService('private-yoga')
-  assert.equal(sessionQuote(2,yoga.maxGuests,yoga.slug).total,850000)
+  assert.equal(sessionQuote(2,yoga.maxGuests,yoga.slug).total,1050000)
+  const { publicServices } = await server.ssrLoadModule('/src/data/publicOffer.ts')
+  const { programmes } = await server.ssrLoadModule('/src/data/catalog.ts')
+  for (const city of ['Bali', 'Jakarta']) {
+    for (const service of publicServices) {
+      let previous = Infinity
+      for (const pack of programmes) {
+        const quote = estimateQuote({ ...base, city, service: service.slug, programme: pack.slug })
+        assert.ok(quote.ok && quote.base >= 850000 && quote.base < previous, city + ' ' + service.slug + ' ' + pack.slug)
+        assert.equal(quote.total, quote.base * pack.sessions)
+        previous = quote.base
+      }
+    }
+  }
+  for (const [programme, expected] of [['single',1050000],['pack-3',1000000],['pack-5',950000],['pack-10',850000]]) {
+    assert.equal(estimateQuote({...base, service:'private-yoga', programme, participants:2}).base, expected)
+  }
+  const { packsForService } = await server.ssrLoadModule('/src/villa-demo/data.ts')
+  assert.equal(packsForService(yoga.basePrice).at(-1).total, 8500000)
   assert.equal(getService('boxing').maxGuests,1)
   assert.equal((await fs.stat('public/partners/villa-wellness-menu.pdf')).size>100000,true)
   assert.equal((await fs.stat('public/partners/villa-wellness-menu.png')).size>100000,true)

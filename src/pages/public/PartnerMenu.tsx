@@ -1,5 +1,6 @@
 import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
 import { TRAVEL_DISCLAIMER, TRAVEL_DISCLAIMER_ID } from '@/data/offerCopy'
+import { publicServices } from '@/data/publicOffer'
 import { useMemo } from 'react'
 import { useSearchParams } from 'react-router'
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
@@ -9,14 +10,14 @@ import { partner } from '@/config/partner'
 
 const menuSlugs: Record<string, string> = { 'Private yoga': 'private-yoga', 'Private Strength Training': 'personal-training', 'Bodywork & Recovery': 'bodywork-recovery', 'Zumba & Dance Fitness': 'zumba-dance-fitness', 'Mat Pilates': 'mat-pilates', 'Mobility & stretching': 'mobility-coaching', 'Boxing fitness': 'boxing-fitness', 'Guided meditation': 'guided-meditation' }
 const lines = [
-  ['Private yoga', 850_000, 'up to 2 people'],
-  ['Private Strength Training', 1_050_000, '1 guest'],
-  ['Bodywork & Recovery', 1_050_000, 'wellness hour'],
-  ['Zumba & Dance Fitness', 1_050_000, 'fun cardio'],
-  ['Mat Pilates', 950_000, 'no reformer'],
-  ['Mobility & stretching', 850_000, 'guided movement'],
-  ['Boxing fitness', 1_000_000, 'pads only · 1 guest'],
-  ['Guided meditation', 800_000, 'up to 2 people'],
+  ['Private yoga', 'up to 2 people'],
+  ['Private Strength Training', '1 guest'],
+  ['Bodywork & Recovery', 'wellness hour'],
+  ['Zumba & Dance Fitness', 'fun cardio'],
+  ['Mat Pilates', 'no reformer'],
+  ['Mobility & stretching', 'guided movement'],
+  ['Boxing fitness', 'pads only · 1 guest'],
+  ['Guided meditation', 'up to 2 people'],
 ]
 
 const partnerCardId: Record<string, string> = {
@@ -29,7 +30,7 @@ const partnerCardId: Record<string, string> = {
   "Boxing fitness": "Kebugaran tinju",
   "Guided meditation": "Meditasi terpandu",
   "up to 2": "maks. 2 orang",
-  "Rp 1.050.000 single": "Rp 1.050.000 satu orang",
+  "Rp 1.300.000 single": "Rp 1.300.000 satu orang",
   "wellness hour": "jam pemulihan",
   "fun cardio": "kardio santai",
   "no reformer": "tanpa reformer",
@@ -53,8 +54,8 @@ export default function PartnerMenu() {
       <h1>{heading}</h1>
       <p className="large-copy">{lang === 'id' ? 'Instruktur untuk sesi Anda disebutkan pada kutipan tertulis.' : 'Instructors come to your villa.'}</p>
       <ul className="menu-rates">
-        {lines.map(([title, price, note]) => (
-          <li key={String(title)}><strong>{lang === 'id' ? partnerCardId[String(title)] || title : title}</strong><ServiceRequestBadge slug={menuSlugs[String(title)]} lang={lang} /><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(Number(price))} · {lang === 'id' ? partnerCardId[String(note)] || note : note}</span></li>
+        {lines.map(([title, note]) => (
+          <li key={String(title)}><strong>{lang === 'id' ? partnerCardId[String(title)] || title : title}</strong><ServiceRequestBadge slug={menuSlugs[String(title)]} lang={lang} /><span>{lang === 'id' ? 'mulai' : 'from'} {formatIdr(publicServices.find(service => service.slug === menuSlugs[title])!.prices.Bali!)} · {lang === 'id' ? partnerCardId[String(note)] || note : note}</span></li>
         ))}
       </ul>
       {partner.GROUP_YOGA_RATE_BALI && partner.GROUP_YOGA_MAX_PEOPLE && (

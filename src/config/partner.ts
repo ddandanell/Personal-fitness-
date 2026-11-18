@@ -74,7 +74,7 @@ export function commissionSentence(lang: 'en' | 'id' = 'en') {
 }
 
 export const EXAMPLE_MONTHLY_SESSIONS = 13
-export const EXAMPLE_MONTHLY_SESSION_VALUE = 12_096_000
+export const EXAMPLE_MONTHLY_SESSION_VALUE = 14_112_000
 
 export function exampleCommission() {
   if (partner.COMMISSION_PCT == null) return null

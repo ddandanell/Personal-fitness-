@@ -994,3 +994,11 @@ body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.
 .public-policy-summary { margin: 16px 0; font-size: 12px; line-height: 1.8; }
 .public-policy-summary p { margin: 0 0 9px; }
 .site-footer .public-policy-summary { font-size: 11px; }
+
+.pack-rate-details { border-bottom: 1px solid currentColor; padding: 1rem 0; }
+.pack-rate-details summary { cursor: pointer; font-weight: 650; }
+.pack-rate-scroll { overflow-x: auto; margin-top: 1rem; }
+.pack-rate-scroll table { border-collapse: collapse; width: 100%; }
+.pack-rate-scroll th, .pack-rate-scroll td { padding: .75rem; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; border-bottom: 1px solid #cbcec8; }
+.pack-rate-scroll th:first-child { text-align: left; }
+.pack-rate-scroll .request-status { margin-left: .5rem; }

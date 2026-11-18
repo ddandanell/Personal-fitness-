@@ -4,9 +4,9 @@ If you searched whether a personal trainer at home should stay for 90 minutes, s
 
 ## What the 45 percent line means
 
-The published rates are 60-minute in-zone starting prices. Private Strength Training is Rp 1.050.000. Private yoga is Rp 850.000 and Rp 900.000. Mat Pilates is Rp 950.000 and Rp 1.000.000. Mobility is Rp 850.000 and Rp 900.000. Boxing is Rp 1.000.000 and Rp 1.050.000. Guided meditation is Rp 800.000 and Rp 850.000.
+The published rates are 60-minute in-zone starting prices. Private Strength Training is Rp 1.300.000. Private yoga is Rp 1.050.000 and Rp 1.125.000. Mat Pilates is Rp 1.200.000 and Rp 1.250.000. Mobility is Rp 1.050.000 and Rp 1.125.000. Boxing is Rp 1.250.000 and Rp 1.300.000. Guided meditation is Rp 1.050.000 and Rp 1.050.000.
 
-Ninety minutes adds 45 percent of the city base when the longer appointment is accepted. Bali private strength training is Rp 1.050.000 plus Rp 472.500, or Rp 1.522.500 for 90 minutes before an eligible second guest. Travel is included in the five named Bali areas. The [pricing page](/pricing) estimator uses the same duration rule.
+Ninety minutes adds 45 percent of the city base when the longer appointment is accepted. Bali private strength training is Rp 1.300.000 plus Rp 585.000, or Rp 1.885.000 for 90 minutes before an eligible second guest. Travel is included in the five named Bali areas. The [pricing page](/pricing) estimator uses the same duration rule.
 
 Asking for “a long session” in WhatsApp is not a duration. Write 60 or 90.
 
@@ -24,7 +24,7 @@ Two people on [private strength training](/personal-training) who actually share
 
 Yoga for two is already a pair at 60 minutes. Extending yoga to 90 adds 45 percent of the yoga base. It does not include a third person. Extra people are a different line. See [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 
-Programmes apply about 9.5, 14.3 and 23.8 percent to session charges, including the 90-minute uplift when that duration is on the quote. Travel in Ubud, Sanur or Uluwatu is still per visit. A 90-minute Ubud hour does not make travel free.
+Programmes apply about 5, 10 and 20 percent to session charges, including the 90-minute uplift when that duration is on the quote. Travel in Ubud, Sanur or Uluwatu is still per visit. A 90-minute Ubud hour does not make travel free.
 
 ## What we will not do with duration
 
@@ -53,7 +53,7 @@ Duration is a line on the quote. PersonalFitness.id exists to write that line be
 
 ## Worked totals without pretending they are bookings
 
-Bali private strength training, Canggu, 60 minutes, one person: Rp 1.050.000. The same session at 90 minutes is Rp 1.522.500 before an eligible second guest. Jakarta training in South Jakarta uses the same published Rp 1.050.000 base and Rp 1.522.500 duration total. Ubud training, 60 minutes, is also Rp 1.050.000 with travel included. Extending the session changes duration, not whether Ubud travel is included.
+Bali private strength training, Canggu, 60 minutes, one person: Rp 1.300.000. The same session at 90 minutes is Rp 1.885.000 before an eligible second guest. Jakarta training in South Jakarta uses the same published Rp 1.300.000 base and Rp 1.885.000 duration total. Ubud training, 60 minutes, is also Rp 1.300.000 with travel included. Extending the session changes duration, not whether Ubud travel is included.
 
 These are estimator blocks, not reservations. Availability still needs a two-hour window and a written quote. If 90 minutes is a way of asking for two services, stop and name two sessions. PersonalFitness.id will not smuggle boxing into the last half of a yoga hour because the clock said 90.
 

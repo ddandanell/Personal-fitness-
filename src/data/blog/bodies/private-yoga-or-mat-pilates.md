@@ -46,7 +46,7 @@ Do not choose a prepaid programme simply because its discount looks attractive. 
 
 A paid single session is a reasonable starting request if you are trying a private format for the first time. Explain what you would like to experience and which dates could work. After the appointment, you can discuss a regular pattern if it fits your plans and repeat professional availability can be confirmed.
 
-The published eligible pack reductions are about 9.5%, 14.3% and 23.8% for 3, 5 and 10 sessions. The written quote confirms which service and session charges are eligible, along with any separately agreed external costs. Bali travel is included across the five named areas. Each pack names its dates, count and validity period; it is not an automatically renewing subscription.
+The published eligible pack reductions are about 5%, 10% and 20% for 3, 5 and 10 sessions. The written quote confirms which service and session charges are eligible, along with any separately agreed external costs. Bali travel is included across the five named areas. Each pack names its dates, count and validity period; it is not an automatically renewing subscription.
 
 For a mixed household routine, keep each appointment’s participants visible. Yoga for two on one day and individual Pilates on another should remain distinct lines when the coordinator checks the schedule and total. The [programme page](/programmes) helps you compare those practical arrangements.
 

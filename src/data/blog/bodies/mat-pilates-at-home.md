@@ -1,6 +1,6 @@
 Mat Pilates at home is a 60-minute private session on the floor you already have. You need a clear rectangle, a mat, and an honest sentence about experience. You do not need a reformer machine, a studio membership, or a medical story pasted into WhatsApp.
 
-PersonalFitness.id sells mat work only. The commercial page is [mat Pilates](/mat-pilates). Bali starts at Rp 950.000. Jakarta starts at Rp 1.000.000. This article is the equipment and expectation filter so you do not buy the wrong format.
+PersonalFitness.id sells mat work only. The commercial page is [mat Pilates](/mat-pilates). Bali starts at Rp 1.200.000. Jakarta starts at Rp 1.250.000. This article is the equipment and expectation filter so you do not buy the wrong format.
 
 If you still need the whole offer, the [homepage](/) is the map. If you already know you want control work in a living room, stay here.
 

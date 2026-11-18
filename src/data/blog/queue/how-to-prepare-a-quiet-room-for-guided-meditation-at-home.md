@@ -1,6 +1,6 @@
 Preparing a quiet room for guided meditation at home is mostly a practical job. You need a private place where voices can be heard, phones can stay out of reach and everyone can sit comfortably for the agreed hour. You do not need to turn a Bali villa or Jakarta apartment into a retreat. You also do not need incense, special furniture or a perfect view.
 
-PersonalFitness.id offers [guided meditation at home](/guided-meditation) as a 60-minute guided session for one or two adults. The published starting price is Rp 800.000 in Bali and Rp 850.000 in Jakarta for an accepted in-zone visit. The service is a guided sit, not therapy, medical care or a treatment for a diagnosed condition. The written quote confirms the actual address, time, participants and total before you pay.
+PersonalFitness.id offers [guided meditation at home](/guided-meditation) as a 60-minute guided session for one or two adults. The published starting price is Rp 1.050.000 in Bali and Rp 1.050.000 in Jakarta for an accepted in-zone visit. The service is a guided sit, not therapy, medical care or a treatment for a diagnosed condition. The written quote confirms the actual address, time, participants and total before you pay.
 
 This guide answers a narrower question: what should you change in the room before the instructor arrives? It protects the commercial service page by focusing on setup rather than trying to sell a separate meditation product.
 
@@ -68,7 +68,7 @@ Imagine a couple in a South Jakarta apartment. The building gym is shared and ou
 
 South and Central Jakarta include named in-zone pockets for accepted visits. North, West and East Jakarta remain by request. A location page does not guarantee that a professional can reach every building at every time. Use the [Jakarta service area guide](/jakarta) to identify the correct cluster, then wait for the written quote.
 
-The published Jakarta guided meditation starting price is Rp 850.000 for 60 minutes and one or two adults. Any travel or access cost for a by-request address must be confirmed rather than guessed.
+The published Jakarta guided meditation starting price is Rp 1.050.000 for 60 minutes and one or two adults. Any travel or access cost for a by-request address must be confirmed rather than guessed.
 
 ## The five-minute check before the instructor arrives
 

@@ -16,7 +16,7 @@ export default function WhyTheRate() {
         <div>
           <Eyebrow>Why this rate</Eyebrow>
           <h2>The published hour is a managed visit, not a walk-up class.</h2>
-          <p className="large-copy">Some Bali trainers advertise Rp 550.000–650.000 and a complimentary first session. PersonalFitness.id publishes from Rp 1.050.000 because the product is different: matching, confirmation, travel rules and a professional named in writing before you pay.</p>
+          <p className="large-copy">Some Bali trainers advertise Rp 550.000–650.000 and a complimentary first session. PersonalFitness.id prices a single strength session from Rp 1.300.000 because the product is different: matching, confirmation, travel rules and a professional named in writing before you pay.</p>
           <p>That is the comparison that matters. A cheaper cash rate without access checks or a written quote is a different service. Read <TextLink to="/professional-standards">how we match professionals</TextLink> and <TextLink to="/how-it-works">how the hour is confirmed</TextLink>.</p>
         </div>
         <ul className="check-list large-list">

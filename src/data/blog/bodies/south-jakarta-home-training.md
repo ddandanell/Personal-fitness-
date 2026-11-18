@@ -1,4 +1,4 @@
-Home private strength training in South Jakarta is an in-zone apartment or house hour, not a studio pack and not Greater Jakarta coverage. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 when we can time Kebayoran, Senopati, SCBD, Kemang, Cilandak and nearby streets. The commercial destination is [Jakarta private strength training](/jakarta/personal-training). This article is the investigation layer: lobby access, a living-room rectangle, and how the quote is built.
+Home private strength training in South Jakarta is an in-zone apartment or house hour, not a studio pack and not Greater Jakarta coverage. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 when we can time Kebayoran, Senopati, SCBD, Kemang, Cilandak and nearby streets. The commercial destination is [Jakarta private strength training](/jakarta/personal-training). This article is the investigation layer: lobby access, a living-room rectangle, and how the quote is built.
 
 If you searched for a personal trainer in Kemang or Senopati, start with the building name. The session is often won or lost downstairs. The [South Jakarta cluster page](/jakarta/south-jakarta) explains visitor access. Indexable booking still runs through [Jakarta](/jakarta) and the session pages.
 
@@ -6,7 +6,7 @@ If you searched for a personal trainer in Kemang or Senopati, start with the bui
 
 In-zone means the published 60-minute private strength training rate already includes travel for this cluster when we can time the visit. It does not mean every tower is easy. A visitor pass, parking and a security desk that has never seen an outside coach will eat the hour if they are not on the quote.
 
-The hour is one person at Rp 1.050.000. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are quoted after a timing check, with travel or a decline.
+The hour is one person at Rp 1.300.000. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are quoted after a timing check, with travel or a decline.
 
 A building gym with other residents walking through is not a private hour unless you have written permission and a door that can close.
 
@@ -22,7 +22,7 @@ The Denpasar office is irrelevant to this hour. Sessions run at your Jakarta hom
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. South Jakarta private strength training starts at Rp 1.050.000 for 60 minutes, one person. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs). A cheap group class is not a like-for-like private visit.
+The [pricing page](/pricing) uses the same blocks operations uses. South Jakarta private strength training starts at Rp 1.300.000 for 60 minutes, one person. Compare studio packs using [personal trainer Jakarta prices](/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs). A cheap group class is not a like-for-like private visit.
 
 There is no free intro. There is no Kemang premium. There is access reality. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request, not the card number.
 
@@ -62,7 +62,7 @@ A South Jakarta home trainer is useful when the lobby, the floor and the quote m
 
 Kemang houses can have parking and a dog. Senopati towers can have a visitor pass and a 15-minute lift wait. SCBD residences can have a weekday morning crush. All three can be in-zone. None of them should be written as “Kemang-ish”. Name the building. Name weekday or weekend. A 06:30 weekday request in SCBD is a different supply object from a 09:00 Sunday in a landed house.
 
-If your helper will be in the kitchen, say so. If a child will watch from the sofa, a parent stays. If you wanted Pilates instead of training, say Pilates. The Rp 1.050.000 training line will not quietly become a mat hour because the coffee table looked small.
+If your helper will be in the kitchen, say so. If a child will watch from the sofa, a parent stays. If you wanted Pilates instead of training, say Pilates. The Rp 1.300.000 training line will not quietly become a mat hour because the coffee table looked small.
 
 ## Weekday mornings versus weekend quiet
 

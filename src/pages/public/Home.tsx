@@ -1,3 +1,4 @@
+import { SESSION_ANCHOR, programmes } from '@/data/catalog'
 import { PolicySummary, ServiceRequestBadge } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
@@ -49,8 +50,8 @@ export default function Home() {
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
-          <div><strong>{formatIdr(900_000)}</strong><span>5-session pack, per session. Save {formatIdr(750_000)}.</span></div>
+          <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
+          <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>5-session pack, per session. Save {formatIdr((SESSION_ANCHOR - programmes.find(pack => pack.sessions === 5)!.perSession) * 5)}.</span></div>
           <div><strong>Your place</strong><span>Villa, home or hotel. A second guest is Rp 250.000 when the rate is for one person.</span></div>
         </div>
       </section>

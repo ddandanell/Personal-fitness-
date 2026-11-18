@@ -1,4 +1,4 @@
-Mat Pilates prices look chaotic because four products share a word: mat class, reformer class, studio private, and home private. PersonalFitness.id sells the fourth, on a mat, at your location. Bali Rp 950.000. Jakarta Rp 1.000.000. Sixty minutes. One person in the published rate.
+Mat Pilates prices look chaotic because four products share a word: mat class, reformer class, studio private, and home private. PersonalFitness.id sells the fourth, on a mat, at your location. Bali Rp 1.200.000. Jakarta Rp 1.250.000. Sixty minutes. One person in the published rate.
 
 If you compare those numbers to a Rp 180.000 reformer class, you are comparing a bus to a taxi. Both move. They are not the same ride. The commercial pages are [mat Pilates](/mat-pilates) and [pricing](/pricing). The [homepage](/) holds the other services.
 
@@ -33,7 +33,7 @@ A villa that wants four people on a narrow landing will get a no, not a discount
 
 ## Studio private versus our home private
 
-Take a studio private at Rp 1.200.000 and add your car time. Take our Rp 1.000.000 Jakarta home rate with no car time. Then ask which hour you will actually keep at 06:30. The cheaper life is the hour that happens.
+Take a studio private at Rp 1.200.000 and add your car time. Take our Rp 1.250.000 Jakarta home rate with no car time. Then ask which hour you will actually keep at 06:30. The cheaper life is the hour that happens.
 
 If the studio has a machine you love, stay. If the studio is a 40-minute disappointment in rain, home mat is the product.
 
@@ -53,11 +53,11 @@ Estimator: mat Pilates, city, area, people, duration. WhatsApp the result. Open 
 
 ## Worked examples
 
-Example A. One person, 60 minutes, Canggu living room. Planning estimate: Rp 950.000. No travel. No extra person.
+Example A. One person, 60 minutes, Canggu living room. Planning estimate: Rp 1.200.000. No travel. No extra person.
 
-Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.000.000 plus a second guest at Rp 250.000 equals Rp 1.250.000, while building access still has to be agreed.
+Example B. Two people, 60 minutes, Kebayoran apartment. Jakarta base Rp 1.250.000 plus a second guest at Rp 250.000 equals Rp 1.500.000, while building access still has to be agreed.
 
-Example C. One person, 60 minutes, Uluwatu. The Bali mat Pilates base is Rp 950.000 with travel included. If you request 90 minutes and the longer visit is accepted, add 45 percent of Rp 950.000, which is Rp 427.500. The 90-minute session total is Rp 1.377.500, with no Uluwatu travel line.
+Example C. One person, 60 minutes, Uluwatu. The Bali mat Pilates base is Rp 1.200.000 with travel included. If you request 90 minutes and the longer visit is accepted, add 45 percent of Rp 1.200.000, which is Rp 540.000. The 90-minute session total is Rp 1.740.000, with no Uluwatu travel line.
 
 Example D. A Jakarta mat Pilates pack should use the eligible 3, 5 or 10-session option shown on the pricing page. The quote confirms that service’s per-session rate, total and validity window before payment. Choose a count that you can attend; unused sessions follow the written validity terms.
 
@@ -65,7 +65,7 @@ Example D. A Jakarta mat Pilates pack should use the eligible 3, 5 or 10-session
 
 If you are still shopping reformer, ask them to write: machine or mat, springs condition, class size, your commute, pack expiry, late-cancel rule, and whether a private reformer hour is even available. Then put our mat home rate next to their private reformer rate, not next to their group class.
 
-If their private reformer is Rp 1.500.000 and you love the machine, take it. If their group class is Rp 200.000 and you never go because of traffic, our Rp 1.000.000 home hour may be the cheaper habit. The spreadsheet needs the skip rate, not only the sticker.
+If their private reformer is Rp 1.500.000 and you love the machine, take it. If their group class is Rp 200.000 and you never go because of traffic, our Rp 1.250.000 home hour may be the cheaper habit. The spreadsheet needs the skip rate, not only the sticker.
 
 ## Props, flooring and the false economy of “I have a carpet”
 

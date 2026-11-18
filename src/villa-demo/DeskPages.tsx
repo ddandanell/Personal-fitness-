@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { PAYMENT_LINE, PAYMENT_SENT, baliISO, commissionRate, completedCount, earnedCommission, eligibleRevenue, formatBali, rp, sampleBookings, sampleQueue, services, villa, type QueueStage } from './data'
+import { PAYMENT_LINE, PAYMENT_SENT, baliISO, commissionRate, completedCount, earnedCommission, eligibleRevenue, formatBali, rp, sampleBookings, sampleQueue, services, sessionQuote, villa, type QueueStage } from './data'
 import { useDemoState } from './demo-state'
 import { DemoLink } from './shell'
 
@@ -27,7 +27,7 @@ export function PartnerDesk() {
       email: '',
       note: 'Created from the villa desk in this demonstration.',
       preference: '',
-      total: 1_050_000,
+      total: sessionQuote(1, service.maxGuests, service.slug).total,
     })
     const saved = `${result.booking.reference}: ${result.booking.serviceName} on ${result.booking.date}`
     setMade(result.created ? `Saved ${saved}` : `Already saved as ${saved}`)
@@ -135,8 +135,8 @@ export function OpsDesk() {
         <section>
           <h2>Written quotes</h2>
           <ul className="ledger payments">
-            <li><span>PF-20418</span><span>{PAYMENT_SENT} {rp(1050000)}</span></li>
-            <li><span>PF-20430</span><span>{PAYMENT_LINE} {rp(1050000)}</span></li>
+            <li><span>PF-20418</span><span>{PAYMENT_SENT} {rp(sessionQuote(1, 2, 'private-yoga').total)}</span></li>
+            <li><span>PF-20430</span><span>{PAYMENT_LINE} {rp(sessionQuote(1, 2, 'private-strength').total)}</span></li>
             {booking && <li><span>{booking.reference}</span><span>{booking.payment === 'details-sent' ? PAYMENT_SENT : PAYMENT_LINE} {rp(booking.total)}</span></li>}
           </ul>
           <p className="quiet">This demonstration does not take a payment. The confirmation step reads: {PAYMENT_SENT}</p>

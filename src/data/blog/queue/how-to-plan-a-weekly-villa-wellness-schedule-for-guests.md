@@ -43,7 +43,7 @@ Here is a planning example for one villa. It is not a promise of availability:
 
 Each visit remains a separate named request. The people attending Tuesday do not automatically become participants on Thursday. A guest can book one visit without purchasing the whole example week.
 
-If a visitor wants a longer personal programme, compare the actual available dates through [programmes](/programmes). Blocks contain 3, 5 or 10 eligible visits with published reductions of about 9.5, 14.3 or 23.8 percent on eligible session charges. Travel is included in the five named Bali areas, while separately agreed external costs stay outside those reductions. A programme is a counted schedule with a written validity window, not an open class for every arriving guest.
+If a visitor wants a longer personal programme, compare the actual available dates through [programmes](/programmes). Blocks contain 3, 5 or 10 eligible visits with published reductions of about 5, 10 or 20 percent on eligible session charges. Travel is included in the five named Bali areas, while separately agreed external costs stay outside those reductions. A programme is a counted schedule with a written validity window, not an open class for every arriving guest.
 
 ## Use the right location rule
 
@@ -79,9 +79,9 @@ Photography is also separate. Do not treat a booked session as permission to mak
 
 ## Make pricing clear before the guest chooses
 
-The [pricing page](/pricing) publishes 60-minute starting prices and the calculation rules. In Bali, private strength training starts at Rp 1.050.000, private yoga at Rp 850.000, mat Pilates at Rp 950.000, mobility coaching at Rp 850.000, boxing fitness at Rp 1.000.000 and guided meditation at Rp 800.000.
+The [pricing page](/pricing) publishes 60-minute starting prices and the calculation rules. In Bali, private strength training starts at Rp 1.300.000, private yoga at Rp 1.050.000, mat Pilates at Rp 1.200.000, mobility coaching at Rp 1.050.000, boxing fitness at Rp 1.250.000 and guided meditation at Rp 1.050.000.
 
-In Jakarta, those starting prices are Rp 1.050.000, Rp 900.000, Rp 1.000.000, Rp 900.000, Rp 1.050.000 and Rp 850.000 respectively. Private Strength Training, mat Pilates and mobility extra participants add Rp 250.000 in Bali or Rp 250.000 in Jakarta when the shared setup is accepted. Yoga and guided meditation include up to two people. Boxing remains one person.
+In Jakarta, those starting prices are Rp 1.300.000, Rp 1.125.000, Rp 1.250.000, Rp 1.125.000, Rp 1.300.000 and Rp 1.050.000 respectively. Private Strength Training, mat Pilates and mobility extra participants add Rp 250.000 in Bali or Rp 250.000 in Jakarta when the shared setup is accepted. Yoga and guided meditation include up to two people. Boxing remains one person.
 
 Ninety minutes add 45 percent of the relevant city base before travel. A 90-minute visit does not combine two services. The written quote shows the final service, people, duration, travel and payment total.
 

@@ -4,9 +4,9 @@ If you searched whether two people can share a personal trainer at home, start w
 
 ## The published pair rule
 
-[Private yoga](/private-yoga) includes up to two people in the published rate: Rp 850.000 in Bali and Rp 900.000 in Jakarta for 60 minutes, in-zone, when the floor holds both mats. [Guided meditation](/guided-meditation) uses the same pair rule: Rp 800.000 in Bali and Rp 850.000 in Jakarta. A third person is not “just another mat”. Extra people are quoted if space allows.
+[Private yoga](/private-yoga) includes up to two people in the published rate: Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta for 60 minutes, in-zone, when the floor holds both mats. [Guided meditation](/guided-meditation) uses the same pair rule: Rp 1.050.000 in Bali and Rp 1.050.000 in Jakarta. A third person is not “just another mat”. Extra people are quoted if space allows.
 
-[Private Strength Training](/personal-training) is priced for one person: Rp 1.050.000. Extra people add Rp 250.000 in Bali and Rp 250.000 in Jakarta, once per extra person, not per minute. [Mat Pilates](/mat-pilates) and [mobility coaching](/mobility-coaching) follow that extra-person line. [Boxing fitness](/boxing-fitness) does not: the published boxing rate is one person after a space check. Two boxers is two hours or a different session.
+[Private Strength Training](/personal-training) is priced for one person: Rp 1.300.000. Extra people add Rp 250.000 in Bali and Rp 250.000 in Jakarta, once per extra person, not per minute. [Mat Pilates](/mat-pilates) and [mobility coaching](/mobility-coaching) follow that extra-person line. [Boxing fitness](/boxing-fitness) does not: the published boxing rate is one person after a space check. Two boxers is two hours or a different session.
 
 A villa of four guests is not automatically a group class. Larger groups need space approval and a written quote.
 
@@ -28,11 +28,11 @@ Tell us headcount in the first message. Adding four friends at 22:00 does not ke
 
 The [pricing page](/pricing) uses the same blocks as the written quote. Start with the city session rate, add a second guest only where that service allows one, and add 45 percent of the base for an accepted 90-minute session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. South and Central Jakarta retain included travel; North, West and East Jakarta remain on request after a timing check.
 
-Programme reductions of about 9.5, 14.3 and 23.8 percent apply to session charges, including extra-person fees that sit on those session charges. Travel is not reduced. Read [programmes](/programmes) before you prepay a block for two people who might not both attend every hour.
+Programme reductions of about 5, 10 and 20 percent apply to session charges, excluding the fixed second-guest charge. Travel is not reduced. Read [programmes](/programmes) before you prepay a block for two people who might not both attend every hour.
 
 There is no free extra person “because it is a couple”. There is no sunrise pair premium. There is no child-on-the-mat exception unless the quote says so, and a parent or guardian must stay for any minor.
 
-Worked examples help. Canggu yoga for two at the published Bali rate stays Rp 850.000 when the floor holds both mats. Canggu private strength training for two is Rp 1.050.000 plus Rp 250.000, or Rp 1.300.000. Jakarta training for two uses the same Rp 1.300.000 total. Jakarta yoga for two stays Rp 900.000. Ubud travel is included. Boxing is for one guest only; read [what pad-only means](/resources/private-boxing-fitness-at-home-what-pad-only-means) before you ask.
+Worked examples help. Canggu yoga for two at the published Bali rate stays Rp 1.050.000 when the floor holds both mats. Canggu private strength training for two is Rp 1.300.000 plus Rp 250.000, or Rp 1.550.000. Jakarta training for two uses the same Rp 1.550.000 total. Jakarta yoga for two stays Rp 1.125.000. Ubud travel is included. Boxing is for one guest only; read [what pad-only means](/resources/private-boxing-fitness-at-home-what-pad-only-means) before you ask.
 
 If you are comparing a studio couple-class to a villa pair hour, they are not like for like. The studio is a shared room. The villa hour is private, at your place, with access and cancellation written on the quote. Use [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like) when the comparison is training, not yoga.
 

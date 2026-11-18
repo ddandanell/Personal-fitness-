@@ -1,5 +1,5 @@
 import { estimateQuote, PACK_SERVICES } from './quote'
-import { getArea, getService, SESSION_ANCHOR, programmes, type City } from '@/data/catalog'
+import { getArea, getService, packSessionRate, programmes, type City } from '@/data/catalog'
 import { formatIdr } from './money'
 
 export const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const
@@ -29,12 +29,13 @@ export function estimateWellnessPlan(input: PlanInput) {
   const totalVisits = input.visits.length * input.weeks
   const eligibleVisits = lines.filter((line) => line.valid && eligible.has(line.visit.service) && line.quote.ok).length * input.weeks
   const pack = packForCount(eligibleVisits)
-  const discountRate = (SESSION_ANCHOR - pack.perSession) / SESSION_ANCHOR
   const priced = lines.filter((line) => line.valid && line.quote.ok)
   const sessionTotal = priced.reduce((sum, line) => sum + line.quote.base + line.quote.extraPeopleFee + line.quote.durationFee, 0) * input.weeks
   const travelTotal = priced.reduce((sum, line) => sum + line.quote.travel, 0) * input.weeks
-  const discountBase = priced.filter((line) => eligible.has(line.visit.service)).reduce((sum, line) => sum + line.quote.base + line.quote.extraPeopleFee + line.quote.durationFee, 0) * input.weeks
-  const saving = Math.round(discountBase * discountRate)
+  const saving = priced.reduce((sum, { quote }) => {
+    return sum + quote.base - packSessionRate(quote.base, pack.pricePercent)
+  }, 0) * input.weeks
+  const discountRate = sessionTotal > 0 ? saving / sessionTotal : 0
   const collisions = lines.some((line, index) => lines.some((other, otherIndex) => {
     if (otherIndex <= index || other.visit.day !== line.visit.day) return false
     const minutes = (time: string) => Number(time.split(':')[0]) * 60 + Number(time.split(':')[1])

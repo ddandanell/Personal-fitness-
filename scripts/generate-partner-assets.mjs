@@ -4,6 +4,7 @@ import os from 'node:os'
 import { createHash } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
+import { createServer } from 'vite'
 import fontkit from '@pdf-lib/fontkit'
 import { PDFDocument, PDFName, PDFString, rgb, pushGraphicsState, popGraphicsState, rectangle, clip, endPath } from 'pdf-lib'
 
@@ -81,7 +82,12 @@ if (refreshPng) {
   execFileSync('python3', ['-c', 'from PIL import Image; import sys; Image.open(sys.argv[1]).convert("RGB").save(sys.argv[2], "JPEG", quality=93, optimize=True)', photoPath, jpgPath], { stdio: 'inherit' })
 }
 
-const sourceHash = createHash('sha256').update(await fs.readFile(sourcePath)).update(await fs.readFile(photoPath)).update(await fs.readFile(jpgPath)).digest('hex')
+const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
+const { getService, programmes } = await server.ssrLoadModule('/src/data/catalog.ts')
+const { formatIdr } = await server.ssrLoadModule('/src/lib/money.ts')
+await server.close()
+const menuPrices = Object.fromEntries(['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'].map(slug => [slug, formatIdr(getService(slug).prices.Bali)]))
+const sourceHash = createHash('sha256').update(JSON.stringify([menuPrices, programmes])).update(await fs.readFile(sourcePath)).update(await fs.readFile(photoPath)).update(await fs.readFile(jpgPath)).digest('hex')
 const doc = await PDFDocument.create()
 doc.setTitle('Personal Fitness Bali Villa Wellness Partner Menu')
 doc.setAuthor('PersonalFitness.id')
@@ -174,14 +180,14 @@ text(first, 'SERVICE', M + 11, 370, 7.3, bold, C.forest)
 text(first, 'STARTING RATE', 273, 370, 7.3, bold, C.forest)
 text(first, 'GUESTS', 385, 370, 7.3, bold, C.forest)
 const rows = [
-  ['Private strength training', 'Rp 1.050.000', '1 guest; +Rp 250.000 for 2', false],
-  ['Private yoga', 'Rp 850.000', 'Up to 2 guests', false],
-  ['Mat Pilates', 'Rp 950.000', '1 guest; +Rp 250.000 for 2', false],
-  ['Mobility coaching', 'Rp 850.000', 'Individual quote', true],
-  ['Boxing fitness', 'Rp 1.000.000', '1 guest only', true],
-  ['Guided meditation', 'Rp 800.000', 'Up to 2 guests', true],
-  ['Bodywork & recovery', 'Rp 1.050.000', 'Individual quote', true],
-  ['Zumba & dance fitness', 'Rp 1.050.000', '1 guest; +Rp 250.000 for 2', true],
+  ['Private strength training', menuPrices['personal-training'], '1 guest; +Rp 250.000 for 2', false],
+  ['Private yoga', menuPrices['private-yoga'], 'Up to 2 guests', false],
+  ['Mat Pilates', menuPrices['mat-pilates'], '1 guest; +Rp 250.000 for 2', false],
+  ['Mobility coaching', menuPrices['mobility-coaching'], 'Individual quote', true],
+  ['Boxing fitness', menuPrices['boxing-fitness'], '1 guest only', true],
+  ['Guided meditation', menuPrices['guided-meditation'], 'Up to 2 guests', true],
+  ['Bodywork & recovery', menuPrices['bodywork-recovery'], 'Individual quote', true],
+  ['Zumba & dance fitness', menuPrices['zumba-dance-fitness'], '1 guest; +Rp 250.000 for 2', true],
 ]
 rows.forEach(([name, rate, guests, onRequest], index) => {
   const y = 334 - index * 28
@@ -226,7 +232,7 @@ rect(second, M, 525, W, 21, C.forest)
 text(second, 'PACK', M + 12, 532, 7.5, bold, C.white)
 text(second, 'PER SESSION', 235, 532, 7.5, bold, C.white)
 text(second, 'PACK TOTAL', 419, 532, 7.5, bold, C.white)
-const packs = [['3 sessions', 'Rp 950.000', 'Rp 2.850.000'], ['5 sessions', 'Rp 900.000', 'Rp 4.500.000'], ['10 sessions', 'Rp 800.000', 'Rp 8.000.000']]
+const packs = programmes.filter(pack => pack.sessions > 1).map(pack => [pack.sessions + ' sessions', formatIdr(pack.perSession), formatIdr(pack.perSession * pack.sessions)])
 packs.forEach(([name, rate, total], index) => {
   const yy = 501 - index * 25
   rect(second, M, yy - 6, W, 25, index % 2 === 0 ? C.white : C.pale)

@@ -1,4 +1,4 @@
-Personal trainer Jakarta prices split into three products people keep mixing: a studio package, a building gym add-on, and a managed home visit. They are not the same hour. PersonalFitness.id sells the third. The published rate is Rp 1.050.000 for 60 minutes, one person, in South or Central Jakarta.
+Personal trainer Jakarta prices split into three products people keep mixing: a studio package, a building gym add-on, and a managed home visit. They are not the same hour. PersonalFitness.id sells the third. The published rate is Rp 1.300.000 for 60 minutes, one person, in South or Central Jakarta.
 
 Compare those three on paper before you call anything expensive. The estimator is on [pricing](/pricing). The city page is [Jakarta private strength training](/jakarta/personal-training). The [homepage](/) still carries Bali if you split your month.
 
@@ -10,7 +10,7 @@ A building gym sells you access you already pay for in maintenance fees, plus a 
 
 A managed home visit sells you 60 minutes in the unit, plus the coordination of access, backup and a written quote. You do not drive. The coach does. Traffic is our problem inside the clusters we publish, and your problem if you live outside them.
 
-Rp 1.050.000 is the managed in-zone unit. Extra people Rp 250.000. Ninety minutes plus 45 percent. Outer municipalities are quoted with travel. That is the whole calculation.
+Rp 1.300.000 is the managed in-zone unit. Extra people Rp 250.000. Ninety minutes plus 45 percent. Outer municipalities are quoted with travel. That is the whole calculation.
 
 ## What a Jakarta quote must show
 
@@ -30,11 +30,11 @@ Missing tower information is how 06:30 sessions die. We will ask for it. Other o
 
 Parking. Overtime if the lobby holds the coach. A second person who “just joins”. A 90-minute request that was priced as 60. A travel fee for BSD that appeared after the “Jakarta rate”. A package that expires while you are in Singapore for work.
 
-Our programmes reduce 3, 5 or 10 sessions by about 9.5, 14.3 or 23.8 percent. They also expire on a validity window. That is not hidden if you read the quote. It is hidden if you only read the percentage on a social post.
+Our programmes reduce 3, 5 or 10 sessions by about 5, 10 or 20 percent. They also expire on a validity window. That is not hidden if you read the quote. It is hidden if you only read the percentage on a social post.
 
 ## How to compare a studio package to us
 
-Take the studio’s 10-session pack. Divide by 10. Add your travel time as money if you care about mornings. Add parking. Ask how many people share the coach. Then put our Rp 1.050.000 single-session rate next to that number with one person and no commute.
+Take the studio’s 10-session pack. Divide by 10. Add your travel time as money if you care about mornings. Add parking. Ask how many people share the coach. Then put our Rp 1.300.000 single-session rate next to that number with one person and no commute.
 
 If the studio still wins, take the studio. If the commute is the reason you do not train, the home visit wins even when the sticker is higher. The product is the hour you will actually do.
 
@@ -60,13 +60,13 @@ If you also keep a Bali villa month, price both cities. The [homepage](/) is the
 
 ## Worked examples
 
-Example A. One person, 60 minutes, Senopati apartment, in-zone. Planning estimate: Rp 1.050.000.
+Example A. One person, 60 minutes, Senopati apartment, in-zone. Planning estimate: Rp 1.300.000.
 
-Example B. Two people, 60 minutes, Menteng house. Rp 1.050.000 plus Rp 250.000 equals Rp 1.300.000. The living room still has to fit two movement paths.
+Example B. Two people, 60 minutes, Menteng house. Rp 1.300.000 plus Rp 250.000 equals Rp 1.550.000. The living room still has to fit two movement paths.
 
-Example C. One person, 90 minutes, Kemang. Base Rp 1.050.000 plus 45 percent (Rp 472.500) equals Rp 1.522.500. Only useful if you can actually stay in the room for 90 minutes before a call.
+Example C. One person, 90 minutes, Kemang. Base Rp 1.300.000 plus 45 percent (Rp 585.000) equals Rp 1.885.000. Only useful if you can actually stay in the room for 90 minutes before a call.
 
-Example D. Three private strength training sessions, one person, South Jakarta. The pack is Rp 2.850.000, or Rp 950.000 per session, compared with Rp 3.150.000 for three Rp 1.050.000 single visits. The saving is Rp 300.000. The quote confirms dates, access and the validity window; it remains private training at home.
+Example D. Three private strength training sessions, one person, South Jakarta. The pack is Rp 3.675.000, or Rp 1.225.000 per session, compared with Rp 3.900.000 for three Rp 1.300.000 single visits. The saving is Rp 225.000. The quote confirms dates, access and the validity window; it remains private training at home.
 
 Example E. BSD. There is no published in-zone rate. You get a travel quote or a decline after a timing check. A South or Central Jakarta starting rate is not automatically a BSD offer.
 

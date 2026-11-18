@@ -1,3 +1,4 @@
+import { programmes, packSessionRate, SESSION_ANCHOR } from '@/data/catalog'
 import { publicServices } from '@/data/publicOffer'
 import { isOnRequest, RESCHEDULE_NOTE } from '@/data/offerCopy'
 /** Villa Sora guest demonstration. Session requests remain in this tab.
@@ -12,18 +13,18 @@ export const BACKUP_LINE = 'A backup instructor is named only where available.'
 export const PAYMENT_LINE = 'Payment details are shared in your written quote.'
 export const PAYMENT_SENT = 'Payment details sent with confirmation.'
 export const LEAD_LINE = 'Requests are for a future Bali date, as supply allows. The preferred time is not reserved until an instructor is offered.'
-export const SINGLE_SESSION = 1_050_000
+export const SINGLE_SESSION = SESSION_ANCHOR
 export const SECOND_GUEST = 250_000
 export const WHATSAPP_DISPLAY = '+62 811-3803-488'
 export const WHATSAPP_URL = 'https://wa.me/628113803488'
 export const HELP_EMAIL = 'hello@personalfitness.id'
 
-export const packs = [
-  { id: 'single', label: 'Single', sessions: 1, perSession: 1_050_000, total: 1_050_000, popular: false },
-  { id: 'pack-3', label: '3-Session Pack', sessions: 3, perSession: 950_000, total: 2_850_000, popular: false },
-  { id: 'pack-5', label: '5-Session Pack', sessions: 5, perSession: 900_000, total: 4_500_000, popular: true },
-  { id: 'pack-10', label: '10-Session Pack', sessions: 10, perSession: 800_000, total: 8_000_000, popular: false },
-] as const
+export function packsForService(singleRate: number) {
+  return programmes.filter(pack => pack.sessions > 1).map(pack => {
+    const perSession = packSessionRate(singleRate, pack.pricePercent)
+    return { id: pack.slug, sessions: pack.sessions, perSession, total: perSession * pack.sessions, popular: pack.sessions === 5 }
+  })
+}
 
 export const sessionTimes = ['07:00', '08:00', '09:00', '10:00', '16:00', '17:00'] as const
 
@@ -287,10 +288,10 @@ export type SampleBooking = {
 
 export function sampleBookings(): SampleBooking[] {
   return [
-    { reference: 'PF-20418', guest: 'Lena Ortiz', service: 'Private Yoga', iso: baliISO(1), time: '08:00', status: 'Confirmed, as supply allows', people: 1, total: 1_050_000, payment: PAYMENT_SENT },
-    { reference: 'PF-20422', guest: 'Jonah Hale', service: 'Mat Pilates & Mobility', iso: baliISO(3), time: '10:00', status: 'Checking availability', people: 2, total: 1_300_000, payment: PAYMENT_LINE },
-    { reference: 'PF-20430', guest: 'Mira Chen', service: 'Private Strength Training', iso: baliISO(4), time: '07:00', status: 'Offer ready', people: 1, total: 1_050_000, payment: PAYMENT_LINE },
-    { reference: 'PF-20390', guest: 'Sam Keller', service: 'Bodywork & Recovery', iso: baliISO(-2), time: '16:00', status: 'Confirmed, as supply allows', people: 1, total: 1_050_000, payment: PAYMENT_SENT },
+    { reference: 'PF-20418', guest: 'Lena Ortiz', service: 'Private Yoga', iso: baliISO(1), time: '08:00', status: 'Confirmed, as supply allows', people: 1, total: sessionQuote(1, 2, 'private-yoga').total, payment: PAYMENT_SENT },
+    { reference: 'PF-20422', guest: 'Jonah Hale', service: 'Mat Pilates & Mobility', iso: baliISO(3), time: '10:00', status: 'Checking availability', people: 2, total: sessionQuote(2, 2, 'mat-pilates').total, payment: PAYMENT_LINE },
+    { reference: 'PF-20430', guest: 'Mira Chen', service: 'Private Strength Training', iso: baliISO(4), time: '07:00', status: 'Offer ready', people: 1, total: sessionQuote(1, 2, 'private-strength').total, payment: PAYMENT_LINE },
+    { reference: 'PF-20390', guest: 'Sam Keller', service: 'Bodywork & Recovery', iso: baliISO(-2), time: '16:00', status: 'Confirmed, as supply allows', people: 1, total: sessionQuote(1, 2, 'bodywork').total, payment: PAYMENT_SENT },
   ]
 }
 

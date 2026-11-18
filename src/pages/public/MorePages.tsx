@@ -8,7 +8,7 @@ import QuoteEstimator from '@/components/QuoteEstimator'
 import WhyTheRate from '@/components/WhyTheRate'
 import WellnessSchedule from '@/components/WellnessSchedule'
 import { DirectoryPlanningGuide } from '@/components/DirectoryPlanningGuide'
-import { areas, cancellationRules, extraPersonFee } from '@/data/catalog'
+import { SESSION_ANCHOR, programmes, packSessionRate, areas, cancellationRules, extraPersonFee } from '@/data/catalog'
 import { CORE_SERVICE_SLUGS, publicServices, sessionPhoto } from '@/data/publicOffer'
 
 const orderedServices = CORE_SERVICE_SLUGS.map((slug) => publicServices.find((item) => item.slug === slug)).filter((item): item is (typeof publicServices)[number] => Boolean(item))
@@ -84,7 +84,7 @@ const quoteSteps = [
   ['Starting price', 'The published 60-minute in-zone rate for the session and city.'],
   ['People and length', 'Extra people and a 90-minute visit sit on top of that rate.'],
   ['Travel', 'Travel is included in the five named Bali areas. South and Central Jakarta include travel; other Jakarta areas require a timing and travel quote.'],
-  ['Package', '3, 5 and 10 session packs price private strength training at Rp 950.000, Rp 900.000 and Rp 800.000. Savings are shown against Rp 1.050.000.'],
+  ['Package', '3, 5 and 10 session packs price private strength training at Rp 1.225.000, Rp 1.175.000 and Rp 1.050.000. Savings are shown against Rp 1.300.000.'],
 ]
 
 const priceFaqKeys = [
@@ -105,7 +105,7 @@ const priceFaqKeys = [
 export function Programmes() {
   return (
     <>
-      <PageIntro eyebrow="Packages" title="Session packs for a villa stay." description="A single session of private strength training is Rp 1.050.000. A 3-session pack is Rp 950.000 each. A 5-session pack is Rp 900.000 each. A 10-session pack is Rp 800.000 each. Savings are the exact difference from Rp 1.050.000 per session.">
+      <PageIntro eyebrow="Packages" title="Session packs for a villa stay." description="A single session of private strength training is Rp 1.300.000. A 3-session pack is Rp 1.225.000 each. A 5-session pack is Rp 1.175.000 each. A 10-session pack is Rp 1.050.000 each. Savings are the exact difference from Rp 1.300.000 per session.">
         <a href="#schedule-builder" className="button button-primary">Plan my sessions<ArrowUpRight size={16} /></a>
       </PageIntro>
       <section className="section"><div className="shell"><ProgrammeGrid /></div></section>
@@ -332,8 +332,8 @@ export function PricingPage() {
           <ParallaxImage src="/images/editorial/pricing.webp" alt="Instructor discussing the appointment details with adult clients" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(1_050_000)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
-          <div><strong>{formatIdr(900_000)}</strong><span>5-session pack, per session.</span></div>
+          <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
+          <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>5-session pack, per session.</span></div>
           <div><strong>2 Guests</strong><span>Adds Rp 250.000 per session when the rate is for one guest. Yoga and meditation already include a pair.</span></div>
         </div>
       </section>
@@ -488,11 +488,24 @@ export function PricingPage() {
         <div className="shell">
           <SectionTitle
             eyebrow="Programmes"
-            title="3, 5 and 10 session packs lower the anchor rate."
-            copy="Savings are the exact difference from Rp 1.050.000 per session on private strength training. Other disciplines keep their own rates. Unused prepaid sessions follow the validity window on your quote."
+            title="Compare the price per session."
+            copy="Rates below are per 60-minute visit. Prepaid packs start at Rp 850.000 per visit. Yoga and meditation include up to two guests."
             action={<Link to="/programmes" className="text-link">Plan a block<ArrowUpRight size={15} /></Link>}
           />
-          <ProgrammeGrid />
+          {(['Bali', 'Jakarta'] as const).map(city => (
+            <details key={city} className="pack-rate-details" open={city === 'Bali'}>
+              <summary>{city} session and pack rates</summary>
+              <div className="pack-rate-scroll" role="region" aria-label={city + ' rates in rupiah'} tabIndex={0}>
+                <table>
+                  <thead><tr><th scope="col">Service</th>{programmes.map(pack => <th key={pack.slug} scope="col">{pack.sessions === 1 ? 'Single' : pack.sessions + '-pack'}</th>)}</tr></thead>
+                  <tbody>{orderedServices.map(service => <tr key={service.slug}>
+                    <th scope="row">{service.title}<ServiceRequestBadge slug={service.slug} /></th>
+                    {programmes.map(pack => <td key={pack.slug}>{service.prices[city] == null ? 'By quote' : formatIdr(packSessionRate(service.prices[city], pack.pricePercent))}</td>)}
+                  </tr>)}</tbody>
+                </table>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 

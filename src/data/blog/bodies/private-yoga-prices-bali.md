@@ -1,4 +1,4 @@
-Private yoga prices in Bali move on three levers: duration, travel, and how many people are on the floor. PersonalFitness.id publishes Rp 850.000 for 60 minutes, up to two people, in Canggu and Seminyak. Everything else is a line, not a surprise.
+Private yoga prices in Bali move on three levers: duration, travel, and how many people are on the floor. PersonalFitness.id publishes Rp 1.050.000 for 60 minutes, up to two people, in Canggu and Seminyak. Everything else is a line, not a surprise.
 
 The commercial pages are [pricing](/pricing) and [Bali private yoga](/bali/private-yoga). The [homepage](/) is the rest of the company. This article is how those three levers work so a villa group of six does not expect a pair rate.
 
@@ -12,7 +12,7 @@ Back-to-back yoga and training in the same morning is two services. Two quotes. 
 
 ## Travel
 
-Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Berawa, Pererenan and Petitenget remain part of the Canggu–Seminyak area. The published yoga starting price is Rp 850.000 for 60 minutes and up to two people.
+Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Berawa, Pererenan and Petitenget remain part of the Canggu–Seminyak area. The published yoga starting price is Rp 1.050.000 for 60 minutes and up to two people.
 
 Ubud and Sanur: travel included in the published yoga session price, with no per-visit travel charge.
 
@@ -26,7 +26,7 @@ Hotel lawns, beach clubs and temples are not default venues. They need permissio
 
 One or two people: published rate.
 
-Each extra person: Rp 250.000, if the floor can take another mat.
+For three or more guests, ask for a group quote so the instructor can check the floor space and group rate.
 
 A villa group of six mixed levels is a different coaching job. We may cap the group. We may require a larger rectangle. We will not run six private lessons in one hour. If two people are beginners and four are strong, say so. The session can still be useful. It cannot be all things.
 
@@ -57,9 +57,9 @@ If you still might want training or Pilates, open the [homepage](/) before you l
 
 ## Worked examples, not promises
 
-Example A. Two people, 60 minutes, Seminyak indoor. Planning estimate: Rp 850.000. No travel line. No extra-person line. Ninety minutes would add 45 percent of 850.000, which is Rp 382.500, for a session total of Rp 1.232.500 before any villa fee.
+Example A. Two people, 60 minutes, Seminyak indoor. Planning estimate: Rp 1.050.000. No travel line. No extra-person line. Ninety minutes would add 45 percent of 1.050.000, which is Rp 472.500, for a session total of Rp 1.522.500 before any villa fee.
 
-Example B. Two people, 60 minutes, Ubud. The published yoga base is Rp 850.000, including both guests and travel. Four accepted single visits at that rate total Rp 3.400.000, with no Ubud travel charge. If a suitable pack is proposed, the quote states its eligible session price and dates.
+Example B. Two people, 60 minutes, Ubud. The published yoga base is Rp 1.050.000, including both guests and travel. Four accepted single visits at that rate total Rp 4.200.000, with no Ubud travel charge. If a suitable pack is proposed, the quote states its eligible session price and dates.
 
 Example C. Four people, 60 minutes, Canggu. This is a group request rather than the published private pair offer. Ask for a space check and a written group quote. Shared or group sessions are quoted on request and are not a standard published service yet.
 

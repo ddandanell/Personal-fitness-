@@ -1,3 +1,4 @@
+import { formatIdr } from '../lib/money'
 import wellnessServiceData from './wellness-services.json'
 
 export type City = 'Bali' | 'Jakarta'
@@ -69,7 +70,8 @@ export type Programme = {
   slug: string
   title: string
   sessions: number
-  /** 60-minute rate for a session priced from the Rp 1.050.000 anchor. */
+  pricePercent: number
+  /** Per-session price for the strength training example. */
   perSession: number
   blurb: string
   includes: string[]
@@ -91,43 +93,29 @@ export const services = wellnessServiceData as Service[]
 export const coreServices = services.filter((item) => item.status === 'core')
 export const listedServices = services.filter((item) => item.status !== 'held')
 
-/** 60-minute anchor used for package savings. Other disciplines keep their own published rates. */
-export const SESSION_ANCHOR = 1_050_000
+export const SESSION_ANCHOR = wellnessServiceData.find(service => service.slug === 'personal-training')!.prices.Bali!
+export const MINIMUM_SESSION_RATE = 850_000
+
+export function packSessionRate(singleRate: number, pricePercent: number) {
+  if (pricePercent === 100) return Math.max(MINIMUM_SESSION_RATE, singleRate)
+  const step = 25_000
+  return Math.max(MINIMUM_SESSION_RATE, Math.round(singleRate * pricePercent / (100 * step)) * step)
+}
 
 export const programmes: Programme[] = [
-  {
-    slug: 'single',
-    title: 'Single Session',
-    sessions: 1,
-    perSession: 1_050_000,
-    blurb: 'One 60-minute session at Rp 1.050.000. This is the anchor rate, with no pack saving.',
-    includes: ['1 session at Rp 1.050.000', 'No pack saving', 'Subject to instructor availability and location confirmation'],
-  },
-  {
-    slug: 'pack-3',
-    title: '3-Session Pack (Short Stay)',
-    sessions: 3,
-    perSession: 950_000,
-    blurb: 'Three sessions at Rp 950.000 each. Rp 2.850.000 in total. Save Rp 300.000 against the single-session rate.',
-    includes: ['3 sessions', 'Rp 950.000 per session on the anchor rate', 'Save Rp 300.000 (about 9.5%)'],
-  },
-  {
-    slug: 'pack-5',
-    title: '5-Session Pack (Most Popular)',
-    sessions: 5,
-    perSession: 900_000,
-    blurb: 'Five sessions at Rp 900.000 each. Rp 4.500.000 in total. Save Rp 750.000 against the single-session rate.',
-    includes: ['5 sessions', 'Rp 900.000 per session on the anchor rate', 'Save Rp 750.000 (about 14.3%)'],
-  },
-  {
-    slug: 'pack-10',
-    title: '10-Session Pack (Extended Stay)',
-    sessions: 10,
-    perSession: 800_000,
-    blurb: 'Ten sessions at Rp 800.000 each. Rp 8.000.000 in total. Save Rp 2.500.000 against the single-session rate.',
-    includes: ['10 sessions', 'Rp 800.000 per session on the anchor rate', 'Save Rp 2.500.000 (about 23.8%)'],
-  },
-]
+  { slug: 'single', title: 'Single Session', sessions: 1, pricePercent: 100 },
+  { slug: 'pack-3', title: '3-Session Pack (Short Stay)', sessions: 3, pricePercent: 95 },
+  { slug: 'pack-5', title: '5-Session Pack (Most Popular)', sessions: 5, pricePercent: 90 },
+  { slug: 'pack-10', title: '10-Session Pack (Extended Stay)', sessions: 10, pricePercent: 80 },
+].map(pack => {
+  const perSession = packSessionRate(SESSION_ANCHOR, pack.pricePercent)
+  return {
+    ...pack,
+    perSession,
+    blurb: 'Private strength training for one guest at ' + formatIdr(perSession) + ' per session.',
+    includes: [formatIdr(perSession * pack.sessions) + ' total', '60 minutes per visit'],
+  }
+})
 
 const JAKARTA_LIVE = ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness']
 

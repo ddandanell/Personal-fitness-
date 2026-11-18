@@ -1,4 +1,4 @@
-A personal trainer in Uluwatu is a private visit to the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.050.000 for one guest, with Uluwatu travel included, including a checked Bukit address. The commercial destination is [Bali private strength training](/bali/personal-training). This guide explains traffic windows, indoor floors and how the written quote is built.
+A personal trainer in Uluwatu is a private visit to the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 for one guest, with Uluwatu travel included, including a checked Bukit address. The commercial destination is [Bali private strength training](/bali/personal-training). This guide explains traffic windows, indoor floors and how the written quote is built.
 
 If you searched for a personal trainer in Uluwatu because the villa hangs over the water, start with the road and a dry indoor rectangle. A cliff caption is not a venue. We only confirm when the professional can arrive, set up and leave inside a realistic block.
 
@@ -6,7 +6,7 @@ If you searched for a personal trainer in Uluwatu because the villa hangs over t
 
 Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu, including a checked Bukit address. Other areas are on request. If your villa is in Ungasan, Pecatu or Bingin, identify the exact property so access and the arrival window can be checked. If it is Canggu, see [personal trainer in Canggu](/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates).
 
-The hour is one person at Rp 1.050.000 with travel included. A second training guest adds Rp 250.000. Ninety minutes adds 45 percent of the base when the longer appointment is accepted. Eligible 3, 5 and 10-session packs apply to the session price, without a separate Bukit travel line. Read [programmes](/programmes) before choosing a prepaid count.
+The hour is one person at Rp 1.300.000 with travel included. A second training guest adds Rp 250.000. Ninety minutes adds 45 percent of the base when the longer appointment is accepted. Eligible 3, 5 and 10-session packs apply to the session price, without a separate Bukit travel line. Read [programmes](/programmes) before choosing a prepaid count.
 
 A sunset reel is not supply. PersonalFitness.id matches, quotes and confirms.
 
@@ -22,7 +22,7 @@ Traffic is the second product. A 07:00 request may need the professional on the 
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks as the written quote. Uluwatu private strength training starts at Rp 1.050.000 for 60 minutes and one guest, with travel included. Compare the same duration and participant count with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). Canggu and Uluwatu share the published Bali base, while their practical arrival windows may differ.
+The [pricing page](/pricing) uses the same blocks as the written quote. Uluwatu private strength training starts at Rp 1.300.000 for 60 minutes and one guest, with travel included. Compare the same duration and participant count with [personal trainer Bali prices](/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like). Canggu and Uluwatu share the published Bali base, while their practical arrival windows may differ.
 
 There is no cliff travel premium within the included Uluwatu area and no separate sunrise tax. Your coordinator checks the appointment window before confirming it. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp. The first session remains a paid visit at the published rate.
 

@@ -6,7 +6,7 @@ If you searched what you actually pay for a personal trainer at home, start here
 
 The quote names the session, the city, the cluster, the duration, the headcount, the session charge, extra-person fees if they apply, travel if it applies, programme reduction if it applies, exclusions, and cancellation. It names that payment details are in the written quote. It does not name a card number for you to type into WhatsApp.
 
-Starting prices live on [pricing](/pricing): private strength training from Rp 1.050.000, yoga from Rp 850.000 and Rp 900.000 with two people included, and the other four live sessions at their published lines. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Extra people are Rp 250.000 in Bali and Rp 250.000 in Jakarta when the session bills them. Ninety minutes add 45 percent of the base.
+Starting prices live on [pricing](/pricing): private strength training from Rp 1.300.000, yoga from Rp 1.050.000 and Rp 1.125.000 with two people included, and the other four live sessions at their published lines. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Extra people are Rp 250.000 in Bali and Rp 250.000 in Jakarta when the session bills them. Ninety minutes add 45 percent of the base.
 
 If a line is not on the quote, it is not assumed. Venue hire, parking and unusual equipment appear only when written.
 

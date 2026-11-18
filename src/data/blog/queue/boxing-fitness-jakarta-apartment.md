@@ -1,4 +1,4 @@
-Private boxing fitness in a Jakarta apartment is pad-only work for one person, after a space and neighbour check. PersonalFitness.id publishes the hour from Rp 1.050.000 in South and Central Jakarta. There is no sparring, no ring, no kickboxing, and no second person hidden in the rate. The commercial pages are [boxing fitness](/boxing-fitness) and [boxing in Jakarta](/jakarta/boxing-fitness). This article is the investigation layer: thin walls, ceilings, lobbies and how the quote is built.
+Private boxing fitness in a Jakarta apartment is pad-only work for one person, after a space and neighbour check. PersonalFitness.id publishes the hour from Rp 1.300.000 in South and Central Jakarta. There is no sparring, no ring, no kickboxing, and no second person hidden in the rate. The commercial pages are [boxing fitness](/boxing-fitness) and [boxing in Jakarta](/jakarta/boxing-fitness). This article is the investigation layer: thin walls, ceilings, lobbies and how the quote is built.
 
 If you searched for boxing at home in Jakarta because a gym class felt public, start with the floor and the building rules, not the gloves. The Bali villa version of this hour is [what pad-only means](/resources/private-boxing-fitness-at-home-what-pad-only-means). This page is the tower.
 
@@ -6,7 +6,7 @@ If you searched for boxing at home in Jakarta because a gym class felt public, s
 
 Pad-only means the professional holds pads and you hit them with an agreed pattern. It is fitness. It is not a bout. Beginners are welcome if you say so. People who already box are welcome if they accept house rules: one person, no sparring, no clinical treatment.
 
-The published Jakarta rate is Rp 1.050.000 for 60 minutes, one participant, in-zone. Extra people are not a casual add-on. If two of you want to train, that is two quotes or [private strength training](/jakarta/personal-training) where an extra person can be billed. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
+The published Jakarta rate is Rp 1.300.000 for 60 minutes, one participant, in-zone. Extra people are not a casual add-on. If two of you want to train, that is two quotes or [private strength training](/jakarta/personal-training) where an extra person can be billed. Read [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 
 A photo of gloves is not a space check.
 
@@ -20,7 +20,7 @@ The lobby is still the Jakarta product. Put the building, tower, parking and vis
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.050.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of about 9.5, 14.3 and 23.8 percent apply to session charges, not to a building fee.
+The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.300.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of about 5, 10 and 20 percent apply to session charges, not to a building fee.
 
 There is no free intro. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 

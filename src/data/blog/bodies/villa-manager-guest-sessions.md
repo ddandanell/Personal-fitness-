@@ -26,7 +26,7 @@ Photographs are off by default. Many guests and many properties do not want a co
 
 ## Recurring guest calendars
 
-A property can enquire about a repeating guest menu: sunrise yoga two mornings a week, training for one person, meditation once. That still needs supply. Prepaying a [programme](/programmes) is 6, 9 or 12 named visits with a validity window, not an open membership for whoever checks in.
+A property can enquire about a repeating guest menu: sunrise yoga two mornings a week, training for one person, meditation once. That still needs supply. Prepaying a [programme](/programmes) is 3, 5 or 10 named visits with a validity window, not an open membership for whoever checks in.
 
 In-zone Canggu and Seminyak include travel on core sessions. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Jakarta buildings need lobby rules on the quote. We do not claim island-wide or city-wide coverage.
 

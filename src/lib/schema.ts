@@ -2,7 +2,7 @@ import { COMPANY_EMAIL, SITE_ORIGIN } from '@/data/company'
 import { founderReady, partner } from '@/config/partner'
 import { CITY_SERVICE_RELEASED, publicServices, sessionPhoto } from '@/data/publicOffer'
 import { pageImage } from '@/components/EditorialPhoto'
-import type { Service } from '@/data/catalog'
+import { MINIMUM_SESSION_RATE, type Service } from '@/data/catalog'
 
 const BUSINESS_ID = SITE_ORIGIN + '/#business'
 const WEBSITE_ID = SITE_ORIGIN + '/#website'
@@ -137,7 +137,7 @@ export function siteGraph() {
         },
         telephone: '+628113803488',
         email: COMPANY_EMAIL,
-        priceRange: 'IDR 650000-1600000',
+        priceRange: 'From IDR ' + MINIMUM_SESSION_RATE + ' per session with a pack',
         currenciesAccepted: 'IDR',
         paymentAccepted: 'Payment details in the written quote',
         availableLanguage: ['English', 'Indonesian'],
