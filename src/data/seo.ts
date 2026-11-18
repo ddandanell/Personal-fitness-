@@ -25,7 +25,7 @@ function cityServiceDescription(slug: string, city: City, price: number | null |
   if (slug === 'personal-training') return `Personal trainer at your ${place} in ${city}${start} for 60 minutes in published clusters. Written quote before payment.`
   if (slug === 'private-yoga') return `Private yoga at your ${place} in ${city}${start}, for one or two people. Written quote before payment.`
   if (slug === 'mat-pilates') return `Private mat Pilates at your ${place} in ${city}${start}. No reformer. Written quote before payment.`
-  if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. Pad work, one or two guests. Space check first, then a written quote.`
+  if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. One guest, with a space check before the written quote.`
   if (slug === 'guided-meditation') return `Private guided meditation at your ${place} in ${city}${start} for one or two people. A calm, guided hour.`
   return `Private ${slug.replace(/-/g, ' ')} at your ${place} in ${city}${start}. Written quote before payment.`
 }

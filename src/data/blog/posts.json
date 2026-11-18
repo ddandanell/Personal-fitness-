@@ -158,7 +158,7 @@
       },
       {
         "q": "Is Uluwatu the same price as Canggu?",
-        "a": "No. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.."
+        "a": "The same published Bali starting rate applies, with travel included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas are by request."
       },
       {
         "q": "Can I pay in WhatsApp?",
@@ -189,8 +189,8 @@
         "a": "Access failures can stop the session under the refund rules. Put visitor rules on the quote."
       },
       {
-        "q": "Are twelve sessions cheaper?",
-        "a": "Yes, 12 percent off if you actually attend them."
+        "q": "Which current packs have a lower per-session rate?",
+        "a": "The current eligible packs contain 3, 5 or 10 sessions, with published savings of about 9.5%, 14.3% or 23.8% against the anchor rate."
       }
     ],
     "imageAlt": "Female Indonesian fitness instructor reviewing a blank tablet with an adult European male resident"
@@ -553,7 +553,7 @@
       },
       {
         "q": "Does travel apply once for a whole stay?",
-        "a": "No. Travel is per visit. A six-session Ubud block includes travel six times."
+        "a": "Travel is included in every accepted Ubud visit. There is no separate guest travel fee for a single session or pack visit."
       }
     ],
     "imageAlt": "Indonesian male trainer coaching an adult European woman through a light dumbbell curl",
@@ -614,5 +614,33 @@
     ],
     "imageAlt": "Indonesian male yoga instructor guiding three adult European villa guests through a simple standing stretch",
     "date": "2026-11-17"
+  },
+  {
+    "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+    "briefId": "B022",
+    "title": "Personal trainer in South Jakarta: Kemang, Senopati and lobby access",
+    "description": "South Jakarta private strength training from Rp 1.050.000. Kemang houses, Senopati towers and the lobby rules that decide the hour.",
+    "primaryQuery": "personal trainer in south jakarta: kemang, senopati and lobby access",
+    "service": "Private Strength Training",
+    "city": "Jakarta",
+    "landingPage": "/personal-training",
+    "image": "/images/editorial/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access.webp",
+    "bodyFile": "south-jakarta-home-training.md",
+    "faqs": [
+      {
+        "q": "Is South Jakarta in-zone?",
+        "a": "Yes for published clusters such as Kemang, Senopati, SCBD and Cilandak. The building still goes on the quote."
+      },
+      {
+        "q": "Do I need a home gym?",
+        "a": "No. A clear living-room rectangle and an access plan are enough for the first hour."
+      },
+      {
+        "q": "Is BSD the same rate?",
+        "a": "No. BSD and outer municipalities are quoted after a timing check, or declined."
+      }
+    ],
+    "imageAlt": "Indonesian female personal trainer coaching an adult European man",
+    "date": "2026-11-18"
   }
 ]

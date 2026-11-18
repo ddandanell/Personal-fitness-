@@ -63,6 +63,6 @@ A second person is billed as an extra person, not as a pair gift. Yoga is the pa
 
 ## After the first hour
 
-If the first pad hour fitted, a six-session Jakarta block can make sense. The 5 percent reduction applies to session charges, not to a building fee. If the first hour was too loud, do not buy a programme to “get used to it”. Switch to [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching).
+If the first pad hour fitted and an eligible recurring format is confirmed, compare the current 3, 5 and 10-session packs. Pack reductions apply to eligible session charges, not to a building fee. If the first hour was too loud, do not buy a programme to “get used to it”. Switch to [private strength training](/jakarta/personal-training) or [mobility coaching](/mobility-coaching).
 
 Keep the same building note on the record so the professional is not renegotiating the lobby every Tuesday. WhatsApp +62 811-3803-488. The [Jakarta hub](/jakarta) stays the city page. This article stays the apartment investigation.

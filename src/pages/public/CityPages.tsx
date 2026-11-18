@@ -111,7 +111,7 @@ export function CityPage({ city }: { city: City }) {
             <Eyebrow>Who books here</Eyebrow>
             <h2>{city === 'Bali' ? 'Villa guests, month-long stays and hosts.' : 'Residents, apartment routines and four-week blocks.'}</h2>
             <p className="large-copy">{city === 'Bali'
-              ? 'The hour happens in your villa or home, not at a walk-in studio in Denpasar. Canggu and Seminyak sit inside the published rate. Ubud, Sanur and Uluwatu add travel. Beach clubs and public sand are not default venues.'
+              ? 'The hour happens in your villa or home, not at a walk-in studio in Denpasar. Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. Beach clubs and public sand are not default venues.'
               : 'The hour happens in your apartment or house. South and Central Jakarta sit inside the published rate. North, West, East and BSD are timing-and-travel checks. A building gym is optional and only useful if it is private.'}</p>
           </div>
           <ul className="check-list large-list">
@@ -233,7 +233,7 @@ export function CityServicePage() {
   const cityPath = city.toLowerCase()
   const seo = getSeo('/' + cityPath + '/' + service.slug)
   const access = city === 'Bali'
-    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Canggu and Seminyak sit inside the published rate. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. The Denpasar office is an office, not a walk-in studio.'
+    ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. The Denpasar office is an office, not a walk-in studio.'
     : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
   const articles = blogPosts.filter((post) =>

@@ -20,7 +20,7 @@ None of those are a 60-minute private session with a named professional, travel,
 
 You get the real unit: 60 minutes, the cluster’s travel rule, the extra-person logic, the 24-hour line. You get a professional who is being paid for the diary slot. A backup instructor can be named where available if someone is unwell. You get a quote you can compare to the second quote, because the number did not change after the handshake.
 
-Bali private strength training Rp 1.050.000. Jakarta Rp 950.000. Yoga Rp 850.000 Bali with two people included. Mat Pilates Rp 950.000 Bali. Those are first-session prices and tenth-session prices, before programme percentages.
+Bali and Jakarta private strength training starts at Rp 1.050.000. Yoga starts at Rp 850.000 in Bali with two people included. Mat Pilates starts at Rp 950.000 in Bali. Those are published single-session prices before any eligible pack reduction.
 
 If the hour is wrong, you stop. You are not trapped in a pack you bought because the intro was free.
 
@@ -51,7 +51,7 @@ If they cannot answer, you already have the answer.
 
 ## How our first paid hour is quoted
 
-Estimator on [pricing](/pricing). Same lines as every other hour. WhatsApp with city, area, window, people. Written quote. Merchant link. Confirmation with the name. Office address for the company, not for walk-in intros: listed on [contact](/contact).
+Estimator on [pricing](/pricing). Same lines as every other hour. WhatsApp with city, area, window and people. Written quote. Payment instructions on that quote. Confirmation with the name. Office address for the company, not for walk-in intros: listed on [contact](/contact).
 
 If you arrived from a search that promised free private strength training in Bali, you will not find it here. You will find a number that still exists on Friday.
 

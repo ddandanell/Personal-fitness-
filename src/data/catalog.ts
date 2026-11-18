@@ -422,7 +422,7 @@ export const areas: Area[] = [
     travelFee: 0,
     outerTravel: false,
     driveNote: 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.',
-    copy: 'Sanur works for families and longer-stay guests who want a calmer shoreline base. Travel is quoted because it sits outside the Canggu to Seminyak cluster.',
+    copy: 'Sanur works for families and longer-stay guests who want a calmer shoreline base. Travel is included, while the exact address and timing still need confirmation.',
     venues: ['Family villas', 'Apartment living rooms', 'Hotel suites only with written venue permission'],
     bestFor: ['Morning training before the heat', 'Mat Pilates with a partner'],
     services: ['personal-training', 'private-yoga', 'mat-pilates', 'mobility-coaching', 'boxing-fitness', 'guided-meditation', 'bodywork-recovery', 'zumba-dance-fitness'],

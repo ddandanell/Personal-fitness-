@@ -527,6 +527,11 @@
       "primaryKeyword": "zumba and dance fitness at the villa",
       "role": "hub-or-service",
       "commercialOwner": "/zumba-dance-fitness"
+    },
+    "/resources/single-session-deposit-or-full-upfront-pack-how-payment-confirmation-works": {
+      "primaryKeyword": "single session deposit or full upfront fitness pack payment",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/pricing"
     }
   }
 }

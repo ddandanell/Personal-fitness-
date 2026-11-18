@@ -1,32 +1,5 @@
 [
   {
-    "slug": "personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
-    "briefId": "B022",
-    "title": "Personal trainer in South Jakarta: Kemang, Senopati and lobby access",
-    "description": "South Jakarta private strength training from Rp 1.050.000. Kemang houses, Senopati towers and the lobby rules that decide the hour.",
-    "primaryQuery": "personal trainer in south jakarta: kemang, senopati and lobby access",
-    "service": "Private Strength Training",
-    "city": "Jakarta",
-    "landingPage": "/personal-training",
-    "image": "/images/editorial/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access.webp",
-    "bodyFile": "south-jakarta-home-training.md",
-    "faqs": [
-      {
-        "q": "Is South Jakarta in-zone?",
-        "a": "Yes for published clusters such as Kemang, Senopati, SCBD and Cilandak. The building still goes on the quote."
-      },
-      {
-        "q": "Do I need a home gym?",
-        "a": "No. A clear living-room rectangle and an access plan are enough for the first hour."
-      },
-      {
-        "q": "Is BSD the same rate?",
-        "a": "No. BSD and outer municipalities are quoted after a timing check, or declined."
-      }
-    ],
-    "imageAlt": "Indonesian female personal trainer coaching an adult European man"
-  },
-  {
     "slug": "personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
     "briefId": "B023",
     "title": "Personal trainer in Uluwatu: Bukit travel and indoor floors",
@@ -48,7 +21,7 @@
       },
       {
         "q": "Does travel apply once for the stay?",
-        "a": "No. Travel is per visit, including on a six-session block."
+        "a": "Travel is included in every accepted Uluwatu visit. There is no separate guest travel fee for a single session or pack visit."
       }
     ],
     "imageAlt": "Indonesian male trainer guiding an adult Australian woman through a controlled resistance band movement"
@@ -214,5 +187,32 @@
       }
     ],
     "imageAlt": "Indonesian female yoga instructor guiding two foreign adult guests through standing side stretches while an Indonesian male personal trainer coaches a foreign adult man using resistance bands in the same Bali villa room"
+  },
+  {
+    "slug": "single-session-deposit-or-full-upfront-pack-how-payment-confirmation-works",
+    "briefId": "B031",
+    "title": "Single-session deposit or full upfront pack: how payment confirms your booking",
+    "description": "See when a 50% deposit confirms one private fitness session and why eligible 3, 5 and 10-session packs are paid in full upfront.",
+    "primaryQuery": "single session deposit or full upfront fitness pack payment",
+    "service": "Booking",
+    "city": "Bali & Jakarta",
+    "landingPage": "/pricing",
+    "image": "/images/editorial/single-session-deposit-or-full-upfront-pack-how-payment-confirmation-works.webp",
+    "bodyFile": "single-session-deposit-or-full-upfront-pack-payment.md",
+    "faqs": [
+      {
+        "q": "How much confirms one private fitness session?",
+        "a": "A 50% deposit of the complete written quote confirms one accepted booking. The remaining payment follows the timing on that quote."
+      },
+      {
+        "q": "Can I pay 50% of a 3, 5 or 10-session pack?",
+        "a": "No. Eligible packs are paid in full upfront because the reduced per-session calculation applies to the complete counted pack."
+      },
+      {
+        "q": "Does paying an enquiry reserve any instructor?",
+        "a": "Payment should only follow an accurate written quote. An enquiry alone does not reserve a professional or appointment."
+      }
+    ],
+    "imageAlt": "Indonesian female personal trainer actively coaching an adult European man and woman through resistance-band squats on a Bali villa terrace"
   }
 ]

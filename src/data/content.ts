@@ -119,7 +119,7 @@ export const pageMeta: Record<string, [string, string]> = {
   '/410': ['Page no longer available', 'This page is no longer published on PersonalFitness.id.'],
   '/locations': ['Bali and Jakarta', 'Choose a city, then an area cluster with its travel rule.'],
   '/bali': ['Personal Trainer and Private Fitness in Bali', 'In-villa personal trainer in Canggu and Seminyak from Rp 900.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Ubud, Sanur and Uluwatu with published travel.'],
-  '/jakarta': ['Home Private Strength Training in Jakarta', 'Home personal trainer in South and Central Jakarta from Rp 950.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Recurring programmes quoted in writing.'],
+  '/jakarta': ['Home Private Strength Training in Jakarta', 'Home personal trainer in South and Central Jakarta from Rp 1.050.000. Private yoga, mat Pilates, boxing fitness and guided meditation. Recurring programmes quoted in writing.'],
   '/service-areas': ['Service Areas and Included Travel', 'Published Bali and Jakarta areas, included travel and by-request coverage.'],
   '/professional-standards': ['Professional Standards', 'How we vet, match and back up the people who arrive at your door.'],
   '/how-it-works': ['How to Book a Personal Trainer at Home', 'Eight steps from WhatsApp to aftercare. Match, written quote, then confirmation at your villa or home.'],
