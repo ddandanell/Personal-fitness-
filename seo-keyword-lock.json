@@ -537,6 +537,11 @@
       "primaryKeyword": "can I get a personal trainer to my villa in Bali",
       "role": "supporting-guide",
       "commercialOwner": "/bali/personal-training"
+    },
+    "/resources/how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa": {
+      "primaryKeyword": "how to prepare for a bodywork and recovery session at your villa",
+      "role": "queued-supporting-guide",
+      "commercialOwner": "/bodywork-recovery"
     }
   }
 }

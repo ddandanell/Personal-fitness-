@@ -214,5 +214,32 @@
       }
     ],
     "imageAlt": "Indonesian female personal trainer actively coaching an adult European man and woman through resistance-band squats on a Bali villa terrace"
+  },
+  {
+    "slug": "how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa",
+    "briefId": "B033",
+    "title": "How to prepare for a bodywork and recovery session at your villa",
+    "description": "Prepare a Bali villa or Jakarta home for bodywork and recovery: room, clothing, consent, access, price, scope and a clear booking checklist.",
+    "primaryQuery": "how to prepare for a bodywork and recovery session at your villa",
+    "service": "Bodywork & Recovery",
+    "city": "Bali & Jakarta",
+    "landingPage": "/bodywork-recovery",
+    "image": "/images/editorial/how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa.webp",
+    "bodyFile": "how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa.md",
+    "faqs": [
+      {
+        "q": "What should I wear for a bodywork and recovery session at my villa?",
+        "a": "Wear normal, comfortable exercise clothing that allows sitting, lying down and gentle movement. You remain appropriately clothed throughout the session."
+      },
+      {
+        "q": "Is bodywork and recovery a medical or physiotherapy service?",
+        "a": "No. It is a non-clinical wellness session with assisted stretching, light myofascial release and relaxation. It does not diagnose, treat or rehabilitate an injury."
+      },
+      {
+        "q": "How much is a 60-minute bodywork and recovery session?",
+        "a": "The guide price is Rp 1.300.000 for one adult in Bali or Jakarta. A second adult adds Rp 250.000. The written quote confirms the accepted address, professional and complete total."
+      }
+    ],
+    "imageAlt": "Indonesian female bodywork instructor guiding an adult foreign male guest through a seated hamstring stretch on a mat in a Bali villa living room"
   }
 ]

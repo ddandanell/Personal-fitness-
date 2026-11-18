@@ -189,7 +189,7 @@ export function BlogArticle() {
           <div className="resource-grid">
             {related.map((item) => (
               <Link to={`/resources/${item.slug}`} className="resource-card" key={item.slug}>
-                <img className="blog-card-image" src={item.image} alt={item.service + ' at a villa or home'} loading="lazy" width="1200" height="800" />
+                <img className="blog-card-image" src={item.image} srcSet={responsiveSource(item.image)} sizes="(max-width: 700px) 90vw, 30vw" alt={item.imageAlt || item.service + ' at a villa or home'} loading="lazy" width="1200" height="800" decoding="async" />
                 <p className="eyebrow">{item.city}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
