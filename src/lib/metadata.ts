@@ -6,6 +6,7 @@ import { isHeldPath, offerState, sessionPhoto } from '@/data/publicOffer'
 import { SITE_ORIGIN } from '@/data/company'
 import { pageImage } from '@/components/EditorialPhoto'
 import { villaDemoPage } from '@/villa-demo/data'
+import { seoOverride } from '@/data/seoOverrides'
 
 const OG_BY_PATH: Record<string, { src: string; alt: string; width: string; height: string }> = {
   '/services': { src: '/images/editorial/core-personal-training.webp', alt: 'Private private strength training at home', width: '1440', height: '960' },
@@ -60,7 +61,9 @@ export function pageMetadata(pathname: string) {
   const resource = parts.length === 2 && parts[0] === 'resources' ? getResource(slug) : undefined
   const locked = getSeo(pathname)
   const state = service ? offerState(service.slug) : 'unknown'
-  const [title, description] = locked ? [locked.title, locked.description]
+  const override = gone ? undefined : seoOverride(seoCanonical(pathname))
+  const [title, description] = override?.title && override.description ? [override.title, override.description]
+    : locked ? [locked.title, locked.description]
     : gone ? ['Page no longer available', 'This page is no longer published on PersonalFitness.id.']
     : post ? [post.title, post.description]
     : resource ? [resource.title, resource.summary]

@@ -3,7 +3,7 @@ import { PolicySummary } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, MapPin, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
-import { Eyebrow, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
+import { Eyebrow, IntroText, ParallaxImage, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WhyTheRate from '@/components/WhyTheRate'
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
@@ -13,6 +13,9 @@ import { faqs } from '@/data/content'
 import StructuredData from '@/components/StructuredData'
 import { faqJsonLd } from '@/lib/schema'
 import { formatIdr } from '@/lib/money'
+import { seoOverride } from '@/data/seoOverrides'
+
+const HOME_SEO = seoOverride('/')
 
 const steps = [
   ['01', 'Check availability', 'Send the city, area, session and a two-hour window. We confirm whether that visit is available, as supply allows.'],
@@ -38,8 +41,8 @@ export default function Home() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
-            <h1>Personal trainer at your villa or home in Bali and Jakarta</h1>
-            <p className="hero-lede">An instructor comes to your villa, home or hotel for private strength training, yoga, Pilates, mobility, boxing, bodywork, dance fitness or a guided sit. Sessions are subject to instructor availability and location confirmation.</p>
+            <h1>{HOME_SEO?.h1 || 'Personal trainer at your villa or home in Bali and Jakarta'}</h1>
+            <p className="hero-lede">{HOME_SEO?.intro ? <IntroText text={HOME_SEO.intro} /> : 'An instructor comes to your villa, home or hotel for private strength training, yoga, Pilates, mobility, boxing, bodywork, dance fitness or a guided sit.'} Sessions are subject to instructor availability and location confirmation.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>

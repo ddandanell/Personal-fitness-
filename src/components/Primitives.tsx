@@ -1,8 +1,9 @@
 import { PHOTO_CAPTION, PHOTO_CAPTION_ID } from '@/data/offerCopy'
 import { ArrowUpRight, Check, Copy, LoaderCircle } from 'lucide-react'
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, useLocation } from 'react-router'
 import { EditorialPhoto, responsiveSource } from './EditorialPhoto'
+import { introParts, seoOverride } from '@/data/seoOverrides'
 
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return <p className={`eyebrow ${light ? 'eyebrow-light' : ''}`}>{children}</p>
@@ -15,13 +16,14 @@ export function PageIntro({ eyebrow, title, description, children }: {
   children?: ReactNode
 }) {
   const { pathname } = useLocation()
+  const override = seoOverride(pathname)
   const autoPhoto = ['/programmes', '/service-areas', '/professional-standards', '/how-it-works'].includes(pathname)
   return (
     <>
     <section className="page-intro">
       <div className="shell page-intro-grid">
-        <div><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1></div>
-        <div className="page-intro-copy"><p>{description}</p>{children}</div>
+        <div><Eyebrow>{eyebrow}</Eyebrow><h1>{override?.h1 || title}</h1></div>
+        <div className="page-intro-copy"><p>{override?.intro ? <IntroText text={override.intro} /> : description}</p>{children}</div>
       </div>
     </section>
     {autoPhoto && <section className="section-compact"><div className="shell"><EditorialPhoto path={pathname} eager /></div></section>}
@@ -121,4 +123,9 @@ export function ParallaxImage({ src, alt, caption, eager = false, className = ''
       <figcaption className="photo-policy-caption">{caption && <span>{caption}<br /></span>}{isId ? PHOTO_CAPTION_ID : PHOTO_CAPTION}</figcaption>
     </figure>
   )
+}
+
+/** Renders rewrite intro copy, turning [anchor](/path) into internal links. */
+export function IntroText({ text }: { text: string }) {
+  return <>{introParts(text).map((part, index) => part.to ? <Link key={index} to={part.to}>{part.text}</Link> : <Fragment key={index}>{part.text}</Fragment>)}</>
 }

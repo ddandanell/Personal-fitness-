@@ -4,6 +4,7 @@ import { resources } from './content'
 import { CITY_SERVICE_RELEASED, CORE_SERVICE_SLUGS, HELD_SERVICE_SLUGS } from './publicOffer'
 import { formatIdr } from '@/lib/money'
 import editorial from './location-editorial.json'
+import { seoOverride } from './seoOverrides'
 
 export type SeoLink = { to: string; label: string }
 export type SeoRecord = {
@@ -28,6 +29,10 @@ function cityServiceDescription(slug: string, city: City, price: number | null |
   if (slug === 'boxing-fitness') return `Pad-only boxing fitness at your ${place} in ${city}${start}. One guest, with a space check before the written quote.`
   if (slug === 'guided-meditation') return `Private guided meditation at your ${place} in ${city}${start} for one or two people. A calm, guided hour.`
   return `Private ${slug.replace(/-/g, ' ')} at your ${place} in ${city}${start}. Written quote before payment.`
+}
+/** Hand-picked supporting guides linked from a money page, with the locked anchor text. */
+const FEATURED_GUIDES: Record<string, SeoLink[]> = {
+  '/bali/personal-training': [{ to: '/resources/can-i-get-a-personal-trainer-to-my-villa-bali', label: 'Can I get a trainer to my villa?' }],
 }
 const SPECIALISMS = new Set(['nutrition-consultation', 'physiotherapy', 'occupational-therapy', 'speech-therapy', 'psychology', 'acupuncture', 'lactation-support', 'birth-and-postpartum-support'])
 const HOME: SeoLink = { to: '/', label: 'Home' }
@@ -614,6 +619,7 @@ function cityServiceRecords(): SeoRecord[] {
         related: uniqueLinks([
           { to: '/' + slug, label: service?.title || slug },
           { to: '/' + city, label: 'Private fitness in ' + label },
+          ...(FEATURED_GUIDES['/' + city + '/' + slug] || []),
           ...posts.map((post) => ({ to: '/resources/' + post.slug, label: post.primaryQuery })),
           ...CITY_SERVICE_RELEASED.filter((item) => item !== slug).slice(0, 3).map((item) => {
             const sibling = services.find((row) => row.slug === item)
@@ -749,8 +755,12 @@ export function canonicalPath(pathname: string) {
   return clean
 }
 
-export function getSeo(pathname: string) {
-  return byPath.get(canonicalPath(pathname))
+export function getSeo(pathname: string): SeoRecord | undefined {
+  const path = canonicalPath(pathname)
+  const record = byPath.get(path)
+  const override = seoOverride(path)
+  if (!record || !override) return record
+  return { ...record, title: override.title || record.title, description: override.description || record.description }
 }
 
 export function relatedFor(pathname: string) {

@@ -2,7 +2,7 @@ import { SESSION_ANCHOR, programmes } from '@/data/catalog'
 import { serviceNameId } from '@/data/offerCopy'
 import { ArrowUpRight, Check, MapPin } from 'lucide-react'
 import { Link } from 'react-router'
-import { Eyebrow, SectionTitle, TextLink } from '@/components/Primitives'
+import { Eyebrow, IntroText, SectionTitle, TextLink } from '@/components/Primitives'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import StructuredData from '@/components/StructuredData'
 import { faqJsonLd } from '@/lib/schema'
@@ -10,6 +10,9 @@ import { formatIdr } from '@/lib/money'
 import { COMPANY_EMAIL, COMPANY_EMAIL_HREF } from '@/data/company'
 import { WHATSAPP_DISPLAY } from '@/lib/whatsapp'
 import { publicServices } from '@/data/publicOffer'
+import { seoOverride } from '@/data/seoOverrides'
+
+const ID_SEO = seoOverride('/id')
 
 const faqs = [
   ['Apa itu personal trainer datang ke rumah?', 'PersonalFitness.id mengirim pelatih ke villa atau rumah Anda di klaster Bali dan Jakarta yang kami terbitkan. Sesi berlangsung di ruang Anda, bukan di studio walk-in Denpasar.'],
@@ -27,8 +30,8 @@ export default function IndonesianHome() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
-            <h1>Personal trainer datang ke rumah di Bali dan Jakarta</h1>
-            <p className="hero-lede">Instruktur yang sudah diseleksi datang ke villa, rumah, atau hotel Anda untuk private strength training, yoga, Pilates, mobilitas, boxing, bodywork, atau meditasi. Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
+            <h1>{ID_SEO?.h1 || 'Personal trainer datang ke rumah di Bali dan Jakarta'}</h1>
+            <p className="hero-lede">{ID_SEO?.intro ? <IntroText text={ID_SEO.intro} /> : 'Instruktur datang ke villa, rumah, atau hotel Anda.'} Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">Lihat harga</Link>

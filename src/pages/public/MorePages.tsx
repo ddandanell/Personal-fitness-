@@ -2,7 +2,7 @@ import { PolicySummary } from '@/components/PolicyLines'
 import { responsiveSource } from '@/components/EditorialPhoto'
 import { ArrowUpRight, Check, Plus, ShieldCheck } from 'lucide-react'
 import { Link, useParams } from 'react-router'
-import { Eyebrow, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
+import { Eyebrow, IntroText, PageIntro, ParallaxImage, SectionTitle } from '@/components/Primitives'
 import { CtaBand, LocationClusters, ProgrammeGrid, Prose } from '@/components/SiteBlocks'
 import QuoteEstimator from '@/components/QuoteEstimator'
 import WhyTheRate from '@/components/WhyTheRate'
@@ -22,6 +22,9 @@ import { trackWhatsApp } from '@/lib/analytics'
 import { WHATSAPP_DISPLAY, whatsappDraftUrl } from '@/lib/whatsapp'
 import { partner } from '@/config/partner'
 import NotFound from './NotFound'
+import { seoOverride } from '@/data/seoOverrides'
+
+const PRICING_SEO = seoOverride('/pricing')
 
 const ratePhotos: Record<string, string> = {
   'personal-training': '/images/editorial/core-personal-training.webp',
@@ -321,8 +324,8 @@ export function PricingPage() {
         <div className="shell sales-hero-grid">
           <div className="sales-hero-copy">
             <Eyebrow light>Published rates · Bali and Jakarta</Eyebrow>
-            <h1>Personal trainer Bali and Jakarta prices</h1>
-            <p className="hero-lede">Private sessions in Bali and Jakarta, with starting rates you can read before WhatsApp. An eligible second guest, session packs and 90 minutes can change the total. Travel is included in the five named Bali areas. The written quote is what you pay.</p>
+            <h1>{PRICING_SEO?.h1 || 'Personal trainer Bali and Jakarta prices'}</h1>
+            <p className="hero-lede">{PRICING_SEO?.intro ? <IntroText text={PRICING_SEO.intro} /> : 'Private sessions in Bali and Jakarta, with starting rates you can read before WhatsApp.'} The written quote is what you pay.</p>
             <div className="cluster">
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
