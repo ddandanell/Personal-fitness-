@@ -4,7 +4,8 @@ import { useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import { ArrowUpRight, Check } from 'lucide-react'
 import { EnquiryNote, HoneypotField } from '@/components/EnquiryFields'
-import { Eyebrow, Field, TextLink } from '@/components/Primitives'
+import { Eyebrow, Field, IntroText, TextLink } from '@/components/Primitives'
+import { seoOverride } from '@/data/seoOverrides'
 import StructuredData from '@/components/StructuredData'
 import { publicServices } from '@/data/publicOffer'
 import { formatIdr } from '@/lib/money'
@@ -61,7 +62,7 @@ const copy = {
     h1: 'Wellness for every villa you manage. You earn on every session.',
     sub: `Built for villa managers and hospitality teams. Put yoga, private strength training, Pilates, stretching, boxing and meditation on the menu in the villas you manage. A coordinator can plan the week, as supply allows. An instructor comes to the guest, and the guest pays us. ${commissionSentence('en')}`,
     primary: 'Talk to us',
-    secondary: 'Download the partner menu (PDF)',
+    secondary: 'Open the partner menu (PDF)',
     switch: 'Bahasa Indonesia',
     switchTo: '/id/mitra-villa',
     howTitle: 'How it works',
@@ -119,7 +120,7 @@ const copy = {
     h1: 'Wellness untuk setiap villa Anda. Anda dapat komisi dari setiap sesi.',
     sub: `Dibangun untuk pengelola villa dan tim hospitality. Letakkan yoga, private strength training, Pilates, stretching, boxing dan meditasi di menu villa yang Anda kelola. Koordinator dapat mengatur minggu, tergantung ketersediaan instruktur. Instruktur yang disebutkan pada kutipan tertulis datang ke tamu, dan tamu membayar ke kami. ${commissionSentence('id')}`,
     primary: 'Bicara dengan kami',
-    secondary: 'Unduh menu partner (PDF)',
+    secondary: 'Buka menu partner (PDF)',
     switch: 'English',
     switchTo: '/villa-hotel-partners',
     howTitle: 'Cara kerja',
@@ -290,6 +291,7 @@ function PartnerForm({ lang }: { lang: 'en' | 'id' }) {
 
 export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
   const text = copy[lang]
+  const partnerSeo = seoOverride(lang === 'id' ? '/id/mitra-villa' : '/villa-hotel-partners')
   const commission = exampleCommission()
   const faqs = [...text.faqs]
   if (partner.DEMO_POLICY === 'on' && lang === 'en') faqs.push(['Can our team try it first?', 'Yes. Once you accept the partner terms, we run one free 60-minute session for your team at a pilot villa.'])
@@ -321,13 +323,13 @@ export default function PartnerProgramme({ lang }: { lang: 'en' | 'id' }) {
         <div className="shell partner-hero-top">
           <div>
             <Eyebrow>{text.eyebrow}</Eyebrow>
-            <h1>{text.h1}</h1>
+            <h1>{partnerSeo?.h1 || text.h1}</h1>
           </div>
           <div>
-            <p className="large-copy">{text.sub}</p>
+            <p className="large-copy">{partnerSeo?.intro ? <IntroText text={partnerSeo.intro} /> : text.sub}</p>
             <div className="cluster">
               <a className="button button-primary" href="#partner-enquiry">{text.primary}<ArrowUpRight size={16} /></a>
-              <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a><a className="button button-outline" href="/partners/villa-wellness-menu.png" download>{lang === 'id' ? 'Unduh gambar WhatsApp' : 'Download WhatsApp image'}</a>
+              <a className="button button-outline" href={PARTNER_MENU_PDF} onClick={() => trackEvent('partner_deck_download')}>{text.secondary}</a>
             </div>
             <p className="partner-hero-note"><a href={COMPANY_EMAIL_HREF}>{COMPANY_EMAIL}</a> · <Link to={text.switchTo}>{text.switch}</Link> · <Link to="/partner-terms">{text.terms}</Link></p>
             <p className="small muted">{text.replyHours}</p>

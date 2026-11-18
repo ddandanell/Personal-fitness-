@@ -1,10 +1,9 @@
-import { Download, FileText, MessageCircle, RotateCcw, ShieldAlert } from 'lucide-react'
+import { FileText, MessageCircle, RotateCcw, ShieldAlert } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import { EnquiryNote, HoneypotField } from '@/components/EnquiryFields'
 import { CopyButton, Field, PageIntro } from '@/components/Primitives'
 import { COMPANY_EMAIL } from '@/data/company'
-import { downloadText } from '@/lib/downloadText'
 import { submitEnquiry } from '@/lib/submitEnquiry'
 import { services } from './serviceRegistry'
 
@@ -106,7 +105,7 @@ export default function Contact() {
       </form>
       <aside className="enquiry-aside"><MessageCircle size={28} /><p className="eyebrow eyebrow-light">One clear conversation</p><h2>Start with the practical details.</h2><ol><li>Tell us what you want and where.</li><li>Let us check the professional, venue and schedule.</li><li>Review your complete quote and terms.</li><li>Proceed only when the details are clear.</li></ol><p>Sending emails {COMPANY_EMAIL}. You can still copy the draft into WhatsApp. This page does not confirm a booking.</p></aside>
     </div>
-    {generated && <div className="content-shell message-section" id="message-preview"><div className="message-heading"><div><p className="eyebrow">{sent ? 'Sent' : 'Ready to copy'}</p><h2>Your enquiry message</h2></div><span className="draft-label">{sent ? 'Emailed' : 'Not emailed'}</span></div><pre>{generated}</pre><EnquiryNote text={sent ? `Sent. We will reply to ${form.email.trim()}.` : ''} tone={sent ? 'success' : ''} /><div className="cluster"><CopyButton value={generated} label="Copy enquiry message" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-enquiry.txt', generated)}><Download size={16} />Download .txt</button></div><p className="small muted">{sent ? `A copy was emailed to ${COMPANY_EMAIL}. Your session is not booked.` : `This draft was not emailed. You can copy it, or email ${COMPANY_EMAIL} directly.`}</p></div>}
+    {generated && <div className="content-shell message-section" id="message-preview"><div className="message-heading"><div><p className="eyebrow">{sent ? 'Sent' : 'Ready to copy'}</p><h2>Your enquiry message</h2></div><span className="draft-label">{sent ? 'Emailed' : 'Not emailed'}</span></div><pre>{generated}</pre><EnquiryNote text={sent ? `Sent. We will reply to ${form.email.trim()}.` : ''} tone={sent ? 'success' : ''} /><div className="cluster"><CopyButton value={generated} label="Copy enquiry message" /></div><p className="small muted">{sent ? `A copy was emailed to ${COMPANY_EMAIL}. Your session is not booked.` : `This draft was not emailed. You can copy it, or email ${COMPANY_EMAIL} directly.`}</p></div>}
     </section>
   </>
 }

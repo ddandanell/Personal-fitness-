@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import { ArrowUpRight, CalendarDays, Check, Download, Plus, Trash2 } from 'lucide-react'
+import { ArrowUpRight, CalendarDays, Check, Plus, Trash2 } from 'lucide-react'
 import { getService, quoteAreas, type City } from '@/data/catalog'
 import { EnquiryNote, HoneypotField } from './EnquiryFields'
 import { CopyButton, Eyebrow, Field } from './Primitives'
@@ -10,7 +10,6 @@ import { formatIdr } from '@/lib/money'
 import { trackEvent, trackWhatsApp } from '@/lib/analytics'
 import { submitEnquiry } from '@/lib/submitEnquiry'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
-import { downloadText } from '@/lib/downloadText'
 
 export default function WellnessSchedule() {
   const [city, setCity] = useState<City>('Bali')
@@ -101,7 +100,7 @@ export default function WellnessSchedule() {
         <Field label="Your email" hint="We reply to this address."><input type="email" value={senderEmail} onChange={(event) => setSenderEmail(event.target.value)} maxLength={180} autoComplete="email" /></Field>
       </div>
       <HoneypotField inputRef={honeypot} />
-      <div className="cluster"><button type="button" className="button button-primary" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this schedule'}</button><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-outline" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><p className="plan-small">{RESCHEDULE_NOTE}</p><CopyButton value={message} label="Copy schedule" /><button type="button" className="button button-outline" onClick={() => downloadText('PersonalFitness-wellness-schedule.txt', message)}><Download size={16} />Download schedule</button></div>
+      <div className="cluster"><button type="button" className="button button-primary" disabled={sending} onClick={() => void sendEmail()}>{sending ? 'Sending…' : 'Email this schedule'}</button><a href={whatsappDraftUrl(message)} target="_blank" rel="noopener noreferrer" className="button button-outline" onClick={() => trackWhatsApp('schedule')}>Open WhatsApp draft<ArrowUpRight size={16} /></a><p className="plan-small">{RESCHEDULE_NOTE}</p><CopyButton value={message} label="Copy schedule" /></div>
       <EnquiryNote text={notice} tone={noticeTone} />
     </section>}
   </div>

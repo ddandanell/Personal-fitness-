@@ -100,7 +100,7 @@ try {
   assert.ok(headerHtml.includes('href="/villa-hotel-partners"'))
   assert.ok(footerHtml.includes('href="/villa-hotel-partners"'))
   assert.ok(footerHtml.includes('href="/partner-terms"'))
-  assert.ok(partnerHtml.includes('Wellness for every villa you manage'))
+  assert.ok(partnerHtml.includes('Villa wellness partner programme in Bali'))
   for (const price of ['Rp 1.300.000', 'Rp 1.050.000', 'Rp 1.200.000', 'Rp 1.250.000']) {
     assert.ok(partnerHtml.includes(price), 'partner page missing ' + price)
   }

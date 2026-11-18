@@ -66,7 +66,7 @@ async page => {
     return 'Service card, service CTA and Bali CTA all preserved the selected context'
   })
 
-  await test('Enquiry validation, generation, copy, download and reset', async () => {
+  await test('Enquiry validation, generation, copy and reset', async () => {
     await page.goto(`${origin}/contact?service=private-yoga&city=Bali`, { waitUntil: 'networkidle' })
     if (await page.getByLabel('Service *').inputValue() !== 'private-yoga') throw new Error('Combined service prefill failed')
     if (await page.getByLabel('City *').inputValue() !== 'Bali') throw new Error('Combined city prefill failed')
@@ -89,17 +89,13 @@ async page => {
     await page.getByRole('button', { name: 'Copy enquiry message' }).click()
     const clipboard = await page.evaluate(() => navigator.clipboard.readText())
     if (clipboard !== value) throw new Error('Clipboard did not receive the exact generated message')
-    const downloadPromise = page.waitForEvent('download')
-    await page.getByRole('button', { name: 'Download .txt' }).click()
-    const download = await downloadPromise
-    if (download.suggestedFilename() !== 'PersonalFitness-enquiry.txt') throw new Error('Incorrect download filename')
     await page.getByRole('button', { name: 'Reset', exact: true }).click()
     if (await page.locator('#message-preview').count()) throw new Error('Reset did not remove the draft')
     if (await page.getByLabel('Service *').inputValue() || await page.getByLabel('City *').inputValue()) throw new Error('Reset did not clear selections')
     await page.getByRole('button', { name: 'Create enquiry message' }).click()
     const requiredError = await page.getByRole('alert').textContent()
     if (!requiredError.includes('complete the service')) throw new Error('Required-field validation missing')
-    return `Draft only; exact clipboard copy; ${download.suggestedFilename()}; reset and validation passed`
+    return 'Draft only; exact clipboard copy; reset and validation passed'
   })
 
   await test('Participant limits and reload privacy', async () => {

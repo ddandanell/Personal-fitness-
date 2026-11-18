@@ -12,7 +12,6 @@ import { submitEnquiry } from '@/lib/submitEnquiry'
 import { whatsappDraftUrl } from '@/lib/whatsapp'
 import { EnquiryNote, HoneypotField } from './EnquiryFields'
 import { CopyButton, Field } from './Primitives'
-import { downloadText } from '@/lib/downloadText'
 
 type EstimatorProps = { compact?: boolean; initialService?: string; initialCity?: City }
 export default function QuoteEstimator(props: EstimatorProps) {
@@ -187,7 +186,6 @@ function EstimatorForm({ compact = false, initialService, initialCity }: Estimat
           <a className="button button-primary" href={whatsappDraftUrl(message)} target="_blank" rel="noreferrer" onClick={() => { trackWhatsApp('estimator', { service, city }); trackEvent('estimator_used', { service, city }) }}><MessageCircle size={16} />Continue in WhatsApp</a>
           <p className="small wa-handoff">{RESCHEDULE_NOTE}</p>
           <CopyButton value={message} label="Copy request" />
-          <button type="button" className="button button-outline-light" onClick={() => downloadText('PersonalFitness-request.txt', message)}>Download</button>
         </div>
         <EnquiryNote text={notice} tone={noticeTone} />
       </aside>

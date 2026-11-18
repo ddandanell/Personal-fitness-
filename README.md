@@ -31,7 +31,7 @@ With the production preview running on `127.0.0.1:4173`, the two scripts in `scr
 
 ## Enquiry behaviour
 
-Quote, schedule and villa-partner forms post to `/api/enquiry`. The server emails `hello@personalfitness.id` from `src/data/company.ts`, with the visitor's address as Reply-To. WhatsApp drafts, copy and download remain available. A submission does not process payment or confirm a booking. If Resend and SMTP are both unset, the form stays on the page and shows `hello@personalfitness.id`. See `.env.example` for the Vercel variables. Unpriced specialist requests state that a written quote is required rather than generating a zero-price estimate.
+Quote, schedule and villa-partner forms post to `/api/enquiry`. The server emails `hello@personalfitness.id` from `src/data/company.ts`, with the visitor's address as Reply-To. WhatsApp drafts and copy remain available. A submission does not process payment or confirm a booking. If Resend and SMTP are both unset, the form stays on the page and shows `hello@personalfitness.id`. See `.env.example` for the Vercel variables. Unpriced specialist requests state that a written quote is required rather than generating a zero-price estimate.
 
 ## Content and imagery
 
