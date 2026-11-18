@@ -642,5 +642,49 @@
     ],
     "imageAlt": "Indonesian female personal trainer coaching an adult European man",
     "date": "2026-11-18"
+  },
+  {
+    "slug": "can-i-get-a-personal-trainer-to-my-villa-bali",
+    "briefId": "B032",
+    "title": "Can I Get a Personal Trainer to My Villa in Bali?",
+    "description": "Yes. A private coach can come to your villa in Canggu, Seminyak, Sanur, Ubud or Uluwatu, travel included. From Rp 1.300.000. Ask us on WhatsApp.",
+    "date": "2026-11-19",
+    "primaryQuery": "can I get a personal trainer to my villa in Bali",
+    "service": "Private Strength Training",
+    "city": "Bali",
+    "landingPage": "/bali/personal-training",
+    "image": "/images/editorial/can-i-get-a-personal-trainer-to-my-villa-bali.webp",
+    "bodyFile": "can-i-get-a-personal-trainer-to-my-villa-bali.md",
+    "faqs": [
+      {
+        "q": "Can a personal trainer really come to my villa in Bali?",
+        "a": "Yes. PersonalFitness.id sends a private professional to villas in Canggu, Seminyak, Sanur, Ubud and Uluwatu, with travel included. You send your area, dates and a two-hour window on WhatsApp, we check supply and access, and you receive a written quote naming your professional. A 50% deposit then confirms the session."
+      },
+      {
+        "q": "How much does a trainer at a villa in Bali cost?",
+        "a": "Private strength training at your villa starts at Rp 1.300.000 for 60 minutes for one person, with travel included in all five Bali areas. An extra guest adds Rp 250.000. Private yoga starts at Rp 1.050.000 for up to two people. Packs of 3, 5 or 10 sessions lower strength training to Rp 1.225.000, Rp 1.175.000 or Rp 1.050.000 per session."
+      },
+      {
+        "q": "Do I need gym equipment at my villa?",
+        "a": "No. A clear, dry floor or a shaded terrace is enough. Tell us what the villa already has: mats, bands and light dumbbells can be used if present. Anything unusual only appears if it is written on your quote."
+      },
+      {
+        "q": "Can my partner or friends train with me?",
+        "a": "Yes. On a one-person session such as strength training, an extra guest adds Rp 250.000. Private yoga and guided meditation already include a second person at the same price."
+      },
+      {
+        "q": "What if I need to change my session time?",
+        "a": "You can reschedule free of charge up to 24 hours before your session, if supply allows. Changes inside 24 hours are charged. If your professional does not arrive, you are not charged."
+      },
+      {
+        "q": "Is there a free trial session?",
+        "a": "No. There is no free intro session. Your first visit uses the published rate, so the quote and the hour match."
+      },
+      {
+        "q": "Are sessions in English?",
+        "a": "Yes. You can request English or Bahasa Indonesia. Other language preferences are checked with the actual professional before confirmation."
+      }
+    ],
+    "imageAlt": "Indonesian male trainer coaching an adult female guest through a kettlebell goblet squat on a Bali villa terrace beside the pool at sunrise"
   }
 ]

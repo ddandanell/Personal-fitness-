@@ -532,6 +532,11 @@
       "primaryKeyword": "single session deposit or full upfront fitness pack payment",
       "role": "queued-supporting-guide",
       "commercialOwner": "/pricing"
+    },
+    "/resources/can-i-get-a-personal-trainer-to-my-villa-bali": {
+      "primaryKeyword": "can I get a personal trainer to my villa in Bali",
+      "role": "supporting-guide",
+      "commercialOwner": "/bali/personal-training"
     }
   }
 }

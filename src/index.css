@@ -995,3 +995,11 @@ body.print-a5 header, body.print-a5 footer, body.print-a5 .whatsapp-float, body.
 .pack-rate-scroll table { border-collapse: collapse; width: 100%; }
 .pack-rate-scroll th, .pack-rate-scroll td { padding: .75rem; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; border-bottom: 1px solid #cbcec8; }
 .pack-rate-scroll th:first-child { text-align: left; }
+
+/* Inline links inside rewritten hero intros stay readable on light and dark heroes. */
+.hero-lede a, .large-copy a, .page-intro-copy p a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* In-article figures written as ![alt](/images/editorial/name.webp) in guide markdown. */
+.article-figure { margin: 2rem 0; }
+.article-figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.article-figure figcaption { margin-top: 0.5rem; }
