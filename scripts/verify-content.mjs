@@ -95,10 +95,17 @@ try {
   const held = manifest.find((item) => item.path === '/swimming')
   assert.equal(held.noindex, true)
   const partnerHtml = await fs.readFile('dist/villa-hotel-partners.html', 'utf8')
-  const headerHtml = partnerHtml.split('</header>')[0]
+  const homeHtml = await fs.readFile('dist/index.html', 'utf8')
+  const idHtml = await fs.readFile('dist/id.html', 'utf8')
+  const headerHtml = homeHtml.split('</header>')[0]
   const footerHtml = partnerHtml.split('<footer')[1]
-  assert.ok(headerHtml.includes('href="/villa-hotel-partners"'))
+  const homeFooter = homeHtml.split('<footer')[1]
+  const idFooter = idHtml.split('<footer')[1]
+  assert.ok(!headerHtml.includes('For villa managers') && !headerHtml.includes('For villa management'))
   assert.ok(footerHtml.includes('href="/villa-hotel-partners"'))
+  assert.ok(homeFooter.includes('For villa management: partner with us'))
+  assert.ok(idFooter.includes('href="/id/mitra-villa"'))
+  assert.ok(idFooter.includes('Untuk pengelola villa: bermitra dengan kami'))
   assert.ok(footerHtml.includes('href="/partner-terms"'))
   assert.ok(partnerHtml.includes('Villa wellness partner programme in Bali'))
   for (const price of ['Rp 1.300.000', 'Rp 1.050.000', 'Rp 1.200.000', 'Rp 1.250.000']) {

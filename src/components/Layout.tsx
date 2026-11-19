@@ -18,7 +18,6 @@ const navigation = [
   ['/services', 'Services'],
   ['/pricing', 'Prices'],
   ['/how-it-works', 'How it works'],
-  ['/villa-hotel-partners', 'For villa managers'],
   ['/resources', 'Guides'],
 ]
 
@@ -45,7 +44,6 @@ const mobileGroups = [
       ['/programmes', 'Programmes'],
       ['/resources', 'Guides'],
       ['/faq', 'FAQ'],
-      ['/villa-hotel-partners', 'For villa managers'],
     ],
   },
   {
@@ -196,7 +194,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
             <Link to="/bali">Bali</Link><Link to="/jakarta">Jakarta</Link><Link to="/jakarta/south-jakarta">{isId ? 'Jakarta Selatan' : 'South Jakarta'}</Link><Link to="/jakarta/central-jakarta">{isId ? 'Jakarta Pusat' : 'Central Jakarta'}</Link><Link to="/jakarta/kemang">Kemang</Link><Link to="/jakarta/menteng">Menteng</Link><Link to="/jakarta/kelapa-gading">Kelapa Gading</Link><Link to="/service-areas">{isId ? 'Semua lokasi' : 'All locations'}</Link><Link to="/how-it-works">{isId ? 'Cara kerja' : 'How it works'}</Link>
           </div>
           <div><p className="footer-heading">{isId ? 'Perusahaan' : 'Company'}</p>
-            <Link to="/about">{isId ? 'Tentang kami' : 'About'}</Link><Link to="/professional-standards">{isId ? 'Standar profesional' : 'Standards'}</Link><Link to="/villa-hotel-partners">For villa managers</Link><Link to="/partner-terms">{isId ? 'Ketentuan mitra' : 'Partner terms'}</Link><Link to="/team">{isId ? 'Tim' : 'Team'}</Link><Link to="/id/mitra-villa">Untuk villa</Link><Link to="/resources">{isId ? 'Panduan' : 'Guides'}</Link><Link to="/faq">FAQ</Link>
+            <Link to="/about">{isId ? 'Tentang kami' : 'About'}</Link><Link to="/professional-standards">{isId ? 'Standar profesional' : 'Standards'}</Link><Link to={isId ? '/id/mitra-villa' : '/villa-hotel-partners'}>{isId ? 'Untuk pengelola villa: bermitra dengan kami' : 'For villa management: partner with us'}</Link><Link to="/partner-terms">{isId ? 'Ketentuan mitra' : 'Partner terms'}</Link><Link to="/team">{isId ? 'Tim' : 'Team'}</Link><Link to="/resources">{isId ? 'Panduan' : 'Guides'}</Link><Link to="/faq">FAQ</Link>
           </div>
           <div><p className="footer-heading">{isId ? 'Kebijakan' : 'Policies'}</p>
             <Link to="/privacy">{isId ? 'Privasi' : 'Privacy'}</Link><Link to="/terms">{isId ? 'Ketentuan' : 'Terms'}</Link><Link to="/refunds-rescheduling">{isId ? 'Pengembalian dana' : 'Refunds'}</Link><Link to="/safety">{isId ? 'Keselamatan' : 'Safety'}</Link><Link to="/editorial-policy">{isId ? 'Editorial' : 'Editorial policy'}</Link>
