@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T09:36:36.201Z",
+  "generatedAt": "2026-11-19T09:38:28.038Z",
   "pages": [
     {
       "path": "/",
@@ -459,7 +459,7 @@
     },
     {
       "path": "/personal-training",
-      "mainWords": 1548,
+      "mainWords": 1547,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/personal-training",
       "localMinimum": false,
@@ -491,7 +491,7 @@
     },
     {
       "path": "/private-yoga",
-      "mainWords": 1551,
+      "mainWords": 1550,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/private-yoga",
       "localMinimum": false,

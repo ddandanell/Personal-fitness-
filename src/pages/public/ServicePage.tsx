@@ -44,7 +44,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
           <ParallaxImage src={photo} alt={service.imageAlt} eager />
           <div className="service-detail-copy">
             <Eyebrow>At your location</Eyebrow>
-            <h2>A private {service.title.toLowerCase()} visit at your villa or home.</h2>
+            <h2>A private {service.title.toLowerCase().replace(/^private /, '')} visit at your villa or home.</h2>
             <p className="large-copy">{service.short}</p>
             <PricePills slug={service.slug} />
             <ul className="check-list">{service.includes.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
