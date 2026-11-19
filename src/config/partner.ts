@@ -46,7 +46,7 @@ export const partner: PartnerConfig = {
   INSTAGRAM_URL: null,
   GBP_URL: null,
   COORDINATION_HOURS: '08:00-20:00',
-  GA4_ID: null,
+  GA4_ID: 'G-0V93D5LJF4',
 }
 
 export const PARTNER_MENU_PDF = '/partners/villa-wellness-menu.pdf'

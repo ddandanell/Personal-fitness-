@@ -23,32 +23,30 @@ export function trackWhatsApp(location: string, extra: Record<string, string | u
 }
 
 export function trackPageView(path: string) {
-  if (!GA4_ID) return
-  window.gtag?.('event', 'page_view', { page_path: path, page_location: window.location.href, page_title: document.title })
+  if (!GA4_ID || typeof window === 'undefined') return
+  window.gtag?.('event', 'page_view', {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: path,
+    send_to: GA4_ID,
+  })
 }
 
 export function installAnalytics() {
-  if (typeof window === 'undefined' || document.getElementById('ga4-src')) return
+  if (typeof window === 'undefined' || !GA4_ID || document.getElementById('ga4-src')) return
   window.dataLayer = window.dataLayer || []
   if (typeof window.gtag !== 'function') {
     window.gtag = (...args: unknown[]) => {
       window.dataLayer?.push(args as unknown as Record<string, unknown>)
     }
   }
-  const boot = () => {
-    if (!GA4_ID || document.getElementById('ga4-src')) return
-    window.gtag?.('js', new Date())
-    window.gtag?.('config', GA4_ID, { anonymize_ip: true, send_page_view: false })
-    const script = document.createElement('script')
-    script.id = 'ga4-src'
-    script.async = true
-    script.defer = true
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID)
-    document.head.appendChild(script)
-  }
-  if (!GA4_ID) return
-  const start = () => boot()
-  window.addEventListener('pointerdown', start, { once: true, passive: true })
-  window.addEventListener('keydown', start, { once: true })
-  window.setTimeout(start, 2500)
+  window.gtag('js', new Date())
+  // send_page_view: false avoids a duplicate initial view; route changes are sent once via trackPageView.
+  // Enhanced measurement "page changes based on browser history events" must stay off in the GA4 data stream so those history events do not add a second page_view.
+  window.gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false })
+  const script = document.createElement('script')
+  script.id = 'ga4-src'
+  script.async = true
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID)
+  document.head.appendChild(script)
 }
