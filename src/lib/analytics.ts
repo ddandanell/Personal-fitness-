@@ -41,19 +41,39 @@ export function installAnalytics() {
     }
   }
   const historyObject = window.history
-  const pushState = historyObject.pushState.bind(historyObject)
-  const replaceState = historyObject.replaceState.bind(historyObject)
+  const proto = History.prototype
+  const instancePush = historyObject.pushState.bind(historyObject)
+  const instanceReplace = historyObject.replaceState.bind(historyObject)
+  const protoPush = proto.pushState
+  const protoReplace = proto.replaceState
+  const pinHistory = () => {
+    const lock = (target: object, name: 'pushState' | 'replaceState', value: History['pushState']) => {
+      try {
+        Object.defineProperty(target, name, {
+          configurable: true,
+          enumerable: true,
+          get() {
+            return value
+          },
+          set() {},
+        })
+      } catch {
+        // Some browsers may refuse the lock; route views still go out through trackPageView.
+      }
+    }
+    lock(historyObject, 'pushState', instancePush)
+    lock(historyObject, 'replaceState', instanceReplace)
+    lock(proto, 'pushState', protoPush)
+    lock(proto, 'replaceState', protoReplace)
+  }
+  // Pin before gtag.js loads so enhanced measurement cannot wrap History and send a second page_view.
+  pinHistory()
   window.gtag('js', new Date())
-  // send_page_view: false avoids a duplicate initial view. Route changes are sent once via trackPageView.
-  // Restoring History API methods after gtag.js loads stops enhanced measurement from adding a second page_view.
   window.gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false })
   const script = document.createElement('script')
   script.id = 'ga4-src'
   script.async = true
   script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID)
-  script.addEventListener('load', () => {
-    historyObject.pushState = pushState
-    historyObject.replaceState = replaceState
-  })
+  script.addEventListener('load', pinHistory)
   document.head.appendChild(script)
 }
