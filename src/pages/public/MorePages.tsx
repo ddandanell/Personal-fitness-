@@ -146,9 +146,9 @@ export function ServiceAreas() {
       </PageIntro>
       <section className="section-compact section-dark">
         <div className="shell split-feature">
-          <div><h2>How travel is charged.</h2></div>
+          <div><h2>Where travel is included.</h2></div>
           <ul className="check-list large-list">
-            {['Central areas: Canggu, Seminyak, South Jakarta and Central Jakarta, travel included', 'Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request.', 'North, West and East Jakarta: by request', 'Parking, building fees and pool entry stay extra if they exist'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
+            {['Bali: travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas on request.', 'Jakarta: travel is included in South and Central Jakarta', 'North, West and East Jakarta: by request', 'Parking, building fees and pool entry stay extra if they exist'].map((item) => <li key={item}><Check size={19} />{item}</li>)}
           </ul>
         </div>
       </section>
@@ -173,7 +173,7 @@ export function ServiceAreas() {
       </section>
       <section className="section section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate, including named neighbourhood pages. Other municipalities wait on supply and a travel line.</p></div></div>
+          <div className="section-title"><div><Eyebrow>Jakarta</Eyebrow><h2>Home and apartment clusters we publish.</h2><p>South and Central Jakarta sit inside the published rate, including named neighbourhood pages. Other municipalities are by request.</p></div></div>
           <LocationClusters city="Jakarta" />
           <div className="cluster" style={{ marginTop: 28 }}>
             <Link to="/jakarta/personal-training" className="text-link">Private Strength Training in Jakarta<ArrowUpRight size={15} /></Link>
@@ -711,7 +711,7 @@ const legalCopy = {
     lede: 'Prices, clusters and professional names are treated as operational facts. Marketing adjectives are not.',
     cta: 'Suggest a correction',
     blocks: [
-      ['Sources', 'Session rates come from the operating workbook. Area travel fees are the published cluster rules. Named public profiles are not part of the live site.'],
+      ['Sources', 'Session rates come from the operating workbook. Travel coverage follows the published service areas. Named public profiles are not part of the live site.'],
       ['Session photographs', 'Photographs show the type of private coaching we coordinate. They do not identify the professional who will arrive, a customer, a property or guaranteed local availability. The person who attends is named on your written quote.'],
       ['Corrections', 'If a price, area or name is wrong, the page is updated and the quote template follows. We do not leave a cheaper number on a banner than operations will honour.'],
       ['AI assistance', 'Copy may be drafted with AI. Release still needs a human pass for prices, safety and legal pages.'],

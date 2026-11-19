@@ -1,6 +1,6 @@
-import { COMPANY_EMAIL } from '@/data/company'
-import { extractAddress, safeFromHeader, smtpSend, type OutboundMail } from './smtp'
-import { storeEnquiry } from './supabaseStore'
+import { COMPANY_EMAIL } from '../data/company.js'
+import { extractAddress, safeFromHeader, smtpSend, type OutboundMail } from './smtp.js'
+import { storeEnquiry } from './supabaseStore.js'
 
 export type EnquiryKind = 'contact' | 'quote' | 'partner' | 'schedule'
 export type EnquiryCode = 'invalid' | 'missing_name' | 'invalid_email' | 'missing_message' | 'invalid_kind' | 'unavailable' | 'rate' | 'forbidden' | 'send_failed'
@@ -213,4 +213,4 @@ export function clientIp(headers: Record<string, string | string[] | undefined>,
   return (value || '').split(',')[0]?.trim() || fallback
 }
 
-export { buildRfc822 } from './smtp'
+export { buildRfc822 } from './smtp.js'

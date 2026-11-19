@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T09:13:45.364Z",
+  "generatedAt": "2026-11-19T09:28:14.395Z",
   "pages": [
     {
       "path": "/",
@@ -139,7 +139,7 @@
     },
     {
       "path": "/editorial-policy",
-      "mainWords": 142,
+      "mainWords": 141,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/editorial-policy",
       "localMinimum": false,
@@ -315,7 +315,7 @@
     },
     {
       "path": "/jakarta/pik",
-      "mainWords": 1651,
+      "mainWords": 1657,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/pik",
       "localMinimum": true,
@@ -739,7 +739,7 @@
     },
     {
       "path": "/resources/train-in-a-bali-villa",
-      "mainWords": 1161,
+      "mainWords": 1159,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/train-in-a-bali-villa",
       "localMinimum": false,
@@ -755,7 +755,7 @@
     },
     {
       "path": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
-      "mainWords": 1507,
+      "mainWords": 1509,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
       "localMinimum": false,
@@ -779,7 +779,7 @@
     },
     {
       "path": "/service-areas",
-      "mainWords": 1365,
+      "mainWords": 1361,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/service-areas",
       "localMinimum": true,
@@ -1003,6 +1003,6 @@
     }
   ],
   "locationPages": 41,
-  "minimumLocationWords": 1365,
+  "minimumLocationWords": 1361,
   "uniquePrimaryImages": 86
 }

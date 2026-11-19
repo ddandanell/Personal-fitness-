@@ -53,7 +53,7 @@ If you want a month of Tuesdays, read [programmes](/programmes). A single sessio
 
 Home private strength training in Jakarta does not replace a clinician. Pain, swelling or a recent procedure needs qualified advice first. We will not diagnose on your rug. We will not promise fat-loss numbers. We will not fight your building’s security SOP.
 
-We also will not hide travel. If you are in BSD, expect a travel line or a decline. Honesty is cheaper than a late coach and a refund fight.
+We also will not overpromise coverage. If you are in BSD, expect a separate quote or a decline. Honesty is cheaper than a late coach and a refund fight.
 
 ## After the first hour
 

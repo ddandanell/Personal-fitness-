@@ -56,7 +56,7 @@ Do not ask for a free intro in the first message. We do not run one. The first s
 
 If you are a villa manager booking for a guest, say so. Include the guest-facing contact, the entrance instruction and whether the guest will be present. Do not put personal session notes on a public reception timetable. Partner enquiries can start on [villa and hotel partnerships](/villa-hotel-partners) and still use the same five-line WhatsApp once the session is named.
 
-If two households want two hours, send two windows. Do not hide a second address inside one message and expect one travel line. Canggu and Ubud are not the same cluster. South Jakarta and BSD are not the same cluster.
+If two households want two hours, send two windows. Do not hide a second address inside one message and expect one quote to cover both. Canggu and Ubud are not the same cluster. South Jakarta and BSD are not the same cluster.
 
 ## A checklist you can actually use
 

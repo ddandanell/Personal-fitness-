@@ -1,4 +1,4 @@
-import { clientIp, handleEnquiry } from '../src/server/enquiry'
+import { clientIp, handleEnquiry } from '../src/server/enquiry.js'
 
 type HeaderValue = string | string[] | undefined
 

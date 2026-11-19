@@ -301,7 +301,7 @@ const jakartaPockets: Area[] = [
     travelFee: 0,
     travelQuote: true,
     driveNote: 'North Jakarta by request. PIK is not an in-zone South Jakarta rate.',
-    copy: 'Pantai Indah Kapuk is a North Jakarta timing-and-travel check. Estate gates, weekend traffic and a long unload are why we quote instead of publishing a zero-travel line. Send the cluster inside PIK, not only “PIK”.',
+    copy: 'Pantai Indah Kapuk is a North Jakarta timing-and-travel check. Estate gates, weekend traffic and a long unload are why we quote each address instead of publishing a flat area rate. Send the cluster inside PIK, not only “PIK”.',
     venues: ['Estate houses with indoor floors', 'Apartments with visitor permission', 'Private gym rooms already in the house'],
     bestFor: ['A weekend training enquiry', 'Private yoga for two if supply exists', 'A written travel quote before you plan a block'],
     services: JAKARTA_LIVE,

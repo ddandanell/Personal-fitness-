@@ -524,7 +524,6 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .guest-toggle button[aria-pressed="true"] { background: var(--ink, #1c1b17); color: var(--paper, #f6f3ec); }
 .wa-handoff { margin: 8px 0 0; }
 .wa-float-stack { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; max-width: min(320px, calc(100vw - 28px)); }
-.wa-float-note { margin: 0; padding: 10px 12px; background: #fff; color: #1c1b17; border-radius: 12px; font-size: .75rem; line-height: 1.35; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
 .estimator-result .muted,
 .estimator-result .small { color: #cecec7; }
 
@@ -714,7 +713,6 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
   .footer-bottom { flex-direction: column; padding-right: 0; padding-bottom: 72px; gap: 12px; }
   .site-footer { padding: 52px 0 calc(28px + env(safe-area-inset-bottom)); }
   .wa-float-stack { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
-  .wa-float-note { display: none; }
   input, select, textarea { min-height: 48px; padding: 14px 12px; }
   .contact-channel-value { font-size: 1.45rem; }
 }
