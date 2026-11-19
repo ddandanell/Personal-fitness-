@@ -43,7 +43,7 @@ Do not choose by assuming one service is easier or more advanced. A mobility vis
 
 ## Prices in Bali and Jakarta
 
-The [pricing page](/pricing) publishes the same calculation blocks used for both services. Mobility coaching starts at Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta for 60 minutes and one person in an accepted in-zone address. Private Strength Training starts at Rp 1.300.000 for 60 minutes and one person.
+The [pricing page](/pricing) publishes the same calculation blocks used for both services. [Mobility coaching](/mobility-coaching) starts at Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta for 60 minutes and one person in an accepted in-zone address. Private Strength Training starts at Rp 1.300.000 for 60 minutes and one person.
 
 An extra person adds Rp 250.000 in Bali or Rp 250.000 in Jakarta where the shared setup is accepted. Ninety minutes add 45 percent of the relevant city base. These are estimator rules, not proof that the requested professional, address or time is available.
 

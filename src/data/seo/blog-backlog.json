@@ -1,0 +1,206 @@
+{
+ "about": "Next daily blog keywords, each locked to the money page it must lift. Take the first row whose status is \"next\", write it per docs/SEO_SYSTEM.md section 4, then set status to \"published\" and add the post to keyword-map.json as a support page with this target. Re-rank after each GSC report (scripts/seo/gsc-report.mjs). Language mix about 4 English to 1 Bahasa.",
+ "updated": "2026-11-19",
+ "items": [
+  {
+   "rank": 1,
+   "id": "KW011",
+   "keyword": "can a yoga teacher come to my villa in bali",
+   "language": "en",
+   "target": "/bali/private-yoga",
+   "angle": "Question post (drafted 19 Nov in the blog pack; regenerate the in-body image). Answer yes in the first sentence and link private yoga in Bali.",
+   "why": "P1 money page; drafted and ready",
+   "status": "next"
+  },
+  {
+   "rank": 2,
+   "id": "KW028",
+   "keyword": "personal trainer for hotel guests bali",
+   "language": "en",
+   "target": "/bali/personal-training",
+   "angle": "Hotel-room and resort-gym angle: what works in a hotel room or garden, how access with the front desk works.",
+   "why": "P1; GSC 13 impressions at position 5.4 with 0 clicks: needs more supporting relevance",
+   "status": "next"
+  },
+  {
+   "rank": 3,
+   "id": "KW017",
+   "keyword": "berapa harga personal trainer ke rumah di jakarta",
+   "language": "id",
+   "target": "/pricing",
+   "angle": "Bahasa only, Anda form. Price breakdown for a Jakarta home visit using live /pricing numbers; never target the English price keyword.",
+   "why": "P1; GSC shows \"harga personal trainer\" on /pricing (30 impressions, position 20)",
+   "status": "next"
+  },
+  {
+   "rank": 4,
+   "id": "KW118",
+   "keyword": "how villa managers add wellness revenue",
+   "language": "en",
+   "target": "/villa-hotel-partners",
+   "angle": "Villa manager angle: guest wellness as an add-on, 10% commission on what the guest paid, monthly statement. No invented earnings.",
+   "why": "Partners-first commercial goal (AGENTS.md)",
+   "status": "next"
+  },
+  {
+   "rank": 5,
+   "id": "NEW-01",
+   "keyword": "pilates without a reformer at a bali villa",
+   "language": "en",
+   "target": "/bali/mat-pilates",
+   "angle": "What a mat-only private Pilates hour looks like at a villa and why no reformer is needed.",
+   "why": "P2 money page with no support guide; core service",
+   "status": "next"
+  },
+  {
+   "rank": 6,
+   "id": "KW041",
+   "keyword": "how to stay fit on holiday in bali",
+   "language": "en",
+   "target": "/bali",
+   "angle": "Holiday routine angle that links every Bali service from the hub.",
+   "why": "P1 hub with no support guide",
+   "status": "next"
+  },
+  {
+   "rank": 7,
+   "id": "NEW-02",
+   "keyword": "villa zumba party bali",
+   "language": "en",
+   "target": "/zumba-dance-fitness",
+   "angle": "Private Zumba and dance class for a villa group (families, birthdays, hen parties): space, music, headcount rules from the live page.",
+   "why": "Core service with no support guide; GSC shows \"zumba class near me\" demand",
+   "status": "next"
+  },
+  {
+   "rank": 8,
+   "id": "KW055",
+   "keyword": "cara mat pilates di rumah jakarta",
+   "language": "id",
+   "target": "/jakarta/mat-pilates",
+   "angle": "Bahasa only. How a private mat Pilates session works in a Jakarta apartment.",
+   "why": "P2 money page with no support guide; GSC 5 impressions",
+   "status": "next"
+  },
+  {
+   "rank": 9,
+   "id": "NEW-03",
+   "keyword": "recovery session after surfing in bali",
+   "language": "en",
+   "target": "/bodywork-recovery",
+   "angle": "Post-surf recovery at the villa: assisted stretching and myofascial release, non-clinical scope.",
+   "why": "Core service; only a queued guide supports it",
+   "status": "next"
+  },
+  {
+   "rank": 10,
+   "id": "KW024",
+   "keyword": "bali fitness retreat at your villa",
+   "language": "en",
+   "target": "/programmes",
+   "angle": "Build-your-own retreat week with a 3, 5 or 10-session pack; link personal training packages.",
+   "why": "P1 pricing page",
+   "status": "next"
+  },
+  {
+   "rank": 11,
+   "id": "KW023",
+   "keyword": "honeymoon yoga bali",
+   "language": "en",
+   "target": "/bali/private-yoga",
+   "angle": "Honeymoon routine angle only; link couples guide and private yoga in Bali.",
+   "why": "P1",
+   "status": "next"
+  },
+  {
+   "rank": 12,
+   "id": "KW106",
+   "keyword": "personal trainer vs gym bali",
+   "language": "en",
+   "target": "/bali/personal-training",
+   "angle": "Commercial comparison: gym day pass versus a coach at your villa.",
+   "why": "P1",
+   "status": "next"
+  },
+  {
+   "rank": 13,
+   "id": "KW122",
+   "keyword": "manfaat personal trainer",
+   "language": "id",
+   "target": "/id",
+   "angle": "Bahasa informational; link personal trainer datang ke rumah.",
+   "why": "P1 Indonesian home with no support guide; GSC \"jasa personal trainer\" queries land on the wrong page",
+   "status": "next"
+  },
+  {
+   "rank": 14,
+   "id": "KW027",
+   "keyword": "corporate retreat wellness bali",
+   "language": "en",
+   "target": "/villa-hotel-partners",
+   "angle": "Retreat organiser angle; group sessions only as the live page allows.",
+   "why": "Partners",
+   "status": "next"
+  },
+  {
+   "rank": 15,
+   "id": "KW073",
+   "keyword": "yoga retreat bali for beginners private",
+   "language": "en",
+   "target": "/programmes",
+   "angle": "Private beginner yoga week using packs.",
+   "why": "P1 pricing page",
+   "status": "next"
+  },
+  {
+   "rank": 16,
+   "id": "KW059",
+   "keyword": "instruktur yoga datang ke rumah",
+   "language": "id",
+   "target": "/jakarta/private-yoga",
+   "angle": "Bahasa only, yoga-specific; link /id too.",
+   "why": "P2",
+   "status": "next"
+  },
+  {
+   "rank": 17,
+   "id": "NEW-04",
+   "keyword": "personal trainer for a long stay in central jakarta",
+   "language": "en",
+   "target": "/jakarta/central-jakarta",
+   "angle": "Expat and long-stay angle for Menteng, Thamrin and Kuningan apartments.",
+   "why": "P2 area page with no support guide",
+   "status": "next"
+  },
+  {
+   "rank": 18,
+   "id": "KW030",
+   "keyword": "digital nomad fitness canggu",
+   "language": "en",
+   "target": "/bali/canggu",
+   "angle": "Long-stay Canggu routine with packs.",
+   "why": "P1 area page",
+   "status": "next"
+  },
+  {
+   "rank": 19,
+   "id": "NEW-05",
+   "keyword": "private yoga at a sanur villa",
+   "language": "en",
+   "target": "/bali/sanur",
+   "angle": "Sanur family and slow-travel angle; never the head term \"personal trainer sanur\".",
+   "why": "P2 area page with no support guide",
+   "status": "next"
+  },
+  {
+   "rank": 20,
+   "id": "KW064",
+   "keyword": "boxing gym seminyak alternative",
+   "language": "en",
+   "target": "/bali/boxing-fitness",
+   "angle": "Boxing gym vs pad work at your villa; one guest only. Never title it \"boxing trainer Bali\".",
+   "why": "P2; GSC 15 impressions (boxing bali, boxing seminyak, boxing class bali)",
+   "status": "next"
+  }
+ ]
+}

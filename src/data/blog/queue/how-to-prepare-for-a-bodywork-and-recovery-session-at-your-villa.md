@@ -1,6 +1,6 @@
 ## Start with the purpose of the hour
 
-A bodywork and recovery session at your villa should begin with a simple question: what kind of hour are you trying to arrange? PersonalFitness.id offers a 60-minute wellness session built around assisted stretching, light myofascial release and time to relax. It is designed for one adult in a suitable private room. A second adult can be added to the written quote. This is not a diagnosis, physiotherapy appointment, injury treatment or rehabilitation service.
+A bodywork and recovery session at your villa should begin with a simple question: what kind of hour are you trying to arrange? PersonalFitness.id offers a 60-minute [bodywork and recovery session](/bodywork-recovery) built around assisted stretching, light myofascial release and time to relax. It is designed for one adult in a suitable private room. A second adult can be added to the written quote. This is not a diagnosis, physiotherapy appointment, injury treatment or rehabilitation service.
 
 That distinction helps you prepare well. You do not need to assemble a medical file or choose a technique from a long menu. You do need to explain the practical outcome you prefer in ordinary language. You might want a quieter session after a long flight, a general stretch after several active days, or an unhurried wellness hour at the villa. The instructor can then keep the session within the agreed non-clinical scope.
 

@@ -1,0 +1,1443 @@
+{
+ "version": 2,
+ "updated": "2026-11-19",
+ "about": "Single source of truth for which search keyword each indexable URL targets. One primary keyword per URL, never shared. Money pages earn; support pages (blog and guides) exist to lift their target money page. Edit by hand following docs/SEO_SYSTEM.md; every change to a primary keyword, title or meta is logged in src/data/seo/changelog.json. Enforced by scripts/seo/check-keyword-map.mjs in npm run check:release. seo-keyword-lock.json stays as the legacy URL ownership ledger (internal IDs used by the build and queue checks); this file decides what the copy targets.",
+ "rules": {
+  "titleMax": 60,
+  "metaMin": 120,
+  "metaMax": 160,
+  "firstLinkWords": 150,
+  "minTargetLinks": 2,
+  "strictBlogFrom": "2026-11-20",
+  "introMaxWords": 35,
+  "gscWindow": "2026-08-21..2026-11-19"
+ },
+ "pages": {
+  "/": {
+   "type": "home",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer at your villa or home Bali Jakarta",
+   "secondary": [
+    "personalfitness.id",
+    "personal trainer home visit Bali Jakarta",
+    "mobile personal trainer Bali",
+    "in-villa personal trainer",
+    "private yoga and Pilates at home"
+   ],
+   "anchor": "personal trainer at your villa or home",
+   "gsc": {
+    "impressions": 26,
+    "clicks": 1,
+    "position": 15.4
+   }
+  },
+  "/about": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "about personalfitness.id",
+   "secondary": [
+    "company-managed private fitness service Bali"
+   ],
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 2
+   }
+  },
+  "/bali": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "fitness trainer bali",
+   "secondary": [
+    "private fitness Bali villa",
+    "yoga Pilates and personal training at your villa Bali",
+    "fitness training bali",
+    "villa workout Bali",
+    "wellness at your villa Bali",
+    "bali fitness classes"
+   ],
+   "anchor": "fitness trainer in Bali",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 5
+   }
+  },
+  "/bali/boxing-fitness": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private boxing bali",
+   "secondary": [
+    "private boxing coach bali",
+    "boxing trainer bali",
+    "boxing coach bali",
+    "boxing workout at your villa",
+    "boxing bali",
+    "boxing class bali",
+    "boxing in bali",
+    "boxing seminyak",
+    "private boxing"
+   ],
+   "anchor": "private boxing in Bali",
+   "gsc": {
+    "impressions": 15,
+    "clicks": 0,
+    "position": 21.4
+   }
+  },
+  "/bali/canggu": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer canggu",
+   "secondary": [
+    "personal trainer bali canggu",
+    "private yoga canggu",
+    "pilates canggu villa",
+    "personal trainer berawa",
+    "personal trainer pererenan"
+   ],
+   "anchor": "personal trainer in Canggu"
+  },
+  "/bali/guided-meditation": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "guided meditation bali",
+   "secondary": [
+    "private meditation bali",
+    "mindfulness meditation bali",
+    "meditation at your villa bali"
+   ],
+   "anchor": "guided meditation in Bali"
+  },
+  "/bali/mat-pilates": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private pilates bali",
+   "secondary": [
+    "mat pilates bali",
+    "private pilates class bali",
+    "mat pilates bali canggu",
+    "pilates bali villa"
+   ],
+   "anchor": "private Pilates in Bali"
+  },
+  "/bali/personal-training": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer bali",
+   "secondary": [
+    "personal trainer bali villa",
+    "in-villa personal trainer Bali",
+    "mobile personal trainer Bali",
+    "personal trainer bali price",
+    "private strength training Bali",
+    "personal coach bali",
+    "bali personal trainer",
+    "private trainer fitness bali"
+   ],
+   "anchor": "personal trainer in Bali",
+   "gsc": {
+    "impressions": 13,
+    "clicks": 0,
+    "position": 5.4
+   }
+  },
+  "/bali/private-yoga": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "private yoga bali",
+   "secondary": [
+    "private yoga instructor bali",
+    "private yoga teacher bali",
+    "yoga teacher come to villa bali",
+    "private yoga class bali",
+    "private yoga bali price",
+    "yoga privat bali",
+    "bali private yoga"
+   ],
+   "anchor": "private yoga in Bali",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 50
+   }
+  },
+  "/bali/sanur": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer sanur",
+   "secondary": [
+    "personal trainer sanur bali",
+    "private yoga sanur",
+    "family villa fitness sanur"
+   ],
+   "anchor": "personal trainer in Sanur"
+  },
+  "/bali/seminyak": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer seminyak",
+   "secondary": [
+    "personal trainer seminyak bali",
+    "private yoga seminyak",
+    "private yoga instructor seminyak",
+    "personal trainer petitenget"
+   ],
+   "anchor": "personal trainer in Seminyak"
+  },
+  "/bali/ubud": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer ubud",
+   "secondary": [
+    "personal trainer bali ubud",
+    "personal training ubud",
+    "private yoga ubud",
+    "ubud yoga private class"
+   ],
+   "anchor": "personal trainer in Ubud"
+  },
+  "/bali/uluwatu": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer uluwatu",
+   "secondary": [
+    "personal trainer uluwatu bali",
+    "private yoga uluwatu",
+    "mat pilates uluwatu",
+    "personal trainer bingin",
+    "personal trainer bukit"
+   ],
+   "anchor": "personal trainer in Uluwatu"
+  },
+  "/bodywork-recovery": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "bodywork and recovery at your villa",
+   "secondary": [
+    "bodywork bali villa",
+    "myofascial release at home",
+    "recovery stretching after training",
+    "post-workout recovery bali"
+   ],
+   "anchor": "bodywork and recovery at your villa"
+  },
+  "/boxing-fitness": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "private boxing lessons at home",
+   "secondary": [
+    "pad work at home",
+    "boxing workout at home",
+    "boxing di rumah",
+    "private boxing coach"
+   ],
+   "anchor": "private boxing lessons at home",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10
+   }
+  },
+  "/contact": {
+   "type": "conversion",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "contact personalfitness.id whatsapp",
+   "secondary": [
+    "book personal trainer whatsapp bali",
+    "personalfitness.id email"
+   ],
+   "anchor": "contact us on WhatsApp"
+  },
+  "/editorial-policy": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "PersonalFitness.id editorial policy",
+   "secondary": []
+  },
+  "/faq": {
+   "type": "conversion",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer bali jakarta faq",
+   "secondary": [
+    "personal training faqs",
+    "what questions should a personal trainer ask"
+   ],
+   "anchor": "personal trainer FAQ"
+  },
+  "/guided-meditation": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "private meditation sessions at home",
+   "secondary": [
+    "private meditation coach",
+    "guided meditation for two",
+    "private meditation classes",
+    "meditation at your villa"
+   ],
+   "anchor": "private meditation sessions at home",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 5
+   }
+  },
+  "/how-it-works": {
+   "type": "conversion",
+   "money": false,
+   "status": "live",
+   "priority": "P2",
+   "primary": "how to book a personal trainer at home",
+   "secondary": [
+    "how to book a personal training session",
+    "book personal trainer bali whatsapp",
+    "what happens before a home session"
+   ],
+   "anchor": "how to book a personal trainer at home"
+  },
+  "/id": {
+   "type": "home",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer datang ke rumah",
+   "secondary": [
+    "personal trainer ke rumah",
+    "jasa personal trainer ke rumah",
+    "personal trainer panggil ke rumah",
+    "harga personal trainer ke rumah",
+    "jasa personal trainer jakarta",
+    "jasa personal trainer bali",
+    "yoga privat",
+    "pilates di rumah",
+    "jasa personal trainer",
+    "jasa personal trainer fitness"
+   ],
+   "anchor": "personal trainer datang ke rumah"
+  },
+  "/id/mitra-villa": {
+   "type": "partners",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "program mitra villa bali",
+   "secondary": [
+    "kerja sama villa wellness bali",
+    "layanan yoga untuk tamu villa",
+    "komisi villa bali",
+    "wellness untuk villa"
+   ],
+   "anchor": "program mitra villa di Bali"
+  },
+  "/jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "home fitness trainer jakarta",
+   "secondary": [
+    "private yoga and Pilates at home Jakarta",
+    "gym trainer jakarta home",
+    "private fitness Jakarta apartment",
+    "boxing and meditation at home Jakarta"
+   ],
+   "anchor": "home fitness trainer in Jakarta"
+  },
+  "/jakarta/boxing-fitness": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private boxing jakarta",
+   "secondary": [
+    "private boxing jakarta selatan",
+    "private boxing jakarta barat",
+    "boxing di rumah",
+    "latihan boxing di rumah"
+   ],
+   "anchor": "private boxing in Jakarta"
+  },
+  "/jakarta/central-jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer jakarta pusat",
+   "secondary": [
+    "personal trainer central jakarta",
+    "private yoga jakarta pusat",
+    "home personal trainer central jakarta"
+   ],
+   "anchor": "personal trainer in Central Jakarta"
+  },
+  "/jakarta/cilandak": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer cilandak",
+   "secondary": [
+    "home personal trainer cilandak",
+    "private yoga cilandak",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Cilandak"
+  },
+  "/jakarta/east-jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer jakarta timur",
+   "secondary": [
+    "personal trainer east jakarta",
+    "private yoga jakarta timur",
+    "home personal trainer east jakarta"
+   ],
+   "anchor": "personal trainer in Jakarta Timur"
+  },
+  "/jakarta/gondangdia": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer gondangdia",
+   "secondary": [
+    "home personal trainer gondangdia",
+    "private yoga gondangdia",
+    "personal trainer central jakarta"
+   ],
+   "anchor": "personal trainer in Gondangdia",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 9
+   }
+  },
+  "/jakarta/guided-meditation": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "guided meditation jakarta",
+   "secondary": [
+    "meditasi jakarta",
+    "kelas meditasi jakarta selatan",
+    "private meditation jakarta"
+   ],
+   "anchor": "guided meditation in Jakarta"
+  },
+  "/jakarta/kebayoran": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer kebayoran",
+   "secondary": [
+    "home personal trainer kebayoran",
+    "private yoga kebayoran",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Kebayoran",
+   "gsc": {
+    "impressions": 3,
+    "clicks": 0,
+    "position": 85.7
+   }
+  },
+  "/jakarta/kebon-jeruk": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer kebon jeruk",
+   "secondary": [
+    "home personal trainer kebon jeruk",
+    "private yoga kebon jeruk",
+    "personal trainer west jakarta"
+   ],
+   "anchor": "personal trainer in Kebon Jeruk"
+  },
+  "/jakarta/kelapa-gading": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer kelapa gading",
+   "secondary": [
+    "home personal trainer kelapa gading",
+    "private yoga kelapa gading",
+    "personal trainer north jakarta"
+   ],
+   "anchor": "personal trainer in Kelapa Gading"
+  },
+  "/jakarta/kemang": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer kemang",
+   "secondary": [
+    "home personal trainer kemang",
+    "private yoga kemang",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Kemang",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 71
+   }
+  },
+  "/jakarta/kuningan": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer kuningan",
+   "secondary": [
+    "home personal trainer kuningan",
+    "private yoga kuningan",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Kuningan"
+  },
+  "/jakarta/mat-pilates": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private pilates jakarta",
+   "secondary": [
+    "harga private pilates jakarta",
+    "private pilates jakarta selatan",
+    "pilates di rumah jakarta",
+    "mat pilates di rumah",
+    "mat classes pilates",
+    "pilates mat classes near me"
+   ],
+   "anchor": "private Pilates in Jakarta",
+   "gsc": {
+    "impressions": 5,
+    "clicks": 0,
+    "position": 34
+   }
+  },
+  "/jakarta/menteng": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer menteng",
+   "secondary": [
+    "home personal trainer menteng",
+    "private yoga menteng",
+    "personal trainer central jakarta"
+   ],
+   "anchor": "personal trainer in Menteng",
+   "gsc": {
+    "impressions": 4,
+    "clicks": 0,
+    "position": 4
+   }
+  },
+  "/jakarta/north-jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer jakarta utara",
+   "secondary": [
+    "personal trainer north jakarta",
+    "private yoga jakarta utara",
+    "home personal trainer north jakarta"
+   ],
+   "anchor": "personal trainer in Jakarta Utara"
+  },
+  "/jakarta/personal-training": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer jakarta",
+   "secondary": [
+    "personal trainer jakarta home visit",
+    "home personal trainer jakarta",
+    "personal trainer ke rumah jakarta",
+    "personal trainer apartment jakarta",
+    "personal trainer jakarta price",
+    "booking personal trainer jakarta"
+   ],
+   "anchor": "personal trainer in Jakarta"
+  },
+  "/jakarta/pik": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer pantai indah kapuk",
+   "secondary": [
+    "personal trainer pik",
+    "home personal trainer pik",
+    "private yoga pik",
+    "personal trainer north jakarta"
+   ],
+   "anchor": "personal trainer in Pantai Indah Kapuk"
+  },
+  "/jakarta/pluit": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer pluit",
+   "secondary": [
+    "home personal trainer pluit",
+    "private yoga pluit",
+    "personal trainer north jakarta"
+   ],
+   "anchor": "personal trainer in Pluit"
+  },
+  "/jakarta/pondok-indah": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer pondok indah",
+   "secondary": [
+    "home personal trainer pondok indah",
+    "private yoga pondok indah",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Pondok Indah"
+  },
+  "/jakarta/private-yoga": {
+   "type": "service-area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private yoga jakarta",
+   "secondary": [
+    "yoga privat jakarta",
+    "guru yoga private jakarta",
+    "private yoga class jakarta",
+    "private yoga jakarta selatan",
+    "harga private yoga jakarta"
+   ],
+   "anchor": "private yoga in Jakarta"
+  },
+  "/jakarta/pulomas": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer pulomas",
+   "secondary": [
+    "home personal trainer pulomas",
+    "private yoga pulomas",
+    "personal trainer east jakarta"
+   ],
+   "anchor": "personal trainer in Pulomas"
+  },
+  "/jakarta/puri-indah": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer puri indah",
+   "secondary": [
+    "home personal trainer puri indah",
+    "private yoga puri indah",
+    "personal trainer west jakarta"
+   ],
+   "anchor": "personal trainer in Puri Indah"
+  },
+  "/jakarta/rawamangun": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer rawamangun",
+   "secondary": [
+    "home personal trainer rawamangun",
+    "private yoga rawamangun",
+    "personal trainer east jakarta"
+   ],
+   "anchor": "personal trainer in Rawamangun"
+  },
+  "/jakarta/scbd": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer scbd",
+   "secondary": [
+    "home personal trainer scbd",
+    "private yoga scbd",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in SCBD"
+  },
+  "/jakarta/senopati": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer senopati",
+   "secondary": [
+    "home personal trainer senopati",
+    "private yoga senopati",
+    "personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in Senopati"
+  },
+  "/jakarta/south-jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "personal trainer jakarta selatan",
+   "secondary": [
+    "personal trainer south jakarta",
+    "private yoga jakarta selatan",
+    "home personal trainer south jakarta"
+   ],
+   "anchor": "personal trainer in South Jakarta",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 34
+   }
+  },
+  "/jakarta/sunter": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal trainer sunter",
+   "secondary": [
+    "home personal trainer sunter",
+    "private yoga sunter",
+    "personal trainer north jakarta"
+   ],
+   "anchor": "personal trainer in Sunter",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 11
+   }
+  },
+  "/jakarta/thamrin": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer thamrin",
+   "secondary": [
+    "home personal trainer thamrin",
+    "private yoga thamrin",
+    "personal trainer central jakarta"
+   ],
+   "anchor": "personal trainer in Thamrin"
+  },
+  "/jakarta/west-jakarta": {
+   "type": "area",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer jakarta barat",
+   "secondary": [
+    "personal trainer west jakarta",
+    "private yoga jakarta barat",
+    "home personal trainer west jakarta"
+   ],
+   "anchor": "personal trainer in Jakarta Barat"
+  },
+  "/mat-pilates": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private mat pilates at home",
+   "secondary": [
+    "pilates privat",
+    "pilates private class",
+    "mat pilates no reformer",
+    "private pilates instructor at home"
+   ],
+   "anchor": "private mat Pilates at home",
+   "gsc": {
+    "impressions": 5,
+    "clicks": 0,
+    "position": 3.8
+   }
+  },
+  "/mobility-coaching": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "assisted stretching at home",
+   "secondary": [
+    "mobility coach bali",
+    "assisted stretching bali",
+    "assisted stretching canggu",
+    "assisted stretching jakarta",
+    "stretching bali"
+   ],
+   "anchor": "assisted stretching at home"
+  },
+  "/partner-terms": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "villa partner terms Bali",
+   "secondary": []
+  },
+  "/personal-training": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private strength training at home",
+   "secondary": [
+    "personal trainer home visit",
+    "home personal trainer",
+    "personal trainer home visit cost",
+    "home visiting personal trainer"
+   ],
+   "anchor": "private strength training at home",
+   "gsc": {
+    "impressions": 23,
+    "clicks": 0,
+    "position": 50.5
+   }
+  },
+  "/pricing": {
+   "type": "pricing",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal trainer bali price",
+   "secondary": [
+    "personal trainer jakarta price",
+    "harga personal trainer jakarta",
+    "personal trainer home visit cost",
+    "private yoga price",
+    "personal trainer prices bali jakarta",
+    "cheap personal trainer",
+    "harga personal trainer",
+    "personal trainer price"
+   ],
+   "anchor": "personal trainer prices in Bali and Jakarta",
+   "gsc": {
+    "impressions": 30,
+    "clicks": 0,
+    "position": 20.3
+   }
+  },
+  "/privacy": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "PersonalFitness.id privacy",
+   "secondary": []
+  },
+  "/private-yoga": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "private yoga at home",
+   "secondary": [
+    "private yoga instructor at home",
+    "private yoga class at home",
+    "private yoga at your villa",
+    "personal yoga trainer at home",
+    "private yoga session",
+    "yoga villa"
+   ],
+   "anchor": "private yoga at home",
+   "gsc": {
+    "impressions": 7,
+    "clicks": 0,
+    "position": 22.1
+   }
+  },
+  "/professional-standards": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "private trainer vetting Bali",
+   "secondary": []
+  },
+  "/programmes": {
+   "type": "pricing",
+   "money": true,
+   "status": "live",
+   "priority": "P1",
+   "primary": "personal training packages bali",
+   "secondary": [
+    "personal training packs",
+    "session pack villa stay",
+    "personal trainer package bali",
+    "personal training package deals",
+    "fitness program bali"
+   ],
+   "anchor": "personal training packages"
+  },
+  "/refunds-rescheduling": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "personal training cancellation policy",
+   "secondary": []
+  },
+  "/resources": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "bali jakarta fitness guides",
+   "secondary": [],
+   "gsc": {
+    "impressions": 31,
+    "clicks": 0,
+    "position": 29.4
+   }
+  },
+  "/resources/beginners-private-training": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer for beginners at home",
+   "secondary": [],
+   "target": "/personal-training"
+  },
+  "/resources/can-i-get-a-personal-trainer-to-my-villa-bali": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "can I get a personal trainer to my villa in Bali",
+   "secondary": [],
+   "target": "/bali/personal-training"
+  },
+  "/resources/couples-private-yoga": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "couples yoga at your villa",
+   "secondary": [],
+   "target": "/bali/private-yoga"
+  },
+  "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "extra-person pair pricing",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer free trial",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "what to expect in a guided meditation session",
+   "secondary": [],
+   "target": "/guided-meditation"
+  },
+  "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "first home training session jakarta",
+   "secondary": [],
+   "target": "/jakarta/personal-training",
+   "gsc": {
+    "impressions": 5,
+    "clicks": 0,
+    "position": 33.4
+   }
+  },
+  "/resources/how-villa-managers-book-guest-fitness-sessions": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "how to book fitness sessions for villa guests",
+   "secondary": [],
+   "target": "/villa-hotel-partners"
+  },
+  "/resources/jakarta-apartment-session": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "jakarta apartment training lobby",
+   "secondary": [],
+   "target": "/jakarta/personal-training"
+  },
+  "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "mat pilates at home equipment",
+   "secondary": [],
+   "target": "/mat-pilates"
+  },
+  "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "mat vs reformer pilates price",
+   "secondary": [],
+   "target": "/mat-pilates",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 8
+   }
+  },
+  "/resources/mobility-coaching-at-home-what-it-is-and-is-not": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "what is assisted stretching",
+   "secondary": [],
+   "target": "/mobility-coaching"
+  },
+  "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "how to compare personal trainer quotes bali",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "in-villa training session bali",
+   "secondary": [],
+   "target": "/bali/personal-training",
+   "gsc": {
+    "impressions": 3,
+    "clicks": 0,
+    "position": 69.3
+   }
+  },
+  "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "canggu villa training access",
+   "secondary": [],
+   "target": "/bali/canggu",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 16
+   }
+  },
+  "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "petitenget seminyak villa sessions",
+   "secondary": [],
+   "target": "/bali/seminyak",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 9
+   }
+  },
+  "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "south jakarta lobby access home trainer",
+   "secondary": [],
+   "target": "/jakarta/south-jakarta"
+  },
+  "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "ubud villa session access",
+   "secondary": [],
+   "target": "/bali/ubud",
+   "gsc": {
+    "impressions": 3,
+    "clicks": 0,
+    "position": 9
+   }
+  },
+  "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "home personal trainer cost jakarta",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/private-boxing-fitness-at-home-what-pad-only-means": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "what pad-only boxing means",
+   "secondary": [],
+   "target": "/boxing-fitness",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10.5
+   }
+  },
+  "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "yoga in a jakarta apartment",
+   "secondary": [],
+   "target": "/jakarta/private-yoga",
+   "gsc": {
+    "impressions": 4,
+    "clicks": 1,
+    "position": 6
+   }
+  },
+  "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "solo couple or group yoga at a bali villa",
+   "secondary": [],
+   "target": "/bali/private-yoga"
+  },
+  "/resources/private-yoga-or-mat-pilates-choosing-a-home-session": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "private yoga or mat pilates",
+   "secondary": [],
+   "target": "/private-yoga"
+  },
+  "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "what changes the price of private yoga",
+   "secondary": [],
+   "target": "/bali/private-yoga",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10
+   }
+  },
+  "/resources/programmes-versus-drop-in": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "session pack vs single session",
+   "secondary": [],
+   "target": "/programmes"
+  },
+  "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "60 or 90 minute session",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/train-in-a-bali-villa": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "how to set up a villa for a workout",
+   "secondary": [],
+   "target": "/bali/personal-training",
+   "gsc": {
+    "impressions": 3,
+    "clicks": 0,
+    "position": 1.3
+   }
+  },
+  "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "how many sessions 2 3 4 week stay",
+   "secondary": [],
+   "target": "/programmes",
+   "gsc": {
+    "impressions": 1,
+    "clicks": 0,
+    "position": 85
+   }
+  },
+  "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "whatsapp template book home trainer",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/what-your-quote-contains": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal training quote",
+   "secondary": [],
+   "target": "/pricing",
+   "gsc": {
+    "impressions": 2,
+    "clicks": 0,
+    "position": 33
+   }
+  },
+  "/safety": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "private session safety",
+   "secondary": []
+  },
+  "/service-areas": {
+   "type": "hub",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "areas we cover bali jakarta",
+   "secondary": [
+    "areas we cover Bali",
+    "Jakarta areas home trainer"
+   ],
+   "anchor": "areas we cover in Bali and Jakarta"
+  },
+  "/services": {
+   "type": "hub",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "private fitness services at home",
+   "secondary": [
+    "in-villa wellness services",
+    "home fitness services Bali Jakarta"
+   ],
+   "anchor": "private fitness services at home"
+  },
+  "/team": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "PersonalFitness.id team",
+   "secondary": []
+  },
+  "/terms": {
+   "type": "utility",
+   "money": false,
+   "status": "live",
+   "priority": "P4",
+   "primary": "PersonalFitness.id service terms",
+   "secondary": []
+  },
+  "/villa-hotel-partners": {
+   "type": "partners",
+   "money": true,
+   "status": "live",
+   "priority": "P2",
+   "primary": "villa wellness partner programme bali",
+   "secondary": [
+    "wellness services for villa guests",
+    "villa guest activities bali",
+    "in-villa yoga for guests",
+    "villa management partnership bali"
+   ],
+   "anchor": "villa wellness partner programme",
+   "gsc": {
+    "impressions": 3,
+    "clicks": 0,
+    "position": 3.7
+   }
+  },
+  "/zumba-dance-fitness": {
+   "type": "service",
+   "money": true,
+   "status": "live",
+   "priority": "P3",
+   "primary": "zumba and dance fitness at your villa",
+   "secondary": [
+    "private zumba instructor",
+    "private zumba lessons",
+    "dance fitness bali",
+    "zumba bali villa"
+   ],
+   "anchor": "Zumba and dance fitness at your villa"
+  },
+  "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "uluwatu bukit trainer",
+   "secondary": [],
+   "target": "/bali/uluwatu"
+  },
+  "/resources/what-a-written-quote-includes-before-you-pay": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "what a written quote includes",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "boxing fitness jakarta apartment",
+   "secondary": [],
+   "target": "/jakarta/boxing-fitness"
+  },
+  "/resources/private-yoga-for-beginners-at-home-in-bali-and-jakarta": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "private yoga for beginners at home",
+   "secondary": [],
+   "target": "/private-yoga"
+  },
+  "/resources/how-to-prepare-a-quiet-room-for-guided-meditation-at-home": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "quiet room for guided meditation",
+   "secondary": [],
+   "target": "/guided-meditation"
+  },
+  "/resources/mobility-coaching-or-personal-training-which-home-session-fits": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "mobility coaching or strength training",
+   "secondary": [],
+   "target": "/mobility-coaching"
+  },
+  "/resources/how-to-plan-a-weekly-villa-wellness-schedule-for-guests": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "villa wellness schedule for guests",
+   "secondary": [],
+   "target": "/villa-hotel-partners"
+  },
+  "/resources/single-session-deposit-or-full-upfront-pack-how-payment-confirmation-works": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "deposit or full upfront pack",
+   "secondary": [],
+   "target": "/pricing"
+  },
+  "/resources/how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa": {
+   "type": "support",
+   "money": false,
+   "status": "queued",
+   "priority": "P3",
+   "primary": "prepare for a bodywork session at your villa",
+   "secondary": [],
+   "target": "/bodywork-recovery"
+  }
+ }
+}

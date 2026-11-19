@@ -1,0 +1,327 @@
+{
+ "property": "sc-domain:personalfitness.id",
+ "startDate": "2026-08-21",
+ "endDate": "2026-11-19",
+ "dimensions": [
+  "page"
+ ],
+ "dataState": "all",
+ "pulled": "2026-11-19",
+ "rows": [
+  {
+   "keys": [
+    "https://www.personalfitness.id/"
+   ],
+   "clicks": 1,
+   "impressions": 26,
+   "ctr": 0.038461538461538464,
+   "position": 15.423076923076923
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing"
+   ],
+   "clicks": 1,
+   "impressions": 4,
+   "ctr": 0.25,
+   "position": 6
+  },
+  {
+   "keys": [
+    "https://personalfitness.id/"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 3.6666666666666665
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/about"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 2
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/bali"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 5
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/bali/boxing-fitness"
+   ],
+   "clicks": 0,
+   "impressions": 15,
+   "ctr": 0,
+   "position": 21.4
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/bali/personal-training"
+   ],
+   "clicks": 0,
+   "impressions": 13,
+   "ctr": 0,
+   "position": 5.384615384615385
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/bali/private-yoga"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 50
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/boxing-fitness"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/contact?service=mat-pilates"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 34
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/guided-meditation"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 5
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/gondangdia"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/kebayoran"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 85.66666666666667
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/kemang"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 71
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/mat-pilates"
+   ],
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 34
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/menteng"
+   ],
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 4
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/south-jakarta"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 34
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/jakarta/sunter"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/mat-pilates"
+   ],
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 3.8
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/personal-training"
+   ],
+   "clicks": 0,
+   "impressions": 23,
+   "ctr": 0,
+   "position": 50.47826086956522
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/pricing"
+   ],
+   "clicks": 0,
+   "impressions": 30,
+   "ctr": 0,
+   "position": 20.333333333333332
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/private-yoga"
+   ],
+   "clicks": 0,
+   "impressions": 7,
+   "ctr": 0,
+   "position": 22.142857142857142
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources"
+   ],
+   "clicks": 0,
+   "impressions": 31,
+   "ctr": 0,
+   "position": 29.387096774193548
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session"
+   ],
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 33.4
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 69.33333333333333
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 16
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/private-boxing-fitness-at-home-what-pad-only-means"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 10.5
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/private-yoga-prices-in-bali-duration-travel-and-group-size"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/train-in-a-bali-villa"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 1.3333333333333333
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay"
+   ],
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 85
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/resources/what-your-quote-contains"
+   ],
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 33
+  },
+  {
+   "keys": [
+    "https://www.personalfitness.id/villa-hotel-partners"
+   ],
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 3.6666666666666665
+  }
+ ]
+}

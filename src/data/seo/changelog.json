@@ -1,0 +1,1199 @@
+{
+ "about": "Every SEO change to a title, meta description, H1 or primary keyword is appended here with its GSC baseline. Evaluate each entry on evaluateOn (about 28 days later) with scripts/seo/gsc-report.mjs and record the outcome in result. See docs/SEO_SYSTEM.md.",
+ "entries": [
+  {
+   "date": "2026-11-19",
+   "page": "/",
+   "primary": "personal trainer at your villa or home Bali Jakarta",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "A private coach comes to your villa or home in Bali and Jakarta. Training, yoga, Pilates and more from Rp 1.050.000. Written quote first. WhatsApp us.",
+    "new": "Personal trainer at your villa or home in Bali and Jakarta. Strength training, yoga, Pilates and more from Rp 1.050.000. Written quote first. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 26,
+    "clicks": 1,
+    "position": 15.4
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/bali",
+   "primary": "fitness trainer bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "One booking for private training, yoga, mat Pilates and more at your Bali villa. Travel included in five areas. From Rp 1.050.000. WhatsApp to book.",
+    "new": "Your fitness trainer in Bali: private training, yoga, mat Pilates and more at your villa, in five areas. From Rp 1.050.000. Book on WhatsApp."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 1,
+    "clicks": 0,
+    "position": 5
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/bodywork-recovery",
+   "primary": "bodywork and recovery at your villa",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Assisted stretching, myofascial release and relaxation at your villa or home. A wellness hour from Rp 1.300.000 for 60 min. WhatsApp us.",
+    "new": "Bodywork and recovery at your villa or home: assisted stretching, myofascial release and relaxation. From Rp 1.300.000 for 60 min. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/boxing-fitness",
+   "primary": "private boxing lessons at home",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Pad-only private boxing fitness at your villa or home. No sparring. From Rp 1.250.000 in Bali, Rp 1.300.000 in Jakarta, after a space check.",
+    "new": "Private boxing lessons at home or at your villa: pad work only, no sparring. From Rp 1.250.000 in Bali and Rp 1.300.000 in Jakarta, after a space check."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/contact",
+   "primary": "contact personalfitness.id whatsapp",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Book a private session at your villa or home in Bali or Jakarta. WhatsApp +62 811-3803-488 or hello@personalfitness.id. Replies 08:00–20:00 Bali time.",
+    "new": "Contact PersonalFitness.id on WhatsApp (+62 811-3803-488) or at hello@personalfitness.id to book a session at your villa or home. Replies 08:00–20:00."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/faq",
+   "primary": "personal trainer bali jakarta faq",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Prices, areas, extra people, cancellation and payment for a personal trainer at your villa or home in Bali and Jakarta. Written quote before you pay.",
+    "new": "Personal trainer FAQ for Bali and Jakarta: prices, areas, extra people, cancellation and payment for sessions at your villa or home. Written quote first."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/guided-meditation",
+   "primary": "private meditation sessions at home",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "A quiet 60-minute guided meditation at your villa or home for one or two people. From Rp 1.050.000 in Bali and Jakarta. WhatsApp us.",
+    "new": "Private meditation sessions at home or at your villa: a quiet, guided 60 minutes for one or two people. From Rp 1.050.000 in Bali and Jakarta. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 1,
+    "clicks": 0,
+    "position": 5
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/how-it-works",
+   "primary": "how to book a personal trainer at home",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Eight steps from your first WhatsApp to a coach at your villa or home: enquiry, checks, written quote, deposit, confirmation, session, aftercare.",
+    "new": "How to book a personal trainer at home in eight steps: WhatsApp enquiry, checks, written quote, deposit, confirmation, the session and aftercare."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/id/mitra-villa",
+   "primary": "program mitra villa bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Tambahkan yoga, private training dan Pilates di villa Anda. Instruktur datang ke tamu, tamu bayar ke kami, Anda dapat komisi 10%. Pilot 30 hari.",
+    "new": "Program mitra villa di Bali: tambahkan yoga, private training dan Pilates untuk tamu Anda. Tamu bayar ke kami, Anda dapat komisi 10%. Pilot 30 hari."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/central-jakarta",
+   "primary": "personal trainer jakarta pusat",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Personal trainer, yoga or mat Pilates at your Central Jakarta home or apartment. Travel included. From Rp 1.050.000. WhatsApp us.",
+    "new": "Personal trainer in Jakarta Pusat: private training, yoga or mat Pilates at your Central Jakarta home or apartment. From Rp 1.050.000. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/east-jakarta",
+   "primary": "personal trainer jakarta timur",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Personal trainer, yoga or mat Pilates at your East Jakarta home or apartment. By request; travel quoted for your address. WhatsApp us.",
+    "new": "Personal trainer in Jakarta Timur: private training, yoga or mat Pilates at your East Jakarta home or apartment. By request, quoted for your address."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/north-jakarta",
+   "primary": "personal trainer jakarta utara",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Personal trainer, yoga or mat Pilates at your North Jakarta home or apartment. By request; travel quoted for your address. WhatsApp us.",
+    "new": "Personal trainer in Jakarta Utara: private training, yoga or mat Pilates at your North Jakarta home or apartment. By request, quoted for your address."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/west-jakarta",
+   "primary": "personal trainer jakarta barat",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Personal trainer, yoga or mat Pilates at your West Jakarta home or apartment. By request; travel quoted for your address. WhatsApp us.",
+    "new": "Personal trainer in Jakarta Barat: private training, yoga or mat Pilates at your West Jakarta home or apartment. By request, quoted for your address."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/south-jakarta",
+   "primary": "personal trainer jakarta selatan",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Personal trainer, yoga or mat Pilates at your South Jakarta home or apartment. Travel included. From Rp 1.050.000. WhatsApp us.",
+    "new": "Personal trainer in Jakarta Selatan: private training, yoga or mat Pilates at your South Jakarta home or apartment. From Rp 1.050.000. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 34
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta",
+   "primary": "home fitness trainer jakarta",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Private training, yoga, mat Pilates and more at your Jakarta home or apartment. South and Central Jakarta in-zone. From Rp 1.050.000. WhatsApp us.",
+    "new": "Home fitness trainer in Jakarta: private training, yoga, mat Pilates and more at your home or apartment. South and Central in-zone. From Rp 1.050.000."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/programmes",
+   "primary": "personal training packages bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Prepaid packs of 3, 5 or 10 private sessions. Strength training from Rp 1.225.000 down to Rp 1.050.000 a session. Save up to Rp 2.500.000. WhatsApp us.",
+    "new": "Personal training packages in Bali and Jakarta: prepaid packs of 3, 5 or 10 sessions, from Rp 1.225.000 down to Rp 1.050.000 a session. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/service-areas",
+   "primary": "areas we cover bali jakarta",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Bali: Canggu, Seminyak, Sanur, Ubud and Uluwatu, travel included. Jakarta: South and Central in-zone; North, West and East by request. Check your address.",
+    "new": "Areas we cover in Bali: Canggu, Seminyak, Sanur, Ubud and Uluwatu. In Jakarta: South and Central, with North, West and East by request. Check your address."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/services",
+   "primary": "private fitness services at home",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Eight private sessions at your villa or home in Bali and Jakarta: training, yoga, Pilates, mobility, boxing, meditation, bodywork, dance. Prices first.",
+    "new": "Private fitness services at home or at your villa in Bali and Jakarta: training, yoga, Pilates, mobility, boxing, meditation, bodywork and dance."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/villa-hotel-partners",
+   "primary": "villa wellness partner programme bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Add yoga, training and Pilates to every villa you manage. An instructor comes to the guest, the guest pays us, you earn 10%. Start a 30-day pilot.",
+    "new": "Villa wellness partner programme in Bali: add yoga, training and Pilates for your guests. The guest pays us and you earn 10%. Start a 30-day pilot."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 3,
+    "clicks": 0,
+    "position": 3.7
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/zumba-dance-fitness",
+   "primary": "zumba and dance fitness at your villa",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "A fun cardio hour at your villa or home: simple dance steps for one or two guests. From Rp 1.300.000 for 60 min. WhatsApp us.",
+    "new": "Zumba and dance fitness at your villa or home: a fun cardio hour with simple steps for one or two guests. From Rp 1.300.000 for 60 min. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/pricing",
+   "primary": "personal trainer bali price",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Personal Trainer Price Bali & Jakarta | PersonalFitness.id",
+    "new": "Personal Trainer Prices Bali & Jakarta: From Rp 1.050.000"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 30,
+    "clicks": 0,
+    "position": 20.3
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/bali/personal-training",
+   "primary": "personal trainer bali",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Personal Trainer Bali: At Your Villa | PersonalFitness.id",
+    "new": "Personal Trainer Bali: 1-to-1 Sessions at Your Villa"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 13,
+    "clicks": 0,
+    "position": 5.4
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/bali/boxing-fitness",
+   "primary": "private boxing bali",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Boxing Bali: Pad Work at Your Villa",
+    "new": "Private Boxing Class Bali: Pad Work at Your Villa"
+   },
+   "description": {
+    "old": "Private pad-only boxing fitness at your Bali villa from Rp 1.250.000 for 60 min for one person. Travel included in five areas. WhatsApp us.",
+    "new": "Private boxing class at your Bali villa in Seminyak, Canggu, Sanur, Ubud or Uluwatu: pad work only, one person, from Rp 1.250.000 for 60 min. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 15,
+    "clicks": 0,
+    "position": 21.4
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/mat-pilates",
+   "primary": "private mat pilates at home",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Mat Pilates at Home | PersonalFitness.id",
+    "new": "Private Mat Pilates at Home: No Reformer Needed"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 5,
+    "clicks": 0,
+    "position": 3.8
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/jakarta/mat-pilates",
+   "primary": "private pilates jakarta",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Pilates Jakarta: Mat Pilates at Home",
+    "new": "Private Pilates Jakarta: Mat Pilates Classes at Home"
+   },
+   "description": {
+    "old": "Private mat Pilates at your Jakarta home from Rp 1.250.000 for 60 min for one person. South & Central Jakarta in-zone. WhatsApp us.",
+    "new": "Private mat Pilates classes at your Jakarta home or apartment from Rp 1.250.000 for 60 min, one person. South and Central Jakarta in-zone. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 5,
+    "clicks": 0,
+    "position": 34
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/private-yoga",
+   "primary": "private yoga at home",
+   "reason": "GSC first pass: impressions with no clicks; title aligned to the queries Google already shows this page for",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Yoga at Home or Villa | PersonalFitness.id",
+    "new": "Private Yoga Session at Home or Your Villa"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 7,
+    "clicks": 0,
+    "position": 22.1
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/beginners-private-training",
+   "primary": "personal trainer for beginners at home",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How to book a first private training hour if you have not trained in years: what to write, what not to send, and why the first session is paid.",
+    "new": "Personal trainer for beginners at home: how to book a first private hour if you have not trained in years, what to write, and why the first session is paid."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/boxing-fitness-in-a-jakarta-apartment-pads-noise-and-one-person",
+   "primary": "boxing fitness jakarta apartment",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "title": {
+    "old": "Boxing fitness in a Jakarta apartment: pads, noise and one person",
+    "new": "Boxing Fitness in a Jakarta Apartment: Pads and Noise"
+   },
+   "description": {
+    "old": "Jakarta boxing fitness from Rp 1.300.000 is pad-only, one person, after a ceiling and neighbour check. No sparring and no second person in the rate.",
+    "new": "Boxing fitness in a Jakarta apartment from Rp 1.300.000: pad-only, one person, after a ceiling and neighbour check. No sparring and no second person."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/can-i-get-a-personal-trainer-to-my-villa-bali",
+   "primary": "can I get a personal trainer to my villa in Bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Yes. A private coach can come to your villa in Canggu, Seminyak, Sanur, Ubud or Uluwatu, travel included. From Rp 1.300.000. Ask us on WhatsApp.",
+    "new": "Can you get a personal trainer to your villa in Bali? Yes. A private coach comes to Canggu, Seminyak, Sanur, Ubud or Uluwatu. From Rp 1.300.000. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/couples-private-yoga",
+   "primary": "couples yoga at your villa",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How private yoga for two is priced in Bali and Jakarta, what floor you need, and when a third guest needs a written group quote.",
+    "new": "Couples yoga at your villa or home: how private yoga for two is priced in Bali and Jakarta, the floor you need, and when a third guest needs a group quote."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
+   "primary": "extra-person pair pricing",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "When a second guest is included, when it adds Rp 250.000, and how pairs book yoga, training and boxing.",
+    "new": "Extra-person and pair pricing: when a second guest is included, when it adds Rp 250.000, and how pairs book private yoga, training and boxing at home."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/free-introduction-vs-paid-first-session-what-personalfitness-id-offers",
+   "primary": "personal trainer free trial",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Why PersonalFitness.id does not run a free intro hour, and what the paid first session gives you instead.",
+    "new": "Looking for a personal trainer free trial? Why PersonalFitness.id does not run a free intro hour, and what the paid first session gives you instead."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/guided-meditation-at-home-what-the-hour-is-and-is-not",
+   "primary": "what to expect in a guided meditation session",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "What a private guided meditation hour at home is, what it is not, and how to prepare the room for one or two people.",
+    "new": "What to expect in a guided meditation session at home: what the private hour is, what it is not, and how to prepare the room for one or two people."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/how-to-plan-a-weekly-villa-wellness-schedule-for-guests",
+   "primary": "villa wellness schedule for guests",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Plan a villa wellness timetable without promising unconfirmed instructors: sessions, rooms, access, prices, privacy and guest booking steps.",
+    "new": "Plan a villa wellness schedule for guests without promising unconfirmed instructors: sessions, rooms, access, prices, privacy and booking steps."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/how-to-prepare-a-quiet-room-for-guided-meditation-at-home",
+   "primary": "quiet room for guided meditation",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Prepare a Bali villa or Jakarta apartment for private guided meditation: seating, phones, access, temperature and the details needed for a written quote.",
+    "new": "Prepare a quiet room for guided meditation in a Bali villa or Jakarta apartment: seating, phones, access, temperature and what the written quote needs."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/how-to-prepare-for-a-bodywork-and-recovery-session-at-your-villa",
+   "primary": "prepare for a bodywork session at your villa",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "title": {
+    "old": "How to prepare for a bodywork and recovery session at your villa",
+    "new": "How to Prepare for a Bodywork Session at Your Villa"
+   },
+   "description": {
+    "old": "Prepare a Bali villa or Jakarta home for bodywork and recovery: room, clothing, consent, access, price, scope and a clear booking checklist.",
+    "new": "Prepare for a bodywork session at your villa or home: room, clothing, consent, access, price, scope and a clear checklist before your recovery hour."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/how-villa-managers-book-guest-fitness-sessions",
+   "primary": "how to book fitness sessions for villa guests",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "The host checklist for booking yoga, training or Pilates for villa guests: the first message, guest privacy, access notes and confirmation.",
+    "new": "How to book fitness sessions for villa guests: the host checklist for yoga, training or Pilates, the first message, guest privacy, access and confirmation."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/jakarta-apartment-session",
+   "primary": "jakarta apartment training lobby",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Lobby registration, tower lifts, parking and floor space: how to make a Jakarta apartment work for a private session.",
+    "new": "Jakarta apartment training: lobby registration, tower lifts, parking and floor space, and how to make your apartment work for a private session at home."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/mat-pilates-at-home-what-you-need-and-what-you-do-not",
+   "primary": "mat pilates at home equipment",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "The floor, mat and props you actually need for mat Pilates at home, and why a reformer is not required for a private session.",
+    "new": "Mat Pilates at home equipment: the floor, mat and props you actually need, and why a reformer is not required for a private session at your villa or home."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+   "primary": "mat vs reformer pilates price",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Why mat, reformer, studio class and home Pilates sessions are priced differently, and which one fits your stay.",
+    "new": "Mat vs reformer Pilates price: why mat, reformer, studio class and home sessions are priced differently, and which one fits your stay in Bali or Jakarta."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 8
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/mobility-coaching-or-personal-training-which-home-session-fits",
+   "primary": "mobility coaching or strength training",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "title": {
+    "old": "Mobility coaching or private strength training: which home session fits?",
+    "new": "Mobility Coaching or Strength Training at Home?"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
+   "primary": "how to compare personal trainer quotes bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Comparing a cash rate with a managed in-villa quote in Bali: what to check line by line before you pay anyone.",
+    "new": "How to compare personal trainer quotes in Bali: a cash rate versus a managed in-villa quote, and what to check line by line before you pay anyone."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+   "primary": "in-villa training session bali",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "What you get in a managed in-villa session in Bali: the check, the quote, the named professional, the hour itself and what happens after.",
+    "new": "What an in-villa training session in Bali includes: the check, the written quote, the named professional, the hour itself and what happens after."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 3,
+    "clicks": 0,
+    "position": 69.3
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+   "primary": "canggu villa training access",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Gates, floors, shade and timing for a private session at a Canggu, Berawa or Pererenan villa, so your first hour starts on time.",
+    "new": "Canggu villa training access: gates, floors, shade and timing for a private session at a Canggu, Berawa or Pererenan villa, so your hour starts on time."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 1,
+    "clicks": 0,
+    "position": 16
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+   "primary": "petitenget seminyak villa sessions",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Lift access, garden shade and timing for a private session at a Seminyak or Petitenget villa, with travel included.",
+    "new": "Petitenget and Seminyak villa sessions: lift access, garden shade and timing for a private training or yoga hour at your villa, with a written quote first."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 1,
+    "clicks": 0,
+    "position": 9
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+   "primary": "south jakarta lobby access home trainer",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Lobby, floor and visitor rules in Kemang, Senopati and SCBD that decide whether a home session starts on time.",
+    "new": "South Jakarta lobby access for a home trainer: the lobby, floor and visitor rules in Kemang, Senopati and SCBD that decide whether your session starts on time."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+   "primary": "ubud villa session access",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Valley roads, indoor floors and timing for a private session at an Ubud villa, with travel included in the Bali price.",
+    "new": "Ubud villa sessions: access, valley roads, indoor floors and timing for a private training or yoga hour at your Ubud villa, with a written quote first."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 3,
+    "clicks": 0,
+    "position": 9
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+   "primary": "uluwatu bukit trainer",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Uluwatu private strength training is Rp 1.300.000 with travel included. Bingin, Pecatu, indoor floors and what we will not sell on a cliff.",
+    "new": "A trainer in Uluwatu and the Bukit: private strength training from Rp 1.300.000, with Bingin, Pecatu, indoor floors and what we will not sell on a cliff."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
+   "primary": "home personal trainer cost jakarta",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How gym, studio and home personal training costs compare in Jakarta, and what a managed home visit includes in its price.",
+    "new": "Home personal trainer cost in Jakarta: how gym, studio and home training prices compare, and what a managed home visit includes in its price."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-boxing-fitness-at-home-what-pad-only-means",
+   "primary": "what pad-only boxing means",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Pad-only boxing fitness explained: technique, combinations and fitness work with no sparring, and the space you need at home.",
+    "new": "What pad-only boxing means: technique, combinations and fitness work with no sparring, and the space you need for a private session at home."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10.5
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-yoga-for-beginners-at-home-in-bali-and-jakarta",
+   "primary": "private yoga for beginners at home",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Beginner private yoga from Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta, with two people included when the floor holds both mats.",
+    "new": "Private yoga for beginners at home from Rp 1.050.000 in Bali and Rp 1.125.000 in Jakarta, with two people included when the floor holds both mats."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+   "primary": "yoga in a jakarta apartment",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How much floor you need for yoga in a Jakarta apartment, what the lobby needs to know, and why a pair costs the same.",
+    "new": "Yoga in a Jakarta apartment: how much floor you need, what the lobby needs to know, and why a pair costs the same as one person for private yoga."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 4,
+    "clicks": 1,
+    "position": 6
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-yoga-in-bali-one-to-one-couples-and-villa-groups-explained",
+   "primary": "solo couple or group yoga at a bali villa",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "One-to-one, couples or a villa group: how private yoga in Bali changes with headcount, and when a third guest needs a group quote.",
+    "new": "Solo, couple or group yoga at a Bali villa: how private yoga changes with headcount, and when a third guest needs a written group quote."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-yoga-or-mat-pilates-choosing-a-home-session",
+   "primary": "private yoga or mat pilates",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Yoga or mat Pilates at home: how the two private sessions differ in focus, space and price, and how to choose.",
+    "new": "Private yoga or mat Pilates at home? How the two private sessions differ in focus, floor space and price, and how to choose the one that suits your stay."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+   "primary": "what changes the price of private yoga",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How 60 or 90 minutes, travel and headcount change a private yoga quote in Bali, with the published starting rate.",
+    "new": "What changes the price of private yoga in Bali: 60 or 90 minutes, area and headcount, with the published starting rate and a written quote first."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 10
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/single-session-deposit-or-full-upfront-pack-how-payment-confirmation-works",
+   "primary": "deposit or full upfront pack",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "title": {
+    "old": "Single-session deposit or full upfront pack: how payment confirms your booking",
+    "new": "Deposit or Full Upfront Pack: How Payment Works"
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
+   "primary": "60 or 90 minute session",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "When a 90-minute home session is worth the extra 45%, and when 60 minutes is the better buy.",
+    "new": "60 or 90 minute session? When a 90-minute home session is worth the extra 45%, when 60 minutes is the better buy, and how the written quote shows it."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/train-in-a-bali-villa",
+   "primary": "how to set up a villa for a workout",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Floor, gate, heat and staff notes: how to prepare a Bali villa before a private training or yoga session.",
+    "new": "How to set up a villa for a workout: floor, gate, heat and staff notes to prepare your Bali villa before a private training or yoga session."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 3,
+    "clicks": 0,
+    "position": 1.3
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+   "primary": "how many sessions 2 3 4 week stay",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "How to match a 3, 5 or 10-session pack to a two, three or four week stay in Bali or Jakarta, with a weekly rhythm that holds.",
+    "new": "How many sessions for a 2, 3 or 4 week stay? Match a 3, 5 or 10-session pack to your stay in Bali or Jakarta, with a weekly rhythm that holds."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 1,
+    "clicks": 0,
+    "position": 85
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/what-a-written-quote-includes-before-you-pay",
+   "primary": "what a written quote includes",
+   "reason": "Keyword lock: planned title/meta for a queued guide so it passes when the 09:00 publisher ships it",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "The written quote is the contract for the visit: service, people, cluster, total, exclusions and the 24-hour rule. A website number is only a start.",
+    "new": "What a written quote includes: service, people, area, total, exclusions and the 24-hour rule. It is the contract for the visit, before you pay."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/what-to-put-in-a-whatsapp-enquiry-for-a-home-trainer",
+   "primary": "whatsapp template book home trainer",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "A copy-paste WhatsApp template for booking a home trainer: the five details that get you a written quote fastest.",
+    "new": "WhatsApp template to book a home trainer: copy and paste the five details that get you a written quote fastest for a session at your villa or home."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 0,
+    "clicks": 0,
+    "position": null
+   },
+   "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-19",
+   "page": "/resources/what-your-quote-contains",
+   "primary": "personal training quote",
+   "reason": "Keyword lock: primary keyword added to the meta description and length set to 120-160",
+   "kind": "keyword-lock",
+   "description": {
+    "old": "Every line on a PersonalFitness.id written quote: session, people, travel, duration, professional and cancellation.",
+    "new": "Your personal training quote, line by line: the session, people, duration, the named professional and the cancellation rule, all before you pay."
+   },
+   "baseline": {
+    "window": "2026-08-21..2026-11-19",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 2,
+    "clicks": 0,
+    "position": 33
+   },
+   "evaluateOn": "2026-12-17"
+  }
+ ]
+}

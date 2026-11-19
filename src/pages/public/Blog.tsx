@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import { Link, useParams } from 'react-router'
-import { Eyebrow, PageIntro } from '@/components/Primitives'
+import { Eyebrow, IntroText, PageIntro } from '@/components/Primitives'
 import { CtaBand } from '@/components/SiteBlocks'
 import StructuredData from '@/components/StructuredData'
 import { blogPosts, getBlogPost, relatedPosts } from '@/data/blog'
@@ -110,7 +110,7 @@ export function BlogArticle() {
         <section className="section-compact"><div className="shell"><EditorialPhoto path={'/resources/' + note.slug} eager /></div></section>
         <section className="section">
           <div className="content-shell privacy-prose">
-            {note.body.map((p) => <p key={p}>{p}</p>)}
+            {note.body.map((p) => <p key={p}><IntroText text={p} /></p>)}
             <p>Open <Link to="/bali">Bali private fitness</Link>, <Link to="/jakarta">home training in Jakarta</Link> or <Link to="/pricing">published prices</Link> if you already know the city. The <Link to="/">homepage</Link> holds the full offer.</p>
             <Link to="/contact" className="button button-primary">Use this in an enquiry<ArrowUpRight size={16} /></Link>
           </div>

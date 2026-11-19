@@ -1,4 +1,4 @@
-A personal trainer in Uluwatu is a private visit to the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 for one guest, with Uluwatu travel included, including a checked Bukit address. The commercial destination is [Bali private strength training](/bali/personal-training). This guide explains traffic windows, indoor floors and how the written quote is built.
+A [personal trainer in Uluwatu](/bali/uluwatu) is a private visit to the villa or home where you are staying. PersonalFitness.id coordinates 60-minute private strength training from Rp 1.300.000 for one guest, with Uluwatu travel included, including a checked Bukit address. The commercial destination is [Bali private strength training](/bali/personal-training). This guide explains traffic windows, indoor floors and how the written quote is built.
 
 If you searched for a personal trainer in Uluwatu because the villa hangs over the water, start with the road and a dry indoor rectangle. A cliff caption is not a venue. We only confirm when the professional can arrive, set up and leave inside a realistic block.
 

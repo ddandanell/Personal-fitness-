@@ -8,7 +8,7 @@ A WhatsApp message does not hold an instructor. Sending a villa name, apartment 
 
 The next useful document is the written quote. It should describe the appointment that can actually be offered. If your address, number of guests or chosen service is wrong, reply in the same thread before payment. Paying against an incorrect scope makes the booking harder to fix.
 
-Once the quote is accurate, follow the payment instructions on that document. PersonalFitness.id does not ask for card or bank details in WhatsApp. A screenshot of a public price is not a payment instruction, and a verbal estimate is not a confirmed appointment.
+Once the quote is accurate, follow the payment instructions on that document. PersonalFitness.id does not ask for card or bank details in WhatsApp. A screenshot of the [published prices](/pricing) is not a payment instruction, and a verbal estimate is not a confirmed appointment.
 
 ## How the 50% single-session deposit works
 

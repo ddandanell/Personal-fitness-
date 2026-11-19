@@ -2,7 +2,7 @@ Preparing a quiet room for guided meditation at home is mostly a practical job. 
 
 PersonalFitness.id offers [guided meditation at home](/guided-meditation) as a 60-minute guided session for one or two adults. The published starting price is Rp 1.050.000 in Bali and Rp 1.050.000 in Jakarta for an accepted in-zone visit. The service is a guided sit, not therapy, medical care or a treatment for a diagnosed condition. The written quote confirms the actual address, time, participants and total before you pay.
 
-This guide answers a narrower question: what should you change in the room before the instructor arrives? It protects the commercial service page by focusing on setup rather than trying to sell a separate meditation product.
+This guide answers a narrower question: what should you change in the room before the instructor arrives? It protects the commercial [guided meditation service page](/guided-meditation) by focusing on setup rather than trying to sell a separate meditation product.
 
 ## Choose the quietest usable room, not the prettiest room
 

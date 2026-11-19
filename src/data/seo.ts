@@ -5,6 +5,7 @@ import { CITY_SERVICE_RELEASED, CORE_SERVICE_SLUGS, HELD_SERVICE_SLUGS } from '.
 import { formatIdr } from '@/lib/money'
 import editorial from './location-editorial.json'
 import { seoOverride } from './seoOverrides'
+import keywordMap from './seo/keyword-map.json' with { type: 'json' }
 
 export type SeoLink = { to: string; label: string }
 export type SeoRecord = {
@@ -763,10 +764,25 @@ export function getSeo(pathname: string): SeoRecord | undefined {
   return { ...record, title: override.title || record.title, description: override.description || record.description }
 }
 
+/** Support guides locked to a money page in src/data/seo/keyword-map.json (docs/SEO_SYSTEM.md). */
+const SUPPORT_BY_TARGET = new Map<string, string[]>()
+for (const [path, entry] of Object.entries((keywordMap as { pages: Record<string, { type: string; target?: string }> }).pages)) {
+  if (entry.type === 'support' && entry.target) SUPPORT_BY_TARGET.set(entry.target, [...(SUPPORT_BY_TARGET.get(entry.target) || []), path])
+}
+
+/** Published guides that support this money page, newest first, as related-guide links. */
+export function supportGuidesFor(pathname: string): SeoLink[] {
+  return (SUPPORT_BY_TARGET.get(canonicalPath(pathname)) || [])
+    .map((path) => getSeo(path))
+    .filter((record): record is SeoRecord => Boolean(record))
+    .sort((a, b) => b.lastmod.localeCompare(a.lastmod))
+    .map((record) => ({ to: record.path, label: record.title.replace(/ \| PersonalFitness\.id$/, '') }))
+}
+
 export function relatedFor(pathname: string) {
   const record = getSeo(pathname)
   if (!record) return []
-  return record.related.filter((link) => canonicalPath(link.to) !== canonicalPath(pathname))
+  return uniqueLinks([...supportGuidesFor(pathname).slice(0, 3), ...record.related]).filter((link) => canonicalPath(link.to) !== canonicalPath(pathname))
 }
 
 export function crumbsFor(pathname: string) {
