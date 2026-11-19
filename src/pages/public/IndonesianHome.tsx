@@ -31,7 +31,7 @@ export default function IndonesianHome() {
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
             <h1>{ID_SEO?.h1 || 'Personal trainer datang ke rumah di Bali dan Jakarta'}</h1>
-            <p className="hero-lede">{ID_SEO?.intro ? <IntroText text={ID_SEO.intro} /> : 'Instruktur datang ke villa, rumah, atau hotel Anda.'} Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
+            <p className="hero-lede">{ID_SEO?.intro ? <IntroText text={ID_SEO.intro} /> : 'Private strength training, yoga, Pilates, dan lainnya diantar ke villa, rumah, atau hotel Anda di Bali dan Jakarta. Pesan lewat WhatsApp dan dapatkan kutipan tertulis.'}</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Cek ketersediaan<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">Lihat harga</Link>
@@ -55,7 +55,7 @@ export default function IndonesianHome() {
             <Eyebrow>Untuk jam Anda</Eyebrow>
             <h2>Anda berlatih di villa, rumah, atau hotel, dengan instruktur yang sudah diseleksi.</h2>
             <p className="large-copy">Jamnya privat: strength training, yoga, Pilates, mobilitas, boxing, bodywork, dance fitness, atau meditasi. Anda mendapat sesi yang selesai, bukan paket kelas atau diagnosis klinis.</p>
-            <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia.</p>
+            <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia. Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
           </div>
           <ul className="check-list large-list">
             {['Instruktur yang sudah diseleksi, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`].map((item) => (

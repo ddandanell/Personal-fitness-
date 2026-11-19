@@ -42,7 +42,7 @@ export default function Home() {
           <div className="sales-hero-copy">
             <Eyebrow light>Bali · Jakarta</Eyebrow>
             <h1>{HOME_SEO?.h1 || 'Personal trainer at your villa or home in Bali and Jakarta'}</h1>
-            <p className="hero-lede">{HOME_SEO?.intro ? <IntroText text={HOME_SEO.intro} /> : 'An instructor comes to your villa, home or hotel for private strength training, yoga, Pilates, mobility, boxing, bodywork, dance fitness or a guided sit.'} Sessions are subject to instructor availability and location confirmation.</p>
+            <p className="hero-lede">{HOME_SEO?.intro ? <IntroText text={HOME_SEO.intro} /> : 'Private strength training, yoga, Pilates and more, brought to villas, homes and hotels in Bali and Jakarta. Book on WhatsApp and get a written quote.'}</p>
             <div className="cluster">
               <Link to="/contact" className="button button-primary">Check availability<ArrowUpRight size={17} /></Link>
               <Link to="/pricing" className="button button-outline-light">See session prices</Link>

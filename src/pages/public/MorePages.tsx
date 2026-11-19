@@ -325,7 +325,7 @@ export function PricingPage() {
           <div className="sales-hero-copy">
             <Eyebrow light>Published rates · Bali and Jakarta</Eyebrow>
             <h1>{PRICING_SEO?.h1 || 'Personal trainer Bali and Jakarta prices'}</h1>
-            <p className="hero-lede">{PRICING_SEO?.intro ? <IntroText text={PRICING_SEO.intro} /> : 'Private sessions in Bali and Jakarta, with starting rates you can read before WhatsApp.'} The written quote is what you pay.</p>
+            <p className="hero-lede">{PRICING_SEO?.intro ? <IntroText text={PRICING_SEO.intro} /> : 'Starting prices for private sessions at your villa or home in Bali and Jakarta. Estimate your total, then get a written quote before you pay.'}</p>
             <div className="cluster">
               <a href="#estimator" className="button button-primary">Estimate my price<ArrowUpRight size={17} /></a>
               <Link to="/contact" className="button button-outline-light">Check availability</Link>
