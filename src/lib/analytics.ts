@@ -40,13 +40,20 @@ export function installAnalytics() {
       window.dataLayer?.push(args as unknown as Record<string, unknown>)
     }
   }
+  const historyObject = window.history
+  const pushState = historyObject.pushState.bind(historyObject)
+  const replaceState = historyObject.replaceState.bind(historyObject)
   window.gtag('js', new Date())
-  // send_page_view: false avoids a duplicate initial view; route changes are sent once via trackPageView.
-  // Enhanced measurement "page changes based on browser history events" must stay off in the GA4 data stream so those history events do not add a second page_view.
+  // send_page_view: false avoids a duplicate initial view. Route changes are sent once via trackPageView.
+  // Restoring History API methods after gtag.js loads stops enhanced measurement from adding a second page_view.
   window.gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false })
   const script = document.createElement('script')
   script.id = 'ga4-src'
   script.async = true
   script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID)
+  script.addEventListener('load', () => {
+    historyObject.pushState = pushState
+    historyObject.replaceState = replaceState
+  })
   document.head.appendChild(script)
 }

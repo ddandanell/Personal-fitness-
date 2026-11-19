@@ -5,6 +5,9 @@ import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 import App from './App.tsx'
 import { isPortalHost } from '@/villa-demo/host'
+import { installAnalytics } from '@/lib/analytics'
+
+installAnalytics()
 
 async function removePreviousSiteCaches() {
   const marker = 'personalfitness-public-site-2026-11-wellness-v4'
