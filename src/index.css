@@ -461,6 +461,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--orange); outline
 .price-pill { border: 1px solid var(--line); padding: 10px 14px; min-width: 160px; }
 .price-pill span { display: block; font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .price-pill strong { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; }
+.home-price-pills { margin: 4px 0 32px; }
 .price-highlight { font-family: var(--serif); font-size: 1.2rem; margin: 8px 0 18px; }
 .price-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .price-board-wide { grid-template-columns: repeat(3, minmax(0, 1fr)); }

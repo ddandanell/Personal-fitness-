@@ -53,15 +53,20 @@ export default function Home() {
           <ParallaxImage src="/images/editorial/home.webp" alt="Instructor coaching an adult client through a private villa workout" eager className="hero-session-image" />
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 minutes, one guest.</span></div>
-          <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>5-session pack, per session. Save {formatIdr((SESSION_ANCHOR - programmes.find(pack => pack.sessions === 5)!.perSession) * 5)}.</span></div>
-          <div><strong>Your place</strong><span>Villa, home or hotel. A second guest is Rp 250.000 when the rate is for one person.</span></div>
+          <div><strong>Your place</strong><span>Villa, home or hotel.</span></div>
+          <div><strong>Your instructor</strong><span>A private professional, named on your written quote.</span></div>
+          <div><strong>Book on WhatsApp</strong><span>Send your area and a time window. We reply with a written quote.</span></div>
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
           <SectionTitle eyebrow="Sessions" title="Private sessions at your villa, home or hotel." copy="Choose strength training, yoga, mat Pilates, bodywork and recovery, dance fitness, mobility coaching, boxing fitness or guided meditation. A second guest adds Rp 250.000 per session when the rate is for one person. Yoga and meditation already include a pair. Boxing is for one guest." action={<TextLink to="/pricing">See session prices</TextLink>} />
+          <div className="price-pills home-price-pills">
+            <div className="price-pill"><span>Private strength training · 60 min · one guest</span><strong>{formatIdr(SESSION_ANCHOR)}</strong></div>
+            <div className="price-pill"><span>5-session pack · per session</span><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong></div>
+            <div className="price-pill"><span>Second guest · per session</span><strong>Rp 250.000</strong></div>
+          </div>
           <div className="service-card-grid">
             {publicServices.map((service, index) => (
               <Link to={`/${service.slug}`} className="service-card" key={service.slug}>

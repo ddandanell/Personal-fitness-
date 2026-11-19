@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T09:38:28.038Z",
+  "generatedAt": "2026-11-19T09:41:00.617Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1653,
+      "mainWords": 1669,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id",
-      "mainWords": 822,
+      "mainWords": 839,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id",
       "localMinimum": false,

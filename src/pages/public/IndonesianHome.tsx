@@ -43,8 +43,8 @@ export default function IndonesianHome() {
           </div>
         </div>
         <div className="shell hero-facts">
-          <div><strong>{formatIdr(SESSION_ANCHOR)}</strong><span>Private strength training, 60 menit, satu tamu.</span></div>
-          <div><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong><span>Paket 5 sesi, per sesi.</span></div>
+          <div><strong>Tempat Anda</strong><span>Villa, rumah, atau hotel.</span></div>
+          <div><strong>Pesan lewat WhatsApp</strong><span>Kirim area dan jendela waktu. Kami balas dengan kutipan tertulis.</span></div>
           <div><strong>Delapan pilihan</strong><span>Latihan kekuatan, yoga, mat Pilates, mobilitas, tinju kebugaran, bodywork, tari kebugaran, dan meditasi terpandu.</span></div>
         </div>
       </section>
@@ -53,8 +53,12 @@ export default function IndonesianHome() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Untuk jam Anda</Eyebrow>
-            <h2>Anda berlatih di villa, rumah, atau hotel, dengan instruktur yang sudah diseleksi.</h2>
+            <h2>Anda berlatih di villa, rumah, atau hotel, dengan instruktur privat.</h2>
             <p className="large-copy">Jamnya privat: strength training, yoga, Pilates, mobilitas, boxing, bodywork, dance fitness, atau meditasi. Anda mendapat sesi yang selesai, bukan paket kelas atau diagnosis klinis.</p>
+            <div className="price-pills home-price-pills">
+              <div className="price-pill"><span>Private strength training · 60 menit · satu tamu</span><strong>{formatIdr(SESSION_ANCHOR)}</strong></div>
+              <div className="price-pill"><span>Paket 5 sesi · per sesi</span><strong>{formatIdr(programmes.find(pack => pack.sessions === 5)!.perSession)}</strong></div>
+            </div>
             <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia. Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
           </div>
           <ul className="check-list large-list">
