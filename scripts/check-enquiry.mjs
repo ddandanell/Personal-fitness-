@@ -127,6 +127,69 @@ try {
   assert.equal(JSON.stringify(failed.body).includes('re_secret_value'), false)
 
   enquiry.resetEnquiryLimits()
+  const stored = []
+  const storedOk = await enquiry.handleEnquiry(valid, {
+    env: { RESEND_API_KEY: 'x' },
+    ip: '203.0.113.70',
+    origin: 'https://www.personalfitness.id',
+    send: async () => {},
+    store: async (row) => { stored.push(row) },
+  })
+  assert.equal(storedOk.status, 200)
+  assert.equal(stored.length, 1)
+  assert.equal(stored[0].kind, 'quote')
+
+  const storeFailed = await enquiry.handleEnquiry(valid, {
+    env: { RESEND_API_KEY: 'x' },
+    ip: '203.0.113.71',
+    origin: 'https://www.personalfitness.id',
+    send: async () => {},
+    store: async () => { throw new Error('supabase') },
+  })
+  assert.equal(storeFailed.status, 200)
+
+  let honeypotStored = false
+  const honeypotSkip = await enquiry.handleEnquiry({ ...valid, website: 'https://spam.test' }, {
+    env: { RESEND_API_KEY: 'x' },
+    ip: '203.0.113.73',
+    send: async () => {},
+    store: async () => { honeypotStored = true },
+  })
+  assert.equal(honeypotSkip.status, 200)
+  assert.equal(honeypotStored, false)
+
+  const storeMod = await vite.ssrLoadModule('/src/server/supabaseStore.ts')
+  const inquiryPayload = storeMod.payloadForEnquiry({
+    kind: 'contact',
+    name: 'Ada',
+    email: 'ada@example.com',
+    phone: '',
+    company: '',
+    message: 'Hello\nService: Private Yoga\nCity: Bali\nArea / venue context: Canggu, private villa\nPreferred date / time: next week\n',
+    page: '/contact',
+  })
+  assert.equal(inquiryPayload.table, 'inquiries')
+  assert.equal(inquiryPayload.row.service, 'Private Yoga')
+  assert.equal(inquiryPayload.row.area, 'Canggu, private villa')
+  assert.equal(inquiryPayload.row.preferred_date, 'next week')
+  assert.equal(inquiryPayload.row.source_page, '/contact')
+  const partnerPayload = storeMod.payloadForEnquiry({
+    kind: 'partner',
+    name: 'Sari',
+    email: 'sari@example.com',
+    phone: '+62 812-3456-7890',
+    company: 'Sari Villas',
+    message: 'Hi PersonalFitness.id, I manage villas in Canggu.',
+    page: '/villa-hotel-partners',
+  })
+  assert.equal(partnerPayload.table, 'partner_signups')
+  assert.equal(partnerPayload.row.contact, 'Sari')
+  assert.equal(partnerPayload.row.company, 'Sari Villas')
+  assert.equal(partnerPayload.row.whatsapp, '+62 812-3456-7890')
+  assert.equal(storeMod.supabaseCredentials({}), null)
+  assert.equal(Boolean(storeMod.supabaseCredentials({ SUPABASE_URL: 'https://example.supabase.co', SUPABASE_PUBLISHABLE_KEY: 'pub' })), true)
+
+  enquiry.resetEnquiryLimits()
   for (let index = 0; index < 8; index += 1) {
     const result = await enquiry.handleEnquiry(valid, { env: {}, ip: '203.0.113.50', send: async () => {} })
     assert.equal(result.status, 200)

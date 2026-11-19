@@ -1,5 +1,6 @@
 import { COMPANY_EMAIL } from '@/data/company'
 import { extractAddress, safeFromHeader, smtpSend, type OutboundMail } from './smtp'
+import { storeEnquiry } from './supabaseStore'
 
 export type EnquiryKind = 'contact' | 'quote' | 'partner' | 'schedule'
 export type EnquiryCode = 'invalid' | 'missing_name' | 'invalid_email' | 'missing_message' | 'invalid_kind' | 'unavailable' | 'rate' | 'forbidden' | 'send_failed'
@@ -168,6 +169,7 @@ export async function handleEnquiry(raw: unknown, options: {
   referer?: string
   env?: EnquiryEnv
   send?: (mail: OutboundMail) => Promise<void>
+  store?: (enquiry: ParsedEnquiry) => Promise<void>
 } = {}) {
   const body = typeof raw === 'string' ? safeJson(raw) : raw
   if (!allowedOrigin(options.origin, options.referer)) return failure(403, 'forbidden', unavailable)
@@ -180,16 +182,24 @@ export async function handleEnquiry(raw: unknown, options: {
   if (!parsed.ok) return failure(400, parsed.code, parsed.error)
   const env = options.env || process.env
   const mail = mailFor(env, parsed.value)
+  let result: { status: number; body: { ok: true } | { ok: false; code: EnquiryCode; error: string } } = { status: 200, body: { ok: true as const } }
   try {
     if (options.send) await options.send(mail)
-    else if (mailProvider(env) === 'none') return failure(503, 'unavailable', unavailable)
+    else if (mailProvider(env) === 'none') result = failure(503, 'unavailable', unavailable)
     else await deliver(env, mail)
   } catch (error) {
     const name = error instanceof Error ? error.message.replace(/[\r\n]/g, ' ').slice(0, 80) : 'send'
     if (!name.toLowerCase().includes('key') && !name.toLowerCase().includes('pass')) console.error('enquiry send failed', name)
-    return failure(502, 'send_failed', unavailable)
+    result = failure(502, 'send_failed', unavailable)
   }
-  return { status: 200, body: { ok: true as const } }
+  try {
+    if (options.store) await options.store(parsed.value)
+    else await storeEnquiry(env, parsed.value)
+  } catch (error) {
+    const name = error instanceof Error ? error.message.replace(/[\r\n]/g, ' ').slice(0, 80) : 'store'
+    if (!name.toLowerCase().includes('key') && !name.toLowerCase().includes('pass')) console.error('enquiry supabase store failed', name)
+  }
+  return result
 }
 
 function safeJson(value: string): unknown {
