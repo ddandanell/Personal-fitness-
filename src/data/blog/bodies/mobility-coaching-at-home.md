@@ -36,7 +36,7 @@ If the villa is in Canggu, the commercial destination is still [Bali private str
 
 ## How the Jakarta quote is built
 
-Jakarta mobility starts at Rp 1.125.000 for 60 minutes, one person, in South and Central Jakarta. North, West, East and BSD are quoted after a timing check, with travel or a decline. Building access is the product. Lifts, visitor passes, parking and a usable indoor rectangle go on the quote before anyone travels.
+Jakarta mobility starts at Rp 1.125.000 for 60 minutes, one person, in South and Central Jakarta. North, West, East and BSD are available by request after an instructor availability check. Building access is the product. Lifts, visitor passes, parking and a usable indoor rectangle go on the quote before anyone travels.
 
 If the lobby blocks outside trainers, tell us before the quote. We will not pretend a refusal is a session. If the apartment is a corridor with a coffee table, say so. We would rather move furniture on paper than invent space on the day.
 
@@ -44,7 +44,7 @@ A Jakarta yoga hour is a different product. If you wanted a pair session, open [
 
 ## Programmes, first sessions and what you actually pay
 
-There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 5%, 10% or 20%, on session charges, not travel. Mix mobility with training or yoga only after you know the first hour fitted the room.
+There is no free intro hour. The first mobility visit is the published rate, quoted in writing. If you want a block, [programmes](/programmes) offer eligible 3, 5 or 10-session packs with savings of about 5%, 10% or 20%, on session charges. Mix mobility with training or yoga only after you know the first hour fitted the room.
 
 Pay securely using the payment details in your written quote. Never send card numbers, account numbers or ID photos in chat. Cancellation follows the written terms: more than 24 hours can reschedule once if supply allows; inside 24 hours the session is charged; a professional no-show is not charged.
 

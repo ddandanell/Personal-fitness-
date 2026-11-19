@@ -98,7 +98,7 @@ const hubs: SeoRecord[] = [
     path: '/bali',
     primaryKeyword: 'personal trainer Bali',
     title: 'Personal Trainer Bali: Villa & Home Sessions',
-    description: 'In-villa private strength training from Rp 1.300.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel published for Ubud, Sanur and Uluwatu.',
+    description: 'In-villa private strength training from Rp 1.300.000 in Canggu and Seminyak, plus yoga, Pilates, boxing and meditation. Travel included for Ubud, Sanur and Uluwatu.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali/personal-training', label: 'Private Strength Training in Bali' },
@@ -134,7 +134,7 @@ const hubs: SeoRecord[] = [
     path: '/service-areas',
     primaryKeyword: 'private fitness service areas Bali Jakarta',
     title: 'Service Areas in Bali and Jakarta',
-    description: 'Canggu and Seminyak in-zone; Ubud, Sanur and Uluwatu with travel. South and Central Jakarta in-zone; North, West and East by request.',
+    description: 'Travel included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. South and Central Jakarta in-zone; North, West and East by request.',
     group: 'page', lastmod: TODAY,
     related: [
       { to: '/bali', label: 'Bali private fitness' },
@@ -455,7 +455,7 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   'north-jakarta': {
     keyword: 'personal trainer North Jakarta',
     title: 'Personal Trainer in North Jakarta',
-    description: 'Private wellness at Kelapa Gading, Sunter and Pluit homes, quoted after availability and travel checks.',
+    description: 'Private wellness at Kelapa Gading, Sunter and Pluit homes, available by request after availability checks.',
   },
   'west-jakarta': {
     keyword: 'personal trainer West Jakarta',
@@ -520,27 +520,27 @@ const areaKeyword: Record<string, { keyword: string; title: string; description:
   'kelapa-gading': {
     keyword: 'personal trainer Kelapa Gading',
     title: 'Personal Trainer in Kelapa Gading',
-    description: 'Private training and yoga enquiries in Kelapa Gading, quoted after North Jakarta availability and travel checks.',
+    description: 'Private training and yoga enquiries in Kelapa Gading, available by request after North Jakarta availability checks.',
   },
   sunter: {
     keyword: 'personal trainer Sunter',
     title: 'Personal Trainer in Sunter',
-    description: 'Home training enquiries in Sunter, North Jakarta, confirmed after a supply and travel check.',
+    description: 'Home training enquiries in Sunter, North Jakarta, confirmed after an availability check.',
   },
   pluit: {
     keyword: 'personal trainer Pluit',
     title: 'Personal Trainer in Pluit',
-    description: 'Private wellness at Pluit homes, quoted after North Jakarta access and travel checks.',
+    description: 'Private wellness at Pluit homes, available by request after North Jakarta access and availability checks.',
   },
   pik: {
     keyword: 'personal trainer PIK',
     title: 'Personal Trainer in Pantai Indah Kapuk',
-    description: 'Home training enquiries in PIK, North Jakarta. Travel and estate access are quoted. Not an in-zone South Jakarta rate.',
+    description: 'Home training enquiries in PIK, North Jakarta. Estate access is confirmed. Not an in-zone South Jakarta rate.',
   },
   'puri-indah': {
     keyword: 'personal trainer Puri Indah',
     title: 'Personal Trainer in Puri Indah',
-    description: 'Home training and private yoga enquiries in Puri Indah, West Jakarta, after availability and travel checks.',
+    description: 'Home training and private yoga enquiries in Puri Indah, West Jakarta, after availability checks.',
   },
   'kebon-jeruk': {
     keyword: 'personal trainer Kebon Jeruk',
@@ -639,7 +639,7 @@ function cityServiceRecords(): SeoRecord[] {
 function locationDescription(area: (typeof areas)[number]) {
   const local = (editorial as Record<string, string[]>)[area.slug]
   if (!local) throw new Error('Missing local content: ' + area.slug)
-  const travel = area.travelQuote ? 'Availability and travel quoted.' : area.travelFee ? 'Travel ' + formatIdr(area.travelFee) + ' per visit.' : 'In-zone travel included.'
+  const travel = area.travelQuote ? 'Available by request.' : 'In-zone travel included.'
   return 'Private training, yoga and mat Pilates at your ' + area.name + ' ' + (area.city === 'Bali' ? 'villa or home. ' : 'home or apartment. ') + travel + ' View session options and request a quote.'
 }
 

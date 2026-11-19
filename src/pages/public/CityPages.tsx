@@ -64,7 +64,6 @@ export function CityPage({ city }: { city: City }) {
       <StructuredData data={cityHubJsonLd(city, seo?.title || data.headline, seo?.description || data.lede)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={city} title={data.headline} description={data.lede}>
-        <p className="price-highlight">{`Starting price · private strength training ${formatIdr(SESSION_ANCHOR)} · 60 minutes · one guest`}</p>
         <div className="cluster">
           <Link to={`/contact?city=${city}`} className="button button-primary">Check {city} availability<ArrowUpRight size={16} /></Link>
           <Link to={`/${cityPath}/personal-training`} className="button button-outline">{city} private strength training</Link>
@@ -76,7 +75,8 @@ export function CityPage({ city }: { city: City }) {
           <EditorialPhoto path={'/' + cityPath} eager />
           <div className="city-copy">
             <p className="eyebrow"><MapPin size={14} />{city} clusters</p>
-            <h2>Published clusters, with travel written on the quote.</h2>
+            <h2>Published areas we come to.</h2>
+            <p className="price-highlight">{`Starting price · private strength training ${formatIdr(SESSION_ANCHOR)} · 60 minutes · one guest`}</p>
             <ul className="check-list">{data.clusters.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
             <ul className="check-list" style={{ marginTop: 24 }}>{data.notes.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
           </div>
@@ -84,7 +84,7 @@ export function CityPage({ city }: { city: City }) {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Locations</Eyebrow><h2>{city === 'Bali' ? 'Villa clusters for your Bali stay.' : 'Jakarta municipalities and neighbourhood pages.'}</h2><p>{city === 'Bali' ? 'Area pages explain access. They point back to the Bali hub for booking and rates.' : 'South and Central pockets sit inside the published rate. North, West and East neighbourhoods wait on a written travel quote. Each page stays a location note, not a separate city site.'}</p></div></div>
+          <div className="section-title"><div><Eyebrow>Locations</Eyebrow><h2>{city === 'Bali' ? 'Villa clusters for your Bali stay.' : 'Jakarta municipalities and neighbourhood pages.'}</h2><p>{city === 'Bali' ? 'Area pages explain access. They point back to the Bali hub for booking and rates.' : 'South and Central pockets sit inside the published rate. North, West and East neighbourhoods are available by request. Each page stays a location note, not a separate city site.'}</p></div></div>
           <LocationClusters city={city} />
         </div>
       </section>
@@ -111,7 +111,7 @@ export function CityPage({ city }: { city: City }) {
             <h2>{city === 'Bali' ? 'Villa guests, month-long stays and hosts.' : 'Residents, apartment routines and four-week blocks.'}</h2>
             <p className="large-copy">{city === 'Bali'
               ? 'The hour happens in your villa or home, not at a walk-in studio in Denpasar. Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. Beach clubs and public sand are not default venues.'
-              : 'The hour happens in your apartment or house. South and Central Jakarta sit inside the published rate. North, West, East and BSD are timing-and-travel checks. A building gym is optional and only useful if it is private.'}</p>
+              : 'The hour happens in your apartment or house. South and Central Jakarta sit inside the published rate. North, West, East and BSD are available by request after an availability check. A building gym is optional and only useful if it is private.'}</p>
           </div>
           <ul className="check-list large-list">
             {data.audience.map((item) => <li key={item}><Check size={19} />{item}</li>)}
@@ -177,7 +177,6 @@ export function AreaPage() {
     <>
       <StructuredData data={{'@context':'https://schema.org','@type':'WebPage','@id':SITE_ORIGIN + '/' + cityPath + '/' + area.slug + '#webpage',url:SITE_ORIGIN + '/' + cityPath + '/' + area.slug,name:getSeo('/' + cityPath + '/' + area.slug)?.title,description:getSeo('/' + cityPath + '/' + area.slug)?.description,about:{'@type':'Service',name:'Private fitness sessions in ' + area.name,provider:{'@id':SITE_ORIGIN + '/#business'},areaServed:{'@type':'Place',name:area.name + ', ' + area.city}},primaryImageOfPage:{'@type':'ImageObject',url:SITE_ORIGIN + pageImage('/' + cityPath + '/' + area.slug)!.src},inLanguage:'en-ID'}} />
       <PageIntro eyebrow={`${area.city} · ${area.cluster}`} title={getSeo('/' + cityPath + '/' + area.slug)?.title || ('Private fitness in ' + area.name)} description={getSeo('/' + cityPath + '/' + area.slug)?.description || area.copy}>
-        <p className="price-highlight">{area.travelQuote ? 'Availability and travel confirmed by written quote' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included in the session starting price'}</p>
         <Link to={`/contact?city=${area.city}&area=${area.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
       <section className="section-compact"><div className="shell"><EditorialPhoto path={'/' + cityPath + '/' + area.slug} eager /></div></section>
@@ -189,7 +188,7 @@ export function AreaPage() {
       </section>
       <section className="section-compact section-light">
         <div className="shell">
-          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Private fitness sessions in {area.name}.</h2><p>Starting prices for this cluster follow the {area.city} session page for each service, then travel if you are outside the in-zone list.</p></div></div>
+          <div className="section-title"><div><Eyebrow>Sessions</Eyebrow><h2>Private fitness sessions in {area.name}.</h2><p>Starting prices for this cluster follow the {area.city} session page for each service.</p></div></div>
           <div className="area-grid">
             {publicServices.map((service) => (
               <Link to={CITY_SERVICE_RELEASED.includes(service.slug as typeof CITY_SERVICE_RELEASED[number]) ? `/${cityPath}/${service.slug}` : `/${service.slug}`} className="area-card" key={service.slug}>
@@ -211,7 +210,7 @@ export function AreaPage() {
                 <Link to={'/' + cityPath + '/' + item.slug} className="area-card" key={item.slug}>
                   <p className="eyebrow">{item.cluster}</p>
                   <h3>{item.name}</h3>
-                  <p>{item.travelQuote ? 'Travel quoted after a timing check' : item.travelFee ? `Travel ${formatIdr(item.travelFee)} per visit` : 'In-zone travel included'}</p>
+                  <p>{item.travelQuote ? 'Available by request after a timing check' : 'In-zone travel included'}</p>
                 </Link>
               ))}
             </div>
@@ -233,7 +232,7 @@ export function CityServicePage() {
   const seo = getSeo('/' + cityPath + '/' + service.slug)
   const access = city === 'Bali'
     ? 'Villa gates, staff briefings and a dry indoor floor matter more than a pin on a map. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request.'
-    : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are timing-and-travel checks. We do not claim Greater Jakarta coverage.'
+    : 'Lifts, visitor passes, parking and a usable indoor rectangle go on the quote. Kemang, Senopati, SCBD, Menteng and Thamrin sit inside the published rate. Kelapa Gading, PIK and other North, West and East neighbourhoods are available by request after an availability check. We do not claim Greater Jakarta coverage.'
   const siblings = publicServices.filter((item) => item.slug !== service.slug && CITY_SERVICE_RELEASED.includes(item.slug as typeof CITY_SERVICE_RELEASED[number]))
   const articles = blogPosts.filter((post) =>
     post.landingPage === '/' + service.slug ||
@@ -249,10 +248,9 @@ export function CityServicePage() {
       <StructuredData data={cityServiceJsonLd(service, city, seo?.title, seo?.description)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow={`${city} · ${service.title}`} title={seo?.title || `${service.title} in ${city}`} description={seo?.description || `${service.short} ${price ? `Starting price ${formatIdr(price)} for ${service.durationMin} minutes.` : 'Quoted after the operational checks.'}`}>
-        <p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p>
         <Link to={`/contact?city=${city}&service=${service.slug}`} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
       </PageIntro>
-      <section className="section-compact"><div className="shell"><EditorialPhoto path={'/' + cityPath + '/' + service.slug} eager /></div></section>
+      <section className="section-compact"><div className="shell"><EditorialPhoto path={'/' + cityPath + '/' + service.slug} eager /><p className="price-highlight">{price ? `Starting price ${formatIdr(price)} / ${service.durationMin} min in ${city}` : 'Written quote only'}</p></div></section>
       <DetailedServiceGuide service={service} city={city} />
       <section className="section-compact">
         <div className="shell split-feature">

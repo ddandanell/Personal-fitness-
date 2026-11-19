@@ -20,7 +20,7 @@ You do not need a shala, a reformer or a full-length mirror. You do need permiss
 
 ## Building access is the product
 
-South Jakarta in-zone includes Kebayoran, Senopati, SCBD, Kemang and Cilandak streets we can time. Central Jakarta in-zone includes Menteng, Gondangdia, Thamrin and nearby buildings we can time. North, West, East and BSD are quoted after a timing check, with travel or a decline. We do not claim Greater Jakarta coverage.
+South Jakarta in-zone includes Kebayoran, Senopati, SCBD, Kemang and Cilandak streets we can time. Central Jakarta in-zone includes Menteng, Gondangdia, Thamrin and nearby buildings we can time. North, West, East and BSD are available by request after an instructor availability check. We do not claim Greater Jakarta coverage.
 
 Put the building name, tower, parking instruction and security process in the first message. If a visitor pass or ID is required, say that before the quote. If the front desk blocks outside teachers, tell us. We will not pretend a lobby refusal is a completed hour.
 
@@ -54,7 +54,7 @@ The sequence is on [how it works](/how-it-works). The city hub is [home personal
 
 ## A checklist you can actually use
 
-1. Confirm South or Central Jakarta, or accept a travel quote.
+1. Confirm South or Central Jakarta, or ask us to check availability for your address.
 2. Name the building, tower and visitor process.
 3. Clear a rectangle for one or two mats.
 4. Close a door if you can.

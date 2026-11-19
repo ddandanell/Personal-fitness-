@@ -28,7 +28,7 @@ Tell us headcount in the first message. Adding four friends at 22:00 does not ke
 
 The [pricing page](/pricing) uses the same blocks as the written quote. Start with the city session rate, add a second guest only where that service allows one, and add 45 percent of the base for an accepted 90-minute session. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. South and Central Jakarta retain included travel; North, West and East Jakarta remain on request after a timing check.
 
-Programme reductions of about 5, 10 and 20 percent apply to session charges, excluding the fixed second-guest charge. Travel is not reduced. Read [programmes](/programmes) before you prepay a block for two people who might not both attend every hour.
+Programme reductions of about 5, 10 and 20 percent apply to session charges, excluding the fixed second-guest charge. Read [programmes](/programmes) before you prepay a block for two people who might not both attend every hour.
 
 There is no free extra person “because it is a couple”. There is no sunrise pair premium. There is no child-on-the-mat exception unless the quote says so, and a parent or guardian must stay for any minor.
 

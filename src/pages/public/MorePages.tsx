@@ -80,13 +80,13 @@ const travelZones = [
   ['Bali in-zone', 'Included', 'Canggu and Seminyak. Travel is already inside the published session price.'],
   ['Canggu, Seminyak, Sanur, Ubud and Uluwatu', 'Travel included', 'The published Bali session price includes travel in these areas. Other areas are on request.'],
   ['Jakarta in-zone', 'Included', 'South and Central Jakarta. Building access is collected before confirmation.'],
-  ['North, West, East Jakarta', 'By quote', 'No in-zone or zero-travel price is assumed. We confirm supply and travel in writing.'],
+  ['North, West, East Jakarta', 'By quote', 'Available by request; we confirm instructor availability for your address.'],
 ]
 
 const quoteSteps = [
   ['Starting price', 'The published 60-minute in-zone rate for the session and city.'],
   ['People and length', 'Extra people and a 90-minute visit sit on top of that rate.'],
-  ['Travel', 'Travel is included in the five named Bali areas. South and Central Jakarta include travel; other Jakarta areas require a timing and travel quote.'],
+  ['Travel', 'Travel is included in the five named Bali areas. South and Central Jakarta include travel; other Jakarta areas are available by request after an availability check.'],
   ['Package', '3, 5 and 10 session packs price private strength training at Rp 1.225.000, Rp 1.175.000 and Rp 1.050.000. Savings are shown against Rp 1.300.000.'],
 ]
 
@@ -138,7 +138,7 @@ export function ServiceAreas() {
   const bali = areas.filter((area) => area.city === 'Bali' && !area.parent)
   return (
     <>
-      <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is either inside the session starting price or added once per visit. If we cannot honour an address, we decline it rather than stretch a route.">
+      <PageIntro eyebrow="Service areas" title="Clusters, not island-wide coverage." description="Travel is included in the session starting price in the published areas. If we cannot honour an address, we decline it rather than stretch a route.">
         <div className="cluster">
           <Link to="/bali" className="button button-primary">Bali clusters<ArrowUpRight size={16} /></Link>
           <Link to="/jakarta" className="button button-outline">Jakarta clusters</Link>
@@ -160,7 +160,7 @@ export function ServiceAreas() {
               <Link to={'/bali/' + area.slug} className="area-card" key={area.slug}>
                 <p className="eyebrow">{area.cluster}</p>
                 <h3>{area.name}</h3>
-                <p>{area.travelQuote ? 'Travel quoted after a timing check' : area.travelFee ? `Travel ${formatIdr(area.travelFee)} per visit` : 'In-zone travel included'}</p>
+                <p>{area.travelQuote ? 'Available by request after a timing check' : 'In-zone travel included'}</p>
               </Link>
             ))}
           </div>
@@ -476,7 +476,7 @@ export function PricingPage() {
             <div>
               <span>90-minute session</span>
               <strong>+45%</strong>
-              <p>Of the 60-minute city rate, before travel. <Link to="/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted">Compare 60 and 90 minutes.</Link></p>
+              <p>Of the 60-minute city rate. <Link to="/resources/sixty-or-ninety-minutes-how-home-session-duration-is-quoted">Compare 60 and 90 minutes.</Link></p>
             </div>
             <div>
               <span>Private yoga pair</span>
@@ -678,7 +678,7 @@ const legalCopy = {
       ['Parties', 'PersonalFitness.id sells a coordinated session. The professional is dispatched for a named service and cluster. They are not offering you a separate studio membership through this site.'],
       ['Scope', 'The selected service and written quote define the scope. General fitness and relaxation visits do not include clinical diagnosis or treatment. Clinical or qualified health requests require an appropriately authorised professional and any separate clinical agreement. Swimming requires a suitable permitted pool; chef and equipment requests are itemised separately.'],
       ['Quotes and payment', 'A 50% deposit confirms each booking after the written quote is accepted. Packs are paid in full upfront. Payment instructions are on the written quote. We never ask for card or bank details in WhatsApp. Free rescheduling is available up to 24 hours before the session, if supply allows. Inside 24 hours, the session is charged. Chat messages are not settlement.'],
-      ['Prepaid wellness plans', 'Packs are paid in full upfront. A 50% deposit confirms a single-session booking. The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; travel, held services, food, rentals and external costs are excluded.'],
+      ['Prepaid wellness plans', 'Packs are paid in full upfront. A 50% deposit confirms a single-session booking. The first visit is a paid single session unless your written quote states otherwise. A monthly wellness plan is a four-week block paid ahead with an agreed session count, dates and validity window. There is no automatic renewal. Programme savings apply once to eligible fitness session charges; held services, food, rentals and external costs are excluded.'],
       ['Your space', 'You confirm permission to use the villa, home, hotel room or pool. Access failures, unsafe floors and missing permission can stop the session under the refund rules.'],
       ['Liability', 'You participate in physical activity at your own risk within a non-clinical fitness session. We stop work that looks unsafe. We do not accept clinical responsibility we are not qualified to hold.'],
     ],

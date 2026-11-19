@@ -24,7 +24,7 @@ Two people sharing the hour should be able to sit in the same room without turni
 
 You sit at the villa or home you already have permission to use.
 
-Sunrise captions do not change the rate. We charge duration and travel, not a photograph. Rain needs an indoor fallback. Outdoor-only decks get moved or rescheduled.
+Sunrise captions do not change the rate. We charge for the session and its duration, not a photograph. Rain needs an indoor fallback. Outdoor-only decks get moved or rescheduled.
 
 ## How the Jakarta quote is built
 

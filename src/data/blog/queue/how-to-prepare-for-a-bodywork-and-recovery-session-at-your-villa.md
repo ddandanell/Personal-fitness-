@@ -50,9 +50,9 @@ If you have sudden pain, a recent injury, a post-operative restriction or a cond
 
 ## Confirm the guest count and price
 
-The published bodywork and recovery format is 60 minutes. One guest is included. The guide price is Rp 1.300.000 in Bali and Jakarta. A second adult adds Rp 250.000, making the two-person guide total Rp 1.550.000 before any separately agreed travel or property-specific cost.
+The published bodywork and recovery format is 60 minutes. One guest is included. The guide price is Rp 1.300.000 in Bali and Jakarta. A second adult adds Rp 250.000, making the two-person guide total Rp 1.550.000 before any separately agreed property-specific cost.
 
-Travel is included for confirmed visits in Canggu, Seminyak, Sanur, Ubud and Uluwatu. In Jakarta, South and Central Jakarta are the published in-zone areas. North, West and East Jakarta remain available by request, with travel and supply checked for the accepted address. Read the current [pricing page](/pricing) and relevant location page rather than applying an in-zone total to every address.
+Travel is included for confirmed visits in Canggu, Seminyak, Sanur, Ubud and Uluwatu. In Jakarta, South and Central Jakarta are the published in-zone areas. North, West and East Jakarta remain available by request, with instructor availability checked for your address. Read the current [pricing page](/pricing) and relevant location page rather than applying an in-zone total to every address.
 
 A 50% deposit confirms an accepted single booking. Eligible 3, 5 and 10-session packs are paid in full upfront. Free rescheduling is available up to 24 hours before the session if supply allows. Inside 24 hours, the session is charged. The written quote should show the service, duration, participant count, address, professional, time and complete amount before you pay.
 

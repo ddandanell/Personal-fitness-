@@ -42,7 +42,7 @@ export function estimateQuote(input: QuoteInput): QuoteResult {
   if (!Number.isInteger(input.participants) || input.participants < 1) return { ...empty, error: 'Enter a whole guest count of at least one.' }
   if (input.area && !area) return { ...empty, error: 'Choose a published area or select Confirm later.' }
   if (area && area.city !== input.city) return { ...empty, error: area.name + ' is in ' + area.city + '. Choose a matching area.' }
-  if (area?.travelQuote) return { ...empty, error: 'Availability and travel for ' + area.name + ' need a written quote. No in-zone price is assumed.' }
+  if (area?.travelQuote) return { ...empty, error: area.name + ' is available by request. We confirm instructor availability for your address.' }
   if (input.programme && !programme) return { ...empty, error: 'Choose a valid package or a single session.' }
   if (!programme) return { ...empty, error: 'Choose a valid package or a single session.' }
   if (offer.quoteOnly || service.quoteOnly || !offer.durationMin) return { ...empty, error: 'This format needs a written specialist quote. We confirm suitability, the instructor, scope and the total before booking.' }

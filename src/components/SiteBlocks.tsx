@@ -82,7 +82,7 @@ export function ProfessionalGrid({ people = professionals, limit }: { people?: P
 }
 
 function travelLabel(area: (typeof areas)[number]) {
-  return area.travelQuote ? 'Travel confirmed after a timing check' : 'Travel included in the published session price'
+  return area.travelQuote ? 'Confirmed after a timing check' : 'Travel included in the published session price'
 }
 
 export function AreaCard({ area }: { area: (typeof areas)[number] }) {

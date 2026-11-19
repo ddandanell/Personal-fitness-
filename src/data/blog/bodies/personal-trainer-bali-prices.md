@@ -9,7 +9,7 @@ Ask every quote to name:
 - Service: private strength training, not “wellness”
 - Duration: 45, 60 or 90 minutes
 - People included
-- Cluster: Canggu–Seminyak in-zone, or Ubud/Sanur/Uluwatu with a travel figure
+- Cluster: Canggu, Seminyak, Sanur, Ubud or Uluwatu (travel included)
 - What kit is assumed
 - Cancellation window
 - Whether the professional is named or “we will send someone”
@@ -31,7 +31,7 @@ Put them in a table, even a note on your phone.
 
 1. Convert both to 60 minutes. A 45-minute session that looks cheaper may be the same rate per minute.
 2. Count people. A pair price against a solo price is a different product. Our yoga rate includes two. Our training rate does not.
-3. Put travel on its own row. “Free anywhere in Bali” is either a lie or a loss-leader you will pay for in lateness.
+3. Check the area. Travel is included in Canggu, Seminyak, Sanur, Ubud and Uluwatu; anywhere else needs an availability check first.
 4. Check cancellation. Inside 24 hours we charge the session. If another quote is “cancel anytime”, ask who funds the coach’s empty window.
 5. Check payment. Card in WhatsApp is a reason to walk away, including from us if anyone ever asked. They should not.
 

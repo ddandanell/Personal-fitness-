@@ -50,7 +50,7 @@
       },
       {
         "q": "Is South Jakarta in-zone?",
-        "a": "Yes for the published cluster. BSD and outer municipalities are quoted with travel or declined."
+        "a": "Yes for the published cluster. BSD and outer municipalities are available by request or declined."
       }
     ],
     "imageAlt": "Female Indonesian personal trainer coaching an Australian male resident with light dumbbells"
@@ -182,7 +182,7 @@
     "faqs": [
       {
         "q": "Is Rp 1.300.000 city-wide?",
-        "a": "No. It is South and Central in-zone. Other municipalities need travel or a decline."
+        "a": "No. It is South and Central in-zone. Other municipalities are by request."
       },
       {
         "q": "Do I still pay if the lobby blocks the coach?",
@@ -199,7 +199,7 @@
     "slug": "private-yoga-prices-in-bali-duration-travel-and-group-size",
     "briefId": "B008",
     "title": "Private yoga prices in Bali: duration, travel and group size",
-    "description": "How Rp 1.050.000 pair pricing changes with 90 minutes, Ubud/Uluwatu travel and extra people.",
+    "description": "How Rp 1.050.000 pair pricing changes with 90 minutes and extra people.",
     "date": "2026-11-14",
     "primaryQuery": "private yoga prices in bali: duration, travel and group size",
     "service": "Private yoga",
@@ -214,7 +214,7 @@
       },
       {
         "q": "Do you charge a sunrise premium?",
-        "a": "No. We charge duration and travel, not a caption."
+        "a": "No. We charge for the session and its duration, not a caption."
       },
       {
         "q": "What about rain?",
@@ -563,7 +563,7 @@
     "slug": "sixty-or-ninety-minutes-how-home-session-duration-is-quoted",
     "briefId": "B020",
     "title": "60 or 90 minutes: how home session duration is quoted",
-    "description": "Ninety minutes add 45 percent of the city base, before travel. When to extend a home session and when to buy two hours.",
+    "description": "Ninety minutes add 45 percent of the city base. When to extend a home session and when to buy two hours.",
     "primaryQuery": "60 or 90 minutes: how home session duration is quoted",
     "service": "Booking",
     "city": "Bali & Jakarta",
@@ -573,7 +573,7 @@
     "faqs": [
       {
         "q": "How much is 90 minutes?",
-        "a": "It adds 45 percent of the city base rate, before extra people and travel."
+        "a": "It adds 45 percent of the city base rate, before extra people."
       },
       {
         "q": "Does 90 minutes include two services?",

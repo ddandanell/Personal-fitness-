@@ -10,7 +10,7 @@ A building gym sells you access you already pay for in maintenance fees, plus a 
 
 A managed home visit sells you 60 minutes in the unit, plus the coordination of access, backup and a written quote. You do not drive. The coach does. Traffic is our problem inside the clusters we publish, and your problem if you live outside them.
 
-Rp 1.300.000 is the managed in-zone unit. Extra people Rp 250.000. Ninety minutes plus 45 percent. Outer municipalities are quoted with travel. That is the whole calculation.
+Rp 1.300.000 is the managed in-zone unit. Extra people Rp 250.000. Ninety minutes plus 45 percent. Outer municipalities are available by request. That is the whole calculation.
 
 ## What a Jakarta quote must show
 
@@ -68,7 +68,7 @@ Example C. One person, 90 minutes, Kemang. Base Rp 1.300.000 plus 45 percent (Rp
 
 Example D. Three private strength training sessions, one person, South Jakarta. The pack is Rp 3.675.000, or Rp 1.225.000 per session, compared with Rp 3.900.000 for three Rp 1.300.000 single visits. The saving is Rp 225.000. The quote confirms dates, access and the validity window; it remains private training at home.
 
-Example E. BSD. There is no published in-zone rate. You get a travel quote or a decline after a timing check. A South or Central Jakarta starting rate is not automatically a BSD offer.
+Example E. BSD. There is no published in-zone rate. You get a confirmation or a decline after a timing check. A South or Central Jakarta starting rate is not automatically a BSD offer.
 
 ## Peak traffic and why 06:30 is a price in disguise
 

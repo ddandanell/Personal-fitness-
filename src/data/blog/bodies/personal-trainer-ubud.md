@@ -26,7 +26,7 @@ The [pricing page](/pricing) uses the same blocks as the written quote. Ubud pri
 
 A two-week stay can use a 3, 5 or 10-session pack if the actual appointment count and validity window fit. There is no separate Ubud travel fee on each visit. For private strength training, the published packs are Rp 3.675.000 for three sessions, Rp 5.875.000 for five and Rp 10.500.000 for ten, for one guest. Unused sessions follow the validity window on the quote.
 
-There is no free intro hour. There is no jungle premium. There is no sunrise tax. There is travel, duration and headcount.
+There is no free intro hour. There is no jungle premium. There is no sunrise tax. There is duration and headcount.
 
 ## Other sessions at the same Ubud address
 

@@ -16,11 +16,11 @@ Pad work has a rhythm. Shared walls and evening building rules belong on the fir
 
 Ceiling height matters. If a punch cannot travel without hitting a fan, we will not pretend it can. A glossy balcony is a poor boxing floor. Indoor tile or wood is the default. We bring pads when the session is approved. You do not need a heavy bag. You do need permission.
 
-The lobby is still the Jakarta product. Put the building, tower, parking and visitor process on the quote. If the front desk blocks outside coaches, tell us before anyone travels. South and Central Jakarta are in-zone. North, West, East and BSD are timing-and-travel checks.
+The lobby is still the Jakarta product. Put the building, tower, parking and visitor process on the quote. If the front desk blocks outside coaches, tell us before anyone travels. South and Central Jakarta are in-zone. North, West, East and BSD are available by request after an availability check.
 
 ## How the quote is built
 
-The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.300.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Travel applies only when the cluster is not in-zone. Programme reductions of about 5, 10 and 20 percent apply to session charges, not to a building fee.
+The [pricing page](/pricing) uses the same blocks operations uses. Jakarta boxing starts at Rp 1.300.000. Ninety minutes add 45 percent of the base when the space and neighbours allow an extension. Programme reductions of about 5, 10 and 20 percent apply to session charges, not to a building fee.
 
 There is no free intro. Pay securely using the payment details in your written quote. WhatsApp +62 811-3803-488 carries the request. Email hello@personalfitness.id if that is easier.
 

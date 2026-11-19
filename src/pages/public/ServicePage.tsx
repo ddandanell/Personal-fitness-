@@ -34,7 +34,6 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
       <StructuredData data={serviceJsonLd(service, seo?.title, seo?.description)} />
       {pageFaqs.length >= 2 && <StructuredData data={faqJsonLd(pageFaqs)} />}
       <PageIntro eyebrow="Private session" title={seo?.title || service.title} description={seo?.description || service.description}>
-        <PricePills slug={service.slug} />
         <div className="cluster" style={{ marginTop: 22 }}>
           <Link to={request} className="button button-primary">Check availability<ArrowUpRight size={16} /></Link>
           <Link to="/pricing" className="button button-outline">See session prices</Link>
@@ -47,6 +46,7 @@ export default function ServicePage({ slug: slugProp }: { slug?: string }) {
             <Eyebrow>At your location</Eyebrow>
             <h2>A private {service.title.toLowerCase()} visit at your villa or home.</h2>
             <p className="large-copy">{service.short}</p>
+            <PricePills slug={service.slug} />
             <ul className="check-list">{service.includes.map((item) => <li key={item}><Check size={17} />{item}</li>)}</ul>
           </div>
         </div>

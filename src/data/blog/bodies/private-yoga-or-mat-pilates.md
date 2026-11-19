@@ -30,7 +30,7 @@ If the room is shared with work or household activities, reserve it for the appo
 
 In Bali, Canggu, Seminyak, Sanur, Ubud and Uluwatu are the published Bali areas with travel included. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request., while Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. If you are staying in a managed property, ask the host to confirm permission for an outside instructor. The [Canggu location guide](/bali/canggu) explains villa access and the local planning details that help define a workable appointment.
 
-For Jakarta, the published in-zone pockets sit within South and Central Jakarta. North, West and East Jakarta are by request, with local availability and travel checked before an offer. Apartment residents should ask management about visiting-professional access and any shared-facility restriction. The [Menteng location guide](/jakarta/menteng) provides a home-planning example within the Central Jakarta cluster.
+For Jakarta, the published in-zone pockets sit within South and Central Jakarta. North, West and East Jakarta are by request, with local instructor availability checked before an offer. Apartment residents should ask management about visiting-professional access and any shared-facility restriction. The [Menteng location guide](/jakarta/menteng) provides a home-planning example within the Central Jakarta cluster.
 
 These examples help you prepare an enquiry. They do not establish a separate studio, guarantee a preferred appointment or imply that a professional is available at every address.
 

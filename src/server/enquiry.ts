@@ -192,13 +192,21 @@ export async function handleEnquiry(raw: unknown, options: {
     if (!name.toLowerCase().includes('key') && !name.toLowerCase().includes('pass')) console.error('enquiry send failed', name)
     result = failure(502, 'send_failed', unavailable)
   }
+  let stored = false
   try {
-    if (options.store) await options.store(parsed.value)
-    else await storeEnquiry(env, parsed.value)
+    if (options.store) {
+      await options.store(parsed.value)
+      stored = true
+    } else {
+      stored = (await storeEnquiry(env, parsed.value)).stored
+    }
   } catch (error) {
     const name = error instanceof Error ? error.message.replace(/[\r\n]/g, ' ').slice(0, 80) : 'store'
     if (!name.toLowerCase().includes('key') && !name.toLowerCase().includes('pass')) console.error('enquiry supabase store failed', name)
   }
+  // A lead saved to Supabase is a successful enquiry even when email delivery is off or fails.
+  // Visitors only see an error when neither the save nor the email went through.
+  if (stored && !result.body.ok) result = { status: 200, body: { ok: true as const } }
   return result
 }
 

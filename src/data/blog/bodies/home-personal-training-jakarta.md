@@ -16,7 +16,7 @@ Recurring programmes need a standing access note. We keep that on the booking re
 
 The first home session is a working hour, not a medical exam. Write one honest line: beginner, returning after a long gap, or already training. That is enough to match a professional. Wear clothes you can squat in. Have water. If you only have bodyweight space, say so. A good coach does not need a villa gym to start, and a Jakarta living room is usually smaller than a Canggu deck.
 
-The published Jakarta private strength training rate is Rp 1.300.000 for 60 minutes, one person, in-zone. In-zone means South Jakarta and Central Jakarta clusters we can time: Kebayoran, Senopati, SCBD, Kemang, Cilandak, Menteng, Thamrin and nearby streets. North, West, East and BSD are quoted with travel after a timing check. We do not claim city-wide 24/7 coverage.
+The published Jakarta private strength training rate is Rp 1.300.000 for 60 minutes, one person, in-zone. In-zone means South Jakarta and Central Jakarta clusters we can time: Kebayoran, Senopati, SCBD, Kemang, Cilandak, Menteng, Thamrin and nearby streets. North, West, East and BSD are available by request after a timing check. We do not claim city-wide 24/7 coverage.
 
 Extra people add Rp 250.000 each. Ninety minutes add 45 percent of the base. Programmes take about 5, 10 or 20 percent off 3, 5 or 10 sessions. Price the combination on [pricing](/pricing) before you fall in love with a 05:30 slot that the building will not open.
 

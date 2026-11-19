@@ -148,6 +148,33 @@ try {
   })
   assert.equal(storeFailed.status, 200)
 
+  const savedNoMail = await enquiry.handleEnquiry(valid, {
+    env: {},
+    ip: '203.0.113.74',
+    origin: 'https://www.personalfitness.id',
+    store: async () => {},
+  })
+  assert.equal(savedNoMail.status, 200)
+  assert.equal(savedNoMail.body.ok, true)
+
+  const savedMailFailed = await enquiry.handleEnquiry(valid, {
+    env: { RESEND_API_KEY: 'x' },
+    ip: '203.0.113.75',
+    origin: 'https://www.personalfitness.id',
+    send: async () => { throw new Error('resend') },
+    store: async () => {},
+  })
+  assert.equal(savedMailFailed.status, 200)
+
+  const lostNoMail = await enquiry.handleEnquiry(valid, {
+    env: {},
+    ip: '203.0.113.76',
+    origin: 'https://www.personalfitness.id',
+    store: async () => { throw new Error('supabase') },
+  })
+  assert.equal(lostNoMail.status, 503)
+  assert.equal(lostNoMail.body.code, 'unavailable')
+
   let honeypotStored = false
   const honeypotSkip = await enquiry.handleEnquiry({ ...valid, website: 'https://spam.test' }, {
     env: { RESEND_API_KEY: 'x' },

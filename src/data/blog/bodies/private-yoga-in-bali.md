@@ -65,7 +65,7 @@ Groups above two need a marshal. Someone in the villa has to keep late guests fr
 
 ## Timing against heat and traffic
 
-In Canggu, 07:00 still works more often than 12:00. In Uluwatu, the route may need an earlier departure from the teacher’s side, which is why travel is a line and why windows beat minutes. Evening yoga after a full day of sun is a valid request. It is also a request for a slower class and a room that is not a deck with mosquitoes as the soundtrack, unless you like that.
+In Canggu, 07:00 still works more often than 12:00. In Uluwatu, the route may need an earlier departure from the teacher’s side, which is why windows beat minutes. Evening yoga after a full day of sun is a valid request. It is also a request for a slower class and a room that is not a deck with mosquitoes as the soundtrack, unless you like that.
 
 If your stay is two nights, book one hour well, not three hours badly. If your stay is a month, read [programmes](/programmes).
 

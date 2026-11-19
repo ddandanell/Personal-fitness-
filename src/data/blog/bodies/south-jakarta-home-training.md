@@ -6,7 +6,7 @@ If you searched for a personal trainer in Kemang or Senopati, start with the bui
 
 In-zone means the published 60-minute private strength training rate already includes travel for this cluster when we can time the visit. It does not mean every tower is easy. A visitor pass, parking and a security desk that has never seen an outside coach will eat the hour if they are not on the quote.
 
-The hour is one person at Rp 1.300.000. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are quoted after a timing check, with travel or a decline.
+The hour is one person at Rp 1.300.000. Extra people add Rp 250.000. Ninety minutes add 45 percent of the base. BSD, North, West and East Jakarta are not this cluster. They are available by request after a timing check, or we decline.
 
 A building gym with other residents walking through is not a private hour unless you have written permission and a door that can close.
 

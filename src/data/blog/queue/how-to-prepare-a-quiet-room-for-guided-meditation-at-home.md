@@ -58,7 +58,7 @@ Two adults are included in the published meditation format when the room works f
 
 Imagine two adults staying in Canggu. The open pavilion faces the pool, breakfast staff cross it regularly and construction can be heard from the road. A smaller air-conditioned media room has a door, three chairs and curtains. The media room is the better option even though it is less photogenic.
 
-The guests can move one table, place two chairs with clear space, silence their phones and tell the villa host that the room is reserved. Canggu is within the published Bali in-zone cluster for an accepted visit. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request., while Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other areas on request. Those travel rules belong on the written quote and are not changed by the type of room.
+The guests can move one table, place two chairs with clear space, silence their phones and tell the villa host that the room is reserved. Canggu is within the published Bali in-zone cluster for an accepted visit. Travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu, whichever room you choose.
 
 The [Bali service area guide](/bali) explains the current location rules. Give the exact villa address and two realistic time windows. Do not assume that an image of a meditation instructor confirms a particular person or time.
 
@@ -68,7 +68,7 @@ Imagine a couple in a South Jakarta apartment. The building gym is shared and ou
 
 South and Central Jakarta include named in-zone pockets for accepted visits. North, West and East Jakarta remain by request. A location page does not guarantee that a professional can reach every building at every time. Use the [Jakarta service area guide](/jakarta) to identify the correct cluster, then wait for the written quote.
 
-The published Jakarta guided meditation starting price is Rp 1.050.000 for 60 minutes and one or two adults. Any travel or access cost for a by-request address must be confirmed rather than guessed.
+The published Jakarta guided meditation starting price is Rp 1.050.000 for 60 minutes and one or two adults. Any access cost for a by-request address must be confirmed rather than guessed.
 
 ## The five-minute check before the instructor arrives
 

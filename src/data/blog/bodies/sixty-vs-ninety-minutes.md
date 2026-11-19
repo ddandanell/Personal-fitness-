@@ -1,4 +1,4 @@
-Sixty minutes and ninety minutes are different commercial hours, not a vibe. PersonalFitness.id publishes 60-minute starting prices for the live sessions, including private strength training, bodywork and recovery, and Zumba and dance fitness. A 90-minute visit adds 45 percent of the city base rate, before travel. The commercial pages are [pricing](/pricing) and [how it works](/how-it-works). This article is the investigation layer: when to extend, when not to, and how the quote is built.
+Sixty minutes and ninety minutes are different commercial hours, not a vibe. PersonalFitness.id publishes 60-minute starting prices for the live sessions, including private strength training, bodywork and recovery, and Zumba and dance fitness. A 90-minute visit adds 45 percent of the city base rate. The commercial pages are [pricing](/pricing) and [how it works](/how-it-works). This article is the investigation layer: when to extend, when not to, and how the quote is built.
 
 If you searched whether a personal trainer at home should stay for 90 minutes, start with the floor and the goal, not a round number. Extra time does not fix a wet deck, a locked gate or a clinical request.
 
@@ -24,7 +24,7 @@ Two people on [private strength training](/personal-training) who actually share
 
 Yoga for two is already a pair at 60 minutes. Extending yoga to 90 adds 45 percent of the yoga base. It does not include a third person. Extra people are a different line. See [extra people and pair pricing](/resources/extra-people-and-pair-pricing-yoga-training-and-boxing).
 
-Programmes apply about 5, 10 and 20 percent to session charges, including the 90-minute uplift when that duration is on the quote. Travel in Ubud, Sanur or Uluwatu is still per visit. A 90-minute Ubud hour does not make travel free.
+Programmes apply about 5, 10 and 20 percent to session charges, including the 90-minute uplift when that duration is on the quote. Travel in Ubud, Sanur or Uluwatu stays included on every visit. A 90-minute Ubud hour is priced on duration alone.
 
 ## What we will not do with duration
 
@@ -43,7 +43,7 @@ The sequence sits on [how it works](/how-it-works). Email hello@personalfitness.
 1. Default to 60 minutes for the first visit.
 2. Write 90 only if the floor and the goal need it.
 3. Remember 45 percent of the base, not a round extra.
-4. Travel is still per visit.
+4.
 5. Extra people are still extra people.
 6. Do not mix two sessions into one duration.
 7. Open [pricing](/pricing) and estimate.

@@ -19,7 +19,7 @@ const HOME_SEO = seoOverride('/')
 
 const steps = [
   ['01', 'Check availability', 'Send the city, area, session and a two-hour window. We confirm whether that visit is available, as supply allows.'],
-  ['02', 'See the starting price', 'Published rates, a second guest, travel and session packs sit on the estimator. The written quote is the payable total.'],
+  ['02', 'See the starting price', 'Published rates, a second guest and session packs sit on the estimator. The written quote is the payable total.'],
   ['03', 'Continue in WhatsApp', `The draft carries the numbers. Email ${COMPANY_EMAIL} if you prefer. Nothing is booked until you accept the written quote.`],
 ]
 

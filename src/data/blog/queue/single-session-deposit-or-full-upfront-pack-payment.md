@@ -42,7 +42,7 @@ Compare the decision through the [single session and programme options](/program
 
 In Bali, travel is included across Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas are by request. There is no separate guest travel fee for an accepted visit inside those five named areas. The exact property, room and professional availability still need confirmation.
 
-In Jakarta, accepted South and Central Jakarta pockets use the published in-zone starting prices. North, West and East Jakarta remain by request, with travel and availability checked for the actual address. Use the [Bali location hub](/bali) or [Jakarta location hub](/jakarta) before comparing totals.
+In Jakarta, accepted South and Central Jakarta pockets use the published in-zone starting prices. North, West and East Jakarta remain by request, with instructor availability checked for the actual address. Use the [Bali location hub](/bali) or [Jakarta location hub](/jakarta) before comparing totals.
 
 A pack does not erase a location change. If you move from one villa to another or change apartment towers, send the new address before carrying the remaining sessions across. The coordinator needs to check access and professional timing even when the new Bali property remains inside an included-travel area.
 

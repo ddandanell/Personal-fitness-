@@ -83,7 +83,7 @@ The [pricing page](/pricing) publishes 60-minute starting prices and the calcula
 
 In Jakarta, those starting prices are Rp 1.300.000, Rp 1.125.000, Rp 1.250.000, Rp 1.125.000, Rp 1.300.000 and Rp 1.050.000 respectively. Private Strength Training, mat Pilates and mobility extra participants add Rp 250.000 in Bali or Rp 250.000 in Jakarta when the shared setup is accepted. Yoga and guided meditation include up to two people. Boxing remains one person.
 
-Ninety minutes add 45 percent of the relevant city base before travel. A 90-minute visit does not combine two services. The written quote shows the final service, people, duration, travel and payment total.
+Ninety minutes add 45 percent of the relevant city base. A 90-minute visit does not combine two services. The written quote shows the final service, people, duration, travel and payment total.
 
 Do not print an invented shared-class price. The partner page only displays a group yoga rate when that commercial value has been formally configured.
 
