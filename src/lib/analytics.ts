@@ -30,8 +30,10 @@ export function trackPageView(path: string) {
 export function installAnalytics() {
   if (typeof window === 'undefined' || document.getElementById('ga4-src')) return
   window.dataLayer = window.dataLayer || []
-  window.gtag = (...args: unknown[]) => {
-    window.dataLayer?.push(args as unknown as Record<string, unknown>)
+  if (typeof window.gtag !== 'function') {
+    window.gtag = (...args: unknown[]) => {
+      window.dataLayer?.push(args as unknown as Record<string, unknown>)
+    }
   }
   const boot = () => {
     if (!GA4_ID || document.getElementById('ga4-src')) return
