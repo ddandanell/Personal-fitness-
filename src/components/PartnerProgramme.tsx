@@ -127,7 +127,7 @@ const copy = {
     steps: [
       'Beritahu koordinator villa, area, dan hari yang ingin dicakup.',
       'Tamu meminta sesi lewat email atau WhatsApp. Pesanan membawa kode partner Anda.',
-      'Instruktur yang sudah diseleksi datang ke villa. Tamu membayar ke kami.',
+      'Instruktur privat profesional datang ke villa. Tamu membayar ke kami.',
       `Anda mendapat komisi ${partner.COMMISSION_PCT}% dari yang dibayar tamu, dibayar setiap bulan lewat transfer bank beserta laporan.`,
     ],
     guestsTitle: 'Yang bisa dipesan tamu',

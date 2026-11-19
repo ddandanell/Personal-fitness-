@@ -62,7 +62,7 @@ export default function IndonesianHome() {
             <p>Instruktur disebut di kutipan tertulis. Cadangan disebut jika tersedia. Sesi tergantung ketersediaan instruktur dan konfirmasi lokasi.</p>
           </div>
           <ul className="check-list large-list">
-            {['Instruktur yang sudah diseleksi, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`].map((item) => (
+            {['Instruktur privat profesional, namanya di kutipan', 'Cadangan disebut jika tersedia', 'Harga tertulis sebelum Anda bayar', `WhatsApp ${WHATSAPP_DISPLAY} dan ${COMPANY_EMAIL}`].map((item) => (
               <li key={item}><Check size={19} />{item}</li>
             ))}
           </ul>

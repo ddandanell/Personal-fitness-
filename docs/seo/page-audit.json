@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T09:41:00.617Z",
+  "generatedAt": "2026-11-19T09:43:33.622Z",
   "pages": [
     {
       "path": "/",
@@ -59,7 +59,7 @@
     },
     {
       "path": "/bali/mat-pilates",
-      "mainWords": 1612,
+      "mainWords": 1616,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/mat-pilates",
       "localMinimum": true,
@@ -171,7 +171,7 @@
     },
     {
       "path": "/id",
-      "mainWords": 839,
+      "mainWords": 838,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id",
       "localMinimum": false,
@@ -179,7 +179,7 @@
     },
     {
       "path": "/id/mitra-villa",
-      "mainWords": 739,
+      "mainWords": 738,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/id/mitra-villa",
       "localMinimum": false,
@@ -283,7 +283,7 @@
     },
     {
       "path": "/jakarta/mat-pilates",
-      "mainWords": 1691,
+      "mainWords": 1695,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/jakarta/mat-pilates",
       "localMinimum": true,
@@ -419,7 +419,7 @@
     },
     {
       "path": "/mat-pilates",
-      "mainWords": 1458,
+      "mainWords": 1462,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/mat-pilates",
       "localMinimum": false,
