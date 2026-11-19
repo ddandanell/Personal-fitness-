@@ -66,8 +66,31 @@ export function installAnalytics() {
     lock(proto, 'pushState', protoPush)
     lock(proto, 'replaceState', protoReplace)
   }
-  // Pin before gtag.js loads so enhanced measurement cannot wrap History and send a second page_view.
+  const blockEnhancedNavigation = () => {
+    const blocked = new Set(['navigate', 'currententrychange', 'navigatesuccess'])
+    const wrap = (target: EventTarget | undefined) => {
+      if (!target || typeof target.addEventListener !== 'function') return
+      const add = target.addEventListener.bind(target)
+      try {
+        Object.defineProperty(target, 'addEventListener', {
+          configurable: true,
+          writable: true,
+          value: (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions) => {
+            if (blocked.has(type)) return
+            return add(type, listener, options)
+          },
+        })
+      } catch {
+        // If the wrapper cannot be installed, trackPageView still records the route change.
+      }
+    }
+    wrap((window as Window & { navigation?: EventTarget }).navigation)
+    const NavigationCtor = (window as Window & { Navigation?: { prototype: EventTarget } }).Navigation
+    if (NavigationCtor?.prototype) wrap(NavigationCtor.prototype)
+  }
+  // Stop enhanced measurement listening for History and Navigation API changes so route views are sent once.
   pinHistory()
+  blockEnhancedNavigation()
   window.gtag('js', new Date())
   window.gtag('config', GA4_ID, { anonymize_ip: true, send_page_view: false })
   const script = document.createElement('script')
