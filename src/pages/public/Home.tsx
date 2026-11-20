@@ -186,11 +186,12 @@ export default function Home() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Villa managers</Eyebrow>
-            <h2>Manage villas? There is a separate partner page.</h2>
-            <p>The sessions on this site are for the person in the room. Villa managers and hospitality teams can read the partner terms on their own page.</p>
+            <h2>For villas: see the demo</h2>
+            <p>A preview of the guest wellness page we can set up for your villa. It's a demo, and we build the real version for partner villas once we start working together long term.</p>
           </div>
-          <div>
-            <Link to="/villa-hotel-partners" className="button button-outline">For villa managers<ArrowUpRight size={16} /></Link>
+          <div className="cluster">
+            <a href="https://villademo.personalfitness.id/" target="_blank" rel="noopener noreferrer" className="button button-primary">See the demo<ArrowUpRight size={16} /></a>
+            <Link to="/villa-hotel-partners" className="button button-outline">Villa partner page</Link>
           </div>
         </div>
       </section>

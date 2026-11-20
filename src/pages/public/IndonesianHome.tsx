@@ -129,11 +129,12 @@ export default function IndonesianHome() {
         <div className="shell split-feature">
           <div>
             <Eyebrow>Pengelola villa</Eyebrow>
-            <h2>Mengelola villa? Ada halaman partner terpisah.</h2>
-            <p>Sesi di situs ini untuk orang yang berlatih. Pengelola villa dapat membaca syarat partner di halaman mereka sendiri.</p>
+            <h2>Untuk villa: lihat demonya</h2>
+            <p>Ini pratinjau halaman wellness tamu yang bisa kami siapkan untuk villa Anda. Ini masih demo, dan kami membangun versi aslinya untuk villa mitra setelah kami mulai bekerja sama jangka panjang.</p>
           </div>
-          <div>
-            <Link to="/id/mitra-villa" className="button button-outline">Untuk pengelola villa<ArrowUpRight size={16} /></Link>
+          <div className="cluster">
+            <a href="https://villademo.personalfitness.id/" target="_blank" rel="noopener noreferrer" className="button button-primary">Lihat demo<ArrowUpRight size={16} /></a>
+            <Link to="/id/mitra-villa" className="button button-outline">Halaman mitra villa</Link>
           </div>
         </div>
       </section>
