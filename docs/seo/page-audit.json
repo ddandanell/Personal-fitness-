@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-19T09:43:33.622Z",
+  "generatedAt": "2026-11-20T00:05:03.257Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1669,
+      "mainWords": 1676,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 2011,
+      "mainWords": 2019,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -75,7 +75,7 @@
     },
     {
       "path": "/bali/private-yoga",
-      "mainWords": 1712,
+      "mainWords": 1723,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/private-yoga",
       "localMinimum": true,
@@ -491,7 +491,7 @@
     },
     {
       "path": "/private-yoga",
-      "mainWords": 1550,
+      "mainWords": 1560,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/private-yoga",
       "localMinimum": false,
@@ -523,7 +523,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 1135,
+      "mainWords": 1179,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -536,6 +536,14 @@
       "canonical": "https://www.personalfitness.id/resources/beginners-private-training",
       "localMinimum": false,
       "primaryImage": "/images/editorial/beginners-private-training.webp"
+    },
+    {
+      "path": "/resources/can-a-yoga-teacher-come-to-my-villa-bali",
+      "mainWords": 2575,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/can-a-yoga-teacher-come-to-my-villa-bali",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/can-a-yoga-teacher-come-to-my-villa-bali.webp"
     },
     {
       "path": "/resources/can-i-get-a-personal-trainer-to-my-villa-bali",
@@ -1004,5 +1012,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1348,
-  "uniquePrimaryImages": 86
+  "uniquePrimaryImages": 87
 }

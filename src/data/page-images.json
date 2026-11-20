@@ -726,5 +726,12 @@
     "width": 1440,
     "height": 960,
     "origin": "generated-editorial"
+  },
+  "/resources/can-a-yoga-teacher-come-to-my-villa-bali": {
+    "src": "/images/editorial/can-a-yoga-teacher-come-to-my-villa-bali.webp",
+    "alt": "Yoga teacher who came to a Bali villa guiding a couple through a sunrise stretch on the terrace beside the pool",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
   }
 }

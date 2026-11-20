@@ -542,6 +542,11 @@
       "primaryKeyword": "how to prepare for a bodywork and recovery session at your villa",
       "role": "queued-supporting-guide",
       "commercialOwner": "/bodywork-recovery"
+    },
+    "/resources/can-a-yoga-teacher-come-to-my-villa-bali": {
+      "primaryKeyword": "can a yoga teacher come to my villa in bali",
+      "role": "supporting-guide",
+      "commercialOwner": "/bali/private-yoga"
     }
   }
 }

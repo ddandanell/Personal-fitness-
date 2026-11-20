@@ -1438,6 +1438,19 @@
    "primary": "prepare for a bodywork session at your villa",
    "secondary": [],
    "target": "/bodywork-recovery"
+  },
+  "/resources/can-a-yoga-teacher-come-to-my-villa-bali": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "can a yoga teacher come to my villa in bali",
+   "secondary": [
+    "villa yoga instructor bali",
+    "in-villa yoga bali",
+    "yoga for two at a bali villa"
+   ],
+   "target": "/bali/private-yoga"
   }
  }
 }
