@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-20T06:29:33.803Z",
+  "generatedAt": "2026-11-21T01:10:02.085Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1684,
+      "mainWords": 1690,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 2019,
+      "mainWords": 2026,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -107,7 +107,7 @@
     },
     {
       "path": "/bali/uluwatu",
-      "mainWords": 1572,
+      "mainWords": 1581,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/uluwatu",
       "localMinimum": true,
@@ -523,7 +523,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 1179,
+      "mainWords": 1218,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -680,6 +680,14 @@
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
       "localMinimum": false,
       "primaryImage": "/images/editorial/personal-trainer-in-ubud-travel-access-and-outer-zone-rates.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+      "mainWords": 1509,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors.webp"
     },
     {
       "path": "/resources/personal-trainer-jakarta-prices-studio-home-and-managed-service-costs",
@@ -1012,5 +1020,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1348,
-  "uniquePrimaryImages": 87
+  "uniquePrimaryImages": 88
 }

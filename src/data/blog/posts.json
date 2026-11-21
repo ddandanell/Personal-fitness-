@@ -722,5 +722,33 @@
         "a": "Yes. A private session is one of the most comfortable ways to start yoga because the teacher can explain every pose and adjust the pace for you. Ask for a beginner or gentle Hatha class when you enquire. If you have an injury or are pregnant, check with your doctor first and mention it briefly when you book."
       }
     ]
+  },
+  {
+    "slug": "personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+    "briefId": "B023",
+    "title": "Personal trainer in Uluwatu: Bukit travel and indoor floors",
+    "description": "Uluwatu private strength training is Rp 1.300.000 with travel included. Bingin, Pecatu, indoor floors and what we will not sell on a cliff.",
+    "primaryQuery": "personal trainer in uluwatu: bukit travel and indoor floors",
+    "service": "Private Strength Training",
+    "city": "Bali",
+    "landingPage": "/personal-training",
+    "image": "/images/editorial/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors.webp",
+    "bodyFile": "personal-trainer-uluwatu.md",
+    "faqs": [
+      {
+        "q": "Is Uluwatu in-zone?",
+        "a": "Yes. Uluwatu, Pecatu and Bingin have travel included in the published Bali session price."
+      },
+      {
+        "q": "Can we train on the cliff?",
+        "a": "No. The hour needs a dry indoor floor. A cliff caption is not a venue."
+      },
+      {
+        "q": "Does travel apply once for the stay?",
+        "a": "Travel is included in every accepted Uluwatu visit. There is no separate guest travel fee for a single session or pack visit."
+      }
+    ],
+    "imageAlt": "Indonesian male trainer guiding an adult Australian woman through a controlled resistance band movement",
+    "date": "2026-11-21"
   }
 ]
