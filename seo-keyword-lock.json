@@ -547,6 +547,11 @@
       "primaryKeyword": "can a yoga teacher come to my villa in bali",
       "role": "supporting-guide",
       "commercialOwner": "/bali/private-yoga"
+    },
+    "/resources/personal-trainer-for-hotel-guests-bali": {
+      "primaryKeyword": "personal trainer for hotel guests bali",
+      "role": "supporting-guide",
+      "commercialOwner": "/bali/personal-training"
     }
   }
 }

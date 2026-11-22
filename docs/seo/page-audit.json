@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-21T01:10:02.085Z",
+  "generatedAt": "2026-11-22T00:02:51.648Z",
   "pages": [
     {
       "path": "/",
-      "mainWords": 1690,
+      "mainWords": 1698,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/",
       "localMinimum": false,
@@ -27,7 +27,7 @@
     },
     {
       "path": "/bali",
-      "mainWords": 2026,
+      "mainWords": 2028,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali",
       "localMinimum": true,
@@ -67,7 +67,7 @@
     },
     {
       "path": "/bali/personal-training",
-      "mainWords": 1803,
+      "mainWords": 1804,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/bali/personal-training",
       "localMinimum": true,
@@ -523,7 +523,7 @@
     },
     {
       "path": "/resources",
-      "mainWords": 1218,
+      "mainWords": 1263,
       "indexable": true,
       "canonical": "https://www.personalfitness.id/resources",
       "localMinimum": false,
@@ -640,6 +640,14 @@
       "canonical": "https://www.personalfitness.id/resources/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like",
       "localMinimum": false,
       "primaryImage": "/images/editorial/personal-trainer-bali-prices-how-to-compare-quotes-like-for-like.webp"
+    },
+    {
+      "path": "/resources/personal-trainer-for-hotel-guests-bali",
+      "mainWords": 2669,
+      "indexable": true,
+      "canonical": "https://www.personalfitness.id/resources/personal-trainer-for-hotel-guests-bali",
+      "localMinimum": false,
+      "primaryImage": "/images/editorial/personal-trainer-for-hotel-guests-bali.webp"
     },
     {
       "path": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
@@ -1020,5 +1028,5 @@
   ],
   "locationPages": 41,
   "minimumLocationWords": 1348,
-  "uniquePrimaryImages": 88
+  "uniquePrimaryImages": 89
 }

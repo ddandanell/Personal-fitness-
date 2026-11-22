@@ -750,5 +750,45 @@
     ],
     "imageAlt": "Indonesian male trainer guiding an adult Australian woman through a controlled resistance band movement",
     "date": "2026-11-21"
+  },
+  {
+    "slug": "personal-trainer-for-hotel-guests-bali",
+    "briefId": "B035",
+    "title": "Personal Trainer for Hotel Guests in Bali: How It Works",
+    "description": "Staying at a Bali hotel? A personal trainer for hotel guests can train you in the garden, gym or suite with permission. Get a written quote on WhatsApp.",
+    "date": "2026-11-22",
+    "primaryQuery": "personal trainer for hotel guests bali",
+    "service": "Private Strength Training",
+    "city": "Bali",
+    "landingPage": "/bali/personal-training",
+    "image": "/images/editorial/personal-trainer-for-hotel-guests-bali.webp",
+    "imageAlt": "Personal trainer for hotel guests in Bali coaching a woman through a band exercise on a quiet resort garden lawn in the morning",
+    "bodyFile": "personal-trainer-for-hotel-guests-bali.md",
+    "faqs": [
+      {
+        "q": "Can a personal trainer come to my hotel room in Bali?",
+        "a": "Yes, if the hotel agrees in writing and the room has enough clear, dry floor. Most standard rooms are tight, so a terrace, garden corner, gym or bookable room often works better. You need roughly a mat plus two steps each way. Tell us the space you have in mind and we will plan the session around it."
+      },
+      {
+        "q": "Do I need the hotel's permission?",
+        "a": "Yes. We come to a hotel only with written venue permission and a usable private space. Ask the front desk or guest relations which area you may use and where the coach should check in. If the hotel charges a fee for outside professionals or a room, it is added to your written quote before you pay."
+      },
+      {
+        "q": "Can the trainer use the hotel gym with me?",
+        "a": "Often, yes, if the hotel allows an outside coach in its gym. Tell us what equipment the gym has, such as dumbbells, a bench or cable machines, and the session will be built around it. If the gym is not available, a good session still works with bodyweight, bands and portable kit on a clear floor."
+      },
+      {
+        "q": "How much does a personal trainer for hotel guests in Bali cost?",
+        "a": "Private strength training starts at Rp 1.300.000 for 60 minutes for one guest, with Rp 250.000 added for a second guest. Private yoga starts at Rp 1.050.000 for up to two people. Packs of 3, 5 or 10 strength sessions lower the price per session. Your written quote shows the final total, including any hotel fee."
+      },
+      {
+        "q": "Which hotel areas do you cover in Bali?",
+        "a": "Travel is included in the published price for hotels in Canggu, Seminyak, Sanur, Ubud and Uluwatu. Other Bali areas, such as Nusa Dua or Jimbaran, are available by request after we confirm that a professional can cover the address. Send the hotel name and we will check before you pay anything."
+      },
+      {
+        "q": "How do I book and pay?",
+        "a": "Send your hotel, area, dates, time window and number of people on WhatsApp or by email. You receive a written quote that names the professional. A 50% deposit confirms a single session, and packs are paid in full upfront. We never ask for card or bank details in WhatsApp; payment instructions are on the quote."
+      }
+    ]
   }
 ]

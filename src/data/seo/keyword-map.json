@@ -1361,7 +1361,7 @@
   "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors": {
    "type": "support",
    "money": false,
-   "status": "queued",
+   "status": "live",
    "priority": "P3",
    "primary": "uluwatu bukit trainer",
    "secondary": [],
@@ -1451,6 +1451,19 @@
     "yoga for two at a bali villa"
    ],
    "target": "/bali/private-yoga"
+  },
+  "/resources/personal-trainer-for-hotel-guests-bali": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "personal trainer for hotel guests bali",
+   "secondary": [
+    "personal trainer at my hotel bali",
+    "hotel room workout bali",
+    "resort gym personal trainer bali"
+   ],
+   "target": "/bali/personal-training"
   }
  }
 }
