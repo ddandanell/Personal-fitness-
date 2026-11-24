@@ -222,7 +222,7 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           publisher: {
             '@type': 'Organization',
             name: 'PersonalFitness.id',
-            logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/brand/personalfitness-mark.png' },
+            logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/brand/personalfitness-logo.png' },
           },
           isPartOf: { '@id': SITE_ORIGIN + '/#website' },
           about: { '@id': SITE_ORIGIN + '/#business' },

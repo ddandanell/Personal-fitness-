@@ -126,7 +126,7 @@ try {
   assert.ok(sitemapPages.includes('/team'))
   assert.ok(sitemapPages.includes('/id/mitra-villa'))
   assert.ok(!sitemapPages.includes('/partners/menu'))
-  for (const file of ['public/brand/personalfitness-mark.png', 'public/favicon.ico', 'public/icons/favicon-64.png', 'public/images/wellness/villa-yoga-partners.webp']) await fs.access(file)
+  for (const file of ['public/brand/personalfitness-mark.png', 'public/brand/personalfitness-logo.png', 'public/favicon.ico', 'public/icons/favicon-64.png', 'public/images/wellness/villa-yoga-partners.webp']) await fs.access(file)
   const base = { service: 'personal-training', city: 'Bali', durationMin: 60, participants: 1 }
   assert.equal(estimateQuote(base).total, 1300000)
   assert.equal(estimateQuote({ ...base, city: 'Jakarta' }).total, 1300000)

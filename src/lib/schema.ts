@@ -6,7 +6,7 @@ import { MINIMUM_SESSION_RATE, type Service } from '@/data/catalog'
 
 const BUSINESS_ID = SITE_ORIGIN + '/#business'
 const WEBSITE_ID = SITE_ORIGIN + '/#website'
-const LOGO = SITE_ORIGIN + '/brand/personalfitness-mark.png'
+const LOGO = SITE_ORIGIN + '/brand/personalfitness-logo.png'
 const HERO = SITE_ORIGIN + '/images/editorial/home.webp'
 
 function cityOffer(service: Service, city: 'Bali' | 'Jakarta', offerPath?: string) {
