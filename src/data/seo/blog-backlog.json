@@ -1,6 +1,6 @@
 {
  "about": "Next daily blog keywords, each locked to the money page it must lift. Take the first row whose status is \"next\", write it per docs/SEO_SYSTEM.md section 4, then set status to \"published\" and add the post to keyword-map.json as a support page with this target. Re-rank after each GSC report (scripts/seo/gsc-report.mjs). Language mix about 4 English to 1 Bahasa.",
- "updated": "2026-11-19",
+ "updated": "2026-11-25",
  "items": [
   {
    "rank": 1,
@@ -200,6 +200,26 @@
    "target": "/bali/boxing-fitness",
    "angle": "Boxing gym vs pad work at your villa; one guest only. Never title it \"boxing trainer Bali\".",
    "why": "P2; GSC 15 impressions (boxing bali, boxing seminyak, boxing class bali)",
+   "status": "next"
+  },
+  {
+   "rank": 21,
+   "id": "GSC-1125-01",
+   "keyword": "personal trainer home visit jakarta",
+   "language": "en",
+   "target": "/jakarta/personal-training",
+   "angle": "What a home visit includes in Jakarta: lobby/building access, space, timing and the written quote; link personal trainer in Jakarta.",
+   "why": "GSC 2026-11-25 striking distance: \"personal trainer home visit(s)\" pos 4-5 and \"home personal trainer near me\" pos 5 on /jakarta/personal-training",
+   "status": "next"
+  },
+  {
+   "rank": 22,
+   "id": "GSC-1125-02",
+   "keyword": "personal stretching coach at home",
+   "language": "en",
+   "target": "/mobility-coaching",
+   "angle": "Non-clinical: what a private stretching/mobility hour at home looks like and who it suits; link assisted stretching at home.",
+   "why": "GSC 2026-11-25 striking distance: \"personal stretching coach near me\" pos 9 on /mobility-coaching",
    "status": "next"
   }
  ]

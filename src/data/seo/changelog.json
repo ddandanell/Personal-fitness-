@@ -1194,6 +1194,52 @@
     "position": 33
    },
    "evaluateOn": "2026-12-17"
+  },
+  {
+   "date": "2026-11-25",
+   "page": "/jakarta/private-yoga",
+   "primary": "private yoga jakarta",
+   "reason": "GSC weekly loop 2026-11-25: A2 watchlist (17 impressions, 0 clicks, avg position 7.0). Google shows the page for \"private yoga class\" (6 impr, pos 6.8), \"private yoga classes at home\" (3 impr, pos 3.3) and \"yoga private class\"; title/meta now name private yoga classes at home. Locked H1 unchanged.",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Yoga Jakarta at Home | PersonalFitness.id",
+    "new": "Private Yoga Jakarta: Classes at Home | PersonalFitness.id"
+   },
+   "description": {
+    "old": "Private yoga at your Jakarta home or apartment for one or two people from Rp 1.125.000 for 60 min. South and Central Jakarta in-zone. WhatsApp us.",
+    "new": "Private yoga classes at your Jakarta home or apartment for one or two people, from Rp 1.125.000 for 60 min. South and Central Jakarta in-zone. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-27..2026-11-25",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 17,
+    "clicks": 0,
+    "position": 7.0
+   },
+   "evaluateOn": "2026-12-23"
+  },
+  {
+   "date": "2026-11-25",
+   "page": "/zumba-dance-fitness",
+   "primary": "zumba and dance fitness at your villa",
+   "reason": "GSC weekly loop 2026-11-25: A2 watchlist (10 impressions, 0 clicks, avg position 8.9). Queries are all \"zumba classes\" variants (zumba classes near me, gym near me zumba, ladies zumba classes); title/meta now say private Zumba classes. Locked H1 unchanged.",
+   "kind": "gsc-ctr",
+   "title": {
+    "old": "Private Zumba & Dance Fitness at Your Villa",
+    "new": "Private Zumba Classes & Dance Fitness at Your Villa"
+   },
+   "description": {
+    "old": "Zumba and dance fitness at your villa or home: a fun cardio hour with simple steps for one or two guests. From Rp 1.300.000 for 60 min. WhatsApp us.",
+    "new": "Private Zumba classes and dance fitness at your villa or home: a fun cardio hour with simple steps for one or two guests. From Rp 1.300.000. WhatsApp us."
+   },
+   "baseline": {
+    "window": "2026-08-27..2026-11-25",
+    "source": "GSC query_search_analytics, page dimension",
+    "impressions": 10,
+    "clicks": 0,
+    "position": 8.9
+   },
+   "evaluateOn": "2026-12-23"
   }
  ]
 }

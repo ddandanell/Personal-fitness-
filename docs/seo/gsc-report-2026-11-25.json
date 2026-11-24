@@ -1,0 +1,1751 @@
+{
+ "date": "2026-11-25",
+ "minImpressions": 50,
+ "pages": [
+  {
+   "page": "/resources",
+   "impressions": 81,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 42.55555555555556,
+   "type": "utility",
+   "primary": "bali jakarta fitness guides"
+  },
+  {
+   "page": "/",
+   "impressions": 70,
+   "clicks": 3,
+   "ctr": 0.04285714285714286,
+   "position": 19.085714285714285,
+   "type": "home",
+   "primary": "personal trainer at your villa or home Bali Jakarta"
+  },
+  {
+   "page": "/pricing",
+   "impressions": 57,
+   "clicks": 1,
+   "ctr": 0.017543859649122806,
+   "position": 21.43859649122807,
+   "type": "pricing",
+   "primary": "personal trainer bali price"
+  },
+  {
+   "page": "/personal-training",
+   "impressions": 57,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 51.92982456140351,
+   "type": "service",
+   "primary": "private strength training at home"
+  },
+  {
+   "page": "/bali/personal-training",
+   "impressions": 39,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 17.384615384615383,
+   "type": "service-area",
+   "primary": "personal trainer bali"
+  },
+  {
+   "page": "/bali/boxing-fitness",
+   "impressions": 27,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 15.962962962962964,
+   "type": "service-area",
+   "primary": "private boxing bali"
+  },
+  {
+   "page": "/jakarta/personal-training",
+   "impressions": 21,
+   "clicks": 2,
+   "ctr": 0.09523809523809523,
+   "position": 11.761904761904763,
+   "type": "service-area",
+   "primary": "personal trainer jakarta"
+  },
+  {
+   "page": "/jakarta/boxing-fitness",
+   "impressions": 18,
+   "clicks": 1,
+   "ctr": 0.05555555555555555,
+   "position": 11.222222222222221,
+   "type": "service-area",
+   "primary": "private boxing jakarta"
+  },
+  {
+   "page": "/jakarta/private-yoga",
+   "impressions": 17,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7,
+   "type": "service-area",
+   "primary": "private yoga jakarta"
+  },
+  {
+   "page": "/mat-pilates",
+   "impressions": 15,
+   "clicks": 1,
+   "ctr": 0.06666666666666667,
+   "position": 4.4,
+   "type": "service",
+   "primary": "private mat pilates at home"
+  },
+  {
+   "page": "/private-yoga",
+   "impressions": 14,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 15.928571428571429,
+   "type": "service",
+   "primary": "private yoga at home"
+  },
+  {
+   "page": "/bali/uluwatu",
+   "impressions": 11,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 24.09090909090909,
+   "type": "area",
+   "primary": "personal trainer uluwatu"
+  },
+  {
+   "page": "/jakarta/south-jakarta",
+   "impressions": 11,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 21.272727272727273,
+   "type": "area",
+   "primary": "personal trainer jakarta selatan"
+  },
+  {
+   "page": "/bali",
+   "impressions": 10,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 57.6,
+   "type": "area",
+   "primary": "fitness trainer bali"
+  },
+  {
+   "page": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+   "impressions": 10,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 48.6,
+   "type": "support",
+   "primary": "in-villa training session bali"
+  },
+  {
+   "page": "/zumba-dance-fitness",
+   "impressions": 10,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 8.9,
+   "type": "service",
+   "primary": "zumba and dance fitness at your villa"
+  },
+  {
+   "page": "/jakarta/kebayoran",
+   "impressions": 9,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 45.333333333333336,
+   "type": "area",
+   "primary": "personal trainer kebayoran"
+  },
+  {
+   "page": "/about",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 42,
+   "type": "utility",
+   "primary": "about personalfitness.id"
+  },
+  {
+   "page": "/id",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7.142857142857143,
+   "type": "home",
+   "primary": "personal trainer datang ke rumah"
+  },
+  {
+   "page": "/jakarta/east-jakarta",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 22,
+   "type": "area",
+   "primary": "personal trainer jakarta timur"
+  },
+  {
+   "page": "/jakarta/kemang",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 47.42857142857143,
+   "type": "area",
+   "primary": "personal trainer kemang"
+  },
+  {
+   "page": "/jakarta/mat-pilates",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 27.714285714285715,
+   "type": "service-area",
+   "primary": "private pilates jakarta"
+  },
+  {
+   "page": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 38.42857142857143,
+   "type": "support",
+   "primary": "first home training session jakarta"
+  },
+  {
+   "page": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 25.285714285714285,
+   "type": "support",
+   "primary": "canggu villa training access"
+  },
+  {
+   "page": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+   "impressions": 6,
+   "clicks": 1,
+   "ctr": 0.16666666666666666,
+   "position": 7.333333333333333,
+   "type": "support",
+   "primary": "yoga in a jakarta apartment"
+  },
+  {
+   "page": "/jakarta/menteng",
+   "impressions": 6,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7.666666666666667,
+   "type": "area",
+   "primary": "personal trainer menteng"
+  },
+  {
+   "page": "/mobility-coaching",
+   "impressions": 6,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 8.166666666666668,
+   "type": "service",
+   "primary": "assisted stretching at home"
+  },
+  {
+   "page": "/jakarta/sunter",
+   "impressions": 5,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 31.2,
+   "type": "area",
+   "primary": "personal trainer sunter"
+  },
+  {
+   "page": "/jakarta/central-jakarta",
+   "impressions": 4,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10,
+   "type": "area",
+   "primary": "personal trainer jakarta pusat"
+  },
+  {
+   "page": "/resources/personal-trainer-in-ubud-travel-access-and-outer-zone-rates",
+   "impressions": 4,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7.25,
+   "type": "support",
+   "primary": "ubud villa session access"
+  },
+  {
+   "page": "/resources/what-your-quote-contains",
+   "impressions": 4,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 18.25,
+   "type": "support",
+   "primary": "personal training quote"
+  },
+  {
+   "page": "/villa-hotel-partners",
+   "impressions": 4,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 4.25,
+   "type": "partners",
+   "primary": "villa wellness partner programme bali"
+  },
+  {
+   "page": "/contact",
+   "impressions": 3,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 60.333333333333336,
+   "type": "conversion",
+   "primary": "contact personalfitness.id whatsapp"
+  },
+  {
+   "page": "/guided-meditation",
+   "impressions": 3,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 5.333333333333333,
+   "type": "service",
+   "primary": "private meditation sessions at home"
+  },
+  {
+   "page": "/resources/can-i-get-a-personal-trainer-to-my-villa-bali",
+   "impressions": 3,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 3.3333333333333335,
+   "type": "support",
+   "primary": "can I get a personal trainer to my villa in Bali"
+  },
+  {
+   "page": "/resources/private-boxing-fitness-at-home-what-pad-only-means",
+   "impressions": 3,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 9,
+   "type": "support",
+   "primary": "what pad-only boxing means"
+  },
+  {
+   "page": "/resources/train-in-a-bali-villa",
+   "impressions": 3,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 1.3333333333333333,
+   "type": "support",
+   "primary": "how to set up a villa for a workout"
+  },
+  {
+   "page": "/bali/private-yoga",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 57,
+   "type": "service-area",
+   "primary": "private yoga bali"
+  },
+  {
+   "page": "/boxing-fitness",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10,
+   "type": "service",
+   "primary": "private boxing lessons at home"
+  },
+  {
+   "page": "/jakarta/pondok-indah",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10.5,
+   "type": "area",
+   "primary": "personal trainer pondok indah"
+  },
+  {
+   "page": "/resources/mat-pilates-prices-why-mat-reformer-studio-and-home-sessions-differ",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 8,
+   "type": "support",
+   "primary": "mat vs reformer pilates price"
+  },
+  {
+   "page": "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 50,
+   "type": "support",
+   "primary": "south jakarta lobby access home trainer"
+  },
+  {
+   "page": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10,
+   "type": "support",
+   "primary": "what changes the price of private yoga"
+  },
+  {
+   "page": "/resources/two-three-or-four-weeks-choosing-a-fitness-programme-for-your-stay",
+   "impressions": 2,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 46.5,
+   "type": "support",
+   "primary": "how many sessions 2 3 4 week stay"
+  },
+  {
+   "page": "/id/mitra-villa",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 3,
+   "type": "partners",
+   "primary": "program mitra villa bali"
+  },
+  {
+   "page": "/jakarta/gondangdia",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 9,
+   "type": "area",
+   "primary": "personal trainer gondangdia"
+  },
+  {
+   "page": "/jakarta/kelapa-gading",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 73,
+   "type": "area",
+   "primary": "personal trainer kelapa gading"
+  },
+  {
+   "page": "/jakarta/puri-indah",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7,
+   "type": "area",
+   "primary": "personal trainer puri indah"
+  },
+  {
+   "page": "/jakarta/west-jakarta",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 11,
+   "type": "area",
+   "primary": "personal trainer jakarta barat"
+  },
+  {
+   "page": "/resources/can-a-yoga-teacher-come-to-my-villa-bali",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10,
+   "type": "support",
+   "primary": "can a yoga teacher come to my villa in bali"
+  },
+  {
+   "page": "/resources/extra-people-and-pair-pricing-yoga-training-and-boxing",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 4,
+   "type": "support",
+   "primary": "extra-person pair pricing"
+  },
+  {
+   "page": "/resources/personal-trainer-in-seminyak-petitenget-villas-and-in-zone-rates",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 9,
+   "type": "support",
+   "primary": "petitenget seminyak villa sessions"
+  },
+  {
+   "page": "/resources/personal-trainer-in-uluwatu-bukit-travel-and-indoor-floors",
+   "impressions": 1,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 10,
+   "type": "support",
+   "primary": "uluwatu bukit trainer"
+  }
+ ],
+ "rewrite": [],
+ "watch": [
+  {
+   "page": "/personal-training",
+   "impressions": 57,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 51.92982456140351,
+   "type": "service",
+   "primary": "private strength training at home"
+  },
+  {
+   "page": "/bali/personal-training",
+   "impressions": 39,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 17.384615384615383,
+   "type": "service-area",
+   "primary": "personal trainer bali"
+  },
+  {
+   "page": "/bali/boxing-fitness",
+   "impressions": 27,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 15.962962962962964,
+   "type": "service-area",
+   "primary": "private boxing bali"
+  },
+  {
+   "page": "/jakarta/private-yoga",
+   "impressions": 17,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7,
+   "type": "service-area",
+   "primary": "private yoga jakarta"
+  },
+  {
+   "page": "/private-yoga",
+   "impressions": 14,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 15.928571428571429,
+   "type": "service",
+   "primary": "private yoga at home"
+  },
+  {
+   "page": "/bali/uluwatu",
+   "impressions": 11,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 24.09090909090909,
+   "type": "area",
+   "primary": "personal trainer uluwatu"
+  },
+  {
+   "page": "/jakarta/south-jakarta",
+   "impressions": 11,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 21.272727272727273,
+   "type": "area",
+   "primary": "personal trainer jakarta selatan"
+  },
+  {
+   "page": "/bali",
+   "impressions": 10,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 57.6,
+   "type": "area",
+   "primary": "fitness trainer bali"
+  },
+  {
+   "page": "/zumba-dance-fitness",
+   "impressions": 10,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 8.9,
+   "type": "service",
+   "primary": "zumba and dance fitness at your villa"
+  },
+  {
+   "page": "/jakarta/kebayoran",
+   "impressions": 9,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 45.333333333333336,
+   "type": "area",
+   "primary": "personal trainer kebayoran"
+  },
+  {
+   "page": "/id",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7.142857142857143,
+   "type": "home",
+   "primary": "personal trainer datang ke rumah"
+  },
+  {
+   "page": "/jakarta/east-jakarta",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 22,
+   "type": "area",
+   "primary": "personal trainer jakarta timur"
+  },
+  {
+   "page": "/jakarta/kemang",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 47.42857142857143,
+   "type": "area",
+   "primary": "personal trainer kemang"
+  },
+  {
+   "page": "/jakarta/mat-pilates",
+   "impressions": 7,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 27.714285714285715,
+   "type": "service-area",
+   "primary": "private pilates jakarta"
+  },
+  {
+   "page": "/jakarta/menteng",
+   "impressions": 6,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 7.666666666666667,
+   "type": "area",
+   "primary": "personal trainer menteng"
+  },
+  {
+   "page": "/mobility-coaching",
+   "impressions": 6,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 8.166666666666668,
+   "type": "service",
+   "primary": "assisted stretching at home"
+  },
+  {
+   "page": "/jakarta/sunter",
+   "impressions": 5,
+   "clicks": 0,
+   "ctr": 0,
+   "position": 31.2,
+   "type": "area",
+   "primary": "personal trainer sunter"
+  }
+ ],
+ "striking": [
+  {
+   "query": "private yoga class",
+   "page": "/jakarta/private-yoga",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 6,
+   "position": 6.833333333333333
+  },
+  {
+   "query": "personal trainer jakarta",
+   "page": "/",
+   "moneyPage": "/",
+   "impressions": 3,
+   "position": 9.666666666666666
+  },
+  {
+   "query": "personal trainer pererenan",
+   "page": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+   "moneyPage": "/bali/canggu",
+   "impressions": 2,
+   "position": 12.5
+  },
+  {
+   "query": "private boxing",
+   "page": "/bali/boxing-fitness",
+   "moneyPage": "/bali/boxing-fitness",
+   "impressions": 2,
+   "position": 6.5
+  },
+  {
+   "query": "private trainer near me",
+   "page": "/jakarta/central-jakarta",
+   "moneyPage": "/jakarta/central-jakarta",
+   "impressions": 2,
+   "position": 10
+  },
+  {
+   "query": "private yoga class",
+   "page": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 2,
+   "position": 10
+  },
+  {
+   "query": "zumba classes near me",
+   "page": "/zumba-dance-fitness",
+   "moneyPage": "/zumba-dance-fitness",
+   "impressions": 2,
+   "position": 8.5
+  },
+  {
+   "query": "zumba classes near me free",
+   "page": "/zumba-dance-fitness",
+   "moneyPage": "/zumba-dance-fitness",
+   "impressions": 2,
+   "position": 8
+  },
+  {
+   "query": "bali private yoga",
+   "page": "/resources/private-yoga-prices-in-bali-duration-travel-and-group-size",
+   "moneyPage": "/bali/private-yoga",
+   "impressions": 1,
+   "position": 13
+  },
+  {
+   "query": "boxing class bali",
+   "page": "/bali/boxing-fitness",
+   "moneyPage": "/bali/boxing-fitness",
+   "impressions": 1,
+   "position": 8
+  },
+  {
+   "query": "boxing classes near me",
+   "page": "/jakarta/boxing-fitness",
+   "moneyPage": "/jakarta/boxing-fitness",
+   "impressions": 1,
+   "position": 9
+  },
+  {
+   "query": "cheap personal trainer",
+   "page": "/",
+   "moneyPage": "/",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "gym near me zumba",
+   "page": "/zumba-dance-fitness",
+   "moneyPage": "/zumba-dance-fitness",
+   "impressions": 1,
+   "position": 7
+  },
+  {
+   "query": "gym trainer home service",
+   "page": "/",
+   "moneyPage": "/",
+   "impressions": 1,
+   "position": 11
+  },
+  {
+   "query": "home personal trainer near me",
+   "page": "/jakarta/personal-training",
+   "moneyPage": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 5
+  },
+  {
+   "query": "jakarta selatan",
+   "page": "/jakarta/private-yoga",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 1,
+   "position": 7
+  },
+  {
+   "query": "jasa personal trainer",
+   "page": "/jakarta/east-jakarta",
+   "moneyPage": "/jakarta/east-jakarta",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "jasa personal trainer gym",
+   "page": "/id",
+   "moneyPage": "/id",
+   "impressions": 1,
+   "position": 9
+  },
+  {
+   "query": "jasa personal trainer gym",
+   "page": "/jakarta/east-jakarta",
+   "moneyPage": "/jakarta/east-jakarta",
+   "impressions": 1,
+   "position": 5
+  },
+  {
+   "query": "ladies zumba classes near me",
+   "page": "/zumba-dance-fitness",
+   "moneyPage": "/zumba-dance-fitness",
+   "impressions": 1,
+   "position": 9
+  },
+  {
+   "query": "personal stretching coach near me",
+   "page": "/mobility-coaching",
+   "moneyPage": "/mobility-coaching",
+   "impressions": 1,
+   "position": 9
+  },
+  {
+   "query": "personal trainer home gym",
+   "page": "/bali/personal-training",
+   "moneyPage": "/bali/personal-training",
+   "impressions": 1,
+   "position": 5
+  },
+  {
+   "query": "personal trainer home visit",
+   "page": "/jakarta/personal-training",
+   "moneyPage": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 5
+  },
+  {
+   "query": "personal trainer home visits",
+   "page": "/personal-training",
+   "moneyPage": "/personal-training",
+   "impressions": 1,
+   "position": 18
+  },
+  {
+   "query": "personal trainer jakarta",
+   "page": "/jakarta/central-jakarta",
+   "moneyPage": "/jakarta/central-jakarta",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "personal trainer pererenan",
+   "page": "/bali/uluwatu",
+   "moneyPage": "/bali/uluwatu",
+   "impressions": 1,
+   "position": 20
+  },
+  {
+   "query": "personal trainer price",
+   "page": "/pricing",
+   "moneyPage": "/pricing",
+   "impressions": 1,
+   "position": 8
+  },
+  {
+   "query": "pilates mat classes near me",
+   "page": "/jakarta/mat-pilates",
+   "moneyPage": "/jakarta/mat-pilates",
+   "impressions": 1,
+   "position": 11
+  },
+  {
+   "query": "privat boxing",
+   "page": "/jakarta/boxing-fitness",
+   "moneyPage": "/jakarta/boxing-fitness",
+   "impressions": 1,
+   "position": 7
+  },
+  {
+   "query": "private fitness coaching",
+   "page": "/jakarta/personal-training",
+   "moneyPage": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 8
+  },
+  {
+   "query": "private gym",
+   "page": "/",
+   "moneyPage": "/",
+   "impressions": 1,
+   "position": 6
+  },
+  {
+   "query": "private trainer fitness bali",
+   "page": "/bali",
+   "moneyPage": "/bali",
+   "impressions": 1,
+   "position": 18
+  },
+  {
+   "query": "private trainer near me",
+   "page": "/jakarta/kemang",
+   "moneyPage": "/jakarta/kemang",
+   "impressions": 1,
+   "position": 17
+  },
+  {
+   "query": "private training",
+   "page": "/jakarta/personal-training",
+   "moneyPage": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 13
+  },
+  {
+   "query": "private yoga instructor near me",
+   "page": "/jakarta/private-yoga",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 1,
+   "position": 6
+  },
+  {
+   "query": "private yoga jakarta",
+   "page": "/jakarta/private-yoga",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 1,
+   "position": 7
+  },
+  {
+   "query": "private yoga session",
+   "page": "/private-yoga",
+   "moneyPage": "/private-yoga",
+   "impressions": 1,
+   "position": 20
+  },
+  {
+   "query": "yoga private class",
+   "page": "/jakarta/private-yoga",
+   "moneyPage": "/jakarta/private-yoga",
+   "impressions": 1,
+   "position": 8
+  },
+  {
+   "query": "zumba classes near me only for ladies",
+   "page": "/zumba-dance-fitness",
+   "moneyPage": "/zumba-dance-fitness",
+   "impressions": 1,
+   "position": 9
+  }
+ ],
+ "cannibal": [
+  {
+   "query": "personal trainer jakarta",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 3,
+     "position": 9.666666666666666
+    },
+    {
+     "page": "/jakarta/central-jakarta",
+     "impressions": 1,
+     "position": 10
+    }
+   ]
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 31
+    },
+    {
+     "page": "/contact",
+     "impressions": 1,
+     "position": 56
+    },
+    {
+     "page": "/jakarta/south-jakarta",
+     "impressions": 1,
+     "position": 66
+    },
+    {
+     "page": "/jakarta/kemang",
+     "impressions": 2,
+     "position": 71
+    },
+    {
+     "page": "/jakarta/kebayoran",
+     "impressions": 3,
+     "position": 85.66666666666667
+    },
+    {
+     "page": "/resources/home-personal-training-in-jakarta-how-to-set-up-your-first-session",
+     "impressions": 2,
+     "position": 86.5
+    },
+    {
+     "page": "/contact",
+     "impressions": 1,
+     "position": 91
+    },
+    {
+     "page": "/jakarta/east-jakarta",
+     "impressions": 1,
+     "position": 92
+    },
+    {
+     "page": "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+     "impressions": 1,
+     "position": 93
+    }
+   ]
+  },
+  {
+   "query": "fitness classes near me",
+   "pages": [
+    {
+     "page": "/about",
+     "impressions": 4,
+     "position": 53
+    },
+    {
+     "page": "/resources",
+     "impressions": 2,
+     "position": 96.5
+    }
+   ]
+  },
+  {
+   "query": "fitness trainer near me",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 44
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 2,
+     "position": 45.5
+    },
+    {
+     "page": "/bali/personal-training",
+     "impressions": 1,
+     "position": 68
+    },
+    {
+     "page": "/about",
+     "impressions": 1,
+     "position": 70
+    }
+   ]
+  },
+  {
+   "query": "jasa personal trainer",
+   "pages": [
+    {
+     "page": "/jakarta/east-jakarta",
+     "impressions": 1,
+     "position": 10
+    },
+    {
+     "page": "/resources",
+     "impressions": 8,
+     "position": 45.375
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 10,
+     "position": 61.7
+    }
+   ]
+  },
+  {
+   "query": "jasa personal trainer fitness",
+   "pages": [
+    {
+     "page": "/resources",
+     "impressions": 3,
+     "position": 38.333333333333336
+    },
+    {
+     "page": "/jakarta/personal-training",
+     "impressions": 2,
+     "position": 66
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 12,
+     "position": 66.08333333333333
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 86
+    }
+   ]
+  },
+  {
+   "query": "jasa personal trainer gym",
+   "pages": [
+    {
+     "page": "/jakarta/east-jakarta",
+     "impressions": 1,
+     "position": 5
+    },
+    {
+     "page": "/id",
+     "impressions": 1,
+     "position": 9
+    }
+   ]
+  },
+  {
+   "query": "personal fitness trainer",
+   "pages": [
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 48
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 73
+    }
+   ]
+  },
+  {
+   "query": "personal fitness trainer near me",
+   "pages": [
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 48
+    },
+    {
+     "page": "/bali",
+     "impressions": 2,
+     "position": 72.5
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 77
+    },
+    {
+     "page": "/resources",
+     "impressions": 5,
+     "position": 82.2
+    }
+   ]
+  },
+  {
+   "query": "personal trainer",
+   "pages": [
+    {
+     "page": "/resources",
+     "impressions": 2,
+     "position": 36.5
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 37
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 53
+    }
+   ]
+  },
+  {
+   "query": "personal trainer bali",
+   "pages": [
+    {
+     "page": "/bali/uluwatu",
+     "impressions": 1,
+     "position": 41
+    },
+    {
+     "page": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+     "impressions": 5,
+     "position": 59.2
+    },
+    {
+     "page": "/",
+     "impressions": 4,
+     "position": 62.5
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 3,
+     "position": 67.66666666666667
+    },
+    {
+     "page": "/bali/personal-training",
+     "impressions": 2,
+     "position": 75
+    },
+    {
+     "page": "/pricing",
+     "impressions": 4,
+     "position": 90.25
+    },
+    {
+     "page": "/bali",
+     "impressions": 2,
+     "position": 91.5
+    },
+    {
+     "page": "/resources",
+     "impressions": 1,
+     "position": 97
+    }
+   ]
+  },
+  {
+   "query": "personal trainer denpasar",
+   "pages": [
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 42
+    },
+    {
+     "page": "/bali/personal-training",
+     "impressions": 1,
+     "position": 51
+    },
+    {
+     "page": "/resources",
+     "impressions": 2,
+     "position": 56.5
+    },
+    {
+     "page": "/bali/uluwatu",
+     "impressions": 2,
+     "position": 62.5
+    },
+    {
+     "page": "/bali",
+     "impressions": 1,
+     "position": 65
+    }
+   ]
+  },
+  {
+   "query": "personal trainer gym bali",
+   "pages": [
+    {
+     "page": "/bali/personal-training",
+     "impressions": 1,
+     "position": 28
+    },
+    {
+     "page": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+     "impressions": 1,
+     "position": 29
+    }
+   ]
+  },
+  {
+   "query": "personal trainer home visits",
+   "pages": [
+    {
+     "page": "/jakarta/personal-training",
+     "impressions": 1,
+     "position": 4
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 18
+    }
+   ]
+  },
+  {
+   "query": "personal trainer near me",
+   "pages": [
+    {
+     "page": "/jakarta/sunter",
+     "impressions": 3,
+     "position": 46.333333333333336
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 63
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 78
+    }
+   ]
+  },
+  {
+   "query": "personal trainer online indonesia",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 52
+    },
+    {
+     "page": "/pricing",
+     "impressions": 1,
+     "position": 70
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 3,
+     "position": 74
+    },
+    {
+     "page": "/resources",
+     "impressions": 1,
+     "position": 77
+    }
+   ]
+  },
+  {
+   "query": "personal trainer pererenan",
+   "pages": [
+    {
+     "page": "/resources/personal-trainer-in-canggu-villa-access-and-in-zone-rates",
+     "impressions": 2,
+     "position": 12.5
+    },
+    {
+     "page": "/bali/uluwatu",
+     "impressions": 1,
+     "position": 20
+    }
+   ]
+  },
+  {
+   "query": "personal trainer ubud",
+   "pages": [
+    {
+     "page": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+     "impressions": 1,
+     "position": 65
+    },
+    {
+     "page": "/bali/personal-training",
+     "impressions": 2,
+     "position": 72
+    },
+    {
+     "page": "/bali",
+     "impressions": 2,
+     "position": 77
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 93
+    },
+    {
+     "page": "/resources",
+     "impressions": 1,
+     "position": 99
+    }
+   ]
+  },
+  {
+   "query": "personalfitness",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 1
+    },
+    {
+     "page": "/jakarta/east-jakarta",
+     "impressions": 1,
+     "position": 3
+    },
+    {
+     "page": "/jakarta/personal-training",
+     "impressions": 1,
+     "position": 4
+    },
+    {
+     "page": "/about",
+     "impressions": 1,
+     "position": 10
+    }
+   ]
+  },
+  {
+   "query": "personlig trener bali",
+   "pages": [
+    {
+     "page": "/bali/personal-training",
+     "impressions": 1,
+     "position": 45
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 90
+    }
+   ]
+  },
+  {
+   "query": "private fitness trainer",
+   "pages": [
+    {
+     "page": "/",
+     "impressions": 2,
+     "position": 57
+    },
+    {
+     "page": "/jakarta/kebayoran",
+     "impressions": 1,
+     "position": 57
+    },
+    {
+     "page": "/resources",
+     "impressions": 1,
+     "position": 59
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 3,
+     "position": 63.666666666666664
+    }
+   ]
+  },
+  {
+   "query": "private gym",
+   "pages": [
+    {
+     "page": "/about",
+     "impressions": 1,
+     "position": 2
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "position": 6
+    }
+   ]
+  },
+  {
+   "query": "private trainer fitness bali",
+   "pages": [
+    {
+     "page": "/bali",
+     "impressions": 1,
+     "position": 18
+    },
+    {
+     "page": "/",
+     "impressions": 2,
+     "position": 20.5
+    }
+   ]
+  },
+  {
+   "query": "private trainer near me",
+   "pages": [
+    {
+     "page": "/jakarta/central-jakarta",
+     "impressions": 2,
+     "position": 10
+    },
+    {
+     "page": "/jakarta/kemang",
+     "impressions": 1,
+     "position": 17
+    },
+    {
+     "page": "/personal-training",
+     "impressions": 1,
+     "position": 85
+    }
+   ]
+  },
+  {
+   "query": "private yoga class",
+   "pages": [
+    {
+     "page": "/jakarta/private-yoga",
+     "impressions": 6,
+     "position": 6.833333333333333
+    },
+    {
+     "page": "/resources/private-yoga-in-a-jakarta-apartment-space-access-and-pair-pricing",
+     "impressions": 2,
+     "position": 10
+    }
+   ]
+  },
+  {
+   "query": "private yoga session",
+   "pages": [
+    {
+     "page": "/private-yoga",
+     "impressions": 1,
+     "position": 20
+    },
+    {
+     "page": "/jakarta/private-yoga",
+     "impressions": 1,
+     "position": 29
+    }
+   ]
+  },
+  {
+   "query": "zumba classes near me",
+   "pages": [
+    {
+     "page": "/zumba-dance-fitness",
+     "impressions": 2,
+     "position": 8.5
+    },
+    {
+     "page": "/resources",
+     "impressions": 1,
+     "position": 93
+    }
+   ]
+  }
+ ],
+ "misrouted": [
+  {
+   "query": "personal trainer jakarta",
+   "landed": "/",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 3,
+   "position": 9.666666666666666
+  },
+  {
+   "query": "bali fitness classes",
+   "landed": "/resources",
+   "lockedTo": "/bali",
+   "impressions": 5,
+   "position": 16.6
+  },
+  {
+   "query": "bali personal trainer",
+   "landed": "/",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 1,
+   "position": 1
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 31
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/contact",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 56
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/contact",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 91
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/jakarta/east-jakarta",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 92
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/jakarta/kebayoran",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 3,
+   "position": 85.66666666666667
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/jakarta/kemang",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 2,
+   "position": 71
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/jakarta/south-jakarta",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 66
+  },
+  {
+   "query": "booking personal trainer jakarta",
+   "landed": "/resources/personal-trainer-in-south-jakarta-kemang-senopati-and-lobby-access",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 93
+  },
+  {
+   "query": "cheap personal trainer",
+   "landed": "/",
+   "lockedTo": "/pricing",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "jasa personal trainer",
+   "landed": "/jakarta/east-jakarta",
+   "lockedTo": "/id",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "jasa personal trainer",
+   "landed": "/personal-training",
+   "lockedTo": "/id",
+   "impressions": 10,
+   "position": 61.7
+  },
+  {
+   "query": "jasa personal trainer",
+   "landed": "/resources",
+   "lockedTo": "/id",
+   "impressions": 8,
+   "position": 45.375
+  },
+  {
+   "query": "jasa personal trainer fitness",
+   "landed": "/",
+   "lockedTo": "/id",
+   "impressions": 1,
+   "position": 86
+  },
+  {
+   "query": "jasa personal trainer fitness",
+   "landed": "/jakarta/personal-training",
+   "lockedTo": "/id",
+   "impressions": 2,
+   "position": 66
+  },
+  {
+   "query": "jasa personal trainer fitness",
+   "landed": "/personal-training",
+   "lockedTo": "/id",
+   "impressions": 12,
+   "position": 66.08333333333333
+  },
+  {
+   "query": "jasa personal trainer fitness",
+   "landed": "/resources",
+   "lockedTo": "/id",
+   "impressions": 3,
+   "position": 38.333333333333336
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 4,
+   "position": 62.5
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/bali",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 2,
+   "position": 91.5
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/bali/uluwatu",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 1,
+   "position": 41
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/personal-training",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 3,
+   "position": 67.66666666666667
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/pricing",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 4,
+   "position": 90.25
+  },
+  {
+   "query": "personal trainer bali",
+   "landed": "/resources",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 1,
+   "position": 97
+  },
+  {
+   "query": "personal trainer home visit",
+   "landed": "/jakarta/personal-training",
+   "lockedTo": "/personal-training",
+   "impressions": 1,
+   "position": 5
+  },
+  {
+   "query": "personal trainer jakarta",
+   "landed": "/jakarta/central-jakarta",
+   "lockedTo": "/jakarta/personal-training",
+   "impressions": 1,
+   "position": 10
+  },
+  {
+   "query": "personal trainer pererenan",
+   "landed": "/bali/uluwatu",
+   "lockedTo": "/bali/canggu",
+   "impressions": 1,
+   "position": 20
+  },
+  {
+   "query": "personal trainer ubud",
+   "landed": "/bali",
+   "lockedTo": "/bali/ubud",
+   "impressions": 2,
+   "position": 77
+  },
+  {
+   "query": "personal trainer ubud",
+   "landed": "/bali/personal-training",
+   "lockedTo": "/bali/ubud",
+   "impressions": 2,
+   "position": 72
+  },
+  {
+   "query": "personal trainer ubud",
+   "landed": "/personal-training",
+   "lockedTo": "/bali/ubud",
+   "impressions": 1,
+   "position": 93
+  },
+  {
+   "query": "personal trainer ubud",
+   "landed": "/resources",
+   "lockedTo": "/bali/ubud",
+   "impressions": 1,
+   "position": 99
+  },
+  {
+   "query": "personal trainer ubud",
+   "landed": "/resources/personal-trainer-in-bali-what-a-managed-in-villa-session-includes",
+   "lockedTo": "/bali/ubud",
+   "impressions": 1,
+   "position": 65
+  },
+  {
+   "query": "private trainer fitness bali",
+   "landed": "/",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 2,
+   "position": 20.5
+  },
+  {
+   "query": "private trainer fitness bali",
+   "landed": "/bali",
+   "lockedTo": "/bali/personal-training",
+   "impressions": 1,
+   "position": 18
+  },
+  {
+   "query": "private yoga session",
+   "landed": "/jakarta/private-yoga",
+   "lockedTo": "/private-yoga",
+   "impressions": 1,
+   "position": 29
+  }
+ ],
+ "due": []
+}
