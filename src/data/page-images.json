@@ -740,5 +740,12 @@
     "width": 1440,
     "height": 960,
     "origin": "generated-illustration"
+  },
+  "/resources/rainy-season-workout-bali": {
+    "src": "/images/editorial/rainy-season-workout-bali.webp",
+    "alt": "Rainy season workout in Bali: a trainer coaches a guest's squat in a covered villa pavilion as rain falls on the pool",
+    "width": 1440,
+    "height": 960,
+    "origin": "generated-illustration"
   }
 }

@@ -1464,6 +1464,20 @@
     "resort gym personal trainer bali"
    ],
    "target": "/bali/personal-training"
+  },
+  "/resources/rainy-season-workout-bali": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "rainy season workout bali",
+   "secondary": [
+    "wet season workout bali",
+    "rainy day workout at home bali",
+    "in-house training bali",
+    "home workout routine bali"
+   ],
+   "target": "/bali/personal-training"
   }
  }
 }

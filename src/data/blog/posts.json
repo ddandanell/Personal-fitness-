@@ -790,5 +790,41 @@
         "a": "Send your hotel, area, dates, time window and number of people on WhatsApp or by email. You receive a written quote that names the professional. A 50% deposit confirms a single session, and packs are paid in full upfront. We never ask for card or bank details in WhatsApp; payment instructions are on the quote."
       }
     ]
+  },
+  {
+    "slug": "rainy-season-workout-bali",
+    "briefId": "B036",
+    "title": "Rainy Season Workout in Bali: Train at Your Villa",
+    "description": "Rainy season workout in Bali, sorted: a private coach trains you at your villa, home or hotel, under cover and on time. Get a written quote on WhatsApp.",
+    "date": "2026-11-25",
+    "primaryQuery": "rainy season workout bali",
+    "service": "Private Strength Training",
+    "city": "Bali",
+    "landingPage": "/bali/personal-training",
+    "image": "/images/editorial/rainy-season-workout-bali.webp",
+    "imageAlt": "Rainy season workout in Bali: a trainer coaches a guest's squat in a covered villa pavilion as rain falls on the pool",
+    "bodyFile": "rainy-season-workout-bali.md",
+    "faqs": [
+      {
+        "q": "Do sessions still happen when it rains in Bali?",
+        "a": "Yes. Sessions take place in a dry, sheltered space at your villa, home or hotel, such as a covered terrace, a bale, a living room or a villa gym. Rain outside does not stop the hour. The coach checks the floor before starting and keeps the session to the dry part of the space, so you can train safely while it pours."
+      },
+      {
+        "q": "What space do I need for a rainy season workout at home?",
+        "a": "A dry, level area that holds a mat plus a couple of steps in each direction is enough for a strong session. You do not need a home gym. Moving a sofa or coffee table back is usually all it takes. If you have bands, dumbbells or a villa gym, tell us and the plan will use them."
+      },
+      {
+        "q": "What is the best time of day to train in the wet season?",
+        "a": "Many people like the early morning, when the air is cooler and the heavy showers often have not started yet. Others prefer training while it rains in the afternoon, because it gives a grey day some structure. Pick the window that you can keep every week; consistency matters more than the exact hour."
+      },
+      {
+        "q": "Can I move a session if the weather is bad?",
+        "a": "Free rescheduling is possible up to 24 hours before a session, if supply allows. Inside 24 hours, the session is charged. Because sessions happen under cover at your place, most people keep the booked time even on stormy days. If travel conditions in your area are a concern, mention it when you book."
+      },
+      {
+        "q": "How much does a rainy season workout with a trainer cost in Bali?",
+        "a": "Private strength training starts at Rp 1.300.000 for 60 minutes for one person, with Rp 250.000 added for a second person. Private yoga starts at Rp 1.050.000 for up to two people. Packs of 3, 5 or 10 strength sessions lower the price per session. Your written quote shows the final total before you pay."
+      }
+    ]
   }
 ]

@@ -552,6 +552,11 @@
       "primaryKeyword": "personal trainer for hotel guests bali",
       "role": "supporting-guide",
       "commercialOwner": "/bali/personal-training"
+    },
+    "/resources/rainy-season-workout-bali": {
+      "primaryKeyword": "rainy season workout bali",
+      "role": "supporting-guide",
+      "commercialOwner": "/bali/personal-training"
     }
   }
 }
