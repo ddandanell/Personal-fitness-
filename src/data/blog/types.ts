@@ -4,6 +4,7 @@ export type BlogPost = {
   title: string
   description: string
   date: string
+  lang?: 'en' | 'id'
   primaryQuery: string
   service: string
   city: string

@@ -83,7 +83,7 @@ export function pageMetadata(pathname: string) {
   const imageHeight = assignedImage ? String(assignedImage.height) : og?.height || (sessionShot ? '870' : image.includes('villa-yoga') ? '619' : '800')
   const region = city === 'Jakarta' || pathname.startsWith('/jakarta') ? 'ID-JK' : city === 'Bali' || pathname.startsWith('/bali') ? 'ID-BA' : 'ID-BA,ID-JK'
   const placename = region === 'ID-JK' ? 'Jakarta' : region === 'ID-BA' ? 'Bali' : 'Bali and Jakarta'
-  const indonesian = pathname === '/id' || pathname.startsWith('/id/')
+  const indonesian = pathname === '/id' || pathname.startsWith('/id/') || post?.lang === 'id'
   return {
     title: brandedTitle(title),
     htmlLang: indonesian ? 'id' : 'en',

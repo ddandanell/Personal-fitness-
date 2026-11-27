@@ -11,6 +11,7 @@ function loadBody(file: string) {
 
 export const blogPosts: BlogPost[] = (records as BlogPostRecord[]).map((record) => ({
   ...record,
+  lang: record.lang ?? 'en',
   body: loadBody(record.bodyFile),
 }))
 

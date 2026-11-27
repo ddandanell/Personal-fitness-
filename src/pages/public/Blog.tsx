@@ -216,7 +216,7 @@ function ArticleSchema({ post, words }: { post: NonNullable<ReturnType<typeof ge
           datePublished: post.date,
           dateModified: post.date,
           wordCount: words,
-          inLanguage: 'en',
+          inLanguage: post.lang === 'id' ? 'id' : 'en',
           mainEntityOfPage: `${SITE_ORIGIN}/resources/${post.slug}`,
           author: { '@type': 'Organization', name: 'PersonalFitness.id' },
           publisher: {
