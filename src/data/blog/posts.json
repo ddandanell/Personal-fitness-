@@ -826,5 +826,41 @@
         "a": "Private strength training starts at Rp 1.300.000 for 60 minutes for one person, with Rp 250.000 added for a second person. Private yoga starts at Rp 1.050.000 for up to two people. Packs of 3, 5 or 10 strength sessions lower the price per session. Your written quote shows the final total before you pay."
       }
     ]
+  },
+  {
+    "slug": "harga-personal-trainer-ke-rumah-jakarta",
+    "briefId": "B037",
+    "title": "Berapa Harga Personal Trainer ke Rumah di Jakarta?",
+    "description": "Berapa harga personal trainer ke rumah di Jakarta? Mulai Rp 1.300.000 per 60 menit, transport termasuk di Jakarta Selatan dan Pusat. Pesan via WhatsApp.",
+    "date": "2026-11-27",
+    "primaryQuery": "berapa harga personal trainer ke rumah di jakarta",
+    "service": "Private Strength Training",
+    "city": "Jakarta",
+    "landingPage": "/pricing",
+    "image": "/images/editorial/harga-personal-trainer-ke-rumah-jakarta.webp",
+    "imageAlt": "Harga personal trainer ke rumah di Jakarta: pelatih membimbing squat dumbel klien di apartemen berpemandangan kota",
+    "bodyFile": "harga-personal-trainer-ke-rumah-jakarta.md",
+    "faqs": [
+      {
+        "q": "Berapa harga personal trainer ke rumah di Jakarta untuk satu sesi?",
+        "a": "Latihan kekuatan privat mulai Rp 1.300.000 untuk 60 menit dan satu orang. Yoga privat mulai Rp 1.125.000 untuk hingga dua orang, mat Pilates Rp 1.250.000, mobilitas Rp 1.125.000, boxing fitness Rp 1.300.000 dan meditasi terpandu Rp 1.050.000 untuk hingga dua orang. Total akhir selalu dituliskan di penawaran sebelum Anda membayar."
+      },
+      {
+        "q": "Apakah transport sudah termasuk dalam harga?",
+        "a": "Ya, untuk Jakarta Selatan dan Jakarta Pusat, termasuk Kemang, Senopati, SCBD, Kebayoran, Cilandak, Pondok Indah, Kuningan, Menteng, Gondangdia dan Thamrin. Jakarta Utara, Barat, Timur dan BSD tersedia berdasarkan permintaan setelah pengecekan ketersediaan, dan totalnya ditulis lengkap di penawaran. Jika Anda pindah alamat, minta koordinator mengecek ulang sebelum sesi."
+      },
+      {
+        "q": "Berapa biaya jika saya berlatih berdua?",
+        "a": "Untuk latihan kekuatan, mat Pilates, mobilitas, boxing fitness, Bodywork & Recovery dan Zumba, orang kedua menambah Rp 250.000 per sesi. Jadi latihan kekuatan berdua menjadi Rp 1.550.000. Yoga privat dan meditasi terpandu sudah termasuk dua orang, sehingga pasangan membayar tarif yang sama."
+      },
+      {
+        "q": "Apakah ada sesi percobaan gratis?",
+        "a": "Tidak. Kunjungan pertama memakai tarif yang dipublikasikan, supaya sesi yang Anda terima sama persis dengan penawaran. Jika Anda ingin mencoba dulu sebelum berkomitmen, pesan satu sesi tunggal dengan uang muka 50%, lalu pilih paket 3, 5 atau 10 sesi setelahnya jika cocok."
+      },
+      {
+        "q": "Bagaimana cara membayar dan mengubah jadwal?",
+        "a": "Uang muka 50% mengonfirmasi sesi tunggal, sedangkan paket dibayar lunas di muka. Instruksi pembayaran ada di penawaran tertulis, dan kami tidak pernah meminta data kartu atau rekening lewat WhatsApp. Perubahan jadwal gratis hingga 24 jam sebelum sesi jika ketersediaan memungkinkan; di bawah 24 jam, sesi tetap dikenakan biaya."
+      }
+    ]
   }
 ]

@@ -1478,6 +1478,20 @@
     "home workout routine bali"
    ],
    "target": "/bali/personal-training"
+  },
+  "/resources/harga-personal-trainer-ke-rumah-jakarta": {
+   "type": "support",
+   "money": false,
+   "status": "live",
+   "priority": "P3",
+   "primary": "berapa harga personal trainer ke rumah di jakarta",
+   "secondary": [
+    "biaya personal trainer di rumah jakarta",
+    "tarif personal trainer apartemen jakarta",
+    "paket personal trainer jakarta",
+    "harga yoga privat di rumah jakarta"
+   ],
+   "target": "/pricing"
   }
  }
 }
